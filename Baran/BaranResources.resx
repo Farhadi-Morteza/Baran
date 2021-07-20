@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DeletedLastTime" xml:space="preserve">
+    <value>قبلا عملیات حذف انجام شده است</value>
+  </data>
+  <data name="ChequeMatureDateDontArrivedCanNotCollected" xml:space="preserve">
+    <value>امکان وصول چک قبل از تارخ سر رسید چک وجود ندارد</value>
+  </data>
+  <data name="PersonIsDuplicateError" xml:space="preserve">
+    <value>نام و یا نام خانوادگی و یا هر دو تکراری می باشند</value>
+  </data>
+  <data name="receiptsAddedSuccessfully" xml:space="preserve">
+    <value>اطلاعات فیش و حواله شما با موفقیت ثبت گردید</value>
+  </data>
+  <data name="UserUpdatedButItemsCannotBeUpdated" xml:space="preserve">
+    <value>اطلاعات کاربر تغییر یافت اما سطح دسترسی تغییر نکرد، لطفا مجددا تلاش کنید</value>
+  </data>
+  <data name="MaxDebitIsNegativeError" xml:space="preserve">
+    <value>سقف اعتبار بدهکاری را منفی وارد کرده اید</value>
+  </data>
+  <data name="RecieptAssBankBranchIsNotSpecified" xml:space="preserve">
+    <value>نام شعبه صادر کننده فیش یا حواله را وارد نکرده اید</value>
+  </data>
+  <data name="FamilyTextBoxIsEmptyMessage" xml:space="preserve">
+    <value>نام خانوادگی خود را وارد نکرده اید</value>
+  </data>
+  <data name="PasswordTextBoxIsEmptyMessage" xml:space="preserve">
+    <value>رمز عبور خود را وارد نکرده اید</value>
+  </data>
+  <data name="SaveSuccessful" xml:space="preserve">
+    <value>اطلاعات با موفقیت ثبت شد</value>
+  </data>
+  <data name="personNameTextBoxISEmptyerror" xml:space="preserve">
+    <value>نام شخص را وارد نکرده اید</value>
+  </data>
+  <data name="EditAccessDenied" xml:space="preserve">
+    <value>امکان تغییراطلاعات برای نوع کاربری شما تعریف نشده است</value>
+  </data>
+  <data name="ChequeMatureDateIsNotSpecified" xml:space="preserve">
+    <value>تاریخ سررسید چک را وارد نکرده اید</value>
+  </data>
+  <data name="SavedLastTimeForThisBankAccountChangeConfirm" xml:space="preserve">
+    <value>اطلاعات قبلا برای این حساب بانکی تعریف شده است برای اعمال تغییرات از دکمه تغییر استفاده نمایید</value>
+  </data>
+  <data name="SaveConfirm" xml:space="preserve">
+    <value>? آیا اطلاعات ثبت شود</value>
+  </data>
+  <data name="ChequeRelatedBankBranchIsNotSpecified" xml:space="preserve">
+    <value>شعبه بانکی را که چک را صادر کرده است را وارد نکرده اید</value>
+  </data>
+  <data name="DateInvalid" xml:space="preserve">
+    <value>تاریخ نا معتبر می باشد</value>
+  </data>
+  <data name="SuccessfulPasswordChangeMessage" xml:space="preserve">
+    <value>تغیر رمز به درستی انجام شد</value>
+  </data>
+  <data name="DeleteAccessDeniedInUnCurrentFiscalYear" xml:space="preserve">
+    <value>امکان حذف اطلاعات در سال مالی قبل وجود ندارد</value>
+  </data>
+  <data name="SaveNotLastTimeSaveConfirm" xml:space="preserve">
+    <value>اطلاعات قبلا ثبت نشده است، آیا اطلاعات ثبت شود</value>
+  </data>
+  <data name="PasswordConfirmationError" xml:space="preserve">
+    <value>اشکال در تایید رمز عبور</value>
+  </data>
+  <data name="SaveAccessDeniedInUnCurrentFiscalYear" xml:space="preserve">
+    <value>امکان ثبت اطلاعات در سال مالی قبل وجود ندارد</value>
+  </data>
+  <data name="PrintAccessDenied" xml:space="preserve">
+    <value>امکان پرینت اطلاعات برای نوع کاربری شما تعریف نشده است</value>
+  </data>
+  <data name="NoPaymentMethodSpecified" xml:space="preserve">
+    <value>لطفا نوع پرداخت فاکتور را مشخص نمایید</value>
+  </data>
+  <data name="NewUserInsertionInDBError" xml:space="preserve">
+    <value>اشکالی در برقراری ارتباط با سرور رخ داده است لطفا بعدا دوباره تلاش نمایید</value>
+  </data>
+  <data name="UserTableFK_ShopIDColumn" xml:space="preserve">
+    <value>FK_ShopID</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WarrantyAmountISNotSpecified" xml:space="preserve">
+    <value>مبلغ سفته را وارد نکرده اید</value>
+  </data>
+  <data name="NewGoodInsertionInDBError" xml:space="preserve">
+    <value>اشتباهی در هنگام تعریف کالا روی داده است لطفا بعدا دوباره سعی نمایید یا با پشتیبانی تماس حاصل نمایید</value>
+  </data>
+  <data name="GoodIsDefinedBeforeError" xml:space="preserve">
+    <value>کالایی با این نام قبلا تعریف شده است</value>
+  </data>
+  <data name="PersonNameIsNotSpecified" xml:space="preserve">
+    <value>نام شخص را وارد نکرده اید</value>
+  </data>
+  <data name="PersonUpdateSuccessful" xml:space="preserve">
+    <value>شخص مورد نظر با موفقیت به هنگام رسانده شد</value>
+  </data>
+  <data name="CustomerChequeNumberIsNotSpecified" xml:space="preserve">
+    <value>شماره چک را وارد نکرده اید</value>
+  </data>
+  <data name="EditDoNot" xml:space="preserve">
+    <value>امکان تغییر اطلاعات وجود ندارد</value>
+  </data>
+  <data name="GoodMotefaregheSalePriceIsNotSpecified" xml:space="preserve">
+    <value>قیمت فروش متفرقه کالا را وارد نکرده اید</value>
+  </data>
+  <data name="DuplicateUsererrorMessage" xml:space="preserve">
+    <value>قبلا کاربری با این نام کاربری تعریف شده است لطفا نام کاربری دیگری را انتخاب نمایید.</value>
+  </data>
+  <data name="newPersonInsertionSuccessfulMessage" xml:space="preserve">
+    <value>شخص جدید با موفقیت تعریف گردید</value>
+  </data>
+  <data name="NameTextBoxIsEmptyMessage" xml:space="preserve">
+    <value>نام خود را وارد نکرده اید</value>
+  </data>
+  <data name="ChequeHnadOveredLastTimeEditDoNot" xml:space="preserve">
+    <value>چک قبلا واگذار شده است ، امکان تغییر وجود ندارد</value>
+  </data>
+  <data name="ChequeAmountIsNotSpecified" xml:space="preserve">
+    <value>مبلغ چک را وارد نکرده اید</value>
+  </data>
+  <data name="PointOfReOrderIsNotSpecified" xml:space="preserve">
+    <value>نقطه سفارش را مشخص نکرده اید</value>
+  </data>
+  <data name="NewGoodInsertionInDBIsSuccessfulMessage" xml:space="preserve">
+    <value>کالای جدید با موفقیت تعریف گردید</value>
+  </data>
+  <data name="NoGoodInBuyFactorError" xml:space="preserve">
+    <value>لطفا کالایی را برای ثبت در فاکتور انتخاب نمایید</value>
+  </data>
+  <data name="PrintConfirm" xml:space="preserve">
+    <value>آیا پرینت گرفته شود؟</value>
+  </data>
+  <data name="RecordNotFound" xml:space="preserve">
+    <value>هیچ رکوردی یافت نشد</value>
+  </data>
+  <data name="NoRowSelectedError" xml:space="preserve">
+    <value>لطفا یک سطر را انتخاب نمایید</value>
+  </data>
+  <data name="PersonFamilyIsNotSpecified" xml:space="preserve">
+    <value>نام خانوادگی شخص را وارد نکرده اید</value>
+  </data>
+  <data name="ReturnFactorNumberIsEmpty" xml:space="preserve">
+    <value>شماره فاکتور برگشت خالی میباشد</value>
+  </data>
+  <data name="GoodUpdateIsSuccessful" xml:space="preserve">
+    <value>کالای مدنظر شما با موفقیت به هنگام رسانده شد</value>
+  </data>
+  <data name="RecievedFromIsEmpty" xml:space="preserve">
+    <value>لطفا شخصی را که چک را از او دریافت می نمایید را مشخص کنید</value>
+  </data>
+  <data name="MeasurementUnit1IsNotSpecified" xml:space="preserve">
+    <value>واحد اندازه گیری اول را وارد نکرده اید</value>
+  </data>
+  <data name="RecieptAssNumberIsNotSpecified" xml:space="preserve">
+    <value>شماره فیش یا حواله را وارد نکرده اید</value>
+  </data>
+  <data name="GoodUpdateError" xml:space="preserve">
+    <value>اشکال در به هتگام رسانی کالا لطفا دوباره تلاش کنید یا با پشتیبانی تماس بگیرید</value>
+  </data>
+  <data name="RecieptAssBankIsNotSpecified" xml:space="preserve">
+    <value> نام بانک صادر کننده فیش یا حواله را وارد نکرده اید</value>
+  </data>
+  <data name="SavedLastTimeDoYouWantEditConfirm" xml:space="preserve">
+    <value>اطلاعات قبلا ثبت شده است، آیا می خواهید تغییرات بر روی آن اعمال شود</value>
+  </data>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>?آیا از حذف اطلاعات اطمینان دارید</value>
+  </data>
+  <data name="warrantyNumberIsNotSpecified" xml:space="preserve">
+    <value>شماره سفته را وارد نکرده اید</value>
+  </data>
+  <data name="DuplicateGoodName" xml:space="preserve">
+    <value>قبلا کالایی با این نام ثبت شده است</value>
+  </data>
+  <data name="ChequeCollectedLastTimeEditDoNot" xml:space="preserve">
+    <value>چک قبلا وصول شده است ، امکان تغییر وجود ندارد</value>
+  </data>
+  <data name="ChequeRollBackLastTimeEditDoNot" xml:space="preserve">
+    <value>چک قبلا برگشت داده شده است، امکان تغییر وجود ندارد</value>
+  </data>
+  <data name="RecieptAssAmounIsNotSpecified" xml:space="preserve">
+    <value>مبلغ فیش یا حواله را وارد نکرده اید</value>
+  </data>
+  <data name="NoPersonFound" xml:space="preserve">
+    <value>شخصی با نام و نام خانوادگی مشخص شده یافت نشد</value>
+  </data>
+  <data name="MaxCreditIsNegativeError" xml:space="preserve">
+    <value>سقف اعتبار بستانکاری را منفی وارد کرده اید!</value>
+  </data>
+  <data name="TheSpecifiedGoodNotFound" xml:space="preserve">
+    <value>کالایی با نام مشخص شده یافت نشد</value>
+  </data>
+  <data name="YouCannotDeleteTheCurrentUuser" xml:space="preserve">
+    <value>امکان حذف کاربری که با آن وارد سیستم شده اید را ندارید</value>
+  </data>
+  <data name="SaveFail" xml:space="preserve">
+    <value>! خطا در ثبت اطلاعات</value>
+  </data>
+  <data name="LoginFormCaption" xml:space="preserve">
+    <value>به سیستم حسابداری دامون خوش آمدید</value>
+  </data>
+  <data name="NoItemsSelected" xml:space="preserve">
+    <value>هیچ آیتمی انتخاب نشده است</value>
+  </data>
+  <data name="ChequeRelatedBankIsNotSpecified" xml:space="preserve">
+    <value>بانک صادر کننده چک را وارد نکرده اید</value>
+  </data>
+  <data name="ReportSettingPageSizeNotSet" xml:space="preserve">
+    <value>نوع چاپ فاکتور تنظیم نشده است</value>
+  </data>
+  <data name="GoodIsNotSelected" xml:space="preserve">
+    <value>شما کالایی را انتخاب نکرده اید ابتدا کالا را انتخاب نمایید و سپس تعداد آن را مشخص نمایید تا زمانی که کالایی را مشخص نکنید ضریب تبدیل بین واحد های آن نیز مشخص نخواهد بود </value>
+  </data>
+  <data name="ChequeNumberIsNotSpecified" xml:space="preserve">
+    <value>شماره چک را وارد نکرده اید</value>
+  </data>
+  <data name="GoodNameIsNotSpecified" xml:space="preserve">
+    <value>نام کالا را وارد نکرده اید</value>
+  </data>
+  <data name="PleaseComplateFeilds" xml:space="preserve">
+    <value>لطفا مقادیر را وارد نمایید</value>
+  </data>
+  <data name="CouldNotReadFileFromDisk" xml:space="preserve">
+    <value>خطا هنگام خواندن فایل</value>
+  </data>
+  <data name="DeleteFail" xml:space="preserve">
+    <value>خطا در حذف اطلاعات</value>
+  </data>
+  <data name="PasswordIncorrectInFrmChangePassword" xml:space="preserve">
+    <value>رمز عبور قبلی خود را اشتباه وارد کرده اید</value>
+  </data>
+  <data name="UserNameTextBoxIsEmptyMessage" xml:space="preserve">
+    <value>نام کاربری خود را وارد نکرده اید</value>
+  </data>
+  <data name="SuccessfulUserDefinition" xml:space="preserve">
+    <value>کاربر جدید با موفقیت تعریف گردید</value>
+  </data>
+  <data name="NewAccessDenied" xml:space="preserve">
+    <value>امکان تعریف جدید اطلاعات برای نوع کاربری شما تعریف نشده است</value>
+  </data>
+  <data name="EditFail" xml:space="preserve">
+    <value>خطا در تغییر اطلاعات</value>
+  </data>
+  <data name="DonNotHavePermission" xml:space="preserve">
+    <value>شما اجازه دسترسی به این بخش را ندارید</value>
+  </data>
+  <data name="newPasswordConfirmationError" xml:space="preserve">
+    <value>رمز عبور جدید را به درستی تکرار نکرده اید</value>
+  </data>
+  <data name="DublicatePrintAccessDenied" xml:space="preserve">
+    <value>امکان چاپ المثنی برای فاکتور امکان پذیر نمی باشد</value>
+  </data>
+  <data name="SaveDuplicateKeyError" xml:space="preserve">
+    <value>امکان ثبت اطلاعات تکراری وجود ندارد</value>
+  </data>
+  <data name="DeleteSuccessful" xml:space="preserve">
+    <value>حذف اطلاعات با موفقیت انجام شد</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>آیا از خروج اطمینان دارید</value>
+  </data>
+  <data name="warrabtyNumberIsDuplicateError" xml:space="preserve">
+    <value>شماره سفته تکراری است</value>
+  </data>
+  <data name="numberofPackegsInSystem" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="UserDefinintionUpdateSuccessful" xml:space="preserve">
+    <value>تعریف کاربر با موفقیت به هنگام رسانده شد</value>
+  </data>
+  <data name="invalidCredentialsAtLogin" xml:space="preserve">
+    <value>نام کاربری و یا رمز عبور را اشتباه وارد کرده اید</value>
+  </data>
+  <data name="PrintSuccessful" xml:space="preserve">
+    <value>پرینت گرفته شد</value>
+  </data>
+  <data name="SavedNotLastTime" xml:space="preserve">
+    <value>قبلا اطلاعات ثبت نشده است</value>
+  </data>
+  <data name="PersonDeletionIsCompletedSuccessfully" xml:space="preserve">
+    <value>شخص مورد نظر با موفقیت حذف گردید.</value>
+  </data>
+  <data name="CrossCheckForVersionNumber" xml:space="preserve">
+    <value>1.0.0.1</value>
+  </data>
+  <data name="ImageSizeIsHigh" xml:space="preserve">
+    <value>حجم عکس بالا می باشد، باید کمتر از 300 کیلوبایت باشد</value>
+  </data>
+  <data name="DoNotDoPleaseTryAgine" xml:space="preserve">
+    <value>عملیات با موفقیت انجام نشد! لطفا دوباره تلاش نمایید</value>
+  </data>
+  <data name="EditSuccessful" xml:space="preserve">
+    <value>تغییراطلاعات با موفقیت انجام شد</value>
+  </data>
+  <data name="GoodBuyPriceIsNotSpecified" xml:space="preserve">
+    <value>قیمت خرید کالا را وارد نکرده اید</value>
+  </data>
+  <data name="Quantity2IsEmpty" xml:space="preserve">
+    <value>تعداد با واحد دو را مشخص نکرده اید</value>
+  </data>
+  <data name="Licence" xml:space="preserve">
+    <value>اشکال در مجوز استفاده از نرم افزار</value>
+  </data>
+  <data name="ainFormClosingMessageBoxCaption" xml:space="preserve">
+    <value>هشدار</value>
+  </data>
+  <data name="MeasurementUnit2IsNotSpecified" xml:space="preserve">
+    <value>واحد اندازه گیری دوم را وارد نکرده اید</value>
+  </data>
+  <data name="Unit1IsNotSpecified" xml:space="preserve">
+    <value>تعداد با واحد یک را مشخص نکرده اید</value>
+  </data>
+  <data name="passwordChangeErrorMessage" xml:space="preserve">
+    <value>اشکالی در هنگام تعویض رمز عبور پیش آمده است لطفا با پشتیبانی تماس بگیرید</value>
+  </data>
+  <data name="LegitimationErrorMessage" xml:space="preserve">
+    <value>این نرم افزار برای استفاده توسط شما تنظیم نگردیده است</value>
+  </data>
+  <data name="GoodChequeSalePriceIsNotSpecified" xml:space="preserve">
+    <value>قیمت فروش چکی کالا را مشخص نکرده اید</value>
+  </data>
+  <data name="ChequeBankAccountHandOverIsNotSpecified" xml:space="preserve">
+    <value>عهده بانک واگذار شده را وارد نکرده اید</value>
+  </data>
+  <data name="SavedLastTime" xml:space="preserve">
+    <value>فبلا اطلاعات ثبت شده است</value>
+  </data>
+  <data name="AppendixIsNotLegitimate" xml:space="preserve">
+    <value>فاکتوری با شماره ای که مشخص کرده اید موجود نمی باشد.</value>
+  </data>
+  <data name="FeildIsEmpty" xml:space="preserve">
+    <value>لطفا اطلاعات را کامل وارد نمایید</value>
+  </data>
+  <data name="UnderConstructionErrorMessage" xml:space="preserve">
+    <value>این بخش در حال ایجاد شدن است</value>
+  </data>
+  <data name="ChequeCashedLastTimeEditDoNot" xml:space="preserve">
+    <value>چک قبلا نقد شده است ، امکان تغییر وجود ندارد</value>
+  </data>
+  <data name="ChequeSpendedLastTimeEditDoNot" xml:space="preserve">
+    <value>چک قبلا خرج شده است، امکان تغییر وجود ندارد</value>
+  </data>
+  <data name="ReferToRelevantSection" xml:space="preserve">
+    <value>لطفا به بخش مربوطه مراجعه نمایید</value>
+  </data>
+  <data name="DeleteAccessDenied" xml:space="preserve">
+    <value>امکان حذف اطلاعات برای نوع کاربری شما تعریف نشده است</value>
+  </data>
+  <data name="GoodCashSalePriceIsNotSpecified" xml:space="preserve">
+    <value>قیمت فروش نقدی کالا را وارد نکرده اید</value>
+  </data>
+  <data name="Quantity1IsEmpty" xml:space="preserve">
+    <value>تعداد با واحد یک را مشخص نکرده اید</value>
+  </data>
+  <data name="RecieptAssDateIsNotSpecified" xml:space="preserve">
+    <value>تاریخ پرداخت فیش یا حواله را وارد نکرده اید</value>
+  </data>
+  <data name="WarrantyAmountIsNegativeError" xml:space="preserve">
+    <value>مبلغ سفته را منفی وارد کرده اید</value>
+  </data>
+  <data name="AccessibleItemsInsertionInDBError" xml:space="preserve">
+    <value>اشکالی در برقراری ارتباط با سرور رخ داده است لطفا بعدا دوباره تلاش کنید </value>
+  </data>
+  <data name="VisitGroupNameISNotSelected" xml:space="preserve">
+    <value>نام گروه ویزیت را مشخص نکرده اید</value>
+  </data>
+  <data name="PosTakeCardAndClickConnectToPos" xml:space="preserve">
+    <value>ابتدا کارت را کشیده و سپس دکمه اتصال به دستگاه را کلیک کنید</value>
+  </data>
+  <data name="SaveAccessDenied" xml:space="preserve">
+    <value>امکان ثبت اطلاعات برای نوع کاربری شما تعریف نشده است </value>
+  </data>
+  <data name="VersionErrorMessage" xml:space="preserve">
+    <value>ورژن برنامه تغیر کرده، لطفا برنامه را بروزرسانی نمایید و یا با پشتیبانی 09195665573 تماس بگیرید</value>
+  </data>
+  <data name="ShopTableShopCodeColumn" xml:space="preserve">
+    <value>ShopCode</value>
+  </data>
+  <data name="EditAccessDeniedInUnCurrentFiscalYear" xml:space="preserve">
+    <value>امکان تغییر اطلاعات در سال مالی قبل وجود ندارد</value>
+  </data>
+  <data name="FetchingGoodsFromDBError" xml:space="preserve">
+    <value>اشکالی در هنگام دریافت کالا ها از سرور روی داده است لطفا دوباره تلاش کنید یا با پشتیبانی تماس بگیرید</value>
+  </data>
+  <data name="ConnectionWithServerError" xml:space="preserve">
+    <value>اشکالی در برقراری ارتباط با سرور روی داده است لطفا بعدا دوباره تلاش نمایید یا با پشتیبانی تماس بگیرید</value>
+  </data>
+  <data name="NoStockInfoAvailableForCurrentGood" xml:space="preserve">
+    <value>برای کالای کنونی قبلا موجودی تعریف نگردیده است</value>
+  </data>
+  <data name="PersonFamilyTextBoxIsEmptyError" xml:space="preserve">
+    <value>نام خانوادگی شخص را وارد نکرده اید</value>
+  </data>
+  <data name="UnitsConversionCoefficientIsNotSpecified" xml:space="preserve">
+    <value>ضریب تبدیل بین واحد ها را وارد نکرده اید</value>
+  </data>
+  <data name="PrintFail" xml:space="preserve">
+    <value>خطا در ارسال پرینت</value>
+  </data>
+  <data name="UserTableUserIDColumn" xml:space="preserve">
+    <value>UserID</value>
+  </data>
+  <data name="MainFormClosingMessage" xml:space="preserve">
+    <value>آیا می خواهید از برنامه خارج شوید؟</value>
+  </data>
+  <data name="NewPasswordnotSpecifiedError" xml:space="preserve">
+    <value>رمز جدید مد نظر خود را وارد نکرده اید</value>
+  </data>
+  <data name="visitorPercentageIsnotSpecified" xml:space="preserve">
+    <value>درصد ویزیتور برای این کالا را مشخص نکرده اید</value>
+  </data>
+  <data name="EditConfirm" xml:space="preserve">
+    <value>آیا تغییرات اعمال شود</value>
+  </data>
+  <data name="StoreNameIsEmpty" xml:space="preserve">
+    <value>نام انبار را وارد نکرده اید</value>
+  </data>
+  <data name="FileAlreadyExistsDoYouWantToReplace" xml:space="preserve">
+    <value>فایل از قبل وجود دارد، آیا می خواهید جایگزین کنید؟</value>
+  </data>
+  <data name="MaxChequeCreditIsNegativeError" xml:space="preserve">
+    <value>سقف اعتبار چکی را منفی وارد کرده اید</value>
+  </data>
+  <data name="PartitionNameIsEmpty" xml:space="preserve">
+    <value>نام پارتیشن را تعریف نکرده اید</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>bin\Debug\Pic\Close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UserNameOrPasswordIsWrong" xml:space="preserve">
+    <value>نام کاربری یا رمز عبور اشتباه می باشد</value>
+  </data>
+</root>

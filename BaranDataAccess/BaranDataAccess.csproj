@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EE4EEA8A-5F92-44B6-AC58-9A3DA97EFE6C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BaranDataAccess</RootNamespace>
+    <AssemblyName>BaranDataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\dstCommon.cs">
+      <DependentUpon>dstCommon.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\dstCommon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstCommon.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Common\dstImages.cs">
+      <DependentUpon>dstImages.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\dstImages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstImages.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Common\dstItems.cs">
+      <DependentUpon>dstItems.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\dstItems.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstItems.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Common\dstProvince.cs">
+      <DependentUpon>dstProvince.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\dstProvince.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstProvince.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Company\dstCompany.cs">
+      <DependentUpon>dstCompany.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Company\dstCompany.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstCompany.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DateAdjustement\dstDate.cs">
+      <DependentUpon>dstDate.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DateAdjustement\dstDate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstDate.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="Map\dstLocation.cs">
+      <DependentUpon>dstLocation.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Map\dstLocation.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstLocation.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Production\dstProductionTask.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstProductionTask.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Production\dstProducts.cs">
+      <DependentUpon>dstProducts.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Production\dstProducts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstProducts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Product\dstProduct.cs">
+      <DependentUpon>dstProduct.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Product\dstProduct.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstProduct.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\dstReports.cs">
+      <DependentUpon>dstReports.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\dstReports.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstReports.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\dstReportSetting.cs">
+      <DependentUpon>dstReportSetting.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\dstReportSetting.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstReportSetting.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\dstShop.cs">
+      <DependentUpon>dstShop.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\dstShop.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstShop.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Security\dstSecurity.cs">
+      <DependentUpon>dstSecurity.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Security\dstSecurity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstSecurity.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\dstSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstSettings.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Source\dstReport.cs">
+      <DependentUpon>dstReport.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\dstReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Source\dstSource.cs">
+      <DependentUpon>dstSource.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\dstSource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstSource.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Task\dstTask.cs">
+      <DependentUpon>dstTask.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Task\dstTask.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstTask.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Common\dstCommon.xsc">
+      <DependentUpon>dstCommon.xsd</DependentUpon>
+    </None>
+    <None Include="Common\dstCommon.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstCommon.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Common\dstCommon.xss">
+      <DependentUpon>dstCommon.xsd</DependentUpon>
+    </None>
+    <None Include="Common\dstImages.xsc">
+      <DependentUpon>dstImages.xsd</DependentUpon>
+    </None>
+    <None Include="Common\dstImages.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstImages.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Common\dstImages.xss">
+      <DependentUpon>dstImages.xsd</DependentUpon>
+    </None>
+    <None Include="Common\dstItems.xsc">
+      <DependentUpon>dstItems.xsd</DependentUpon>
+    </None>
+    <None Include="Common\dstItems.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstItems.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Common\dstItems.xss">
+      <DependentUpon>dstItems.xsd</DependentUpon>
+    </None>
+    <None Include="Common\dstProvince.xsc">
+      <DependentUpon>dstProvince.xsd</DependentUpon>
+    </None>
+    <None Include="Common\dstProvince.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstProvince.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Common\dstProvince.xss">
+      <DependentUpon>dstProvince.xsd</DependentUpon>
+    </None>
+    <None Include="Company\dstCompany.xsc">
+      <DependentUpon>dstCompany.xsd</DependentUpon>
+    </None>
+    <None Include="Company\dstCompany.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstCompany.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Company\dstCompany.xss">
+      <DependentUpon>dstCompany.xsd</DependentUpon>
+    </None>
+    <None Include="DateAdjustement\dstDate.xsc">
+      <DependentUpon>dstDate.xsd</DependentUpon>
+    </None>
+    <None Include="DateAdjustement\dstDate.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstDate.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DateAdjustement\dstDate.xss">
+      <DependentUpon>dstDate.xsd</DependentUpon>
+    </None>
+    <None Include="Map\dstLocation.xsc">
+      <DependentUpon>dstLocation.xsd</DependentUpon>
+    </None>
+    <None Include="Map\dstLocation.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstLocation.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Map\dstLocation.xss">
+      <DependentUpon>dstLocation.xsd</DependentUpon>
+    </None>
+    <None Include="Production\dstProductionTask.xsc">
+      <DependentUpon>dstProductionTask.xsd</DependentUpon>
+    </None>
+    <None Include="Production\dstProductionTask.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstProductionTask.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Production\dstProductionTask.xss">
+      <DependentUpon>dstProductionTask.xsd</DependentUpon>
+    </None>
+    <None Include="Production\dstProducts.xsc">
+      <DependentUpon>dstProducts.xsd</DependentUpon>
+    </None>
+    <None Include="Production\dstProducts.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstProducts.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Production\dstProducts.xss">
+      <DependentUpon>dstProducts.xsd</DependentUpon>
+    </None>
+    <None Include="Product\dstProduct.xsc">
+      <DependentUpon>dstProduct.xsd</DependentUpon>
+    </None>
+    <None Include="Product\dstProduct.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstProduct.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Product\dstProduct.xss">
+      <DependentUpon>dstProduct.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\dstReports.xsc">
+      <DependentUpon>dstReports.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\dstReports.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstReports.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\dstReports.xss">
+      <DependentUpon>dstReports.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\dstReportSetting.xsc">
+      <DependentUpon>dstReportSetting.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\dstReportSetting.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstReportSetting.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\dstReportSetting.xss">
+      <DependentUpon>dstReportSetting.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\dstShop.xsc">
+      <DependentUpon>dstShop.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\dstShop.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstShop.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\dstShop.xss">
+      <DependentUpon>dstShop.xsd</DependentUpon>
+    </None>
+    <None Include="Security\dstSecurity.xsc">
+      <DependentUpon>dstSecurity.xsd</DependentUpon>
+    </None>
+    <None Include="Security\dstSecurity.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstSecurity.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Security\dstSecurity.xss">
+      <DependentUpon>dstSecurity.xsd</DependentUpon>
+    </None>
+    <None Include="Settings\dstSettings.xsc">
+      <DependentUpon>dstSettings.xsd</DependentUpon>
+    </None>
+    <None Include="Settings\dstSettings.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\dstSettings.xss">
+      <DependentUpon>dstSettings.xsd</DependentUpon>
+    </None>
+    <None Include="Source\dstReport.xsc">
+      <DependentUpon>dstReport.xsd</DependentUpon>
+    </None>
+    <None Include="Source\dstReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Source\dstReport.xss">
+      <DependentUpon>dstReport.xsd</DependentUpon>
+    </None>
+    <None Include="Source\dstSource.xsc">
+      <DependentUpon>dstSource.xsd</DependentUpon>
+    </None>
+    <None Include="Source\dstSource.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstSource.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Source\dstSource.xss">
+      <DependentUpon>dstSource.xsd</DependentUpon>
+    </None>
+    <None Include="Task\dstTask.xsc">
+      <DependentUpon>dstTask.xsd</DependentUpon>
+    </None>
+    <None Include="Task\dstTask.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstTask.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Task\dstTask.xss">
+      <DependentUpon>dstTask.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ProductionModels\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
