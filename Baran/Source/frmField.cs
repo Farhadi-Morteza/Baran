@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -113,6 +114,10 @@ namespace Baran.Source
         public override void OnSave()
         {
             base.OnSave();
+
+            BaranDataAccess.AMSEntities db = new BaranDataAccess.AMSEntities();
+
+            var list = db.tbl_src_Field.ToList();
 
             //if (FieldID > 0)
             //{

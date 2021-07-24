@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_src_Field">
+          <Key>
+            <PropertyRef Name="FieldID" />
+          </Key>
+          <Property Name="FieldID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="UsableArea" Type="numeric" Precision="8" Scale="2" />
+          <Property Name="TotalArea" Type="numeric" Precision="8" Scale="2" />
+          <Property Name="Fk_SoilTextureID" Type="int" />
+          <Property Name="Fk_OwnershipID" Type="int" />
+          <Property Name="Fk_FieldUseTypeID" Type="int" />
+          <Property Name="Fk_ProvinceID" Type="int" />
+          <Property Name="Fk_TownshipID" Type="int" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="300" />
+          <Property Name="CreateUserID" Type="int" />
+          <Property Name="CreateDate" Type="date" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="InactivationUserID" Type="int" />
+          <Property Name="InactivationDate" Type="date" />
+          <Property Name="UpdateUserID" Type="int" />
+          <Property Name="UpdateDate" Type="date" />
+          <Property Name="Fk_partID" Type="int" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Opposition" Type="bit" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="DocNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Salability" Type="bit" />
+          <Property Name="changeUse" Type="bit" />
+          <Property Name="FutureProgram" Type="nvarchar" MaxLength="200" />
+          <Property Name="DocPlace" Type="nvarchar" MaxLength="50" />
+          <Property Name="LocationPolygon" Type="geometry" />
+        </EntityType>
+        <EntityContainer Name="AMSModelStoreContainer">
+          <EntitySet Name="tbl_src_Field" EntityType="Self.tbl_src_Field" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_src_Field">
+          <Key>
+            <PropertyRef Name="FieldID" />
+          </Key>
+          <Property Name="FieldID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UsableArea" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="TotalArea" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="Fk_SoilTextureID" Type="Int32" />
+          <Property Name="Fk_OwnershipID" Type="Int32" />
+          <Property Name="Fk_FieldUseTypeID" Type="Int32" />
+          <Property Name="Fk_ProvinceID" Type="Int32" />
+          <Property Name="Fk_TownshipID" Type="Int32" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="CreateUserID" Type="Int32" />
+          <Property Name="CreateDate" Type="DateTime" Precision="0" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="InactivationUserID" Type="Int32" />
+          <Property Name="InactivationDate" Type="DateTime" Precision="0" />
+          <Property Name="UpdateUserID" Type="Int32" />
+          <Property Name="UpdateDate" Type="DateTime" Precision="0" />
+          <Property Name="Fk_partID" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Opposition" Type="Boolean" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DocNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Salability" Type="Boolean" />
+          <Property Name="changeUse" Type="Boolean" />
+          <Property Name="FutureProgram" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DocPlace" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LocationPolygon" Type="Geometry" />
+        </EntityType>
+        <EntityContainer Name="AMSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_src_Field" EntityType="Self.tbl_src_Field" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AMSModelStoreContainer" CdmEntityContainer="AMSEntities">
+          <EntitySetMapping Name="tbl_src_Field">
+            <EntityTypeMapping TypeName="AMSModel.tbl_src_Field">
+              <MappingFragment StoreEntitySet="tbl_src_Field">
+                <ScalarProperty Name="FieldID" ColumnName="FieldID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="UsableArea" ColumnName="UsableArea" />
+                <ScalarProperty Name="TotalArea" ColumnName="TotalArea" />
+                <ScalarProperty Name="Fk_SoilTextureID" ColumnName="Fk_SoilTextureID" />
+                <ScalarProperty Name="Fk_OwnershipID" ColumnName="Fk_OwnershipID" />
+                <ScalarProperty Name="Fk_FieldUseTypeID" ColumnName="Fk_FieldUseTypeID" />
+                <ScalarProperty Name="Fk_ProvinceID" ColumnName="Fk_ProvinceID" />
+                <ScalarProperty Name="Fk_TownshipID" ColumnName="Fk_TownshipID" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="CreateUserID" ColumnName="CreateUserID" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="InactivationUserID" ColumnName="InactivationUserID" />
+                <ScalarProperty Name="InactivationDate" ColumnName="InactivationDate" />
+                <ScalarProperty Name="UpdateUserID" ColumnName="UpdateUserID" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="Fk_partID" ColumnName="Fk_partID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Opposition" ColumnName="Opposition" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="DocNumber" ColumnName="DocNumber" />
+                <ScalarProperty Name="Salability" ColumnName="Salability" />
+                <ScalarProperty Name="changeUse" ColumnName="changeUse" />
+                <ScalarProperty Name="FutureProgram" ColumnName="FutureProgram" />
+                <ScalarProperty Name="DocPlace" ColumnName="DocPlace" />
+                <ScalarProperty Name="LocationPolygon" ColumnName="LocationPolygon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

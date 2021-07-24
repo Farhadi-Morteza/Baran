@@ -47,7 +47,11 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -117,6 +121,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dstDate.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GeoModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeoModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeoModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeoModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeoModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Map\dstLocation.cs">
@@ -225,6 +244,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dstTask.xsd</DependentUpon>
     </Compile>
+    <Compile Include="tbl_src_Field.cs">
+      <DependentUpon>GeoModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -297,6 +319,13 @@
     <None Include="DateAdjustement\dstDate.xss">
       <DependentUpon>dstDate.xsd</DependentUpon>
     </None>
+    <EntityDeploy Include="GeoModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GeoModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="GeoModel.edmx.diagram">
+      <DependentUpon>GeoModel.edmx</DependentUpon>
+    </None>
     <None Include="Map\dstLocation.xsc">
       <DependentUpon>dstLocation.xsd</DependentUpon>
     </None>
@@ -308,6 +337,7 @@
     <None Include="Map\dstLocation.xss">
       <DependentUpon>dstLocation.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Production\dstProductionTask.xsc">
       <DependentUpon>dstProductionTask.xsd</DependentUpon>
     </None>
@@ -436,6 +466,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ProductionModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GeoModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GeoModel.Context.cs</LastGenOutput>
+      <DependentUpon>GeoModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="GeoModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GeoModel.edmx</DependentUpon>
+      <LastGenOutput>GeoModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

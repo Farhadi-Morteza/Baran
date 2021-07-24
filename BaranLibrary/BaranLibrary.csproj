@@ -47,20 +47,17 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FarsiLibrary.Resources, Version=2.5.0.0, Culture=neutral, PublicKeyToken=def7c46cace23f8f, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\FarsiLibrary.Resources.dll</HintPath>
+    <Reference Include="FarsiLibrary.Resources">
+      <HintPath>E:\AMS_1400-02-17\AMS\Baran\bin\Debug\FarsiLibrary.Resources.dll</HintPath>
     </Reference>
-    <Reference Include="FarsiLibrary.Utils, Version=2.5.0.0, Culture=neutral, PublicKeyToken=def7c46cace23f8f, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\FarsiLibrary.Utils.dll</HintPath>
+    <Reference Include="FarsiLibrary.Utils">
+      <HintPath>E:\AMS_1400-02-17\AMS\Baran\bin\Debug\FarsiLibrary.Utils.dll</HintPath>
     </Reference>
-    <Reference Include="FarsiLibrary.Win, Version=2.5.0.0, Culture=neutral, PublicKeyToken=def7c46cace23f8f, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\FarsiLibrary.Win.dll</HintPath>
+    <Reference Include="FarsiLibrary.Win">
+      <HintPath>E:\AMS_1400-02-17\AMS\Baran\bin\Debug\FarsiLibrary.Win.dll</HintPath>
     </Reference>
     <Reference Include="ImageListView">
-      <HintPath>..\..\Software\ImageListViewDemo\ImageListView.dll</HintPath>
+      <HintPath>E:\AMS_1400-02-17\AMS\Baran\bin\Debug\ImageListView.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics2.Shared.v8.3, Version=8.3.20083.1009, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
     <Reference Include="Infragistics2.Win.AppStylistSupport.v8.3, Version=8.3.20083.1009, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
