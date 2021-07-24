@@ -1028,9 +1028,6 @@
     <EmbeddedResource Include="Source\frmBuildingsView.resx">
       <DependentUpon>frmBuildingsView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Source\frmField.resx">
-      <DependentUpon>frmField.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Source\frmFieldList.resx">
       <DependentUpon>frmFieldList.cs</DependentUpon>
     </EmbeddedResource>

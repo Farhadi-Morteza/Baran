@@ -923,7 +923,7 @@ namespace Baran.Maps
                 else if (ShapeType == (int)PublicEnum.EnmShapeType.point)
                     SavePoints.Add(new PointLatLng((double)currentMarker.Position.Lat, (double)currentMarker.Position.Lng));
 
-
+                //var LocationPolygon = System.Data.Spatial.DbGeometry.FromText(SavePoints.ToString());
                 foreach (var poi in SavePoints)
                 {
                     adp.Insert(poi.Lng, poi.Lat, FieldID, BuildingID, WarehouseID, WaterstorageID, WaterID, WaterTransmissionLineID, PartID);

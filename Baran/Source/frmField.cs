@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using BaranDataAccess;
 
 namespace Baran.Source
 {
@@ -115,9 +116,84 @@ namespace Baran.Source
         {
             base.OnSave();
 
-            BaranDataAccess.AMSEntities db = new BaranDataAccess.AMSEntities();
+            //BaranDataAccess.AMSEntities db = new BaranDataAccess.AMSEntities();
 
-            var list = db.tbl_src_Field.ToList();
+            //BaranDataAccess.tbl_src_Field field = new BaranDataAccess.tbl_src_Field()
+            //{
+            //    Name = "New Test",
+            //    Address = "Tehran",
+            //    LocationPolygon = System.Data.Spatial.DbGeometry.FromText("POINT(-122.360 47.656)")
+            //};
+            //db.tbl_src_Field.Add(field);
+            //db.SaveChanges();
+            //System.Data.Spatial.DbGeometry polygon = new System.Data.Spatial.DbGeometry();
+            //var pp = System.Data.Spatial.DbGeometry.PolygonFromText()
+            //var list = db.tbl_src_Field.OrderByDescending(p => p.FieldID > 350).ToList();
+
+            //var res = db.tbl_src_Field.SingleOrDefault(p => p.FieldID == 356);
+            //if (res != null)
+            //{
+            //    res.Fk_SoilTextureID = 1;
+            //    res.Fk_OwnershipID = 2;
+            //    res.Fk_partID = 6;
+            //}
+
+            //db.SaveChanges();
+
+            //var result = db.tbl_src_Field.SingleOrDefault(p => p.FieldID == 355);
+            //db.tbl_src_Field.Remove(result);
+            //db.SaveChanges();
+
+            //=========================================================================================
+            //AMSEntities db = new AMSEntities();
+            //IFieldRepository field = new FieldRepository(db);            
+
+            //tbl_src_Field AddField = new tbl_src_Field()
+            //{
+            //    Name = strName,
+            //    UsableArea = dclUsableArea,
+            //    TotalArea = dclTotalArea,
+            //    Fk_SoilTextureID = intSoilTexture,
+            //    Fk_OwnershipID = intOwnership,
+            //    Fk_FieldUseTypeID = intFeildUseType,
+            //    Fk_ProvinceID = intProvinceID,
+            //    Fk_TownshipID = intTownshipID,
+            //    City = strCity,
+            //    Address = strAddress,
+            //    CreateUserID = UserID, 
+            //    Fk_partID = intParentCo,
+            //    Description = strDescription,
+            //    Opposition = blnOpposition,
+            //    Code = strCode,
+            //    DocNumber = strDocNumber,
+            //    Salability = blnSalability,
+            //    changeUse = blnChangeUse,
+            //    FutureProgram = strFutureProgram,
+            //    DocPlace = strDocPlace,
+
+            //};
+
+            //field.InsertField(AddField);
+            //field.Save();
+
+            //var lisdd = field.GetAllFields().Where(p => p.FieldID > 350).ToList();
+            //FieldID = AddField.FieldID;
+            //=========================================================================================
+
+            //=========================================================================================
+            //UnitOfWork db = new UnitOfWork();
+            //var list = db.FieldRepository.GetAllFields();
+            //db.Dispose();
+            //=========================================================================================
+
+            //=========================================================================================
+            //AMSEntities db = new AMSEntities();
+            //Repository<tbl_src_Field> fieldRepository = new Repository<tbl_src_Field>(db);
+
+            //var result = fieldRepository.GetById(356);
+            //var result2 = fieldRepository.GetAll();
+            //var result3 = fieldRepository.GetAll(c => c.FieldID == 357);
+            //=========================================================================================
 
             //if (FieldID > 0)
             //{
@@ -140,9 +216,12 @@ namespace Baran.Source
 
                 waite.Show();
                 this.SetVariables();
-                FieldID = Convert.ToInt32(adp.New_Field_Insert(strName, dclUsableArea, dclTotalArea, intSoilTexture, intOwnership
-                                                             , intFeildUseType, intProvinceID, intTownshipID, strCity, strAddress, UserID, intParentCo, strDescription, blnOpposition
-                                                             , strCode, strDocNumber, blnSalability, blnChangeUse, strFutureProgram, strDocPlace));
+
+
+
+                //FieldID = Convert.ToInt32(adp.New_Field_Insert(strName, dclUsableArea, dclTotalArea, intSoilTexture, intOwnership
+                //                                             , intFeildUseType, intProvinceID, intTownshipID, strCity, strAddress, UserID, intParentCo, strDescription, blnOpposition
+                //                                             , strCode, strDocNumber, blnSalability, blnChangeUse, strFutureProgram, strDocPlace));
 
                 if (FieldID > 0)
                 {
