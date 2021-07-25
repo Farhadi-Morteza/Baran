@@ -18,7 +18,7 @@ namespace Baran.Base_Forms
         public frmSecondChildBase()
         {
             InitializeComponent();
-            this.SetControlsImage();
+            //this.SetControlsImage();
         }
 
         #endregion
