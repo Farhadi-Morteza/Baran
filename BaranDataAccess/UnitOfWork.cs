@@ -29,20 +29,20 @@ namespace BaranDataAccess
         // **************************************************
 
         // **************************************************
-        //private IFieldRepository _fieldRepository;
+        private Repository<tbl_src_Field> _fieldRepository;
 
-        //public IFieldRepository FieldRepository
-        //{
-        //    get
-        //    {
-        //        if (_fieldRepository == null)
-        //        {
-        //            _fieldRepository = new FieldRepository(DatabaseContext);
-        //        }
+        public IRepository<tbl_src_Field> FieldRepository
+        {
+            get
+            {
+                if (_fieldRepository == null)
+                {
+                    _fieldRepository = new Repository<tbl_src_Field>(DatabaseContext);
+                }
 
-        //        return _fieldRepository;
-        //    }
-        //}
+                return _fieldRepository;
+            }
+        }
         // **************************************************
         public bool IsDisposed
         {
@@ -51,7 +51,7 @@ namespace BaranDataAccess
 
         public void Save()
         {
-            throw new NotImplementedException();
+            DatabaseContext.SaveChanges();
         }
 
         public void Dispose()

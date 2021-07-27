@@ -18,7 +18,8 @@ using WindowsForms.CustomMarkers;
 using System.Data.Entity;
 using System.Spatial;
 using Baran.Classes.Common;
- 
+using BaranDataAccess;
+
 namespace Baran.Maps
 {
     public partial class frmBaseMap : Form
@@ -912,6 +913,7 @@ namespace Baran.Maps
             waite = new WaiteForm();
             try
             {
+                
                 waite.Show();
                 adp.Delete(FieldID, BuildingID, WarehouseID, WaterstorageID, WaterID, WaterTransmissionLineID, PartID);
 
@@ -923,13 +925,27 @@ namespace Baran.Maps
                 else if (ShapeType == (int)PublicEnum.EnmShapeType.point)
                     SavePoints.Add(new PointLatLng((double)currentMarker.Position.Lat, (double)currentMarker.Position.Lng));
 
-                //var LocationPolygon = System.Data.Spatial.DbGeometry.FromText(SavePoints.ToString());
-                foreach (var poi in SavePoints)
+                UnitOfWork db = new UnitOfWork();
+                if (FieldID > 0)
                 {
-                    adp.Insert(poi.Lng, poi.Lat, FieldID, BuildingID, WarehouseID, WaterstorageID, WaterID, WaterTransmissionLineID, PartID);
+                    tbl_src_Field fieldUpdate = new tbl_src_Field();
+                    fieldUpdate = db.FieldRepository.GetById(FieldID);
+
+                    fieldUpdate.LocationPolygon = GeoUtils.ConvertGMapPolygonPointsToDbGeometryPolygon(SavePoints);
+
+                    db.FieldRepository.Update(fieldUpdate);
+                    db.Save();
 
                 }
 
+                else
+                {
+                    foreach (var poi in SavePoints)
+                    {
+                        adp.Insert(poi.Lng, poi.Lat, FieldID, BuildingID, WarehouseID, WaterstorageID, WaterID, WaterTransmissionLineID, PartID);
+
+                    }
+                }
                 MessageBoxX.ShowMessageBox(PublicEnum.EnmMessageType.msgSaveSuccessful);
             }
             catch 

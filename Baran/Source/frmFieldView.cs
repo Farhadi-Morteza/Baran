@@ -9,6 +9,9 @@ using Baran.Classes.Common;
 using GMap.NET;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
+using BaranDataAccess;
+using System.Device.Location;
+using System.Linq;
 
 namespace Baran.Source
 {
@@ -133,43 +136,84 @@ namespace Baran.Source
 
         private void DrowMap()
         {
-            BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocation =
-               new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
-            BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter adpLocation =
-                new BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter();
+            GMapOverlay routes = new GMapOverlay("routes");
 
-            List<PointLatLng> points = new List<PointLatLng>();
+            UnitOfWork db = new UnitOfWork();
 
-            try
+            tbl_src_Field  field = db.FieldRepository.GetById(FieldID);
+
+            List<PointLatLng> Mypoints = new List<PointLatLng>();
+            Mypoints = GeoUtils.ConvertStringArrayToGeographicCoordinates(field.LocationPolygon.ProviderValue.ToString());
+            GMapRoute rt = new GMapRoute(Mypoints, string.Empty);
             {
-                adpLocation.FillLocationByIDTable(tblLocation, FieldID, null, null, null, null, null, null);
-
-                if (tblLocation.Count > 0)
-                {
-                    GMapOverlay routes = new GMapOverlay("routes");
-                    foreach (var point in tblLocation)
-                    {
-                        points.Add(new PointLatLng(Convert.ToDouble(point.Latitude), Convert.ToDouble(point.Longitude)));
-
-                    }
-                    ////////////////////////////
-                    GMapRoute rt = new GMapRoute(points, string.Empty);
-                    {
-                        rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
-                        rt.Stroke.Width = 5;
-                        rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-                    }
-                    routes.Routes.Add(rt);
-
-                    ///////////////////////////
-                    MainMap.Overlays.Clear();
-                    MainMap.Overlays.Add(routes);
-                    MainMap.ZoomAndCenterRoutes("routes");
-
-                }
+                rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
+                rt.Stroke.Width = 5;
+                rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             }
-            catch
-            { }
+            routes.Routes.Add(rt);
+            //routes.Polygons.Add(rt);
+
+            ///////////////////////////
+            MainMap.Overlays.Clear();
+            MainMap.Overlays.Add(routes);
+            MainMap.ZoomAndCenterRoutes("routes");
+
+
+            //google.maps.geometry.spherical.computeArea(yourPolygon.getPath());
+            //MainMap.are
+            //var ppp = field.LocationPolygon;
+
+            //var pointA = string.Format("POINT({1} {0})", latitude1, longitude1);
+            //if (pointA.Intersect())
+            //{
+            //    // do something with pointA
+            //}
+            //var pp = field.LocationPolygon.ProviderValue.ToString();
+            //string ss = "122.358 47.653,122.348 47.649,122.348 47.658,122.358 47.658";
+            //var ll = Baran.Classes.Common.GeographicCoordinate.ConvertStringArrayToGeographicCoordinates(ss);
+            //var list = GeoLocation.GeoUtils.ConvertStringArrayToGeographicCoordinates(ss);
+
+//============================================*****************************************
+    //BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocation =
+    //           new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
+    //        BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter adpLocation =
+    //            new BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter();
+
+    //        List<PointLatLng> points = new List<PointLatLng>();
+
+    //        try
+    //        {
+    //            adpLocation.FillLocationByIDTable(tblLocation, FieldID, null, null, null, null, null, null);
+
+    //            if (tblLocation.Count > 0)
+    //            {
+    //                GMapOverlay routes = new GMapOverlay("routes");
+
+    //                foreach (var point in tblLocation)
+    //                {
+    //                    points.Add(new PointLatLng(Convert.ToDouble(point.Latitude), Convert.ToDouble(point.Longitude)));
+
+    //                }
+    //                ////////////////////////////
+    //                GMapRoute rt = new GMapRoute(points, string.Empty);
+    //                //GMapPolygon rt = new GMapPolygon(points, string.Empty);
+    //                {
+    //                    rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
+    //                    rt.Stroke.Width = 5;
+    //                    rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+    //                }
+    //                routes.Routes.Add(rt);
+    //                //routes.Polygons.Add(rt);
+
+    //                ///////////////////////////
+    //                MainMap.Overlays.Clear();
+    //                MainMap.Overlays.Add(routes);
+    //                MainMap.ZoomAndCenterRoutes("routes");
+
+    //            }
+    //        }
+    //        catch
+    //        { }
         }
 
         #endregion

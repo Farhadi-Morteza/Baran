@@ -126,7 +126,7 @@ namespace Baran.Source
             //};
             //db.tbl_src_Field.Add(field);
             //db.SaveChanges();
-            //System.Data.Spatial.DbGeometry polygon = new System.Data.Spatial.DbGeometry();
+            //System.Data.Spatial.DbGeometry polygon = new System.Data.Spatial.DbGeometry;
             //var pp = System.Data.Spatial.DbGeometry.PolygonFromText()
             //var list = db.tbl_src_Field.OrderByDescending(p => p.FieldID > 350).ToList();
 
@@ -179,6 +179,17 @@ namespace Baran.Source
             //var lisdd = field.GetAllFields().Where(p => p.FieldID > 350).ToList();
             //FieldID = AddField.FieldID;
             //=========================================================================================
+            UnitOfWork dbinsert = new UnitOfWork();
+            //dbinsert.FieldRepository field = new dbinsert.FieldRepository();
+            tbl_src_Field field = new tbl_src_Field()
+            {
+                Name = "New Test",
+                Address = "Tehran",
+                LocationPolygon = System.Data.Spatial.DbGeometry.PolygonFromText("POLYGON((52.9595947265625 36.0846212960693,53.536376953125 36.2442731849391,53.624267578125 35.6796096093686,53.0419921875 35.5456359324994,52.6409912109375 35.7688006602384, 52.9595947265625 36.0846212960693))", 4326)
+            };
+
+            dbinsert.FieldRepository.Insert(field);
+            dbinsert.Save();
 
             //=========================================================================================
             //UnitOfWork db = new UnitOfWork();
@@ -187,12 +198,17 @@ namespace Baran.Source
             //=========================================================================================
 
             //=========================================================================================
-            //AMSEntities db = new AMSEntities();
-            //Repository<tbl_src_Field> fieldRepository = new Repository<tbl_src_Field>(db);
+            AMSEntities db = new AMSEntities();
+            Repository<tbl_src_Field> fieldRepository = new Repository<tbl_src_Field>(db);
 
-            //var result = fieldRepository.GetById(356);
-            //var result2 = fieldRepository.GetAll();
-            //var result3 = fieldRepository.GetAll(c => c.FieldID == 357);
+            var result = fieldRepository.GetById(356);
+            var result2 = fieldRepository.GetAll();
+            var result3 = fieldRepository.GetAll(c => c.FieldID == 357);
+            //=========================================================================================
+
+            //=========================================================================================
+            //UnitOfWork db = new UnitOfWork();
+            //var list = db.FieldRepository.GetAll()
             //=========================================================================================
 
             //if (FieldID > 0)
