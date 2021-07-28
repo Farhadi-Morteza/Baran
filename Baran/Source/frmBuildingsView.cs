@@ -1,4 +1,5 @@
 ﻿using Baran.Classes.Common;
+using BaranDataAccess;
 using GMap.NET;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
@@ -100,45 +101,70 @@ namespace Baran.Source
 
         private void DrowMap()
         {
-            BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocation =
-               new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
-            BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter adpLocation =
-                new BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter();
+            GMapOverlay myroutes = new GMapOverlay("routes");
 
-            List<PointLatLng> points = new List<PointLatLng>();
+            UnitOfWork db = new UnitOfWork();
+            tbl_src_Buildings building = db.BuildingsRepository.GetById(BuildingsID);
 
-            try
+            List<PointLatLng> Mypoints = new List<PointLatLng>();
+            if (building.Location != null)
             {
-                adpLocation.FillLocationByIDTable(tblLocation, null, BuildingsID, null, null, null, null, null);
+                Mypoints = GeoUtils.ConvertStringCoordinatesToGMapPolygony(building.Location.ProviderValue.ToString());
 
-                if (tblLocation.Count > 0)
+                GMapRoute rt = new GMapRoute(Mypoints, string.Empty);
                 {
-                    GMapOverlay routes = new GMapOverlay("routes");
-                    foreach (var point in tblLocation)
-                    {
-                        points.Add(new PointLatLng(Convert.ToDouble(point.Latitude), Convert.ToDouble(point.Longitude)));
-
-                    }
-                    ////////////////////////////
-                    GMapRoute rt = new GMapRoute(points, string.Empty);
-                    {
-                        rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
-                        rt.Stroke.Width = 5;
-                        rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-                    }
-
-                    GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.red_dot);
-                    routes.Routes.Add(rt);
-
-                    ///////////////////////////
-                    MainMap.Overlays.Clear();
-                    MainMap.Overlays.Add(routes);
-                    MainMap.ZoomAndCenterRoutes("routes");
-
+                    rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
+                    rt.Stroke.Width = 5;
+                    rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
                 }
+                myroutes.Routes.Add(rt);
+                ///////////////////////////
+                MainMap.Overlays.Clear();
+                MainMap.Overlays.Add(myroutes);
+                MainMap.ZoomAndCenterRoutes("routes");
             }
-            catch
-            { }
+            else
+            {
+                BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocation =
+                   new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
+                BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter adpLocation =
+                    new BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter();
+
+                List<PointLatLng> points = new List<PointLatLng>();
+
+                try
+                {
+                    adpLocation.FillLocationByIDTable(tblLocation, null, BuildingsID, null, null, null, null, null);
+
+                    if (tblLocation.Count > 0)
+                    {
+                        GMapOverlay routes = new GMapOverlay("routes");
+                        foreach (var point in tblLocation)
+                        {
+                            points.Add(new PointLatLng(Convert.ToDouble(point.Latitude), Convert.ToDouble(point.Longitude)));
+
+                        }
+                        ////////////////////////////
+                        GMapRoute rt = new GMapRoute(points, string.Empty);
+                        {
+                            rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
+                            rt.Stroke.Width = 5;
+                            rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+                        }
+
+                        GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.red_dot);
+                        routes.Routes.Add(rt);
+
+                        ///////////////////////////
+                        MainMap.Overlays.Clear();
+                        MainMap.Overlays.Add(routes);
+                        MainMap.ZoomAndCenterRoutes("routes");
+
+                    }
+                }
+                catch
+                { }
+            }
         }
 
         #endregion

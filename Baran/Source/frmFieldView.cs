@@ -136,84 +136,72 @@ namespace Baran.Source
 
         private void DrowMap()
         {
-            GMapOverlay routes = new GMapOverlay("routes");
+            GMapOverlay myroutes = new GMapOverlay("routes");
 
             UnitOfWork db = new UnitOfWork();
-
             tbl_src_Field  field = db.FieldRepository.GetById(FieldID);
 
             List<PointLatLng> Mypoints = new List<PointLatLng>();
-            Mypoints = GeoUtils.ConvertStringArrayToGeographicCoordinates(field.LocationPolygon.ProviderValue.ToString());
-            GMapRoute rt = new GMapRoute(Mypoints, string.Empty);
+            if (field.LocationPolygon != null)
             {
-                rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
-                rt.Stroke.Width = 5;
-                rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+                Mypoints = GeoUtils.ConvertStringCoordinatesToGMapPolygony(field.LocationPolygon.ProviderValue.ToString());
+
+                GMapRoute rt = new GMapRoute(Mypoints, string.Empty);
+                {
+                    rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
+                    rt.Stroke.Width = 5;
+                    rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+                }
+                myroutes.Routes.Add(rt);
+                ///////////////////////////
+                MainMap.Overlays.Clear();
+                MainMap.Overlays.Add(myroutes);
+                MainMap.ZoomAndCenterRoutes("routes");
             }
-            routes.Routes.Add(rt);
-            //routes.Polygons.Add(rt);
+            else
+            {
+                //============================================*****************************************
+                BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocation =
+                           new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
+                BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter adpLocation =
+                    new BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter();
 
-            ///////////////////////////
-            MainMap.Overlays.Clear();
-            MainMap.Overlays.Add(routes);
-            MainMap.ZoomAndCenterRoutes("routes");
+                List<PointLatLng> points = new List<PointLatLng>();
 
+                try
+                {
+                    adpLocation.FillLocationByIDTable(tblLocation, FieldID, null, null, null, null, null, null);
 
-            //google.maps.geometry.spherical.computeArea(yourPolygon.getPath());
-            //MainMap.are
-            //var ppp = field.LocationPolygon;
+                    if (tblLocation.Count > 0)
+                    {
+                        GMapOverlay routes = new GMapOverlay("routes");
 
-            //var pointA = string.Format("POINT({1} {0})", latitude1, longitude1);
-            //if (pointA.Intersect())
-            //{
-            //    // do something with pointA
-            //}
-            //var pp = field.LocationPolygon.ProviderValue.ToString();
-            //string ss = "122.358 47.653,122.348 47.649,122.348 47.658,122.358 47.658";
-            //var ll = Baran.Classes.Common.GeographicCoordinate.ConvertStringArrayToGeographicCoordinates(ss);
-            //var list = GeoLocation.GeoUtils.ConvertStringArrayToGeographicCoordinates(ss);
+                        foreach (var point in tblLocation)
+                        {
+                            points.Add(new PointLatLng(Convert.ToDouble(point.Latitude), Convert.ToDouble(point.Longitude)));
 
-//============================================*****************************************
-    //BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocation =
-    //           new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
-    //        BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter adpLocation =
-    //            new BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter();
+                        }
+                        ////////////////////////////
+                        GMapRoute rt = new GMapRoute(points, string.Empty);
+                        //GMapPolygon rt = new GMapPolygon(points, string.Empty);
+                        {
+                            rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
+                            rt.Stroke.Width = 5;
+                            rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+                        }
+                        routes.Routes.Add(rt);
+                        //routes.Polygons.Add(rt);
 
-    //        List<PointLatLng> points = new List<PointLatLng>();
+                        ///////////////////////////
+                        MainMap.Overlays.Clear();
+                        MainMap.Overlays.Add(routes);
+                        MainMap.ZoomAndCenterRoutes("routes");
 
-    //        try
-    //        {
-    //            adpLocation.FillLocationByIDTable(tblLocation, FieldID, null, null, null, null, null, null);
-
-    //            if (tblLocation.Count > 0)
-    //            {
-    //                GMapOverlay routes = new GMapOverlay("routes");
-
-    //                foreach (var point in tblLocation)
-    //                {
-    //                    points.Add(new PointLatLng(Convert.ToDouble(point.Latitude), Convert.ToDouble(point.Longitude)));
-
-    //                }
-    //                ////////////////////////////
-    //                GMapRoute rt = new GMapRoute(points, string.Empty);
-    //                //GMapPolygon rt = new GMapPolygon(points, string.Empty);
-    //                {
-    //                    rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
-    //                    rt.Stroke.Width = 5;
-    //                    rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-    //                }
-    //                routes.Routes.Add(rt);
-    //                //routes.Polygons.Add(rt);
-
-    //                ///////////////////////////
-    //                MainMap.Overlays.Clear();
-    //                MainMap.Overlays.Add(routes);
-    //                MainMap.ZoomAndCenterRoutes("routes");
-
-    //            }
-    //        }
-    //        catch
-    //        { }
+                    }
+                }
+                catch
+                { }
+            }
         }
 
         #endregion

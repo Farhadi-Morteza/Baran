@@ -1,4 +1,7 @@
 ﻿using Baran.Classes.Common;
+using BaranDataAccess;
+using GMap.NET;
+using GMap.NET.WindowsForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -102,43 +105,68 @@ namespace Baran.Source
 
         private void DrowMap()
         {
-            BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocation =
-                new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
-            BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter adpLocation =
-                new BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter();
+            GMapOverlay myroutes = new GMapOverlay("routes");
 
-            List<GMap.NET.PointLatLng> points = new List<GMap.NET.PointLatLng>();
+            UnitOfWork db = new UnitOfWork();
+            tbl_src_WaterStorage waterStorage = db.WaterStorageRepository.GetById(WaterStorageID);
 
-            try
+            List<PointLatLng> Mypoints = new List<PointLatLng>();
+            if (waterStorage.Location != null)
             {
-                adpLocation.FillLocationByIDTable(tblLocation, null, null, null, WaterStorageID, null, null, null);
+                Mypoints = GeoUtils.ConvertStringCoordinatesToGMapPolygony(waterStorage.Location.ProviderValue.ToString());
 
-                if (tblLocation.Count > 0)
+                GMapRoute rt = new GMapRoute(Mypoints, string.Empty);
                 {
-                    GMap.NET.WindowsForms.GMapOverlay routes = new GMap.NET.WindowsForms.GMapOverlay("routes");
-                    foreach (var point in tblLocation)
-                    {
-                        points.Add(new GMap.NET.PointLatLng(Convert.ToDouble(point.Latitude), Convert.ToDouble(point.Longitude)));
-
-                    }
-                    ////////////////////////////
-                    GMap.NET.WindowsForms.GMapRoute rt = new GMap.NET.WindowsForms.GMapRoute(points, string.Empty);
-                    {
-                        rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
-                        rt.Stroke.Width = 5;
-                        rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-                    }
-                    routes.Routes.Add(rt);
-
-                    ///////////////////////////
-                    MainMap.Overlays.Clear();
-                    MainMap.Overlays.Add(routes);
-                    MainMap.ZoomAndCenterRoutes("routes");
-
+                    rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
+                    rt.Stroke.Width = 5;
+                    rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
                 }
+                myroutes.Routes.Add(rt);
+                ///////////////////////////
+                MainMap.Overlays.Clear();
+                MainMap.Overlays.Add(myroutes);
+                MainMap.ZoomAndCenterRoutes("routes");
             }
-            catch
-            { }
+            else
+            {
+                BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocation =
+                new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
+                BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter adpLocation =
+                    new BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter();
+
+                List<GMap.NET.PointLatLng> points = new List<GMap.NET.PointLatLng>();
+
+                try
+                {
+                    adpLocation.FillLocationByIDTable(tblLocation, null, null, null, WaterStorageID, null, null, null);
+
+                    if (tblLocation.Count > 0)
+                    {
+                        GMap.NET.WindowsForms.GMapOverlay routes = new GMap.NET.WindowsForms.GMapOverlay("routes");
+                        foreach (var point in tblLocation)
+                        {
+                            points.Add(new GMap.NET.PointLatLng(Convert.ToDouble(point.Latitude), Convert.ToDouble(point.Longitude)));
+
+                        }
+                        ////////////////////////////
+                        GMap.NET.WindowsForms.GMapRoute rt = new GMap.NET.WindowsForms.GMapRoute(points, string.Empty);
+                        {
+                            rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
+                            rt.Stroke.Width = 5;
+                            rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+                        }
+                        routes.Routes.Add(rt);
+
+                        ///////////////////////////
+                        MainMap.Overlays.Clear();
+                        MainMap.Overlays.Add(routes);
+                        MainMap.ZoomAndCenterRoutes("routes");
+
+                    }
+                }
+                catch
+                { }
+            }
         }
 
         #endregion

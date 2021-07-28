@@ -42,6 +42,7 @@ namespace BaranDataAccess
         public Nullable<System.DateTime> InactivationDate { get; set; }
         public Nullable<int> UpdateUserID { get; set; }
         public Nullable<System.DateTime> UpdateDate { get; set; }
+        public System.Data.Spatial.DbGeometry Location { get; set; }
     
         public virtual tbl_cmn_Province tbl_cmn_Province { get; set; }
         public virtual tbl_src_CompanyCategory tbl_src_CompanyCategory { get; set; }

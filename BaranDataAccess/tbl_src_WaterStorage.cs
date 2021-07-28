@@ -28,5 +28,6 @@ namespace BaranDataAccess
         public Nullable<System.DateTime> UpdateDate { get; set; }
         public string Description { get; set; }
         public Nullable<int> Fk_PartID { get; set; }
+        public System.Data.Spatial.DbGeometry Location { get; set; }
     }
 }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="AMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="AMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -729,6 +729,7 @@
           <Property Name="UpdateUserID" Type="int" />
           <Property Name="UpdateDate" Type="date" />
           <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Location" Type="geometry" />
         </EntityType>
         <EntityType Name="tbl_src_BuildingsCategory">
           <Key>
@@ -1012,6 +1013,7 @@
           <Property Name="InactivationDate" Type="date" />
           <Property Name="UpdateUserID" Type="int" />
           <Property Name="UpdateDate" Type="date" />
+          <Property Name="Location" Type="geometry" />
         </EntityType>
         <EntityType Name="tbl_src_Person">
           <Key>
@@ -1192,6 +1194,7 @@
           <Property Name="Fk_PartID" Type="int" />
           <Property Name="Fk_WarehouseUseTypeID" Type="int" />
           <Property Name="Volume" Type="numeric" Precision="8" Scale="2" />
+          <Property Name="Location" Type="geometry" />
         </EntityType>
         <EntityType Name="tbl_src_WarehouseType">
           <Key>
@@ -1224,6 +1227,7 @@
           <Property Name="UpdateUserID" Type="int" />
           <Property Name="UpdateDate" Type="date" />
           <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Location" Type="geometry" />
         </EntityType>
         <EntityType Name="tbl_src_WaterSourceType">
           <Key>
@@ -1251,6 +1255,7 @@
           <Property Name="UpdateDate" Type="date" />
           <Property Name="Description" Type="nvarchar" MaxLength="500" />
           <Property Name="Fk_PartID" Type="int" />
+          <Property Name="Location" Type="geometry" />
         </EntityType>
         <EntityType Name="tbl_src_WaterStorageD">
           <Key>
@@ -1279,6 +1284,7 @@
           <Property Name="UpdateDate" Type="date" />
           <Property Name="Description" Type="nvarchar" MaxLength="500" />
           <Property Name="Fk_WaterTransmissionTypeID" Type="int" />
+          <Property Name="Location" Type="geometry" />
         </EntityType>
         <EntityType Name="tbl_src_WaterTransmissionType">
           <Key>
@@ -1360,18 +1366,6 @@
           <Property Name="UpdateUserID" Type="int" />
           <Property Name="UpdateDate" Type="date" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'AMS.dbo.PersonAccount' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="PersonAccount">
-          <Property Name="PersonCompleteName" Type="nvarchar" MaxLength="100" />
-          <Property Name="DocumentNumber" Type="int" />
-          <Property Name="FactorNumber" Type="int" />
-          <Property Name="PositiveBalance" Type="money" />
-          <Property Name="NegativeBalance" Type="money" />
-          <Property Name="SafeOperationTypeName" Type="nvarchar" MaxLength="50" />
-          <Property Name="RecievePaymentTypeName" Type="nvarchar" MaxLength="50" />
-          <Property Name="FactorOperationTypeFA" Type="nvarchar" MaxLength="50" />
-        </EntityType>-->
         <!--Errors Found During Generation:
 warning 6002: The table/view 'AMS.dbo.viw_Goo_GoodsBasePrice' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="viw_Goo_GoodsBasePrice">
@@ -4010,8 +4004,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <End Role="tbl_src_Subcollection" EntitySet="tbl_src_Subcollection" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="AMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -4834,6 +4827,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           <Property Name="UpdateUserID" Type="Int32" />
           <Property Name="UpdateDate" Type="DateTime" Precision="0" />
           <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="Geometry" />
         </EntityType>
         <EntityType Name="tbl_src_BuildingsCategory">
           <Key>
@@ -5140,6 +5134,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           <NavigationProperty Name="tbl_cmn_Province" Relationship="Self.FK_tbl_src_Part_tbl_cmn_Province" FromRole="tbl_src_Part" ToRole="tbl_cmn_Province" />
           <NavigationProperty Name="tbl_src_CompanyCategory" Relationship="Self.FK_tbl_src_Part_tbl_src_CompanyCategory" FromRole="tbl_src_Part" ToRole="tbl_src_CompanyCategory" />
           <NavigationProperty Name="tbl_src_Subcollection" Relationship="Self.FK_tbl_src_Part_tbl_src_Subcollection" FromRole="tbl_src_Part" ToRole="tbl_src_Subcollection" />
+          <Property Name="Location" Type="Geometry" />
         </EntityType>
         <EntityType Name="tbl_src_Person">
           <Key>
@@ -5331,6 +5326,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           <Property Name="Fk_PartID" Type="Int32" />
           <Property Name="Fk_WarehouseUseTypeID" Type="Int32" />
           <Property Name="Volume" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="Location" Type="Geometry" />
         </EntityType>
         <EntityType Name="tbl_src_WarehouseType">
           <Key>
@@ -5363,6 +5359,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           <Property Name="UpdateUserID" Type="Int32" />
           <Property Name="UpdateDate" Type="DateTime" Precision="0" />
           <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="Geometry" />
         </EntityType>
         <EntityType Name="tbl_src_WaterSourceType">
           <Key>
@@ -5390,6 +5387,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           <Property Name="UpdateDate" Type="DateTime" Precision="0" />
           <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="Fk_PartID" Type="Int32" />
+          <Property Name="Location" Type="Geometry" />
         </EntityType>
         <EntityType Name="tbl_src_WaterStorageD">
           <Key>
@@ -5418,6 +5416,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           <Property Name="UpdateDate" Type="DateTime" Precision="0" />
           <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="Fk_WaterTransmissionTypeID" Type="Int32" />
+          <Property Name="Location" Type="Geometry" />
         </EntityType>
         <EntityType Name="tbl_src_WaterTransmissionType">
           <Key>
@@ -6063,25 +6062,25 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           </FunctionImport>
           <FunctionImport Name="udft_Goo_GoodsStock" IsComposable="true" ReturnType="Collection(AMSModel.udft_Goo_GoodsStock_Result)" />
           <FunctionImport Name="udft_Per_PersonsAccountBalance" IsComposable="true" ReturnType="Collection(AMSModel.udft_Per_PersonsAccountBalance_Result)">
-            <Parameter Name="FiscalYearID" Mode="In" Type="Int32" />
+          <Parameter Name="FiscalYearID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="udft_Saf_SafeBoxsTransaction" IsComposable="true" ReturnType="Collection(AMSModel.udft_Saf_SafeBoxsTransaction_Result)">
-            <Parameter Name="FiscalYearID" Mode="In" Type="Int32" />
+          <Parameter Name="FiscalYearID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="udft_UserAccessLevel" IsComposable="true" ReturnType="Collection(AMSModel.udft_UserAccessLevel_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int32" />
+          <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="udft_UserAccessLevel_Collection" IsComposable="true" ReturnType="Collection(AMSModel.udft_UserAccessLevel_Collection_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int32" />
+          <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="udft_UserAccessLevel_Company" IsComposable="true" ReturnType="Collection(AMSModel.udft_UserAccessLevel_Company_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int32" />
+          <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="udft_UserAccessLevel_Part" IsComposable="true" ReturnType="Collection(AMSModel.udft_UserAccessLevel_Part_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int32" />
+          <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="udft_UserAccessLevel_Subcollection" IsComposable="true" ReturnType="Collection(AMSModel.udft_UserAccessLevel_Subcollection_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int32" />
+          <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="apr_cmn_DeleteAll" />
           <FunctionImport Name="sp_alterdiagram">
@@ -6115,16 +6114,16 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
           <FunctionImport Name="spr_AccessibleItemsForCurrentUser_Select" ReturnType="Collection(AMSModel.spr_AccessibleItemsForCurrentUser_Select_Result)">
-            <Parameter Name="FK_UserID" Mode="In" Type="Int64" />
+          <Parameter Name="FK_UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_AccessiblePackagesForCurrentUserGrouped_Select" ReturnType="Collection(AMSModel.spr_AccessiblePackagesForCurrentUserGrouped_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_Activity_cmbByBusinessID_Select" ReturnType="Collection(AMSModel.spr_cmn_Activity_cmbByBusinessID_Select_Result)">
-            <Parameter Name="Fk_BusinessID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_BusinessID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_Activity_Delete" ReturnType="Collection(Int32)">
-            <Parameter Name="ActivityID" Mode="In" Type="Int32" />
+          <Parameter Name="ActivityID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_Activity_Insert" ReturnType="Collection(Decimal)">
             <Parameter Name="Name" Mode="In" Type="String" />
@@ -6138,14 +6137,14 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Fk_BusinessID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_ActivityByID_Select" ReturnType="Collection(AMSModel.spr_cmn_ActivityByID_Select_Result)">
-            <Parameter Name="ActivityID" Mode="In" Type="Int32" />
+          <Parameter Name="ActivityID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_Business_cmb_Select" ReturnType="Collection(AMSModel.spr_cmn_Business_cmb_Select_Result)" />
           <FunctionImport Name="spr_cmn_Business_cmbByBusinessCategoryID_Select" ReturnType="Collection(AMSModel.spr_cmn_Business_cmbByBusinessCategoryID_Select_Result)">
-            <Parameter Name="Fk_BusinessCategoryID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_BusinessCategoryID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_Business_Delete" ReturnType="Collection(Int32)">
-            <Parameter Name="BusinessID" Mode="In" Type="Int32" />
+          <Parameter Name="BusinessID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_Business_Insert" ReturnType="Collection(Decimal)">
             <Parameter Name="NameEn" Mode="In" Type="String" />
@@ -6161,14 +6160,14 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Fk_BusinessCategoryID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_BusinessByID_Select" ReturnType="Collection(AMSModel.spr_cmn_BusinessByID_Select_Result)">
-            <Parameter Name="BusinessID" Mode="In" Type="Int32" />
+          <Parameter Name="BusinessID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_BusinessCategory_cmb_Select" ReturnType="Collection(AMSModel.spr_cmn_BusinessCategory_cmb_Select_Result)" />
           <FunctionImport Name="spr_cmn_BusinessCategory_Delete">
-            <Parameter Name="BusinessCategoryID" Mode="In" Type="Int32" />
+          <Parameter Name="BusinessCategoryID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_BusinessCategory_Insert" ReturnType="Collection(Decimal)">
-            <Parameter Name="Name" Mode="In" Type="String" />
+          <Parameter Name="Name" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_BusinessCategory_lst_Select" ReturnType="Collection(AMSModel.spr_cmn_BusinessCategory_lst_Select_Result)" />
           <FunctionImport Name="spr_cmn_BusinessCategory_Select" ReturnType="Collection(AMSModel.spr_cmn_BusinessCategory_Select_Result)" />
@@ -6177,11 +6176,11 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Name" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_BusinessCategoryByID_Select" ReturnType="Collection(AMSModel.spr_cmn_BusinessCategoryByID_Select_Result)">
-            <Parameter Name="BusinessCategoryID" Mode="In" Type="Int32" />
+          <Parameter Name="BusinessCategoryID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_Country_cmb_Select" ReturnType="Collection(AMSModel.spr_cmn_Country_cmb_Select_Result)" />
           <FunctionImport Name="spr_cmn_Crop_cmb_Select" ReturnType="Collection(AMSModel.spr_cmn_Crop_cmb_Select_Result)">
-            <Parameter Name="Fk_ActivityID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_ActivityID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_Crop_Delete" ReturnType="Collection(Int32)">
             <Parameter Name="CropID" Mode="In" Type="Int32" />
@@ -6209,7 +6208,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UpdateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_CropByID_Select" ReturnType="Collection(AMSModel.spr_cmn_CropByID_Select_Result)">
-            <Parameter Name="CropID" Mode="In" Type="Int32" />
+          <Parameter Name="CropID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_CropCategory_Select" ReturnType="Collection(AMSModel.spr_cmn_CropCategory_Select_Result)" />
           <FunctionImport Name="spr_cmn_Cultivar_Delete" ReturnType="Collection(Int32)">
@@ -6241,10 +6240,10 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Fk_CropID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_CultivarByCropId_Select" ReturnType="Collection(AMSModel.spr_cmn_CultivarByCropId_Select_Result)">
-            <Parameter Name="Fk_CropID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_CropID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_CultivarByID_Select" ReturnType="Collection(AMSModel.spr_cmn_CultivarByID_Select_Result)">
-            <Parameter Name="CultivarID" Mode="In" Type="Int32" />
+          <Parameter Name="CultivarID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_CultivarList_Select" ReturnType="Collection(AMSModel.spr_cmn_CultivarList_Select_Result)" />
           <FunctionImport Name="spr_cmn_Document_Delete" ReturnType="Collection(Int32)">
@@ -6270,7 +6269,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="CreateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_Document_Select" ReturnType="Collection(AMSModel.spr_cmn_Document_Select_Result)">
-            <Parameter Name="DocumentID" Mode="In" Type="Int32" />
+          <Parameter Name="DocumentID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_Document_Update" ReturnType="Collection(Int32)">
             <Parameter Name="DocumentID" Mode="In" Type="Int32" />
@@ -6305,7 +6304,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Fk_WaterTransmissionLineID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_DocumentByID_Select" ReturnType="Collection(AMSModel.spr_cmn_DocumentByID_Select_Result)">
-            <Parameter Name="DocumentID" Mode="In" Type="Int32" />
+          <Parameter Name="DocumentID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_cmn_Element_cmb_Select" ReturnType="Collection(AMSModel.spr_cmn_Element_cmb_Select_Result)" />
           <FunctionImport Name="spr_cmn_Gender_cmb_Select" ReturnType="Collection(AMSModel.spr_cmn_Gender_cmb_Select_Result)" />
@@ -6318,7 +6317,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           <FunctionImport Name="spr_cmn_Township_Select" ReturnType="Collection(AMSModel.spr_cmn_Township_Select_Result)" />
           <FunctionImport Name="spr_cmn_UnitMeasurement_cmb_Select" ReturnType="Collection(AMSModel.spr_cmn_UnitMeasurement_cmb_Select_Result)" />
           <FunctionImport Name="spr_cmn_UnitMeasurement_Select" ReturnType="Collection(AMSModel.spr_cmn_UnitMeasurement_Select_Result)">
-            <Parameter Name="Fk_MeasurementCategrory" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_MeasurementCategrory" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_geo_Location_Delete">
             <Parameter Name="Fk_FieldID" Mode="In" Type="Int32" />
@@ -6367,7 +6366,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="CreateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_Production_lst_Select" ReturnType="Collection(AMSModel.spr_prd_Production_lst_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int32" />
+          <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_Production_Select" ReturnType="Collection(AMSModel.spr_prd_Production_Select_Result)" />
           <FunctionImport Name="spr_prd_Production_Update" ReturnType="Collection(Int32)">
@@ -6377,7 +6376,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UpdateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionByID_Select" ReturnType="Collection(AMSModel.spr_prd_ProductionByID_Select_Result)">
-            <Parameter Name="ProductionID" Mode="In" Type="Int32" />
+          <Parameter Name="ProductionID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_Prd_ProductionField_Delete" ReturnType="Collection(Int32)">
             <Parameter Name="FieldProductionID" Mode="In" Type="Int32" />
@@ -6404,10 +6403,10 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UpdateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_Prd_ProductionFieldByProductinID_Select" ReturnType="Collection(AMSModel.spr_Prd_ProductionFieldByProductinID_Select_Result)">
-            <Parameter Name="Fk_ProductionID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_ProductionID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_ChemicalAnalys_ByProductionTaskID_lst_Select" ReturnType="Collection(AMSModel.spr_prd_ProductionTask_ChemicalAnalys_ByProductionTaskID_lst_Select_Result)">
-            <Parameter Name="Fk_ProductionTaskID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_ProductionTaskID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_ChemicalAnalys_Delete">
             <Parameter Name="ProductionTaskChemicalAnalysID" Mode="In" Type="Int32" />
@@ -6430,7 +6429,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="InactivationUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_Discussion_ByProductionTaskID_lst_Select" ReturnType="Collection(AMSModel.spr_prd_ProductionTask_Discussion_ByProductionTaskID_lst_Select_Result)">
-            <Parameter Name="Fk_ProductionTaskID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_ProductionTaskID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_Discussion_Delete">
             <Parameter Name="ProductionTaskDiscussionID" Mode="In" Type="Int32" />
@@ -6449,13 +6448,13 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UpdateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_DiscussionByID_Delete" ReturnType="Collection(AMSModel.spr_prd_ProductionTask_DiscussionByID_Delete_Result)">
-            <Parameter Name="ProductionTaskDiscussionID" Mode="In" Type="Int32" />
+          <Parameter Name="ProductionTaskDiscussionID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_DiscussionByID_Select" ReturnType="Collection(AMSModel.spr_prd_ProductionTask_DiscussionByID_Select_Result)">
-            <Parameter Name="ProductionTaskDiscussionID" Mode="In" Type="Int32" />
+          <Parameter Name="ProductionTaskDiscussionID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_Doc_ByProductionTaskID_lst_Select" ReturnType="Collection(AMSModel.spr_prd_ProductionTask_Doc_ByProductionTaskID_lst_Select_Result)">
-            <Parameter Name="Fk_PorductionTaskID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_PorductionTaskID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_Doc_Delete">
             <Parameter Name="ProductionTaskDocID" Mode="In" Type="Int32" />
@@ -6478,7 +6477,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UpdateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_DocByID_Select" ReturnType="Collection(AMSModel.spr_prd_ProductionTask_DocByID_Select_Result)">
-            <Parameter Name="ProductionTaskDocID" Mode="In" Type="Int32" />
+          <Parameter Name="ProductionTaskDocID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_Fertilizer_Link_Delete" ReturnType="Collection(Int32)">
             <Parameter Name="ProductionTaskFertilizerID" Mode="In" Type="Int64" />
@@ -6509,7 +6508,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UpdateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_Fertilizer_LinkByProductionTaskID_lst_Select" ReturnType="Collection(AMSModel.spr_prd_ProductionTask_Fertilizer_LinkByProductionTaskID_lst_Select_Result)">
-            <Parameter Name="Fk_ProductionTaskID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_ProductionTaskID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_Insert" ReturnType="Collection(Decimal)">
             <Parameter Name="Fk_ProductionID" Mode="In" Type="Int32" />
@@ -6549,7 +6548,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UpdateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_Machinery_LinkByProductionTaskID_lst_Select" ReturnType="Collection(AMSModel.spr_prd_ProductionTask_Machinery_LinkByProductionTaskID_lst_Select_Result)">
-            <Parameter Name="Fk_ProductionTaskID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_ProductionTaskID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_Person_Link_Delete" ReturnType="Collection(Int32)">
             <Parameter Name="ProductionTaskPersonID" Mode="In" Type="Int64" />
@@ -6576,7 +6575,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UpdateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_Person_LinkByProductionTaskID_lst_Select" ReturnType="Collection(AMSModel.spr_prd_ProductionTask_Person_LinkByProductionTaskID_lst_Select_Result)">
-            <Parameter Name="Fk_ProductionTaskID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_ProductionTaskID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_Pesticide_Link_Delete" ReturnType="Collection(Int32)">
             <Parameter Name="ProductionTaskPesticideID" Mode="In" Type="Int64" />
@@ -6607,10 +6606,10 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UpdateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_Pesticide_LinkByProductionTaskID_lst_Select" ReturnType="Collection(AMSModel.spr_prd_ProductionTask_Pesticide_LinkByProductionTaskID_lst_Select_Result)">
-            <Parameter Name="Fk_ProductionTaskID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_ProductionTaskID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_Rpt_Select" ReturnType="Collection(AMSModel.spr_prd_ProductionTask_Rpt_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int32" />
+          <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_Select" ReturnType="Collection(AMSModel.spr_prd_ProductionTask_Select_Result)" />
           <FunctionImport Name="spr_prd_ProductionTask_Update" ReturnType="Collection(Int32)">
@@ -6656,7 +6655,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UpdateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_Water_LinkByProductionTaskID_lst_Select" ReturnType="Collection(AMSModel.spr_prd_ProductionTask_Water_LinkByProductionTaskID_lst_Select_Result)">
-            <Parameter Name="Fk_ProductionTaskID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_ProductionTaskID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_WaterStorage_Link_Delete" ReturnType="Collection(Int32)">
             <Parameter Name="ProductionTaskWaterStorageID" Mode="In" Type="Int32" />
@@ -6687,13 +6686,13 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UpdateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTask_WaterStorage_LinkByProductionTaskID_lst_Select" ReturnType="Collection(AMSModel.spr_prd_ProductionTask_WaterStorage_LinkByProductionTaskID_lst_Select_Result)">
-            <Parameter Name="Fk_ProductionTaskID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_ProductionTaskID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTaskByID_Select" ReturnType="Collection(AMSModel.spr_prd_ProductionTaskByID_Select_Result)">
-            <Parameter Name="ProductionTaskID" Mode="In" Type="Int32" />
+          <Parameter Name="ProductionTaskID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_ProductionTaskByProductionID_Select" ReturnType="Collection(AMSModel.spr_prd_ProductionTaskByProductionID_Select_Result)">
-            <Parameter Name="Fk_ProductionID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_ProductionID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_Season_Delete" ReturnType="Collection(Int32)">
             <Parameter Name="SeasonID" Mode="In" Type="Int32" />
@@ -6720,10 +6719,10 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UpdateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_prd_SeasonByProductionID_Select" ReturnType="Collection(AMSModel.spr_prd_SeasonByProductionID_Select_Result)">
-            <Parameter Name="Fk_ProductionID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_ProductionID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_Sec_AccessibleItems_Delete">
-            <Parameter Name="FK_UserID" Mode="In" Type="Int64" />
+          <Parameter Name="FK_UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_Sec_AccessibleItemsDefinition_Insert">
             <Parameter Name="FK_UserID" Mode="In" Type="Int64" />
@@ -6739,7 +6738,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="ItemLogo" Mode="In" Type="Binary" />
           </FunctionImport>
           <FunctionImport Name="spr_Sec_ItemUsers_Delete">
-            <Parameter Name="ItemUserID" Mode="In" Type="Int64" />
+          <Parameter Name="ItemUserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_Sec_ItemUsers_Insert">
             <Parameter Name="FK_UserID" Mode="In" Type="Int64" />
@@ -6751,7 +6750,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="bitPrint" Mode="In" Type="Boolean" />
           </FunctionImport>
           <FunctionImport Name="spr_Sec_ItemUsers_Select" ReturnType="Collection(AMSModel.spr_Sec_ItemUsers_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_Sec_Package_Inser">
             <Parameter Name="PackageName" Mode="In" Type="String" />
@@ -6766,19 +6765,19 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           </FunctionImport>
           <FunctionImport Name="spr_Sec_Packages_Select" ReturnType="Collection(AMSModel.spr_Sec_Packages_Select_Result)" />
           <FunctionImport Name="spr_Sec_SelectItemsByItemID_Select" ReturnType="Collection(AMSModel.spr_Sec_SelectItemsByItemID_Select_Result)">
-            <Parameter Name="ItemID" Mode="In" Type="Int32" />
+          <Parameter Name="ItemID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_Sec_SelectItemsByPackageID" ReturnType="Collection(AMSModel.spr_Sec_SelectItemsByPackageID_Result)">
-            <Parameter Name="PackageID" Mode="In" Type="Int32" />
+          <Parameter Name="PackageID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_Sec_SelectPackageByPackageID" ReturnType="Collection(AMSModel.spr_Sec_SelectPackageByPackageID_Result)">
-            <Parameter Name="PackageID" Mode="In" Type="Int32" />
+          <Parameter Name="PackageID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_Sec_SelectUserByUserName_Select" ReturnType="Collection(AMSModel.spr_Sec_SelectUserByUserName_Select_Result)">
-            <Parameter Name="userName" Mode="In" Type="String" />
+          <Parameter Name="userName" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="spr_Sec_SelectUsersByUserID_Select" ReturnType="Collection(AMSModel.spr_Sec_SelectUsersByUserID_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_Sec_SetupFormSequenceNumber_Select" ReturnType="Collection(AMSModel.spr_Sec_SetupFormSequenceNumber_Select_Result)" />
           <FunctionImport Name="spr_Sec_Shop_Select" />
@@ -6868,7 +6867,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           </FunctionImport>
           <FunctionImport Name="spr_Setting_VersionCheck_Select" ReturnType="Collection(AMSModel.spr_Setting_VersionCheck_Select_Result)" />
           <FunctionImport Name="spr_ShopCheckForCurrentUser_Select" ReturnType="Collection(AMSModel.spr_ShopCheckForCurrentUser_Select_Result)">
-            <Parameter Name="fk_ShopID" Mode="In" Type="Int32" />
+          <Parameter Name="fk_ShopID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Buildings_cht_Select">
             <Parameter Name="Action" Mode="In" Type="Int32" />
@@ -6888,7 +6887,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Description" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Buildings_Lst_Select" ReturnType="Collection(AMSModel.spr_src_Buildings_Lst_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Buildings_Map_Select">
             <Parameter Name="Action" Mode="In" Type="Int32" />
@@ -6904,7 +6903,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UserID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Buildings_Select" ReturnType="Collection(AMSModel.spr_src_Buildings_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Buildings_Update" ReturnType="Collection(Int32)">
             <Parameter Name="BuildingsID" Mode="In" Type="Int32" />
@@ -6916,10 +6915,10 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Description" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Buildings_Vew_Select" ReturnType="Collection(AMSModel.spr_src_Buildings_Vew_Select_Result)">
-            <Parameter Name="BuildingsID" Mode="In" Type="Int32" />
+          <Parameter Name="BuildingsID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_BuildingsByID_Select" ReturnType="Collection(AMSModel.spr_src_BuildingsByID_Select_Result)">
-            <Parameter Name="BuildingsID" Mode="In" Type="Int32" />
+          <Parameter Name="BuildingsID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_BuildingsCategory_Select" ReturnType="Collection(AMSModel.spr_src_BuildingsCategory_Select_Result)" />
           <FunctionImport Name="spr_src_ChemicalAnalys_cmbLst_Select" ReturnType="Collection(AMSModel.spr_src_ChemicalAnalys_cmbLst_Select_Result)" />
@@ -6944,7 +6943,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="CreateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_ChemicalAnalys_lst_Select" ReturnType="Collection(AMSModel.spr_src_ChemicalAnalys_lst_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int32" />
+          <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_ChemicalAnalys_Select" ReturnType="Collection(AMSModel.spr_src_ChemicalAnalys_Select_Result)" />
           <FunctionImport Name="spr_src_ChemicalAnalys_Update" ReturnType="Collection(Int32)">
@@ -6965,7 +6964,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UpdateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_ChemicalAnalysByID_Select" ReturnType="Collection(AMSModel.spr_src_ChemicalAnalysByID_Select_Result)">
-            <Parameter Name="ChemicalAnalys" Mode="In" Type="Int32" />
+          <Parameter Name="ChemicalAnalys" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_ChemicalAnalysCategory_cmb_Select" ReturnType="Collection(AMSModel.spr_src_ChemicalAnalysCategory_cmb_Select_Result)" />
           <FunctionImport Name="spr_src_ChemicalAnalysElement_Delete">
@@ -6979,7 +6978,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="CreateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_ChemicalAnalysElement_Select" ReturnType="Collection(AMSModel.spr_src_ChemicalAnalysElement_Select_Result)">
-            <Parameter Name="Fk_ChemicalAnalysID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_ChemicalAnalysID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_ChemicalAnalysElement_Update">
             <Parameter Name="ChemicalAnalysisElementID" Mode="In" Type="Int32" />
@@ -7015,7 +7014,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="CreateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Collection_Select" ReturnType="Collection(AMSModel.spr_src_Collection_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Collection_Update" ReturnType="Collection(Int32)">
             <Parameter Name="CollectionID" Mode="In" Type="Int32" />
@@ -7064,7 +7063,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="CreateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Company_Select" ReturnType="Collection(AMSModel.spr_src_Company_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Company_Update" ReturnType="Collection(Int32)">
             <Parameter Name="CompanyID" Mode="In" Type="Int32" />
@@ -7121,7 +7120,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UpdateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_FertilizerByID_Select" ReturnType="Collection(AMSModel.spr_src_FertilizerByID_Select_Result)">
-            <Parameter Name="FertilizerID" Mode="In" Type="Int32" />
+          <Parameter Name="FertilizerID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_FertilizerCategory_cmb_Select" ReturnType="Collection(AMSModel.spr_src_FertilizerCategory_cmb_Select_Result)" />
           <FunctionImport Name="spr_src_FertilizerElement_Delete">
@@ -7135,7 +7134,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="CreateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_FertilizerElement_select" ReturnType="Collection(AMSModel.spr_src_FertilizerElement_select_Result)">
-            <Parameter Name="Fk_FertilizerID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_FertilizerID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_FertilizerElement_Update" ReturnType="Collection(Int32)">
             <Parameter Name="FertilizerElementID" Mode="In" Type="Int32" />
@@ -7176,7 +7175,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="DocPlace" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Field_Lst_Select" ReturnType="Collection(AMSModel.spr_src_Field_Lst_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Field_Map_Select">
             <Parameter Name="Action" Mode="In" Type="Int32" />
@@ -7192,7 +7191,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UserID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Field_Select" ReturnType="Collection(AMSModel.spr_src_Field_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Field_Update" ReturnType="Collection(Int32)">
             <Parameter Name="FieldID" Mode="In" Type="Int32" />
@@ -7218,16 +7217,16 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="DocPlace" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Field_Vew_Select" ReturnType="Collection(AMSModel.spr_src_Field_Vew_Select_Result)">
-            <Parameter Name="FieldID" Mode="In" Type="Int32" />
+          <Parameter Name="FieldID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_FieldByID_Lst_Select" ReturnType="Collection(AMSModel.spr_src_FieldByID_Lst_Select_Result)">
-            <Parameter Name="FieldID" Mode="In" Type="Int32" />
+          <Parameter Name="FieldID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_FieldByID_Select" ReturnType="Collection(AMSModel.spr_src_FieldByID_Select_Result)">
-            <Parameter Name="FieldID" Mode="In" Type="Int32" />
+          <Parameter Name="FieldID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_FieldByUserID_Select" ReturnType="Collection(AMSModel.spr_src_FieldByUserID_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int32" />
+          <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_FieldLocation_Insert">
             <Parameter Name="Longitude" Mode="In" Type="Double" />
@@ -7235,7 +7234,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Fk_FieldID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_FieldLocation_Select">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_src_FieldUseType_Select" ReturnType="Collection(AMSModel.spr_src_FieldUseType_Select_Result)" />
           <FunctionImport Name="spr_src_Machinery_cht_Select">
@@ -7260,7 +7259,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Vigor" Mode="In" Type="Decimal" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Machinery_Lst_Select" ReturnType="Collection(AMSModel.spr_src_Machinery_Lst_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Machinery_Rpt_Select">
             <Parameter Name="Action" Mode="In" Type="Int32" />
@@ -7271,7 +7270,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UserID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Machinery_Select" ReturnType="Collection(AMSModel.spr_src_Machinery_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Machinery_Update" ReturnType="Collection(Int32)">
             <Parameter Name="MachineryID" Mode="In" Type="Int32" />
@@ -7288,13 +7287,13 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Vigor" Mode="In" Type="Decimal" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Machinery_Vew_Select" ReturnType="Collection(AMSModel.spr_src_Machinery_Vew_Select_Result)">
-            <Parameter Name="MachineryID" Mode="In" Type="Int32" />
+          <Parameter Name="MachineryID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_MachineryByID_Select" ReturnType="Collection(AMSModel.spr_src_MachineryByID_Select_Result)">
-            <Parameter Name="MachineryID" Mode="In" Type="Int32" />
+          <Parameter Name="MachineryID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_MachineryByUserID_cmb_Select" ReturnType="Collection(AMSModel.spr_src_MachineryByUserID_cmb_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_src_MachineryCategory_Select" ReturnType="Collection(AMSModel.spr_src_MachineryCategory_Select_Result)" />
           <FunctionImport Name="spr_src_Part_Delete">
@@ -7325,7 +7324,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Fk_SubcollectionID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Part_Select" ReturnType="Collection(AMSModel.spr_src_Part_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Part_Update" ReturnType="Collection(Int32)">
             <Parameter Name="PartID" Mode="In" Type="Int32" />
@@ -7397,7 +7396,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Fk_PartID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_PersonByID_Select" ReturnType="Collection(AMSModel.spr_src_PersonByID_Select_Result)">
-            <Parameter Name="PersonID" Mode="In" Type="Int32" />
+          <Parameter Name="PersonID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_PersonByPersonCategoriID_Cmb_Select" ReturnType="Collection(AMSModel.spr_src_PersonByPersonCategoriID_Cmb_Select_Result)">
             <Parameter Name="PersonCategoryID" Mode="In" Type="Int32" />
@@ -7435,7 +7434,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UpdateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_PesticideByID_Select" ReturnType="Collection(AMSModel.spr_src_PesticideByID_Select_Result)">
-            <Parameter Name="PesticideID" Mode="In" Type="Int32" />
+          <Parameter Name="PesticideID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_PesticideCategory_cmb_Select" ReturnType="Collection(AMSModel.spr_src_PesticideCategory_cmb_Select_Result)" />
           <FunctionImport Name="spr_src_Subcollection_Delete">
@@ -7466,7 +7465,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Fk_CollectionID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Subcollection_Select" ReturnType="Collection(AMSModel.spr_src_Subcollection_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Subcollection_Update">
             <Parameter Name="SubCollectionID" Mode="In" Type="Int32" />
@@ -7542,7 +7541,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Longitude" Mode="In" Type="Double" />
           </FunctionImport>
           <FunctionImport Name="spr_src_TreeByID_Select" ReturnType="Collection(AMSModel.spr_src_TreeByID_Select_Result)">
-            <Parameter Name="TreeID" Mode="In" Type="Int32" />
+          <Parameter Name="TreeID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_TreeType_Cmd_Select" ReturnType="Collection(AMSModel.spr_src_TreeType_Cmd_Select_Result)" />
           <FunctionImport Name="spr_src_Warehouse_cht_Select">
@@ -7567,7 +7566,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Volume" Mode="In" Type="Decimal" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Warehouse_Lst_Select" ReturnType="Collection(AMSModel.spr_src_Warehouse_Lst_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int32" />
+          <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WareHouse_Map_Select">
             <Parameter Name="Action" Mode="In" Type="Int32" />
@@ -7583,7 +7582,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UserID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Warehouse_Select" ReturnType="Collection(AMSModel.spr_src_Warehouse_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Warehouse_Update" ReturnType="Collection(Int32)">
             <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
@@ -7599,10 +7598,10 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Volume" Mode="In" Type="Decimal" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Warehouse_Vew_Select" ReturnType="Collection(AMSModel.spr_src_Warehouse_Vew_Select_Result)">
-            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+          <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WarehouseByID_Select" ReturnType="Collection(AMSModel.spr_src_WarehouseByID_Select_Result)">
-            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+          <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WarehouseType_Select" ReturnType="Collection(AMSModel.spr_src_WarehouseType_Select_Result)" />
           <FunctionImport Name="spr_src_WarehouseUseType_Select" ReturnType="Collection(AMSModel.spr_src_WarehouseUseType_Select_Result)" />
@@ -7618,10 +7617,10 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="CreateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Water_Lst_Select" ReturnType="Collection(AMSModel.spr_src_Water_Lst_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Water_Select" ReturnType="Collection(AMSModel.spr_src_Water_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Water_Update" ReturnType="Collection(Int32)">
             <Parameter Name="WaterID" Mode="In" Type="Int32" />
@@ -7633,17 +7632,17 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Description" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Water_Vew_Select" ReturnType="Collection(AMSModel.spr_src_Water_Vew_Select_Result)">
-            <Parameter Name="WaterID" Mode="In" Type="Int32" />
+          <Parameter Name="WaterID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterByID_Select" ReturnType="Collection(AMSModel.spr_src_WaterByID_Select_Result)">
-            <Parameter Name="WaterID" Mode="In" Type="Int32" />
+          <Parameter Name="WaterID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterByPartID_Select" ReturnType="Collection(AMSModel.spr_src_WaterByPartID_Select_Result)">
             <Parameter Name="Fk_PartID" Mode="In" Type="Int32" />
             <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterByUserID_cmb_Select" ReturnType="Collection(AMSModel.spr_src_WaterByUserID_cmb_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterSourcType_Select" ReturnType="Collection(AMSModel.spr_src_WaterSourcType_Select_Result)" />
           <FunctionImport Name="spr_src_WaterStorage_Delete" ReturnType="Collection(Int32)">
@@ -7660,7 +7659,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Fk_PartID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterStorage_Lst_Select" ReturnType="Collection(AMSModel.spr_src_WaterStorage_Lst_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int32" />
+          <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterStorage_Select" ReturnType="Collection(AMSModel.spr_src_WaterStorage_Select_Result)" />
           <FunctionImport Name="spr_src_WaterStorage_Update" ReturnType="Collection(Int32)">
@@ -7674,24 +7673,24 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Fk_partID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterStorage_Vew_Select" ReturnType="Collection(AMSModel.spr_src_WaterStorage_Vew_Select_Result)">
-            <Parameter Name="WaterStorageID" Mode="In" Type="Int32" />
+          <Parameter Name="WaterStorageID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterStorageAndDetails_Select" ReturnType="Collection(AMSModel.spr_src_WaterStorageAndDetails_Select_Result)" />
           <FunctionImport Name="spr_src_WaterStorageByID_Select" ReturnType="Collection(AMSModel.spr_src_WaterStorageByID_Select_Result)">
-            <Parameter Name="WaterStorageID" Mode="In" Type="Int32" />
+          <Parameter Name="WaterStorageID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterStorageByUserID_cmb_Select" ReturnType="Collection(AMSModel.spr_src_WaterStorageByUserID_cmb_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterStorageD_Delete" ReturnType="Collection(Int32)">
-            <Parameter Name="WaterStorageDID" Mode="In" Type="Int32" />
+          <Parameter Name="WaterStorageDID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterStorageD_Insert" ReturnType="Collection(Decimal)">
             <Parameter Name="Fk_WaterStorageID" Mode="In" Type="Int32" />
             <Parameter Name="Fk_WaterID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterStorageD_Select" ReturnType="Collection(AMSModel.spr_src_WaterStorageD_Select_Result)">
-            <Parameter Name="Fk_WaterStorageID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_WaterStorageID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterStorageD_Update" ReturnType="Collection(Int32)">
             <Parameter Name="WaterStorageDID" Mode="In" Type="Int32" />
@@ -7713,7 +7712,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Fk_WaterTransmissionTypeID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterTransmissionLine_Lst_Select" ReturnType="Collection(AMSModel.spr_src_WaterTransmissionLine_Lst_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterTransmissionLine_Select" ReturnType="Collection(AMSModel.spr_src_WaterTransmissionLine_Select_Result)" />
           <FunctionImport Name="spr_src_WaterTransmissionLine_Update" ReturnType="Collection(Int32)">
@@ -7727,13 +7726,13 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Fk_WaterTransmissionTypeID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterTransmissionLine_Vew_Select" ReturnType="Collection(AMSModel.spr_src_WaterTransmissionLine_Vew_Select_Result)">
-            <Parameter Name="WaterTransmissionLineID" Mode="In" Type="Int32" />
+          <Parameter Name="WaterTransmissionLineID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterTransmissionLineByID_Select" ReturnType="Collection(AMSModel.spr_src_WaterTransmissionLineByID_Select_Result)">
-            <Parameter Name="WaterTransmissionLineID" Mode="In" Type="Int32" />
+          <Parameter Name="WaterTransmissionLineID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterTransmissionLineList_Select" ReturnType="Collection(AMSModel.spr_src_WaterTransmissionLineList_Select_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int64" />
+          <Parameter Name="UserID" Mode="In" Type="Int64" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterTransmissionType_Select" ReturnType="Collection(AMSModel.spr_src_WaterTransmissionType_Select_Result)" />
           <FunctionImport Name="spr_StockDefinition_Insert">
@@ -7767,14 +7766,14 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UpdateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_tsk_TaskByID_Select" ReturnType="Collection(AMSModel.spr_tsk_TaskByID_Select_Result)">
-            <Parameter Name="TaskID" Mode="In" Type="Int32" />
+          <Parameter Name="TaskID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_tsk_TaskCategori_Cmb_Select" ReturnType="Collection(AMSModel.spr_tsk_TaskCategori_Cmb_Select_Result)" />
           <FunctionImport Name="spr_tsk_TaskCategori_Delete" ReturnType="Collection(Int32)">
-            <Parameter Name="TaskCategoryID" Mode="In" Type="Int32" />
+          <Parameter Name="TaskCategoryID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_tsk_TaskCategori_Insert" ReturnType="Collection(Decimal)">
-            <Parameter Name="TaskCategoryName" Mode="In" Type="String" />
+          <Parameter Name="TaskCategoryName" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="spr_tsk_TaskCategori_Select" ReturnType="Collection(AMSModel.spr_tsk_TaskCategori_Select_Result)" />
           <FunctionImport Name="spr_tsk_TaskCategori_Update" ReturnType="Collection(Int32)">
@@ -7782,11 +7781,11 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="TaskCategoryName" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="spr_tsk_TaskCategoriByID_Select" ReturnType="Collection(AMSModel.spr_tsk_TaskCategoriByID_Select_Result)">
-            <Parameter Name="TaskCategoryID" Mode="In" Type="Int32" />
+          <Parameter Name="TaskCategoryID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_tsk_Tasklist_cmb_Select" ReturnType="Collection(AMSModel.spr_tsk_Tasklist_cmb_Select_Result)" />
           <FunctionImport Name="spr_tsk_Tasklist_Crop_Link_Delete">
-            <Parameter Name="TasklistCropID" Mode="In" Type="Int32" />
+          <Parameter Name="TasklistCropID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_tsk_Tasklist_Crop_Link_Insert" ReturnType="Collection(Decimal)">
             <Parameter Name="Fk_TasklistID" Mode="In" Type="Int32" />
@@ -7799,13 +7798,13 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Fk_CropID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_tsk_Tasklist_Crop_LinkByCropID_Delete">
-            <Parameter Name="Fk_CropID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_CropID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_tsk_Tasklist_Crop_LinkByCropID_Select" ReturnType="Collection(AMSModel.spr_tsk_Tasklist_Crop_LinkByCropID_Select_Result)">
-            <Parameter Name="Fk_CropID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_CropID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_tsk_Tasklist_Crop_LinkByID_Select" ReturnType="Collection(AMSModel.spr_tsk_Tasklist_Crop_LinkByID_Select_Result)">
-            <Parameter Name="TasklistCropID" Mode="In" Type="Int32" />
+          <Parameter Name="TasklistCropID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_tsk_Tasklist_Delete" ReturnType="Collection(Int32)">
             <Parameter Name="TasklistID" Mode="In" Type="Int32" />
@@ -7818,7 +7817,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           <FunctionImport Name="spr_tsk_Tasklist_lst_Select" ReturnType="Collection(AMSModel.spr_tsk_Tasklist_lst_Select_Result)" />
           <FunctionImport Name="spr_tsk_Tasklist_Select" ReturnType="Collection(AMSModel.spr_tsk_Tasklist_Select_Result)" />
           <FunctionImport Name="spr_tsk_Tasklist_Task_Link_Delete">
-            <Parameter Name="TasklistTaskID" Mode="In" Type="Int32" />
+          <Parameter Name="TasklistTaskID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_tsk_Tasklist_Task_Link_Insert" ReturnType="Collection(Decimal)">
             <Parameter Name="Fk_TasklistID" Mode="In" Type="Int32" />
@@ -7835,7 +7834,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="TaskPeriod" Mode="In" Type="Int16" />
           </FunctionImport>
           <FunctionImport Name="spr_tsk_Tasklist_Task_LinkByTasklistID_Select" ReturnType="Collection(AMSModel.spr_tsk_Tasklist_Task_LinkByTasklistID_Select_Result)">
-            <Parameter Name="Fk_TasklistID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_TasklistID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_tsk_Tasklist_Update" ReturnType="Collection(Int32)">
             <Parameter Name="TasklistID" Mode="In" Type="Int32" />
@@ -7843,17 +7842,17 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UpdateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_tsk_TasklistByID_Select" ReturnType="Collection(AMSModel.spr_tsk_TasklistByID_Select_Result)">
-            <Parameter Name="TasklistID" Mode="In" Type="Int32" />
+          <Parameter Name="TasklistID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_tsk_TasklistCrop_cmb_ByCropID_Select" ReturnType="Collection(AMSModel.spr_tsk_TasklistCrop_cmb_ByCropID_Select_Result)">
-            <Parameter Name="Fk_CropID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_CropID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_tsk_TasklistCrop_lst_ByTasklistID_Select" ReturnType="Collection(AMSModel.spr_tsk_TasklistCrop_lst_ByTasklistID_Select_Result)">
-            <Parameter Name="TasklistID" Mode="In" Type="Int32" />
+          <Parameter Name="TasklistID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_tsk_TasklistCrop_lst_Select" ReturnType="Collection(AMSModel.spr_tsk_TasklistCrop_lst_Select_Result)" />
           <FunctionImport Name="spr_tsk_TaskSubCategori_Cmb_ByTaskCategoryID_Select" ReturnType="Collection(AMSModel.spr_tsk_TaskSubCategori_Cmb_ByTaskCategoryID_Select_Result)">
-            <Parameter Name="Fk_TaskCategoryID" Mode="In" Type="Int32" />
+          <Parameter Name="Fk_TaskCategoryID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_tsk_TaskSubCategori_Cmb_Select" ReturnType="Collection(AMSModel.spr_tsk_TaskSubCategori_Cmb_Select_Result)" />
           <FunctionImport Name="spr_tsk_TaskSubCategori_Delete" ReturnType="Collection(Int32)">
@@ -7873,7 +7872,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="UpdateUserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_tsk_TaskSubCategoriByID_Select" ReturnType="Collection(AMSModel.spr_tsk_TaskSubCategoriByID_Select_Result)">
-            <Parameter Name="TaskSubCategoryID" Mode="In" Type="Int32" />
+          <Parameter Name="TaskSubCategoryID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_tsk_TaskSubCategory_lst_Select" ReturnType="Collection(AMSModel.spr_tsk_TaskSubCategory_lst_Select_Result)" />
           <FunctionImport Name="test" ReturnType="Collection(AMSModel.test_Result)" />
@@ -10943,6 +10942,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           <EntitySetMapping Name="tbl_src_Buildings">
             <EntityTypeMapping TypeName="AMSModel.tbl_src_Buildings">
               <MappingFragment StoreEntitySet="tbl_src_Buildings">
+                <ScalarProperty Name="Location" ColumnName="Location" />
                 <ScalarProperty Name="BuildingsID" ColumnName="BuildingsID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Area" ColumnName="Area" />
@@ -11226,6 +11226,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           <EntitySetMapping Name="tbl_src_Part">
             <EntityTypeMapping TypeName="AMSModel.tbl_src_Part">
               <MappingFragment StoreEntitySet="tbl_src_Part">
+                <ScalarProperty Name="Location" ColumnName="Location" />
                 <ScalarProperty Name="PartID" ColumnName="PartID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="EconomicCode" ColumnName="EconomicCode" />
@@ -11427,6 +11428,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           <EntitySetMapping Name="tbl_src_Warehouse">
             <EntityTypeMapping TypeName="AMSModel.tbl_src_Warehouse">
               <MappingFragment StoreEntitySet="tbl_src_Warehouse">
+                <ScalarProperty Name="Location" ColumnName="Location" />
                 <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Area" ColumnName="Area" />
@@ -11466,6 +11468,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           <EntitySetMapping Name="tbl_src_Water">
             <EntityTypeMapping TypeName="AMSModel.tbl_src_Water">
               <MappingFragment StoreEntitySet="tbl_src_Water">
+                <ScalarProperty Name="Location" ColumnName="Location" />
                 <ScalarProperty Name="WaterID" ColumnName="WaterID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Fk_WaterSourceTypeID" ColumnName="Fk_WaterSourceTypeID" />
@@ -11494,6 +11497,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           <EntitySetMapping Name="tbl_src_WaterStorage">
             <EntityTypeMapping TypeName="AMSModel.tbl_src_WaterStorage">
               <MappingFragment StoreEntitySet="tbl_src_WaterStorage">
+                <ScalarProperty Name="Location" ColumnName="Location" />
                 <ScalarProperty Name="WaterStorageID" ColumnName="WaterStorageID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Volume" ColumnName="Volume" />
@@ -11524,6 +11528,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           <EntitySetMapping Name="tbl_src_WaterTransmissionLine">
             <EntityTypeMapping TypeName="AMSModel.tbl_src_WaterTransmissionLine">
               <MappingFragment StoreEntitySet="tbl_src_WaterTransmissionLine">
+                <ScalarProperty Name="Location" ColumnName="Location" />
                 <ScalarProperty Name="WaterTransmissionLineID" ColumnName="WaterTransmissionLineID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Length" ColumnName="Length" />
