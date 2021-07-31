@@ -140,6 +140,8 @@ namespace BaranDataAccess
             }
         }
         // **************************************************
+
+        // **************************************************
         public bool IsDisposed
         {
             get { throw new NotImplementedException(); }

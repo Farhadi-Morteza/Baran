@@ -108,7 +108,7 @@ namespace Baran.Source
             List<PointLatLng> Mypoints = new List<PointLatLng>();
             if (waterTransmissionLine.Location != null)
             {
-                Mypoints = GeoUtils.ConvertStringCoordinatesToGMapPolygony(waterTransmissionLine.Location.ProviderValue.ToString());
+                Mypoints = GeoUtils.ConvertStringCoordinatesToGMapRoute(waterTransmissionLine.Location.ProviderValue.ToString());
 
                 GMapRoute rt = new GMapRoute(Mypoints, string.Empty);
                 {

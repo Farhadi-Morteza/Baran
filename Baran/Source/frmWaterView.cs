@@ -108,7 +108,7 @@ namespace Baran.Source
             if (water.Location != null)
             {
                 GMap.NET.WindowsForms.GMapOverlay markers = new GMap.NET.WindowsForms.GMapOverlay("markers");
-                Mypoints = GeoUtils.ConvertStringCoordinatesToGMapPolygony(water.Location.ProviderValue.ToString());
+                Mypoints = GeoUtils.ConvertStringPointToGMapPoint(water.Location.ProviderValue.ToString());
 
                 GMap.NET.WindowsForms.GMapMarker mark = new GMap.NET.WindowsForms.Markers.GMarkerGoogle(Mypoints[0], GMap.NET.WindowsForms.Markers.GMarkerGoogleType.red_dot);
 

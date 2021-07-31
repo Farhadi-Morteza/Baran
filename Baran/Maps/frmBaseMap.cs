@@ -1067,6 +1067,7 @@ namespace Baran.Maps
 
                     }
                 }
+                waite.Close();
                 MessageBoxX.ShowMessageBox(PublicEnum.EnmMessageType.msgSaveSuccessful);
             }
             catch 

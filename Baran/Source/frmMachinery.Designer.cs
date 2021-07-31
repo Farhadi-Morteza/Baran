@@ -111,11 +111,13 @@
             this.grpDoc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpRefresh)).BeginInit();
             this.grpRefresh.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpNew)).BeginInit();
+            this.grpNew.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
+            this.grpButons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).BeginInit();
             this.grpHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
-            this.grpButons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpMessage)).BeginInit();
             this.grpMessage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).BeginInit();
@@ -168,53 +170,56 @@
             // 
             // grpPrint
             // 
-            this.grpPrint.Location = new System.Drawing.Point(181, 0);
-            this.grpPrint.Visible = false;
+            this.grpPrint.Location = new System.Drawing.Point(205, 0);
+            this.grpPrint.Size = new System.Drawing.Size(71, 66);
             // 
             // grpCancel
             // 
             this.grpCancel.Location = new System.Drawing.Point(761, 0);
+            this.grpCancel.Size = new System.Drawing.Size(95, 66);
             // 
             // grpSave
             // 
             this.grpSave.Location = new System.Drawing.Point(666, 0);
+            this.grpSave.Size = new System.Drawing.Size(95, 66);
             // 
             // grpChange
             // 
             this.grpChange.Location = new System.Drawing.Point(571, 0);
+            this.grpChange.Size = new System.Drawing.Size(95, 66);
             // 
             // grpClear
             // 
             this.grpClear.Location = new System.Drawing.Point(476, 0);
+            this.grpClear.Size = new System.Drawing.Size(95, 66);
             // 
             // grpDelete
             // 
             this.grpDelete.Location = new System.Drawing.Point(381, 0);
+            this.grpDelete.Size = new System.Drawing.Size(95, 66);
             // 
             // grpDoc
             // 
             this.grpDoc.Location = new System.Drawing.Point(276, 0);
+            this.grpDoc.Size = new System.Drawing.Size(105, 66);
             // 
             // grpRefresh
             // 
-            this.grpRefresh.Location = new System.Drawing.Point(86, 0);
+            this.grpRefresh.Location = new System.Drawing.Point(134, 0);
+            this.grpRefresh.Size = new System.Drawing.Size(71, 66);
             // 
-            // grpHeader
+            // grpNew
             // 
-            this.grpHeader.Size = new System.Drawing.Size(857, 74);
+            this.grpNew.Location = new System.Drawing.Point(39, 0);
+            this.grpNew.Size = new System.Drawing.Size(95, 66);
             // 
-            // pictureBox1
+            // btnNew
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(792, 8);
+            this.btnNew.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             // 
             // btnMaxMin
             // 
             this.btnMaxMin.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
-            // 
-            // lblMessage
-            // 
-            this.lblMessage.Location = new System.Drawing.Point(1, 0);
-            this.lblMessage.Size = new System.Drawing.Size(1012, 29);
             // 
             // grpButons
             // 
@@ -225,6 +230,23 @@
             // 
             this.lblLine2.Location = new System.Drawing.Point(1, 70);
             this.lblLine2.Size = new System.Drawing.Size(855, 3);
+            // 
+            // grpHeader
+            // 
+            this.grpHeader.Size = new System.Drawing.Size(857, 74);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(792, 8);
+            // 
+            // lblCaption
+            // 
+            this.lblCaption.Location = new System.Drawing.Point(489, 25);
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.Location = new System.Drawing.Point(1, 0);
+            this.lblMessage.Size = new System.Drawing.Size(1012, 29);
             // 
             // lblLine1
             // 
@@ -239,10 +261,6 @@
             // 
             this.lblLine3.Location = new System.Drawing.Point(1, 330);
             this.lblLine3.Size = new System.Drawing.Size(855, 3);
-            // 
-            // lblCaption
-            // 
-            this.lblCaption.Location = new System.Drawing.Point(489, 25);
             // 
             // grpMain
             // 
@@ -323,9 +341,9 @@
             this.label10.Location = new System.Drawing.Point(91, 51);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label10.Size = new System.Drawing.Size(78, 15);
+            this.label10.Size = new System.Drawing.Size(80, 15);
             this.label10.TabIndex = 26;
-            this.label10.Text = ": شرکت سزنده";
+            this.label10.Text = ": شرکت سازنده";
             // 
             // label9
             // 
@@ -494,7 +512,7 @@
             appearance9.TextVAlignAsString = "Middle";
             this.label4.Appearance = appearance9;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(586, 51);
+            this.label4.Location = new System.Drawing.Point(590, 51);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label4.Size = new System.Drawing.Size(35, 15);
@@ -583,12 +601,12 @@
             appearance12.TextVAlignAsString = "Middle";
             this.label2.Appearance = appearance12;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(794, 4);
+            this.label2.Location = new System.Drawing.Point(765, 4);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(50, 15);
+            this.label2.Size = new System.Drawing.Size(77, 15);
             this.label2.TabIndex = 8;
-            this.label2.Text = ": نام واحد";
+            this.label2.Text = ": نام واحدفرعی";
             // 
             // cmbParentCo
             // 
@@ -757,15 +775,18 @@
             this.grpDoc.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpRefresh)).EndInit();
             this.grpRefresh.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grpNew)).EndInit();
+            this.grpNew.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
+            this.grpButons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).EndInit();
             this.grpHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
-            this.grpButons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpMessage)).EndInit();
             this.grpMessage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).EndInit();
             this.grpMain.ResumeLayout(false);
+            this.grpMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpControls)).EndInit();
             this.grpControls.ResumeLayout(false);
             this.grpControls.PerformLayout();

@@ -730,6 +730,7 @@
           <Property Name="UpdateDate" Type="date" />
           <Property Name="Description" Type="nvarchar" MaxLength="500" />
           <Property Name="Location" Type="geometry" />
+          <Property Name="Fk_PartID" Type="int" />
         </EntityType>
         <EntityType Name="tbl_src_BuildingsCategory">
           <Key>
@@ -972,6 +973,7 @@
           <Property Name="Count" Type="int" />
           <Property Name="Fk_SubCollectionID" Type="int" />
           <Property Name="Vigor" Type="numeric" Precision="6" Scale="2" />
+          <Property Name="Fk_PartID" Type="int" />
         </EntityType>
         <EntityType Name="tbl_src_MachineryCategory">
           <Key>
@@ -2580,6 +2582,7 @@ warning 6002: The table/view 'AMS.dbo.Viw_Saf_SumRecievePayemtByFactorNumber' do
           <Parameter Name="Fk_SubCollectionID" Type="int" Mode="In" />
           <Parameter Name="CreateUserID" Type="int" Mode="In" />
           <Parameter Name="Description" Type="nvarchar" Mode="In" />
+          <Parameter Name="Fk_PartID" Type="int" Mode="In" />
         </Function>
         <Function Name="spr_src_Buildings_Lst_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="UserID" Type="bigint" Mode="In" />
@@ -2608,6 +2611,7 @@ warning 6002: The table/view 'AMS.dbo.Viw_Saf_SumRecievePayemtByFactorNumber' do
           <Parameter Name="Fk_SubCollectionID" Type="int" Mode="In" />
           <Parameter Name="UpdateUserID" Type="int" Mode="In" />
           <Parameter Name="Description" Type="nvarchar" Mode="In" />
+          <Parameter Name="Fk_PartID" Type="int" Mode="In" />
         </Function>
         <Function Name="spr_src_Buildings_Vew_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="BuildingsID" Type="int" Mode="In" />
@@ -4828,6 +4832,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           <Property Name="UpdateDate" Type="DateTime" Precision="0" />
           <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="Location" Type="Geometry" />
+          <Property Name="Fk_PartID" Type="Int32" />
         </EntityType>
         <EntityType Name="tbl_src_BuildingsCategory">
           <Key>
@@ -5089,6 +5094,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           <Property Name="Fk_SubCollectionID" Type="Int32" />
           <Property Name="Vigor" Type="Decimal" Precision="6" Scale="2" />
           <NavigationProperty Name="tbl_src_MachineryCategory" Relationship="Self.FK_tbl_src_Machinery_tbl_src_MachineryCategory" FromRole="tbl_src_Machinery" ToRole="tbl_src_MachineryCategory" />
+          <Property Name="Fk_PartID" Type="Int32" />
         </EntityType>
         <EntityType Name="tbl_src_MachineryCategory">
           <Key>
@@ -6885,6 +6891,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Fk_SubCollectionID" Mode="In" Type="Int32" />
             <Parameter Name="CreateUserID" Mode="In" Type="Int32" />
             <Parameter Name="Description" Mode="In" Type="String" />
+            <Parameter Name="Fk_PartID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Buildings_Lst_Select" ReturnType="Collection(AMSModel.spr_src_Buildings_Lst_Select_Result)">
           <Parameter Name="UserID" Mode="In" Type="Int64" />
@@ -6913,6 +6920,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
             <Parameter Name="Fk_SubCollectionID" Mode="In" Type="Int32" />
             <Parameter Name="UpdateUserID" Mode="In" Type="Int32" />
             <Parameter Name="Description" Mode="In" Type="String" />
+            <Parameter Name="Fk_PartID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_Buildings_Vew_Select" ReturnType="Collection(AMSModel.spr_src_Buildings_Vew_Select_Result)">
           <Parameter Name="BuildingsID" Mode="In" Type="Int32" />
@@ -10942,6 +10950,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           <EntitySetMapping Name="tbl_src_Buildings">
             <EntityTypeMapping TypeName="AMSModel.tbl_src_Buildings">
               <MappingFragment StoreEntitySet="tbl_src_Buildings">
+                <ScalarProperty Name="Fk_PartID" ColumnName="Fk_PartID" />
                 <ScalarProperty Name="Location" ColumnName="Location" />
                 <ScalarProperty Name="BuildingsID" ColumnName="BuildingsID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -11190,6 +11199,7 @@ FROM [dbo].[Viw_Saf_SumRecievePayemtByFactorNumber] AS [Viw_Saf_SumRecievePayemt
           <EntitySetMapping Name="tbl_src_Machinery">
             <EntityTypeMapping TypeName="AMSModel.tbl_src_Machinery">
               <MappingFragment StoreEntitySet="tbl_src_Machinery">
+                <ScalarProperty Name="Fk_PartID" ColumnName="Fk_PartID" />
                 <ScalarProperty Name="MachineryID" ColumnName="MachineryID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />

@@ -80,7 +80,7 @@ namespace Baran.Source
         {
             base.OnformLoad();
             ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcMachineryCategory, cmbMachineryCategory, "");
-            ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcSubcollection, cmbParentCo, "");
+            ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcPart, cmbParentCo, "");
 
             this.FillGridDoc();
         }

@@ -30322,6 +30322,7 @@ namespace BaranDataAccess.Source.dstSourceTableAdapters {
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_SubCollectionID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CreateUserID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Description", global::System.Data.SqlDbType.NVarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_PartID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -30545,7 +30546,7 @@ namespace BaranDataAccess.Source.dstSourceTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual object New_Buildings_Insert(string Name, global::System.Nullable<decimal> Area, global::System.Nullable<int> Fk_BuildingsCategoryID, global::System.Nullable<int> Fk_SubCollectionID, global::System.Nullable<int> CreateUserID, string Description) {
+        public virtual object New_Buildings_Insert(string Name, global::System.Nullable<decimal> Area, global::System.Nullable<int> Fk_BuildingsCategoryID, global::System.Nullable<int> Fk_SubCollectionID, global::System.Nullable<int> CreateUserID, string Description, global::System.Nullable<int> Fk_PartID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             if ((Name == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
@@ -30582,6 +30583,12 @@ namespace BaranDataAccess.Source.dstSourceTableAdapters {
             }
             else {
                 command.Parameters[6].Value = ((string)(Description));
+            }
+            if ((Fk_PartID.HasValue == true)) {
+                command.Parameters[7].Value = ((int)(Fk_PartID.Value));
+            }
+            else {
+                command.Parameters[7].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 

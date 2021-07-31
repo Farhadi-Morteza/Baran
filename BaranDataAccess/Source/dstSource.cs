@@ -1,7 +1,8 @@
-﻿namespace BaranDataAccess.Source {
-    
-    
-    public partial class dstSource 
+﻿namespace BaranDataAccess.Source
+{
+
+
+    public partial class dstSource
     {
         public static dstSource FieldTable(int userID)
         {
@@ -14,7 +15,7 @@
             }
             catch
             {
-                returnDst = null;   
+                returnDst = null;
             }
             return returnDst;
         }

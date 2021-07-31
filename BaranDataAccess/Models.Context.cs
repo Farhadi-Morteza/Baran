@@ -3083,7 +3083,7 @@ namespace BaranDataAccess
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("spr_src_Buildings_Delete", buildingsIDParameter, inactivationUserIDParameter);
         }
     
-        public virtual ObjectResult<Nullable<decimal>> spr_src_Buildings_Insert(string name, Nullable<decimal> area, Nullable<int> fk_BuildingsCategoryID, Nullable<int> fk_SubCollectionID, Nullable<int> createUserID, string description)
+        public virtual ObjectResult<Nullable<decimal>> spr_src_Buildings_Insert(string name, Nullable<decimal> area, Nullable<int> fk_BuildingsCategoryID, Nullable<int> fk_SubCollectionID, Nullable<int> createUserID, string description, Nullable<int> fk_PartID)
         {
             var nameParameter = name != null ?
                 new ObjectParameter("Name", name) :
@@ -3109,7 +3109,11 @@ namespace BaranDataAccess
                 new ObjectParameter("Description", description) :
                 new ObjectParameter("Description", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>("spr_src_Buildings_Insert", nameParameter, areaParameter, fk_BuildingsCategoryIDParameter, fk_SubCollectionIDParameter, createUserIDParameter, descriptionParameter);
+            var fk_PartIDParameter = fk_PartID.HasValue ?
+                new ObjectParameter("Fk_PartID", fk_PartID) :
+                new ObjectParameter("Fk_PartID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>("spr_src_Buildings_Insert", nameParameter, areaParameter, fk_BuildingsCategoryIDParameter, fk_SubCollectionIDParameter, createUserIDParameter, descriptionParameter, fk_PartIDParameter);
         }
     
         public virtual ObjectResult<spr_src_Buildings_Lst_Select_Result> spr_src_Buildings_Lst_Select(Nullable<long> userID)
@@ -3176,7 +3180,7 @@ namespace BaranDataAccess
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_Buildings_Select_Result>("spr_src_Buildings_Select", userIDParameter);
         }
     
-        public virtual ObjectResult<Nullable<int>> spr_src_Buildings_Update(Nullable<int> buildingsID, string name, Nullable<decimal> area, Nullable<int> fk_BuildingsCategoryID, Nullable<int> fk_SubCollectionID, Nullable<int> updateUserID, string description)
+        public virtual ObjectResult<Nullable<int>> spr_src_Buildings_Update(Nullable<int> buildingsID, string name, Nullable<decimal> area, Nullable<int> fk_BuildingsCategoryID, Nullable<int> fk_SubCollectionID, Nullable<int> updateUserID, string description, Nullable<int> fk_PartID)
         {
             var buildingsIDParameter = buildingsID.HasValue ?
                 new ObjectParameter("BuildingsID", buildingsID) :
@@ -3206,7 +3210,11 @@ namespace BaranDataAccess
                 new ObjectParameter("Description", description) :
                 new ObjectParameter("Description", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("spr_src_Buildings_Update", buildingsIDParameter, nameParameter, areaParameter, fk_BuildingsCategoryIDParameter, fk_SubCollectionIDParameter, updateUserIDParameter, descriptionParameter);
+            var fk_PartIDParameter = fk_PartID.HasValue ?
+                new ObjectParameter("Fk_PartID", fk_PartID) :
+                new ObjectParameter("Fk_PartID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("spr_src_Buildings_Update", buildingsIDParameter, nameParameter, areaParameter, fk_BuildingsCategoryIDParameter, fk_SubCollectionIDParameter, updateUserIDParameter, descriptionParameter, fk_PartIDParameter);
         }
     
         public virtual ObjectResult<spr_src_Buildings_Vew_Select_Result> spr_src_Buildings_Vew_Select(Nullable<int> buildingsID)
