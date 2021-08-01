@@ -94,12 +94,6 @@
         <EntityTypeShape EntityType="AMSModel.tbl_tsk_Tasklist_Crop_Link" Width="1.5" PointX="23.75" PointY="29.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AMSModel.tbl_tsk_Tasklist_Task_Link" Width="1.5" PointX="29.75" PointY="26.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AMSModel.tbl_tsk_TaskSubCategory" Width="1.5" PointX="29.75" PointY="29.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AMSModel.viw_Goo_GoodsBasePrice" Width="1.5" PointX="25.75" PointY="30.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AMSModel.viw_Goo_GoodsBasePriceOld" Width="1.5" PointX="31.75" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AMSModel.viw_Goo_GoodsUnit2QuantityRemained" Width="1.5" PointX="31.75" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AMSModel.viw_Goo_GoodsUnit2QuantityRemainedWithBasePrice" Width="1.5" PointX="31.75" PointY="7.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AMSModel.Viw_Saf_Reason" Width="1.5" PointX="31.75" PointY="11.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AMSModel.Viw_Saf_SumRecievePayemtByFactorNumber" Width="1.5" PointX="31.75" PointY="14.875" IsExpanded="true" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_FertilizerElement_tbl_cmn_Element" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Fertilizer_tbl_cmn_MaterialMode" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Pesticide_tbl_cmn_MaterialMode" ManuallyRouted="false" />

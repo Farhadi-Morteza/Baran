@@ -176,30 +176,31 @@ namespace Baran.Source
                 waite.Show();
                 this.SetVariables();
 
-                //BaranDataAccess.UnitOfWork db = new BaranDataAccess.UnitOfWork();
-                //tbl_src_Buildings buildings = new tbl_src_Buildings();
+                BaranDataAccess.UnitOfWork db = new BaranDataAccess.UnitOfWork();
 
-                //buildings = db.BuildingsRepository.GetById(BuildingsID);
+                tbl_src_Buildings buildings = new tbl_src_Buildings();
 
-                //buildings.Name = strName;
-                //buildings.Area = dclArea;
-                //buildings.Fk_BuildingsCategoryID = intBuildingsCategory;
-                //buildings.Fk_PartID = intParentCo;
-                //buildings.UpdateUserID = UserID;
-                //buildings.Description = strDescription;
+                buildings = db.BuildingsRepository.GetById(BuildingsID);
 
+                buildings.Name = strName;
+                buildings.Area = dclArea;
+                buildings.Fk_BuildingsCategoryID = intBuildingsCategory;
+                buildings.Fk_PartID = intParentCo;
+                buildings.UpdateUserID = UserID;
+                buildings.Description = strDescription;
+                buildings.UpdateDate = System.DateTime.Now;
 
-                //db.BuildingsRepository.Update(buildings);
-                //db.Save();
+                db.BuildingsRepository.Update(buildings);
+                db.Save();
 
-                int RowAffected = Convert.ToInt32(adp.Update(BuildingsID, strName, dclArea, intBuildingsCategory, intParentCo, UserID, strDescription));
+                //int RowAffected = Convert.ToInt32(adp.Update(BuildingsID, strName, dclArea, intBuildingsCategory, intParentCo, UserID, strDescription));
 
-                if (RowAffected > 0)
-                {
+                //if (RowAffected > 0)
+                //{
                     OnMessage(BaranResources.EditSuccessful, PublicEnum.EnmMessageCategory.Success);
-                }
-                else
-                    OnMessage(BaranResources.EditFail, PublicEnum.EnmMessageCategory.Warning);
+                //}
+                //else
+                //    OnMessage(BaranResources.EditFail, PublicEnum.EnmMessageCategory.Warning);
             }
             catch
             {
@@ -222,25 +223,26 @@ namespace Baran.Source
             if (msgResult == DialogResult.No) return;
             try
             {
-                //BaranDataAccess.UnitOfWork db = new BaranDataAccess.UnitOfWork();
-                //tbl_src_Buildings buildings = new tbl_src_Buildings();
+                BaranDataAccess.UnitOfWork db = new BaranDataAccess.UnitOfWork();
+                tbl_src_Buildings buildings = new tbl_src_Buildings();
 
-                //buildings = db.BuildingsRepository.GetById(BuildingsID);
+                buildings = db.BuildingsRepository.GetById(BuildingsID);
 
-                //buildings.IsActive = false;
-                //buildings.InactivationUserID = UserID;
+                buildings.IsActive = false;
+                buildings.InactivationUserID = UserID;
+                buildings.InactivationDate = System.DateTime.Now;
 
-                //db.BuildingsRepository.Update(buildings);
-                //db.Save();
+                db.BuildingsRepository.Update(buildings);
+                db.Save();
 
-                int RowAffected = (int)adp.Delete(BuildingsID, UserID);
-                if (RowAffected > 0)
-                {
+                //int RowAffected = (int)adp.Delete(BuildingsID, UserID);
+                //if (RowAffected > 0)
+                //{
                     BuildingsID = 0;
                     OnMessage(BaranResources.DeleteSuccessful, PublicEnum.EnmMessageCategory.Success);
-                }
-                else
-                    OnMessage(BaranResources.DeleteFail, PublicEnum.EnmMessageCategory.Warning);
+                //}
+                //else
+                //    OnMessage(BaranResources.DeleteFail, PublicEnum.EnmMessageCategory.Warning);
             }
             catch
             {

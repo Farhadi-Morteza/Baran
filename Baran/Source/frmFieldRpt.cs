@@ -114,81 +114,147 @@ namespace Baran.Source
                 if (chkChangeUse.Checked)
                     strWhereClause += " AND dbo.tbl_src_Field.changeUse = " + chkChangeUse;
 
-                BaranDataAccess.Source.dstReport.spr_src_Field_Map_SelectDataTable tbl =
-                    new BaranDataAccess.Source.dstReport.spr_src_Field_Map_SelectDataTable();
-                BaranDataAccess.Source.dstReportTableAdapters.spr_src_Field_Map_SelectTableAdapter adp =
-                    new BaranDataAccess.Source.dstReportTableAdapters.spr_src_Field_Map_SelectTableAdapter();
+                //====================================================================================================
+                //BaranDataAccess.UnitOfWork db = new BaranDataAccess.UnitOfWork();
 
-                adp.FillFieldMapTable(tbl, 2, strWhereClause, CurrentUser.Instance.UserID.ToString());
+                //var fields = db.FieldMapRepository.GetAll();
+                //var fields = db.spr_src_Field_Map_Select(2, strWhereClause, CurrentUser.Instance.UserID.ToString());
+                BaranDataAccess.AMSEntities DB = new BaranDataAccess.AMSEntities();
+                //var fields = DB.spr_src_Field_Map_Select(2, strWhereClause, "68");
 
+                //using (BaranDataAccess.AMSEntities db = new BaranDataAccess.AMSEntities())
+                //{
+                //    var fields = db.spr_src_Field_Map(2, strWhereClause, CurrentUser.Instance.UserID.ToString());
 
-                BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocation =
-                    new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
-                BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter adpLocation =
-                    new BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter();
+                //    //====================================================================================================
 
-                if (tbl.Count > 0)
-                {
-                    MainMap.Overlays.Clear();
-                    GMapOverlay routes = new GMapOverlay("routes");
-                    foreach (var field in tbl)
-                    {
-                      
-                        string strTooltip =
-                            field.PartName
-                            + "\n" +
-                            "نام قطعه:" + field.FieldName
-                            + "\n" +
-                            "مساحت کل:" + field.TotalArea
-                            + "\n" +
-                            "مساحت قابل استفاده::" + field.UsableArea
-                            + "\n" +
-                            "بافت خاک:" + field.SoilTexture
-                            + "\n" +
-                            "نوع کاربری:" + field.FieldUseType
-                            + "\n" +
-                            "شماره سند:" + field.DocNumber;
+                //    foreach (var field in fields)
+                //    {
+                //        string strTooltip =
+                //            field.PartName
+                //            + "\n" +
+                //            "نام قطعه:" + field.FieldName
+                //            + "\n" +
+                //            "مساحت کل:" + field.TotalArea
+                //            + "\n" +
+                //            "مساحت قابل استفاده::" + field.UsableArea
+                //            + "\n" +
+                //            "بافت خاک:" + field.SoilTexture
+                //            + "\n" +
+                //            "نوع کاربری:" + field.FieldUseType
+                //            + "\n" +
+                //            "شماره سند:" + field.DocNumber;
 
-                        List<PointLatLng> points = new List<PointLatLng>();
-                        adpLocation.FillLocationByIDTable(tblLocation, field.FieldID, null, null, null, null, null, null);
+                //        List<PointLatLng> points = new List<PointLatLng>();
 
-                        if (tblLocation.Count > 0)
-                        {
-                            
-                            foreach (var point in tblLocation)
-                            {
-                                points.Add(new PointLatLng(Convert.ToDouble(point.Latitude), Convert.ToDouble(point.Longitude)));
-                            }
+                //        if (field.LocationPolygon != null)
+                //        {
+                //            points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(field.LocationPolygon.ProviderValue.ToString());
 
+                //            GMapRoute rt = new GMapRoute(points, "hahahahaha");
+                //            {
+                //                rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
+                //                rt.Stroke.Width = 5;
+                //                rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+                //            }
 
-                            GMapRoute rt = new GMapRoute(points, "hahahahaha");
-                            {
-                                rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
-                                rt.Stroke.Width = 5;
-                                rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-                            }
-                            //int poi = points.Count / 2;
-                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.red_dot);
-                            mark.ToolTipText = strTooltip;
-                            mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-                            mark.ToolTip.Fill = Brushes.Black;
-                            mark.ToolTip.Foreground = Brushes.White;
-                            mark.ToolTip.Stroke = Pens.Black;
-                            mark.ToolTip.TextPadding = new Size(20, 20);
-                            mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+                //            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.red_dot);
+                //            mark.ToolTipText = strTooltip;
+                //            mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+                //            mark.ToolTip.Fill = Brushes.Black;
+                //            mark.ToolTip.Foreground = Brushes.White;
+                //            mark.ToolTip.Stroke = Pens.Black;
+                //            mark.ToolTip.TextPadding = new Size(20, 20);
+                //            mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
 
-                            markers.Markers.Add(mark);
+                //            markers.Markers.Add(mark);
 
-                            routes.Routes.Add(rt);
-                        }
-                    }
-                    MainMap.Overlays.Add(routes);
-                    MainMap.Overlays.Add(markers);
-                    //MainMap.ZoomAndCenterRoutes("routes");
-                    
-                }
+                //            routes.Routes.Add(rt);
+                //        }
+                //    }
+                //}
+                MainMap.Overlays.Add(routes);
+                MainMap.Overlays.Add(markers);
+                //MainMap.ZoomAndCenterRoutes("routes");
             }
-            catch { }
+            catch
+            { }
+
+            //BaranDataAccess.Source.dstReport.spr_src_Field_Map_SelectDataTable tbl =
+            //    new BaranDataAccess.Source.dstReport.spr_src_Field_Map_SelectDataTable();
+            //BaranDataAccess.Source.dstReportTableAdapters.spr_src_Field_Map_SelectTableAdapter adp =
+            //    new BaranDataAccess.Source.dstReportTableAdapters.spr_src_Field_Map_SelectTableAdapter();
+
+            //adp.FillFieldMapTable(tbl, 2, strWhereClause, CurrentUser.Instance.UserID.ToString());
+
+            //BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocation =
+            //    new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
+            //BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter adpLocation =
+            //    new BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter();
+
+            //if (tbl.Count > 0)
+            //{
+            //    MainMap.Overlays.Clear();
+            //    GMapOverlay routes = new GMapOverlay("routes");
+            //    foreach (var field in tbl)
+            //    {
+
+            //        string strTooltip =
+            //            field.PartName
+            //            + "\n" +
+            //            "نام قطعه:" + field.FieldName
+            //            + "\n" +
+            //            "مساحت کل:" + field.TotalArea
+            //            + "\n" +
+            //            "مساحت قابل استفاده::" + field.UsableArea
+            //            + "\n" +
+            //            "بافت خاک:" + field.SoilTexture
+            //            + "\n" +
+            //            "نوع کاربری:" + field.FieldUseType
+            //            + "\n" +
+            //            "شماره سند:" + field.DocNumber;
+
+            //        List<PointLatLng> points = new List<PointLatLng>();
+            //        //points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(field.LocationPolygon.ProviderValue.ToString());
+            //        //adpLocation.FillLocationByIDTable(tblLocation, field.FieldID, null, null, null, null, null, null);
+
+            //        if (tblLocation.Count > 0)
+            //        {
+
+            //            foreach (var point in tblLocation)
+            //            {
+            //                points.Add(new PointLatLng(Convert.ToDouble(point.Latitude), Convert.ToDouble(point.Longitude)));
+            //            }
+
+
+            //            GMapRoute rt = new GMapRoute(points, "hahahahaha");
+            //            {
+            //                rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
+            //                rt.Stroke.Width = 5;
+            //                rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            //            }
+            //            //int poi = points.Count / 2;
+            //            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.red_dot);
+            //            mark.ToolTipText = strTooltip;
+            //            mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            //            mark.ToolTip.Fill = Brushes.Black;
+            //            mark.ToolTip.Foreground = Brushes.White;
+            //            mark.ToolTip.Stroke = Pens.Black;
+            //            mark.ToolTip.TextPadding = new Size(20, 20);
+            //            mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+
+            //            markers.Markers.Add(mark);
+
+            //            routes.Routes.Add(rt);
+            //        }
+            //    }
+            //    MainMap.Overlays.Add(routes);
+            //    MainMap.Overlays.Add(markers);
+            //    //MainMap.ZoomAndCenterRoutes("routes");
+
+            //}
+            //}
+            //        catch { }
         }
 
         private void ClearMap()
