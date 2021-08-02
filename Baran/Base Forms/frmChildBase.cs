@@ -19,9 +19,7 @@ namespace Baran.Base_Forms
         {
             InitializeComponent();
             _frmChildBase = this;
-
-            
-           }
+        }
 
     #endregion
 
@@ -35,9 +33,9 @@ namespace Baran.Base_Forms
             , _PrintAccess
             ;
 
-    #endregion
+        #endregion
 
-    #region Propertise
+        #region Propertise
 
         private static frmChildBase _frmChildBase = null;
         public static frmChildBase Instanc

@@ -115,67 +115,58 @@ namespace Baran.Source
                     strWhereClause += " AND dbo.tbl_src_Field.changeUse = " + chkChangeUse;
 
                 //====================================================================================================
-                //BaranDataAccess.UnitOfWork db = new BaranDataAccess.UnitOfWork();
+                using (BaranDataAccess.AMSEntities db = new BaranDataAccess.AMSEntities())
+                { 
+                    var fields = db.spr_src_Field_Map_Select(2, strWhereClause, CurrentUser.Instance.UserID.ToString());
+              
+                    foreach (var field in fields)
+                    {
+                        string strTooltip =
+                            field.PartName
+                            + "\n" +
+                            "نام قطعه:" + field.FieldName
+                            + "\n" +
+                            "مساحت کل:" + field.TotalArea
+                            + "\n" +
+                            "مساحت قابل استفاده::" + field.UsableArea
+                            + "\n" +
+                            "بافت خاک:" + field.SoilTexture
+                            + "\n" +
+                            "نوع کاربری:" + field.FieldUseType
+                            + "\n" +
+                            "شماره سند:" + field.DocNumber;
 
-                //var fields = db.FieldMapRepository.GetAll();
-                //var fields = db.spr_src_Field_Map_Select(2, strWhereClause, CurrentUser.Instance.UserID.ToString());
-                BaranDataAccess.AMSEntities DB = new BaranDataAccess.AMSEntities();
-                //var fields = DB.spr_src_Field_Map_Select(2, strWhereClause, "68");
+                        List<PointLatLng> points = new List<PointLatLng>();
 
-                //using (BaranDataAccess.AMSEntities db = new BaranDataAccess.AMSEntities())
-                //{
-                //    var fields = db.spr_src_Field_Map(2, strWhereClause, CurrentUser.Instance.UserID.ToString());
+                        if (field.LocationPolygon != null)
+                        {
+                            points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(field.LocationPolygon.ProviderValue.ToString());
 
-                //    //====================================================================================================
+                            GMapRoute rt = new GMapRoute(points, "hahahahaha");
+                            {
+                                rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
+                                rt.Stroke.Width = 5;
+                                rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+                            }
 
-                //    foreach (var field in fields)
-                //    {
-                //        string strTooltip =
-                //            field.PartName
-                //            + "\n" +
-                //            "نام قطعه:" + field.FieldName
-                //            + "\n" +
-                //            "مساحت کل:" + field.TotalArea
-                //            + "\n" +
-                //            "مساحت قابل استفاده::" + field.UsableArea
-                //            + "\n" +
-                //            "بافت خاک:" + field.SoilTexture
-                //            + "\n" +
-                //            "نوع کاربری:" + field.FieldUseType
-                //            + "\n" +
-                //            "شماره سند:" + field.DocNumber;
+                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.red_dot);
+                            mark.ToolTipText = strTooltip;
+                            mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+                            mark.ToolTip.Fill = Brushes.Black;
+                            mark.ToolTip.Foreground = Brushes.White;
+                            mark.ToolTip.Stroke = Pens.Black;
+                            mark.ToolTip.TextPadding = new Size(20, 20);
+                            mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
 
-                //        List<PointLatLng> points = new List<PointLatLng>();
+                            markers.Markers.Add(mark);
 
-                //        if (field.LocationPolygon != null)
-                //        {
-                //            points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(field.LocationPolygon.ProviderValue.ToString());
-
-                //            GMapRoute rt = new GMapRoute(points, "hahahahaha");
-                //            {
-                //                rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
-                //                rt.Stroke.Width = 5;
-                //                rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-                //            }
-
-                //            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.red_dot);
-                //            mark.ToolTipText = strTooltip;
-                //            mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-                //            mark.ToolTip.Fill = Brushes.Black;
-                //            mark.ToolTip.Foreground = Brushes.White;
-                //            mark.ToolTip.Stroke = Pens.Black;
-                //            mark.ToolTip.TextPadding = new Size(20, 20);
-                //            mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
-
-                //            markers.Markers.Add(mark);
-
-                //            routes.Routes.Add(rt);
-                //        }
-                //    }
-                //}
+                            routes.Routes.Add(rt);
+                        }
+                    }
+                }
                 MainMap.Overlays.Add(routes);
                 MainMap.Overlays.Add(markers);
-                //MainMap.ZoomAndCenterRoutes("routes");
+                MainMap.ZoomAndCenterRoutes("routes");
             }
             catch
             { }
@@ -543,6 +534,11 @@ namespace Baran.Source
                 }
             }
             catch { }
+        }
+
+        private void grpControls_Click(object sender, EventArgs e)
+        {
+
         }
 
         public override void OnExport(Windows.Forms.UltraGrid grdItem)

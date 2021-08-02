@@ -12,6 +12,9 @@ namespace BaranDataAccess
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Objects;
+    using System.Data.Objects.DataClasses;
+    using System.Linq;
     
     public partial class AMSEntities : DbContext
     {
@@ -114,5 +117,23 @@ namespace BaranDataAccess
         public DbSet<tbl_tsk_Tasklist_Crop_Link> tbl_tsk_Tasklist_Crop_Link { get; set; }
         public DbSet<tbl_tsk_Tasklist_Task_Link> tbl_tsk_Tasklist_Task_Link { get; set; }
         public DbSet<tbl_tsk_TaskSubCategory> tbl_tsk_TaskSubCategory { get; set; }
+        public DbSet<tbl_src_Land> tbl_src_Land { get; set; }
+    
+        public virtual ObjectResult<spr_src_Field_Map_Select_Result> spr_src_Field_Map_Select(Nullable<int> action, string whereClause, string userID)
+        {
+            var actionParameter = action.HasValue ?
+                new ObjectParameter("Action", action) :
+                new ObjectParameter("Action", typeof(int));
+    
+            var whereClauseParameter = whereClause != null ?
+                new ObjectParameter("WhereClause", whereClause) :
+                new ObjectParameter("WhereClause", typeof(string));
+    
+            var userIDParameter = userID != null ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_Field_Map_Select_Result>("spr_src_Field_Map_Select", actionParameter, whereClauseParameter, userIDParameter);
+        }
     }
 }

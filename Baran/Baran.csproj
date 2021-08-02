@@ -661,6 +661,12 @@
     <Compile Include="Source\frmFieldView.Designer.cs">
       <DependentUpon>frmFieldView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Source\frmLand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\frmLand.Designer.cs">
+      <DependentUpon>frmLand.cs</DependentUpon>
+    </Compile>
     <Compile Include="Source\frmMachinery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1040,6 +1046,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Source\frmFieldView.resx">
       <DependentUpon>frmFieldView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\frmLand.resx">
+      <DependentUpon>frmLand.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Source\frmMachinery.resx">
       <DependentUpon>frmMachinery.cs</DependentUpon>

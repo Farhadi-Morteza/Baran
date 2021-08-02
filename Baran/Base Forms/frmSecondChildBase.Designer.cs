@@ -102,25 +102,25 @@
             this.grpButons.Controls.Add(this.grpChange);
             this.grpButons.Controls.Add(this.grpSave);
             this.grpButons.Controls.Add(this.grpCancel);
-            this.grpButons.Location = new System.Drawing.Point(0, 555);
-            this.grpButons.Size = new System.Drawing.Size(1106, 67);
+            this.grpButons.Location = new System.Drawing.Point(0, 437);
+            this.grpButons.Size = new System.Drawing.Size(836, 67);
             this.grpButons.Visible = true;
             // 
             // lblLine2
             // 
-            this.lblLine2.Size = new System.Drawing.Size(1104, 3);
+            this.lblLine2.Size = new System.Drawing.Size(834, 3);
             // 
             // grpHeader
             // 
-            this.grpHeader.Size = new System.Drawing.Size(1106, 75);
+            this.grpHeader.Size = new System.Drawing.Size(836, 75);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(1043, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(773, 9);
             // 
             // lblCaption
             // 
-            this.lblCaption.Location = new System.Drawing.Point(740, 22);
+            this.lblCaption.Location = new System.Drawing.Point(454, 16);
             // 
             // lblMessage
             // 
@@ -130,21 +130,21 @@
             // 
             // lblLine1
             // 
-            this.lblLine1.Size = new System.Drawing.Size(1104, 3);
+            this.lblLine1.Size = new System.Drawing.Size(834, 3);
             // 
             // grpMessage
             // 
-            this.grpMessage.Size = new System.Drawing.Size(1106, 30);
+            this.grpMessage.Size = new System.Drawing.Size(836, 30);
             // 
             // lblLine3
             // 
-            this.lblLine3.Location = new System.Drawing.Point(1, 446);
-            this.lblLine3.Size = new System.Drawing.Size(1104, 3);
+            this.lblLine3.Location = new System.Drawing.Point(1, 328);
+            this.lblLine3.Size = new System.Drawing.Size(834, 3);
             // 
             // grpMain
             // 
             this.grpMain.Controls.Add(this.menustripMain);
-            this.grpMain.Size = new System.Drawing.Size(1106, 450);
+            this.grpMain.Size = new System.Drawing.Size(836, 332);
             this.grpMain.Controls.SetChildIndex(this.menustripMain, 0);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
             // 
@@ -153,7 +153,7 @@
             this.grpCancel.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
             this.grpCancel.Controls.Add(this.btnCancle);
             this.grpCancel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.grpCancel.Location = new System.Drawing.Point(978, 0);
+            this.grpCancel.Location = new System.Drawing.Point(708, 0);
             this.grpCancel.Name = "grpCancel";
             this.grpCancel.Size = new System.Drawing.Size(127, 66);
             this.grpCancel.TabIndex = 0;
@@ -178,7 +178,7 @@
             this.grpSave.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
             this.grpSave.Controls.Add(this.btnSave);
             this.grpSave.Dock = System.Windows.Forms.DockStyle.Right;
-            this.grpSave.Location = new System.Drawing.Point(851, 0);
+            this.grpSave.Location = new System.Drawing.Point(581, 0);
             this.grpSave.Name = "grpSave";
             this.grpSave.Size = new System.Drawing.Size(127, 66);
             this.grpSave.TabIndex = 1;
@@ -205,7 +205,7 @@
             this.grpChange.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
             this.grpChange.Controls.Add(this.btnChange);
             this.grpChange.Dock = System.Windows.Forms.DockStyle.Right;
-            this.grpChange.Location = new System.Drawing.Point(724, 0);
+            this.grpChange.Location = new System.Drawing.Point(454, 0);
             this.grpChange.Name = "grpChange";
             this.grpChange.Size = new System.Drawing.Size(127, 66);
             this.grpChange.TabIndex = 2;
@@ -230,7 +230,7 @@
             this.grpClear.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
             this.grpClear.Controls.Add(this.btnClear);
             this.grpClear.Dock = System.Windows.Forms.DockStyle.Right;
-            this.grpClear.Location = new System.Drawing.Point(597, 0);
+            this.grpClear.Location = new System.Drawing.Point(327, 0);
             this.grpClear.Name = "grpClear";
             this.grpClear.Size = new System.Drawing.Size(127, 66);
             this.grpClear.TabIndex = 3;
@@ -255,7 +255,7 @@
             this.grpDelete.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
             this.grpDelete.Controls.Add(this.btnDelete);
             this.grpDelete.Dock = System.Windows.Forms.DockStyle.Right;
-            this.grpDelete.Location = new System.Drawing.Point(470, 0);
+            this.grpDelete.Location = new System.Drawing.Point(200, 0);
             this.grpDelete.Name = "grpDelete";
             this.grpDelete.Size = new System.Drawing.Size(127, 66);
             this.grpDelete.TabIndex = 4;
@@ -280,7 +280,7 @@
             this.grpDoc.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
             this.grpDoc.Controls.Add(this.btnDoc);
             this.grpDoc.Dock = System.Windows.Forms.DockStyle.Right;
-            this.grpDoc.Location = new System.Drawing.Point(330, 0);
+            this.grpDoc.Location = new System.Drawing.Point(60, 0);
             this.grpDoc.Name = "grpDoc";
             this.grpDoc.Size = new System.Drawing.Size(140, 66);
             this.grpDoc.TabIndex = 5;
@@ -305,7 +305,7 @@
             this.grpPrint.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
             this.grpPrint.Controls.Add(this.btnPrint);
             this.grpPrint.Dock = System.Windows.Forms.DockStyle.Right;
-            this.grpPrint.Location = new System.Drawing.Point(235, 0);
+            this.grpPrint.Location = new System.Drawing.Point(-35, 0);
             this.grpPrint.Name = "grpPrint";
             this.grpPrint.Size = new System.Drawing.Size(95, 66);
             this.grpPrint.TabIndex = 6;
@@ -331,7 +331,7 @@
             this.grpRefresh.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
             this.grpRefresh.Controls.Add(this.btnRefresh);
             this.grpRefresh.Dock = System.Windows.Forms.DockStyle.Right;
-            this.grpRefresh.Location = new System.Drawing.Point(140, 0);
+            this.grpRefresh.Location = new System.Drawing.Point(-130, 0);
             this.grpRefresh.Name = "grpRefresh";
             this.grpRefresh.Size = new System.Drawing.Size(95, 66);
             this.grpRefresh.TabIndex = 7;
@@ -359,7 +359,7 @@
             this.toolStripItemsMenuToolStripMenuItem});
             this.menustripMain.Location = new System.Drawing.Point(9, 415);
             this.menustripMain.Name = "menustripMain";
-            this.menustripMain.Size = new System.Drawing.Size(254, 28);
+            this.menustripMain.Size = new System.Drawing.Size(133, 24);
             this.menustripMain.TabIndex = 19;
             this.menustripMain.Text = "menustrip1";
             this.menustripMain.Visible = false;
@@ -377,14 +377,14 @@
             this.mnuConfirm,
             this.mnuDoc});
             this.toolStripItemsMenuToolStripMenuItem.Name = "toolStripItemsMenuToolStripMenuItem";
-            this.toolStripItemsMenuToolStripMenuItem.Size = new System.Drawing.Size(154, 24);
+            this.toolStripItemsMenuToolStripMenuItem.Size = new System.Drawing.Size(125, 20);
             this.toolStripItemsMenuToolStripMenuItem.Text = "ToolStripItemsMenu";
             // 
             // mnuCansel
             // 
             this.mnuCansel.Name = "mnuCansel";
             this.mnuCansel.ShortcutKeys = System.Windows.Forms.Keys.F12;
-            this.mnuCansel.Size = new System.Drawing.Size(163, 24);
+            this.mnuCansel.Size = new System.Drawing.Size(143, 22);
             this.mnuCansel.Text = "Cansel";
             this.mnuCansel.Click += new System.EventHandler(this.mnuCansel_Click);
             // 
@@ -392,7 +392,7 @@
             // 
             this.mnuSave.Name = "mnuSave";
             this.mnuSave.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.mnuSave.Size = new System.Drawing.Size(163, 24);
+            this.mnuSave.Size = new System.Drawing.Size(143, 22);
             this.mnuSave.Text = "Save";
             this.mnuSave.Click += new System.EventHandler(this.mnuSave_Click);
             // 
@@ -400,7 +400,7 @@
             // 
             this.mnuDelete.Name = "mnuDelete";
             this.mnuDelete.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.mnuDelete.Size = new System.Drawing.Size(163, 24);
+            this.mnuDelete.Size = new System.Drawing.Size(143, 22);
             this.mnuDelete.Text = "Delete";
             this.mnuDelete.Click += new System.EventHandler(this.mnuDelete_Click);
             // 
@@ -408,7 +408,7 @@
             // 
             this.mnuChange.Name = "mnuChange";
             this.mnuChange.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.mnuChange.Size = new System.Drawing.Size(163, 24);
+            this.mnuChange.Size = new System.Drawing.Size(143, 22);
             this.mnuChange.Text = "Change";
             this.mnuChange.Click += new System.EventHandler(this.mnuChange_Click);
             // 
@@ -416,7 +416,7 @@
             // 
             this.mnuNew.Name = "mnuNew";
             this.mnuNew.ShortcutKeys = System.Windows.Forms.Keys.F6;
-            this.mnuNew.Size = new System.Drawing.Size(163, 24);
+            this.mnuNew.Size = new System.Drawing.Size(143, 22);
             this.mnuNew.Text = "New";
             this.mnuNew.Click += new System.EventHandler(this.mnuNew_Click);
             // 
@@ -424,7 +424,7 @@
             // 
             this.mnuClear.Name = "mnuClear";
             this.mnuClear.ShortcutKeys = System.Windows.Forms.Keys.F7;
-            this.mnuClear.Size = new System.Drawing.Size(163, 24);
+            this.mnuClear.Size = new System.Drawing.Size(143, 22);
             this.mnuClear.Text = "Clear";
             this.mnuClear.Click += new System.EventHandler(this.mnuClear_Click);
             // 
@@ -432,7 +432,7 @@
             // 
             this.mnuRefresh.Name = "mnuRefresh";
             this.mnuRefresh.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.mnuRefresh.Size = new System.Drawing.Size(163, 24);
+            this.mnuRefresh.Size = new System.Drawing.Size(143, 22);
             this.mnuRefresh.Text = "Refresh";
             this.mnuRefresh.Click += new System.EventHandler(this.mnuRefresh_Click);
             // 
@@ -440,7 +440,7 @@
             // 
             this.mnuConfirm.Name = "mnuConfirm";
             this.mnuConfirm.ShortcutKeys = System.Windows.Forms.Keys.F10;
-            this.mnuConfirm.Size = new System.Drawing.Size(163, 24);
+            this.mnuConfirm.Size = new System.Drawing.Size(143, 22);
             this.mnuConfirm.Text = "Confirm";
             this.mnuConfirm.Click += new System.EventHandler(this.mnuConfirm_Click);
             // 
@@ -448,7 +448,7 @@
             // 
             this.mnuDoc.Name = "mnuDoc";
             this.mnuDoc.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.mnuDoc.Size = new System.Drawing.Size(163, 24);
+            this.mnuDoc.Size = new System.Drawing.Size(143, 22);
             this.mnuDoc.Text = "Doc";
             this.mnuDoc.Click += new System.EventHandler(this.mnuDoc_Click);
             // 
@@ -457,7 +457,7 @@
             this.grpNew.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
             this.grpNew.Controls.Add(this.btnNew);
             this.grpNew.Dock = System.Windows.Forms.DockStyle.Right;
-            this.grpNew.Location = new System.Drawing.Point(13, 0);
+            this.grpNew.Location = new System.Drawing.Point(-257, 0);
             this.grpNew.Name = "grpNew";
             this.grpNew.Size = new System.Drawing.Size(127, 66);
             this.grpNew.TabIndex = 8;
@@ -480,11 +480,11 @@
             // 
             // frmSecondChildBase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(48)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(1106, 622);
+            this.ClientSize = new System.Drawing.Size(836, 504);
             this.FormMessage = "";
-            this.Margin = new System.Windows.Forms.Padding(3);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSecondChildBase";

@@ -56,7 +56,7 @@
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("spr_src_Field_Rpt_Select", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RowID", 0);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FreeSpace", 1);
-            Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance34 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance57 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance58 = new Infragistics.Win.Appearance();
@@ -183,23 +183,23 @@
             // grpButons
             // 
             this.grpButons.Location = new System.Drawing.Point(0, 783);
-            this.grpButons.Size = new System.Drawing.Size(968, 67);
+            this.grpButons.Size = new System.Drawing.Size(1211, 67);
             // 
             // lblLine2
             // 
-            this.lblLine2.Size = new System.Drawing.Size(966, 3);
+            this.lblLine2.Size = new System.Drawing.Size(1209, 3);
             // 
             // grpHeader
             // 
-            this.grpHeader.Size = new System.Drawing.Size(968, 75);
+            this.grpHeader.Size = new System.Drawing.Size(1211, 75);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(902, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(1145, 8);
             // 
             // lblCaption
             // 
-            this.lblCaption.Location = new System.Drawing.Point(596, 21);
+            this.lblCaption.Location = new System.Drawing.Point(839, 21);
             // 
             // lblMessage
             // 
@@ -208,21 +208,21 @@
             // 
             // lblLine1
             // 
-            this.lblLine1.Size = new System.Drawing.Size(966, 3);
+            this.lblLine1.Size = new System.Drawing.Size(1209, 3);
             // 
             // grpMessage
             // 
-            this.grpMessage.Size = new System.Drawing.Size(968, 30);
+            this.grpMessage.Size = new System.Drawing.Size(1211, 30);
             // 
             // lblLine3
             // 
             this.lblLine3.Location = new System.Drawing.Point(1, 674);
-            this.lblLine3.Size = new System.Drawing.Size(966, 3);
+            this.lblLine3.Size = new System.Drawing.Size(1209, 3);
             // 
             // grpMain
             // 
             this.grpMain.Controls.Add(this.tac);
-            this.grpMain.Size = new System.Drawing.Size(968, 678);
+            this.grpMain.Size = new System.Drawing.Size(1211, 678);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
             this.grpMain.Controls.SetChildIndex(this.tac, 0);
             // 
@@ -232,7 +232,7 @@
             this.tpcMap.Controls.Add(this.grpControls);
             this.tpcMap.Location = new System.Drawing.Point(1, 30);
             this.tpcMap.Name = "tpcMap";
-            this.tpcMap.Size = new System.Drawing.Size(964, 643);
+            this.tpcMap.Size = new System.Drawing.Size(1207, 643);
             // 
             // MainMap
             // 
@@ -256,7 +256,7 @@
             this.MainMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.MainMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.MainMap.ShowTileGridLines = false;
-            this.MainMap.Size = new System.Drawing.Size(697, 643);
+            this.MainMap.Size = new System.Drawing.Size(898, 643);
             this.MainMap.TabIndex = 1;
             this.MainMap.Zoom = 5D;
             // 
@@ -284,16 +284,17 @@
             this.grpControls.Controls.Add(this.cmbCollection);
             this.grpControls.Dock = System.Windows.Forms.DockStyle.Right;
             this.grpControls.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.grpControls.Location = new System.Drawing.Point(697, 0);
+            this.grpControls.Location = new System.Drawing.Point(898, 0);
             this.grpControls.Name = "grpControls";
-            this.grpControls.Size = new System.Drawing.Size(267, 643);
+            this.grpControls.Size = new System.Drawing.Size(309, 643);
             this.grpControls.TabIndex = 0;
+            this.grpControls.Click += new System.EventHandler(this.grpControls_Click);
             // 
             // chkChangeUse
             // 
             this.chkChangeUse.AutoSize = true;
             this.chkChangeUse.ForeColor = System.Drawing.Color.White;
-            this.chkChangeUse.Location = new System.Drawing.Point(148, 537);
+            this.chkChangeUse.Location = new System.Drawing.Point(190, 480);
             this.chkChangeUse.Name = "chkChangeUse";
             this.chkChangeUse.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkChangeUse.Size = new System.Drawing.Size(109, 17);
@@ -305,7 +306,7 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.ForeColor = System.Drawing.Color.White;
-            this.checkBox2.Location = new System.Drawing.Point(171, 511);
+            this.checkBox2.Location = new System.Drawing.Point(213, 456);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox2.Size = new System.Drawing.Size(86, 17);
@@ -317,7 +318,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(171, 485);
+            this.checkBox1.Location = new System.Drawing.Point(213, 432);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox1.Size = new System.Drawing.Size(86, 17);
@@ -331,7 +332,7 @@
             appearance5.TextHAlignAsString = "Right";
             appearance5.TextVAlignAsString = "Middle";
             this.label8.Appearance = appearance5;
-            this.label8.Location = new System.Drawing.Point(157, 428);
+            this.label8.Location = new System.Drawing.Point(199, 373);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label8.Size = new System.Drawing.Size(100, 23);
@@ -356,10 +357,10 @@
             appearance7.TextHAlignAsString = "Right";
             appearance7.TextVAlignAsString = "Middle";
             this.cmbFieldUseType.ItemAppearance = appearance7;
-            this.cmbFieldUseType.Location = new System.Drawing.Point(18, 456);
+            this.cmbFieldUseType.Location = new System.Drawing.Point(19, 396);
             this.cmbFieldUseType.Name = "cmbFieldUseType";
             this.cmbFieldUseType.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbFieldUseType.Size = new System.Drawing.Size(239, 22);
+            this.cmbFieldUseType.Size = new System.Drawing.Size(280, 22);
             this.cmbFieldUseType.TabIndex = 7;
             // 
             // label7
@@ -368,7 +369,7 @@
             appearance3.TextHAlignAsString = "Right";
             appearance3.TextVAlignAsString = "Middle";
             this.label7.Appearance = appearance3;
-            this.label7.Location = new System.Drawing.Point(157, 369);
+            this.label7.Location = new System.Drawing.Point(199, 321);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label7.Size = new System.Drawing.Size(100, 23);
@@ -393,10 +394,10 @@
             appearance10.TextHAlignAsString = "Right";
             appearance10.TextVAlignAsString = "Middle";
             this.cmbOwnership.ItemAppearance = appearance10;
-            this.cmbOwnership.Location = new System.Drawing.Point(18, 397);
+            this.cmbOwnership.Location = new System.Drawing.Point(19, 344);
             this.cmbOwnership.Name = "cmbOwnership";
             this.cmbOwnership.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbOwnership.Size = new System.Drawing.Size(239, 22);
+            this.cmbOwnership.Size = new System.Drawing.Size(280, 22);
             this.cmbOwnership.TabIndex = 6;
             // 
             // label6
@@ -405,7 +406,7 @@
             appearance11.TextHAlignAsString = "Right";
             appearance11.TextVAlignAsString = "Middle";
             this.label6.Appearance = appearance11;
-            this.label6.Location = new System.Drawing.Point(157, 310);
+            this.label6.Location = new System.Drawing.Point(199, 269);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label6.Size = new System.Drawing.Size(100, 23);
@@ -430,10 +431,10 @@
             appearance15.TextHAlignAsString = "Right";
             appearance15.TextVAlignAsString = "Middle";
             this.cmbSoilTexture.ItemAppearance = appearance15;
-            this.cmbSoilTexture.Location = new System.Drawing.Point(18, 338);
+            this.cmbSoilTexture.Location = new System.Drawing.Point(19, 292);
             this.cmbSoilTexture.Name = "cmbSoilTexture";
             this.cmbSoilTexture.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbSoilTexture.Size = new System.Drawing.Size(239, 22);
+            this.cmbSoilTexture.Size = new System.Drawing.Size(280, 22);
             this.cmbSoilTexture.TabIndex = 5;
             // 
             // label5
@@ -442,7 +443,7 @@
             appearance17.TextHAlignAsString = "Right";
             appearance17.TextVAlignAsString = "Middle";
             this.label5.Appearance = appearance17;
-            this.label5.Location = new System.Drawing.Point(157, 251);
+            this.label5.Location = new System.Drawing.Point(199, 217);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label5.Size = new System.Drawing.Size(100, 23);
@@ -467,10 +468,10 @@
             appearance21.TextHAlignAsString = "Right";
             appearance21.TextVAlignAsString = "Middle";
             this.cmbTownship.ItemAppearance = appearance21;
-            this.cmbTownship.Location = new System.Drawing.Point(18, 279);
+            this.cmbTownship.Location = new System.Drawing.Point(19, 240);
             this.cmbTownship.Name = "cmbTownship";
             this.cmbTownship.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbTownship.Size = new System.Drawing.Size(239, 22);
+            this.cmbTownship.Size = new System.Drawing.Size(280, 22);
             this.cmbTownship.TabIndex = 4;
             // 
             // label4
@@ -479,7 +480,7 @@
             appearance22.TextHAlignAsString = "Right";
             appearance22.TextVAlignAsString = "Middle";
             this.label4.Appearance = appearance22;
-            this.label4.Location = new System.Drawing.Point(157, 192);
+            this.label4.Location = new System.Drawing.Point(199, 165);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label4.Size = new System.Drawing.Size(100, 23);
@@ -504,10 +505,10 @@
             appearance24.TextHAlignAsString = "Right";
             appearance24.TextVAlignAsString = "Middle";
             this.cmbProvince.ItemAppearance = appearance24;
-            this.cmbProvince.Location = new System.Drawing.Point(18, 220);
+            this.cmbProvince.Location = new System.Drawing.Point(19, 188);
             this.cmbProvince.Name = "cmbProvince";
             this.cmbProvince.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbProvince.Size = new System.Drawing.Size(239, 22);
+            this.cmbProvince.Size = new System.Drawing.Size(280, 22);
             this.cmbProvince.TabIndex = 3;
             this.cmbProvince.ValueChanged += new System.EventHandler(this.cmbProvince_ValueChanged);
             // 
@@ -517,7 +518,7 @@
             appearance25.TextHAlignAsString = "Right";
             appearance25.TextVAlignAsString = "Middle";
             this.label3.Appearance = appearance25;
-            this.label3.Location = new System.Drawing.Point(157, 133);
+            this.label3.Location = new System.Drawing.Point(199, 113);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(100, 23);
@@ -542,10 +543,10 @@
             appearance27.TextHAlignAsString = "Right";
             appearance27.TextVAlignAsString = "Middle";
             this.cmbPart.ItemAppearance = appearance27;
-            this.cmbPart.Location = new System.Drawing.Point(18, 161);
+            this.cmbPart.Location = new System.Drawing.Point(19, 136);
             this.cmbPart.Name = "cmbPart";
             this.cmbPart.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbPart.Size = new System.Drawing.Size(239, 22);
+            this.cmbPart.Size = new System.Drawing.Size(280, 22);
             this.cmbPart.TabIndex = 2;
             // 
             // label2
@@ -554,7 +555,7 @@
             appearance28.TextHAlignAsString = "Right";
             appearance28.TextVAlignAsString = "Middle";
             this.label2.Appearance = appearance28;
-            this.label2.Location = new System.Drawing.Point(157, 74);
+            this.label2.Location = new System.Drawing.Point(199, 61);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(100, 23);
@@ -579,10 +580,10 @@
             appearance30.TextHAlignAsString = "Right";
             appearance30.TextVAlignAsString = "Middle";
             this.cmbSubcollection.ItemAppearance = appearance30;
-            this.cmbSubcollection.Location = new System.Drawing.Point(18, 102);
+            this.cmbSubcollection.Location = new System.Drawing.Point(19, 84);
             this.cmbSubcollection.Name = "cmbSubcollection";
             this.cmbSubcollection.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbSubcollection.Size = new System.Drawing.Size(239, 22);
+            this.cmbSubcollection.Size = new System.Drawing.Size(280, 22);
             this.cmbSubcollection.TabIndex = 1;
             // 
             // label1
@@ -591,7 +592,7 @@
             appearance31.TextHAlignAsString = "Right";
             appearance31.TextVAlignAsString = "Middle";
             this.label1.Appearance = appearance31;
-            this.label1.Location = new System.Drawing.Point(157, 15);
+            this.label1.Location = new System.Drawing.Point(199, 8);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(100, 23);
@@ -616,10 +617,10 @@
             appearance33.TextHAlignAsString = "Right";
             appearance33.TextVAlignAsString = "Middle";
             this.cmbCollection.ItemAppearance = appearance33;
-            this.cmbCollection.Location = new System.Drawing.Point(18, 43);
+            this.cmbCollection.Location = new System.Drawing.Point(19, 32);
             this.cmbCollection.Name = "cmbCollection";
             this.cmbCollection.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbCollection.Size = new System.Drawing.Size(239, 22);
+            this.cmbCollection.Size = new System.Drawing.Size(280, 22);
             this.cmbCollection.TabIndex = 0;
             // 
             // tpcTable
@@ -628,7 +629,7 @@
             this.tpcTable.Controls.Add(this.grpTableControls);
             this.tpcTable.Location = new System.Drawing.Point(-10000, -10000);
             this.tpcTable.Name = "tpcTable";
-            this.tpcTable.Size = new System.Drawing.Size(964, 643);
+            this.tpcTable.Size = new System.Drawing.Size(1207, 643);
             // 
             // grdItem
             // 
@@ -650,13 +651,13 @@
             ultraGridColumn2.Header.Caption = "";
             ultraGridColumn2.Header.VisiblePosition = 0;
             ultraGridColumn2.MergedCellStyle = Infragistics.Win.UltraWinGrid.MergedCellStyle.Always;
-            ultraGridColumn2.Width = 882;
+            ultraGridColumn2.Width = 1125;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2});
             ultraGridBand1.Override.SummaryDisplayArea = Infragistics.Win.UltraWinGrid.SummaryDisplayAreas.BottomFixed;
-            appearance20.ForeColor = System.Drawing.Color.DarkBlue;
-            ultraGridBand1.Override.SummaryValueAppearance = appearance20;
+            appearance34.ForeColor = System.Drawing.Color.DarkBlue;
+            ultraGridBand1.Override.SummaryValueAppearance = appearance34;
             this.grdItem.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdItem.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
             appearance8.ForeColor = System.Drawing.Color.DarkBlue;
@@ -767,7 +768,7 @@
             this.grdItem.InputLanguage = Baran.Windows.Forms.InputLanguage.Farsi;
             this.grdItem.Location = new System.Drawing.Point(0, 99);
             this.grdItem.Name = "grdItem";
-            this.grdItem.Size = new System.Drawing.Size(964, 544);
+            this.grdItem.Size = new System.Drawing.Size(1207, 544);
             this.grdItem.SumColumnsWidth = 82;
             this.grdItem.TabIndex = 1;
             // 
@@ -795,7 +796,7 @@
             this.grpTableControls.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpTableControls.Location = new System.Drawing.Point(0, 0);
             this.grpTableControls.Name = "grpTableControls";
-            this.grpTableControls.Size = new System.Drawing.Size(964, 99);
+            this.grpTableControls.Size = new System.Drawing.Size(1207, 99);
             this.grpTableControls.TabIndex = 0;
             // 
             // chkSoilTexture
@@ -803,7 +804,7 @@
             this.chkSoilTexture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkSoilTexture.AutoSize = true;
             this.chkSoilTexture.ForeColor = System.Drawing.Color.White;
-            this.chkSoilTexture.Location = new System.Drawing.Point(1051, 56);
+            this.chkSoilTexture.Location = new System.Drawing.Point(1005, 55);
             this.chkSoilTexture.Name = "chkSoilTexture";
             this.chkSoilTexture.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkSoilTexture.Size = new System.Drawing.Size(81, 28);
@@ -816,7 +817,7 @@
             this.checkBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox3.AutoSize = true;
             this.checkBox3.ForeColor = System.Drawing.Color.White;
-            this.checkBox3.Location = new System.Drawing.Point(451, 56);
+            this.checkBox3.Location = new System.Drawing.Point(459, 55);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox3.Size = new System.Drawing.Size(123, 28);
@@ -829,7 +830,7 @@
             this.chkSalability.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkSalability.AutoSize = true;
             this.chkSalability.ForeColor = System.Drawing.Color.White;
-            this.chkSalability.Location = new System.Drawing.Point(183, 56);
+            this.chkSalability.Location = new System.Drawing.Point(234, 55);
             this.chkSalability.Name = "chkSalability";
             this.chkSalability.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkSalability.Size = new System.Drawing.Size(94, 28);
@@ -842,7 +843,7 @@
             this.chkOpposition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkOpposition.AutoSize = true;
             this.chkOpposition.ForeColor = System.Drawing.Color.White;
-            this.chkOpposition.Location = new System.Drawing.Point(314, 56);
+            this.chkOpposition.Location = new System.Drawing.Point(344, 55);
             this.chkOpposition.Name = "chkOpposition";
             this.chkOpposition.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkOpposition.Size = new System.Drawing.Size(93, 28);
@@ -855,7 +856,7 @@
             this.chkCity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkCity.AutoSize = true;
             this.chkCity.ForeColor = System.Drawing.Color.White;
-            this.chkCity.Location = new System.Drawing.Point(601, 56);
+            this.chkCity.Location = new System.Drawing.Point(605, 55);
             this.chkCity.Name = "chkCity";
             this.chkCity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkCity.Size = new System.Drawing.Size(49, 28);
@@ -868,7 +869,7 @@
             this.chkTownship.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkTownship.AutoSize = true;
             this.chkTownship.ForeColor = System.Drawing.Color.White;
-            this.chkTownship.Location = new System.Drawing.Point(683, 56);
+            this.chkTownship.Location = new System.Drawing.Point(675, 55);
             this.chkTownship.Name = "chkTownship";
             this.chkTownship.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkTownship.Size = new System.Drawing.Size(75, 28);
@@ -881,7 +882,7 @@
             this.chkProvince.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkProvince.AutoSize = true;
             this.chkProvince.ForeColor = System.Drawing.Color.White;
-            this.chkProvince.Location = new System.Drawing.Point(820, 56);
+            this.chkProvince.Location = new System.Drawing.Point(803, 55);
             this.chkProvince.Name = "chkProvince";
             this.chkProvince.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkProvince.Size = new System.Drawing.Size(57, 28);
@@ -894,7 +895,7 @@
             this.chkFieldUseType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkFieldUseType.AutoSize = true;
             this.chkFieldUseType.ForeColor = System.Drawing.Color.White;
-            this.chkFieldUseType.Location = new System.Drawing.Point(1162, 56);
+            this.chkFieldUseType.Location = new System.Drawing.Point(1105, 55);
             this.chkFieldUseType.Name = "chkFieldUseType";
             this.chkFieldUseType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkFieldUseType.Size = new System.Drawing.Size(83, 28);
@@ -907,7 +908,7 @@
             this.chkOwnership.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkOwnership.AutoSize = true;
             this.chkOwnership.ForeColor = System.Drawing.Color.White;
-            this.chkOwnership.Location = new System.Drawing.Point(913, 56);
+            this.chkOwnership.Location = new System.Drawing.Point(883, 55);
             this.chkOwnership.Name = "chkOwnership";
             this.chkOwnership.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkOwnership.Size = new System.Drawing.Size(85, 28);
@@ -920,7 +921,7 @@
             this.chkPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkPart.AutoSize = true;
             this.chkPart.ForeColor = System.Drawing.Color.White;
-            this.chkPart.Location = new System.Drawing.Point(795, 22);
+            this.chkPart.Location = new System.Drawing.Point(778, 21);
             this.chkPart.Name = "chkPart";
             this.chkPart.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkPart.Size = new System.Drawing.Size(82, 28);
@@ -933,7 +934,7 @@
             this.chkSubcollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkSubcollection.AutoSize = true;
             this.chkSubcollection.ForeColor = System.Drawing.Color.White;
-            this.chkSubcollection.Location = new System.Drawing.Point(946, 22);
+            this.chkSubcollection.Location = new System.Drawing.Point(916, 21);
             this.chkSubcollection.Name = "chkSubcollection";
             this.chkSubcollection.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkSubcollection.Size = new System.Drawing.Size(52, 28);
@@ -946,7 +947,7 @@
             this.chkCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkCollection.AutoSize = true;
             this.chkCollection.ForeColor = System.Drawing.Color.White;
-            this.chkCollection.Location = new System.Drawing.Point(1031, 22);
+            this.chkCollection.Location = new System.Drawing.Point(985, 21);
             this.chkCollection.Name = "chkCollection";
             this.chkCollection.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkCollection.Size = new System.Drawing.Size(101, 28);
@@ -959,7 +960,7 @@
             this.chkCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkCompany.AutoSize = true;
             this.chkCompany.ForeColor = System.Drawing.Color.White;
-            this.chkCompany.Location = new System.Drawing.Point(1184, 22);
+            this.chkCompany.Location = new System.Drawing.Point(1127, 21);
             this.chkCompany.Name = "chkCompany";
             this.chkCompany.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkCompany.Size = new System.Drawing.Size(61, 28);
@@ -973,7 +974,7 @@
             this.tpcChart.Controls.Add(this.grpChartControls);
             this.tpcChart.Location = new System.Drawing.Point(-10000, -10000);
             this.tpcChart.Name = "tpcChart";
-            this.tpcChart.Size = new System.Drawing.Size(964, 643);
+            this.tpcChart.Size = new System.Drawing.Size(1207, 643);
             // 
             // chtChart
             // 
@@ -1098,7 +1099,7 @@
             this.chtChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chtChart.Location = new System.Drawing.Point(0, 99);
             this.chtChart.Name = "chtChart";
-            this.chtChart.Size = new System.Drawing.Size(964, 544);
+            this.chtChart.Size = new System.Drawing.Size(1207, 544);
             this.chtChart.TabIndex = 1;
             this.chtChart.Visible = false;
             // 
@@ -1106,17 +1107,17 @@
             // 
             this.grpChartControls.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
             this.grpChartControls.Controls.Add(this.grpSourceControls);
-            this.grpChartControls.Controls.Add(this.grpCompanyControls);
             this.grpChartControls.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpChartControls.Location = new System.Drawing.Point(0, 0);
             this.grpChartControls.Name = "grpChartControls";
-            this.grpChartControls.Size = new System.Drawing.Size(964, 99);
+            this.grpChartControls.Size = new System.Drawing.Size(1207, 99);
             this.grpChartControls.TabIndex = 0;
             // 
             // grpSourceControls
             // 
             this.grpSourceControls.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
             this.grpSourceControls.Controls.Add(this.rdbTexture);
+            this.grpSourceControls.Controls.Add(this.grpCompanyControls);
             this.grpSourceControls.Controls.Add(this.rdbProvince);
             this.grpSourceControls.Controls.Add(this.rdbSalability);
             this.grpSourceControls.Controls.Add(this.rdbOpposition);
@@ -1128,9 +1129,8 @@
             this.grpSourceControls.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpSourceControls.Location = new System.Drawing.Point(1, 0);
             this.grpSourceControls.Name = "grpSourceControls";
-            this.grpSourceControls.Size = new System.Drawing.Size(636, 98);
+            this.grpSourceControls.Size = new System.Drawing.Size(1205, 98);
             this.grpSourceControls.TabIndex = 1;
-            this.grpSourceControls.Text = "groupBox1";
             this.grpSourceControls.Click += new System.EventHandler(this.grpSourceControls_Click);
             // 
             // rdbTexture
@@ -1138,7 +1138,7 @@
             this.rdbTexture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbTexture.AutoSize = true;
             this.rdbTexture.ForeColor = System.Drawing.Color.White;
-            this.rdbTexture.Location = new System.Drawing.Point(748, 17);
+            this.rdbTexture.Location = new System.Drawing.Point(681, 19);
             this.rdbTexture.Name = "rdbTexture";
             this.rdbTexture.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rdbTexture.Size = new System.Drawing.Size(80, 28);
@@ -1151,7 +1151,7 @@
             this.rdbProvince.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbProvince.AutoSize = true;
             this.rdbProvince.ForeColor = System.Drawing.Color.White;
-            this.rdbProvince.Location = new System.Drawing.Point(643, 17);
+            this.rdbProvince.Location = new System.Drawing.Point(576, 19);
             this.rdbProvince.Name = "rdbProvince";
             this.rdbProvince.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rdbProvince.Size = new System.Drawing.Size(56, 28);
@@ -1164,7 +1164,7 @@
             this.rdbSalability.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbSalability.AutoSize = true;
             this.rdbSalability.ForeColor = System.Drawing.Color.White;
-            this.rdbSalability.Location = new System.Drawing.Point(493, 58);
+            this.rdbSalability.Location = new System.Drawing.Point(434, 60);
             this.rdbSalability.Name = "rdbSalability";
             this.rdbSalability.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rdbSalability.Size = new System.Drawing.Size(93, 28);
@@ -1177,7 +1177,7 @@
             this.rdbOpposition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbOpposition.AutoSize = true;
             this.rdbOpposition.ForeColor = System.Drawing.Color.White;
-            this.rdbOpposition.Location = new System.Drawing.Point(736, 58);
+            this.rdbOpposition.Location = new System.Drawing.Point(669, 60);
             this.rdbOpposition.Name = "rdbOpposition";
             this.rdbOpposition.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rdbOpposition.Size = new System.Drawing.Size(92, 28);
@@ -1190,7 +1190,7 @@
             this.rdbChangeUse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbChangeUse.AutoSize = true;
             this.rdbChangeUse.ForeColor = System.Drawing.Color.White;
-            this.rdbChangeUse.Location = new System.Drawing.Point(339, 17);
+            this.rdbChangeUse.Location = new System.Drawing.Point(280, 19);
             this.rdbChangeUse.Name = "rdbChangeUse";
             this.rdbChangeUse.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rdbChangeUse.Size = new System.Drawing.Size(122, 28);
@@ -1204,7 +1204,7 @@
             this.rdbFieldUseType.AutoSize = true;
             this.rdbFieldUseType.Checked = true;
             this.rdbFieldUseType.ForeColor = System.Drawing.Color.White;
-            this.rdbFieldUseType.Location = new System.Drawing.Point(862, 17);
+            this.rdbFieldUseType.Location = new System.Drawing.Point(795, 19);
             this.rdbFieldUseType.Name = "rdbFieldUseType";
             this.rdbFieldUseType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rdbFieldUseType.Size = new System.Drawing.Size(82, 28);
@@ -1218,7 +1218,7 @@
             this.rdbTownship.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbTownship.AutoSize = true;
             this.rdbTownship.ForeColor = System.Drawing.Color.White;
-            this.rdbTownship.Location = new System.Drawing.Point(625, 58);
+            this.rdbTownship.Location = new System.Drawing.Point(576, 60);
             this.rdbTownship.Name = "rdbTownship";
             this.rdbTownship.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rdbTownship.Size = new System.Drawing.Size(74, 28);
@@ -1231,7 +1231,7 @@
             this.rdbCity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbCity.AutoSize = true;
             this.rdbCity.ForeColor = System.Drawing.Color.White;
-            this.rdbCity.Location = new System.Drawing.Point(538, 17);
+            this.rdbCity.Location = new System.Drawing.Point(479, 19);
             this.rdbCity.Name = "rdbCity";
             this.rdbCity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rdbCity.Size = new System.Drawing.Size(48, 28);
@@ -1244,7 +1244,7 @@
             this.rdbOwnership.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbOwnership.AutoSize = true;
             this.rdbOwnership.ForeColor = System.Drawing.Color.White;
-            this.rdbOwnership.Location = new System.Drawing.Point(860, 58);
+            this.rdbOwnership.Location = new System.Drawing.Point(793, 60);
             this.rdbOwnership.Name = "rdbOwnership";
             this.rdbOwnership.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rdbOwnership.Size = new System.Drawing.Size(84, 28);
@@ -1260,9 +1260,9 @@
             this.grpCompanyControls.Controls.Add(this.rdbCollection);
             this.grpCompanyControls.Controls.Add(this.rdbPart);
             this.grpCompanyControls.Dock = System.Windows.Forms.DockStyle.Right;
-            this.grpCompanyControls.Location = new System.Drawing.Point(637, 0);
+            this.grpCompanyControls.Location = new System.Drawing.Point(883, 28);
             this.grpCompanyControls.Name = "grpCompanyControls";
-            this.grpCompanyControls.Size = new System.Drawing.Size(326, 98);
+            this.grpCompanyControls.Size = new System.Drawing.Size(321, 69);
             this.grpCompanyControls.TabIndex = 0;
             // 
             // rdbCompany
@@ -1271,7 +1271,7 @@
             this.rdbCompany.AutoSize = true;
             this.rdbCompany.Checked = true;
             this.rdbCompany.ForeColor = System.Drawing.Color.White;
-            this.rdbCompany.Location = new System.Drawing.Point(227, 18);
+            this.rdbCompany.Location = new System.Drawing.Point(222, -4);
             this.rdbCompany.Name = "rdbCompany";
             this.rdbCompany.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rdbCompany.Size = new System.Drawing.Size(60, 28);
@@ -1285,7 +1285,7 @@
             this.rdbSubcollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbSubcollection.AutoSize = true;
             this.rdbSubcollection.ForeColor = System.Drawing.Color.White;
-            this.rdbSubcollection.Location = new System.Drawing.Point(80, 18);
+            this.rdbSubcollection.Location = new System.Drawing.Point(75, -4);
             this.rdbSubcollection.Name = "rdbSubcollection";
             this.rdbSubcollection.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rdbSubcollection.Size = new System.Drawing.Size(51, 28);
@@ -1299,7 +1299,7 @@
             this.rdbCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbCollection.AutoSize = true;
             this.rdbCollection.ForeColor = System.Drawing.Color.White;
-            this.rdbCollection.Location = new System.Drawing.Point(187, 54);
+            this.rdbCollection.Location = new System.Drawing.Point(182, 32);
             this.rdbCollection.Name = "rdbCollection";
             this.rdbCollection.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rdbCollection.Size = new System.Drawing.Size(100, 28);
@@ -1312,7 +1312,7 @@
             this.rdbPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbPart.AutoSize = true;
             this.rdbPart.ForeColor = System.Drawing.Color.White;
-            this.rdbPart.Location = new System.Drawing.Point(50, 57);
+            this.rdbPart.Location = new System.Drawing.Point(45, 35);
             this.rdbPart.Name = "rdbPart";
             this.rdbPart.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rdbPart.Size = new System.Drawing.Size(81, 28);
@@ -1335,7 +1335,7 @@
             this.tac.Location = new System.Drawing.Point(1, 0);
             this.tac.Name = "tac";
             this.tac.SharedControlsPage = this.tbcMain;
-            this.tac.Size = new System.Drawing.Size(966, 674);
+            this.tac.Size = new System.Drawing.Size(1209, 674);
             this.tac.Style = Infragistics.Win.UltraWinTabControl.UltraTabControlStyle.Flat;
             this.tac.TabIndex = 15;
             this.tac.TabOrientation = Infragistics.Win.UltraWinTabs.TabOrientation.TopRight;
@@ -1359,12 +1359,12 @@
             // 
             this.tbcMain.Location = new System.Drawing.Point(-10000, -10000);
             this.tbcMain.Name = "tbcMain";
-            this.tbcMain.Size = new System.Drawing.Size(964, 643);
+            this.tbcMain.Size = new System.Drawing.Size(1207, 643);
             // 
             // frmFieldRpt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(968, 850);
+            this.ClientSize = new System.Drawing.Size(1211, 850);
             this.FormMessage = "";
             this.Name = "frmFieldRpt";
             ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();

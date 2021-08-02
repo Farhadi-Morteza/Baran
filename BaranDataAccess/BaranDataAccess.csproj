@@ -226,6 +226,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dstSource.xsd</DependentUpon>
     </Compile>
+    <Compile Include="spr_src_Field_Map_Select_Result.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
@@ -418,6 +421,9 @@
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_src_FieldUseType.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_src_Land.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_src_Machinery.cs">

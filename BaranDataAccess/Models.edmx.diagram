@@ -118,6 +118,7 @@
         <AssociationConnector Association="AMSModel.FK_tbl_src_Part_tbl_src_Subcollection" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Person_tbl_src_PersonCategory" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Pesticide_tbl_src_PesticideCategory" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AMSModel.tbl_src_Land" Width="1.5" PointX="26.375" PointY="30.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

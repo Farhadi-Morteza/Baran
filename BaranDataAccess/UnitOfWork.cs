@@ -142,6 +142,23 @@ namespace BaranDataAccess
         // **************************************************
 
         // **************************************************
+        private Repository<tbl_src_Land> _landRepository;
+
+        public IRepository<tbl_src_Land> LandRepository
+        {
+            get
+            {
+                if (_landRepository == null)
+                {
+                    _landRepository = new Repository<tbl_src_Land>(DatabaseContext);
+                }
+
+                return _landRepository;
+            }
+        }
+        // **************************************************
+
+        // **************************************************
         public bool IsDisposed
         {
             get { throw new NotImplementedException(); }
