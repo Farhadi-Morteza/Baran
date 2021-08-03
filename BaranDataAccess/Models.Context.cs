@@ -92,7 +92,6 @@ namespace BaranDataAccess
         public DbSet<tbl_src_FieldUseType> tbl_src_FieldUseType { get; set; }
         public DbSet<tbl_src_Machinery> tbl_src_Machinery { get; set; }
         public DbSet<tbl_src_MachineryCategory> tbl_src_MachineryCategory { get; set; }
-        public DbSet<tbl_src_Part> tbl_src_Part { get; set; }
         public DbSet<tbl_src_Person> tbl_src_Person { get; set; }
         public DbSet<tbl_src_PersonCategory> tbl_src_PersonCategory { get; set; }
         public DbSet<tbl_src_Pesticide> tbl_src_Pesticide { get; set; }
@@ -118,6 +117,7 @@ namespace BaranDataAccess
         public DbSet<tbl_tsk_Tasklist_Task_Link> tbl_tsk_Tasklist_Task_Link { get; set; }
         public DbSet<tbl_tsk_TaskSubCategory> tbl_tsk_TaskSubCategory { get; set; }
         public DbSet<tbl_src_Land> tbl_src_Land { get; set; }
+        public DbSet<tbl_src_Part> tbl_src_Part { get; set; }
     
         public virtual ObjectResult<spr_src_Field_Map_Select_Result> spr_src_Field_Map_Select(Nullable<int> action, string whereClause, string userID)
         {

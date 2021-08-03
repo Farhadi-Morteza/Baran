@@ -679,13 +679,16 @@ namespace Baran.Maps
 
             UnitOfWork db = new UnitOfWork();
             List<PointLatLng> points = new List<PointLatLng>();
+
             if (PartID > 0)
             {
                 part = new tbl_src_Part();
                 part = db.PartRepository.GetById(PartID);
 
-                if(part.Location != null)
+                if (part.Location != null)
+                {
                     points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(part.Location.ProviderValue.ToString());
+                }
             }
             else if (FieldID > 0)
             {
@@ -723,7 +726,9 @@ namespace Baran.Maps
                 water = db.WaterRepository.GetById(WaterID);
 
                 if (water.Location != null)
+                {
                     points = GeoUtils.ConvertStringPointToGMapPoint(water.Location.ProviderValue.ToString());
+                }
             }
             else if (WaterstorageID > 0)
             {
@@ -731,7 +736,9 @@ namespace Baran.Maps
                 waterStorage = db.WaterStorageRepository.GetById(WaterstorageID);
 
                 if (waterStorage.Location != null)
+                {
                     points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(waterStorage.Location.ProviderValue.ToString());
+                }
             }
             else if (WaterTransmissionLineID > 0)
             {
@@ -739,7 +746,9 @@ namespace Baran.Maps
                 waterTransmissionLine = db.WaterTransmissionLineRepository.GetById(WaterTransmissionLineID);
 
                 if (waterTransmissionLine.Location != null)
+                {
                     points = GeoUtils.ConvertStringCoordinatesToGMapRoute(waterTransmissionLine.Location.ProviderValue.ToString());
+                }
             }
            
             if(points.Count == 0)
@@ -1017,46 +1026,48 @@ namespace Baran.Maps
 
                 if (PartID > 0)
                 {
-                    part.Location = GeoUtils.ConvertGMapPolygonPointsToDbGeometryPolygon(SavePoints);
-                    db.PartRepository.Update(part);
-                    db.Save();
+                    tbl_src_Part p = new tbl_src_Part();
+                    p = db.PartRepository.GetById(PartID);
+                    p.Location = GeoUtils.ConvertGMapPolygonPointsToDbGeometryPolygon(SavePoints);
+                    db.PartRepository.Update(p);
+               
                 }
                 else if (FieldID > 0)
                 {
                     field.LocationPolygon = GeoUtils.ConvertGMapPolygonPointsToDbGeometryPolygon(SavePoints);
                     db.FieldRepository.Update(field);
-                    db.Save();
+       
                 }
                 else if (BuildingID > 0)
                 {
                     building.Location = GeoUtils.ConvertGMapPolygonPointsToDbGeometryPolygon(SavePoints);
                     db.BuildingsRepository.Update(building);
-                    db.Save();
+               
                 }
                 else if (WarehouseID > 0)
                 {
                     warehouse.Location = GeoUtils.ConvertGMapPolygonPointsToDbGeometryPolygon(SavePoints);
                     db.WarehouseRepository.Update(warehouse);
-                    db.Save();
+                
                 }
 
                 else if (WaterstorageID > 0)
                 {
                     waterStorage.Location = GeoUtils.ConvertGMapPolygonPointsToDbGeometryPolygon(SavePoints);
                     db.WaterStorageRepository.Update(waterStorage);
-                    db.Save();
+               
                 }
                 else if (WaterID > 0)
                 {
                     water.Location = GeoUtils.ConvertGMapPointToDbGeometryPoint(SavePoints[0]);
                     db.WaterRepository.Update(water);
-                    db.Save();
+                  
                 }
                 else if (WaterTransmissionLineID > 0)
                 {
                     waterTransmissionLine.Location = GeoUtils.ConvertGMapLinePointsToDbGeometryLine(SavePoints);
                     db.WaterTransmissionLineRepository.Update(waterTransmissionLine);
-                    db.Save();
+                    
                 }
 
                 else
@@ -1067,6 +1078,7 @@ namespace Baran.Maps
 
                     }
                 }
+                db.Save();
                 waite.Close();
                 MessageBoxX.ShowMessageBox(PublicEnum.EnmMessageType.msgSaveSuccessful);
             }

@@ -2,12 +2,13 @@
 {
 }
 
-namespace BaranDataAccess.Common {
-    
-    
-    public partial class dstCommon 
+namespace BaranDataAccess.Common
+{
+
+
+    public partial class dstCommon
     {
-       
+
         public static dstCommon ProvinceTable()
         {
             dstCommon returnDst = new dstCommon();
@@ -284,7 +285,7 @@ namespace BaranDataAccess.Common {
             {
                 adapter.FillCropTable(returnDst.spr_cmn_Crop_Select);
             }
-            catch 
+            catch
             {
                 returnDst = null;
             }
@@ -335,10 +336,10 @@ namespace BaranDataAccess.Common {
                 new dstCommonTableAdapters.spr_cmn_CultivarByCropId_SelectTableAdapter();
 
             try
-            {               
+            {
                 adapter.FillCultivarByCropIDTable(returnDst.spr_cmn_CultivarByCropId_Select, cropID);
             }
-            catch 
+            catch
             {
                 returnDst = null;
             }
@@ -355,13 +356,27 @@ namespace BaranDataAccess.Common {
             {
                 adapter.FillFieldByUserIDTable(returnDst.spr_src_FieldByUserID_Select, userID);
             }
-            catch 
+            catch
             {
                 returnDst = null;
             }
             return returnDst;
         }
-
+        public static dstCommon LandByUserID(int userID)
+        {
+            dstCommon returnDst = new dstCommon();
+            dstCommonTableAdapters.spr_src_LandByUserID_SelectTableAdapter adapter =
+                new dstCommonTableAdapters.spr_src_LandByUserID_SelectTableAdapter();
+            try
+            {
+                adapter.FillLandByUserIDTable(returnDst.spr_src_LandByUserID_Select, userID);
+            }
+            catch
+            {
+                returnDst = null;
+            }
+            return returnDst;
+        }
         public static dstCommon UnitMeasurementTable(int? measurementCategroryID)
         {
             dstCommon returnDst = new dstCommon();

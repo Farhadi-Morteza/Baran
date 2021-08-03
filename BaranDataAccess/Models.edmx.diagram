@@ -69,7 +69,6 @@
         <EntityTypeShape EntityType="AMSModel.tbl_src_FieldUseType" Width="1.5" PointX="27.75" PointY="23.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AMSModel.tbl_src_Machinery" Width="1.5" PointX="11" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="AMSModel.tbl_src_MachineryCategory" Width="1.5" PointX="8.75" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="AMSModel.tbl_src_Part" Width="1.5" PointX="13.5" PointY="9.375" IsExpanded="true" />
         <EntityTypeShape EntityType="AMSModel.tbl_src_Person" Width="1.5" PointX="9" PointY="9.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AMSModel.tbl_src_PersonCategory" Width="1.5" PointX="6.75" PointY="6" IsExpanded="true" />
         <EntityTypeShape EntityType="AMSModel.tbl_src_Pesticide" Width="1.5" PointX="21" PointY="4.25" IsExpanded="true" />
@@ -101,7 +100,6 @@
         <AssociationConnector Association="AMSModel.FK_tbl_src_Pesticide_tbl_cmn_ProductCategory" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Collection_tbl_cmn_Province" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Company_tbl_cmn_Province" ManuallyRouted="false" />
-        <AssociationConnector Association="AMSModel.FK_tbl_src_Part_tbl_cmn_Province" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Person_tbl_cmn_Province" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Subcollection_tbl_cmn_Province" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_Sec_Current_User_tbl_Sec_Users" ManuallyRouted="false" />
@@ -110,15 +108,17 @@
         <AssociationConnector Association="AMSModel.FK_tbl_src_Collection_tbl_src_CompanyCategory" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Subcollection_tbl_src_Collection" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Company_tbl_src_CompanyCategory" ManuallyRouted="false" />
-        <AssociationConnector Association="AMSModel.FK_tbl_src_Part_tbl_src_CompanyCategory" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Subcollection_tbl_src_CompanyCategory" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Fertilizer_tbl_src_FertilizerCategory" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_FertilizerElement_tbl_src_Fertilizer" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Machinery_tbl_src_MachineryCategory" ManuallyRouted="false" />
-        <AssociationConnector Association="AMSModel.FK_tbl_src_Part_tbl_src_Subcollection" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Person_tbl_src_PersonCategory" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Pesticide_tbl_src_PesticideCategory" ManuallyRouted="false" />
         <EntityTypeShape EntityType="AMSModel.tbl_src_Land" Width="1.5" PointX="26.375" PointY="30.75" />
+        <EntityTypeShape EntityType="AMSModel.tbl_src_Part" Width="1.5" PointX="13.5" PointY="7.5" />
+        <AssociationConnector Association="AMSModel.FK_tbl_src_Part_tbl_cmn_Province" />
+        <AssociationConnector Association="AMSModel.FK_tbl_src_Part_tbl_src_CompanyCategory" />
+        <AssociationConnector Association="AMSModel.FK_tbl_src_Part_tbl_src_Subcollection" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

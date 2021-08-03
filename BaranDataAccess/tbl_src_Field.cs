@@ -42,5 +42,6 @@ namespace BaranDataAccess
         public string FutureProgram { get; set; }
         public string DocPlace { get; set; }
         public System.Data.Spatial.DbGeometry LocationPolygon { get; set; }
+        public Nullable<int> Fk_LandID { get; set; }
     }
 }

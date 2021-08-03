@@ -167,6 +167,8 @@ namespace Baran.Company
                 return;
             }
 
+
+
             if (!this.ControlsValidation())
             {
                 OnMessage(BaranResources.FeildIsEmpty, PublicEnum.EnmMessageCategory.Warning);
@@ -180,6 +182,9 @@ namespace Baran.Company
             {
                 waite.Show();
                 this.SetVariables();
+
+
+
                 int RowAffected = Convert.ToInt32(adp.Update(
                     PartID, strName, strEconomicCode, strRegistrationNumber, strNationalID, strPostalCode, intProvinceID, intTownshipID,
                     strCity, strAddress, strWebSite, strEmail, strTelephone1, strMobile1, strTelephone2, strMobile2, strFax, strDescription, intCompanyCategory,

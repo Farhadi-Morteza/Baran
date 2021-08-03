@@ -297,9 +297,7 @@ namespace Baran.Source
 
         private void SetControlsValue()
         {
-            BaranDataAccess.Source.dstSource.spr_src_FieldByID_SelectRow drw;
-
-            try
+             try
             {
                 dbContext = new UnitOfWork();
                 tbl_src_Land land = new tbl_src_Land();

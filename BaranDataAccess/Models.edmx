@@ -939,6 +939,7 @@
           <Property Name="FutureProgram" Type="nvarchar" MaxLength="200" />
           <Property Name="DocPlace" Type="nvarchar" MaxLength="50" />
           <Property Name="LocationPolygon" Type="geometry" />
+          <Property Name="Fk_LandID" Type="int" />
         </EntityType>
         <EntityType Name="tbl_src_FieldUseType">
           <Key>
@@ -953,6 +954,7 @@
             <PropertyRef Name="LandID" />
           </Key>
           <Property Name="LandID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
           <Property Name="UsableArea" Type="numeric" Precision="8" Scale="2" />
           <Property Name="TotalArea" Type="numeric" Precision="8" Scale="2" />
           <Property Name="Fk_SoilTextureID" Type="int" />
@@ -979,7 +981,6 @@
           <Property Name="FutureProgram" Type="nvarchar" MaxLength="200" />
           <Property Name="DocPlace" Type="nvarchar" MaxLength="50" />
           <Property Name="Location" Type="geometry" />
-          <Property Name="Name" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="tbl_src_Machinery">
           <Key>
@@ -2104,9 +2105,9 @@
           <Property Name="ProvinceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="tbl_src_Collection" Relationship="Self.FK_tbl_src_Collection_tbl_cmn_Province" FromRole="tbl_cmn_Province" ToRole="tbl_src_Collection" />
           <NavigationProperty Name="tbl_src_Company" Relationship="Self.FK_tbl_src_Company_tbl_cmn_Province" FromRole="tbl_cmn_Province" ToRole="tbl_src_Company" />
-          <NavigationProperty Name="tbl_src_Part" Relationship="Self.FK_tbl_src_Part_tbl_cmn_Province" FromRole="tbl_cmn_Province" ToRole="tbl_src_Part" />
           <NavigationProperty Name="tbl_src_Person" Relationship="Self.FK_tbl_src_Person_tbl_cmn_Province" FromRole="tbl_cmn_Province" ToRole="tbl_src_Person" />
           <NavigationProperty Name="tbl_src_Subcollection" Relationship="Self.FK_tbl_src_Subcollection_tbl_cmn_Province" FromRole="tbl_cmn_Province" ToRole="tbl_src_Subcollection" />
+          <NavigationProperty Name="tbl_src_Part" Relationship="AMSModel.FK_tbl_src_Part_tbl_cmn_Province" FromRole="tbl_cmn_Province" ToRole="tbl_src_Part" />
         </EntityType>
         <EntityType Name="tbl_cmn_SoilTexture">
           <Key>
@@ -2765,8 +2766,8 @@
           <Property Name="NameFa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="tbl_src_Collection" Relationship="Self.FK_tbl_src_Collection_tbl_src_CompanyCategory" FromRole="tbl_src_CompanyCategory" ToRole="tbl_src_Collection" />
           <NavigationProperty Name="tbl_src_Company" Relationship="Self.FK_tbl_src_Company_tbl_src_CompanyCategory" FromRole="tbl_src_CompanyCategory" ToRole="tbl_src_Company" />
-          <NavigationProperty Name="tbl_src_Part" Relationship="Self.FK_tbl_src_Part_tbl_src_CompanyCategory" FromRole="tbl_src_CompanyCategory" ToRole="tbl_src_Part" />
           <NavigationProperty Name="tbl_src_Subcollection" Relationship="Self.FK_tbl_src_Subcollection_tbl_src_CompanyCategory" FromRole="tbl_src_CompanyCategory" ToRole="tbl_src_Subcollection" />
+          <NavigationProperty Name="tbl_src_Part" Relationship="AMSModel.FK_tbl_src_Part_tbl_src_CompanyCategory" FromRole="tbl_src_CompanyCategory" ToRole="tbl_src_Part" />
         </EntityType>
         <EntityType Name="tbl_src_Fertilizer">
           <Key>
@@ -2852,6 +2853,7 @@
           <Property Name="FutureProgram" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="DocPlace" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="LocationPolygon" Type="Geometry" />
+          <Property Name="Fk_LandID" Type="Int32" />
         </EntityType>
         <EntityType Name="tbl_src_FieldUseType">
           <Key>
@@ -2897,43 +2899,6 @@
           <Property Name="NameEn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="NameFa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="tbl_src_Machinery" Relationship="Self.FK_tbl_src_Machinery_tbl_src_MachineryCategory" FromRole="tbl_src_MachineryCategory" ToRole="tbl_src_Machinery" />
-        </EntityType>
-        <EntityType Name="tbl_src_Part">
-          <Key>
-            <PropertyRef Name="PartID" />
-          </Key>
-          <Property Name="PartID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="EconomicCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="RegistrationNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NationalID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="PostalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Fk_ProvinceID" Type="Int32" />
-          <Property Name="Fk_TownshipID" Type="Int32" />
-          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="WebSite" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Telephone1" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Mobile1" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Telephone2" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Mobile2" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Fax" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Fk_CompanyCategory" Type="Int32" />
-          <Property Name="Fk_SubcollectionID" Type="Int32" Nullable="false" />
-          <Property Name="Logo" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <Property Name="CreateUserID" Type="Int32" />
-          <Property Name="CreateDate" Type="DateTime" Precision="0" />
-          <Property Name="IsActive" Type="Boolean" />
-          <Property Name="InactivationUserID" Type="Int32" />
-          <Property Name="InactivationDate" Type="DateTime" Precision="0" />
-          <Property Name="UpdateUserID" Type="Int32" />
-          <Property Name="UpdateDate" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="tbl_cmn_Province" Relationship="Self.FK_tbl_src_Part_tbl_cmn_Province" FromRole="tbl_src_Part" ToRole="tbl_cmn_Province" />
-          <NavigationProperty Name="tbl_src_CompanyCategory" Relationship="Self.FK_tbl_src_Part_tbl_src_CompanyCategory" FromRole="tbl_src_Part" ToRole="tbl_src_CompanyCategory" />
-          <NavigationProperty Name="tbl_src_Subcollection" Relationship="Self.FK_tbl_src_Part_tbl_src_Subcollection" FromRole="tbl_src_Part" ToRole="tbl_src_Subcollection" />
-          <Property Name="Location" Type="Geometry" />
         </EntityType>
         <EntityType Name="tbl_src_Person">
           <Key>
@@ -3063,7 +3028,7 @@
           <NavigationProperty Name="tbl_cmn_Province" Relationship="Self.FK_tbl_src_Subcollection_tbl_cmn_Province" FromRole="tbl_src_Subcollection" ToRole="tbl_cmn_Province" />
           <NavigationProperty Name="tbl_src_Collection" Relationship="Self.FK_tbl_src_Subcollection_tbl_src_Collection" FromRole="tbl_src_Subcollection" ToRole="tbl_src_Collection" />
           <NavigationProperty Name="tbl_src_CompanyCategory" Relationship="Self.FK_tbl_src_Subcollection_tbl_src_CompanyCategory" FromRole="tbl_src_Subcollection" ToRole="tbl_src_CompanyCategory" />
-          <NavigationProperty Name="tbl_src_Part" Relationship="Self.FK_tbl_src_Part_tbl_src_Subcollection" FromRole="tbl_src_Subcollection" ToRole="tbl_src_Part" />
+          <NavigationProperty Name="tbl_src_Part" Relationship="AMSModel.FK_tbl_src_Part_tbl_src_Subcollection" FromRole="tbl_src_Subcollection" ToRole="tbl_src_Part" />
         </EntityType>
         <EntityType Name="tbl_src_Tree">
           <Key>
@@ -3381,18 +3346,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tbl_src_Part_tbl_cmn_Province">
-          <End Role="tbl_cmn_Province" Type="Self.tbl_cmn_Province" Multiplicity="0..1" />
-          <End Role="tbl_src_Part" Type="Self.tbl_src_Part" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tbl_cmn_Province">
-              <PropertyRef Name="ProvinceID" />
-            </Principal>
-            <Dependent Role="tbl_src_Part">
-              <PropertyRef Name="Fk_ProvinceID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_tbl_src_Person_tbl_cmn_Province">
           <End Role="tbl_cmn_Province" Type="Self.tbl_cmn_Province" Multiplicity="0..1" />
           <End Role="tbl_src_Person" Type="Self.tbl_src_Person" Multiplicity="*" />
@@ -3489,18 +3442,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tbl_src_Part_tbl_src_CompanyCategory">
-          <End Role="tbl_src_CompanyCategory" Type="Self.tbl_src_CompanyCategory" Multiplicity="0..1" />
-          <End Role="tbl_src_Part" Type="Self.tbl_src_Part" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tbl_src_CompanyCategory">
-              <PropertyRef Name="CompanyCategoryID" />
-            </Principal>
-            <Dependent Role="tbl_src_Part">
-              <PropertyRef Name="Fk_CompanyCategory" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_tbl_src_Subcollection_tbl_src_CompanyCategory">
           <End Role="tbl_src_CompanyCategory" Type="Self.tbl_src_CompanyCategory" Multiplicity="0..1" />
           <End Role="tbl_src_Subcollection" Type="Self.tbl_src_Subcollection" Multiplicity="*" />
@@ -3546,18 +3487,6 @@
             </Principal>
             <Dependent Role="tbl_src_Machinery">
               <PropertyRef Name="Fk_MachineryCategoryID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_tbl_src_Part_tbl_src_Subcollection">
-          <End Role="tbl_src_Subcollection" Type="Self.tbl_src_Subcollection" Multiplicity="1" />
-          <End Role="tbl_src_Part" Type="Self.tbl_src_Part" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tbl_src_Subcollection">
-              <PropertyRef Name="SubCollectionID" />
-            </Principal>
-            <Dependent Role="tbl_src_Part">
-              <PropertyRef Name="Fk_SubcollectionID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -3650,7 +3579,6 @@
           <EntitySet Name="tbl_src_FieldUseType" EntityType="Self.tbl_src_FieldUseType" />
           <EntitySet Name="tbl_src_Machinery" EntityType="Self.tbl_src_Machinery" />
           <EntitySet Name="tbl_src_MachineryCategory" EntityType="Self.tbl_src_MachineryCategory" />
-          <EntitySet Name="tbl_src_Part" EntityType="Self.tbl_src_Part" />
           <EntitySet Name="tbl_src_Person" EntityType="Self.tbl_src_Person" />
           <EntitySet Name="tbl_src_PersonCategory" EntityType="Self.tbl_src_PersonCategory" />
           <EntitySet Name="tbl_src_Pesticide" EntityType="Self.tbl_src_Pesticide" />
@@ -3703,10 +3631,6 @@
             <End Role="tbl_cmn_Province" EntitySet="tbl_cmn_Province" />
             <End Role="tbl_src_Company" EntitySet="tbl_src_Company" />
           </AssociationSet>
-          <AssociationSet Name="FK_tbl_src_Part_tbl_cmn_Province" Association="Self.FK_tbl_src_Part_tbl_cmn_Province">
-            <End Role="tbl_cmn_Province" EntitySet="tbl_cmn_Province" />
-            <End Role="tbl_src_Part" EntitySet="tbl_src_Part" />
-          </AssociationSet>
           <AssociationSet Name="FK_tbl_src_Person_tbl_cmn_Province" Association="Self.FK_tbl_src_Person_tbl_cmn_Province">
             <End Role="tbl_cmn_Province" EntitySet="tbl_cmn_Province" />
             <End Role="tbl_src_Person" EntitySet="tbl_src_Person" />
@@ -3739,10 +3663,6 @@
             <End Role="tbl_src_CompanyCategory" EntitySet="tbl_src_CompanyCategory" />
             <End Role="tbl_src_Company" EntitySet="tbl_src_Company" />
           </AssociationSet>
-          <AssociationSet Name="FK_tbl_src_Part_tbl_src_CompanyCategory" Association="Self.FK_tbl_src_Part_tbl_src_CompanyCategory">
-            <End Role="tbl_src_CompanyCategory" EntitySet="tbl_src_CompanyCategory" />
-            <End Role="tbl_src_Part" EntitySet="tbl_src_Part" />
-          </AssociationSet>
           <AssociationSet Name="FK_tbl_src_Subcollection_tbl_src_CompanyCategory" Association="Self.FK_tbl_src_Subcollection_tbl_src_CompanyCategory">
             <End Role="tbl_src_CompanyCategory" EntitySet="tbl_src_CompanyCategory" />
             <End Role="tbl_src_Subcollection" EntitySet="tbl_src_Subcollection" />
@@ -3759,10 +3679,6 @@
             <End Role="tbl_src_MachineryCategory" EntitySet="tbl_src_MachineryCategory" />
             <End Role="tbl_src_Machinery" EntitySet="tbl_src_Machinery" />
           </AssociationSet>
-          <AssociationSet Name="FK_tbl_src_Part_tbl_src_Subcollection" Association="Self.FK_tbl_src_Part_tbl_src_Subcollection">
-            <End Role="tbl_src_Subcollection" EntitySet="tbl_src_Subcollection" />
-            <End Role="tbl_src_Part" EntitySet="tbl_src_Part" />
-          </AssociationSet>
           <AssociationSet Name="FK_tbl_src_Person_tbl_src_PersonCategory" Association="Self.FK_tbl_src_Person_tbl_src_PersonCategory">
             <End Role="tbl_src_PersonCategory" EntitySet="tbl_src_PersonCategory" />
             <End Role="tbl_src_Person" EntitySet="tbl_src_Person" />
@@ -3777,6 +3693,19 @@
             <Parameter Name="UserID" Mode="In" Type="String" />
           </FunctionImport>
           <EntitySet Name="tbl_src_Land" EntityType="AMSModel.tbl_src_Land" />
+          <EntitySet Name="tbl_src_Part" EntityType="AMSModel.tbl_src_Part" />
+          <AssociationSet Name="FK_tbl_src_Part_tbl_cmn_Province" Association="AMSModel.FK_tbl_src_Part_tbl_cmn_Province">
+            <End Role="tbl_cmn_Province" EntitySet="tbl_cmn_Province" />
+            <End Role="tbl_src_Part" EntitySet="tbl_src_Part" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_src_Part_tbl_src_CompanyCategory" Association="AMSModel.FK_tbl_src_Part_tbl_src_CompanyCategory">
+            <End Role="tbl_src_CompanyCategory" EntitySet="tbl_src_CompanyCategory" />
+            <End Role="tbl_src_Part" EntitySet="tbl_src_Part" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_src_Part_tbl_src_Subcollection" Association="AMSModel.FK_tbl_src_Part_tbl_src_Subcollection">
+            <End Role="tbl_src_Subcollection" EntitySet="tbl_src_Subcollection" />
+            <End Role="tbl_src_Part" EntitySet="tbl_src_Part" />
+          </AssociationSet>
         </EntityContainer>
         <ComplexType Name="spr_src_Field_Map_Select_Result">
           <Property Type="Int32" Name="FieldID" Nullable="false" />
@@ -3837,6 +3766,79 @@
           <Property Name="Location" Type="Geometry" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="tbl_src_Part">
+          <Key>
+            <PropertyRef Name="PartID" />
+          </Key>
+          <Property Name="PartID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EconomicCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RegistrationNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NationalID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PostalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fk_ProvinceID" Type="Int32" />
+          <Property Name="Fk_TownshipID" Type="Int32" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="WebSite" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Telephone1" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile1" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Telephone2" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile2" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Fk_CompanyCategory" Type="Int32" />
+          <Property Name="Fk_SubcollectionID" Type="Int32" Nullable="false" />
+          <Property Name="Logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="CreateUserID" Type="Int32" />
+          <Property Name="CreateDate" Type="DateTime" Precision="0" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="InactivationUserID" Type="Int32" />
+          <Property Name="InactivationDate" Type="DateTime" Precision="0" />
+          <Property Name="UpdateUserID" Type="Int32" />
+          <Property Name="UpdateDate" Type="DateTime" Precision="0" />
+          <Property Name="Location" Type="Geometry" />
+          <NavigationProperty Name="tbl_cmn_Province" Relationship="AMSModel.FK_tbl_src_Part_tbl_cmn_Province" FromRole="tbl_src_Part" ToRole="tbl_cmn_Province" />
+          <NavigationProperty Name="tbl_src_CompanyCategory" Relationship="AMSModel.FK_tbl_src_Part_tbl_src_CompanyCategory" FromRole="tbl_src_Part" ToRole="tbl_src_CompanyCategory" />
+          <NavigationProperty Name="tbl_src_Subcollection" Relationship="AMSModel.FK_tbl_src_Part_tbl_src_Subcollection" FromRole="tbl_src_Part" ToRole="tbl_src_Subcollection" />
+        </EntityType>
+        <Association Name="FK_tbl_src_Part_tbl_cmn_Province">
+          <End Type="AMSModel.tbl_cmn_Province" Role="tbl_cmn_Province" Multiplicity="0..1" />
+          <End Type="AMSModel.tbl_src_Part" Role="tbl_src_Part" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_cmn_Province">
+              <PropertyRef Name="ProvinceID" />
+            </Principal>
+            <Dependent Role="tbl_src_Part">
+              <PropertyRef Name="Fk_ProvinceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_src_Part_tbl_src_CompanyCategory">
+          <End Type="AMSModel.tbl_src_CompanyCategory" Role="tbl_src_CompanyCategory" Multiplicity="0..1" />
+          <End Type="AMSModel.tbl_src_Part" Role="tbl_src_Part" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_src_CompanyCategory">
+              <PropertyRef Name="CompanyCategoryID" />
+            </Principal>
+            <Dependent Role="tbl_src_Part">
+              <PropertyRef Name="Fk_CompanyCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_src_Part_tbl_src_Subcollection">
+          <End Type="AMSModel.tbl_src_Subcollection" Role="tbl_src_Subcollection" Multiplicity="1" />
+          <End Type="AMSModel.tbl_src_Part" Role="tbl_src_Part" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_src_Subcollection">
+              <PropertyRef Name="SubCollectionID" />
+            </Principal>
+            <Dependent Role="tbl_src_Part">
+              <PropertyRef Name="Fk_SubcollectionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -4808,6 +4810,7 @@
           <EntitySetMapping Name="tbl_src_Field">
             <EntityTypeMapping TypeName="AMSModel.tbl_src_Field">
               <MappingFragment StoreEntitySet="tbl_src_Field">
+                <ScalarProperty Name="Fk_LandID" ColumnName="Fk_LandID" />
                 <ScalarProperty Name="FieldID" ColumnName="FieldID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="UsableArea" ColumnName="UsableArea" />
@@ -4882,41 +4885,6 @@
                 <ScalarProperty Name="MachineryCategoryID" ColumnName="MachineryCategoryID" />
                 <ScalarProperty Name="NameEn" ColumnName="NameEn" />
                 <ScalarProperty Name="NameFa" ColumnName="NameFa" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tbl_src_Part">
-            <EntityTypeMapping TypeName="AMSModel.tbl_src_Part">
-              <MappingFragment StoreEntitySet="tbl_src_Part">
-                <ScalarProperty Name="Location" ColumnName="Location" />
-                <ScalarProperty Name="PartID" ColumnName="PartID" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="EconomicCode" ColumnName="EconomicCode" />
-                <ScalarProperty Name="RegistrationNumber" ColumnName="RegistrationNumber" />
-                <ScalarProperty Name="NationalID" ColumnName="NationalID" />
-                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
-                <ScalarProperty Name="Fk_ProvinceID" ColumnName="Fk_ProvinceID" />
-                <ScalarProperty Name="Fk_TownshipID" ColumnName="Fk_TownshipID" />
-                <ScalarProperty Name="City" ColumnName="City" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="WebSite" ColumnName="WebSite" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Telephone1" ColumnName="Telephone1" />
-                <ScalarProperty Name="Mobile1" ColumnName="Mobile1" />
-                <ScalarProperty Name="Telephone2" ColumnName="Telephone2" />
-                <ScalarProperty Name="Mobile2" ColumnName="Mobile2" />
-                <ScalarProperty Name="Fax" ColumnName="Fax" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Fk_CompanyCategory" ColumnName="Fk_CompanyCategory" />
-                <ScalarProperty Name="Fk_SubcollectionID" ColumnName="Fk_SubcollectionID" />
-                <ScalarProperty Name="Logo" ColumnName="Logo" />
-                <ScalarProperty Name="CreateUserID" ColumnName="CreateUserID" />
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-                <ScalarProperty Name="InactivationUserID" ColumnName="InactivationUserID" />
-                <ScalarProperty Name="InactivationDate" ColumnName="InactivationDate" />
-                <ScalarProperty Name="UpdateUserID" ColumnName="UpdateUserID" />
-                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -5355,6 +5323,41 @@
                 <ScalarProperty Name="TotalArea" ColumnName="TotalArea" />
                 <ScalarProperty Name="UsableArea" ColumnName="UsableArea" />
                 <ScalarProperty Name="LandID" ColumnName="LandID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_src_Part">
+            <EntityTypeMapping TypeName="AMSModel.tbl_src_Part">
+              <MappingFragment StoreEntitySet="tbl_src_Part">
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="UpdateUserID" ColumnName="UpdateUserID" />
+                <ScalarProperty Name="InactivationDate" ColumnName="InactivationDate" />
+                <ScalarProperty Name="InactivationUserID" ColumnName="InactivationUserID" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUserID" ColumnName="CreateUserID" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="Fk_SubcollectionID" ColumnName="Fk_SubcollectionID" />
+                <ScalarProperty Name="Fk_CompanyCategory" ColumnName="Fk_CompanyCategory" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Mobile2" ColumnName="Mobile2" />
+                <ScalarProperty Name="Telephone2" ColumnName="Telephone2" />
+                <ScalarProperty Name="Mobile1" ColumnName="Mobile1" />
+                <ScalarProperty Name="Telephone1" ColumnName="Telephone1" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Fk_TownshipID" ColumnName="Fk_TownshipID" />
+                <ScalarProperty Name="Fk_ProvinceID" ColumnName="Fk_ProvinceID" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="NationalID" ColumnName="NationalID" />
+                <ScalarProperty Name="RegistrationNumber" ColumnName="RegistrationNumber" />
+                <ScalarProperty Name="EconomicCode" ColumnName="EconomicCode" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="PartID" ColumnName="PartID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

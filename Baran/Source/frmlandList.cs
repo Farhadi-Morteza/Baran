@@ -6,29 +6,28 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using BaranDataAccess;
 
 namespace Baran.Source
 {
-    public partial class frmFieldList : Baran.Base_Forms.frmChildBase
+    public partial class frmlandList : Baran.Base_Forms.frmChildBase
     {
-        public frmFieldList()
+        public frmlandList()
         {
             InitializeComponent();
         }
 
         #region Propertise
 
-        private int _FieldID;
-        public int FieldID
+        private int _landID;
+        public int LandID
         {
             get
             {
-                return _FieldID;
+                return _landID;
             }
             set
             {
-                _FieldID = value;
+                _landID = value;
             }
         }
 
@@ -55,16 +54,18 @@ namespace Baran.Source
         {
             base.OnNew();
 
-            Baran.Source.frmField ofrm =
-                new frmField();
+            Baran.Source.frmLand ofrm =
+                new frmLand();
 
             ofrm.FormItemID = Convert.ToInt32(PublicEnum.EnmformItemId.Field);
-            if (PublicMethods.SetFormSchema(ofrm, ofrm.FormItemID))
-            {
+            //if (PublicMethods.SetFormSchema(ofrm, ofrm.FormItemID))
+            //{
                 ofrm.FormType = cnsFormType.New;
-                ofrm.ShowDialog();
-                this.FillGrid();
-            }
+                if (ofrm.ShowDialog() == DialogResult.OK)
+                {
+                    this.FillGrid();
+                }
+            //}
         }
 
         public override void OnChange()
@@ -75,18 +76,18 @@ namespace Baran.Source
                 OnMessage(BaranResources.NoRowSelectedError, PublicEnum.EnmMessageCategory.Warning);
                 return;
             }
-            Baran.Source.frmField ofrm =
-                new frmField(FieldID);
+            Baran.Source.frmLand ofrm =
+                new frmLand(LandID);
 
             ofrm.FormItemID = Convert.ToInt32(PublicEnum.EnmformItemId.Field);
-            if (PublicMethods.SetFormSchema(ofrm, ofrm.FormItemID))
-            {
+            //if (PublicMethods.SetFormSchema(ofrm, ofrm.FormItemID))
+            //{
                 ofrm.FormType = cnsFormType.Change;
-                if (ofrm.ShowDialog() == DialogResult.OK)
-                {
-                    this.FillGrid();
-                }
+            if (ofrm.ShowDialog() == DialogResult.OK)
+            {
+                this.FillGrid();
             }
+            //}
         }
 
         public override void OnDelete()
@@ -99,7 +100,7 @@ namespace Baran.Source
                 return;
             }
 
-            if (FieldID <= 0)
+            if (LandID <= 0)
                 return;
 
             DialogResult msgResult = MessageBoxX.ShowMessageBox(PublicEnum.EnmMessageType.msgDeleteConfirm);
@@ -107,16 +108,18 @@ namespace Baran.Source
 
             BaranDataAccess.Source.dstSourceTableAdapters.spr_src_Field_SelectTableAdapter adp =
                 new BaranDataAccess.Source.dstSourceTableAdapters.spr_src_Field_SelectTableAdapter();
+
+            BaranDataAccess.UnitOfWork dbContext = new BaranDataAccess.UnitOfWork();
+            BaranDataAccess.tbl_src_Land land = new BaranDataAccess.tbl_src_Land();
             try
             {
-                int RowAffected = (int)adp.Delete(FieldID, Convert.ToInt32(CurrentUser.Instance.UserID));
-                if (RowAffected > 0)
-                {
-                    OnMessage(BaranResources.DeleteSuccessful, PublicEnum.EnmMessageCategory.Success);
-                    this.FillGrid();
-                }
-                else
-                    OnMessage(BaranResources.DeleteFail, PublicEnum.EnmMessageCategory.Warning);
+                land = dbContext.LandRepository.GetById(LandID);
+                land.IsActive = false;
+                land.InactivationUserID = CurrentUser.Instance.UserID;
+                land.InactivationDate = System.DateTime.Now;
+
+                dbContext.LandRepository.Update(land);
+                dbContext.Save();
             }
             catch
             {
@@ -139,10 +142,12 @@ namespace Baran.Source
         private void FillGrid()
         {
 
+            BaranDataAccess.Source.dstSourceTableAdapters.spr_src_Land_Lst_SelectTableAdapter adp =
+                new BaranDataAccess.Source.dstSourceTableAdapters.spr_src_Land_Lst_SelectTableAdapter();
             try
             {
                 dstSource1.Clear();
-                dstSource1.spr_src_Field_Lst_Select.Merge(BaranDataAccess.Source.dstSource.FieldListTable(CurrentUser.Instance.UserID).spr_src_Field_Lst_Select);
+                adp.FillLandListTable(dstSource1.spr_src_Land_Lst_Select, CurrentUser.Instance.UserID);
             }
             catch
             {
@@ -157,9 +162,9 @@ namespace Baran.Source
 
         private void Detail()
         {
- 
-            Baran.Source.frmFieldView ofrm = new frmFieldView(FieldID);
-            ofrm.ShowDialog(); 
+
+            Baran.Source.frmFieldView ofrm = new frmFieldView(LandID);
+            ofrm.ShowDialog();
         }
 
         #endregion
@@ -168,9 +173,9 @@ namespace Baran.Source
 
         private void grdItem_AfterRowActivate(object sender, EventArgs e)
         {
-            if ((grdItem.ActiveRow == null) || (grdItem.ActiveRow.Cells[dstSource1.spr_src_Field_Select.FieldIDColumn.ColumnName].Value == DBNull.Value))
+            if ((grdItem.ActiveRow == null) || (grdItem.ActiveRow.Cells[dstSource1.spr_src_Land_Lst_Select.LandIDColumn.ColumnName].Value == DBNull.Value))
                 return;
-            FieldID = (int)grdItem.ActiveRow.Cells[dstSource1.spr_src_Field_Select.FieldIDColumn.ColumnName].Value;
+            LandID = (int)grdItem.ActiveRow.Cells[dstSource1.spr_src_Land_Lst_Select.LandIDColumn.ColumnName].Value;
         }
 
         private void grdItem_DoubleClickRow(object sender, Infragistics.Win.UltraWinGrid.DoubleClickRowEventArgs e)
@@ -180,8 +185,5 @@ namespace Baran.Source
         }
 
         #endregion
-
-
-
     }
 }

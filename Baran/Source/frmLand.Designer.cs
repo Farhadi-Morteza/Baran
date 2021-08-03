@@ -213,47 +213,38 @@ namespace Baran.Source
             // grpPrint
             // 
             this.grpPrint.Location = new System.Drawing.Point(197, 0);
-            this.grpPrint.Size = new System.Drawing.Size(95, 50);
             // 
             // grpCancel
             // 
             this.grpCancel.Location = new System.Drawing.Point(940, 0);
-            this.grpCancel.Size = new System.Drawing.Size(127, 50);
             // 
             // grpSave
             // 
             this.grpSave.Location = new System.Drawing.Point(813, 0);
-            this.grpSave.Size = new System.Drawing.Size(127, 50);
             // 
             // grpChange
             // 
             this.grpChange.Location = new System.Drawing.Point(686, 0);
-            this.grpChange.Size = new System.Drawing.Size(127, 50);
             // 
             // grpClear
             // 
             this.grpClear.Location = new System.Drawing.Point(559, 0);
-            this.grpClear.Size = new System.Drawing.Size(127, 50);
             // 
             // grpDelete
             // 
             this.grpDelete.Location = new System.Drawing.Point(432, 0);
-            this.grpDelete.Size = new System.Drawing.Size(127, 50);
             // 
             // grpDoc
             // 
             this.grpDoc.Location = new System.Drawing.Point(292, 0);
-            this.grpDoc.Size = new System.Drawing.Size(140, 50);
             // 
             // grpRefresh
             // 
             this.grpRefresh.Location = new System.Drawing.Point(102, 0);
-            this.grpRefresh.Size = new System.Drawing.Size(95, 50);
             // 
             // grpNew
             // 
             this.grpNew.Location = new System.Drawing.Point(-25, 0);
-            this.grpNew.Size = new System.Drawing.Size(127, 50);
             // 
             // btnNew
             // 
@@ -265,8 +256,8 @@ namespace Baran.Source
             // 
             // grpButons
             // 
-            this.grpButons.Location = new System.Drawing.Point(0, 599);
-            this.grpButons.Size = new System.Drawing.Size(1068, 51);
+            this.grpButons.Location = new System.Drawing.Point(0, 575);
+            this.grpButons.Size = new System.Drawing.Size(1068, 75);
             // 
             // lblLine2
             // 
@@ -300,7 +291,7 @@ namespace Baran.Source
             // 
             // lblLine3
             // 
-            this.lblLine3.Location = new System.Drawing.Point(1, 498);
+            this.lblLine3.Location = new System.Drawing.Point(1, 474);
             this.lblLine3.Size = new System.Drawing.Size(1066, 2);
             // 
             // grpMain
@@ -308,7 +299,7 @@ namespace Baran.Source
             this.grpMain.Controls.Add(this.grdDoc);
             this.grpMain.Controls.Add(this.grpControls);
             this.grpMain.Location = new System.Drawing.Point(0, 98);
-            this.grpMain.Size = new System.Drawing.Size(1068, 501);
+            this.grpMain.Size = new System.Drawing.Size(1068, 477);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
             this.grpMain.Controls.SetChildIndex(this.grpControls, 0);
             this.grpMain.Controls.SetChildIndex(this.grdDoc, 0);
@@ -1129,7 +1120,7 @@ namespace Baran.Source
             this.grdDoc.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.grdDoc.Location = new System.Drawing.Point(1, 280);
             this.grdDoc.Name = "grdDoc";
-            this.grdDoc.Size = new System.Drawing.Size(1066, 218);
+            this.grdDoc.Size = new System.Drawing.Size(1066, 194);
             this.grdDoc.TabIndex = 42;
             this.grdDoc.Text = "ultraGridDoc1";
             // 
