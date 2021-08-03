@@ -82,7 +82,7 @@ namespace Baran.Source
             imageListView1.BackColor = imageListView1.Parent.BackColor;
             try
             {
-                adpDoc.FillDocumentByFkIDTable(tblDoc, null, null, null, null, null, null, null, MachineryID, null, null, null);
+                adpDoc.FillDocumentByFkIDTable(tblDoc, null, null, null, null, null,null, null, null, MachineryID, null, null, null);
                 if (tblDoc.Count > 0)
                 {
                     foreach (var Doc in tblDoc)

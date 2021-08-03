@@ -90,23 +90,29 @@
     <Reference Include="EntityFramework">
       <HintPath>..\BaranDataAccess\bin\Debug\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="FarsiLibrary.Resources">
-      <HintPath>E:\AMS_1400-02-17\AMS\Baran\bin\Debug\FarsiLibrary.Resources.dll</HintPath>
+    <Reference Include="FarsiLibrary.Resources, Version=2.5.0.0, Culture=neutral, PublicKeyToken=def7c46cace23f8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\AMS_1400-02-17\AMS\BaranLibrary\bin\Debug\FarsiLibrary.Resources.dll</HintPath>
     </Reference>
-    <Reference Include="FarsiLibrary.Utils">
-      <HintPath>E:\AMS_1400-02-17\AMS\Baran\bin\Debug\FarsiLibrary.Utils.dll</HintPath>
+    <Reference Include="FarsiLibrary.Utils, Version=2.5.0.0, Culture=neutral, PublicKeyToken=def7c46cace23f8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\AMS_1400-02-17\AMS\BaranLibrary\bin\Debug\FarsiLibrary.Utils.dll</HintPath>
     </Reference>
-    <Reference Include="FarsiLibrary.Win">
-      <HintPath>E:\AMS_1400-02-17\AMS\Baran\bin\Debug\FarsiLibrary.Win.dll</HintPath>
+    <Reference Include="FarsiLibrary.Win, Version=2.5.0.0, Culture=neutral, PublicKeyToken=def7c46cace23f8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\AMS_1400-02-17\AMS\BaranLibrary\bin\Debug\FarsiLibrary.Win.dll</HintPath>
     </Reference>
-    <Reference Include="GMap.NET.Core">
+    <Reference Include="GMap.NET.Core, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>E:\AMS_1400-02-17\AMS\Baran\bin\Debug\GMap.NET.Core.dll</HintPath>
     </Reference>
-    <Reference Include="GMap.NET.WindowsForms">
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>E:\AMS_1400-02-17\AMS\Baran\bin\Debug\GMap.NET.WindowsForms.dll</HintPath>
     </Reference>
-    <Reference Include="ImageListView">
-      <HintPath>E:\AMS_1400-02-17\AMS\Baran\bin\Debug\ImageListView.dll</HintPath>
+    <Reference Include="ImageListView, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\AMS_1400-02-17\AMS\BaranLibrary\bin\Debug\ImageListView.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics2.Documents.v8.3, Version=8.3.20083.1009, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

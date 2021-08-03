@@ -151,6 +151,7 @@ namespace Baran.Source
                     changeUse = blnChangeUse,
                     FutureProgram = strFutureProgram,
                     DocPlace = strDocPlace,
+                    IsActive = true,
                 };
 
 
@@ -159,6 +160,8 @@ namespace Baran.Source
 
                 if (land.LandID > 0)
                 {
+                    this.DialogResult = DialogResult.OK;
+                    LandID = land.LandID;
                     OnMessage(BaranResources.SaveSuccessful, PublicEnum.EnmMessageCategory.Success);
                 }
                 else
@@ -198,31 +201,32 @@ namespace Baran.Source
                 this.SetVariables();
 
                 dbContext = new UnitOfWork();
-                tbl_src_Land land = new tbl_src_Land()
-                {
-                    Name = strName,
-                    UsableArea = dclUsableArea,
-                    TotalArea = dclTotalArea,
-                    Fk_SoilTextureID = intSoilTexture,
-                    Fk_OwnershipID = intOwnership,
-                    Fk_FieldUseTypeID = intFeildUseType,
-                    Fk_ProvinceID = intProvinceID,
-                    Fk_TownshipID = intTownshipID,
-                    City = strCity,
-                    Address = strAddress,
-                    CreateUserID = UserID,
-                    Fk_partID = intParentCo,
-                    Description = strDescription,
-                    Opposition = blnOpposition,
-                    Code = strCode,
-                    DocNumber = strDocNumber,
-                    Salability = blnSalability,
-                    changeUse = blnChangeUse,
-                    FutureProgram = strFutureProgram,
-                    DocPlace = strDocPlace,
-                    UpdateUserID = CurrentUser.Instance.UserID,
-                    UpdateDate = System.DateTime.Now,
-                };
+                tbl_src_Land land = new tbl_src_Land();
+                land = dbContext.LandRepository.GetById(LandID);
+
+                land.Name = strName;
+                land.UsableArea = dclUsableArea;
+                land.TotalArea = dclTotalArea;
+                land.Fk_SoilTextureID = intSoilTexture;
+                land.Fk_OwnershipID = intOwnership;
+                land.Fk_FieldUseTypeID = intFeildUseType;
+                land.Fk_ProvinceID = intProvinceID;
+                land.Fk_TownshipID = intTownshipID;
+                land.City = strCity;
+                land.Address = strAddress;
+                land.CreateUserID = UserID;
+                land.Fk_partID = intParentCo;
+                land.Description = strDescription;
+                land.Opposition = blnOpposition;
+                land.Code = strCode;
+                land.DocNumber = strDocNumber;
+                land.Salability = blnSalability;
+                land.changeUse = blnChangeUse;
+                land.FutureProgram = strFutureProgram;
+                land.DocPlace = strDocPlace;
+                land.UpdateUserID = CurrentUser.Instance.UserID;
+                land.UpdateDate = System.DateTime.Now;
+
 
 
                 dbContext.LandRepository.Update(land);
@@ -230,6 +234,7 @@ namespace Baran.Source
 
                 OnMessage(BaranResources.EditSuccessful, PublicEnum.EnmMessageCategory.Success);
                 waite.Close();
+                //this.DialogResult = DialogResult.OK;
             }
             catch
             {
@@ -253,17 +258,19 @@ namespace Baran.Source
             try
             {
                 dbContext = new UnitOfWork();
-                tbl_src_Land land = new tbl_src_Land()
-                {
-                    IsActive = false,
-                    InactivationUserID = CurrentUser.Instance.UserID,
-                    InactivationDate = System.DateTime.Now,
-                };
+                tbl_src_Land land = new tbl_src_Land();
+                land = dbContext.LandRepository.GetById(LandID);
+
+                land.IsActive = false;
+                land.InactivationUserID = CurrentUser.Instance.UserID;
+                land.InactivationDate = System.DateTime.Now;
+
 
 
                 dbContext.LandRepository.Update(land);
                 dbContext.Save();
 
+                this.DialogResult = DialogResult.OK;
                 LandID = 0;
                 this.OnClear();
                 OnMessage(BaranResources.DeleteSuccessful, PublicEnum.EnmMessageCategory.Success);
@@ -283,15 +290,16 @@ namespace Baran.Source
             LandID = 0;
             grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Clear();
         }
+         
 
-        public override void OnDoc(int? companyID, int? collectionID, int? subcollectionID, int? partID, int? fieldID, int? warehouseID, int? buildingID, int? machineryID, int? waterID, int? waterStorageID, int? waterTransmissionLineID)
+        public override void OnDoc(int? companyID, int? collectionID, int? subcollectionID, int? partID, int? landID, int? fieldID, int? warehouseID, int? buildingID, int? machineryID, int? waterID, int? waterStorageID, int? waterTransmissionLineID)
         {
             if (LandID <= 0)
             {
                 OnMessage(BaranResources.SavedNotLastTime, PublicEnum.EnmMessageCategory.Warning);
                 return;
             }
-            base.OnDoc(null, null, null, null, this.LandID, null, null, null, null, null, null);
+            base.OnDoc(null, null, null, null, this.LandID, null, null, null, null, null, null, null);
             this.FillGridDoc();
         }
 
@@ -322,9 +330,9 @@ namespace Baran.Source
                     cmbProvince.Value = land.Fk_ProvinceID;
                     cmbTownship.Value = land.Fk_TownshipID;
                     cmbParentCo.Value = land.Fk_partID;
-                    //chkOpposition.Checked = land.Opposition  ? false : land.Opposition;
-                    //chkChangeUse.Checked = land.changeUse;
-                    //chkSalability.Checked = drw.IsSalabilityNull() ? false : drw.Salability;
+                    chkOpposition.Checked = land.Opposition.Value;
+                    chkChangeUse.Checked = land.changeUse.Value;
+                    chkSalability.Checked = land.Salability.Value;
                 }
             }
             catch
@@ -441,7 +449,7 @@ namespace Baran.Source
 
                 try
                 {
-                    adp.FillDocumentByFkIDTable(grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select, null, null, null, null, this.LandID, null, null, null, null, null, null);
+                    adp.FillDocumentByFkIDTable(grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select, null, null, null, null, this.LandID,null, null, null, null, null, null, null);
 
                     if (grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Count <= cnsgrdDoc.MaxRowCount)
                     {
@@ -472,7 +480,7 @@ namespace Baran.Source
             }
 
             Baran.Maps.frmBaseMap ofrm = new Maps.frmBaseMap(PublicEnum.EnmShapeType.Polygon);
-            ofrm.FieldID = LandID;
+            ofrm.LandID = LandID;
             ofrm.ShowDialog();
         }
 
@@ -489,7 +497,7 @@ namespace Baran.Source
                 try
                 {
                     Baran.Common.frmDocument ofrm = new Common.frmDocument((int)e.Cell.Row.Cells[grdDoc.dstCommon.spr_cmn_Document_Select.DocumentIDColumn.ColumnName].Value);
-                    ofrm.FieldID = this.LandID;
+                    ofrm.LandID = this.LandID;
                     ofrm.FormType = cnsFormType.Change;
                     ofrm.ShowDialog();
 

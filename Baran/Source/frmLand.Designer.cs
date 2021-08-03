@@ -362,6 +362,7 @@ namespace Baran.Source
             this.btnGeo.Size = new System.Drawing.Size(65, 65);
             this.btnGeo.TabIndex = 115;
             this.btnGeo.UseVisualStyleBackColor = true;
+            this.btnGeo.Click += new System.EventHandler(this.btnGeo_Click);
             // 
             // chkChangeUse
             // 
@@ -776,6 +777,7 @@ namespace Baran.Source
             this.cmbProvince.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbProvince.Size = new System.Drawing.Size(179, 22);
             this.cmbProvince.TabIndex = 86;
+            this.cmbProvince.ValueChanged += new System.EventHandler(this.cmbProvince_ValueChanged);
             // 
             // label14
             // 
@@ -1123,6 +1125,7 @@ namespace Baran.Source
             this.grdDoc.Size = new System.Drawing.Size(1066, 194);
             this.grdDoc.TabIndex = 42;
             this.grdDoc.Text = "ultraGridDoc1";
+            this.grdDoc.ClickCellButton += new Infragistics.Win.UltraWinGrid.CellEventHandler(this.grdDoc_ClickCellButton);
             // 
             // frmLand
             // 

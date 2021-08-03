@@ -57,15 +57,15 @@ namespace Baran.Source
             Baran.Source.frmLand ofrm =
                 new frmLand();
 
-            ofrm.FormItemID = Convert.ToInt32(PublicEnum.EnmformItemId.Field);
-            //if (PublicMethods.SetFormSchema(ofrm, ofrm.FormItemID))
-            //{
+            ofrm.FormItemID = Convert.ToInt32(PublicEnum.EnmformItemId.Land);
+            if (PublicMethods.SetFormSchema(ofrm, ofrm.FormItemID))
+            {
                 ofrm.FormType = cnsFormType.New;
                 if (ofrm.ShowDialog() == DialogResult.OK)
                 {
                     this.FillGrid();
                 }
-            //}
+            }
         }
 
         public override void OnChange()
@@ -79,15 +79,15 @@ namespace Baran.Source
             Baran.Source.frmLand ofrm =
                 new frmLand(LandID);
 
-            ofrm.FormItemID = Convert.ToInt32(PublicEnum.EnmformItemId.Field);
-            //if (PublicMethods.SetFormSchema(ofrm, ofrm.FormItemID))
-            //{
+            ofrm.FormItemID = Convert.ToInt32(PublicEnum.EnmformItemId.Land);
+            if (PublicMethods.SetFormSchema(ofrm, ofrm.FormItemID))
+            {
                 ofrm.FormType = cnsFormType.Change;
             if (ofrm.ShowDialog() == DialogResult.OK)
             {
                 this.FillGrid();
             }
-            //}
+            }
         }
 
         public override void OnDelete()

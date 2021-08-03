@@ -179,6 +179,19 @@ namespace Baran.Maps
             }
         }
 
+        private int? _landID = null;
+        public int? LandID
+        {
+            get
+            {
+                return _landID;
+            }
+            set
+            {
+                _landID = value;
+            }
+        }
+
         private int? _buildingID = null;
         public int? BuildingID
         {
@@ -276,6 +289,7 @@ namespace Baran.Maps
 
         tbl_src_Part part;
         tbl_src_Field field;
+        tbl_src_Land land;
         tbl_src_Buildings building;
         tbl_src_Warehouse warehouse;
         tbl_src_Water water;
@@ -700,6 +714,16 @@ namespace Baran.Maps
                     points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(field.LocationPolygon.ProviderValue.ToString());
                 }
             }
+            else if (LandID > 0)
+            {
+                land = new tbl_src_Land();
+                land = db.LandRepository.GetById(LandID);
+
+                if (land.Location != null)
+                {
+                    points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(land.Location.ProviderValue.ToString());
+                }
+            }
             else if (BuildingID > 0)
             {
                 building = new tbl_src_Buildings();
@@ -750,19 +774,22 @@ namespace Baran.Maps
                     points = GeoUtils.ConvertStringCoordinatesToGMapRoute(waterTransmissionLine.Location.ProviderValue.ToString());
                 }
             }
-           
-            if(points.Count == 0)
+
+            if (points.Count == 0)
             {
-                BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocationByID =
-                    new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
-
-                tblLocationByID = BaranDataAccess.Map.dstLocation.LocationByIDTable(FieldID, BuildingID, WarehouseID, WaterstorageID, WaterID, WaterTransmissionLineID, PartID).spr_geo_LocationByID_Select;
-
-                //List<PointLatLng> points = new List<PointLatLng>();
-                foreach (var tbl in tblLocationByID)
+                if (FieldID != null && BuildingID != null && WarehouseID != null && WaterstorageID != null && WaterID != null && WaterTransmissionLineID != null && PartID != null)
                 {
-                    currentMarker.Position = new PointLatLng(tbl.Latitude, tbl.Longitude);
-                    this.AddMarker();
+                    BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocationByID =
+                        new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
+
+                    tblLocationByID = BaranDataAccess.Map.dstLocation.LocationByIDTable(FieldID, BuildingID, WarehouseID, WaterstorageID, WaterID, WaterTransmissionLineID, PartID).spr_geo_LocationByID_Select;
+
+                    //List<PointLatLng> points = new List<PointLatLng>();
+                    foreach (var tbl in tblLocationByID)
+                    {
+                        currentMarker.Position = new PointLatLng(tbl.Latitude, tbl.Longitude);
+                        this.AddMarker();
+                    }
                 }
             }
 
@@ -1030,44 +1057,49 @@ namespace Baran.Maps
                     p = db.PartRepository.GetById(PartID);
                     p.Location = GeoUtils.ConvertGMapPolygonPointsToDbGeometryPolygon(SavePoints);
                     db.PartRepository.Update(p);
-               
+
                 }
                 else if (FieldID > 0)
                 {
                     field.LocationPolygon = GeoUtils.ConvertGMapPolygonPointsToDbGeometryPolygon(SavePoints);
                     db.FieldRepository.Update(field);
-       
+
+                }
+                else if (LandID > 0)
+                {
+                    land.Location = GeoUtils.ConvertGMapPolygonPointsToDbGeometryPolygon(SavePoints);
+                    db.LandRepository.Update(land);
                 }
                 else if (BuildingID > 0)
                 {
                     building.Location = GeoUtils.ConvertGMapPolygonPointsToDbGeometryPolygon(SavePoints);
                     db.BuildingsRepository.Update(building);
-               
+
                 }
                 else if (WarehouseID > 0)
                 {
                     warehouse.Location = GeoUtils.ConvertGMapPolygonPointsToDbGeometryPolygon(SavePoints);
                     db.WarehouseRepository.Update(warehouse);
-                
+
                 }
 
                 else if (WaterstorageID > 0)
                 {
                     waterStorage.Location = GeoUtils.ConvertGMapPolygonPointsToDbGeometryPolygon(SavePoints);
                     db.WaterStorageRepository.Update(waterStorage);
-               
+
                 }
                 else if (WaterID > 0)
                 {
                     water.Location = GeoUtils.ConvertGMapPointToDbGeometryPoint(SavePoints[0]);
                     db.WaterRepository.Update(water);
-                  
+
                 }
                 else if (WaterTransmissionLineID > 0)
                 {
                     waterTransmissionLine.Location = GeoUtils.ConvertGMapLinePointsToDbGeometryLine(SavePoints);
                     db.WaterTransmissionLineRepository.Update(waterTransmissionLine);
-                    
+
                 }
 
                 else

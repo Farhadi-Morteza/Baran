@@ -124,6 +124,7 @@ namespace Baran.Classes.Common
             , Crop = 157
             , Document = 159
             , ProductionTask = 171
+            , Land = 178
         }
 
         public enum EnmShapeType

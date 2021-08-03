@@ -4908,6 +4908,8 @@ namespace BaranDataAccess.Common {
             
             private global::System.Data.DataColumn columnFk_TreeID;
             
+            private global::System.Data.DataColumn columnFk_LandID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public spr_cmn_Document_SelectDataTable() {
@@ -5127,6 +5129,14 @@ namespace BaranDataAccess.Common {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Fk_LandIDColumn {
+                get {
+                    return this.columnFk_LandID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5184,7 +5194,8 @@ namespace BaranDataAccess.Common {
                         System.DateTime InactivationDate, 
                         int UpdateUserID, 
                         System.DateTime UpdateDate, 
-                        int Fk_TreeID) {
+                        int Fk_TreeID, 
+                        int Fk_LandID) {
                 spr_cmn_Document_SelectRow rowspr_cmn_Document_SelectRow = ((spr_cmn_Document_SelectRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -5209,7 +5220,8 @@ namespace BaranDataAccess.Common {
                         InactivationDate,
                         UpdateUserID,
                         UpdateDate,
-                        Fk_TreeID};
+                        Fk_TreeID,
+                        Fk_LandID};
                 rowspr_cmn_Document_SelectRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowspr_cmn_Document_SelectRow);
                 return rowspr_cmn_Document_SelectRow;
@@ -5262,6 +5274,7 @@ namespace BaranDataAccess.Common {
                 this.columnUpdateUserID = base.Columns["UpdateUserID"];
                 this.columnUpdateDate = base.Columns["UpdateDate"];
                 this.columnFk_TreeID = base.Columns["Fk_TreeID"];
+                this.columnFk_LandID = base.Columns["Fk_LandID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5313,6 +5326,8 @@ namespace BaranDataAccess.Common {
                 base.Columns.Add(this.columnUpdateDate);
                 this.columnFk_TreeID = new global::System.Data.DataColumn("Fk_TreeID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFk_TreeID);
+                this.columnFk_LandID = new global::System.Data.DataColumn("Fk_LandID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFk_LandID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnDocumentID}, true));
                 this.columnDocumentID.AutoIncrement = true;
@@ -13056,6 +13071,22 @@ namespace BaranDataAccess.Common {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Fk_LandID {
+                get {
+                    try {
+                        return ((int)(this[this.tablespr_cmn_Document_Select.Fk_LandIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Fk_LandID\' in table \'spr_cmn_Document_Select\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_cmn_Document_Select.Fk_LandIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsNameNull() {
                 return this.IsNull(this.tablespr_cmn_Document_Select.NameColumn);
             }
@@ -13316,6 +13347,18 @@ namespace BaranDataAccess.Common {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetFk_TreeIDNull() {
                 this[this.tablespr_cmn_Document_Select.Fk_TreeIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFk_LandIDNull() {
+                return this.IsNull(this.tablespr_cmn_Document_Select.Fk_LandIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFk_LandIDNull() {
+                this[this.tablespr_cmn_Document_Select.Fk_LandIDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -18791,6 +18834,7 @@ namespace BaranDataAccess.Common.dstCommonTableAdapters {
             tableMapping.ColumnMappings.Add("UpdateUserID", "UpdateUserID");
             tableMapping.ColumnMappings.Add("UpdateDate", "UpdateDate");
             tableMapping.ColumnMappings.Add("Fk_TreeID", "Fk_TreeID");
+            tableMapping.ColumnMappings.Add("Fk_LandID", "Fk_LandID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -18811,6 +18855,7 @@ namespace BaranDataAccess.Common.dstCommonTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_CollectionID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "Fk_CollectionID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_SubcollectionID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "Fk_SubcollectionID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_PartID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "Fk_PartID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_LandID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "Fk_LandID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_FieldID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "Fk_FieldID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_WarehouseID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "Fk_WarehouseID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_BuildingID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "Fk_BuildingID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -18833,6 +18878,7 @@ namespace BaranDataAccess.Common.dstCommonTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_CollectionID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "Fk_CollectionID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_SubcollectionID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "Fk_SubcollectionID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_PartID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "Fk_PartID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_LandID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "Fk_LandID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_FieldID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "Fk_FieldID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_WarehouseID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "Fk_WarehouseID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_BuildingID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "Fk_BuildingID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -18879,6 +18925,7 @@ namespace BaranDataAccess.Common.dstCommonTableAdapters {
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_CollectionID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_SubcollectionID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_PartID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_LandID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_FieldID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_WarehouseID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_BuildingID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -19036,6 +19083,7 @@ namespace BaranDataAccess.Common.dstCommonTableAdapters {
                     global::System.Nullable<int> Fk_CollectionID, 
                     global::System.Nullable<int> Fk_SubcollectionID, 
                     global::System.Nullable<int> Fk_PartID, 
+                    global::System.Nullable<int> Fk_LandID, 
                     global::System.Nullable<int> Fk_FieldID, 
                     global::System.Nullable<int> Fk_WarehouseID, 
                     global::System.Nullable<int> Fk_BuildingID, 
@@ -19087,59 +19135,65 @@ namespace BaranDataAccess.Common.dstCommonTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Fk_FieldID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(Fk_FieldID.Value));
+            if ((Fk_LandID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(Fk_LandID.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Fk_WarehouseID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(Fk_WarehouseID.Value));
+            if ((Fk_FieldID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(Fk_FieldID.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Fk_BuildingID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(Fk_BuildingID.Value));
+            if ((Fk_WarehouseID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(Fk_WarehouseID.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Fk_MachineryID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(Fk_MachineryID.Value));
+            if ((Fk_BuildingID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(Fk_BuildingID.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Fk_WaterID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((int)(Fk_WaterID.Value));
+            if ((Fk_MachineryID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((int)(Fk_MachineryID.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Fk_WaterStorageID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((int)(Fk_WaterStorageID.Value));
+            if ((Fk_WaterID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((int)(Fk_WaterID.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((Fk_WaterTransmissionLineID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[14].Value = ((int)(Fk_WaterTransmissionLineID.Value));
+            if ((Fk_WaterStorageID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((int)(Fk_WaterStorageID.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Fk_TreeID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[15].Value = ((int)(Fk_TreeID.Value));
+            if ((Fk_WaterTransmissionLineID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((int)(Fk_WaterTransmissionLineID.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            if ((CreateUserID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[16].Value = ((int)(CreateUserID.Value));
+            if ((Fk_TreeID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((int)(Fk_TreeID.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((CreateUserID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((int)(CreateUserID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -19170,6 +19224,7 @@ namespace BaranDataAccess.Common.dstCommonTableAdapters {
                     global::System.Nullable<int> Fk_CollectionID, 
                     global::System.Nullable<int> Fk_SubcollectionID, 
                     global::System.Nullable<int> Fk_PartID, 
+                    global::System.Nullable<int> Fk_LandID, 
                     global::System.Nullable<int> Fk_FieldID, 
                     global::System.Nullable<int> Fk_WarehouseID, 
                     global::System.Nullable<int> Fk_BuildingID, 
@@ -19227,59 +19282,65 @@ namespace BaranDataAccess.Common.dstCommonTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Fk_FieldID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Fk_FieldID.Value));
+            if ((Fk_LandID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Fk_LandID.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Fk_WarehouseID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Fk_WarehouseID.Value));
+            if ((Fk_FieldID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Fk_FieldID.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Fk_BuildingID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Fk_BuildingID.Value));
+            if ((Fk_WarehouseID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Fk_WarehouseID.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Fk_MachineryID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Fk_MachineryID.Value));
+            if ((Fk_BuildingID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Fk_BuildingID.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Fk_WaterID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Fk_WaterID.Value));
+            if ((Fk_MachineryID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Fk_MachineryID.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((Fk_WaterStorageID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Fk_WaterStorageID.Value));
+            if ((Fk_WaterID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Fk_WaterID.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Fk_WaterTransmissionLineID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Fk_WaterTransmissionLineID.Value));
+            if ((Fk_WaterStorageID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Fk_WaterStorageID.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            if ((Fk_TreeID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Fk_TreeID.Value));
+            if ((Fk_WaterTransmissionLineID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Fk_WaterTransmissionLineID.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((UpdateUserID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(UpdateUserID.Value));
+            if ((Fk_TreeID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Fk_TreeID.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((UpdateUserID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(UpdateUserID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -19308,6 +19369,7 @@ namespace BaranDataAccess.Common.dstCommonTableAdapters {
                     global::System.Nullable<int> Fk_CollectionID, 
                     global::System.Nullable<int> Fk_SubcollectionID, 
                     global::System.Nullable<int> Fk_PartID, 
+                    global::System.Nullable<int> Fk_LandID, 
                     global::System.Nullable<int> Fk_FieldID, 
                     global::System.Nullable<int> Fk_WarehouseID, 
                     global::System.Nullable<int> Fk_BuildingID, 
@@ -19360,59 +19422,65 @@ namespace BaranDataAccess.Common.dstCommonTableAdapters {
             else {
                 command.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Fk_FieldID.HasValue == true)) {
-                command.Parameters[8].Value = ((int)(Fk_FieldID.Value));
+            if ((Fk_LandID.HasValue == true)) {
+                command.Parameters[8].Value = ((int)(Fk_LandID.Value));
             }
             else {
                 command.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Fk_WarehouseID.HasValue == true)) {
-                command.Parameters[9].Value = ((int)(Fk_WarehouseID.Value));
+            if ((Fk_FieldID.HasValue == true)) {
+                command.Parameters[9].Value = ((int)(Fk_FieldID.Value));
             }
             else {
                 command.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Fk_BuildingID.HasValue == true)) {
-                command.Parameters[10].Value = ((int)(Fk_BuildingID.Value));
+            if ((Fk_WarehouseID.HasValue == true)) {
+                command.Parameters[10].Value = ((int)(Fk_WarehouseID.Value));
             }
             else {
                 command.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Fk_MachineryID.HasValue == true)) {
-                command.Parameters[11].Value = ((int)(Fk_MachineryID.Value));
+            if ((Fk_BuildingID.HasValue == true)) {
+                command.Parameters[11].Value = ((int)(Fk_BuildingID.Value));
             }
             else {
                 command.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Fk_WaterID.HasValue == true)) {
-                command.Parameters[12].Value = ((int)(Fk_WaterID.Value));
+            if ((Fk_MachineryID.HasValue == true)) {
+                command.Parameters[12].Value = ((int)(Fk_MachineryID.Value));
             }
             else {
                 command.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Fk_WaterStorageID.HasValue == true)) {
-                command.Parameters[13].Value = ((int)(Fk_WaterStorageID.Value));
+            if ((Fk_WaterID.HasValue == true)) {
+                command.Parameters[13].Value = ((int)(Fk_WaterID.Value));
             }
             else {
                 command.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((Fk_WaterTransmissionLineID.HasValue == true)) {
-                command.Parameters[14].Value = ((int)(Fk_WaterTransmissionLineID.Value));
+            if ((Fk_WaterStorageID.HasValue == true)) {
+                command.Parameters[14].Value = ((int)(Fk_WaterStorageID.Value));
             }
             else {
                 command.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Fk_TreeID.HasValue == true)) {
-                command.Parameters[15].Value = ((int)(Fk_TreeID.Value));
+            if ((Fk_WaterTransmissionLineID.HasValue == true)) {
+                command.Parameters[15].Value = ((int)(Fk_WaterTransmissionLineID.Value));
             }
             else {
                 command.Parameters[15].Value = global::System.DBNull.Value;
             }
-            if ((CreateUserID.HasValue == true)) {
-                command.Parameters[16].Value = ((int)(CreateUserID.Value));
+            if ((Fk_TreeID.HasValue == true)) {
+                command.Parameters[16].Value = ((int)(Fk_TreeID.Value));
             }
             else {
                 command.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((CreateUserID.HasValue == true)) {
+                command.Parameters[17].Value = ((int)(CreateUserID.Value));
+            }
+            else {
+                command.Parameters[17].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -19586,6 +19654,7 @@ namespace BaranDataAccess.Common.dstCommonTableAdapters {
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_CollectionID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_SubcollectionID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_PartID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_LandID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_FieldID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_WarehouseID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_BuildingID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -19599,7 +19668,7 @@ namespace BaranDataAccess.Common.dstCommonTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillDocumentByFkIDTable(dstCommon.spr_cmn_DocumentByFkID_SelectDataTable dataTable, global::System.Nullable<int> Fk_CompanyID, global::System.Nullable<int> Fk_CollectionID, global::System.Nullable<int> Fk_SubcollectionID, global::System.Nullable<int> Fk_PartID, global::System.Nullable<int> Fk_FieldID, global::System.Nullable<int> Fk_WarehouseID, global::System.Nullable<int> Fk_BuildingID, global::System.Nullable<int> Fk_MachineryID, global::System.Nullable<int> Fk_WaterID, global::System.Nullable<int> Fk_WaterStorageID, global::System.Nullable<int> Fk_WaterTransmissionLineID) {
+        public virtual int FillDocumentByFkIDTable(dstCommon.spr_cmn_DocumentByFkID_SelectDataTable dataTable, global::System.Nullable<int> Fk_CompanyID, global::System.Nullable<int> Fk_CollectionID, global::System.Nullable<int> Fk_SubcollectionID, global::System.Nullable<int> Fk_PartID, global::System.Nullable<int> Fk_LandID, global::System.Nullable<int> Fk_FieldID, global::System.Nullable<int> Fk_WarehouseID, global::System.Nullable<int> Fk_BuildingID, global::System.Nullable<int> Fk_MachineryID, global::System.Nullable<int> Fk_WaterID, global::System.Nullable<int> Fk_WaterStorageID, global::System.Nullable<int> Fk_WaterTransmissionLineID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((Fk_CompanyID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Fk_CompanyID.Value));
@@ -19625,47 +19694,53 @@ namespace BaranDataAccess.Common.dstCommonTableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Fk_FieldID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(Fk_FieldID.Value));
+            if ((Fk_LandID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(Fk_LandID.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((Fk_WarehouseID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(Fk_WarehouseID.Value));
+            if ((Fk_FieldID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(Fk_FieldID.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Fk_BuildingID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[7].Value = ((int)(Fk_BuildingID.Value));
+            if ((Fk_WarehouseID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[7].Value = ((int)(Fk_WarehouseID.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Fk_MachineryID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[8].Value = ((int)(Fk_MachineryID.Value));
+            if ((Fk_BuildingID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[8].Value = ((int)(Fk_BuildingID.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Fk_WaterID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[9].Value = ((int)(Fk_WaterID.Value));
+            if ((Fk_MachineryID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[9].Value = ((int)(Fk_MachineryID.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Fk_WaterStorageID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[10].Value = ((int)(Fk_WaterStorageID.Value));
+            if ((Fk_WaterID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[10].Value = ((int)(Fk_WaterID.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Fk_WaterTransmissionLineID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[11].Value = ((int)(Fk_WaterTransmissionLineID.Value));
+            if ((Fk_WaterStorageID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[11].Value = ((int)(Fk_WaterStorageID.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Fk_WaterTransmissionLineID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[12].Value = ((int)(Fk_WaterTransmissionLineID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -19678,7 +19753,7 @@ namespace BaranDataAccess.Common.dstCommonTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dstCommon.spr_cmn_DocumentByFkID_SelectDataTable GetDocumentByFkIDTable(global::System.Nullable<int> Fk_CompanyID, global::System.Nullable<int> Fk_CollectionID, global::System.Nullable<int> Fk_SubcollectionID, global::System.Nullable<int> Fk_PartID, global::System.Nullable<int> Fk_FieldID, global::System.Nullable<int> Fk_WarehouseID, global::System.Nullable<int> Fk_BuildingID, global::System.Nullable<int> Fk_MachineryID, global::System.Nullable<int> Fk_WaterID, global::System.Nullable<int> Fk_WaterStorageID, global::System.Nullable<int> Fk_WaterTransmissionLineID) {
+        public virtual dstCommon.spr_cmn_DocumentByFkID_SelectDataTable GetDocumentByFkIDTable(global::System.Nullable<int> Fk_CompanyID, global::System.Nullable<int> Fk_CollectionID, global::System.Nullable<int> Fk_SubcollectionID, global::System.Nullable<int> Fk_PartID, global::System.Nullable<int> Fk_LandID, global::System.Nullable<int> Fk_FieldID, global::System.Nullable<int> Fk_WarehouseID, global::System.Nullable<int> Fk_BuildingID, global::System.Nullable<int> Fk_MachineryID, global::System.Nullable<int> Fk_WaterID, global::System.Nullable<int> Fk_WaterStorageID, global::System.Nullable<int> Fk_WaterTransmissionLineID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((Fk_CompanyID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Fk_CompanyID.Value));
@@ -19704,47 +19779,53 @@ namespace BaranDataAccess.Common.dstCommonTableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Fk_FieldID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(Fk_FieldID.Value));
+            if ((Fk_LandID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(Fk_LandID.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((Fk_WarehouseID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(Fk_WarehouseID.Value));
+            if ((Fk_FieldID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(Fk_FieldID.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Fk_BuildingID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[7].Value = ((int)(Fk_BuildingID.Value));
+            if ((Fk_WarehouseID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[7].Value = ((int)(Fk_WarehouseID.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Fk_MachineryID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[8].Value = ((int)(Fk_MachineryID.Value));
+            if ((Fk_BuildingID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[8].Value = ((int)(Fk_BuildingID.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Fk_WaterID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[9].Value = ((int)(Fk_WaterID.Value));
+            if ((Fk_MachineryID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[9].Value = ((int)(Fk_MachineryID.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Fk_WaterStorageID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[10].Value = ((int)(Fk_WaterStorageID.Value));
+            if ((Fk_WaterID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[10].Value = ((int)(Fk_WaterID.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Fk_WaterTransmissionLineID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[11].Value = ((int)(Fk_WaterTransmissionLineID.Value));
+            if ((Fk_WaterStorageID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[11].Value = ((int)(Fk_WaterStorageID.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Fk_WaterTransmissionLineID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[12].Value = ((int)(Fk_WaterTransmissionLineID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             dstCommon.spr_cmn_DocumentByFkID_SelectDataTable dataTable = new dstCommon.spr_cmn_DocumentByFkID_SelectDataTable();
             this.Adapter.Fill(dataTable);

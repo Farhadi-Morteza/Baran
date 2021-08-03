@@ -136,7 +136,7 @@ namespace Baran.Base_Forms
 
         private void btnDoc_Click(object sender, EventArgs e)
         {
-            OnDoc(null, null, null, null, null, null, null, null, null, null, null);
+            OnDoc(null, null, null, null, null,null, null, null, null, null, null, null);
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
@@ -195,7 +195,7 @@ namespace Baran.Base_Forms
 
         private void mnuDoc_Click(object sender, EventArgs e)
         {
-            OnDoc(null, null, null, null, null, null, null, null, null, null, null);
+            OnDoc(null, null, null, null,null, null, null, null, null, null, null, null);
         }
         
         #endregion

@@ -259,14 +259,15 @@ namespace Baran.Source
             grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Clear();
         }
 
-        public override void OnDoc(int? companyID, int? collectionID, int? subcollectionID, int? partID, int? fieldID, int? warehouseID, int? buildingID, int? machineryID, int? waterID, int? waterStorageID, int? waterTransmissionLineID)
+
+        public override void OnDoc(int? companyID, int? collectionID, int? subcollectionID, int? partID, int? landID, int? fieldID, int? warehouseID, int? buildingID, int? machineryID, int? waterID, int? waterStorageID, int? waterTransmissionLineID)
         {
             if (BuildingsID <= 0)
             {
                 OnMessage(BaranResources.SavedNotLastTime, PublicEnum.EnmMessageCategory.Warning);
                 return;
             }
-            base.OnDoc(null, null, null, null, null, null, this.BuildingsID, null, null, null, null);
+            base.OnDoc(null, null, null, null, null, null, null, this.BuildingsID, null, null, null, null);
             this.FillGridDoc();
         }
 
@@ -318,7 +319,7 @@ namespace Baran.Source
 
                 try
                 {
-                    adp.FillDocumentByFkIDTable(grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select, null, null, null, null, null, null, this.BuildingsID, null, null, null, null);
+                    adp.FillDocumentByFkIDTable(grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select, null, null, null, null,null, null, null, this.BuildingsID, null, null, null, null);
 
                     if (grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Count > 0 && grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Count <= cnsgrdDoc.MaxRowCount)
                     {

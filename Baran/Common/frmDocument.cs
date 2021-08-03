@@ -135,6 +135,20 @@ namespace Baran.Common
             }
         }
 
+        private int? _landID;
+        public int? LandID
+        {
+            get
+            {
+                return _landID;
+            }
+            set
+            {
+                _landID = value;
+
+            }
+        }
+
         private int? _warehouseID;
         public int? WarehouseID
         {
@@ -256,7 +270,7 @@ namespace Baran.Common
             try
             {
                 waite.Show();
-                DocumentID = Convert.ToInt32(adp.New_Document_Insert(strName, strDescription, bytImage, CompanyID, CollectionID, SubcollectionID, PartID, FieldID, WarehouseID, BuildingID, MachineryID, WaterID, WaterStorageID, WaterTransmissionLineID, TreeID, CurrentUser.Instance.UserID));
+                DocumentID = Convert.ToInt32(adp.New_Document_Insert(strName, strDescription, bytImage, CompanyID, CollectionID, SubcollectionID, PartID,LandID, FieldID, WarehouseID, BuildingID, MachineryID, WaterID, WaterStorageID, WaterTransmissionLineID, TreeID, CurrentUser.Instance.UserID));
 
                 if (DocumentID > 0)
                     OnMessage(BaranResources.SaveSuccessful, PublicEnum.EnmMessageCategory.Success);
@@ -294,7 +308,7 @@ namespace Baran.Common
             {
                 waite.Show();
 
-                int RowAffected = Convert.ToInt32(adp.Update(DocumentID,strName, strDescription, bytImage, CompanyID, CollectionID, SubcollectionID, PartID, FieldID, WarehouseID, BuildingID, MachineryID, WaterID, WaterStorageID, WaterTransmissionLineID, TreeID, (int)CurrentUser.Instance.UserID));
+                int RowAffected = Convert.ToInt32(adp.Update(DocumentID,strName, strDescription, bytImage, CompanyID, CollectionID, SubcollectionID, PartID, LandID, FieldID, WarehouseID, BuildingID, MachineryID, WaterID, WaterStorageID, WaterTransmissionLineID, TreeID, (int)CurrentUser.Instance.UserID));
 
                 if (RowAffected > 0)
                     OnMessage(BaranResources.EditSuccessful, PublicEnum.EnmMessageCategory.Success);
