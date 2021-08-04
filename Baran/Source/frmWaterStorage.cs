@@ -300,13 +300,13 @@ namespace Baran.Source
                 {
                     adp.FillDocumentByFkIDTable(grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select,null, null, null, null, null, null, null, null, null, null, this.WaterStorageID, null);
 
-                    if (grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Count > 0 && grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Count <= 5)
+                    if (grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Count > 0 && grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Count <= 2)
                     {
-                        this.Height = this.Height + 40 + (grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Count * (grdDoc.DisplayLayout.Rows[0].Height));
+                        this.Height = this.Height + 35 + (grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Count * (grdDoc.DisplayLayout.Rows[0].Height));
                     }
                     else
                     {
-                        this.Height = this.Height + 40 + (5 * (grdDoc.DisplayLayout.Rows[0].Height));
+                        this.Height = this.Height + 40 + (2 * (grdDoc.DisplayLayout.Rows[0].Height));
                     }
                 }
                 catch

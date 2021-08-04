@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Baran.Classes.Common;
+using BaranDataAccess;
 
 namespace Baran.Source
 {
@@ -32,6 +33,7 @@ namespace Baran.Source
 
         #region Variables
         WaiteForm waite;
+        BaranDataAccess.UnitOfWork db = new BaranDataAccess.UnitOfWork();
 
         BaranDataAccess.Source.dstSourceTableAdapters.spr_src_Machinery_SelectTableAdapter adp =
             new BaranDataAccess.Source.dstSourceTableAdapters.spr_src_Machinery_SelectTableAdapter();
@@ -41,7 +43,7 @@ namespace Baran.Source
         int UserID = (int)CurrentUser.Instance.UserID;
 
         int? intParentCo = null;
-        int? intMachineryCategory = null;
+        int intMachineryCategory;
         int? intCount = null;
 
         string
@@ -120,15 +122,25 @@ namespace Baran.Source
             {
                 waite.Show();
                 this.SetVariables();
-                MachineryID = Convert.ToInt32(adp.New_Machinery_Insert(strName, strManufacturer, strModel, strRegNumber, strYear, strDescription
-                                                , intMachineryCategory, UserID, intCount, intParentCo, dclVigor));
 
-                if (MachineryID > 0)
+                tbl_src_Machinery machinery = new tbl_src_Machinery()
                 {
+                    Name = strName, Manufacturer = strManufacturer, Model = strModel, RegNumber = strRegNumber, Year = strYear, Description = strDescription
+                    , MachineryID = intMachineryCategory, Count = intCount, Fk_PartID = intParentCo, Vigor = dclVigor, IsActive = true, CreateUserID = UserID, CreateDate = System.DateTime.Now
+                };
+                db.MachineryRepository.Insert(machinery);
+                db.Save();
+                MachineryID = machinery.MachineryID;
+
+                //MachineryID = Convert.ToInt32(adp.New_Machinery_Insert(strName, strManufacturer, strModel, strRegNumber, strYear, strDescription
+                //                                , intMachineryCategory, UserID, intCount, intParentCo, dclVigor));
+
+                //if (MachineryID > 0)
+                //{
                     OnMessage(BaranResources.SaveSuccessful, PublicEnum.EnmMessageCategory.Success);
-                }
-                else
-                    OnMessage(BaranResources.SaveFail, PublicEnum.EnmMessageCategory.Warning);
+                //}
+                //else
+                //    OnMessage(BaranResources.SaveFail, PublicEnum.EnmMessageCategory.Warning);
             }
             catch
             {
@@ -159,15 +171,34 @@ namespace Baran.Source
             {
                 waite.Show();
                 this.SetVariables();
-                int RowAffected = Convert.ToInt32(adp.Update(MachineryID, strName, strManufacturer, strModel, strRegNumber, strYear
-                                            , strDescription, intMachineryCategory, UserID, intCount, intParentCo, dclVigor));
 
-                if (RowAffected > 0)
+                tbl_src_Machinery machinery = new tbl_src_Machinery();
+                machinery = db.MachineryRepository.GetById(MachineryID);
+                if (machinery != null)
                 {
-                    OnMessage(BaranResources.EditSuccessful, PublicEnum.EnmMessageCategory.Success);
+                    machinery.Name = strName;
+                    machinery.Manufacturer = strManufacturer;
+                    machinery.Model = strModel;
+                    machinery.RegNumber = strRegNumber;
+                    machinery.Year = strYear;
+                    machinery.Description = strDescription;
+                    machinery.Fk_MachineryCategoryID = intMachineryCategory;
+                    machinery.Count = intCount;
+                    machinery.Fk_PartID = intParentCo;
+                    machinery.Vigor = dclVigor;
+                    machinery.UpdateUserID = UserID;
+                    machinery.UpdateDate = System.DateTime.Now;
                 }
-                else
-                    OnMessage(BaranResources.EditFail, PublicEnum.EnmMessageCategory.Warning);
+
+                //int RowAffected = Convert.ToInt32(adp.Update(MachineryID, strName, strManufacturer, strModel, strRegNumber, strYear
+                //                            , strDescription, intMachineryCategory, UserID, intCount, intParentCo, dclVigor));
+
+                //if (RowAffected > 0)
+                //{
+                    OnMessage(BaranResources.EditSuccessful, PublicEnum.EnmMessageCategory.Success);
+                //}
+                //else
+                //    OnMessage(BaranResources.EditFail, PublicEnum.EnmMessageCategory.Warning);
             }
             catch
             {

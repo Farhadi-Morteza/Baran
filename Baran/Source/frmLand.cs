@@ -227,14 +227,14 @@ namespace Baran.Source
                 land.UpdateUserID = CurrentUser.Instance.UserID;
                 land.UpdateDate = System.DateTime.Now;
 
-
-
+                land.LandID = LandID;
                 dbContext.LandRepository.Update(land);
                 dbContext.Save();
+                DialogResult = DialogResult.OK;
 
                 OnMessage(BaranResources.EditSuccessful, PublicEnum.EnmMessageCategory.Success);
                 waite.Close();
-                //this.DialogResult = DialogResult.OK;
+               
             }
             catch
             {
@@ -242,6 +242,11 @@ namespace Baran.Source
                 waite.Close();
             }
             waite.Close();
+        }
+
+        private void grpControls_Click(object sender, EventArgs e)
+        {
+
         }
 
         public override void OnDelete()
@@ -291,7 +296,6 @@ namespace Baran.Source
             grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Clear();
         }
          
-
         public override void OnDoc(int? companyID, int? collectionID, int? subcollectionID, int? partID, int? landID, int? fieldID, int? warehouseID, int? buildingID, int? machineryID, int? waterID, int? waterStorageID, int? waterTransmissionLineID)
         {
             if (LandID <= 0)

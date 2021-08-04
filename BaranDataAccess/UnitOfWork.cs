@@ -159,6 +159,23 @@ namespace BaranDataAccess
         // **************************************************
 
         // **************************************************
+        private Repository<tbl_src_Machinery> _machineryRepository;
+
+        public IRepository<tbl_src_Machinery> MachineryRepository
+        {
+            get
+            {
+                if (_machineryRepository == null)
+                {
+                    _machineryRepository = new Repository<tbl_src_Machinery>(DatabaseContext);
+                }
+
+                return _machineryRepository;
+            }
+        }
+        // **************************************************
+
+        // **************************************************
         public bool IsDisposed
         {
             get { throw new NotImplementedException(); }
