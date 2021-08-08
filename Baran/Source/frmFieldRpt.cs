@@ -541,6 +541,11 @@ namespace Baran.Source
 
         }
 
+        private void chkField_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
         public override void OnExport(Windows.Forms.UltraGrid grdItem)
         {
             base.OnExport(this.grdItem);

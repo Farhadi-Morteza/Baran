@@ -98,10 +98,10 @@
             this.rdbPart = new System.Windows.Forms.RadioButton();
             this.tac = new Baran.Windows.Forms.ultraTabControl();
             this.tbcMain = new Infragistics.Win.UltraWinTabControl.UltraTabSharedControlsPage();
+            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).BeginInit();
             this.grpHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpMessage)).BeginInit();
             this.grpMessage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).BeginInit();
@@ -127,22 +127,9 @@
             this.tac.SuspendLayout();
             this.SuspendLayout();
             // 
-            // grpHeader
-            // 
-            this.grpHeader.Size = new System.Drawing.Size(988, 74);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(916, 7);
-            // 
             // btnMaxMin
             // 
             this.btnMaxMin.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
-            // 
-            // lblMessage
-            // 
-            this.lblMessage.Size = new System.Drawing.Size(986, 29);
-            this.lblMessage.Text = "";
             // 
             // grpButons
             // 
@@ -153,6 +140,23 @@
             // 
             this.lblLine2.Location = new System.Drawing.Point(1, 70);
             this.lblLine2.Size = new System.Drawing.Size(986, 3);
+            // 
+            // grpHeader
+            // 
+            this.grpHeader.Size = new System.Drawing.Size(988, 74);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(916, 7);
+            // 
+            // lblCaption
+            // 
+            this.lblCaption.Location = new System.Drawing.Point(612, 21);
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.Size = new System.Drawing.Size(986, 29);
+            this.lblMessage.Text = "";
             // 
             // lblLine1
             // 
@@ -167,10 +171,6 @@
             // 
             this.lblLine3.Location = new System.Drawing.Point(1, 594);
             this.lblLine3.Size = new System.Drawing.Size(986, 3);
-            // 
-            // lblCaption
-            // 
-            this.lblCaption.Location = new System.Drawing.Point(612, 21);
             // 
             // grpMain
             // 
@@ -199,7 +199,7 @@
             this.MainMap.LevelsKeepInMemmory = 5;
             this.MainMap.Location = new System.Drawing.Point(0, 0);
             this.MainMap.MarkersEnabled = true;
-            this.MainMap.MaxZoom = 18;
+            this.MainMap.MaxZoom = 20;
             this.MainMap.MinZoom = 1;
             this.MainMap.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
             this.MainMap.Name = "MainMap";
@@ -379,6 +379,7 @@
             this.cmbCollection.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbCollection.Size = new System.Drawing.Size(197, 22);
             this.cmbCollection.TabIndex = 0;
+            this.cmbCollection.ValueChanged += new System.EventHandler(this.cmbCollection_ValueChanged);
             // 
             // tpcTable
             // 
@@ -867,10 +868,10 @@
             this.ClientSize = new System.Drawing.Size(988, 769);
             this.FormMessage = "";
             this.Name = "frmBuildingsRpt";
+            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).EndInit();
             this.grpHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpMessage)).EndInit();
             this.grpMessage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).EndInit();

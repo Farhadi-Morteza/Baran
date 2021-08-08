@@ -141,6 +141,7 @@ namespace Baran.Maps
         internal readonly GMapOverlay objects = new GMapOverlay("objects");
         internal readonly GMapOverlay routes = new GMapOverlay("routes");
         internal readonly GMapOverlay polygons = new GMapOverlay("polygons");
+        GMapOverlay myroutes = new GMapOverlay("Myroutes");
 
 
         // marker
@@ -691,6 +692,8 @@ namespace Baran.Maps
             TopMost = true;
             TopMost = false;
 
+            int? fk_PartID = null;
+
             UnitOfWork db = new UnitOfWork();
             List<PointLatLng> points = new List<PointLatLng>();
 
@@ -698,6 +701,8 @@ namespace Baran.Maps
             {
                 part = new tbl_src_Part();
                 part = db.PartRepository.GetById(PartID);
+
+                fk_PartID = part.PartID;
 
                 if (part.Location != null)
                 {
@@ -709,6 +714,33 @@ namespace Baran.Maps
                 field = new tbl_src_Field();
                 field = db.FieldRepository.GetById(FieldID);
 
+                fk_PartID = field.Fk_partID;
+
+                tbl_src_Land land = new tbl_src_Land();
+                land = db.LandRepository.GetById(field.Fk_LandID);
+
+                if (land != null)
+                {
+
+                    List<PointLatLng> Mypoints = new List<PointLatLng>();
+                    if (land.Location != null)
+                    {
+                        Mypoints = GeoUtils.ConvertStringCoordinatesToGMapPolygony(land.Location.ProviderValue.ToString());
+
+                        GMapRoute rt = new GMapRoute(Mypoints, string.Empty);
+                        {
+                            rt.Stroke = new Pen(Color.FromArgb(144, Color.White));
+                            rt.Stroke.Width = 5;
+                            rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;                        
+                       }
+                        myroutes.Routes.Add(rt);
+                        /////////////////////////////
+                        //MainMap.Overlays.Clear();
+                        MainMap.Overlays.Add(myroutes);
+                        MainMap.ZoomAndCenterRoutes("Myroutes");
+                    }
+                }
+
                 if (field.LocationPolygon != null)
                 {
                     points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(field.LocationPolygon.ProviderValue.ToString());
@@ -718,6 +750,8 @@ namespace Baran.Maps
             {
                 land = new tbl_src_Land();
                 land = db.LandRepository.GetById(LandID);
+
+                fk_PartID = land.Fk_partID;
 
                 if (land.Location != null)
                 {
@@ -729,6 +763,8 @@ namespace Baran.Maps
                 building = new tbl_src_Buildings();
                 building = db.BuildingsRepository.GetById(BuildingID);
 
+                fk_PartID = building.Fk_PartID;
+
                 if (building.Location != null)
                 {
                     points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(building.Location.ProviderValue.ToString());
@@ -738,6 +774,8 @@ namespace Baran.Maps
             {
                 warehouse = new tbl_src_Warehouse();
                 warehouse = db.WarehouseRepository.GetById(WarehouseID);
+
+                fk_PartID = warehouse.Fk_PartID;
 
                 if (warehouse.Location != null)
                 {
@@ -749,6 +787,8 @@ namespace Baran.Maps
                 water = new tbl_src_Water();
                 water = db.WaterRepository.GetById(WaterID);
 
+                fk_PartID = water.Fk_PartID;
+
                 if (water.Location != null)
                 {
                     points = GeoUtils.ConvertStringPointToGMapPoint(water.Location.ProviderValue.ToString());
@@ -758,6 +798,8 @@ namespace Baran.Maps
             {
                 waterStorage = new tbl_src_WaterStorage();
                 waterStorage = db.WaterStorageRepository.GetById(WaterstorageID);
+
+                fk_PartID = waterStorage.Fk_PartID;
 
                 if (waterStorage.Location != null)
                 {
@@ -769,9 +811,39 @@ namespace Baran.Maps
                 waterTransmissionLine = new tbl_src_WaterTransmissionLine();
                 waterTransmissionLine = db.WaterTransmissionLineRepository.GetById(WaterTransmissionLineID);
 
+                fk_PartID = waterTransmissionLine.Fk_PartID;
+
                 if (waterTransmissionLine.Location != null)
                 {
                     points = GeoUtils.ConvertStringCoordinatesToGMapRoute(waterTransmissionLine.Location.ProviderValue.ToString());
+                }
+            }
+
+            if (fk_PartID != null)
+            {
+                tbl_src_Part partPolygon = new tbl_src_Part();
+                partPolygon = db.PartRepository.GetById(fk_PartID);
+
+                if (partPolygon != null)
+                {
+
+                    List<PointLatLng> Partpoints = new List<PointLatLng>();
+                    if (partPolygon.Location != null)
+                    {
+                        Partpoints = GeoUtils.ConvertStringCoordinatesToGMapPolygony(partPolygon.Location.ProviderValue.ToString());
+
+                        GMapRoute rt = new GMapRoute(Partpoints, string.Empty);
+                        {
+                            rt.Stroke = new Pen(Color.FromArgb(144, Color.Yellow));
+                            rt.Stroke.Width = 4;
+                            rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+                        }
+                        myroutes.Routes.Add(rt);
+                        /////////////////////////////
+                        //MainMap.Overlays.Clear();
+                        MainMap.Overlays.Add(myroutes);
+                        MainMap.ZoomAndCenterRoutes("Myroutes");
+                    }
                 }
             }
 

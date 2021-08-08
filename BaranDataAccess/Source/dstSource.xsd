@@ -927,7 +927,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="spr_src_Buildings_Lst_SelectTableAdapter" GeneratorDataComponentClassName="spr_src_Buildings_Lst_SelectTableAdapter" Name="spr_src_Buildings_Lst_Select" UserDataComponentName="spr_src_Buildings_Lst_SelectTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BaranConnectionString (Settings)" DbObjectName="AMS.dbo.spr_src_Buildings_Lst_Select" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillBuildingsListTable" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetBuildingsListTable" GeneratorSourceName="FillBuildingsListTable" GetMethodModifier="Public" GetMethodName="GetBuildingsListTable" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetBuildingsListTable" UserSourceName="FillBuildingsListTable">
+              <DbSource ConnectionRef="BaranConnectionString (Settings)" DbObjectName="AMS.dbo.spr_src_Buildings_Lst_Select" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillBuildingsListTable" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetBuildingsListTable" GeneratorSourceName="FillBuildingsListTable" GetMethodModifier="Public" GetMethodName="GetBuildingsListTable" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetBuildingsListTable" UserSourceName="FillBuildingsListTable">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.spr_src_Buildings_Lst_Select</CommandText>
@@ -947,6 +947,7 @@
               <Mapping SourceColumn="نام" DataSetColumn="نام" />
               <Mapping SourceColumn="نام واحد" DataSetColumn="نام واحد" />
               <Mapping SourceColumn="نام کشت و صنعت" DataSetColumn="نام کشت و صنعت" />
+              <Mapping SourceColumn="نام واحد فرعی" DataSetColumn="نام واحد فرعی" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -983,7 +984,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="spr_src_Machinery_Lst_SelectTableAdapter" GeneratorDataComponentClassName="spr_src_Machinery_Lst_SelectTableAdapter" Name="spr_src_Machinery_Lst_Select" UserDataComponentName="spr_src_Machinery_Lst_SelectTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BaranConnectionString (Settings)" DbObjectName="AMS.dbo.spr_src_Machinery_Lst_Select" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillMachineryLstSelect" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetMachineryLstSelect" GeneratorSourceName="FillMachineryLstSelect" GetMethodModifier="Public" GetMethodName="GetMachineryLstSelect" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetMachineryLstSelect" UserSourceName="FillMachineryLstSelect">
+              <DbSource ConnectionRef="BaranConnectionString (Settings)" DbObjectName="AMS.dbo.spr_src_Machinery_Lst_Select" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillMachineryLstSelect" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetMachineryLstSelect" GeneratorSourceName="FillMachineryLstSelect" GetMethodModifier="Public" GetMethodName="GetMachineryLstSelect" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetMachineryLstSelect" UserSourceName="FillMachineryLstSelect">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.spr_src_Machinery_Lst_Select</CommandText>
@@ -1008,6 +1009,7 @@
               <Mapping SourceColumn="نام" DataSetColumn="نام" />
               <Mapping SourceColumn="واحد" DataSetColumn="واحد" />
               <Mapping SourceColumn="کشت و صنعت" DataSetColumn="کشت و صنعت" />
+              <Mapping SourceColumn="واحد فرعی" DataSetColumn="واحد فرعی" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -1561,6 +1563,46 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="spr_src_Land_Vew_SelectTableAdapter" GeneratorDataComponentClassName="spr_src_Land_Vew_SelectTableAdapter" Name="spr_src_Land_Vew_Select" UserDataComponentName="spr_src_Land_Vew_SelectTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BaranConnectionString (Settings)" DbObjectName="AMS.dbo.spr_src_Land_Vew_Select" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillLandViewTable" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetLandViewTable" GeneratorSourceName="FillLandViewTable" GetMethodModifier="Public" GetMethodName="GetLandViewTable" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetLandViewTable" UserSourceName="FillLandViewTable">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.spr_src_Land_Vew_Select</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@LandID" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="LandID" DataSetColumn="LandID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Address" DataSetColumn="Address" />
+              <Mapping SourceColumn="City" DataSetColumn="City" />
+              <Mapping SourceColumn="Opposition" DataSetColumn="Opposition" />
+              <Mapping SourceColumn="Salability" DataSetColumn="Salability" />
+              <Mapping SourceColumn="changeUse" DataSetColumn="changeUse" />
+              <Mapping SourceColumn="FutureProgram" DataSetColumn="FutureProgram" />
+              <Mapping SourceColumn="DocPlace" DataSetColumn="DocPlace" />
+              <Mapping SourceColumn="Code" DataSetColumn="Code" />
+              <Mapping SourceColumn="Ownership" DataSetColumn="Ownership" />
+              <Mapping SourceColumn="DocNumber" DataSetColumn="DocNumber" />
+              <Mapping SourceColumn="SoilTextre" DataSetColumn="SoilTextre" />
+              <Mapping SourceColumn="FieldUseType" DataSetColumn="FieldUseType" />
+              <Mapping SourceColumn="UsableArea" DataSetColumn="UsableArea" />
+              <Mapping SourceColumn="TotalArea" DataSetColumn="TotalArea" />
+              <Mapping SourceColumn="FieldName" DataSetColumn="FieldName" />
+              <Mapping SourceColumn="PartName" DataSetColumn="PartName" />
+              <Mapping SourceColumn="SubcollectionName" DataSetColumn="SubcollectionName" />
+              <Mapping SourceColumn="CollectionName" DataSetColumn="CollectionName" />
+              <Mapping SourceColumn="ProvinceName" DataSetColumn="ProvinceName" />
+              <Mapping SourceColumn="TownshipName" DataSetColumn="TownshipName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1569,7 +1611,7 @@
   <xs:element name="dstSource" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dstSource" msprop:Generator_UserDSName="dstSource">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="spr_src_Water_Select" msprop:Generator_TableClassName="spr_src_Water_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Water_Select" msprop:Generator_RowChangedName="spr_src_Water_SelectRowChanged" msprop:Generator_TablePropName="spr_src_Water_Select" msprop:Generator_RowDeletingName="spr_src_Water_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Water_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Water_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Water_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_Water_SelectRow" msprop:Generator_UserTableName="spr_src_Water_Select" msprop:Generator_RowEvArgName="spr_src_Water_SelectRowChangeEvent">
+        <xs:element name="spr_src_Water_Select" msprop:Generator_TableClassName="spr_src_Water_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Water_Select" msprop:Generator_TablePropName="spr_src_Water_Select" msprop:Generator_RowDeletingName="spr_src_Water_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Water_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Water_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Water_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_Water_Select" msprop:Generator_RowChangedName="spr_src_Water_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_Water_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_Water_SelectRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="WaterID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnWaterID" msprop:Generator_ColumnPropNameInRow="WaterID" msprop:Generator_ColumnPropNameInTable="WaterIDColumn" msprop:Generator_UserColumnName="WaterID" type="xs:int" />
@@ -1614,7 +1656,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_Machinery_Select" msprop:Generator_TableClassName="spr_src_Machinery_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Machinery_Select" msprop:Generator_TablePropName="spr_src_Machinery_Select" msprop:Generator_RowDeletingName="spr_src_Machinery_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Machinery_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Machinery_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Machinery_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_Machinery_Select" msprop:Generator_RowChangedName="spr_src_Machinery_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_Machinery_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_Machinery_SelectRow">
+        <xs:element name="spr_src_Machinery_Select" msprop:Generator_TableClassName="spr_src_Machinery_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Machinery_Select" msprop:Generator_RowChangedName="spr_src_Machinery_SelectRowChanged" msprop:Generator_TablePropName="spr_src_Machinery_Select" msprop:Generator_RowDeletingName="spr_src_Machinery_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Machinery_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Machinery_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Machinery_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_Machinery_SelectRow" msprop:Generator_UserTableName="spr_src_Machinery_Select" msprop:Generator_RowEvArgName="spr_src_Machinery_SelectRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MachineryID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMachineryID" msprop:Generator_ColumnPropNameInRow="MachineryID" msprop:Generator_ColumnPropNameInTable="MachineryIDColumn" msprop:Generator_UserColumnName="MachineryID" type="xs:int" />
@@ -1691,7 +1733,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_Field_Select" msprop:Generator_TableClassName="spr_src_Field_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Field_Select" msprop:Generator_TablePropName="spr_src_Field_Select" msprop:Generator_RowDeletingName="spr_src_Field_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Field_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Field_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Field_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_Field_Select" msprop:Generator_RowChangedName="spr_src_Field_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_Field_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_Field_SelectRow">
+        <xs:element name="spr_src_Field_Select" msprop:Generator_TableClassName="spr_src_Field_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Field_Select" msprop:Generator_RowChangedName="spr_src_Field_SelectRowChanged" msprop:Generator_TablePropName="spr_src_Field_Select" msprop:Generator_RowDeletingName="spr_src_Field_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Field_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Field_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Field_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_Field_SelectRow" msprop:Generator_UserTableName="spr_src_Field_Select" msprop:Generator_RowEvArgName="spr_src_Field_SelectRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FieldID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnFieldID" msprop:Generator_ColumnPropNameInRow="FieldID" msprop:Generator_ColumnPropNameInTable="FieldIDColumn" msprop:Generator_UserColumnName="FieldID" type="xs:int" />
@@ -1800,7 +1842,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_Warehouse_Select" msprop:Generator_TableClassName="spr_src_Warehouse_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Warehouse_Select" msprop:Generator_TablePropName="spr_src_Warehouse_Select" msprop:Generator_RowDeletingName="spr_src_Warehouse_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Warehouse_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Warehouse_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Warehouse_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_Warehouse_Select" msprop:Generator_RowChangedName="spr_src_Warehouse_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_Warehouse_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_Warehouse_SelectRow">
+        <xs:element name="spr_src_Warehouse_Select" msprop:Generator_TableClassName="spr_src_Warehouse_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Warehouse_Select" msprop:Generator_RowChangedName="spr_src_Warehouse_SelectRowChanged" msprop:Generator_TablePropName="spr_src_Warehouse_Select" msprop:Generator_RowDeletingName="spr_src_Warehouse_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Warehouse_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Warehouse_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Warehouse_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_Warehouse_SelectRow" msprop:Generator_UserTableName="spr_src_Warehouse_Select" msprop:Generator_RowEvArgName="spr_src_Warehouse_SelectRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="WarehouseID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnWarehouseID" msprop:Generator_ColumnPropNameInRow="WarehouseID" msprop:Generator_ColumnPropNameInTable="WarehouseIDColumn" msprop:Generator_UserColumnName="WarehouseID" type="xs:int" />
@@ -1868,7 +1910,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_Buildings_Select" msprop:Generator_TableClassName="spr_src_Buildings_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Buildings_Select" msprop:Generator_TablePropName="spr_src_Buildings_Select" msprop:Generator_RowDeletingName="spr_src_Buildings_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Buildings_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Buildings_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Buildings_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_Buildings_Select" msprop:Generator_RowChangedName="spr_src_Buildings_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_Buildings_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_Buildings_SelectRow">
+        <xs:element name="spr_src_Buildings_Select" msprop:Generator_TableClassName="spr_src_Buildings_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Buildings_Select" msprop:Generator_RowChangedName="spr_src_Buildings_SelectRowChanged" msprop:Generator_TablePropName="spr_src_Buildings_Select" msprop:Generator_RowDeletingName="spr_src_Buildings_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Buildings_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Buildings_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Buildings_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_Buildings_SelectRow" msprop:Generator_UserTableName="spr_src_Buildings_Select" msprop:Generator_RowEvArgName="spr_src_Buildings_SelectRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="BuildingsID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnBuildingsID" msprop:Generator_ColumnPropNameInRow="BuildingsID" msprop:Generator_ColumnPropNameInTable="BuildingsIDColumn" msprop:Generator_UserColumnName="BuildingsID" type="xs:int" />
@@ -1920,7 +1962,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_WaterStorage_Select" msprop:Generator_TableClassName="spr_src_WaterStorage_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterStorage_Select" msprop:Generator_TablePropName="spr_src_WaterStorage_Select" msprop:Generator_RowDeletingName="spr_src_WaterStorage_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterStorage_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterStorage_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterStorage_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_WaterStorage_Select" msprop:Generator_RowChangedName="spr_src_WaterStorage_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_WaterStorage_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_WaterStorage_SelectRow">
+        <xs:element name="spr_src_WaterStorage_Select" msprop:Generator_TableClassName="spr_src_WaterStorage_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterStorage_Select" msprop:Generator_RowChangedName="spr_src_WaterStorage_SelectRowChanged" msprop:Generator_TablePropName="spr_src_WaterStorage_Select" msprop:Generator_RowDeletingName="spr_src_WaterStorage_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterStorage_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterStorage_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterStorage_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_WaterStorage_SelectRow" msprop:Generator_UserTableName="spr_src_WaterStorage_Select" msprop:Generator_RowEvArgName="spr_src_WaterStorage_SelectRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="WaterStorageID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnWaterStorageID" msprop:Generator_ColumnPropNameInRow="WaterStorageID" msprop:Generator_ColumnPropNameInTable="WaterStorageIDColumn" msprop:Generator_UserColumnName="WaterStorageID" type="xs:int" />
@@ -1952,7 +1994,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_WaterStorageD_Select" msprop:Generator_TableClassName="spr_src_WaterStorageD_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterStorageD_Select" msprop:Generator_TablePropName="spr_src_WaterStorageD_Select" msprop:Generator_RowDeletingName="spr_src_WaterStorageD_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterStorageD_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterStorageD_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterStorageD_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_WaterStorageD_Select" msprop:Generator_RowChangedName="spr_src_WaterStorageD_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_WaterStorageD_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_WaterStorageD_SelectRow">
+        <xs:element name="spr_src_WaterStorageD_Select" msprop:Generator_TableClassName="spr_src_WaterStorageD_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterStorageD_Select" msprop:Generator_RowChangedName="spr_src_WaterStorageD_SelectRowChanged" msprop:Generator_TablePropName="spr_src_WaterStorageD_Select" msprop:Generator_RowDeletingName="spr_src_WaterStorageD_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterStorageD_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterStorageD_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterStorageD_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_WaterStorageD_SelectRow" msprop:Generator_UserTableName="spr_src_WaterStorageD_Select" msprop:Generator_RowEvArgName="spr_src_WaterStorageD_SelectRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="WaterStorageDID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnWaterStorageDID" msprop:Generator_ColumnPropNameInRow="WaterStorageDID" msprop:Generator_ColumnPropNameInTable="WaterStorageDIDColumn" msprop:Generator_UserColumnName="WaterStorageDID" type="xs:int" />
@@ -1969,7 +2011,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_WaterStorageAndDetails_Select" msprop:Generator_TableClassName="spr_src_WaterStorageAndDetails_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterStorageAndDetails_Select" msprop:Generator_TablePropName="spr_src_WaterStorageAndDetails_Select" msprop:Generator_RowDeletingName="spr_src_WaterStorageAndDetails_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterStorageAndDetails_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterStorageAndDetails_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterStorageAndDetails_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_WaterStorageAndDetails_Select" msprop:Generator_RowChangedName="spr_src_WaterStorageAndDetails_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_WaterStorageAndDetails_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_WaterStorageAndDetails_SelectRow">
+        <xs:element name="spr_src_WaterStorageAndDetails_Select" msprop:Generator_TableClassName="spr_src_WaterStorageAndDetails_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterStorageAndDetails_Select" msprop:Generator_RowChangedName="spr_src_WaterStorageAndDetails_SelectRowChanged" msprop:Generator_TablePropName="spr_src_WaterStorageAndDetails_Select" msprop:Generator_RowDeletingName="spr_src_WaterStorageAndDetails_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterStorageAndDetails_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterStorageAndDetails_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterStorageAndDetails_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_WaterStorageAndDetails_SelectRow" msprop:Generator_UserTableName="spr_src_WaterStorageAndDetails_Select" msprop:Generator_RowEvArgName="spr_src_WaterStorageAndDetails_SelectRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="WaterStorageName" msprop:Generator_ColumnVarNameInTable="columnWaterStorageName" msprop:Generator_ColumnPropNameInRow="WaterStorageName" msprop:Generator_ColumnPropNameInTable="WaterStorageNameColumn" msprop:Generator_UserColumnName="WaterStorageName" minOccurs="0">
@@ -1999,7 +2041,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_WaterTransmissionLine_Select" msprop:Generator_TableClassName="spr_src_WaterTransmissionLine_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterTransmissionLine_Select" msprop:Generator_TablePropName="spr_src_WaterTransmissionLine_Select" msprop:Generator_RowDeletingName="spr_src_WaterTransmissionLine_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterTransmissionLine_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterTransmissionLine_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterTransmissionLine_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_WaterTransmissionLine_Select" msprop:Generator_RowChangedName="spr_src_WaterTransmissionLine_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_WaterTransmissionLine_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_WaterTransmissionLine_SelectRow">
+        <xs:element name="spr_src_WaterTransmissionLine_Select" msprop:Generator_TableClassName="spr_src_WaterTransmissionLine_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterTransmissionLine_Select" msprop:Generator_RowChangedName="spr_src_WaterTransmissionLine_SelectRowChanged" msprop:Generator_TablePropName="spr_src_WaterTransmissionLine_Select" msprop:Generator_RowDeletingName="spr_src_WaterTransmissionLine_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterTransmissionLine_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterTransmissionLine_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterTransmissionLine_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_WaterTransmissionLine_SelectRow" msprop:Generator_UserTableName="spr_src_WaterTransmissionLine_Select" msprop:Generator_RowEvArgName="spr_src_WaterTransmissionLine_SelectRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="WaterTransmissionLineID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnWaterTransmissionLineID" msprop:Generator_ColumnPropNameInRow="WaterTransmissionLineID" msprop:Generator_ColumnPropNameInTable="WaterTransmissionLineIDColumn" msprop:Generator_UserColumnName="WaterTransmissionLineID" type="xs:int" />
@@ -2031,7 +2073,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_Field_Lst_Select" msprop:Generator_TableClassName="spr_src_Field_Lst_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Field_Lst_Select" msprop:Generator_TablePropName="spr_src_Field_Lst_Select" msprop:Generator_RowDeletingName="spr_src_Field_Lst_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Field_Lst_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Field_Lst_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Field_Lst_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_Field_Lst_Select" msprop:Generator_RowChangedName="spr_src_Field_Lst_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_Field_Lst_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_Field_Lst_SelectRow">
+        <xs:element name="spr_src_Field_Lst_Select" msprop:Generator_TableClassName="spr_src_Field_Lst_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Field_Lst_Select" msprop:Generator_RowChangedName="spr_src_Field_Lst_SelectRowChanged" msprop:Generator_TablePropName="spr_src_Field_Lst_Select" msprop:Generator_RowDeletingName="spr_src_Field_Lst_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Field_Lst_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Field_Lst_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Field_Lst_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_Field_Lst_SelectRow" msprop:Generator_UserTableName="spr_src_Field_Lst_Select" msprop:Generator_RowEvArgName="spr_src_Field_Lst_SelectRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FieldID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnFieldID" msprop:Generator_ColumnPropNameInRow="FieldID" msprop:Generator_ColumnPropNameInTable="FieldIDColumn" msprop:Generator_UserColumnName="FieldID" type="xs:int" />
@@ -2148,7 +2190,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_FieldByID_Select" msprop:Generator_TableClassName="spr_src_FieldByID_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_FieldByID_Select" msprop:Generator_RowChangedName="spr_src_FieldByID_SelectRowChanged" msprop:Generator_TablePropName="spr_src_FieldByID_Select" msprop:Generator_RowDeletingName="spr_src_FieldByID_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_FieldByID_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_FieldByID_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_FieldByID_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_FieldByID_SelectRow" msprop:Generator_UserTableName="spr_src_FieldByID_Select" msprop:Generator_RowEvArgName="spr_src_FieldByID_SelectRowChangeEvent">
+        <xs:element name="spr_src_FieldByID_Select" msprop:Generator_TableClassName="spr_src_FieldByID_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_FieldByID_Select" msprop:Generator_TablePropName="spr_src_FieldByID_Select" msprop:Generator_RowDeletingName="spr_src_FieldByID_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_FieldByID_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_FieldByID_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_FieldByID_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_FieldByID_Select" msprop:Generator_RowChangedName="spr_src_FieldByID_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_FieldByID_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_FieldByID_SelectRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FieldID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnFieldID" msprop:Generator_ColumnPropNameInRow="FieldID" msprop:Generator_ColumnPropNameInTable="FieldIDColumn" msprop:Generator_UserColumnName="FieldID" type="xs:int" />
@@ -2229,7 +2271,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_Buildings_Lst_Select" msprop:Generator_TableClassName="spr_src_Buildings_Lst_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Buildings_Lst_Select" msprop:Generator_RowChangedName="spr_src_Buildings_Lst_SelectRowChanged" msprop:Generator_TablePropName="spr_src_Buildings_Lst_Select" msprop:Generator_RowDeletingName="spr_src_Buildings_Lst_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Buildings_Lst_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Buildings_Lst_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Buildings_Lst_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_Buildings_Lst_SelectRow" msprop:Generator_UserTableName="spr_src_Buildings_Lst_Select" msprop:Generator_RowEvArgName="spr_src_Buildings_Lst_SelectRowChangeEvent">
+        <xs:element name="spr_src_Buildings_Lst_Select" msprop:Generator_TableClassName="spr_src_Buildings_Lst_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Buildings_Lst_Select" msprop:Generator_TablePropName="spr_src_Buildings_Lst_Select" msprop:Generator_RowDeletingName="spr_src_Buildings_Lst_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Buildings_Lst_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Buildings_Lst_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Buildings_Lst_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_Buildings_Lst_Select" msprop:Generator_RowChangedName="spr_src_Buildings_Lst_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_Buildings_Lst_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_Buildings_Lst_SelectRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="BuildingsID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnBuildingsID" msprop:Generator_ColumnPropNameInRow="BuildingsID" msprop:Generator_ColumnPropNameInTable="BuildingsIDColumn" msprop:Generator_UserColumnName="BuildingsID" type="xs:int" />
@@ -2255,7 +2297,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="نام_x0020_واحد" msprop:Generator_ColumnVarNameInTable="columnنام_واحد" msprop:Generator_ColumnPropNameInRow="نام_واحد" msprop:Generator_ColumnPropNameInTable="نام_واحدColumn" msprop:Generator_UserColumnName="نام واحد">
+              <xs:element name="نام_x0020_واحد" msprop:Generator_ColumnVarNameInTable="columnنام_واحد" msprop:Generator_ColumnPropNameInRow="نام_واحد" msprop:Generator_ColumnPropNameInTable="نام_واحدColumn" msprop:Generator_UserColumnName="نام واحد" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -2269,10 +2311,17 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="نام_x0020_واحد_x0020_فرعی" msprop:Generator_ColumnVarNameInTable="columnنام_واحد_فرعی" msprop:Generator_ColumnPropNameInRow="نام_واحد_فرعی" msprop:Generator_ColumnPropNameInTable="نام_واحد_فرعیColumn" msprop:Generator_UserColumnName="نام واحد فرعی">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_BuildingsByID_Select" msprop:Generator_TableClassName="spr_src_BuildingsByID_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_BuildingsByID_Select" msprop:Generator_TablePropName="spr_src_BuildingsByID_Select" msprop:Generator_RowDeletingName="spr_src_BuildingsByID_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_BuildingsByID_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_BuildingsByID_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_BuildingsByID_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_BuildingsByID_Select" msprop:Generator_RowChangedName="spr_src_BuildingsByID_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_BuildingsByID_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_BuildingsByID_SelectRow">
+        <xs:element name="spr_src_BuildingsByID_Select" msprop:Generator_TableClassName="spr_src_BuildingsByID_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_BuildingsByID_Select" msprop:Generator_RowChangedName="spr_src_BuildingsByID_SelectRowChanged" msprop:Generator_TablePropName="spr_src_BuildingsByID_Select" msprop:Generator_RowDeletingName="spr_src_BuildingsByID_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_BuildingsByID_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_BuildingsByID_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_BuildingsByID_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_BuildingsByID_SelectRow" msprop:Generator_UserTableName="spr_src_BuildingsByID_Select" msprop:Generator_RowEvArgName="spr_src_BuildingsByID_SelectRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="BuildingsID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnBuildingsID" msprop:Generator_ColumnPropNameInRow="BuildingsID" msprop:Generator_ColumnPropNameInTable="BuildingsIDColumn" msprop:Generator_UserColumnName="BuildingsID" type="xs:int" />
@@ -2303,7 +2352,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_Machinery_Lst_Select" msprop:Generator_TableClassName="spr_src_Machinery_Lst_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Machinery_Lst_Select" msprop:Generator_RowChangedName="spr_src_Machinery_Lst_SelectRowChanged" msprop:Generator_TablePropName="spr_src_Machinery_Lst_Select" msprop:Generator_RowDeletingName="spr_src_Machinery_Lst_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Machinery_Lst_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Machinery_Lst_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Machinery_Lst_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_Machinery_Lst_SelectRow" msprop:Generator_UserTableName="spr_src_Machinery_Lst_Select" msprop:Generator_RowEvArgName="spr_src_Machinery_Lst_SelectRowChangeEvent">
+        <xs:element name="spr_src_Machinery_Lst_Select" msprop:Generator_TableClassName="spr_src_Machinery_Lst_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Machinery_Lst_Select" msprop:Generator_TablePropName="spr_src_Machinery_Lst_Select" msprop:Generator_RowDeletingName="spr_src_Machinery_Lst_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Machinery_Lst_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Machinery_Lst_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Machinery_Lst_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_Machinery_Lst_Select" msprop:Generator_RowChangedName="spr_src_Machinery_Lst_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_Machinery_Lst_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_Machinery_Lst_SelectRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MachineryID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMachineryID" msprop:Generator_ColumnPropNameInRow="MachineryID" msprop:Generator_ColumnPropNameInTable="MachineryIDColumn" msprop:Generator_UserColumnName="MachineryID" type="xs:int" />
@@ -2372,10 +2421,17 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="واحد_x0020_فرعی" msprop:Generator_ColumnVarNameInTable="columnواحد_فرعی" msprop:Generator_ColumnPropNameInRow="واحد_فرعی" msprop:Generator_ColumnPropNameInTable="واحد_فرعیColumn" msprop:Generator_UserColumnName="واحد فرعی">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_MachineryByID_Select" msprop:Generator_TableClassName="spr_src_MachineryByID_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_MachineryByID_Select" msprop:Generator_TablePropName="spr_src_MachineryByID_Select" msprop:Generator_RowDeletingName="spr_src_MachineryByID_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_MachineryByID_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_MachineryByID_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_MachineryByID_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_MachineryByID_Select" msprop:Generator_RowChangedName="spr_src_MachineryByID_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_MachineryByID_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_MachineryByID_SelectRow">
+        <xs:element name="spr_src_MachineryByID_Select" msprop:Generator_TableClassName="spr_src_MachineryByID_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_MachineryByID_Select" msprop:Generator_RowChangedName="spr_src_MachineryByID_SelectRowChanged" msprop:Generator_TablePropName="spr_src_MachineryByID_Select" msprop:Generator_RowDeletingName="spr_src_MachineryByID_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_MachineryByID_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_MachineryByID_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_MachineryByID_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_MachineryByID_SelectRow" msprop:Generator_UserTableName="spr_src_MachineryByID_Select" msprop:Generator_RowEvArgName="spr_src_MachineryByID_SelectRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MachineryID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMachineryID" msprop:Generator_ColumnPropNameInRow="MachineryID" msprop:Generator_ColumnPropNameInTable="MachineryIDColumn" msprop:Generator_UserColumnName="MachineryID" type="xs:int" />
@@ -2438,7 +2494,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_Water_Lst_Select" msprop:Generator_TableClassName="spr_src_Water_Lst_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Water_Lst_Select" msprop:Generator_RowChangedName="spr_src_Water_Lst_SelectRowChanged" msprop:Generator_TablePropName="spr_src_Water_Lst_Select" msprop:Generator_RowDeletingName="spr_src_Water_Lst_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Water_Lst_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Water_Lst_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Water_Lst_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_Water_Lst_SelectRow" msprop:Generator_UserTableName="spr_src_Water_Lst_Select" msprop:Generator_RowEvArgName="spr_src_Water_Lst_SelectRowChangeEvent">
+        <xs:element name="spr_src_Water_Lst_Select" msprop:Generator_TableClassName="spr_src_Water_Lst_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Water_Lst_Select" msprop:Generator_TablePropName="spr_src_Water_Lst_Select" msprop:Generator_RowDeletingName="spr_src_Water_Lst_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Water_Lst_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Water_Lst_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Water_Lst_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_Water_Lst_Select" msprop:Generator_RowChangedName="spr_src_Water_Lst_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_Water_Lst_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_Water_Lst_SelectRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="توضیحات" msprop:Generator_ColumnVarNameInTable="columnتوضیحات" msprop:Generator_ColumnPropNameInRow="توضیحات" msprop:Generator_ColumnPropNameInTable="توضیحاتColumn" msprop:Generator_UserColumnName="توضیحات" minOccurs="0">
@@ -2488,7 +2544,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_WaterByID_Select" msprop:Generator_TableClassName="spr_src_WaterByID_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterByID_Select" msprop:Generator_RowChangedName="spr_src_WaterByID_SelectRowChanged" msprop:Generator_TablePropName="spr_src_WaterByID_Select" msprop:Generator_RowDeletingName="spr_src_WaterByID_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterByID_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterByID_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterByID_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_WaterByID_SelectRow" msprop:Generator_UserTableName="spr_src_WaterByID_Select" msprop:Generator_RowEvArgName="spr_src_WaterByID_SelectRowChangeEvent">
+        <xs:element name="spr_src_WaterByID_Select" msprop:Generator_TableClassName="spr_src_WaterByID_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterByID_Select" msprop:Generator_TablePropName="spr_src_WaterByID_Select" msprop:Generator_RowDeletingName="spr_src_WaterByID_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterByID_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterByID_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterByID_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_WaterByID_Select" msprop:Generator_RowChangedName="spr_src_WaterByID_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_WaterByID_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_WaterByID_SelectRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="WaterID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnWaterID" msprop:Generator_ColumnPropNameInRow="WaterID" msprop:Generator_ColumnPropNameInTable="WaterIDColumn" msprop:Generator_UserColumnName="WaterID" type="xs:int" />
@@ -2519,7 +2575,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_WaterTransmissionLine_Lst_Select" msprop:Generator_TableClassName="spr_src_WaterTransmissionLine_Lst_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterTransmissionLine_Lst_Select" msprop:Generator_RowChangedName="spr_src_WaterTransmissionLine_Lst_SelectRowChanged" msprop:Generator_TablePropName="spr_src_WaterTransmissionLine_Lst_Select" msprop:Generator_RowDeletingName="spr_src_WaterTransmissionLine_Lst_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterTransmissionLine_Lst_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterTransmissionLine_Lst_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterTransmissionLine_Lst_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_WaterTransmissionLine_Lst_SelectRow" msprop:Generator_UserTableName="spr_src_WaterTransmissionLine_Lst_Select" msprop:Generator_RowEvArgName="spr_src_WaterTransmissionLine_Lst_SelectRowChangeEvent">
+        <xs:element name="spr_src_WaterTransmissionLine_Lst_Select" msprop:Generator_TableClassName="spr_src_WaterTransmissionLine_Lst_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterTransmissionLine_Lst_Select" msprop:Generator_TablePropName="spr_src_WaterTransmissionLine_Lst_Select" msprop:Generator_RowDeletingName="spr_src_WaterTransmissionLine_Lst_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterTransmissionLine_Lst_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterTransmissionLine_Lst_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterTransmissionLine_Lst_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_WaterTransmissionLine_Lst_Select" msprop:Generator_RowChangedName="spr_src_WaterTransmissionLine_Lst_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_WaterTransmissionLine_Lst_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_WaterTransmissionLine_Lst_SelectRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="WaterTransmissionLineID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnWaterTransmissionLineID" msprop:Generator_ColumnPropNameInRow="WaterTransmissionLineID" msprop:Generator_ColumnPropNameInTable="WaterTransmissionLineIDColumn" msprop:Generator_UserColumnName="WaterTransmissionLineID" type="xs:int" />
@@ -2570,7 +2626,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_WaterTransmissionLineByID_Select" msprop:Generator_TableClassName="spr_src_WaterTransmissionLineByID_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterTransmissionLineByID_Select" msprop:Generator_TablePropName="spr_src_WaterTransmissionLineByID_Select" msprop:Generator_RowDeletingName="spr_src_WaterTransmissionLineByID_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterTransmissionLineByID_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterTransmissionLineByID_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterTransmissionLineByID_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_WaterTransmissionLineByID_Select" msprop:Generator_RowChangedName="spr_src_WaterTransmissionLineByID_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_WaterTransmissionLineByID_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_WaterTransmissionLineByID_SelectRow">
+        <xs:element name="spr_src_WaterTransmissionLineByID_Select" msprop:Generator_TableClassName="spr_src_WaterTransmissionLineByID_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterTransmissionLineByID_Select" msprop:Generator_RowChangedName="spr_src_WaterTransmissionLineByID_SelectRowChanged" msprop:Generator_TablePropName="spr_src_WaterTransmissionLineByID_Select" msprop:Generator_RowDeletingName="spr_src_WaterTransmissionLineByID_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterTransmissionLineByID_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterTransmissionLineByID_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterTransmissionLineByID_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_WaterTransmissionLineByID_SelectRow" msprop:Generator_UserTableName="spr_src_WaterTransmissionLineByID_Select" msprop:Generator_RowEvArgName="spr_src_WaterTransmissionLineByID_SelectRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="WaterTransmissionLineID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnWaterTransmissionLineID" msprop:Generator_ColumnPropNameInRow="WaterTransmissionLineID" msprop:Generator_ColumnPropNameInTable="WaterTransmissionLineIDColumn" msprop:Generator_UserColumnName="WaterTransmissionLineID" type="xs:int" />
@@ -2602,14 +2658,14 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_Warehouse_Lst_Select" msprop:Generator_TableClassName="spr_src_Warehouse_Lst_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Warehouse_Lst_Select" msprop:Generator_RowChangedName="spr_src_Warehouse_Lst_SelectRowChanged" msprop:Generator_TablePropName="spr_src_Warehouse_Lst_Select" msprop:Generator_RowDeletingName="spr_src_Warehouse_Lst_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Warehouse_Lst_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Warehouse_Lst_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Warehouse_Lst_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_Warehouse_Lst_SelectRow" msprop:Generator_UserTableName="spr_src_Warehouse_Lst_Select" msprop:Generator_RowEvArgName="spr_src_Warehouse_Lst_SelectRowChangeEvent">
+        <xs:element name="spr_src_Warehouse_Lst_Select" msprop:Generator_TableClassName="spr_src_Warehouse_Lst_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Warehouse_Lst_Select" msprop:Generator_TablePropName="spr_src_Warehouse_Lst_Select" msprop:Generator_RowDeletingName="spr_src_Warehouse_Lst_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Warehouse_Lst_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Warehouse_Lst_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Warehouse_Lst_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_Warehouse_Lst_Select" msprop:Generator_RowChangedName="spr_src_Warehouse_Lst_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_Warehouse_Lst_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_Warehouse_Lst_SelectRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="WarehouseID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnWarehouseID" msprop:Generator_ColumnPropNameInRow="WarehouseID" msprop:Generator_ColumnPropNameInTable="WarehouseIDColumn" msprop:Generator_UserColumnName="WarehouseID" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_WarehouseByID_Select" msprop:Generator_TableClassName="spr_src_WarehouseByID_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WarehouseByID_Select" msprop:Generator_TablePropName="spr_src_WarehouseByID_Select" msprop:Generator_RowDeletingName="spr_src_WarehouseByID_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WarehouseByID_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WarehouseByID_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WarehouseByID_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_WarehouseByID_Select" msprop:Generator_RowChangedName="spr_src_WarehouseByID_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_WarehouseByID_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_WarehouseByID_SelectRow">
+        <xs:element name="spr_src_WarehouseByID_Select" msprop:Generator_TableClassName="spr_src_WarehouseByID_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WarehouseByID_Select" msprop:Generator_RowChangedName="spr_src_WarehouseByID_SelectRowChanged" msprop:Generator_TablePropName="spr_src_WarehouseByID_Select" msprop:Generator_RowDeletingName="spr_src_WarehouseByID_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WarehouseByID_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WarehouseByID_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WarehouseByID_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_WarehouseByID_SelectRow" msprop:Generator_UserTableName="spr_src_WarehouseByID_Select" msprop:Generator_RowEvArgName="spr_src_WarehouseByID_SelectRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="WarehouseID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnWarehouseID" msprop:Generator_ColumnPropNameInRow="WarehouseID" msprop:Generator_ColumnPropNameInTable="WarehouseIDColumn" msprop:Generator_UserColumnName="WarehouseID" type="xs:int" />
@@ -2656,11 +2712,11 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_WaterStorage_Lst_Select" msprop:Generator_TableClassName="spr_src_WaterStorage_Lst_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterStorage_Lst_Select" msprop:Generator_RowChangedName="spr_src_WaterStorage_Lst_SelectRowChanged" msprop:Generator_TablePropName="spr_src_WaterStorage_Lst_Select" msprop:Generator_RowDeletingName="spr_src_WaterStorage_Lst_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterStorage_Lst_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterStorage_Lst_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterStorage_Lst_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_WaterStorage_Lst_SelectRow" msprop:Generator_UserTableName="spr_src_WaterStorage_Lst_Select" msprop:Generator_RowEvArgName="spr_src_WaterStorage_Lst_SelectRowChangeEvent">
+        <xs:element name="spr_src_WaterStorage_Lst_Select" msprop:Generator_TableClassName="spr_src_WaterStorage_Lst_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterStorage_Lst_Select" msprop:Generator_TablePropName="spr_src_WaterStorage_Lst_Select" msprop:Generator_RowDeletingName="spr_src_WaterStorage_Lst_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterStorage_Lst_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterStorage_Lst_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterStorage_Lst_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_WaterStorage_Lst_Select" msprop:Generator_RowChangedName="spr_src_WaterStorage_Lst_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_WaterStorage_Lst_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_WaterStorage_Lst_SelectRow">
           <xs:complexType>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_Field_Vew_Select" msprop:Generator_TableClassName="spr_src_Field_Vew_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Field_Vew_Select" msprop:Generator_RowChangedName="spr_src_Field_Vew_SelectRowChanged" msprop:Generator_TablePropName="spr_src_Field_Vew_Select" msprop:Generator_RowDeletingName="spr_src_Field_Vew_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Field_Vew_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Field_Vew_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Field_Vew_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_Field_Vew_SelectRow" msprop:Generator_UserTableName="spr_src_Field_Vew_Select" msprop:Generator_RowEvArgName="spr_src_Field_Vew_SelectRowChangeEvent">
+        <xs:element name="spr_src_Field_Vew_Select" msprop:Generator_TableClassName="spr_src_Field_Vew_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Field_Vew_Select" msprop:Generator_TablePropName="spr_src_Field_Vew_Select" msprop:Generator_RowDeletingName="spr_src_Field_Vew_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Field_Vew_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Field_Vew_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Field_Vew_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_Field_Vew_Select" msprop:Generator_RowChangedName="spr_src_Field_Vew_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_Field_Vew_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_Field_Vew_SelectRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FieldID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnFieldID" msprop:Generator_ColumnPropNameInRow="FieldID" msprop:Generator_ColumnPropNameInTable="FieldIDColumn" msprop:Generator_UserColumnName="FieldID" type="xs:int" />
@@ -2784,7 +2840,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_Buildings_Vew_Select" msprop:Generator_TableClassName="spr_src_Buildings_Vew_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Buildings_Vew_Select" msprop:Generator_RowChangedName="spr_src_Buildings_Vew_SelectRowChanged" msprop:Generator_TablePropName="spr_src_Buildings_Vew_Select" msprop:Generator_RowDeletingName="spr_src_Buildings_Vew_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Buildings_Vew_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Buildings_Vew_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Buildings_Vew_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_Buildings_Vew_SelectRow" msprop:Generator_UserTableName="spr_src_Buildings_Vew_Select" msprop:Generator_RowEvArgName="spr_src_Buildings_Vew_SelectRowChangeEvent">
+        <xs:element name="spr_src_Buildings_Vew_Select" msprop:Generator_TableClassName="spr_src_Buildings_Vew_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Buildings_Vew_Select" msprop:Generator_TablePropName="spr_src_Buildings_Vew_Select" msprop:Generator_RowDeletingName="spr_src_Buildings_Vew_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Buildings_Vew_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Buildings_Vew_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Buildings_Vew_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_Buildings_Vew_Select" msprop:Generator_RowChangedName="spr_src_Buildings_Vew_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_Buildings_Vew_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_Buildings_Vew_SelectRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="BuildingsID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnBuildingsID" msprop:Generator_ColumnPropNameInRow="BuildingsID" msprop:Generator_ColumnPropNameInTable="BuildingsIDColumn" msprop:Generator_UserColumnName="BuildingsID" type="xs:int" />
@@ -2827,7 +2883,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_Machinery_Vew_Select" msprop:Generator_TableClassName="spr_src_Machinery_Vew_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Machinery_Vew_Select" msprop:Generator_TablePropName="spr_src_Machinery_Vew_Select" msprop:Generator_RowDeletingName="spr_src_Machinery_Vew_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Machinery_Vew_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Machinery_Vew_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Machinery_Vew_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_Machinery_Vew_Select" msprop:Generator_RowChangedName="spr_src_Machinery_Vew_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_Machinery_Vew_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_Machinery_Vew_SelectRow">
+        <xs:element name="spr_src_Machinery_Vew_Select" msprop:Generator_TableClassName="spr_src_Machinery_Vew_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Machinery_Vew_Select" msprop:Generator_RowChangedName="spr_src_Machinery_Vew_SelectRowChanged" msprop:Generator_TablePropName="spr_src_Machinery_Vew_Select" msprop:Generator_RowDeletingName="spr_src_Machinery_Vew_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Machinery_Vew_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Machinery_Vew_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Machinery_Vew_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_Machinery_Vew_SelectRow" msprop:Generator_UserTableName="spr_src_Machinery_Vew_Select" msprop:Generator_RowEvArgName="spr_src_Machinery_Vew_SelectRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MachineryID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMachineryID" msprop:Generator_ColumnPropNameInRow="MachineryID" msprop:Generator_ColumnPropNameInTable="MachineryIDColumn" msprop:Generator_UserColumnName="MachineryID" type="xs:int" minOccurs="0" />
@@ -2899,7 +2955,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_Warehouse_Vew_Select" msprop:Generator_TableClassName="spr_src_Warehouse_Vew_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Warehouse_Vew_Select" msprop:Generator_RowChangedName="spr_src_Warehouse_Vew_SelectRowChanged" msprop:Generator_TablePropName="spr_src_Warehouse_Vew_Select" msprop:Generator_RowDeletingName="spr_src_Warehouse_Vew_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Warehouse_Vew_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Warehouse_Vew_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Warehouse_Vew_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_Warehouse_Vew_SelectRow" msprop:Generator_UserTableName="spr_src_Warehouse_Vew_Select" msprop:Generator_RowEvArgName="spr_src_Warehouse_Vew_SelectRowChangeEvent">
+        <xs:element name="spr_src_Warehouse_Vew_Select" msprop:Generator_TableClassName="spr_src_Warehouse_Vew_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Warehouse_Vew_Select" msprop:Generator_TablePropName="spr_src_Warehouse_Vew_Select" msprop:Generator_RowDeletingName="spr_src_Warehouse_Vew_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Warehouse_Vew_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Warehouse_Vew_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Warehouse_Vew_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_Warehouse_Vew_Select" msprop:Generator_RowChangedName="spr_src_Warehouse_Vew_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_Warehouse_Vew_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_Warehouse_Vew_SelectRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="WarehouseID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnWarehouseID" msprop:Generator_ColumnPropNameInRow="WarehouseID" msprop:Generator_ColumnPropNameInTable="WarehouseIDColumn" msprop:Generator_UserColumnName="WarehouseID" type="xs:int" minOccurs="0" />
@@ -2971,7 +3027,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_Water_Vew_Select" msprop:Generator_TableClassName="spr_src_Water_Vew_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Water_Vew_Select" msprop:Generator_TablePropName="spr_src_Water_Vew_Select" msprop:Generator_RowDeletingName="spr_src_Water_Vew_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Water_Vew_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Water_Vew_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Water_Vew_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_Water_Vew_Select" msprop:Generator_RowChangedName="spr_src_Water_Vew_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_Water_Vew_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_Water_Vew_SelectRow">
+        <xs:element name="spr_src_Water_Vew_Select" msprop:Generator_TableClassName="spr_src_Water_Vew_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Water_Vew_Select" msprop:Generator_RowChangedName="spr_src_Water_Vew_SelectRowChanged" msprop:Generator_TablePropName="spr_src_Water_Vew_Select" msprop:Generator_RowDeletingName="spr_src_Water_Vew_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Water_Vew_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Water_Vew_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Water_Vew_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_Water_Vew_SelectRow" msprop:Generator_UserTableName="spr_src_Water_Vew_Select" msprop:Generator_RowEvArgName="spr_src_Water_Vew_SelectRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="WaterID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnWaterID" msprop:Generator_ColumnPropNameInRow="WaterID" msprop:Generator_ColumnPropNameInTable="WaterIDColumn" msprop:Generator_UserColumnName="WaterID" type="xs:int" minOccurs="0" />
@@ -3021,7 +3077,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_WaterTransmissionLine_Vew_Select" msprop:Generator_TableClassName="spr_src_WaterTransmissionLine_Vew_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterTransmissionLine_Vew_Select" msprop:Generator_RowChangedName="spr_src_WaterTransmissionLine_Vew_SelectRowChanged" msprop:Generator_TablePropName="spr_src_WaterTransmissionLine_Vew_Select" msprop:Generator_RowDeletingName="spr_src_WaterTransmissionLine_Vew_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterTransmissionLine_Vew_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterTransmissionLine_Vew_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterTransmissionLine_Vew_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_WaterTransmissionLine_Vew_SelectRow" msprop:Generator_UserTableName="spr_src_WaterTransmissionLine_Vew_Select" msprop:Generator_RowEvArgName="spr_src_WaterTransmissionLine_Vew_SelectRowChangeEvent">
+        <xs:element name="spr_src_WaterTransmissionLine_Vew_Select" msprop:Generator_TableClassName="spr_src_WaterTransmissionLine_Vew_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterTransmissionLine_Vew_Select" msprop:Generator_TablePropName="spr_src_WaterTransmissionLine_Vew_Select" msprop:Generator_RowDeletingName="spr_src_WaterTransmissionLine_Vew_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterTransmissionLine_Vew_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterTransmissionLine_Vew_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterTransmissionLine_Vew_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_WaterTransmissionLine_Vew_Select" msprop:Generator_RowChangedName="spr_src_WaterTransmissionLine_Vew_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_WaterTransmissionLine_Vew_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_WaterTransmissionLine_Vew_SelectRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="WaterTransmissionLineID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnWaterTransmissionLineID" msprop:Generator_ColumnPropNameInRow="WaterTransmissionLineID" msprop:Generator_ColumnPropNameInTable="WaterTransmissionLineIDColumn" msprop:Generator_UserColumnName="WaterTransmissionLineID" type="xs:int" minOccurs="0" />
@@ -3072,7 +3128,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_WaterStorage_Vew_Select" msprop:Generator_TableClassName="spr_src_WaterStorage_Vew_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterStorage_Vew_Select" msprop:Generator_RowChangedName="spr_src_WaterStorage_Vew_SelectRowChanged" msprop:Generator_TablePropName="spr_src_WaterStorage_Vew_Select" msprop:Generator_RowDeletingName="spr_src_WaterStorage_Vew_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterStorage_Vew_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterStorage_Vew_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterStorage_Vew_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_WaterStorage_Vew_SelectRow" msprop:Generator_UserTableName="spr_src_WaterStorage_Vew_Select" msprop:Generator_RowEvArgName="spr_src_WaterStorage_Vew_SelectRowChangeEvent">
+        <xs:element name="spr_src_WaterStorage_Vew_Select" msprop:Generator_TableClassName="spr_src_WaterStorage_Vew_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterStorage_Vew_Select" msprop:Generator_TablePropName="spr_src_WaterStorage_Vew_Select" msprop:Generator_RowDeletingName="spr_src_WaterStorage_Vew_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterStorage_Vew_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterStorage_Vew_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterStorage_Vew_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_WaterStorage_Vew_Select" msprop:Generator_RowChangedName="spr_src_WaterStorage_Vew_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_WaterStorage_Vew_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_WaterStorage_Vew_SelectRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="WaterStorageID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnWaterStorageID" msprop:Generator_ColumnPropNameInRow="WaterStorageID" msprop:Generator_ColumnPropNameInTable="WaterStorageIDColumn" msprop:Generator_UserColumnName="WaterStorageID" type="xs:int" minOccurs="0" />
@@ -3117,7 +3173,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_FieldByID_Lst_Select" msprop:Generator_TableClassName="spr_src_FieldByID_Lst_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_FieldByID_Lst_Select" msprop:Generator_TablePropName="spr_src_FieldByID_Lst_Select" msprop:Generator_RowDeletingName="spr_src_FieldByID_Lst_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_FieldByID_Lst_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_FieldByID_Lst_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_FieldByID_Lst_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_FieldByID_Lst_Select" msprop:Generator_RowChangedName="spr_src_FieldByID_Lst_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_FieldByID_Lst_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_FieldByID_Lst_SelectRow">
+        <xs:element name="spr_src_FieldByID_Lst_Select" msprop:Generator_TableClassName="spr_src_FieldByID_Lst_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_FieldByID_Lst_Select" msprop:Generator_RowChangedName="spr_src_FieldByID_Lst_SelectRowChanged" msprop:Generator_TablePropName="spr_src_FieldByID_Lst_Select" msprop:Generator_RowDeletingName="spr_src_FieldByID_Lst_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_FieldByID_Lst_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_FieldByID_Lst_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_FieldByID_Lst_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_FieldByID_Lst_SelectRow" msprop:Generator_UserTableName="spr_src_FieldByID_Lst_Select" msprop:Generator_RowEvArgName="spr_src_FieldByID_Lst_SelectRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="SoilTextureName" msprop:Generator_ColumnVarNameInTable="columnSoilTextureName" msprop:Generator_ColumnPropNameInRow="SoilTextureName" msprop:Generator_ColumnPropNameInTable="SoilTextureNameColumn" msprop:Generator_UserColumnName="SoilTextureName" minOccurs="0">
@@ -3132,7 +3188,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_MachineryByUserID_cmb_Select" msprop:Generator_TableClassName="spr_src_MachineryByUserID_cmb_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_MachineryByUserID_cmb_Select" msprop:Generator_TablePropName="spr_src_MachineryByUserID_cmb_Select" msprop:Generator_RowDeletingName="spr_src_MachineryByUserID_cmb_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_MachineryByUserID_cmb_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_MachineryByUserID_cmb_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_MachineryByUserID_cmb_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_MachineryByUserID_cmb_Select" msprop:Generator_RowChangedName="spr_src_MachineryByUserID_cmb_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_MachineryByUserID_cmb_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_MachineryByUserID_cmb_SelectRow">
+        <xs:element name="spr_src_MachineryByUserID_cmb_Select" msprop:Generator_TableClassName="spr_src_MachineryByUserID_cmb_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_MachineryByUserID_cmb_Select" msprop:Generator_RowChangedName="spr_src_MachineryByUserID_cmb_SelectRowChanged" msprop:Generator_TablePropName="spr_src_MachineryByUserID_cmb_Select" msprop:Generator_RowDeletingName="spr_src_MachineryByUserID_cmb_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_MachineryByUserID_cmb_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_MachineryByUserID_cmb_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_MachineryByUserID_cmb_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_MachineryByUserID_cmb_SelectRow" msprop:Generator_UserTableName="spr_src_MachineryByUserID_cmb_Select" msprop:Generator_RowEvArgName="spr_src_MachineryByUserID_cmb_SelectRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MachineryID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMachineryID" msprop:Generator_ColumnPropNameInRow="MachineryID" msprop:Generator_ColumnPropNameInTable="MachineryIDColumn" msprop:Generator_UserColumnName="MachineryID" type="xs:int" />
@@ -3146,7 +3202,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_WaterByUserID_cmb_Select" msprop:Generator_TableClassName="spr_src_WaterByUserID_cmb_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterByUserID_cmb_Select" msprop:Generator_RowChangedName="spr_src_WaterByUserID_cmb_SelectRowChanged" msprop:Generator_TablePropName="spr_src_WaterByUserID_cmb_Select" msprop:Generator_RowDeletingName="spr_src_WaterByUserID_cmb_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterByUserID_cmb_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterByUserID_cmb_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterByUserID_cmb_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_WaterByUserID_cmb_SelectRow" msprop:Generator_UserTableName="spr_src_WaterByUserID_cmb_Select" msprop:Generator_RowEvArgName="spr_src_WaterByUserID_cmb_SelectRowChangeEvent">
+        <xs:element name="spr_src_WaterByUserID_cmb_Select" msprop:Generator_TableClassName="spr_src_WaterByUserID_cmb_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterByUserID_cmb_Select" msprop:Generator_TablePropName="spr_src_WaterByUserID_cmb_Select" msprop:Generator_RowDeletingName="spr_src_WaterByUserID_cmb_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterByUserID_cmb_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterByUserID_cmb_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterByUserID_cmb_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_WaterByUserID_cmb_Select" msprop:Generator_RowChangedName="spr_src_WaterByUserID_cmb_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_WaterByUserID_cmb_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_WaterByUserID_cmb_SelectRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="WaterID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnWaterID" msprop:Generator_ColumnPropNameInRow="WaterID" msprop:Generator_ColumnPropNameInTable="WaterIDColumn" msprop:Generator_UserColumnName="WaterID" type="xs:int" />
@@ -3160,7 +3216,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_WaterStorageByUserID_cmb_Select" msprop:Generator_TableClassName="spr_src_WaterStorageByUserID_cmb_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterStorageByUserID_cmb_Select" msprop:Generator_RowChangedName="spr_src_WaterStorageByUserID_cmb_SelectRowChanged" msprop:Generator_TablePropName="spr_src_WaterStorageByUserID_cmb_Select" msprop:Generator_RowDeletingName="spr_src_WaterStorageByUserID_cmb_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterStorageByUserID_cmb_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterStorageByUserID_cmb_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterStorageByUserID_cmb_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_WaterStorageByUserID_cmb_SelectRow" msprop:Generator_UserTableName="spr_src_WaterStorageByUserID_cmb_Select" msprop:Generator_RowEvArgName="spr_src_WaterStorageByUserID_cmb_SelectRowChangeEvent">
+        <xs:element name="spr_src_WaterStorageByUserID_cmb_Select" msprop:Generator_TableClassName="spr_src_WaterStorageByUserID_cmb_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_WaterStorageByUserID_cmb_Select" msprop:Generator_TablePropName="spr_src_WaterStorageByUserID_cmb_Select" msprop:Generator_RowDeletingName="spr_src_WaterStorageByUserID_cmb_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_WaterStorageByUserID_cmb_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_WaterStorageByUserID_cmb_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_WaterStorageByUserID_cmb_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_WaterStorageByUserID_cmb_Select" msprop:Generator_RowChangedName="spr_src_WaterStorageByUserID_cmb_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_WaterStorageByUserID_cmb_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_WaterStorageByUserID_cmb_SelectRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="WaterStorageID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnWaterStorageID" msprop:Generator_ColumnPropNameInRow="WaterStorageID" msprop:Generator_ColumnPropNameInTable="WaterStorageIDColumn" msprop:Generator_UserColumnName="WaterStorageID" type="xs:int" />
@@ -3174,7 +3230,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spr_src_Land_Lst_Select" msprop:Generator_TableClassName="spr_src_Land_Lst_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Land_Lst_Select" msprop:Generator_TablePropName="spr_src_Land_Lst_Select" msprop:Generator_RowDeletingName="spr_src_Land_Lst_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Land_Lst_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Land_Lst_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Land_Lst_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_Land_Lst_Select" msprop:Generator_RowChangedName="spr_src_Land_Lst_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_Land_Lst_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_Land_Lst_SelectRow">
+        <xs:element name="spr_src_Land_Lst_Select" msprop:Generator_TableClassName="spr_src_Land_Lst_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Land_Lst_Select" msprop:Generator_RowChangedName="spr_src_Land_Lst_SelectRowChanged" msprop:Generator_TablePropName="spr_src_Land_Lst_Select" msprop:Generator_RowDeletingName="spr_src_Land_Lst_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Land_Lst_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Land_Lst_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Land_Lst_SelectRowDeleted" msprop:Generator_RowClassName="spr_src_Land_Lst_SelectRow" msprop:Generator_UserTableName="spr_src_Land_Lst_Select" msprop:Generator_RowEvArgName="spr_src_Land_Lst_SelectRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="LandID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLandID" msprop:Generator_ColumnPropNameInRow="LandID" msprop:Generator_ColumnPropNameInTable="LandIDColumn" msprop:Generator_UserColumnName="LandID" type="xs:int" />
@@ -3275,6 +3331,130 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="کشت_x0020_و_x0020_صنعت" msprop:Generator_ColumnVarNameInTable="columnکشت_و_صنعت" msprop:Generator_ColumnPropNameInRow="کشت_و_صنعت" msprop:Generator_ColumnPropNameInTable="کشت_و_صنعتColumn" msprop:Generator_UserColumnName="کشت و صنعت" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="spr_src_Land_Vew_Select" msprop:Generator_TableClassName="spr_src_Land_Vew_SelectDataTable" msprop:Generator_TableVarName="tablespr_src_Land_Vew_Select" msprop:Generator_TablePropName="spr_src_Land_Vew_Select" msprop:Generator_RowDeletingName="spr_src_Land_Vew_SelectRowDeleting" msprop:Generator_RowChangingName="spr_src_Land_Vew_SelectRowChanging" msprop:Generator_RowEvHandlerName="spr_src_Land_Vew_SelectRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_src_Land_Vew_SelectRowDeleted" msprop:Generator_UserTableName="spr_src_Land_Vew_Select" msprop:Generator_RowChangedName="spr_src_Land_Vew_SelectRowChanged" msprop:Generator_RowEvArgName="spr_src_Land_Vew_SelectRowChangeEvent" msprop:Generator_RowClassName="spr_src_Land_Vew_SelectRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LandID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLandID" msprop:Generator_ColumnPropNameInRow="LandID" msprop:Generator_ColumnPropNameInTable="LandIDColumn" msprop:Generator_UserColumnName="LandID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_UserColumnName="Address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="City" msprop:Generator_ColumnVarNameInTable="columnCity" msprop:Generator_ColumnPropNameInRow="City" msprop:Generator_ColumnPropNameInTable="CityColumn" msprop:Generator_UserColumnName="City" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Opposition" msprop:Generator_ColumnVarNameInTable="columnOpposition" msprop:Generator_ColumnPropNameInRow="Opposition" msprop:Generator_ColumnPropNameInTable="OppositionColumn" msprop:Generator_UserColumnName="Opposition" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Salability" msprop:Generator_ColumnVarNameInTable="columnSalability" msprop:Generator_ColumnPropNameInRow="Salability" msprop:Generator_ColumnPropNameInTable="SalabilityColumn" msprop:Generator_UserColumnName="Salability" type="xs:boolean" minOccurs="0" />
+              <xs:element name="changeUse" msprop:Generator_ColumnVarNameInTable="columnchangeUse" msprop:Generator_ColumnPropNameInRow="changeUse" msprop:Generator_ColumnPropNameInTable="changeUseColumn" msprop:Generator_UserColumnName="changeUse" type="xs:boolean" minOccurs="0" />
+              <xs:element name="FutureProgram" msprop:Generator_ColumnVarNameInTable="columnFutureProgram" msprop:Generator_ColumnPropNameInRow="FutureProgram" msprop:Generator_ColumnPropNameInTable="FutureProgramColumn" msprop:Generator_UserColumnName="FutureProgram" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DocPlace" msprop:Generator_ColumnVarNameInTable="columnDocPlace" msprop:Generator_ColumnPropNameInRow="DocPlace" msprop:Generator_ColumnPropNameInTable="DocPlaceColumn" msprop:Generator_UserColumnName="DocPlace" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Code" msprop:Generator_ColumnVarNameInTable="columnCode" msprop:Generator_ColumnPropNameInRow="Code" msprop:Generator_ColumnPropNameInTable="CodeColumn" msprop:Generator_UserColumnName="Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ownership" msprop:Generator_ColumnVarNameInTable="columnOwnership" msprop:Generator_ColumnPropNameInRow="Ownership" msprop:Generator_ColumnPropNameInTable="OwnershipColumn" msprop:Generator_UserColumnName="Ownership" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DocNumber" msprop:Generator_ColumnVarNameInTable="columnDocNumber" msprop:Generator_ColumnPropNameInRow="DocNumber" msprop:Generator_ColumnPropNameInTable="DocNumberColumn" msprop:Generator_UserColumnName="DocNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SoilTextre" msprop:Generator_ColumnVarNameInTable="columnSoilTextre" msprop:Generator_ColumnPropNameInRow="SoilTextre" msprop:Generator_ColumnPropNameInTable="SoilTextreColumn" msprop:Generator_UserColumnName="SoilTextre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FieldUseType" msprop:Generator_ColumnVarNameInTable="columnFieldUseType" msprop:Generator_ColumnPropNameInRow="FieldUseType" msprop:Generator_ColumnPropNameInTable="FieldUseTypeColumn" msprop:Generator_UserColumnName="FieldUseType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UsableArea" msprop:Generator_ColumnVarNameInTable="columnUsableArea" msprop:Generator_ColumnPropNameInRow="UsableArea" msprop:Generator_ColumnPropNameInTable="UsableAreaColumn" msprop:Generator_UserColumnName="UsableArea" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalArea" msprop:Generator_ColumnVarNameInTable="columnTotalArea" msprop:Generator_ColumnPropNameInRow="TotalArea" msprop:Generator_ColumnPropNameInTable="TotalAreaColumn" msprop:Generator_UserColumnName="TotalArea" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FieldName" msprop:Generator_ColumnVarNameInTable="columnFieldName" msprop:Generator_ColumnPropNameInRow="FieldName" msprop:Generator_ColumnPropNameInTable="FieldNameColumn" msprop:Generator_UserColumnName="FieldName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PartName" msprop:Generator_ColumnVarNameInTable="columnPartName" msprop:Generator_ColumnPropNameInRow="PartName" msprop:Generator_ColumnPropNameInTable="PartNameColumn" msprop:Generator_UserColumnName="PartName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SubcollectionName" msprop:Generator_ColumnVarNameInTable="columnSubcollectionName" msprop:Generator_ColumnPropNameInRow="SubcollectionName" msprop:Generator_ColumnPropNameInTable="SubcollectionNameColumn" msprop:Generator_UserColumnName="SubcollectionName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CollectionName" msprop:Generator_ColumnVarNameInTable="columnCollectionName" msprop:Generator_ColumnPropNameInRow="CollectionName" msprop:Generator_ColumnPropNameInTable="CollectionNameColumn" msprop:Generator_UserColumnName="CollectionName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProvinceName" msprop:Generator_ColumnVarNameInTable="columnProvinceName" msprop:Generator_ColumnPropNameInRow="ProvinceName" msprop:Generator_ColumnPropNameInTable="ProvinceNameColumn" msprop:Generator_UserColumnName="ProvinceName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TownshipName" msprop:Generator_ColumnVarNameInTable="columnTownshipName" msprop:Generator_ColumnPropNameInRow="TownshipName" msprop:Generator_ColumnPropNameInTable="TownshipNameColumn" msprop:Generator_UserColumnName="TownshipName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -3408,6 +3588,10 @@
     </xs:unique>
     <xs:unique name="spr_src_Land_Lst_Select_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:spr_src_Land_Lst_Select" />
+      <xs:field xpath="mstns:LandID" />
+    </xs:unique>
+    <xs:unique name="spr_src_Land_Vew_Select_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:spr_src_Land_Vew_Select" />
       <xs:field xpath="mstns:LandID" />
     </xs:unique>
   </xs:element>

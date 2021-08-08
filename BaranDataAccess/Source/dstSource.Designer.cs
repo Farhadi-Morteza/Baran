@@ -92,6 +92,8 @@ namespace BaranDataAccess.Source {
         
         private spr_src_Land_Lst_SelectDataTable tablespr_src_Land_Lst_Select;
         
+        private spr_src_Land_Vew_SelectDataTable tablespr_src_Land_Vew_Select;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -221,6 +223,9 @@ namespace BaranDataAccess.Source {
                 }
                 if ((ds.Tables["spr_src_Land_Lst_Select"] != null)) {
                     base.Tables.Add(new spr_src_Land_Lst_SelectDataTable(ds.Tables["spr_src_Land_Lst_Select"]));
+                }
+                if ((ds.Tables["spr_src_Land_Vew_Select"] != null)) {
+                    base.Tables.Add(new spr_src_Land_Vew_SelectDataTable(ds.Tables["spr_src_Land_Vew_Select"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -582,6 +587,16 @@ namespace BaranDataAccess.Source {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public spr_src_Land_Vew_SelectDataTable spr_src_Land_Vew_Select {
+            get {
+                return this.tablespr_src_Land_Vew_Select;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -748,6 +763,9 @@ namespace BaranDataAccess.Source {
                 }
                 if ((ds.Tables["spr_src_Land_Lst_Select"] != null)) {
                     base.Tables.Add(new spr_src_Land_Lst_SelectDataTable(ds.Tables["spr_src_Land_Lst_Select"]));
+                }
+                if ((ds.Tables["spr_src_Land_Vew_Select"] != null)) {
+                    base.Tables.Add(new spr_src_Land_Vew_SelectDataTable(ds.Tables["spr_src_Land_Vew_Select"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -986,6 +1004,12 @@ namespace BaranDataAccess.Source {
                     this.tablespr_src_Land_Lst_Select.InitVars();
                 }
             }
+            this.tablespr_src_Land_Vew_Select = ((spr_src_Land_Vew_SelectDataTable)(base.Tables["spr_src_Land_Vew_Select"]));
+            if ((initTable == true)) {
+                if ((this.tablespr_src_Land_Vew_Select != null)) {
+                    this.tablespr_src_Land_Vew_Select.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1064,6 +1088,8 @@ namespace BaranDataAccess.Source {
             base.Tables.Add(this.tablespr_src_WaterStorageByUserID_cmb_Select);
             this.tablespr_src_Land_Lst_Select = new spr_src_Land_Lst_SelectDataTable();
             base.Tables.Add(this.tablespr_src_Land_Lst_Select);
+            this.tablespr_src_Land_Vew_Select = new spr_src_Land_Vew_SelectDataTable();
+            base.Tables.Add(this.tablespr_src_Land_Vew_Select);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1272,6 +1298,12 @@ namespace BaranDataAccess.Source {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializespr_src_Land_Vew_Select() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -1426,6 +1458,9 @@ namespace BaranDataAccess.Source {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void spr_src_Land_Lst_SelectRowChangeEventHandler(object sender, spr_src_Land_Lst_SelectRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void spr_src_Land_Vew_SelectRowChangeEventHandler(object sender, spr_src_Land_Vew_SelectRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -7042,6 +7077,8 @@ namespace BaranDataAccess.Source {
             
             private global::System.Data.DataColumn columnنام_کشت_و_صنعت;
             
+            private global::System.Data.DataColumn columnنام_واحد_فرعی;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public spr_src_Buildings_Lst_SelectDataTable() {
@@ -7133,6 +7170,14 @@ namespace BaranDataAccess.Source {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn نام_واحد_فرعیColumn {
+                get {
+                    return this.columnنام_واحد_فرعی;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -7168,7 +7213,7 @@ namespace BaranDataAccess.Source {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public spr_src_Buildings_Lst_SelectRow Addspr_src_Buildings_Lst_SelectRow(string توضیحات, decimal مساحت_متر_مربع, string گروه, string نام, string نام_واحد, string نام_کشت_و_صنعت) {
+            public spr_src_Buildings_Lst_SelectRow Addspr_src_Buildings_Lst_SelectRow(string توضیحات, decimal مساحت_متر_مربع, string گروه, string نام, string نام_واحد, string نام_کشت_و_صنعت, string نام_واحد_فرعی) {
                 spr_src_Buildings_Lst_SelectRow rowspr_src_Buildings_Lst_SelectRow = ((spr_src_Buildings_Lst_SelectRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -7177,7 +7222,8 @@ namespace BaranDataAccess.Source {
                         گروه,
                         نام,
                         نام_واحد,
-                        نام_کشت_و_صنعت};
+                        نام_کشت_و_صنعت,
+                        نام_واحد_فرعی};
                 rowspr_src_Buildings_Lst_SelectRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowspr_src_Buildings_Lst_SelectRow);
                 return rowspr_src_Buildings_Lst_SelectRow;
@@ -7214,6 +7260,7 @@ namespace BaranDataAccess.Source {
                 this.columnنام = base.Columns["نام"];
                 this.columnنام_واحد = base.Columns["نام واحد"];
                 this.columnنام_کشت_و_صنعت = base.Columns["نام کشت و صنعت"];
+                this.columnنام_واحد_فرعی = base.Columns["نام واحد فرعی"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7233,6 +7280,8 @@ namespace BaranDataAccess.Source {
                 base.Columns.Add(this.columnنام_واحد);
                 this.columnنام_کشت_و_صنعت = new global::System.Data.DataColumn("نام کشت و صنعت", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnنام_کشت_و_صنعت);
+                this.columnنام_واحد_فرعی = new global::System.Data.DataColumn("نام واحد فرعی", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnنام_واحد_فرعی);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnBuildingsID}, true));
                 this.columnBuildingsID.AutoIncrement = true;
@@ -7244,9 +7293,10 @@ namespace BaranDataAccess.Source {
                 this.columnتوضیحات.MaxLength = 500;
                 this.columnگروه.MaxLength = 50;
                 this.columnنام.MaxLength = 50;
-                this.columnنام_واحد.AllowDBNull = false;
                 this.columnنام_واحد.MaxLength = 50;
                 this.columnنام_کشت_و_صنعت.MaxLength = 50;
+                this.columnنام_واحد_فرعی.AllowDBNull = false;
+                this.columnنام_واحد_فرعی.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7836,6 +7886,8 @@ namespace BaranDataAccess.Source {
             
             private global::System.Data.DataColumn columnکشت_و_صنعت;
             
+            private global::System.Data.DataColumn columnواحد_فرعی;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public spr_src_Machinery_Lst_SelectDataTable() {
@@ -7967,6 +8019,14 @@ namespace BaranDataAccess.Source {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn واحد_فرعیColumn {
+                get {
+                    return this.columnواحد_فرعی;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -8002,7 +8062,7 @@ namespace BaranDataAccess.Source {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public spr_src_Machinery_Lst_SelectRow Addspr_src_Machinery_Lst_SelectRow(string توضیحات, string شرکت_سازنده, string سال_ساخت, string مدل, string شماره_شناسایی, decimal _قدرت_اسب_بخار, int تعداد, string گروه_ماشین_آلات, string نام, string واحد, string کشت_و_صنعت) {
+            public spr_src_Machinery_Lst_SelectRow Addspr_src_Machinery_Lst_SelectRow(string توضیحات, string شرکت_سازنده, string سال_ساخت, string مدل, string شماره_شناسایی, decimal _قدرت_اسب_بخار, int تعداد, string گروه_ماشین_آلات, string نام, string واحد, string کشت_و_صنعت, string واحد_فرعی) {
                 spr_src_Machinery_Lst_SelectRow rowspr_src_Machinery_Lst_SelectRow = ((spr_src_Machinery_Lst_SelectRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -8016,7 +8076,8 @@ namespace BaranDataAccess.Source {
                         گروه_ماشین_آلات,
                         نام,
                         واحد,
-                        کشت_و_صنعت};
+                        کشت_و_صنعت,
+                        واحد_فرعی};
                 rowspr_src_Machinery_Lst_SelectRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowspr_src_Machinery_Lst_SelectRow);
                 return rowspr_src_Machinery_Lst_SelectRow;
@@ -8058,6 +8119,7 @@ namespace BaranDataAccess.Source {
                 this.columnنام = base.Columns["نام"];
                 this.columnواحد = base.Columns["واحد"];
                 this.columnکشت_و_صنعت = base.Columns["کشت و صنعت"];
+                this.columnواحد_فرعی = base.Columns["واحد فرعی"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8089,6 +8151,8 @@ namespace BaranDataAccess.Source {
                 base.Columns.Add(this.columnواحد);
                 this.columnکشت_و_صنعت = new global::System.Data.DataColumn("کشت و صنعت", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnکشت_و_صنعت);
+                this.columnواحد_فرعی = new global::System.Data.DataColumn("واحد فرعی", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnواحد_فرعی);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnMachineryID}, true));
                 this.columnMachineryID.AutoIncrement = true;
@@ -8107,6 +8171,8 @@ namespace BaranDataAccess.Source {
                 this.columnواحد.AllowDBNull = false;
                 this.columnواحد.MaxLength = 50;
                 this.columnکشت_و_صنعت.MaxLength = 50;
+                this.columnواحد_فرعی.AllowDBNull = false;
+                this.columnواحد_فرعی.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15990,6 +16056,602 @@ namespace BaranDataAccess.Source {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class spr_src_Land_Vew_SelectDataTable : global::System.Data.TypedTableBase<spr_src_Land_Vew_SelectRow> {
+            
+            private global::System.Data.DataColumn columnLandID;
+            
+            private global::System.Data.DataColumn columnDescription;
+            
+            private global::System.Data.DataColumn columnAddress;
+            
+            private global::System.Data.DataColumn columnCity;
+            
+            private global::System.Data.DataColumn columnOpposition;
+            
+            private global::System.Data.DataColumn columnSalability;
+            
+            private global::System.Data.DataColumn columnchangeUse;
+            
+            private global::System.Data.DataColumn columnFutureProgram;
+            
+            private global::System.Data.DataColumn columnDocPlace;
+            
+            private global::System.Data.DataColumn columnCode;
+            
+            private global::System.Data.DataColumn columnOwnership;
+            
+            private global::System.Data.DataColumn columnDocNumber;
+            
+            private global::System.Data.DataColumn columnSoilTextre;
+            
+            private global::System.Data.DataColumn columnFieldUseType;
+            
+            private global::System.Data.DataColumn columnUsableArea;
+            
+            private global::System.Data.DataColumn columnTotalArea;
+            
+            private global::System.Data.DataColumn columnFieldName;
+            
+            private global::System.Data.DataColumn columnPartName;
+            
+            private global::System.Data.DataColumn columnSubcollectionName;
+            
+            private global::System.Data.DataColumn columnCollectionName;
+            
+            private global::System.Data.DataColumn columnProvinceName;
+            
+            private global::System.Data.DataColumn columnTownshipName;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spr_src_Land_Vew_SelectDataTable() {
+                this.TableName = "spr_src_Land_Vew_Select";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spr_src_Land_Vew_SelectDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected spr_src_Land_Vew_SelectDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LandIDColumn {
+                get {
+                    return this.columnLandID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DescriptionColumn {
+                get {
+                    return this.columnDescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn AddressColumn {
+                get {
+                    return this.columnAddress;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CityColumn {
+                get {
+                    return this.columnCity;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn OppositionColumn {
+                get {
+                    return this.columnOpposition;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SalabilityColumn {
+                get {
+                    return this.columnSalability;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn changeUseColumn {
+                get {
+                    return this.columnchangeUse;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FutureProgramColumn {
+                get {
+                    return this.columnFutureProgram;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DocPlaceColumn {
+                get {
+                    return this.columnDocPlace;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CodeColumn {
+                get {
+                    return this.columnCode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn OwnershipColumn {
+                get {
+                    return this.columnOwnership;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DocNumberColumn {
+                get {
+                    return this.columnDocNumber;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SoilTextreColumn {
+                get {
+                    return this.columnSoilTextre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FieldUseTypeColumn {
+                get {
+                    return this.columnFieldUseType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn UsableAreaColumn {
+                get {
+                    return this.columnUsableArea;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TotalAreaColumn {
+                get {
+                    return this.columnTotalArea;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FieldNameColumn {
+                get {
+                    return this.columnFieldName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PartNameColumn {
+                get {
+                    return this.columnPartName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SubcollectionNameColumn {
+                get {
+                    return this.columnSubcollectionName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CollectionNameColumn {
+                get {
+                    return this.columnCollectionName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ProvinceNameColumn {
+                get {
+                    return this.columnProvinceName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TownshipNameColumn {
+                get {
+                    return this.columnTownshipName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spr_src_Land_Vew_SelectRow this[int index] {
+                get {
+                    return ((spr_src_Land_Vew_SelectRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spr_src_Land_Vew_SelectRowChangeEventHandler spr_src_Land_Vew_SelectRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spr_src_Land_Vew_SelectRowChangeEventHandler spr_src_Land_Vew_SelectRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spr_src_Land_Vew_SelectRowChangeEventHandler spr_src_Land_Vew_SelectRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spr_src_Land_Vew_SelectRowChangeEventHandler spr_src_Land_Vew_SelectRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Addspr_src_Land_Vew_SelectRow(spr_src_Land_Vew_SelectRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spr_src_Land_Vew_SelectRow Addspr_src_Land_Vew_SelectRow(
+                        string Description, 
+                        string Address, 
+                        string City, 
+                        bool Opposition, 
+                        bool Salability, 
+                        bool changeUse, 
+                        string FutureProgram, 
+                        string DocPlace, 
+                        string Code, 
+                        string Ownership, 
+                        string DocNumber, 
+                        string SoilTextre, 
+                        string FieldUseType, 
+                        decimal UsableArea, 
+                        decimal TotalArea, 
+                        string FieldName, 
+                        string PartName, 
+                        string SubcollectionName, 
+                        string CollectionName, 
+                        string ProvinceName, 
+                        string TownshipName) {
+                spr_src_Land_Vew_SelectRow rowspr_src_Land_Vew_SelectRow = ((spr_src_Land_Vew_SelectRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Description,
+                        Address,
+                        City,
+                        Opposition,
+                        Salability,
+                        changeUse,
+                        FutureProgram,
+                        DocPlace,
+                        Code,
+                        Ownership,
+                        DocNumber,
+                        SoilTextre,
+                        FieldUseType,
+                        UsableArea,
+                        TotalArea,
+                        FieldName,
+                        PartName,
+                        SubcollectionName,
+                        CollectionName,
+                        ProvinceName,
+                        TownshipName};
+                rowspr_src_Land_Vew_SelectRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowspr_src_Land_Vew_SelectRow);
+                return rowspr_src_Land_Vew_SelectRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spr_src_Land_Vew_SelectRow FindByLandID(int LandID) {
+                return ((spr_src_Land_Vew_SelectRow)(this.Rows.Find(new object[] {
+                            LandID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                spr_src_Land_Vew_SelectDataTable cln = ((spr_src_Land_Vew_SelectDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new spr_src_Land_Vew_SelectDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnLandID = base.Columns["LandID"];
+                this.columnDescription = base.Columns["Description"];
+                this.columnAddress = base.Columns["Address"];
+                this.columnCity = base.Columns["City"];
+                this.columnOpposition = base.Columns["Opposition"];
+                this.columnSalability = base.Columns["Salability"];
+                this.columnchangeUse = base.Columns["changeUse"];
+                this.columnFutureProgram = base.Columns["FutureProgram"];
+                this.columnDocPlace = base.Columns["DocPlace"];
+                this.columnCode = base.Columns["Code"];
+                this.columnOwnership = base.Columns["Ownership"];
+                this.columnDocNumber = base.Columns["DocNumber"];
+                this.columnSoilTextre = base.Columns["SoilTextre"];
+                this.columnFieldUseType = base.Columns["FieldUseType"];
+                this.columnUsableArea = base.Columns["UsableArea"];
+                this.columnTotalArea = base.Columns["TotalArea"];
+                this.columnFieldName = base.Columns["FieldName"];
+                this.columnPartName = base.Columns["PartName"];
+                this.columnSubcollectionName = base.Columns["SubcollectionName"];
+                this.columnCollectionName = base.Columns["CollectionName"];
+                this.columnProvinceName = base.Columns["ProvinceName"];
+                this.columnTownshipName = base.Columns["TownshipName"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnLandID = new global::System.Data.DataColumn("LandID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLandID);
+                this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDescription);
+                this.columnAddress = new global::System.Data.DataColumn("Address", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAddress);
+                this.columnCity = new global::System.Data.DataColumn("City", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCity);
+                this.columnOpposition = new global::System.Data.DataColumn("Opposition", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOpposition);
+                this.columnSalability = new global::System.Data.DataColumn("Salability", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSalability);
+                this.columnchangeUse = new global::System.Data.DataColumn("changeUse", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnchangeUse);
+                this.columnFutureProgram = new global::System.Data.DataColumn("FutureProgram", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFutureProgram);
+                this.columnDocPlace = new global::System.Data.DataColumn("DocPlace", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDocPlace);
+                this.columnCode = new global::System.Data.DataColumn("Code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCode);
+                this.columnOwnership = new global::System.Data.DataColumn("Ownership", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOwnership);
+                this.columnDocNumber = new global::System.Data.DataColumn("DocNumber", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDocNumber);
+                this.columnSoilTextre = new global::System.Data.DataColumn("SoilTextre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSoilTextre);
+                this.columnFieldUseType = new global::System.Data.DataColumn("FieldUseType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFieldUseType);
+                this.columnUsableArea = new global::System.Data.DataColumn("UsableArea", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUsableArea);
+                this.columnTotalArea = new global::System.Data.DataColumn("TotalArea", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotalArea);
+                this.columnFieldName = new global::System.Data.DataColumn("FieldName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFieldName);
+                this.columnPartName = new global::System.Data.DataColumn("PartName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPartName);
+                this.columnSubcollectionName = new global::System.Data.DataColumn("SubcollectionName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSubcollectionName);
+                this.columnCollectionName = new global::System.Data.DataColumn("CollectionName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCollectionName);
+                this.columnProvinceName = new global::System.Data.DataColumn("ProvinceName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProvinceName);
+                this.columnTownshipName = new global::System.Data.DataColumn("TownshipName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTownshipName);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnLandID}, true));
+                this.columnLandID.AutoIncrement = true;
+                this.columnLandID.AutoIncrementSeed = -1;
+                this.columnLandID.AutoIncrementStep = -1;
+                this.columnLandID.AllowDBNull = false;
+                this.columnLandID.ReadOnly = true;
+                this.columnLandID.Unique = true;
+                this.columnDescription.MaxLength = 500;
+                this.columnAddress.MaxLength = 300;
+                this.columnCity.MaxLength = 50;
+                this.columnFutureProgram.MaxLength = 200;
+                this.columnDocPlace.MaxLength = 50;
+                this.columnCode.MaxLength = 50;
+                this.columnOwnership.MaxLength = 50;
+                this.columnDocNumber.MaxLength = 50;
+                this.columnSoilTextre.MaxLength = 50;
+                this.columnFieldUseType.MaxLength = 50;
+                this.columnFieldName.MaxLength = 50;
+                this.columnPartName.AllowDBNull = false;
+                this.columnPartName.MaxLength = 50;
+                this.columnSubcollectionName.AllowDBNull = false;
+                this.columnSubcollectionName.MaxLength = 50;
+                this.columnCollectionName.AllowDBNull = false;
+                this.columnCollectionName.MaxLength = 50;
+                this.columnProvinceName.MaxLength = 50;
+                this.columnTownshipName.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spr_src_Land_Vew_SelectRow Newspr_src_Land_Vew_SelectRow() {
+                return ((spr_src_Land_Vew_SelectRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new spr_src_Land_Vew_SelectRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(spr_src_Land_Vew_SelectRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.spr_src_Land_Vew_SelectRowChanged != null)) {
+                    this.spr_src_Land_Vew_SelectRowChanged(this, new spr_src_Land_Vew_SelectRowChangeEvent(((spr_src_Land_Vew_SelectRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.spr_src_Land_Vew_SelectRowChanging != null)) {
+                    this.spr_src_Land_Vew_SelectRowChanging(this, new spr_src_Land_Vew_SelectRowChangeEvent(((spr_src_Land_Vew_SelectRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.spr_src_Land_Vew_SelectRowDeleted != null)) {
+                    this.spr_src_Land_Vew_SelectRowDeleted(this, new spr_src_Land_Vew_SelectRowChangeEvent(((spr_src_Land_Vew_SelectRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.spr_src_Land_Vew_SelectRowDeleting != null)) {
+                    this.spr_src_Land_Vew_SelectRowDeleting(this, new spr_src_Land_Vew_SelectRowChangeEvent(((spr_src_Land_Vew_SelectRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Removespr_src_Land_Vew_SelectRow(spr_src_Land_Vew_SelectRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dstSource ds = new dstSource();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "spr_src_Land_Vew_SelectDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class spr_src_Water_SelectRow : global::System.Data.DataRow {
@@ -21424,7 +22086,13 @@ namespace BaranDataAccess.Source {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string نام_واحد {
                 get {
-                    return ((string)(this[this.tablespr_src_Buildings_Lst_Select.نام_واحدColumn]));
+                    try {
+                        return ((string)(this[this.tablespr_src_Buildings_Lst_Select.نام_واحدColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'نام واحد\' in table \'spr_src_Buildings_Lst_Select\' is DBNull" +
+                                ".", e);
+                    }
                 }
                 set {
                     this[this.tablespr_src_Buildings_Lst_Select.نام_واحدColumn] = value;
@@ -21445,6 +22113,17 @@ namespace BaranDataAccess.Source {
                 }
                 set {
                     this[this.tablespr_src_Buildings_Lst_Select.نام_کشت_و_صنعتColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string نام_واحد_فرعی {
+                get {
+                    return ((string)(this[this.tablespr_src_Buildings_Lst_Select.نام_واحد_فرعیColumn]));
+                }
+                set {
+                    this[this.tablespr_src_Buildings_Lst_Select.نام_واحد_فرعیColumn] = value;
                 }
             }
             
@@ -21494,6 +22173,18 @@ namespace BaranDataAccess.Source {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetنامNull() {
                 this[this.tablespr_src_Buildings_Lst_Select.نامColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isنام_واحدNull() {
+                return this.IsNull(this.tablespr_src_Buildings_Lst_Select.نام_واحدColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setنام_واحدNull() {
+                this[this.tablespr_src_Buildings_Lst_Select.نام_واحدColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -22081,6 +22772,17 @@ namespace BaranDataAccess.Source {
                 }
                 set {
                     this[this.tablespr_src_Machinery_Lst_Select.کشت_و_صنعتColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string واحد_فرعی {
+                get {
+                    return ((string)(this[this.tablespr_src_Machinery_Lst_Select.واحد_فرعیColumn]));
+                }
+                set {
+                    this[this.tablespr_src_Machinery_Lst_Select.واحد_فرعیColumn] = value;
                 }
             }
             
@@ -27643,6 +28345,573 @@ namespace BaranDataAccess.Source {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class spr_src_Land_Vew_SelectRow : global::System.Data.DataRow {
+            
+            private spr_src_Land_Vew_SelectDataTable tablespr_src_Land_Vew_Select;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spr_src_Land_Vew_SelectRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablespr_src_Land_Vew_Select = ((spr_src_Land_Vew_SelectDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int LandID {
+                get {
+                    return ((int)(this[this.tablespr_src_Land_Vew_Select.LandIDColumn]));
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.LandIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Description {
+                get {
+                    try {
+                        return ((string)(this[this.tablespr_src_Land_Vew_Select.DescriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Description\' in table \'spr_src_Land_Vew_Select\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.DescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Address {
+                get {
+                    try {
+                        return ((string)(this[this.tablespr_src_Land_Vew_Select.AddressColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Address\' in table \'spr_src_Land_Vew_Select\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.AddressColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string City {
+                get {
+                    try {
+                        return ((string)(this[this.tablespr_src_Land_Vew_Select.CityColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'City\' in table \'spr_src_Land_Vew_Select\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.CityColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Opposition {
+                get {
+                    try {
+                        return ((bool)(this[this.tablespr_src_Land_Vew_Select.OppositionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Opposition\' in table \'spr_src_Land_Vew_Select\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.OppositionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Salability {
+                get {
+                    try {
+                        return ((bool)(this[this.tablespr_src_Land_Vew_Select.SalabilityColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Salability\' in table \'spr_src_Land_Vew_Select\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.SalabilityColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool changeUse {
+                get {
+                    try {
+                        return ((bool)(this[this.tablespr_src_Land_Vew_Select.changeUseColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'changeUse\' in table \'spr_src_Land_Vew_Select\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.changeUseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FutureProgram {
+                get {
+                    try {
+                        return ((string)(this[this.tablespr_src_Land_Vew_Select.FutureProgramColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FutureProgram\' in table \'spr_src_Land_Vew_Select\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.FutureProgramColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string DocPlace {
+                get {
+                    try {
+                        return ((string)(this[this.tablespr_src_Land_Vew_Select.DocPlaceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DocPlace\' in table \'spr_src_Land_Vew_Select\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.DocPlaceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Code {
+                get {
+                    try {
+                        return ((string)(this[this.tablespr_src_Land_Vew_Select.CodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Code\' in table \'spr_src_Land_Vew_Select\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.CodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ownership {
+                get {
+                    try {
+                        return ((string)(this[this.tablespr_src_Land_Vew_Select.OwnershipColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Ownership\' in table \'spr_src_Land_Vew_Select\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.OwnershipColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string DocNumber {
+                get {
+                    try {
+                        return ((string)(this[this.tablespr_src_Land_Vew_Select.DocNumberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DocNumber\' in table \'spr_src_Land_Vew_Select\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.DocNumberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SoilTextre {
+                get {
+                    try {
+                        return ((string)(this[this.tablespr_src_Land_Vew_Select.SoilTextreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SoilTextre\' in table \'spr_src_Land_Vew_Select\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.SoilTextreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FieldUseType {
+                get {
+                    try {
+                        return ((string)(this[this.tablespr_src_Land_Vew_Select.FieldUseTypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FieldUseType\' in table \'spr_src_Land_Vew_Select\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.FieldUseTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal UsableArea {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespr_src_Land_Vew_Select.UsableAreaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'UsableArea\' in table \'spr_src_Land_Vew_Select\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.UsableAreaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal TotalArea {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespr_src_Land_Vew_Select.TotalAreaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalArea\' in table \'spr_src_Land_Vew_Select\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.TotalAreaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FieldName {
+                get {
+                    try {
+                        return ((string)(this[this.tablespr_src_Land_Vew_Select.FieldNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FieldName\' in table \'spr_src_Land_Vew_Select\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.FieldNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string PartName {
+                get {
+                    return ((string)(this[this.tablespr_src_Land_Vew_Select.PartNameColumn]));
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.PartNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SubcollectionName {
+                get {
+                    return ((string)(this[this.tablespr_src_Land_Vew_Select.SubcollectionNameColumn]));
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.SubcollectionNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string CollectionName {
+                get {
+                    return ((string)(this[this.tablespr_src_Land_Vew_Select.CollectionNameColumn]));
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.CollectionNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string ProvinceName {
+                get {
+                    try {
+                        return ((string)(this[this.tablespr_src_Land_Vew_Select.ProvinceNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ProvinceName\' in table \'spr_src_Land_Vew_Select\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.ProvinceNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TownshipName {
+                get {
+                    try {
+                        return ((string)(this[this.tablespr_src_Land_Vew_Select.TownshipNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TownshipName\' in table \'spr_src_Land_Vew_Select\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_src_Land_Vew_Select.TownshipNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDescriptionNull() {
+                return this.IsNull(this.tablespr_src_Land_Vew_Select.DescriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDescriptionNull() {
+                this[this.tablespr_src_Land_Vew_Select.DescriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsAddressNull() {
+                return this.IsNull(this.tablespr_src_Land_Vew_Select.AddressColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetAddressNull() {
+                this[this.tablespr_src_Land_Vew_Select.AddressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCityNull() {
+                return this.IsNull(this.tablespr_src_Land_Vew_Select.CityColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCityNull() {
+                this[this.tablespr_src_Land_Vew_Select.CityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsOppositionNull() {
+                return this.IsNull(this.tablespr_src_Land_Vew_Select.OppositionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetOppositionNull() {
+                this[this.tablespr_src_Land_Vew_Select.OppositionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSalabilityNull() {
+                return this.IsNull(this.tablespr_src_Land_Vew_Select.SalabilityColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSalabilityNull() {
+                this[this.tablespr_src_Land_Vew_Select.SalabilityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IschangeUseNull() {
+                return this.IsNull(this.tablespr_src_Land_Vew_Select.changeUseColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetchangeUseNull() {
+                this[this.tablespr_src_Land_Vew_Select.changeUseColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFutureProgramNull() {
+                return this.IsNull(this.tablespr_src_Land_Vew_Select.FutureProgramColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFutureProgramNull() {
+                this[this.tablespr_src_Land_Vew_Select.FutureProgramColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDocPlaceNull() {
+                return this.IsNull(this.tablespr_src_Land_Vew_Select.DocPlaceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDocPlaceNull() {
+                this[this.tablespr_src_Land_Vew_Select.DocPlaceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCodeNull() {
+                return this.IsNull(this.tablespr_src_Land_Vew_Select.CodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCodeNull() {
+                this[this.tablespr_src_Land_Vew_Select.CodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsOwnershipNull() {
+                return this.IsNull(this.tablespr_src_Land_Vew_Select.OwnershipColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetOwnershipNull() {
+                this[this.tablespr_src_Land_Vew_Select.OwnershipColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDocNumberNull() {
+                return this.IsNull(this.tablespr_src_Land_Vew_Select.DocNumberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDocNumberNull() {
+                this[this.tablespr_src_Land_Vew_Select.DocNumberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSoilTextreNull() {
+                return this.IsNull(this.tablespr_src_Land_Vew_Select.SoilTextreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSoilTextreNull() {
+                this[this.tablespr_src_Land_Vew_Select.SoilTextreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFieldUseTypeNull() {
+                return this.IsNull(this.tablespr_src_Land_Vew_Select.FieldUseTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFieldUseTypeNull() {
+                this[this.tablespr_src_Land_Vew_Select.FieldUseTypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsUsableAreaNull() {
+                return this.IsNull(this.tablespr_src_Land_Vew_Select.UsableAreaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetUsableAreaNull() {
+                this[this.tablespr_src_Land_Vew_Select.UsableAreaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTotalAreaNull() {
+                return this.IsNull(this.tablespr_src_Land_Vew_Select.TotalAreaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTotalAreaNull() {
+                this[this.tablespr_src_Land_Vew_Select.TotalAreaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFieldNameNull() {
+                return this.IsNull(this.tablespr_src_Land_Vew_Select.FieldNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFieldNameNull() {
+                this[this.tablespr_src_Land_Vew_Select.FieldNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsProvinceNameNull() {
+                return this.IsNull(this.tablespr_src_Land_Vew_Select.ProvinceNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetProvinceNameNull() {
+                this[this.tablespr_src_Land_Vew_Select.ProvinceNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTownshipNameNull() {
+                return this.IsNull(this.tablespr_src_Land_Vew_Select.TownshipNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTownshipNameNull() {
+                this[this.tablespr_src_Land_Vew_Select.TownshipNameColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -28784,6 +30053,40 @@ namespace BaranDataAccess.Source {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public spr_src_Land_Lst_SelectRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class spr_src_Land_Vew_SelectRowChangeEvent : global::System.EventArgs {
+            
+            private spr_src_Land_Vew_SelectRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spr_src_Land_Vew_SelectRowChangeEvent(spr_src_Land_Vew_SelectRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spr_src_Land_Vew_SelectRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -33939,6 +35242,7 @@ namespace BaranDataAccess.Source.dstSourceTableAdapters {
             tableMapping.ColumnMappings.Add("نام", "نام");
             tableMapping.ColumnMappings.Add("نام واحد", "نام واحد");
             tableMapping.ColumnMappings.Add("نام کشت و صنعت", "نام کشت و صنعت");
+            tableMapping.ColumnMappings.Add("نام واحد فرعی", "نام واحد فرعی");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -34324,6 +35628,7 @@ namespace BaranDataAccess.Source.dstSourceTableAdapters {
             tableMapping.ColumnMappings.Add("نام", "نام");
             tableMapping.ColumnMappings.Add("واحد", "واحد");
             tableMapping.ColumnMappings.Add("کشت و صنعت", "کشت و صنعت");
+            tableMapping.ColumnMappings.Add("واحد فرعی", "واحد فرعی");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -38165,6 +39470,208 @@ namespace BaranDataAccess.Source.dstSourceTableAdapters {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             dstSource.spr_src_Land_Lst_SelectDataTable dataTable = new dstSource.spr_src_Land_Lst_SelectDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class spr_src_Land_Vew_SelectTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public spr_src_Land_Vew_SelectTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "spr_src_Land_Vew_Select";
+            tableMapping.ColumnMappings.Add("LandID", "LandID");
+            tableMapping.ColumnMappings.Add("Description", "Description");
+            tableMapping.ColumnMappings.Add("Address", "Address");
+            tableMapping.ColumnMappings.Add("City", "City");
+            tableMapping.ColumnMappings.Add("Opposition", "Opposition");
+            tableMapping.ColumnMappings.Add("Salability", "Salability");
+            tableMapping.ColumnMappings.Add("changeUse", "changeUse");
+            tableMapping.ColumnMappings.Add("FutureProgram", "FutureProgram");
+            tableMapping.ColumnMappings.Add("DocPlace", "DocPlace");
+            tableMapping.ColumnMappings.Add("Code", "Code");
+            tableMapping.ColumnMappings.Add("Ownership", "Ownership");
+            tableMapping.ColumnMappings.Add("DocNumber", "DocNumber");
+            tableMapping.ColumnMappings.Add("SoilTextre", "SoilTextre");
+            tableMapping.ColumnMappings.Add("FieldUseType", "FieldUseType");
+            tableMapping.ColumnMappings.Add("UsableArea", "UsableArea");
+            tableMapping.ColumnMappings.Add("TotalArea", "TotalArea");
+            tableMapping.ColumnMappings.Add("FieldName", "FieldName");
+            tableMapping.ColumnMappings.Add("PartName", "PartName");
+            tableMapping.ColumnMappings.Add("SubcollectionName", "SubcollectionName");
+            tableMapping.ColumnMappings.Add("CollectionName", "CollectionName");
+            tableMapping.ColumnMappings.Add("ProvinceName", "ProvinceName");
+            tableMapping.ColumnMappings.Add("TownshipName", "TownshipName");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::BaranDataAccess.Properties.Settings.Default.BaranConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.spr_src_Land_Vew_Select";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LandID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int FillLandViewTable(dstSource.spr_src_Land_Vew_SelectDataTable dataTable, global::System.Nullable<int> LandID) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((LandID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(LandID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual dstSource.spr_src_Land_Vew_SelectDataTable GetLandViewTable(global::System.Nullable<int> LandID) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((LandID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(LandID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            dstSource.spr_src_Land_Vew_SelectDataTable dataTable = new dstSource.spr_src_Land_Vew_SelectDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

@@ -679,6 +679,12 @@
     <Compile Include="Source\frmlandList.Designer.cs">
       <DependentUpon>frmlandList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Source\frmLandView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\frmLandView.Designer.cs">
+      <DependentUpon>frmLandView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Source\frmMachinery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1064,6 +1070,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Source\frmlandList.resx">
       <DependentUpon>frmlandList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\frmLandView.resx">
+      <DependentUpon>frmLandView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Source\frmMachinery.resx">
       <DependentUpon>frmMachinery.cs</DependentUpon>

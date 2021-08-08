@@ -163,7 +163,7 @@ namespace Baran.Source
         private void Detail()
         {
 
-            Baran.Source.frmFieldView ofrm = new frmFieldView(LandID);
+            Baran.Source.frmLandView ofrm = new frmLandView(LandID);
             ofrm.ShowDialog();
         }
 

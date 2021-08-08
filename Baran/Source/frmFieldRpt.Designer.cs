@@ -56,7 +56,7 @@
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("spr_src_Field_Rpt_Select", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RowID", 0);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FreeSpace", 1);
-            Infragistics.Win.Appearance appearance34 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance57 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance58 = new Infragistics.Win.Appearance();
@@ -125,6 +125,11 @@
             this.grpChartControls = new Baran.Windows.Forms.GroupBox();
             this.grpSourceControls = new Baran.Windows.Forms.GroupBox();
             this.rdbTexture = new System.Windows.Forms.RadioButton();
+            this.grpCompanyControls = new Baran.Windows.Forms.GroupBox();
+            this.rdbCompany = new System.Windows.Forms.RadioButton();
+            this.rdbSubcollection = new System.Windows.Forms.RadioButton();
+            this.rdbCollection = new System.Windows.Forms.RadioButton();
+            this.rdbPart = new System.Windows.Forms.RadioButton();
             this.rdbProvince = new System.Windows.Forms.RadioButton();
             this.rdbSalability = new System.Windows.Forms.RadioButton();
             this.rdbOpposition = new System.Windows.Forms.RadioButton();
@@ -133,13 +138,9 @@
             this.rdbTownship = new System.Windows.Forms.RadioButton();
             this.rdbCity = new System.Windows.Forms.RadioButton();
             this.rdbOwnership = new System.Windows.Forms.RadioButton();
-            this.grpCompanyControls = new Baran.Windows.Forms.GroupBox();
-            this.rdbCompany = new System.Windows.Forms.RadioButton();
-            this.rdbSubcollection = new System.Windows.Forms.RadioButton();
-            this.rdbCollection = new System.Windows.Forms.RadioButton();
-            this.rdbPart = new System.Windows.Forms.RadioButton();
             this.tac = new Baran.Windows.Forms.ultraTabControl();
             this.tbcMain = new Infragistics.Win.UltraWinTabControl.UltraTabSharedControlsPage();
+            this.chkField = new Baran.Windows.Forms.CheckBox.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).BeginInit();
             this.grpHeader.SuspendLayout();
@@ -263,6 +264,7 @@
             // grpControls
             // 
             this.grpControls.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
+            this.grpControls.Controls.Add(this.chkField);
             this.grpControls.Controls.Add(this.chkChangeUse);
             this.grpControls.Controls.Add(this.checkBox2);
             this.grpControls.Controls.Add(this.checkBox1);
@@ -294,7 +296,7 @@
             // 
             this.chkChangeUse.AutoSize = true;
             this.chkChangeUse.ForeColor = System.Drawing.Color.White;
-            this.chkChangeUse.Location = new System.Drawing.Point(190, 480);
+            this.chkChangeUse.Location = new System.Drawing.Point(190, 517);
             this.chkChangeUse.Name = "chkChangeUse";
             this.chkChangeUse.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkChangeUse.Size = new System.Drawing.Size(109, 17);
@@ -306,7 +308,7 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.ForeColor = System.Drawing.Color.White;
-            this.checkBox2.Location = new System.Drawing.Point(213, 456);
+            this.checkBox2.Location = new System.Drawing.Point(213, 493);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox2.Size = new System.Drawing.Size(86, 17);
@@ -318,7 +320,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(213, 432);
+            this.checkBox1.Location = new System.Drawing.Point(213, 469);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox1.Size = new System.Drawing.Size(86, 17);
@@ -332,7 +334,7 @@
             appearance5.TextHAlignAsString = "Right";
             appearance5.TextVAlignAsString = "Middle";
             this.label8.Appearance = appearance5;
-            this.label8.Location = new System.Drawing.Point(199, 373);
+            this.label8.Location = new System.Drawing.Point(199, 410);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label8.Size = new System.Drawing.Size(100, 23);
@@ -357,7 +359,7 @@
             appearance7.TextHAlignAsString = "Right";
             appearance7.TextVAlignAsString = "Middle";
             this.cmbFieldUseType.ItemAppearance = appearance7;
-            this.cmbFieldUseType.Location = new System.Drawing.Point(19, 396);
+            this.cmbFieldUseType.Location = new System.Drawing.Point(19, 433);
             this.cmbFieldUseType.Name = "cmbFieldUseType";
             this.cmbFieldUseType.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbFieldUseType.Size = new System.Drawing.Size(280, 22);
@@ -369,7 +371,7 @@
             appearance3.TextHAlignAsString = "Right";
             appearance3.TextVAlignAsString = "Middle";
             this.label7.Appearance = appearance3;
-            this.label7.Location = new System.Drawing.Point(199, 321);
+            this.label7.Location = new System.Drawing.Point(199, 358);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label7.Size = new System.Drawing.Size(100, 23);
@@ -394,7 +396,7 @@
             appearance10.TextHAlignAsString = "Right";
             appearance10.TextVAlignAsString = "Middle";
             this.cmbOwnership.ItemAppearance = appearance10;
-            this.cmbOwnership.Location = new System.Drawing.Point(19, 344);
+            this.cmbOwnership.Location = new System.Drawing.Point(19, 381);
             this.cmbOwnership.Name = "cmbOwnership";
             this.cmbOwnership.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbOwnership.Size = new System.Drawing.Size(280, 22);
@@ -406,7 +408,7 @@
             appearance11.TextHAlignAsString = "Right";
             appearance11.TextVAlignAsString = "Middle";
             this.label6.Appearance = appearance11;
-            this.label6.Location = new System.Drawing.Point(199, 269);
+            this.label6.Location = new System.Drawing.Point(199, 306);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label6.Size = new System.Drawing.Size(100, 23);
@@ -431,7 +433,7 @@
             appearance15.TextHAlignAsString = "Right";
             appearance15.TextVAlignAsString = "Middle";
             this.cmbSoilTexture.ItemAppearance = appearance15;
-            this.cmbSoilTexture.Location = new System.Drawing.Point(19, 292);
+            this.cmbSoilTexture.Location = new System.Drawing.Point(19, 329);
             this.cmbSoilTexture.Name = "cmbSoilTexture";
             this.cmbSoilTexture.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbSoilTexture.Size = new System.Drawing.Size(280, 22);
@@ -443,7 +445,7 @@
             appearance17.TextHAlignAsString = "Right";
             appearance17.TextVAlignAsString = "Middle";
             this.label5.Appearance = appearance17;
-            this.label5.Location = new System.Drawing.Point(199, 217);
+            this.label5.Location = new System.Drawing.Point(199, 254);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label5.Size = new System.Drawing.Size(100, 23);
@@ -468,7 +470,7 @@
             appearance21.TextHAlignAsString = "Right";
             appearance21.TextVAlignAsString = "Middle";
             this.cmbTownship.ItemAppearance = appearance21;
-            this.cmbTownship.Location = new System.Drawing.Point(19, 240);
+            this.cmbTownship.Location = new System.Drawing.Point(19, 277);
             this.cmbTownship.Name = "cmbTownship";
             this.cmbTownship.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbTownship.Size = new System.Drawing.Size(280, 22);
@@ -480,7 +482,7 @@
             appearance22.TextHAlignAsString = "Right";
             appearance22.TextVAlignAsString = "Middle";
             this.label4.Appearance = appearance22;
-            this.label4.Location = new System.Drawing.Point(199, 165);
+            this.label4.Location = new System.Drawing.Point(199, 202);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label4.Size = new System.Drawing.Size(100, 23);
@@ -505,7 +507,7 @@
             appearance24.TextHAlignAsString = "Right";
             appearance24.TextVAlignAsString = "Middle";
             this.cmbProvince.ItemAppearance = appearance24;
-            this.cmbProvince.Location = new System.Drawing.Point(19, 188);
+            this.cmbProvince.Location = new System.Drawing.Point(19, 225);
             this.cmbProvince.Name = "cmbProvince";
             this.cmbProvince.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbProvince.Size = new System.Drawing.Size(280, 22);
@@ -518,7 +520,7 @@
             appearance25.TextHAlignAsString = "Right";
             appearance25.TextVAlignAsString = "Middle";
             this.label3.Appearance = appearance25;
-            this.label3.Location = new System.Drawing.Point(199, 113);
+            this.label3.Location = new System.Drawing.Point(199, 150);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(100, 23);
@@ -543,7 +545,7 @@
             appearance27.TextHAlignAsString = "Right";
             appearance27.TextVAlignAsString = "Middle";
             this.cmbPart.ItemAppearance = appearance27;
-            this.cmbPart.Location = new System.Drawing.Point(19, 136);
+            this.cmbPart.Location = new System.Drawing.Point(19, 173);
             this.cmbPart.Name = "cmbPart";
             this.cmbPart.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbPart.Size = new System.Drawing.Size(280, 22);
@@ -555,7 +557,7 @@
             appearance28.TextHAlignAsString = "Right";
             appearance28.TextVAlignAsString = "Middle";
             this.label2.Appearance = appearance28;
-            this.label2.Location = new System.Drawing.Point(199, 61);
+            this.label2.Location = new System.Drawing.Point(199, 98);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(100, 23);
@@ -580,7 +582,7 @@
             appearance30.TextHAlignAsString = "Right";
             appearance30.TextVAlignAsString = "Middle";
             this.cmbSubcollection.ItemAppearance = appearance30;
-            this.cmbSubcollection.Location = new System.Drawing.Point(19, 84);
+            this.cmbSubcollection.Location = new System.Drawing.Point(19, 121);
             this.cmbSubcollection.Name = "cmbSubcollection";
             this.cmbSubcollection.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbSubcollection.Size = new System.Drawing.Size(280, 22);
@@ -592,7 +594,7 @@
             appearance31.TextHAlignAsString = "Right";
             appearance31.TextVAlignAsString = "Middle";
             this.label1.Appearance = appearance31;
-            this.label1.Location = new System.Drawing.Point(199, 8);
+            this.label1.Location = new System.Drawing.Point(199, 45);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(100, 23);
@@ -617,7 +619,7 @@
             appearance33.TextHAlignAsString = "Right";
             appearance33.TextVAlignAsString = "Middle";
             this.cmbCollection.ItemAppearance = appearance33;
-            this.cmbCollection.Location = new System.Drawing.Point(19, 32);
+            this.cmbCollection.Location = new System.Drawing.Point(19, 69);
             this.cmbCollection.Name = "cmbCollection";
             this.cmbCollection.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbCollection.Size = new System.Drawing.Size(280, 22);
@@ -656,8 +658,8 @@
             ultraGridColumn1,
             ultraGridColumn2});
             ultraGridBand1.Override.SummaryDisplayArea = Infragistics.Win.UltraWinGrid.SummaryDisplayAreas.BottomFixed;
-            appearance34.ForeColor = System.Drawing.Color.DarkBlue;
-            ultraGridBand1.Override.SummaryValueAppearance = appearance34;
+            appearance20.ForeColor = System.Drawing.Color.DarkBlue;
+            ultraGridBand1.Override.SummaryValueAppearance = appearance20;
             this.grdItem.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdItem.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
             appearance8.ForeColor = System.Drawing.Color.DarkBlue;
@@ -1146,6 +1148,75 @@
             this.rdbTexture.Text = "بافت خاک";
             this.rdbTexture.UseVisualStyleBackColor = true;
             // 
+            // grpCompanyControls
+            // 
+            this.grpCompanyControls.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
+            this.grpCompanyControls.Controls.Add(this.rdbCompany);
+            this.grpCompanyControls.Controls.Add(this.rdbSubcollection);
+            this.grpCompanyControls.Controls.Add(this.rdbCollection);
+            this.grpCompanyControls.Controls.Add(this.rdbPart);
+            this.grpCompanyControls.Dock = System.Windows.Forms.DockStyle.Right;
+            this.grpCompanyControls.Location = new System.Drawing.Point(883, 0);
+            this.grpCompanyControls.Name = "grpCompanyControls";
+            this.grpCompanyControls.Size = new System.Drawing.Size(321, 97);
+            this.grpCompanyControls.TabIndex = 0;
+            // 
+            // rdbCompany
+            // 
+            this.rdbCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdbCompany.AutoSize = true;
+            this.rdbCompany.Checked = true;
+            this.rdbCompany.ForeColor = System.Drawing.Color.White;
+            this.rdbCompany.Location = new System.Drawing.Point(222, -4);
+            this.rdbCompany.Name = "rdbCompany";
+            this.rdbCompany.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rdbCompany.Size = new System.Drawing.Size(60, 28);
+            this.rdbCompany.TabIndex = 4;
+            this.rdbCompany.TabStop = true;
+            this.rdbCompany.Text = "شرکت";
+            this.rdbCompany.UseVisualStyleBackColor = true;
+            // 
+            // rdbSubcollection
+            // 
+            this.rdbSubcollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdbSubcollection.AutoSize = true;
+            this.rdbSubcollection.ForeColor = System.Drawing.Color.White;
+            this.rdbSubcollection.Location = new System.Drawing.Point(75, -4);
+            this.rdbSubcollection.Name = "rdbSubcollection";
+            this.rdbSubcollection.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rdbSubcollection.Size = new System.Drawing.Size(51, 28);
+            this.rdbSubcollection.TabIndex = 6;
+            this.rdbSubcollection.TabStop = true;
+            this.rdbSubcollection.Text = "واحد";
+            this.rdbSubcollection.UseVisualStyleBackColor = true;
+            // 
+            // rdbCollection
+            // 
+            this.rdbCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdbCollection.AutoSize = true;
+            this.rdbCollection.ForeColor = System.Drawing.Color.White;
+            this.rdbCollection.Location = new System.Drawing.Point(182, 32);
+            this.rdbCollection.Name = "rdbCollection";
+            this.rdbCollection.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rdbCollection.Size = new System.Drawing.Size(100, 28);
+            this.rdbCollection.TabIndex = 5;
+            this.rdbCollection.Text = "کشت و صنعت";
+            this.rdbCollection.UseVisualStyleBackColor = true;
+            // 
+            // rdbPart
+            // 
+            this.rdbPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdbPart.AutoSize = true;
+            this.rdbPart.ForeColor = System.Drawing.Color.White;
+            this.rdbPart.Location = new System.Drawing.Point(45, 35);
+            this.rdbPart.Name = "rdbPart";
+            this.rdbPart.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rdbPart.Size = new System.Drawing.Size(81, 28);
+            this.rdbPart.TabIndex = 7;
+            this.rdbPart.TabStop = true;
+            this.rdbPart.Text = "واحد فرعی";
+            this.rdbPart.UseVisualStyleBackColor = true;
+            // 
             // rdbProvince
             // 
             this.rdbProvince.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1252,75 +1323,6 @@
             this.rdbOwnership.Text = "نوع مالکیت";
             this.rdbOwnership.UseVisualStyleBackColor = true;
             // 
-            // grpCompanyControls
-            // 
-            this.grpCompanyControls.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
-            this.grpCompanyControls.Controls.Add(this.rdbCompany);
-            this.grpCompanyControls.Controls.Add(this.rdbSubcollection);
-            this.grpCompanyControls.Controls.Add(this.rdbCollection);
-            this.grpCompanyControls.Controls.Add(this.rdbPart);
-            this.grpCompanyControls.Dock = System.Windows.Forms.DockStyle.Right;
-            this.grpCompanyControls.Location = new System.Drawing.Point(883, 28);
-            this.grpCompanyControls.Name = "grpCompanyControls";
-            this.grpCompanyControls.Size = new System.Drawing.Size(321, 69);
-            this.grpCompanyControls.TabIndex = 0;
-            // 
-            // rdbCompany
-            // 
-            this.rdbCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdbCompany.AutoSize = true;
-            this.rdbCompany.Checked = true;
-            this.rdbCompany.ForeColor = System.Drawing.Color.White;
-            this.rdbCompany.Location = new System.Drawing.Point(222, -4);
-            this.rdbCompany.Name = "rdbCompany";
-            this.rdbCompany.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbCompany.Size = new System.Drawing.Size(60, 28);
-            this.rdbCompany.TabIndex = 4;
-            this.rdbCompany.TabStop = true;
-            this.rdbCompany.Text = "شرکت";
-            this.rdbCompany.UseVisualStyleBackColor = true;
-            // 
-            // rdbSubcollection
-            // 
-            this.rdbSubcollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdbSubcollection.AutoSize = true;
-            this.rdbSubcollection.ForeColor = System.Drawing.Color.White;
-            this.rdbSubcollection.Location = new System.Drawing.Point(75, -4);
-            this.rdbSubcollection.Name = "rdbSubcollection";
-            this.rdbSubcollection.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbSubcollection.Size = new System.Drawing.Size(51, 28);
-            this.rdbSubcollection.TabIndex = 6;
-            this.rdbSubcollection.TabStop = true;
-            this.rdbSubcollection.Text = "واحد";
-            this.rdbSubcollection.UseVisualStyleBackColor = true;
-            // 
-            // rdbCollection
-            // 
-            this.rdbCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdbCollection.AutoSize = true;
-            this.rdbCollection.ForeColor = System.Drawing.Color.White;
-            this.rdbCollection.Location = new System.Drawing.Point(182, 32);
-            this.rdbCollection.Name = "rdbCollection";
-            this.rdbCollection.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbCollection.Size = new System.Drawing.Size(100, 28);
-            this.rdbCollection.TabIndex = 5;
-            this.rdbCollection.Text = "کشت و صنعت";
-            this.rdbCollection.UseVisualStyleBackColor = true;
-            // 
-            // rdbPart
-            // 
-            this.rdbPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdbPart.AutoSize = true;
-            this.rdbPart.ForeColor = System.Drawing.Color.White;
-            this.rdbPart.Location = new System.Drawing.Point(45, 35);
-            this.rdbPart.Name = "rdbPart";
-            this.rdbPart.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbPart.Size = new System.Drawing.Size(81, 28);
-            this.rdbPart.TabIndex = 7;
-            this.rdbPart.TabStop = true;
-            this.rdbPart.Text = "واحد فرعی";
-            this.rdbPart.UseVisualStyleBackColor = true;
-            // 
             // tac
             // 
             appearance1.ForeColor = System.Drawing.Color.White;
@@ -1360,6 +1362,21 @@
             this.tbcMain.Location = new System.Drawing.Point(-10000, -10000);
             this.tbcMain.Name = "tbcMain";
             this.tbcMain.Size = new System.Drawing.Size(1207, 643);
+            // 
+            // chkField
+            // 
+            this.chkField.AutoSize = true;
+            this.chkField.Checked = true;
+            this.chkField.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkField.ForeColor = System.Drawing.Color.Yellow;
+            this.chkField.Location = new System.Drawing.Point(197, 22);
+            this.chkField.Name = "chkField";
+            this.chkField.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chkField.Size = new System.Drawing.Size(102, 17);
+            this.chkField.TabIndex = 25;
+            this.chkField.Text = "به تفکیک قطعات";
+            this.chkField.UseVisualStyleBackColor = true;
+            this.chkField.CheckedChanged += new System.EventHandler(this.chkField_CheckedChanged);
             // 
             // frmFieldRpt
             // 
@@ -1470,5 +1487,6 @@
         private System.Windows.Forms.RadioButton rdbCity;
         private System.Windows.Forms.RadioButton rdbOwnership;
         private Windows.Forms.UltraChart chtChart;
+        private Windows.Forms.CheckBox.CheckBox chkField;
     }
 }

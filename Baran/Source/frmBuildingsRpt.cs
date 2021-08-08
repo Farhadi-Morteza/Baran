@@ -10,6 +10,7 @@ using GMap.NET.MapProviders;
 using GMap.NET;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
+using System.Linq;
 
 namespace Baran.Source
 {
@@ -32,6 +33,8 @@ namespace Baran.Source
         #endregion
 
         #region Variables
+        BaranDataAccess.Company.dstCompany.spr_src_Subcollection_SelectDataTable tblSubCollection =
+            new BaranDataAccess.Company.dstCompany.spr_src_Subcollection_SelectDataTable();
         //@Action AS INT
         string
             strWhereClause
@@ -55,6 +58,10 @@ namespace Baran.Source
         public override void OnformLoad()
         {
             base.OnformLoad();
+            BaranDataAccess.Company.dstCompanyTableAdapters.spr_src_Subcollection_SelectTableAdapter adp =
+                new BaranDataAccess.Company.dstCompanyTableAdapters.spr_src_Subcollection_SelectTableAdapter();
+            adp.FillSubcollectionTable(tblSubCollection, CurrentUser.Instance.UserID);
+
             ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcCollection, cmbCollection, "");
             ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcSubcollection, cmbSubcollection, "");
             ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcPart, cmbPart, "");
@@ -282,6 +289,45 @@ namespace Baran.Source
                 }
             }
             catch { }
+        }
+
+        private void cmbCollection_ValueChanged(object sender, EventArgs e)
+        {
+
+            //OK
+            //int p = Convert.ToInt32(cmbCollection.Value);
+            //var tbl = tblSubCollection.Where(s => s.Fk_CollectionID == p).ToArray();
+            //cmbSubcollection.DataSource = tbl;
+            //OK
+            //var valumember = cmbSubcollection.DataFilter;
+            //var res1 = cmbSubcollection.DataSource;
+            //BaranDataAccess.Company.dstCompany.spr_src_Subcollection_SelectDataTable dt =
+            //    (BaranDataAccess.Company.dstCompany.spr_src_Subcollection_SelectDataTable)res1;
+
+            //BaranDataAccess.Company.dstCompany.spr_src_Subcollection_SelectRow jm;
+
+            //int p = Convert.ToInt32( cmbCollection.Value.ToString());
+            //var a = dt.Where(s => s.Fk_CollectionID == p).ToList();
+
+            //cmbSubcollection.DataSource = a;
+
+            //var res2 = cmbSubcollection.DataMember;
+            //var res3 = cmbSubcollection.DataBindings;
+
+
+
+            //BaranDataAccess.tbl_src_Subcollection ds = (BaranDataAccess.tbl_src_Subcollection)cmbSubcollection.DataSource;
+            //var p = cmbSubcollection.DataSource;
+            //var j = p
+
+            ////var d = (from j in ds select j).ToArray;
+            //var res0 = (from dfdf in ds where dfdf.Fk_CollectionID = cmbCollection.Value select dfdf).tolist();
+            ////var pf = ds.t
+            //int[] Number = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //var res1 = Number.ToList();
+            //var res2 = Number.OrderByDescending(n => n).ToArray();
+            //var res3 = Number.Select(s => s > 5);
+
         }
 
         private void ClearMap()

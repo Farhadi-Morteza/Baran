@@ -1,6 +1,7 @@
-﻿namespace Baran.Source
+﻿
+namespace Baran.Source
 {
-    partial class frmFieldView
+    partial class frmLandView
     {
         /// <summary>
         /// Required designer variable.
@@ -69,7 +70,7 @@
             Infragistics.Win.Appearance appearance19 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance21 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance22 = new Infragistics.Win.Appearance();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFieldView));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLandView));
             this.grpControls = new Baran.Windows.Forms.GroupBox();
             this.lblchangeUse = new Baran.Windows.Forms.Label();
             this.label31 = new Baran.Windows.Forms.Label();
@@ -114,14 +115,11 @@
             this.label1 = new Baran.Windows.Forms.Label();
             this.grpDoc = new Baran.Windows.Forms.GroupBox();
             this.imageListView1 = new Manina.Windows.Forms.imageListView();
-            this.grpMap = new Baran.Windows.Forms.GroupBox();
             this.MainMap = new Demo.WindowsForms.Map();
             ((System.ComponentModel.ISupportInitialize)(this.grpControls)).BeginInit();
             this.grpControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpDoc)).BeginInit();
             this.grpDoc.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grpMap)).BeginInit();
-            this.grpMap.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpControls
@@ -169,11 +167,10 @@
             this.grpControls.Controls.Add(this.label2);
             this.grpControls.Controls.Add(this.label1);
             this.grpControls.Dock = System.Windows.Forms.DockStyle.Right;
-            this.grpControls.Location = new System.Drawing.Point(563, 25);
+            this.grpControls.Location = new System.Drawing.Point(680, 25);
             this.grpControls.Name = "grpControls";
-            this.grpControls.Size = new System.Drawing.Size(355, 589);
-            this.grpControls.TabIndex = 10;
-            this.grpControls.Click += new System.EventHandler(this.grpControls_Click);
+            this.grpControls.Size = new System.Drawing.Size(355, 675);
+            this.grpControls.TabIndex = 12;
             // 
             // lblchangeUse
             // 
@@ -187,7 +184,7 @@
             this.lblchangeUse.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblchangeUse.Size = new System.Drawing.Size(228, 15);
             this.lblchangeUse.TabIndex = 53;
-            this.lblchangeUse.Text = ": آدرس";
+            this.lblchangeUse.Text = "...";
             // 
             // label31
             // 
@@ -216,7 +213,7 @@
             this.lblSalability.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblSalability.Size = new System.Drawing.Size(254, 15);
             this.lblSalability.TabIndex = 51;
-            this.lblSalability.Text = ": آدرس";
+            this.lblSalability.Text = "...";
             // 
             // label29
             // 
@@ -245,7 +242,7 @@
             this.lblOpposition.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblOpposition.Size = new System.Drawing.Size(276, 15);
             this.lblOpposition.TabIndex = 49;
-            this.lblOpposition.Text = ": آدرس";
+            this.lblOpposition.Text = "...";
             // 
             // label23
             // 
@@ -274,7 +271,7 @@
             this.lblDocPlace.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblDocPlace.Size = new System.Drawing.Size(253, 15);
             this.lblDocPlace.TabIndex = 47;
-            this.lblDocPlace.Text = ": آدرس";
+            this.lblDocPlace.Text = "...";
             // 
             // label25
             // 
@@ -303,7 +300,7 @@
             this.lblFutureProgram.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblFutureProgram.Size = new System.Drawing.Size(248, 15);
             this.lblFutureProgram.TabIndex = 45;
-            this.lblFutureProgram.Text = ": آدرس";
+            this.lblFutureProgram.Text = "...";
             // 
             // label27
             // 
@@ -332,7 +329,7 @@
             this.lblAddress.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblAddress.Size = new System.Drawing.Size(292, 15);
             this.lblAddress.TabIndex = 43;
-            this.lblAddress.Text = ": آدرس";
+            this.lblAddress.Text = "...";
             // 
             // label21
             // 
@@ -361,7 +358,7 @@
             this.lblCity.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCity.Size = new System.Drawing.Size(276, 15);
             this.lblCity.TabIndex = 41;
-            this.lblCity.Text = ": آدرس";
+            this.lblCity.Text = "...";
             // 
             // label15
             // 
@@ -390,7 +387,7 @@
             this.lblTownshipName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblTownshipName.Size = new System.Drawing.Size(276, 15);
             this.lblTownshipName.TabIndex = 39;
-            this.lblTownshipName.Text = ": آدرس";
+            this.lblTownshipName.Text = "...";
             // 
             // lblProvinceName
             // 
@@ -404,7 +401,7 @@
             this.lblProvinceName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblProvinceName.Size = new System.Drawing.Size(255, 15);
             this.lblProvinceName.TabIndex = 38;
-            this.lblProvinceName.Text = ": نام انباردار";
+            this.lblProvinceName.Text = "...";
             // 
             // label18
             // 
@@ -448,7 +445,7 @@
             this.lblFieldUseType.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblFieldUseType.Size = new System.Drawing.Size(276, 15);
             this.lblFieldUseType.TabIndex = 35;
-            this.lblFieldUseType.Text = ": آدرس";
+            this.lblFieldUseType.Text = "...";
             // 
             // label13
             // 
@@ -505,7 +502,7 @@
             this.lblOwnership.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblOwnership.Size = new System.Drawing.Size(276, 15);
             this.lblOwnership.TabIndex = 31;
-            this.lblOwnership.Text = ": آدرس";
+            this.lblOwnership.Text = "...";
             // 
             // lblDescription
             // 
@@ -533,7 +530,7 @@
             this.lblSoilTextre.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblSoilTextre.Size = new System.Drawing.Size(255, 15);
             this.lblSoilTextre.TabIndex = 29;
-            this.lblSoilTextre.Text = ": نام انباردار";
+            this.lblSoilTextre.Text = "...";
             // 
             // lblDocNumber
             // 
@@ -547,7 +544,7 @@
             this.lblDocNumber.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblDocNumber.Size = new System.Drawing.Size(233, 15);
             this.lblDocNumber.TabIndex = 28;
-            this.lblDocNumber.Text = ":حجم-مترمکعب";
+            this.lblDocNumber.Text = "...";
             // 
             // lblCode
             // 
@@ -561,7 +558,7 @@
             this.lblCode.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCode.Size = new System.Drawing.Size(243, 15);
             this.lblCode.TabIndex = 27;
-            this.lblCode.Text = ": مساحت-متر مربع";
+            this.lblCode.Text = "...";
             // 
             // lblUsableArea
             // 
@@ -575,7 +572,7 @@
             this.lblUsableArea.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblUsableArea.Size = new System.Drawing.Size(227, 15);
             this.lblUsableArea.TabIndex = 26;
-            this.lblUsableArea.Text = ": نوع کاربری";
+            this.lblUsableArea.Text = "...";
             // 
             // lblTotalArea
             // 
@@ -589,7 +586,7 @@
             this.lblTotalArea.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblTotalArea.Size = new System.Drawing.Size(266, 15);
             this.lblTotalArea.TabIndex = 25;
-            this.lblTotalArea.Text = ": نوع انبار";
+            this.lblTotalArea.Text = "...";
             // 
             // lblPart
             // 
@@ -615,9 +612,9 @@
             this.lblFieldName.Location = new System.Drawing.Point(2, 90);
             this.lblFieldName.Name = "lblFieldName";
             this.lblFieldName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblFieldName.Size = new System.Drawing.Size(268, 15);
+            this.lblFieldName.Size = new System.Drawing.Size(287, 15);
             this.lblFieldName.TabIndex = 23;
-            this.lblFieldName.Text = ": نام انبار";
+            this.lblFieldName.Text = "...";
             // 
             // label11
             // 
@@ -762,47 +759,38 @@
             appearance22.TextVAlignAsString = "Middle";
             this.label1.Appearance = appearance22;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(265, 90);
+            this.label1.Location = new System.Drawing.Point(292, 90);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(79, 15);
+            this.label1.Size = new System.Drawing.Size(51, 15);
             this.label1.TabIndex = 12;
-            this.label1.Text = ": نام قطعه زمین";
+            this.label1.Text = ": نام زمین";
             // 
             // grpDoc
             // 
             this.grpDoc.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
             this.grpDoc.Controls.Add(this.imageListView1);
             this.grpDoc.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grpDoc.Location = new System.Drawing.Point(0, 489);
+            this.grpDoc.Location = new System.Drawing.Point(0, 575);
             this.grpDoc.Name = "grpDoc";
-            this.grpDoc.Size = new System.Drawing.Size(563, 125);
-            this.grpDoc.TabIndex = 8;
+            this.grpDoc.Size = new System.Drawing.Size(680, 125);
+            this.grpDoc.TabIndex = 13;
             // 
             // imageListView1
             // 
             this.imageListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(94)))), ((int)(((byte)(112)))));
             this.imageListView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imageListView1.DefaultImage = ((System.Drawing.Image)(resources.GetObject("imageListView1.DefaultImage")));
+            this.imageListView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.imageListView1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("imageListView1.ErrorImage")));
             this.imageListView1.ForeColor = System.Drawing.Color.White;
             this.imageListView1.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.imageListView1.Location = new System.Drawing.Point(1, 0);
             this.imageListView1.Name = "imageListView1";
-            this.imageListView1.Size = new System.Drawing.Size(435, 124);
+            this.imageListView1.Size = new System.Drawing.Size(678, 124);
             this.imageListView1.TabIndex = 0;
             this.imageListView1.Text = "";
             this.imageListView1.ItemDoubleClick += new Manina.Windows.Forms.ItemDoubleClickEventHandler(this.imageListView1_ItemDoubleClick);
-            // 
-            // grpMap
-            // 
-            this.grpMap.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
-            this.grpMap.Controls.Add(this.MainMap);
-            this.grpMap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpMap.Location = new System.Drawing.Point(0, 25);
-            this.grpMap.Name = "grpMap";
-            this.grpMap.Size = new System.Drawing.Size(563, 464);
-            this.grpMap.TabIndex = 11;
             // 
             // MainMap
             // 
@@ -813,7 +801,7 @@
             this.MainMap.GrayScaleMode = false;
             this.MainMap.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.MainMap.LevelsKeepInMemmory = 5;
-            this.MainMap.Location = new System.Drawing.Point(1, 0);
+            this.MainMap.Location = new System.Drawing.Point(0, 25);
             this.MainMap.MarkersEnabled = true;
             this.MainMap.MaxZoom = 20;
             this.MainMap.MinZoom = 1;
@@ -826,28 +814,26 @@
             this.MainMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.MainMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.MainMap.ShowTileGridLines = false;
-            this.MainMap.Size = new System.Drawing.Size(561, 463);
-            this.MainMap.TabIndex = 0;
+            this.MainMap.Size = new System.Drawing.Size(680, 550);
+            this.MainMap.TabIndex = 14;
             this.MainMap.Zoom = 5D;
             // 
-            // frmFieldView
+            // frmLandView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(918, 617);
-            this.Controls.Add(this.grpMap);
+            this.ClientSize = new System.Drawing.Size(1035, 703);
+            this.Controls.Add(this.MainMap);
             this.Controls.Add(this.grpDoc);
             this.Controls.Add(this.grpControls);
-            this.Name = "frmFieldView";
+            this.Name = "frmLandView";
             this.Controls.SetChildIndex(this.grpControls, 0);
             this.Controls.SetChildIndex(this.grpDoc, 0);
-            this.Controls.SetChildIndex(this.grpMap, 0);
+            this.Controls.SetChildIndex(this.MainMap, 0);
             ((System.ComponentModel.ISupportInitialize)(this.grpControls)).EndInit();
             this.grpControls.ResumeLayout(false);
             this.grpControls.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpDoc)).EndInit();
             this.grpDoc.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grpMap)).EndInit();
-            this.grpMap.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -855,10 +841,28 @@
         #endregion
 
         private Windows.Forms.GroupBox grpControls;
+        private Windows.Forms.Label lblchangeUse;
+        private Windows.Forms.Label label31;
+        private Windows.Forms.Label lblSalability;
+        private Windows.Forms.Label label29;
+        private Windows.Forms.Label lblOpposition;
+        private Windows.Forms.Label label23;
+        private Windows.Forms.Label lblDocPlace;
+        private Windows.Forms.Label label25;
+        private Windows.Forms.Label lblFutureProgram;
+        private Windows.Forms.Label label27;
+        private Windows.Forms.Label lblAddress;
+        private Windows.Forms.Label label21;
+        private Windows.Forms.Label lblCity;
+        private Windows.Forms.Label label15;
+        private Windows.Forms.Label lblTownshipName;
+        private Windows.Forms.Label lblProvinceName;
+        private Windows.Forms.Label label18;
+        private Windows.Forms.Label label19;
+        private Windows.Forms.Label lblFieldUseType;
+        private Windows.Forms.Label label13;
         private Windows.Forms.Label lblCollection;
         private Windows.Forms.Label lblSubcollection;
-        private Windows.Forms.GroupBox grpDoc;
-        private Manina.Windows.Forms.imageListView imageListView1;
         private Windows.Forms.Label lblOwnership;
         private Windows.Forms.Label lblDescription;
         private Windows.Forms.Label lblSoilTextre;
@@ -878,27 +882,8 @@
         private Windows.Forms.Label label3;
         private Windows.Forms.Label label2;
         private Windows.Forms.Label label1;
-        private Windows.Forms.GroupBox grpMap;
+        private Windows.Forms.GroupBox grpDoc;
+        private Manina.Windows.Forms.imageListView imageListView1;
         private Demo.WindowsForms.Map MainMap;
-        private Windows.Forms.Label lblFieldUseType;
-        private Windows.Forms.Label label13;
-        private Windows.Forms.Label lblCity;
-        private Windows.Forms.Label label15;
-        private Windows.Forms.Label lblTownshipName;
-        private Windows.Forms.Label lblProvinceName;
-        private Windows.Forms.Label label18;
-        private Windows.Forms.Label label19;
-        private Windows.Forms.Label lblAddress;
-        private Windows.Forms.Label label21;
-        private Windows.Forms.Label lblOpposition;
-        private Windows.Forms.Label label23;
-        private Windows.Forms.Label lblDocPlace;
-        private Windows.Forms.Label label25;
-        private Windows.Forms.Label lblFutureProgram;
-        private Windows.Forms.Label label27;
-        private Windows.Forms.Label lblchangeUse;
-        private Windows.Forms.Label label31;
-        private Windows.Forms.Label lblSalability;
-        private Windows.Forms.Label label29;
     }
 }
