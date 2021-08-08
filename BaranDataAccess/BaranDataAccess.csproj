@@ -229,6 +229,9 @@
     <Compile Include="spr_src_Field_Map_Select_Result.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
+    <Compile Include="spr_src_Land_Map_Select_Result.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>

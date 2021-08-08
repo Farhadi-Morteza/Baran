@@ -370,7 +370,7 @@ namespace Baran.Source
             this.chkChangeUse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkChangeUse.AutoSize = true;
             this.chkChangeUse.ForeColor = System.Drawing.Color.White;
-            this.chkChangeUse.Location = new System.Drawing.Point(82, 168);
+            this.chkChangeUse.Location = new System.Drawing.Point(19, 168);
             this.chkChangeUse.Name = "chkChangeUse";
             this.chkChangeUse.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkChangeUse.Size = new System.Drawing.Size(109, 17);
@@ -383,7 +383,7 @@ namespace Baran.Source
             this.chkSalability.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkSalability.AutoSize = true;
             this.chkSalability.ForeColor = System.Drawing.Color.White;
-            this.chkSalability.Location = new System.Drawing.Point(225, 167);
+            this.chkSalability.Location = new System.Drawing.Point(133, 167);
             this.chkSalability.Name = "chkSalability";
             this.chkSalability.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkSalability.Size = new System.Drawing.Size(86, 17);
@@ -396,7 +396,7 @@ namespace Baran.Source
             this.chkOpposition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkOpposition.AutoSize = true;
             this.chkOpposition.ForeColor = System.Drawing.Color.White;
-            this.chkOpposition.Location = new System.Drawing.Point(345, 167);
+            this.chkOpposition.Location = new System.Drawing.Point(224, 167);
             this.chkOpposition.Name = "chkOpposition";
             this.chkOpposition.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkOpposition.Size = new System.Drawing.Size(86, 17);
@@ -518,12 +518,12 @@ namespace Baran.Source
             this.txtDocPlace.BackColor = System.Drawing.Color.Transparent;
             this.txtDocPlace.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtDocPlace.FontSize = 0;
-            this.txtDocPlace.Location = new System.Drawing.Point(197, 117);
+            this.txtDocPlace.Location = new System.Drawing.Point(19, 117);
             this.txtDocPlace.Name = "txtDocPlace";
             this.txtDocPlace.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtDocPlace.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtDocPlace.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDocPlace.Size = new System.Drawing.Size(235, 22);
+            this.txtDocPlace.Size = new System.Drawing.Size(516, 22);
             this.txtDocPlace.TabIndex = 9;
             this.txtDocPlace.UnformattedText = null;
             // 
@@ -535,7 +535,7 @@ namespace Baran.Source
             appearance11.TextVAlignAsString = "Middle";
             this.label10.Appearance = appearance11;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(354, 101);
+            this.label10.Location = new System.Drawing.Point(457, 101);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label10.Size = new System.Drawing.Size(75, 15);
@@ -552,12 +552,12 @@ namespace Baran.Source
             this.txtFutureProgram.BackColor = System.Drawing.Color.Transparent;
             this.txtFutureProgram.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtFutureProgram.FontSize = 0;
-            this.txtFutureProgram.Location = new System.Drawing.Point(438, 117);
+            this.txtFutureProgram.Location = new System.Drawing.Point(541, 117);
             this.txtFutureProgram.Name = "txtFutureProgram";
             this.txtFutureProgram.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtFutureProgram.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtFutureProgram.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtFutureProgram.Size = new System.Drawing.Size(264, 22);
+            this.txtFutureProgram.Size = new System.Drawing.Size(422, 22);
             this.txtFutureProgram.TabIndex = 8;
             this.txtFutureProgram.UnformattedText = null;
             // 
@@ -569,7 +569,7 @@ namespace Baran.Source
             appearance13.TextVAlignAsString = "Middle";
             this.label9.Appearance = appearance13;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(616, 101);
+            this.label9.Location = new System.Drawing.Point(877, 101);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label9.Size = new System.Drawing.Size(86, 15);
@@ -584,12 +584,13 @@ namespace Baran.Source
             appearance32.TextVAlignAsString = "Middle";
             this.label8.Appearance = appearance32;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(902, 101);
+            this.label8.Location = new System.Drawing.Point(177, 13);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label8.Size = new System.Drawing.Size(61, 15);
             this.label8.TabIndex = 105;
             this.label8.Text = ": نوع کاربری";
+            this.label8.Visible = false;
             // 
             // cmbFieldUseType
             // 
@@ -609,11 +610,12 @@ namespace Baran.Source
             appearance35.TextHAlignAsString = "Right";
             appearance35.TextVAlignAsString = "Middle";
             this.cmbFieldUseType.ItemAppearance = appearance35;
-            this.cmbFieldUseType.Location = new System.Drawing.Point(710, 117);
+            this.cmbFieldUseType.Location = new System.Drawing.Point(177, 29);
             this.cmbFieldUseType.Name = "cmbFieldUseType";
             this.cmbFieldUseType.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbFieldUseType.Size = new System.Drawing.Size(256, 22);
+            this.cmbFieldUseType.Size = new System.Drawing.Size(64, 22);
             this.cmbFieldUseType.TabIndex = 7;
+            this.cmbFieldUseType.Visible = false;
             // 
             // label7
             // 
@@ -623,7 +625,7 @@ namespace Baran.Source
             appearance15.TextVAlignAsString = "Middle";
             this.label7.Appearance = appearance15;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(269, 55);
+            this.label7.Location = new System.Drawing.Point(469, 55);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label7.Size = new System.Drawing.Size(63, 15);
@@ -648,7 +650,7 @@ namespace Baran.Source
             appearance17.TextHAlignAsString = "Right";
             appearance17.TextVAlignAsString = "Middle";
             this.cmbOwnership.ItemAppearance = appearance17;
-            this.cmbOwnership.Location = new System.Drawing.Point(117, 72);
+            this.cmbOwnership.Location = new System.Drawing.Point(317, 72);
             this.cmbOwnership.Name = "cmbOwnership";
             this.cmbOwnership.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbOwnership.Size = new System.Drawing.Size(218, 22);
@@ -662,12 +664,13 @@ namespace Baran.Source
             appearance18.TextVAlignAsString = "Middle";
             this.label6.Appearance = appearance18;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(475, 55);
+            this.label6.Location = new System.Drawing.Point(112, 13);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label6.Size = new System.Drawing.Size(58, 15);
             this.label6.TabIndex = 103;
             this.label6.Text = ": بافت خاک";
+            this.label6.Visible = false;
             // 
             // cmbSoilTexture
             // 
@@ -687,11 +690,12 @@ namespace Baran.Source
             appearance22.TextHAlignAsString = "Right";
             appearance22.TextVAlignAsString = "Middle";
             this.cmbSoilTexture.ItemAppearance = appearance22;
-            this.cmbSoilTexture.Location = new System.Drawing.Point(339, 72);
+            this.cmbSoilTexture.Location = new System.Drawing.Point(112, 30);
             this.cmbSoilTexture.Name = "cmbSoilTexture";
             this.cmbSoilTexture.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbSoilTexture.Size = new System.Drawing.Size(195, 22);
+            this.cmbSoilTexture.Size = new System.Drawing.Size(59, 22);
             this.cmbSoilTexture.TabIndex = 5;
+            this.cmbSoilTexture.Visible = false;
             // 
             // label15
             // 
@@ -716,7 +720,7 @@ namespace Baran.Source
             appearance19.TextVAlignAsString = "Middle";
             this.label16.Appearance = appearance19;
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(541, 147);
+            this.label16.Location = new System.Drawing.Point(501, 147);
             this.label16.Name = "label16";
             this.label16.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label16.Size = new System.Drawing.Size(34, 15);
@@ -776,10 +780,10 @@ namespace Baran.Source
             appearance25.TextHAlignAsString = "Right";
             appearance25.TextVAlignAsString = "Middle";
             this.cmbProvince.ItemAppearance = appearance25;
-            this.cmbProvince.Location = new System.Drawing.Point(784, 165);
+            this.cmbProvince.Location = new System.Drawing.Point(768, 165);
             this.cmbProvince.Name = "cmbProvince";
             this.cmbProvince.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbProvince.Size = new System.Drawing.Size(179, 22);
+            this.cmbProvince.Size = new System.Drawing.Size(195, 22);
             this.cmbProvince.TabIndex = 11;
             this.cmbProvince.ValueChanged += new System.EventHandler(this.cmbProvince_ValueChanged);
             // 
@@ -791,7 +795,7 @@ namespace Baran.Source
             appearance38.TextVAlignAsString = "Middle";
             this.label14.Appearance = appearance38;
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(719, 147);
+            this.label14.Location = new System.Drawing.Point(708, 147);
             this.label14.Name = "label14";
             this.label14.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label14.Size = new System.Drawing.Size(56, 15);
@@ -808,13 +812,13 @@ namespace Baran.Source
             this.txtCity.BackColor = System.Drawing.Color.Transparent;
             this.txtCity.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtCity.FontSize = 0;
-            this.txtCity.Location = new System.Drawing.Point(438, 165);
+            this.txtCity.Location = new System.Drawing.Point(317, 165);
             this.txtCity.MaxLength = 50;
             this.txtCity.Name = "txtCity";
             this.txtCity.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtCity.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtCity.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCity.Size = new System.Drawing.Size(142, 22);
+            this.txtCity.Size = new System.Drawing.Size(218, 22);
             this.txtCity.TabIndex = 13;
             this.txtCity.UnformattedText = null;
             // 
@@ -836,10 +840,10 @@ namespace Baran.Source
             appearance40.TextHAlignAsString = "Right";
             appearance40.TextVAlignAsString = "Middle";
             this.cmbTownship.ItemAppearance = appearance40;
-            this.cmbTownship.Location = new System.Drawing.Point(585, 165);
+            this.cmbTownship.Location = new System.Drawing.Point(541, 165);
             this.cmbTownship.Name = "cmbTownship";
             this.cmbTownship.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbTownship.Size = new System.Drawing.Size(193, 22);
+            this.cmbTownship.Size = new System.Drawing.Size(221, 22);
             this.cmbTownship.TabIndex = 12;
             // 
             // txtDocNumber
@@ -852,12 +856,12 @@ namespace Baran.Source
             this.txtDocNumber.BackColor = System.Drawing.Color.Transparent;
             this.txtDocNumber.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtDocNumber.FontSize = 0;
-            this.txtDocNumber.Location = new System.Drawing.Point(19, 117);
+            this.txtDocNumber.Location = new System.Drawing.Point(103, 72);
             this.txtDocNumber.Name = "txtDocNumber";
             this.txtDocNumber.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtDocNumber.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtDocNumber.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDocNumber.Size = new System.Drawing.Size(172, 22);
+            this.txtDocNumber.Size = new System.Drawing.Size(208, 22);
             this.txtDocNumber.TabIndex = 10;
             this.txtDocNumber.UnformattedText = null;
             // 
@@ -869,7 +873,7 @@ namespace Baran.Source
             appearance1.TextVAlignAsString = "Middle";
             this.label5.Appearance = appearance1;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(92, 101);
+            this.label5.Location = new System.Drawing.Point(212, 56);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label5.Size = new System.Drawing.Size(96, 15);
@@ -1017,6 +1021,7 @@ namespace Baran.Source
             appearance47.TextHAlignAsString = "Right";
             appearance47.TextVAlignAsString = "Middle";
             this.grdDoc.DisplayLayout.Appearance = appearance47;
+            ultraGridBand1.ColHeadersVisible = false;
             ultraGridColumn1.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn1.Header.VisiblePosition = 0;
             ultraGridColumn1.Width = 227;

@@ -84,6 +84,7 @@
             this.tpcMap = new Infragistics.Win.UltraWinTabControl.UltraTabPageControl();
             this.MainMap = new Demo.WindowsForms.Map();
             this.grpControls = new Baran.Windows.Forms.GroupBox();
+            this.chkField = new Baran.Windows.Forms.CheckBox.CheckBox();
             this.chkChangeUse = new Baran.Windows.Forms.CheckBox.CheckBox();
             this.checkBox2 = new Baran.Windows.Forms.CheckBox.CheckBox();
             this.checkBox1 = new Baran.Windows.Forms.CheckBox.CheckBox();
@@ -140,7 +141,6 @@
             this.rdbOwnership = new System.Windows.Forms.RadioButton();
             this.tac = new Baran.Windows.Forms.ultraTabControl();
             this.tbcMain = new Infragistics.Win.UltraWinTabControl.UltraTabSharedControlsPage();
-            this.chkField = new Baran.Windows.Forms.CheckBox.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).BeginInit();
             this.grpHeader.SuspendLayout();
@@ -257,7 +257,7 @@
             this.MainMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.MainMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.MainMap.ShowTileGridLines = false;
-            this.MainMap.Size = new System.Drawing.Size(898, 643);
+            this.MainMap.Size = new System.Drawing.Size(948, 643);
             this.MainMap.TabIndex = 1;
             this.MainMap.Zoom = 5D;
             // 
@@ -286,17 +286,34 @@
             this.grpControls.Controls.Add(this.cmbCollection);
             this.grpControls.Dock = System.Windows.Forms.DockStyle.Right;
             this.grpControls.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.grpControls.Location = new System.Drawing.Point(898, 0);
+            this.grpControls.Location = new System.Drawing.Point(948, 0);
             this.grpControls.Name = "grpControls";
-            this.grpControls.Size = new System.Drawing.Size(309, 643);
+            this.grpControls.Size = new System.Drawing.Size(259, 643);
             this.grpControls.TabIndex = 0;
             this.grpControls.Click += new System.EventHandler(this.grpControls_Click);
             // 
+            // chkField
+            // 
+            this.chkField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkField.AutoSize = true;
+            this.chkField.Checked = true;
+            this.chkField.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkField.ForeColor = System.Drawing.Color.Yellow;
+            this.chkField.Location = new System.Drawing.Point(149, 22);
+            this.chkField.Name = "chkField";
+            this.chkField.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chkField.Size = new System.Drawing.Size(102, 17);
+            this.chkField.TabIndex = 25;
+            this.chkField.Text = "به تفکیک قطعات";
+            this.chkField.UseVisualStyleBackColor = true;
+            this.chkField.CheckedChanged += new System.EventHandler(this.chkField_CheckedChanged);
+            // 
             // chkChangeUse
             // 
+            this.chkChangeUse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkChangeUse.AutoSize = true;
             this.chkChangeUse.ForeColor = System.Drawing.Color.White;
-            this.chkChangeUse.Location = new System.Drawing.Point(190, 517);
+            this.chkChangeUse.Location = new System.Drawing.Point(142, 517);
             this.chkChangeUse.Name = "chkChangeUse";
             this.chkChangeUse.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkChangeUse.Size = new System.Drawing.Size(109, 17);
@@ -306,9 +323,10 @@
             // 
             // checkBox2
             // 
+            this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox2.AutoSize = true;
             this.checkBox2.ForeColor = System.Drawing.Color.White;
-            this.checkBox2.Location = new System.Drawing.Point(213, 493);
+            this.checkBox2.Location = new System.Drawing.Point(165, 493);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox2.Size = new System.Drawing.Size(86, 17);
@@ -318,9 +336,10 @@
             // 
             // checkBox1
             // 
+            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox1.AutoSize = true;
             this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(213, 469);
+            this.checkBox1.Location = new System.Drawing.Point(165, 469);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox1.Size = new System.Drawing.Size(86, 17);
@@ -330,11 +349,12 @@
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance5.ForeColor = System.Drawing.Color.White;
             appearance5.TextHAlignAsString = "Right";
             appearance5.TextVAlignAsString = "Middle";
             this.label8.Appearance = appearance5;
-            this.label8.Location = new System.Drawing.Point(199, 410);
+            this.label8.Location = new System.Drawing.Point(151, 410);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label8.Size = new System.Drawing.Size(100, 23);
@@ -343,7 +363,8 @@
             // 
             // cmbFieldUseType
             // 
-            this.cmbFieldUseType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbFieldUseType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             appearance6.BackColor = System.Drawing.Color.Transparent;
             appearance6.BorderColor = System.Drawing.Color.LightGray;
             appearance6.ForeColor = System.Drawing.Color.White;
@@ -362,16 +383,17 @@
             this.cmbFieldUseType.Location = new System.Drawing.Point(19, 433);
             this.cmbFieldUseType.Name = "cmbFieldUseType";
             this.cmbFieldUseType.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbFieldUseType.Size = new System.Drawing.Size(280, 22);
+            this.cmbFieldUseType.Size = new System.Drawing.Size(230, 22);
             this.cmbFieldUseType.TabIndex = 7;
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance3.ForeColor = System.Drawing.Color.White;
             appearance3.TextHAlignAsString = "Right";
             appearance3.TextVAlignAsString = "Middle";
             this.label7.Appearance = appearance3;
-            this.label7.Location = new System.Drawing.Point(199, 358);
+            this.label7.Location = new System.Drawing.Point(151, 358);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label7.Size = new System.Drawing.Size(100, 23);
@@ -380,7 +402,8 @@
             // 
             // cmbOwnership
             // 
-            this.cmbOwnership.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbOwnership.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             appearance4.BackColor = System.Drawing.Color.Transparent;
             appearance4.BorderColor = System.Drawing.Color.LightGray;
             appearance4.ForeColor = System.Drawing.Color.White;
@@ -399,16 +422,17 @@
             this.cmbOwnership.Location = new System.Drawing.Point(19, 381);
             this.cmbOwnership.Name = "cmbOwnership";
             this.cmbOwnership.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbOwnership.Size = new System.Drawing.Size(280, 22);
+            this.cmbOwnership.Size = new System.Drawing.Size(230, 22);
             this.cmbOwnership.TabIndex = 6;
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance11.ForeColor = System.Drawing.Color.White;
             appearance11.TextHAlignAsString = "Right";
             appearance11.TextVAlignAsString = "Middle";
             this.label6.Appearance = appearance11;
-            this.label6.Location = new System.Drawing.Point(199, 306);
+            this.label6.Location = new System.Drawing.Point(151, 306);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label6.Size = new System.Drawing.Size(100, 23);
@@ -417,7 +441,8 @@
             // 
             // cmbSoilTexture
             // 
-            this.cmbSoilTexture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbSoilTexture.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             appearance13.BackColor = System.Drawing.Color.Transparent;
             appearance13.BorderColor = System.Drawing.Color.LightGray;
             appearance13.ForeColor = System.Drawing.Color.White;
@@ -436,16 +461,17 @@
             this.cmbSoilTexture.Location = new System.Drawing.Point(19, 329);
             this.cmbSoilTexture.Name = "cmbSoilTexture";
             this.cmbSoilTexture.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbSoilTexture.Size = new System.Drawing.Size(280, 22);
+            this.cmbSoilTexture.Size = new System.Drawing.Size(230, 22);
             this.cmbSoilTexture.TabIndex = 5;
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance17.ForeColor = System.Drawing.Color.White;
             appearance17.TextHAlignAsString = "Right";
             appearance17.TextVAlignAsString = "Middle";
             this.label5.Appearance = appearance17;
-            this.label5.Location = new System.Drawing.Point(199, 254);
+            this.label5.Location = new System.Drawing.Point(151, 254);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label5.Size = new System.Drawing.Size(100, 23);
@@ -454,7 +480,8 @@
             // 
             // cmbTownship
             // 
-            this.cmbTownship.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbTownship.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             appearance19.BackColor = System.Drawing.Color.Transparent;
             appearance19.BorderColor = System.Drawing.Color.LightGray;
             appearance19.ForeColor = System.Drawing.Color.White;
@@ -473,16 +500,17 @@
             this.cmbTownship.Location = new System.Drawing.Point(19, 277);
             this.cmbTownship.Name = "cmbTownship";
             this.cmbTownship.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbTownship.Size = new System.Drawing.Size(280, 22);
+            this.cmbTownship.Size = new System.Drawing.Size(230, 22);
             this.cmbTownship.TabIndex = 4;
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance22.ForeColor = System.Drawing.Color.White;
             appearance22.TextHAlignAsString = "Right";
             appearance22.TextVAlignAsString = "Middle";
             this.label4.Appearance = appearance22;
-            this.label4.Location = new System.Drawing.Point(199, 202);
+            this.label4.Location = new System.Drawing.Point(151, 202);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label4.Size = new System.Drawing.Size(100, 23);
@@ -491,7 +519,8 @@
             // 
             // cmbProvince
             // 
-            this.cmbProvince.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbProvince.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             appearance23.BackColor = System.Drawing.Color.Transparent;
             appearance23.BorderColor = System.Drawing.Color.LightGray;
             appearance23.ForeColor = System.Drawing.Color.White;
@@ -510,17 +539,18 @@
             this.cmbProvince.Location = new System.Drawing.Point(19, 225);
             this.cmbProvince.Name = "cmbProvince";
             this.cmbProvince.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbProvince.Size = new System.Drawing.Size(280, 22);
+            this.cmbProvince.Size = new System.Drawing.Size(230, 22);
             this.cmbProvince.TabIndex = 3;
             this.cmbProvince.ValueChanged += new System.EventHandler(this.cmbProvince_ValueChanged);
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance25.ForeColor = System.Drawing.Color.White;
             appearance25.TextHAlignAsString = "Right";
             appearance25.TextVAlignAsString = "Middle";
             this.label3.Appearance = appearance25;
-            this.label3.Location = new System.Drawing.Point(199, 150);
+            this.label3.Location = new System.Drawing.Point(151, 150);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(100, 23);
@@ -529,7 +559,8 @@
             // 
             // cmbPart
             // 
-            this.cmbPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbPart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             appearance26.BackColor = System.Drawing.Color.Transparent;
             appearance26.BorderColor = System.Drawing.Color.LightGray;
             appearance26.ForeColor = System.Drawing.Color.White;
@@ -548,16 +579,17 @@
             this.cmbPart.Location = new System.Drawing.Point(19, 173);
             this.cmbPart.Name = "cmbPart";
             this.cmbPart.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbPart.Size = new System.Drawing.Size(280, 22);
+            this.cmbPart.Size = new System.Drawing.Size(230, 22);
             this.cmbPart.TabIndex = 2;
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance28.ForeColor = System.Drawing.Color.White;
             appearance28.TextHAlignAsString = "Right";
             appearance28.TextVAlignAsString = "Middle";
             this.label2.Appearance = appearance28;
-            this.label2.Location = new System.Drawing.Point(199, 98);
+            this.label2.Location = new System.Drawing.Point(151, 98);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(100, 23);
@@ -566,7 +598,8 @@
             // 
             // cmbSubcollection
             // 
-            this.cmbSubcollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbSubcollection.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             appearance29.BackColor = System.Drawing.Color.Transparent;
             appearance29.BorderColor = System.Drawing.Color.LightGray;
             appearance29.ForeColor = System.Drawing.Color.White;
@@ -585,16 +618,17 @@
             this.cmbSubcollection.Location = new System.Drawing.Point(19, 121);
             this.cmbSubcollection.Name = "cmbSubcollection";
             this.cmbSubcollection.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbSubcollection.Size = new System.Drawing.Size(280, 22);
+            this.cmbSubcollection.Size = new System.Drawing.Size(230, 22);
             this.cmbSubcollection.TabIndex = 1;
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance31.ForeColor = System.Drawing.Color.White;
             appearance31.TextHAlignAsString = "Right";
             appearance31.TextVAlignAsString = "Middle";
             this.label1.Appearance = appearance31;
-            this.label1.Location = new System.Drawing.Point(199, 45);
+            this.label1.Location = new System.Drawing.Point(151, 45);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(100, 23);
@@ -603,7 +637,8 @@
             // 
             // cmbCollection
             // 
-            this.cmbCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbCollection.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             appearance32.BackColor = System.Drawing.Color.Transparent;
             appearance32.BorderColor = System.Drawing.Color.LightGray;
             appearance32.ForeColor = System.Drawing.Color.White;
@@ -622,7 +657,7 @@
             this.cmbCollection.Location = new System.Drawing.Point(19, 69);
             this.cmbCollection.Name = "cmbCollection";
             this.cmbCollection.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbCollection.Size = new System.Drawing.Size(280, 22);
+            this.cmbCollection.Size = new System.Drawing.Size(230, 22);
             this.cmbCollection.TabIndex = 0;
             // 
             // tpcTable
@@ -1362,21 +1397,6 @@
             this.tbcMain.Location = new System.Drawing.Point(-10000, -10000);
             this.tbcMain.Name = "tbcMain";
             this.tbcMain.Size = new System.Drawing.Size(1207, 643);
-            // 
-            // chkField
-            // 
-            this.chkField.AutoSize = true;
-            this.chkField.Checked = true;
-            this.chkField.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkField.ForeColor = System.Drawing.Color.Yellow;
-            this.chkField.Location = new System.Drawing.Point(197, 22);
-            this.chkField.Name = "chkField";
-            this.chkField.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkField.Size = new System.Drawing.Size(102, 17);
-            this.chkField.TabIndex = 25;
-            this.chkField.Text = "به تفکیک قطعات";
-            this.chkField.UseVisualStyleBackColor = true;
-            this.chkField.CheckedChanged += new System.EventHandler(this.chkField_CheckedChanged);
             // 
             // frmFieldRpt
             // 

@@ -588,7 +588,7 @@
             appearance32.TextVAlignAsString = "Middle";
             this.label8.Appearance = appearance32;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(244, 51);
+            this.label8.Location = new System.Drawing.Point(257, 51);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label8.Size = new System.Drawing.Size(61, 15);
@@ -668,7 +668,7 @@
             appearance18.TextVAlignAsString = "Middle";
             this.label6.Appearance = appearance18;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(504, 51);
+            this.label6.Location = new System.Drawing.Point(501, 51);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label6.Size = new System.Drawing.Size(58, 15);
@@ -919,7 +919,7 @@
             appearance29.TextVAlignAsString = "Middle";
             this.label4.Appearance = appearance29;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(610, 51);
+            this.label4.Location = new System.Drawing.Point(606, 51);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label4.Size = new System.Drawing.Size(51, 15);
@@ -1038,6 +1038,7 @@
             appearance47.TextHAlignAsString = "Right";
             appearance47.TextVAlignAsString = "Middle";
             this.grdDoc.DisplayLayout.Appearance = appearance47;
+            ultraGridBand1.ColHeadersVisible = false;
             ultraGridColumn1.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn1.Header.VisiblePosition = 0;
             ultraGridColumn1.Width = 251;

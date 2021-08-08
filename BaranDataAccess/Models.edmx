@@ -131,6 +131,7 @@
           <Property Name="Fk_CollectionID" Type="int" />
           <Property Name="Fk_SubcollectionID" Type="int" />
           <Property Name="Fk_PartID" Type="int" />
+          <Property Name="Fk_LandID" Type="int" />
           <Property Name="Fk_FieldID" Type="int" />
           <Property Name="Fk_WarehouseID" Type="int" />
           <Property Name="Fk_BuildingID" Type="int" />
@@ -1695,6 +1696,11 @@
           <Parameter Name="WhereClause" Type="nvarchar(max)" Mode="In" />
           <Parameter Name="UserID" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="spr_src_Land_Map_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Action" Type="int" Mode="In" />
+          <Parameter Name="WhereClause" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+        </Function>
         <EntityContainer Name="AMSModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_cmn_Activity" EntityType="Self.tbl_cmn_Activity" Schema="dbo" store:Type="Tables" />
@@ -2028,6 +2034,7 @@
           <Property Name="InactivationDate" Type="DateTime" Precision="0" />
           <Property Name="UpdateUserID" Type="Int32" />
           <Property Name="UpdateDate" Type="DateTime" Precision="0" />
+          <Property Name="Fk_LandID" Type="Int32" />
         </EntityType>
         <EntityType Name="tbl_cmn_Element">
           <Key>
@@ -3687,11 +3694,6 @@
             <End Role="tbl_src_PesticideCategory" EntitySet="tbl_src_PesticideCategory" />
             <End Role="tbl_src_Pesticide" EntitySet="tbl_src_Pesticide" />
           </AssociationSet>
-          <FunctionImport Name="spr_src_Field_Map_Select" ReturnType="Collection(AMSModel.spr_src_Field_Map_Select_Result)">
-            <Parameter Name="Action" Mode="In" Type="Int32" />
-            <Parameter Name="WhereClause" Mode="In" Type="String" />
-            <Parameter Name="UserID" Mode="In" Type="String" />
-          </FunctionImport>
           <EntitySet Name="tbl_src_Land" EntityType="AMSModel.tbl_src_Land" />
           <EntitySet Name="tbl_src_Part" EntityType="AMSModel.tbl_src_Part" />
           <AssociationSet Name="FK_tbl_src_Part_tbl_cmn_Province" Association="AMSModel.FK_tbl_src_Part_tbl_cmn_Province">
@@ -3706,33 +3708,17 @@
             <End Role="tbl_src_Subcollection" EntitySet="tbl_src_Subcollection" />
             <End Role="tbl_src_Part" EntitySet="tbl_src_Part" />
           </AssociationSet>
+          <FunctionImport Name="spr_src_Land_Map_Select" ReturnType="Collection(AMSModel.spr_src_Land_Map_Select_Result)">
+            <Parameter Name="Action" Mode="In" Type="Int32" />
+            <Parameter Name="WhereClause" Mode="In" Type="String" />
+            <Parameter Name="UserID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_src_Field_Map_Select" ReturnType="Collection(AMSModel.spr_src_Field_Map_Select_Result)">
+            <Parameter Name="Action" Mode="In" Type="Int32" />
+            <Parameter Name="WhereClause" Mode="In" Type="String" />
+            <Parameter Name="UserID" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
-        <ComplexType Name="spr_src_Field_Map_Select_Result">
-          <Property Type="Int32" Name="FieldID" Nullable="false" />
-          <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="CollectionName" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="SubcollectionName" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="PartName" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="FieldName" Nullable="true" MaxLength="50" />
-          <Property Type="Decimal" Name="UsableArea" Nullable="true" Precision="8" Scale="2" />
-          <Property Type="Decimal" Name="TotalArea" Nullable="true" Precision="8" Scale="2" />
-          <Property Type="String" Name="SoilTexture" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="Ownership" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="FieldUseType" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="Province" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="Township" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="Address" Nullable="true" MaxLength="300" />
-          <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
-          <Property Type="Boolean" Name="Opposition" Nullable="true" />
-          <Property Type="String" Name="Code" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="DocNumber" Nullable="true" MaxLength="50" />
-          <Property Type="Boolean" Name="Salability" Nullable="true" />
-          <Property Type="Boolean" Name="changeUse" Nullable="true" />
-          <Property Type="String" Name="FutureProgram" Nullable="true" MaxLength="200" />
-          <Property Type="String" Name="DocPlace" Nullable="true" MaxLength="50" />
-          <Property Type="Geometry" Name="LocationPolygon" Nullable="true" />
-        </ComplexType>
         <EntityType Name="tbl_src_Land">
           <Key>
             <PropertyRef Name="LandID" />
@@ -3839,6 +3825,41 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <ComplexType Name="spr_src_Land_Map_Select_Result">
+          <Property Type="Int32" Name="LandID" Nullable="false" />
+          <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="SubcollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="PartName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="FieldName" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="UsableArea" Nullable="true" Precision="8" Scale="2" />
+          <Property Type="Decimal" Name="TotalArea" Nullable="true" Precision="8" Scale="2" />
+          <Property Type="String" Name="SoilTexture" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Ownership" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FieldUseType" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Province" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Township" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Address" Nullable="true" MaxLength="300" />
+          <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+          <Property Type="Boolean" Name="Opposition" Nullable="true" />
+          <Property Type="String" Name="Code" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DocNumber" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="Salability" Nullable="true" />
+          <Property Type="Boolean" Name="changeUse" Nullable="true" />
+          <Property Type="String" Name="FutureProgram" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="DocPlace" Nullable="true" MaxLength="50" />
+          <Property Type="Geometry" Name="Location" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_src_Field_Map_Select_Result">
+          <Property Type="String" Name="FieldName" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="UsableArea" Nullable="true" Precision="8" Scale="2" />
+          <Property Type="Decimal" Name="TotalArea" Nullable="true" Precision="8" Scale="2" />
+          <Property Type="String" Name="Code" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SoilTexture" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FieldUseType" Nullable="true" MaxLength="50" />
+          <Property Type="Geometry" Name="LocationPolygon" Nullable="false" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -3971,6 +3992,7 @@
           <EntitySetMapping Name="tbl_cmn_Document">
             <EntityTypeMapping TypeName="AMSModel.tbl_cmn_Document">
               <MappingFragment StoreEntitySet="tbl_cmn_Document">
+                <ScalarProperty Name="Fk_LandID" ColumnName="Fk_LandID" />
                 <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
@@ -5263,35 +5285,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="spr_src_Field_Map_Select" FunctionName="AMSModel.Store.spr_src_Field_Map_Select">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="AMSModel.spr_src_Field_Map_Select_Result">
-                <ScalarProperty Name="FieldID" ColumnName="FieldID" />
-                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
-                <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
-                <ScalarProperty Name="SubcollectionName" ColumnName="SubcollectionName" />
-                <ScalarProperty Name="PartName" ColumnName="PartName" />
-                <ScalarProperty Name="FieldName" ColumnName="FieldName" />
-                <ScalarProperty Name="UsableArea" ColumnName="UsableArea" />
-                <ScalarProperty Name="TotalArea" ColumnName="TotalArea" />
-                <ScalarProperty Name="SoilTexture" ColumnName="SoilTexture" />
-                <ScalarProperty Name="Ownership" ColumnName="Ownership" />
-                <ScalarProperty Name="FieldUseType" ColumnName="FieldUseType" />
-                <ScalarProperty Name="Province" ColumnName="Province" />
-                <ScalarProperty Name="Township" ColumnName="Township" />
-                <ScalarProperty Name="City" ColumnName="City" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Opposition" ColumnName="Opposition" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
-                <ScalarProperty Name="DocNumber" ColumnName="DocNumber" />
-                <ScalarProperty Name="Salability" ColumnName="Salability" />
-                <ScalarProperty Name="changeUse" ColumnName="changeUse" />
-                <ScalarProperty Name="FutureProgram" ColumnName="FutureProgram" />
-                <ScalarProperty Name="DocPlace" ColumnName="DocPlace" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <EntitySetMapping Name="tbl_src_Land">
             <EntityTypeMapping TypeName="AMSModel.tbl_src_Land">
               <MappingFragment StoreEntitySet="tbl_src_Land">
@@ -5361,6 +5354,47 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spr_src_Land_Map_Select" FunctionName="AMSModel.Store.spr_src_Land_Map_Select">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AMSModel.spr_src_Land_Map_Select_Result">
+                <ScalarProperty Name="LandID" ColumnName="LandID" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+                <ScalarProperty Name="SubcollectionName" ColumnName="SubcollectionName" />
+                <ScalarProperty Name="PartName" ColumnName="PartName" />
+                <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+                <ScalarProperty Name="UsableArea" ColumnName="UsableArea" />
+                <ScalarProperty Name="TotalArea" ColumnName="TotalArea" />
+                <ScalarProperty Name="SoilTexture" ColumnName="SoilTexture" />
+                <ScalarProperty Name="Ownership" ColumnName="Ownership" />
+                <ScalarProperty Name="FieldUseType" ColumnName="FieldUseType" />
+                <ScalarProperty Name="Province" ColumnName="Province" />
+                <ScalarProperty Name="Township" ColumnName="Township" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Opposition" ColumnName="Opposition" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="DocNumber" ColumnName="DocNumber" />
+                <ScalarProperty Name="Salability" ColumnName="Salability" />
+                <ScalarProperty Name="changeUse" ColumnName="changeUse" />
+                <ScalarProperty Name="FutureProgram" ColumnName="FutureProgram" />
+                <ScalarProperty Name="DocPlace" ColumnName="DocPlace" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_src_Field_Map_Select" FunctionName="AMSModel.Store.spr_src_Field_Map_Select">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AMSModel.spr_src_Field_Map_Select_Result">
+                <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+                <ScalarProperty Name="UsableArea" ColumnName="UsableArea" />
+                <ScalarProperty Name="TotalArea" ColumnName="TotalArea" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="SoilTexture" ColumnName="SoilTexture" />
+                <ScalarProperty Name="FieldUseType" ColumnName="FieldUseType" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

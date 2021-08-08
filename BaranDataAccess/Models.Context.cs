@@ -119,6 +119,23 @@ namespace BaranDataAccess
         public DbSet<tbl_src_Land> tbl_src_Land { get; set; }
         public DbSet<tbl_src_Part> tbl_src_Part { get; set; }
     
+        public virtual ObjectResult<spr_src_Land_Map_Select_Result> spr_src_Land_Map_Select(Nullable<int> action, string whereClause, string userID)
+        {
+            var actionParameter = action.HasValue ?
+                new ObjectParameter("Action", action) :
+                new ObjectParameter("Action", typeof(int));
+    
+            var whereClauseParameter = whereClause != null ?
+                new ObjectParameter("WhereClause", whereClause) :
+                new ObjectParameter("WhereClause", typeof(string));
+    
+            var userIDParameter = userID != null ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_Land_Map_Select_Result>("spr_src_Land_Map_Select", actionParameter, whereClauseParameter, userIDParameter);
+        }
+    
         public virtual ObjectResult<spr_src_Field_Map_Select_Result> spr_src_Field_Map_Select(Nullable<int> action, string whereClause, string userID)
         {
             var actionParameter = action.HasValue ?

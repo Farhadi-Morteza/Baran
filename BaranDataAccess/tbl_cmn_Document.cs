@@ -37,5 +37,6 @@ namespace BaranDataAccess
         public Nullable<System.DateTime> InactivationDate { get; set; }
         public Nullable<int> UpdateUserID { get; set; }
         public Nullable<System.DateTime> UpdateDate { get; set; }
+        public Nullable<int> Fk_LandID { get; set; }
     }
 }
