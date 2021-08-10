@@ -1691,6 +1691,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="spr_src_Buildings_Map_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Action" Type="int" Mode="In" />
+          <Parameter Name="WhereClause" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+        </Function>
         <Function Name="spr_src_Field_Map_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Action" Type="int" Mode="In" />
           <Parameter Name="WhereClause" Type="nvarchar(max)" Mode="In" />
@@ -3718,6 +3723,11 @@
             <Parameter Name="WhereClause" Mode="In" Type="String" />
             <Parameter Name="UserID" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="spr_src_Buildings_Map_Select" ReturnType="Collection(AMSModel.spr_src_Buildings_Map_Select_Result)">
+            <Parameter Name="Action" Mode="In" Type="Int32" />
+            <Parameter Name="WhereClause" Mode="In" Type="String" />
+            <Parameter Name="UserID" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="tbl_src_Land">
           <Key>
@@ -3859,6 +3869,17 @@
           <Property Type="String" Name="SoilTexture" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="FieldUseType" Nullable="true" MaxLength="50" />
           <Property Type="Geometry" Name="LocationPolygon" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_src_Buildings_Map_Select_Result">
+          <Property Type="Int32" Name="BuildingsID" Nullable="false" />
+          <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CollectionNmae" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="SubCollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="PartName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="BuildingName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="BuildingCategoryName" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="BuildingArea" Nullable="true" Precision="8" Scale="2" />
+          <Property Type="Geometry" Name="Location" Nullable="false" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -5392,6 +5413,20 @@
                 <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="SoilTexture" ColumnName="SoilTexture" />
                 <ScalarProperty Name="FieldUseType" ColumnName="FieldUseType" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_src_Buildings_Map_Select" FunctionName="AMSModel.Store.spr_src_Buildings_Map_Select">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AMSModel.spr_src_Buildings_Map_Select_Result">
+                <ScalarProperty Name="BuildingsID" ColumnName="BuildingsID" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="CollectionNmae" ColumnName="CollectionNmae" />
+                <ScalarProperty Name="SubCollectionName" ColumnName="SubCollectionName" />
+                <ScalarProperty Name="PartName" ColumnName="PartName" />
+                <ScalarProperty Name="BuildingName" ColumnName="BuildingName" />
+                <ScalarProperty Name="BuildingCategoryName" ColumnName="BuildingCategoryName" />
+                <ScalarProperty Name="BuildingArea" ColumnName="BuildingArea" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

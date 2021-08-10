@@ -56,7 +56,7 @@
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("spr_src_Field_Rpt_Select", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RowID", 0);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FreeSpace", 1);
-            Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance34 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance57 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance58 = new Infragistics.Win.Appearance();
@@ -620,6 +620,7 @@
             this.cmbSubcollection.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbSubcollection.Size = new System.Drawing.Size(230, 22);
             this.cmbSubcollection.TabIndex = 1;
+            this.cmbSubcollection.ValueChanged += new System.EventHandler(this.cmbSubcollection_ValueChanged);
             // 
             // label1
             // 
@@ -659,6 +660,7 @@
             this.cmbCollection.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbCollection.Size = new System.Drawing.Size(230, 22);
             this.cmbCollection.TabIndex = 0;
+            this.cmbCollection.ValueChanged += new System.EventHandler(this.cmbCollection_ValueChanged);
             // 
             // tpcTable
             // 
@@ -693,8 +695,8 @@
             ultraGridColumn1,
             ultraGridColumn2});
             ultraGridBand1.Override.SummaryDisplayArea = Infragistics.Win.UltraWinGrid.SummaryDisplayAreas.BottomFixed;
-            appearance20.ForeColor = System.Drawing.Color.DarkBlue;
-            ultraGridBand1.Override.SummaryValueAppearance = appearance20;
+            appearance34.ForeColor = System.Drawing.Color.DarkBlue;
+            ultraGridBand1.Override.SummaryValueAppearance = appearance34;
             this.grdItem.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdItem.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
             appearance8.ForeColor = System.Drawing.Color.DarkBlue;

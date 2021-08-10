@@ -10,6 +10,7 @@ using GMap.NET;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
 using BaranDataAccess;
+using System.Linq;
 
 namespace Baran.Source
 {
@@ -25,6 +26,11 @@ namespace Baran.Source
         internal readonly GMapOverlay routes = new GMapOverlay("routes");
         internal readonly GMapOverlay polygons = new GMapOverlay("polygons");
         internal readonly GMapOverlay markers = new GMapOverlay("markers");
+
+        BaranDataAccess.Company.dstCompany.spr_src_Subcollection_SelectDataTable tblSubCollection =
+            new BaranDataAccess.Company.dstCompany.spr_src_Subcollection_SelectDataTable();
+        BaranDataAccess.Company.dstCompany.spr_src_Part_SelectDataTable tblPart =
+            new BaranDataAccess.Company.dstCompany.spr_src_Part_SelectDataTable();
 
         string
             strWhereClause
@@ -50,6 +56,9 @@ namespace Baran.Source
             ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcOwnership, cmbOwnership, "");
             ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcFieldUseType, cmbFieldUseType, "");
             ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcProvince, cmbProvince, "");
+
+            tblSubCollection = (BaranDataAccess.Company.dstCompany.spr_src_Subcollection_SelectDataTable)cmbSubcollection.DataSource;
+            tblPart = (BaranDataAccess.Company.dstCompany.spr_src_Part_SelectDataTable)cmbPart.DataSource;
         }
 
         public override void OnActiveForm()
@@ -85,7 +94,8 @@ namespace Baran.Source
                 this.ClearMap();
             }
 
-
+            cmbSubcollection.DataSource = tblSubCollection;
+            cmbPart.DataSource = tblPart;
         }
 
         private void ShowMap()
@@ -603,6 +613,24 @@ namespace Baran.Source
         private void chkField_CheckedChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void cmbCollection_ValueChanged(object sender, EventArgs e)
+        {
+            if (cmbCollection.Value == null)
+                return;
+            int id = Convert.ToInt32(cmbCollection.Value.ToString());
+            var tbl = tblSubCollection.Where(s => s.Fk_CollectionID == id).ToArray();
+            cmbSubcollection.DataSource = tbl;
+        }
+
+        private void cmbSubcollection_ValueChanged(object sender, EventArgs e)
+        {
+            if (cmbSubcollection.Value == null)
+                return;
+            int id = Convert.ToInt32(cmbSubcollection.Value.ToString());
+            var tbl = tblPart.Where(s => s.Fk_SubcollectionID == id).ToArray();
+            cmbPart.DataSource = tbl;
         }
 
         public override void OnExport(Windows.Forms.UltraGrid grdItem)

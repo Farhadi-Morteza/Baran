@@ -33,6 +33,7 @@ namespace Baran.Source
 
         #region Variables
         WaiteForm waite;
+        BaranDataAccess.UnitOfWork dbContext;
 
         BaranDataAccess.Source.dstSourceTableAdapters.spr_src_Buildings_SelectTableAdapter adp =
             new BaranDataAccess.Source.dstSourceTableAdapters.spr_src_Buildings_SelectTableAdapter();
@@ -94,6 +95,7 @@ namespace Baran.Source
         }
 
         public override void OnSave()
+        
         {
             base.OnSave();
 
@@ -118,31 +120,25 @@ namespace Baran.Source
                 waite.Show();
                 this.SetVariables();
 
-                //BaranDataAccess.UnitOfWork db = new BaranDataAccess.UnitOfWork();
-                //tbl_src_Buildings buildings = new tbl_src_Buildings()
-                //{
-                //    Name = strName,
-                //    Area = dclArea,
-                //    Fk_BuildingsCategoryID = intBuildingsCategory,
-                //    Fk_PartID = intParentCo,
-                //    CreateUserID = UserID,
-                //    Description = strDescription,
-                //    //CreateDate = System.DateTime.Now(),
-                //};
-
-                //db.BuildingsRepository.Insert(buildings);
-                //db.Save();
-
-                //BuildingsID = buildings.BuildingsID;
-
-                BuildingsID = Convert.ToInt32(adp.New_Buildings_Insert(strName, dclArea, intBuildingsCategory, intParentCo, UserID, strDescription, intParentCo));
-
-                if (BuildingsID > 0)
+                dbContext = new UnitOfWork();
+                tbl_src_Buildings building = new tbl_src_Buildings()
                 {
-                    OnMessage(BaranResources.SaveSuccessful, PublicEnum.EnmMessageCategory.Success);
-                }
-                else
-                    OnMessage(BaranResources.SaveFail, PublicEnum.EnmMessageCategory.Warning);
+                    Name = strName,
+                    Area = dclArea,
+                    Fk_BuildingsCategoryID = intBuildingsCategory,
+                    Fk_PartID = intParentCo,
+                    Description = strDescription,
+                    CreateUserID = UserID,
+                    CreateDate = System.DateTime.Now,
+                    IsActive = true
+                };
+
+                dbContext.BuildingsRepository.Insert(building);
+                dbContext.Save();
+                this.DialogResult = DialogResult.OK;
+
+
+                OnMessage(BaranResources.SaveSuccessful, PublicEnum.EnmMessageCategory.Success);
             }
             catch
             {
