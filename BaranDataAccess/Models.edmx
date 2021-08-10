@@ -1706,6 +1706,11 @@
           <Parameter Name="WhereClause" Type="nvarchar(max)" Mode="In" />
           <Parameter Name="UserID" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="spr_src_WareHouse_Map_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Action" Type="int" Mode="In" />
+          <Parameter Name="WhereClause" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+        </Function>
         <EntityContainer Name="AMSModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_cmn_Activity" EntityType="Self.tbl_cmn_Activity" Schema="dbo" store:Type="Tables" />
@@ -3728,6 +3733,11 @@
             <Parameter Name="WhereClause" Mode="In" Type="String" />
             <Parameter Name="UserID" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="spr_src_WareHouse_Map_Select" ReturnType="Collection(AMSModel.spr_src_WareHouse_Map_Select_Result)">
+            <Parameter Name="Action" Mode="In" Type="Int32" />
+            <Parameter Name="WhereClause" Mode="In" Type="String" />
+            <Parameter Name="UserID" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="tbl_src_Land">
           <Key>
@@ -3879,6 +3889,18 @@
           <Property Type="String" Name="BuildingName" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="BuildingCategoryName" Nullable="true" MaxLength="50" />
           <Property Type="Decimal" Name="BuildingArea" Nullable="true" Precision="8" Scale="2" />
+          <Property Type="Geometry" Name="Location" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_src_WareHouse_Map_Select_Result">
+          <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="SubcollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="PartName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="WarehouseArea" Nullable="true" Precision="8" Scale="2" />
+          <Property Type="String" Name="WarehouseTypeName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="WarehouseUseTypeName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="WarehouseID" Nullable="false" />
           <Property Type="Geometry" Name="Location" Nullable="false" />
         </ComplexType>
       </Schema>
@@ -5427,6 +5449,21 @@
                 <ScalarProperty Name="BuildingName" ColumnName="BuildingName" />
                 <ScalarProperty Name="BuildingCategoryName" ColumnName="BuildingCategoryName" />
                 <ScalarProperty Name="BuildingArea" ColumnName="BuildingArea" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_src_WareHouse_Map_Select" FunctionName="AMSModel.Store.spr_src_WareHouse_Map_Select">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AMSModel.spr_src_WareHouse_Map_Select_Result">
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+                <ScalarProperty Name="SubcollectionName" ColumnName="SubcollectionName" />
+                <ScalarProperty Name="PartName" ColumnName="PartName" />
+                <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+                <ScalarProperty Name="WarehouseArea" ColumnName="WarehouseArea" />
+                <ScalarProperty Name="WarehouseTypeName" ColumnName="WarehouseTypeName" />
+                <ScalarProperty Name="WarehouseUseTypeName" ColumnName="WarehouseUseTypeName" />
+                <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
