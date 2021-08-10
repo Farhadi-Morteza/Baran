@@ -209,9 +209,7 @@ namespace Baran.Source
             {
                 strWhereClause = string.Empty;
                 if (cmbCollection.Value != null)
-                {
                     strWhereClause += " AND dbo.tbl_src_Collection.CollectionID = " + cmbCollection.Value;
-                }
                 if (cmbSubcollection.Value != null)
                     strWhereClause += " AND dbo.tbl_src_Subcollection.SubCollectionID = " + cmbSubcollection.Value;
                 if (cmbPart.Value != null)

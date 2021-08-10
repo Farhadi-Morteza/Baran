@@ -364,6 +364,12 @@
     <Compile Include="Company\frmSubcollectionList.Designer.cs">
       <DependentUpon>frmSubcollectionList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard\frmBaseCompanyInfoRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmBaseCompanyInfoRpt.Designer.cs">
+      <DependentUpon>frmBaseCompanyInfoRpt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -909,6 +915,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Company\frmSubcollectionList.resx">
       <DependentUpon>frmSubcollectionList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\frmBaseCompanyInfoRpt.resx">
+      <DependentUpon>frmBaseCompanyInfoRpt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
