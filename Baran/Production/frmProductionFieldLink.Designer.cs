@@ -135,42 +135,49 @@
             // 
             // grpPrint
             // 
-            this.grpPrint.Location = new System.Drawing.Point(168, 0);
+            this.grpPrint.Location = new System.Drawing.Point(-100, 0);
             this.grpPrint.Size = new System.Drawing.Size(127, 66);
             // 
             // grpCancel
             // 
-            this.grpCancel.Location = new System.Drawing.Point(943, 0);
+            this.grpCancel.Location = new System.Drawing.Point(675, 0);
+            this.grpCancel.Size = new System.Drawing.Size(127, 66);
             // 
             // grpSave
             // 
-            this.grpSave.Location = new System.Drawing.Point(816, 0);
+            this.grpSave.Location = new System.Drawing.Point(548, 0);
+            this.grpSave.Size = new System.Drawing.Size(127, 66);
             // 
             // grpChange
             // 
-            this.grpChange.Location = new System.Drawing.Point(689, 0);
+            this.grpChange.Location = new System.Drawing.Point(421, 0);
+            this.grpChange.Size = new System.Drawing.Size(127, 66);
             // 
             // grpClear
             // 
-            this.grpClear.Location = new System.Drawing.Point(562, 0);
+            this.grpClear.Location = new System.Drawing.Point(294, 0);
+            this.grpClear.Size = new System.Drawing.Size(127, 66);
             // 
             // grpDelete
             // 
-            this.grpDelete.Location = new System.Drawing.Point(435, 0);
+            this.grpDelete.Location = new System.Drawing.Point(167, 0);
+            this.grpDelete.Size = new System.Drawing.Size(127, 66);
             // 
             // grpDoc
             // 
-            this.grpDoc.Location = new System.Drawing.Point(295, 0);
+            this.grpDoc.Location = new System.Drawing.Point(27, 0);
+            this.grpDoc.Size = new System.Drawing.Size(140, 66);
             this.grpDoc.Visible = false;
             // 
             // grpRefresh
             // 
-            this.grpRefresh.Location = new System.Drawing.Point(41, 0);
+            this.grpRefresh.Location = new System.Drawing.Point(-227, 0);
             this.grpRefresh.Size = new System.Drawing.Size(127, 66);
             // 
             // grpNew
             // 
-            this.grpNew.Location = new System.Drawing.Point(-86, 0);
+            this.grpNew.Location = new System.Drawing.Point(-354, 0);
+            this.grpNew.Size = new System.Drawing.Size(127, 66);
             // 
             // btnNew
             // 
@@ -182,25 +189,25 @@
             // 
             // grpButons
             // 
-            this.grpButons.Location = new System.Drawing.Point(0, 932);
-            this.grpButons.Size = new System.Drawing.Size(1071, 67);
+            this.grpButons.Location = new System.Drawing.Point(0, 677);
+            this.grpButons.Size = new System.Drawing.Size(803, 67);
             // 
             // lblLine2
             // 
-            this.lblLine2.Size = new System.Drawing.Size(1069, 3);
+            this.lblLine2.Size = new System.Drawing.Size(801, 3);
             // 
             // grpHeader
             // 
-            this.grpHeader.Size = new System.Drawing.Size(1071, 75);
+            this.grpHeader.Size = new System.Drawing.Size(803, 75);
             this.grpHeader.Visible = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(977, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(740, 8);
             // 
             // lblCaption
             // 
-            this.lblCaption.Location = new System.Drawing.Point(671, 22);
+            this.lblCaption.Location = new System.Drawing.Point(434, 21);
             // 
             // lblMessage
             // 
@@ -209,22 +216,22 @@
             // 
             // lblLine1
             // 
-            this.lblLine1.Size = new System.Drawing.Size(1069, 2);
+            this.lblLine1.Size = new System.Drawing.Size(801, 2);
             // 
             // grpMessage
             // 
-            this.grpMessage.Size = new System.Drawing.Size(1071, 30);
+            this.grpMessage.Size = new System.Drawing.Size(803, 30);
             // 
             // lblLine3
             // 
-            this.lblLine3.Location = new System.Drawing.Point(1, 822);
-            this.lblLine3.Size = new System.Drawing.Size(1069, 4);
+            this.lblLine3.Location = new System.Drawing.Point(1, 567);
+            this.lblLine3.Size = new System.Drawing.Size(801, 4);
             // 
             // grpMain
             // 
             this.grpMain.Controls.Add(this.MainMap);
             this.grpMain.Controls.Add(this.ultraExpandableGroupBox1);
-            this.grpMain.Size = new System.Drawing.Size(1071, 827);
+            this.grpMain.Size = new System.Drawing.Size(803, 572);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
             this.grpMain.Controls.SetChildIndex(this.ultraExpandableGroupBox1, 0);
             this.grpMain.Controls.SetChildIndex(this.MainMap, 0);
@@ -240,7 +247,7 @@
             this.MainMap.LevelsKeepInMemmory = 5;
             this.MainMap.Location = new System.Drawing.Point(1, 0);
             this.MainMap.MarkersEnabled = true;
-            this.MainMap.MaxZoom = 18;
+            this.MainMap.MaxZoom = 20;
             this.MainMap.MinZoom = 1;
             this.MainMap.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
             this.MainMap.Name = "MainMap";
@@ -251,7 +258,7 @@
             this.MainMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.MainMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.MainMap.ShowTileGridLines = false;
-            this.MainMap.Size = new System.Drawing.Size(778, 822);
+            this.MainMap.Size = new System.Drawing.Size(510, 567);
             this.MainMap.TabIndex = 105;
             this.MainMap.Zoom = 5D;
             // 
@@ -264,10 +271,10 @@
             this.label3.Appearance = appearance4;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(139, 217);
+            this.label3.Location = new System.Drawing.Point(164, 219);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(126, 20);
+            this.label3.Size = new System.Drawing.Size(101, 16);
             this.label3.TabIndex = 108;
             this.label3.Text = ": مساحت مورد نیاز";
             // 
@@ -280,10 +287,10 @@
             this.lblShopFax.Appearance = appearance15;
             this.lblShopFax.AutoSize = true;
             this.lblShopFax.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblShopFax.Location = new System.Drawing.Point(219, -3);
+            this.lblShopFax.Location = new System.Drawing.Point(228, -3);
             this.lblShopFax.Name = "lblShopFax";
             this.lblShopFax.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblShopFax.Size = new System.Drawing.Size(46, 20);
+            this.lblShopFax.Size = new System.Drawing.Size(37, 16);
             this.lblShopFax.TabIndex = 27;
             this.lblShopFax.Text = ": زمین";
             // 
@@ -296,13 +303,12 @@
             this.lblDescription.Appearance = appearance13;
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblDescription.Location = new System.Drawing.Point(193, 392);
+            this.lblDescription.Location = new System.Drawing.Point(208, 384);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDescription.Size = new System.Drawing.Size(72, 20);
+            this.lblDescription.Size = new System.Drawing.Size(57, 16);
             this.lblDescription.TabIndex = 103;
             this.lblDescription.Text = ": توضیحات";
-            this.lblDescription.Click += new System.EventHandler(this.lblDescription_Click);
             // 
             // label2
             // 
@@ -313,13 +319,12 @@
             this.label2.Appearance = appearance8;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(206, 333);
+            this.label2.Location = new System.Drawing.Point(218, 329);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(59, 20);
+            this.label2.Size = new System.Drawing.Size(47, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = ": تا تاریخ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -330,10 +335,10 @@
             this.label1.Appearance = appearance2;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(205, 276);
+            this.label1.Location = new System.Drawing.Point(217, 274);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(60, 20);
+            this.label1.Size = new System.Drawing.Size(48, 16);
             this.label1.TabIndex = 100;
             this.label1.Text = ": از تاریخ";
             // 
@@ -346,10 +351,10 @@
             this.lblUsableArea.Appearance = appearance3;
             this.lblUsableArea.AutoSize = true;
             this.lblUsableArea.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblUsableArea.Location = new System.Drawing.Point(172, 104);
+            this.lblUsableArea.Location = new System.Drawing.Point(191, 109);
             this.lblUsableArea.Name = "lblUsableArea";
             this.lblUsableArea.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblUsableArea.Size = new System.Drawing.Size(93, 20);
+            this.lblUsableArea.Size = new System.Drawing.Size(74, 16);
             this.lblUsableArea.TabIndex = 56;
             this.lblUsableArea.Text = ": مساحت کل";
             // 
@@ -362,10 +367,10 @@
             this.lblTotalArea.Appearance = appearance10;
             this.lblTotalArea.AutoSize = true;
             this.lblTotalArea.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblTotalArea.Location = new System.Drawing.Point(109, 160);
+            this.lblTotalArea.Location = new System.Drawing.Point(140, 164);
             this.lblTotalArea.Name = "lblTotalArea";
             this.lblTotalArea.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTotalArea.Size = new System.Drawing.Size(156, 20);
+            this.lblTotalArea.Size = new System.Drawing.Size(125, 16);
             this.lblTotalArea.TabIndex = 57;
             this.lblTotalArea.Text = ": مساحت قابل استفاده";
             // 
@@ -378,10 +383,10 @@
             this.lblSoilTexture.Appearance = appearance12;
             this.lblSoilTexture.AutoSize = true;
             this.lblSoilTexture.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblSoilTexture.Location = new System.Drawing.Point(186, 50);
+            this.lblSoilTexture.Location = new System.Drawing.Point(201, 53);
             this.lblSoilTexture.Name = "lblSoilTexture";
             this.lblSoilTexture.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblSoilTexture.Size = new System.Drawing.Size(79, 20);
+            this.lblSoilTexture.Size = new System.Drawing.Size(64, 16);
             this.lblSoilTexture.TabIndex = 97;
             this.lblSoilTexture.Text = ": بافت خاک";
             // 
@@ -390,11 +395,11 @@
             this.ultraExpandableGroupBox1.Controls.Add(this.grpControllers);
             this.ultraExpandableGroupBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ultraExpandableGroupBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ultraExpandableGroupBox1.ExpandedSize = new System.Drawing.Size(291, 822);
+            this.ultraExpandableGroupBox1.ExpandedSize = new System.Drawing.Size(291, 567);
             this.ultraExpandableGroupBox1.ExpansionIndicator = Infragistics.Win.Misc.GroupBoxExpansionIndicator.Far;
-            this.ultraExpandableGroupBox1.Location = new System.Drawing.Point(779, 0);
+            this.ultraExpandableGroupBox1.Location = new System.Drawing.Point(511, 0);
             this.ultraExpandableGroupBox1.Name = "ultraExpandableGroupBox1";
-            this.ultraExpandableGroupBox1.Size = new System.Drawing.Size(291, 822);
+            this.ultraExpandableGroupBox1.Size = new System.Drawing.Size(291, 567);
             this.ultraExpandableGroupBox1.TabIndex = 106;
             // 
             // grpControllers
@@ -420,9 +425,8 @@
             this.grpControllers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpControllers.Location = new System.Drawing.Point(3, 17);
             this.grpControllers.Name = "grpControllers";
-            this.grpControllers.Size = new System.Drawing.Size(285, 802);
+            this.grpControllers.Size = new System.Drawing.Size(285, 547);
             this.grpControllers.TabIndex = 0;
-            this.grpControllers.Paint += new System.Windows.Forms.PaintEventHandler(this.grpControllers_Paint);
             // 
             // txtDescription
             // 
@@ -436,16 +440,15 @@
             this.txtDescription.BackColor = System.Drawing.Color.Transparent;
             this.txtDescription.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtDescription.FontSize = 0;
-            this.txtDescription.Location = new System.Drawing.Point(14, 418);
+            this.txtDescription.Location = new System.Drawing.Point(14, 409);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtDescription.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDescription.Size = new System.Drawing.Size(251, 327);
+            this.txtDescription.Size = new System.Drawing.Size(251, 240);
             this.txtDescription.TabIndex = 125;
             this.txtDescription.UnformattedText = null;
-            this.txtDescription.ValueChanged += new System.EventHandler(this.txtDescription_ValueChanged);
             // 
             // label4
             // 
@@ -458,7 +461,7 @@
             this.label4.Location = new System.Drawing.Point(72, 246);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(40, 20);
+            this.label4.Size = new System.Drawing.Size(32, 16);
             this.label4.TabIndex = 124;
             this.label4.Text = "هکتار";
             // 
@@ -475,9 +478,9 @@
             this.mskToDate.Editable = Baran.Windows.Forms.Editable.Editable;
             this.mskToDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
             this.mskToDate.InputMask = "yyyy/mm/dd";
-            this.mskToDate.Location = new System.Drawing.Point(118, 357);
+            this.mskToDate.Location = new System.Drawing.Point(118, 354);
             this.mskToDate.Name = "mskToDate";
-            this.mskToDate.Size = new System.Drawing.Size(147, 24);
+            this.mskToDate.Size = new System.Drawing.Size(147, 21);
             this.mskToDate.TabIndex = 122;
             this.mskToDate.Text = "____/__/__";
             // 
@@ -494,9 +497,9 @@
             this.mskFromDate.Editable = Baran.Windows.Forms.Editable.Editable;
             this.mskFromDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
             this.mskFromDate.InputMask = "yyyy/mm/dd";
-            this.mskFromDate.Location = new System.Drawing.Point(118, 300);
+            this.mskFromDate.Location = new System.Drawing.Point(118, 299);
             this.mskFromDate.Name = "mskFromDate";
-            this.mskFromDate.Size = new System.Drawing.Size(147, 24);
+            this.mskFromDate.Size = new System.Drawing.Size(147, 21);
             this.mskFromDate.TabIndex = 121;
             this.mskFromDate.Text = "____/__/__";
             // 
@@ -513,9 +516,9 @@
             this.txtLinkedArea.Editable = Baran.Windows.Forms.Editable.Editable;
             this.txtLinkedArea.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
             this.txtLinkedArea.InputMask = "{double:6.2}";
-            this.txtLinkedArea.Location = new System.Drawing.Point(118, 242);
+            this.txtLinkedArea.Location = new System.Drawing.Point(118, 244);
             this.txtLinkedArea.Name = "txtLinkedArea";
-            this.txtLinkedArea.Size = new System.Drawing.Size(147, 24);
+            this.txtLinkedArea.Size = new System.Drawing.Size(147, 21);
             this.txtLinkedArea.TabIndex = 120;
             // 
             // txtUsableArea
@@ -533,9 +536,9 @@
             this.txtUsableArea.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
             this.txtUsableArea.Enabled = false;
             this.txtUsableArea.InputMask = "{double:6.2}";
-            this.txtUsableArea.Location = new System.Drawing.Point(118, 183);
+            this.txtUsableArea.Location = new System.Drawing.Point(118, 189);
             this.txtUsableArea.Name = "txtUsableArea";
-            this.txtUsableArea.Size = new System.Drawing.Size(147, 24);
+            this.txtUsableArea.Size = new System.Drawing.Size(147, 21);
             this.txtUsableArea.TabIndex = 119;
             this.txtUsableArea.TabStop = false;
             // 
@@ -554,9 +557,9 @@
             this.txtTotalArea.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
             this.txtTotalArea.Enabled = false;
             this.txtTotalArea.InputMask = "{double:6.2}";
-            this.txtTotalArea.Location = new System.Drawing.Point(118, 126);
+            this.txtTotalArea.Location = new System.Drawing.Point(118, 134);
             this.txtTotalArea.Name = "txtTotalArea";
-            this.txtTotalArea.Size = new System.Drawing.Size(147, 24);
+            this.txtTotalArea.Size = new System.Drawing.Size(147, 21);
             this.txtTotalArea.TabIndex = 118;
             this.txtTotalArea.TabStop = false;
             // 
@@ -573,13 +576,13 @@
             this.txtName.EditableText = false;
             this.txtName.Enabled = false;
             this.txtName.FontSize = 0;
-            this.txtName.Location = new System.Drawing.Point(14, 70);
+            this.txtName.Location = new System.Drawing.Point(14, 78);
             this.txtName.Name = "txtName";
             this.txtName.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtName.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtName.ReadOnly = true;
             this.txtName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtName.Size = new System.Drawing.Size(251, 26);
+            this.txtName.Size = new System.Drawing.Size(251, 22);
             this.txtName.TabIndex = 117;
             this.txtName.UnformattedText = null;
             // 
@@ -602,18 +605,18 @@
             appearance6.TextHAlignAsString = "Right";
             appearance6.TextVAlignAsString = "Middle";
             this.cmbFields.ItemAppearance = appearance6;
-            this.cmbFields.Location = new System.Drawing.Point(14, 21);
+            this.cmbFields.Location = new System.Drawing.Point(14, 22);
             this.cmbFields.Name = "cmbFields";
             this.cmbFields.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbFields.Size = new System.Drawing.Size(251, 26);
+            this.cmbFields.Size = new System.Drawing.Size(251, 22);
             this.cmbFields.TabIndex = 116;
             this.cmbFields.ValueChanged += new System.EventHandler(this.cmbFields_ValueChanged);
             // 
             // frmProductionFieldLink
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
-            this.ClientSize = new System.Drawing.Size(1071, 999);
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(803, 744);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmProductionFieldLink";
             this.Text = "زمین";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
