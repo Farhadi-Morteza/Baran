@@ -19,6 +19,10 @@ namespace Baran.Source
         public frmFieldRpt()
         {
             InitializeComponent();
+
+            MainMap.Overlays.Add(routes);
+            MainMap.Overlays.Add(polygons);
+            MainMap.Overlays.Add(markers);
         }
 
         #region Variables
@@ -100,7 +104,7 @@ namespace Baran.Source
 
         private void ShowMap()
         {
-            this.ClearMap();
+            //this.ClearMap();
 
             try
             {
@@ -171,7 +175,6 @@ namespace Baran.Source
                             mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
 
                             markers.Markers.Add(mark);
-
                             routes.Routes.Add(rt);
                         }
 
@@ -214,7 +217,7 @@ namespace Baran.Source
                                         rtField.Stroke = new Pen(Color.FromArgb(144, Color.Red));
                                         rtField.Stroke.Width = 3;
                                         rtField.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-                                    }
+                                    }                                    
 
                                     GMapMarker markField = new GMarkerGoogle(Fieldpoints[Fieldpoints.Count / 2], GMarkerGoogleType.red_dot);
                                     markField.ToolTipText = strFieldTooltip;
@@ -233,8 +236,8 @@ namespace Baran.Source
                     }
 
                 }
-                MainMap.Overlays.Add(routes);
-                MainMap.Overlays.Add(markers);
+                //MainMap.Overlays.Add(routes);
+                //MainMap.Overlays.Add(markers);
                 MainMap.ZoomAndCenterRoutes("routes");
             }
             catch

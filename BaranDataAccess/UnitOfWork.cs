@@ -176,6 +176,39 @@ namespace BaranDataAccess
         // **************************************************
 
         // **************************************************
+        private Repository<tbl_src_Tree> _treeRepository;
+
+        public IRepository<tbl_src_Tree> TreeRepository
+        {
+            get
+            {
+                if (_treeRepository == null)
+                {
+                    _treeRepository = new Repository<tbl_src_Tree>(DatabaseContext);
+                }
+
+                return _treeRepository;
+            }
+        }
+        // **************************************************
+
+        // **************************************************
+        private Repository<viw_Part_Location> _partLocationRepository;
+
+        public IRepository<viw_Part_Location> PartlocationReopsitory
+        {
+            get
+            {
+                if (_partLocationRepository == null)
+                {
+                    _partLocationRepository = new Repository<viw_Part_Location>(DatabaseContext);
+                }
+
+                return _partLocationRepository;
+            }
+        }
+        // **************************************************
+        // **************************************************
         public bool IsDisposed
         {
             get { throw new NotImplementedException(); }

@@ -119,6 +119,7 @@
         <AssociationConnector Association="AMSModel.FK_tbl_src_Part_tbl_cmn_Province" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Part_tbl_src_CompanyCategory" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Part_tbl_src_Subcollection" />
+        <EntityTypeShape EntityType="AMSModel.viw_Part_Location" Width="1.5" PointX="32.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

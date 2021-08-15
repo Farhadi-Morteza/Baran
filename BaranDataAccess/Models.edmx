@@ -1202,6 +1202,7 @@
           <Property Name="UpdateUserID" Type="int" />
           <Property Name="UpdateDate" Type="date" />
           <Property Name="Code" Type="int" />
+          <Property Name="Locatioon" Type="geometry" />
         </EntityType>
         <EntityType Name="tbl_src_TreeType">
           <Key>
@@ -1402,6 +1403,27 @@
           <Property Name="InactivationDate" Type="date" />
           <Property Name="UpdateUserID" Type="int" />
           <Property Name="UpdateDate" Type="date" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'AMS.dbo.viw_Part_Location' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="viw_Part_Location">
+          <Key>
+            <PropertyRef Name="PartName" />
+            <PropertyRef Name="SubCollectionName" />
+            <PropertyRef Name="CollectionName" />
+            <PropertyRef Name="PartID" />
+            <PropertyRef Name="SubCollectionID" />
+            <PropertyRef Name="CollectionID" />
+          </Key>
+          <Property Name="PartName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SubCollectionName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CollectionName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProvinceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="TownshipName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Location" Type="geometry" />
+          <Property Name="PartID" Type="int" Nullable="false" />
+          <Property Name="SubCollectionID" Type="int" Nullable="false" />
+          <Property Name="CollectionID" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_tbl_Sec_Current_User_tbl_Sec_Users">
           <End Role="tbl_Sec_Users" Type="Self.tbl_Sec_Users" Multiplicity="1" />
@@ -1696,20 +1718,60 @@
           <Parameter Name="WhereClause" Type="nvarchar(max)" Mode="In" />
           <Parameter Name="UserID" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="spr_src_BuildingsLocation_Rpt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CollectionID" Type="int" Mode="In" />
+          <Parameter Name="SubcollectionID" Type="int" Mode="In" />
+          <Parameter Name="PartID" Type="int" Mode="In" />
+        </Function>
         <Function Name="spr_src_Field_Map_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Action" Type="int" Mode="In" />
           <Parameter Name="WhereClause" Type="nvarchar(max)" Mode="In" />
           <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spr_src_FieldLocation_Rpt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CollectionID" Type="int" Mode="In" />
+          <Parameter Name="SubcollectionID" Type="int" Mode="In" />
+          <Parameter Name="PartID" Type="int" Mode="In" />
         </Function>
         <Function Name="spr_src_Land_Map_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Action" Type="int" Mode="In" />
           <Parameter Name="WhereClause" Type="nvarchar(max)" Mode="In" />
           <Parameter Name="UserID" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="spr_src_LandLocation_Rpt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CollectionID" Type="int" Mode="In" />
+          <Parameter Name="SubcollectionID" Type="int" Mode="In" />
+          <Parameter Name="PartID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_src_PartLocation_Rpt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CollectionID" Type="int" Mode="In" />
+          <Parameter Name="SubcollectionID" Type="int" Mode="In" />
+          <Parameter Name="PartID" Type="int" Mode="In" />
+        </Function>
         <Function Name="spr_src_WareHouse_Map_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Action" Type="int" Mode="In" />
           <Parameter Name="WhereClause" Type="nvarchar(max)" Mode="In" />
           <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spr_src_WarehouseLocation_Rpt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CollectionID" Type="int" Mode="In" />
+          <Parameter Name="SubcollectionID" Type="int" Mode="In" />
+          <Parameter Name="PartID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_src_WaterLocation_Rpt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CollectionID" Type="int" Mode="In" />
+          <Parameter Name="SubcollectionID" Type="int" Mode="In" />
+          <Parameter Name="PartID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_src_WaterStorageLocation_Rpt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CollectionID" Type="int" Mode="In" />
+          <Parameter Name="SubcollectionID" Type="int" Mode="In" />
+          <Parameter Name="PartID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_src_WaterTransmissionLineLocation_Rpt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CollectionID" Type="int" Mode="In" />
+          <Parameter Name="SubcollectionID" Type="int" Mode="In" />
+          <Parameter Name="PartID" Type="int" Mode="In" />
         </Function>
         <EntityContainer Name="AMSModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
@@ -1802,6 +1864,19 @@
           <EntitySet Name="tbl_tsk_Tasklist_Crop_Link" EntityType="Self.tbl_tsk_Tasklist_Crop_Link" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_tsk_Tasklist_Task_Link" EntityType="Self.tbl_tsk_Tasklist_Task_Link" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_tsk_TaskSubCategory" EntityType="Self.tbl_tsk_TaskSubCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="viw_Part_Location" EntityType="Self.viw_Part_Location" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[viw_Part_Location].[PartName] AS [PartName], 
+[viw_Part_Location].[SubCollectionName] AS [SubCollectionName], 
+[viw_Part_Location].[CollectionName] AS [CollectionName], 
+[viw_Part_Location].[ProvinceName] AS [ProvinceName], 
+[viw_Part_Location].[TownshipName] AS [TownshipName], 
+[viw_Part_Location].[Location] AS [Location], 
+[viw_Part_Location].[PartID] AS [PartID], 
+[viw_Part_Location].[SubCollectionID] AS [SubCollectionID], 
+[viw_Part_Location].[CollectionID] AS [CollectionID]
+FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_tbl_Sec_Current_User_tbl_Sec_Users" Association="Self.FK_tbl_Sec_Current_User_tbl_Sec_Users">
             <End Role="tbl_Sec_Users" EntitySet="tbl_Sec_Users" />
             <End Role="tbl_Sec_Current_User" EntitySet="tbl_Sec_Current_User" />
@@ -3078,6 +3153,7 @@
           <Property Name="UpdateUserID" Type="Int32" />
           <Property Name="UpdateDate" Type="DateTime" Precision="0" />
           <Property Name="Code" Type="Int32" />
+          <Property Name="Locatioon" Type="Geometry" />
         </EntityType>
         <EntityType Name="tbl_src_TreeType">
           <Key>
@@ -3738,6 +3814,47 @@
             <Parameter Name="WhereClause" Mode="In" Type="String" />
             <Parameter Name="UserID" Mode="In" Type="String" />
           </FunctionImport>
+          <EntitySet Name="viw_Part_Location" EntityType="AMSModel.viw_Part_Location" />
+          <FunctionImport Name="spr_src_PartLocation_Rpt" ReturnType="Collection(AMSModel.spr_src_PartLocation_Rpt_Result)">
+            <Parameter Name="CollectionID" Mode="In" Type="Int32" />
+            <Parameter Name="SubcollectionID" Mode="In" Type="Int32" />
+            <Parameter Name="PartID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_src_BuildingsLocation_Rpt" ReturnType="Collection(AMSModel.spr_src_BuildingsLocation_Rpt_Result)">
+            <Parameter Name="CollectionID" Mode="In" Type="Int32" />
+            <Parameter Name="SubcollectionID" Mode="In" Type="Int32" />
+            <Parameter Name="PartID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_src_FieldLocation_Rpt" ReturnType="Collection(AMSModel.spr_src_FieldLocation_Rpt_Result)">
+            <Parameter Name="CollectionID" Mode="In" Type="Int32" />
+            <Parameter Name="SubcollectionID" Mode="In" Type="Int32" />
+            <Parameter Name="PartID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_src_LandLocation_Rpt" ReturnType="Collection(AMSModel.spr_src_LandLocation_Rpt_Result)">
+            <Parameter Name="CollectionID" Mode="In" Type="Int32" />
+            <Parameter Name="SubcollectionID" Mode="In" Type="Int32" />
+            <Parameter Name="PartID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_src_WarehouseLocation_Rpt" ReturnType="Collection(AMSModel.spr_src_WarehouseLocation_Rpt_Result)">
+            <Parameter Name="CollectionID" Mode="In" Type="Int32" />
+            <Parameter Name="SubcollectionID" Mode="In" Type="Int32" />
+            <Parameter Name="PartID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_src_WaterLocation_Rpt" ReturnType="Collection(AMSModel.spr_src_WaterLocation_Rpt_Result)">
+            <Parameter Name="CollectionID" Mode="In" Type="Int32" />
+            <Parameter Name="SubcollectionID" Mode="In" Type="Int32" />
+            <Parameter Name="PartID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_src_WaterStorageLocation_Rpt" ReturnType="Collection(AMSModel.spr_src_WaterStorageLocation_Rpt_Result)">
+            <Parameter Name="CollectionID" Mode="In" Type="Int32" />
+            <Parameter Name="SubcollectionID" Mode="In" Type="Int32" />
+            <Parameter Name="PartID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_src_WaterTransmissionLineLocation_Rpt" ReturnType="Collection(AMSModel.spr_src_WaterTransmissionLineLocation_Rpt_Result)">
+            <Parameter Name="CollectionID" Mode="In" Type="Int32" />
+            <Parameter Name="SubcollectionID" Mode="In" Type="Int32" />
+            <Parameter Name="PartID" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="tbl_src_Land">
           <Key>
@@ -3901,6 +4018,135 @@
           <Property Type="String" Name="WarehouseTypeName" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="WarehouseUseTypeName" Nullable="true" MaxLength="50" />
           <Property Type="Int32" Name="WarehouseID" Nullable="false" />
+          <Property Type="Geometry" Name="Location" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="viw_Part_Location">
+          <Key>
+            <PropertyRef Name="PartName" />
+            <PropertyRef Name="SubCollectionName" />
+            <PropertyRef Name="CollectionName" />
+            <PropertyRef Name="PartID" />
+            <PropertyRef Name="SubCollectionID" />
+            <PropertyRef Name="CollectionID" />
+          </Key>
+          <Property Name="PartName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubCollectionName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CollectionName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProvinceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TownshipName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="Geometry" />
+          <Property Name="PartID" Type="Int32" Nullable="false" />
+          <Property Name="SubCollectionID" Type="Int32" Nullable="false" />
+          <Property Name="CollectionID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <ComplexType Name="spr_src_PartLocation_Rpt_Result">
+          <Property Type="String" Name="PartName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="SubCollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="CollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ProvinceName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="TownshipName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="PartID" Nullable="false" />
+          <Property Type="Int32" Name="SubCollectionID" Nullable="false" />
+          <Property Type="Int32" Name="CollectionID" Nullable="false" />
+          <Property Type="Geometry" Name="Location" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_src_BuildingsLocation_Rpt_Result">
+          <Property Type="String" Name="PartName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="SubcollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="CollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="PartID" Nullable="false" />
+          <Property Type="Int32" Name="SubCollectionID" Nullable="false" />
+          <Property Type="Int32" Name="CollectionID" Nullable="false" />
+          <Property Type="Int32" Name="BuildingsID" Nullable="false" />
+          <Property Type="String" Name="BuildingName" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="Area" Nullable="true" Precision="8" Scale="2" />
+          <Property Type="String" Name="BuildingCategoryName" Nullable="true" MaxLength="50" />
+          <Property Type="Geometry" Name="Location" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_src_FieldLocation_Rpt_Result">
+          <Property Type="String" Name="LandName" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="UsableArea" Nullable="true" Precision="8" Scale="2" />
+          <Property Type="Decimal" Name="TotalArea" Nullable="true" Precision="8" Scale="2" />
+          <Property Type="String" Name="SoilTexture" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FieldUseType" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PartName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="SubcollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="CollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="FieldID" Nullable="false" />
+          <Property Type="Int32" Name="PartID" Nullable="false" />
+          <Property Type="Int32" Name="SubCollectionID" Nullable="false" />
+          <Property Type="Int32" Name="CollectionID" Nullable="false" />
+          <Property Type="String" Name="Code" Nullable="true" MaxLength="50" />
+          <Property Type="Geometry" Name="Location" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_src_LandLocation_Rpt_Result">
+          <Property Type="String" Name="LandName" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="UsableArea" Nullable="true" Precision="8" Scale="2" />
+          <Property Type="Decimal" Name="TotalArea" Nullable="true" Precision="8" Scale="2" />
+          <Property Type="String" Name="Ownership" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PartName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="SubcollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="CollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="LandID" Nullable="false" />
+          <Property Type="Int32" Name="PartID" Nullable="false" />
+          <Property Type="Int32" Name="SubCollectionID" Nullable="false" />
+          <Property Type="Int32" Name="CollectionID" Nullable="false" />
+          <Property Type="String" Name="ProvinceName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="TownshipName" Nullable="true" MaxLength="50" />
+          <Property Type="Geometry" Name="Location" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_src_WarehouseLocation_Rpt_Result">
+          <Property Type="String" Name="PartName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="SubcollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="CollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="PartID" Nullable="false" />
+          <Property Type="Int32" Name="SubCollectionID" Nullable="false" />
+          <Property Type="Int32" Name="CollectionID" Nullable="false" />
+          <Property Type="Int32" Name="WarehouseID" Nullable="false" />
+          <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="Area" Nullable="true" Precision="8" Scale="2" />
+          <Property Type="String" Name="WarehouseType" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="WarehouseUseType" Nullable="true" MaxLength="50" />
+          <Property Type="Geometry" Name="Location" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_src_WaterLocation_Rpt_Result">
+          <Property Type="String" Name="PartName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="SubcollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="CollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="PartID" Nullable="false" />
+          <Property Type="Int32" Name="SubCollectionID" Nullable="false" />
+          <Property Type="Int32" Name="CollectionID" Nullable="false" />
+          <Property Type="Int32" Name="WaterID" Nullable="false" />
+          <Property Type="String" Name="WaterName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="WaterSourceTypeName" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="WaterOutput" Nullable="true" Precision="5" Scale="2" />
+          <Property Type="Geometry" Name="Location" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_src_WaterStorageLocation_Rpt_Result">
+          <Property Type="String" Name="PartName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="SubcollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="CollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="PartID" Nullable="false" />
+          <Property Type="Int32" Name="SubCollectionID" Nullable="false" />
+          <Property Type="Int32" Name="CollectionID" Nullable="false" />
+          <Property Type="Int32" Name="WaterStorageID" Nullable="false" />
+          <Property Type="String" Name="WaterStorageName" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="Volume" Nullable="true" Precision="6" Scale="2" />
+          <Property Type="Decimal" Name="Area" Nullable="true" Precision="6" Scale="2" />
+          <Property Type="Decimal" Name="Output" Nullable="true" Precision="6" Scale="2" />
+          <Property Type="Geometry" Name="Location" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_src_WaterTransmissionLineLocation_Rpt_Result">
+          <Property Type="String" Name="PartName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="SubcollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="CollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="PartID" Nullable="false" />
+          <Property Type="Int32" Name="SubCollectionID" Nullable="false" />
+          <Property Type="Int32" Name="CollectionID" Nullable="false" />
+          <Property Type="Int32" Name="WaterTransmissionLineID" Nullable="false" />
+          <Property Type="String" Name="WaterTransmissionLineName" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Length" Nullable="true" Precision="6" Scale="2" />
+          <Property Type="String" Name="WaterTransmissionTypeName" Nullable="true" MaxLength="50" />
           <Property Type="Geometry" Name="Location" Nullable="false" />
         </ComplexType>
       </Schema>
@@ -5082,6 +5328,7 @@
           <EntitySetMapping Name="tbl_src_Tree">
             <EntityTypeMapping TypeName="AMSModel.tbl_src_Tree">
               <MappingFragment StoreEntitySet="tbl_src_Tree">
+                <ScalarProperty Name="Locatioon" ColumnName="Locatioon" />
                 <ScalarProperty Name="TreeID" ColumnName="TreeID" />
                 <ScalarProperty Name="Fk_FieldID" ColumnName="Fk_FieldID" />
                 <ScalarProperty Name="Fk_TreeType" ColumnName="Fk_TreeType" />
@@ -5464,6 +5711,155 @@
                 <ScalarProperty Name="WarehouseTypeName" ColumnName="WarehouseTypeName" />
                 <ScalarProperty Name="WarehouseUseTypeName" ColumnName="WarehouseUseTypeName" />
                 <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="viw_Part_Location">
+            <EntityTypeMapping TypeName="AMSModel.viw_Part_Location">
+              <MappingFragment StoreEntitySet="viw_Part_Location">
+                <ScalarProperty Name="CollectionID" ColumnName="CollectionID" />
+                <ScalarProperty Name="SubCollectionID" ColumnName="SubCollectionID" />
+                <ScalarProperty Name="PartID" ColumnName="PartID" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="TownshipName" ColumnName="TownshipName" />
+                <ScalarProperty Name="ProvinceName" ColumnName="ProvinceName" />
+                <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+                <ScalarProperty Name="SubCollectionName" ColumnName="SubCollectionName" />
+                <ScalarProperty Name="PartName" ColumnName="PartName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spr_src_PartLocation_Rpt" FunctionName="AMSModel.Store.spr_src_PartLocation_Rpt">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AMSModel.spr_src_PartLocation_Rpt_Result">
+                <ScalarProperty Name="PartName" ColumnName="PartName" />
+                <ScalarProperty Name="SubCollectionName" ColumnName="SubCollectionName" />
+                <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+                <ScalarProperty Name="ProvinceName" ColumnName="ProvinceName" />
+                <ScalarProperty Name="TownshipName" ColumnName="TownshipName" />
+                <ScalarProperty Name="PartID" ColumnName="PartID" />
+                <ScalarProperty Name="SubCollectionID" ColumnName="SubCollectionID" />
+                <ScalarProperty Name="CollectionID" ColumnName="CollectionID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_src_BuildingsLocation_Rpt" FunctionName="AMSModel.Store.spr_src_BuildingsLocation_Rpt">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AMSModel.spr_src_BuildingsLocation_Rpt_Result">
+                <ScalarProperty Name="PartName" ColumnName="PartName" />
+                <ScalarProperty Name="SubcollectionName" ColumnName="SubcollectionName" />
+                <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+                <ScalarProperty Name="PartID" ColumnName="PartID" />
+                <ScalarProperty Name="SubCollectionID" ColumnName="SubCollectionID" />
+                <ScalarProperty Name="CollectionID" ColumnName="CollectionID" />
+                <ScalarProperty Name="BuildingsID" ColumnName="BuildingsID" />
+                <ScalarProperty Name="BuildingName" ColumnName="BuildingName" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="BuildingCategoryName" ColumnName="BuildingCategoryName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_src_FieldLocation_Rpt" FunctionName="AMSModel.Store.spr_src_FieldLocation_Rpt">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AMSModel.spr_src_FieldLocation_Rpt_Result">
+                <ScalarProperty Name="LandName" ColumnName="LandName" />
+                <ScalarProperty Name="UsableArea" ColumnName="UsableArea" />
+                <ScalarProperty Name="TotalArea" ColumnName="TotalArea" />
+                <ScalarProperty Name="SoilTexture" ColumnName="SoilTexture" />
+                <ScalarProperty Name="FieldUseType" ColumnName="FieldUseType" />
+                <ScalarProperty Name="PartName" ColumnName="PartName" />
+                <ScalarProperty Name="SubcollectionName" ColumnName="SubcollectionName" />
+                <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+                <ScalarProperty Name="FieldID" ColumnName="FieldID" />
+                <ScalarProperty Name="PartID" ColumnName="PartID" />
+                <ScalarProperty Name="SubCollectionID" ColumnName="SubCollectionID" />
+                <ScalarProperty Name="CollectionID" ColumnName="CollectionID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_src_LandLocation_Rpt" FunctionName="AMSModel.Store.spr_src_LandLocation_Rpt">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AMSModel.spr_src_LandLocation_Rpt_Result">
+                <ScalarProperty Name="LandName" ColumnName="LandName" />
+                <ScalarProperty Name="UsableArea" ColumnName="UsableArea" />
+                <ScalarProperty Name="TotalArea" ColumnName="TotalArea" />
+                <ScalarProperty Name="Ownership" ColumnName="Ownership" />
+                <ScalarProperty Name="PartName" ColumnName="PartName" />
+                <ScalarProperty Name="SubcollectionName" ColumnName="SubcollectionName" />
+                <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+                <ScalarProperty Name="LandID" ColumnName="LandID" />
+                <ScalarProperty Name="PartID" ColumnName="PartID" />
+                <ScalarProperty Name="SubCollectionID" ColumnName="SubCollectionID" />
+                <ScalarProperty Name="CollectionID" ColumnName="CollectionID" />
+                <ScalarProperty Name="ProvinceName" ColumnName="ProvinceName" />
+                <ScalarProperty Name="TownshipName" ColumnName="TownshipName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_src_WarehouseLocation_Rpt" FunctionName="AMSModel.Store.spr_src_WarehouseLocation_Rpt">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AMSModel.spr_src_WarehouseLocation_Rpt_Result">
+                <ScalarProperty Name="PartName" ColumnName="PartName" />
+                <ScalarProperty Name="SubcollectionName" ColumnName="SubcollectionName" />
+                <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+                <ScalarProperty Name="PartID" ColumnName="PartID" />
+                <ScalarProperty Name="SubCollectionID" ColumnName="SubCollectionID" />
+                <ScalarProperty Name="CollectionID" ColumnName="CollectionID" />
+                <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+                <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="WarehouseType" ColumnName="WarehouseType" />
+                <ScalarProperty Name="WarehouseUseType" ColumnName="WarehouseUseType" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_src_WaterLocation_Rpt" FunctionName="AMSModel.Store.spr_src_WaterLocation_Rpt">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AMSModel.spr_src_WaterLocation_Rpt_Result">
+                <ScalarProperty Name="PartName" ColumnName="PartName" />
+                <ScalarProperty Name="SubcollectionName" ColumnName="SubcollectionName" />
+                <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+                <ScalarProperty Name="PartID" ColumnName="PartID" />
+                <ScalarProperty Name="SubCollectionID" ColumnName="SubCollectionID" />
+                <ScalarProperty Name="CollectionID" ColumnName="CollectionID" />
+                <ScalarProperty Name="WaterID" ColumnName="WaterID" />
+                <ScalarProperty Name="WaterName" ColumnName="WaterName" />
+                <ScalarProperty Name="WaterSourceTypeName" ColumnName="WaterSourceTypeName" />
+                <ScalarProperty Name="WaterOutput" ColumnName="WaterOutput" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_src_WaterStorageLocation_Rpt" FunctionName="AMSModel.Store.spr_src_WaterStorageLocation_Rpt">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AMSModel.spr_src_WaterStorageLocation_Rpt_Result">
+                <ScalarProperty Name="PartName" ColumnName="PartName" />
+                <ScalarProperty Name="SubcollectionName" ColumnName="SubcollectionName" />
+                <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+                <ScalarProperty Name="PartID" ColumnName="PartID" />
+                <ScalarProperty Name="SubCollectionID" ColumnName="SubCollectionID" />
+                <ScalarProperty Name="CollectionID" ColumnName="CollectionID" />
+                <ScalarProperty Name="WaterStorageID" ColumnName="WaterStorageID" />
+                <ScalarProperty Name="WaterStorageName" ColumnName="WaterStorageName" />
+                <ScalarProperty Name="Volume" ColumnName="Volume" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Output" ColumnName="Output" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_src_WaterTransmissionLineLocation_Rpt" FunctionName="AMSModel.Store.spr_src_WaterTransmissionLineLocation_Rpt">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AMSModel.spr_src_WaterTransmissionLineLocation_Rpt_Result">
+                <ScalarProperty Name="PartName" ColumnName="PartName" />
+                <ScalarProperty Name="SubcollectionName" ColumnName="SubcollectionName" />
+                <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+                <ScalarProperty Name="PartID" ColumnName="PartID" />
+                <ScalarProperty Name="SubCollectionID" ColumnName="SubCollectionID" />
+                <ScalarProperty Name="CollectionID" ColumnName="CollectionID" />
+                <ScalarProperty Name="WaterTransmissionLineID" ColumnName="WaterTransmissionLineID" />
+                <ScalarProperty Name="WaterTransmissionLineName" ColumnName="WaterTransmissionLineName" />
+                <ScalarProperty Name="Length" ColumnName="Length" />
+                <ScalarProperty Name="WaterTransmissionTypeName" ColumnName="WaterTransmissionTypeName" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

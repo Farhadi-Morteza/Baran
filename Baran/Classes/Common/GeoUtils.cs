@@ -1,8 +1,10 @@
 ﻿using GMap.NET;
+using GMap.NET.WindowsForms;
 using System;
 using System.Collections.Generic;
 using System.Data.Spatial;
 using System.Device.Location;
+using System.Drawing;
 using System.Globalization;
 using System.Linq;
 
@@ -26,7 +28,7 @@ namespace Baran.Classes.Common
                                      "POINT({0} {1})", longitude, latitude);
             // 4326 is most common coordinate system used by GPS/Maps
             return DbGeography.PointFromText(text, 4326);
-          
+
         }
 
         /// <summary>
@@ -56,7 +58,7 @@ namespace Baran.Classes.Common
             pointString = string.Concat(pointString.Skip(7));
 
             string[] points = pointString.Split(',');
-            List <PointLatLng> coordinates = new List<PointLatLng>();
+            List<PointLatLng> coordinates = new List<PointLatLng>();
 
             foreach (string point in points)
             {
@@ -89,7 +91,7 @@ namespace Baran.Classes.Common
             List<PointLatLng> coordinates = new List<PointLatLng>();
 
             foreach (string point in points)
-            {                
+            {
                 string[] p = point.Trim().Split(' ');
                 coordinates.Add(new PointLatLng(PublicMethods.ConvertToDouble(p.Last()), PublicMethods.ConvertToDouble(p.First())));
             }
@@ -117,11 +119,11 @@ namespace Baran.Classes.Common
 
         //============================================================================        
         public static DbGeometry ConvertGMapPolygonPointsToDbGeometryPolygon(List<PointLatLng> coordinates)
-        {            
+        {
             var coordinateList = coordinates.ToList();
             if (coordinateList.First() != coordinateList.Last())
             {
-                coordinateList.Add(coordinateList.First());                
+                coordinateList.Add(coordinateList.First());
             }
 
             var count = 0;
@@ -132,7 +134,7 @@ namespace Baran.Classes.Common
             {
                 if (count == 0)
                 {
-                    sb.Append( coordinate.Lng + " " + coordinate.Lat);
+                    sb.Append(coordinate.Lng + " " + coordinate.Lat);
                 }
                 else
                 {
@@ -221,7 +223,6 @@ namespace Baran.Classes.Common
             return miles.Value * 1609.344;
         }
 
-
         /// <summary>
         /// Displays a miles value as a string with a mile postfix
         /// 1.0
@@ -242,4 +243,23 @@ namespace Baran.Classes.Common
                 return string.Format("{0:n0} miles", miles);
         }
     }
+
+    //public class GeoMarkerGoogle : GMapMarker
+    //{
+    //    public GeoMarkerGoogle(PointLatLng p, GMap.NET.WindowsForms.Markers.GMarkerGoogleType type) : base(GeoMarkerGoogle);
+    //    public readonly GMap.NET.WindowsForms.Markers.GMarkerGoogleType Type;
+
+    //    public GMarkerGoogle(PointLatLng p, GMap.NET.WindowsForms.Markers.GMarkerGoogleType type);
+    //    public GMarkerGoogle(PointLatLng p, Bitmap Bitmap);
+    //    protected GMarkerGoogle(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);
+
+    //    public override void Dispose();
+    //    public void OnDeserialization(object sender);
+    //    public override void OnRender(Graphics g);
+    //}
 }
+
+
+
+
+

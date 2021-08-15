@@ -118,6 +118,7 @@ namespace BaranDataAccess
         public DbSet<tbl_tsk_TaskSubCategory> tbl_tsk_TaskSubCategory { get; set; }
         public DbSet<tbl_src_Land> tbl_src_Land { get; set; }
         public DbSet<tbl_src_Part> tbl_src_Part { get; set; }
+        public DbSet<viw_Part_Location> viw_Part_Location { get; set; }
     
         public virtual ObjectResult<spr_src_Land_Map_Select_Result> spr_src_Land_Map_Select(Nullable<int> action, string whereClause, string userID)
         {
@@ -185,6 +186,142 @@ namespace BaranDataAccess
                 new ObjectParameter("UserID", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_WareHouse_Map_Select_Result>("spr_src_WareHouse_Map_Select", actionParameter, whereClauseParameter, userIDParameter);
+        }
+    
+        public virtual ObjectResult<spr_src_PartLocation_Rpt_Result> spr_src_PartLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID)
+        {
+            var collectionIDParameter = collectionID.HasValue ?
+                new ObjectParameter("CollectionID", collectionID) :
+                new ObjectParameter("CollectionID", typeof(int));
+    
+            var subcollectionIDParameter = subcollectionID.HasValue ?
+                new ObjectParameter("SubcollectionID", subcollectionID) :
+                new ObjectParameter("SubcollectionID", typeof(int));
+    
+            var partIDParameter = partID.HasValue ?
+                new ObjectParameter("PartID", partID) :
+                new ObjectParameter("PartID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_PartLocation_Rpt_Result>("spr_src_PartLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter);
+        }
+    
+        public virtual ObjectResult<spr_src_BuildingsLocation_Rpt_Result> spr_src_BuildingsLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID)
+        {
+            var collectionIDParameter = collectionID.HasValue ?
+                new ObjectParameter("CollectionID", collectionID) :
+                new ObjectParameter("CollectionID", typeof(int));
+    
+            var subcollectionIDParameter = subcollectionID.HasValue ?
+                new ObjectParameter("SubcollectionID", subcollectionID) :
+                new ObjectParameter("SubcollectionID", typeof(int));
+    
+            var partIDParameter = partID.HasValue ?
+                new ObjectParameter("PartID", partID) :
+                new ObjectParameter("PartID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_BuildingsLocation_Rpt_Result>("spr_src_BuildingsLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter);
+        }
+    
+        public virtual ObjectResult<spr_src_FieldLocation_Rpt_Result> spr_src_FieldLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID)
+        {
+            var collectionIDParameter = collectionID.HasValue ?
+                new ObjectParameter("CollectionID", collectionID) :
+                new ObjectParameter("CollectionID", typeof(int));
+    
+            var subcollectionIDParameter = subcollectionID.HasValue ?
+                new ObjectParameter("SubcollectionID", subcollectionID) :
+                new ObjectParameter("SubcollectionID", typeof(int));
+    
+            var partIDParameter = partID.HasValue ?
+                new ObjectParameter("PartID", partID) :
+                new ObjectParameter("PartID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_FieldLocation_Rpt_Result>("spr_src_FieldLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter);
+        }
+    
+        public virtual ObjectResult<spr_src_LandLocation_Rpt_Result> spr_src_LandLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID)
+        {
+            var collectionIDParameter = collectionID.HasValue ?
+                new ObjectParameter("CollectionID", collectionID) :
+                new ObjectParameter("CollectionID", typeof(int));
+    
+            var subcollectionIDParameter = subcollectionID.HasValue ?
+                new ObjectParameter("SubcollectionID", subcollectionID) :
+                new ObjectParameter("SubcollectionID", typeof(int));
+    
+            var partIDParameter = partID.HasValue ?
+                new ObjectParameter("PartID", partID) :
+                new ObjectParameter("PartID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_LandLocation_Rpt_Result>("spr_src_LandLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter);
+        }
+    
+        public virtual ObjectResult<spr_src_WarehouseLocation_Rpt_Result> spr_src_WarehouseLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID)
+        {
+            var collectionIDParameter = collectionID.HasValue ?
+                new ObjectParameter("CollectionID", collectionID) :
+                new ObjectParameter("CollectionID", typeof(int));
+    
+            var subcollectionIDParameter = subcollectionID.HasValue ?
+                new ObjectParameter("SubcollectionID", subcollectionID) :
+                new ObjectParameter("SubcollectionID", typeof(int));
+    
+            var partIDParameter = partID.HasValue ?
+                new ObjectParameter("PartID", partID) :
+                new ObjectParameter("PartID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_WarehouseLocation_Rpt_Result>("spr_src_WarehouseLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter);
+        }
+    
+        public virtual ObjectResult<spr_src_WaterLocation_Rpt_Result> spr_src_WaterLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID)
+        {
+            var collectionIDParameter = collectionID.HasValue ?
+                new ObjectParameter("CollectionID", collectionID) :
+                new ObjectParameter("CollectionID", typeof(int));
+    
+            var subcollectionIDParameter = subcollectionID.HasValue ?
+                new ObjectParameter("SubcollectionID", subcollectionID) :
+                new ObjectParameter("SubcollectionID", typeof(int));
+    
+            var partIDParameter = partID.HasValue ?
+                new ObjectParameter("PartID", partID) :
+                new ObjectParameter("PartID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_WaterLocation_Rpt_Result>("spr_src_WaterLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter);
+        }
+    
+        public virtual ObjectResult<spr_src_WaterStorageLocation_Rpt_Result> spr_src_WaterStorageLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID)
+        {
+            var collectionIDParameter = collectionID.HasValue ?
+                new ObjectParameter("CollectionID", collectionID) :
+                new ObjectParameter("CollectionID", typeof(int));
+    
+            var subcollectionIDParameter = subcollectionID.HasValue ?
+                new ObjectParameter("SubcollectionID", subcollectionID) :
+                new ObjectParameter("SubcollectionID", typeof(int));
+    
+            var partIDParameter = partID.HasValue ?
+                new ObjectParameter("PartID", partID) :
+                new ObjectParameter("PartID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_WaterStorageLocation_Rpt_Result>("spr_src_WaterStorageLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter);
+        }
+    
+        public virtual ObjectResult<spr_src_WaterTransmissionLineLocation_Rpt_Result> spr_src_WaterTransmissionLineLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID)
+        {
+            var collectionIDParameter = collectionID.HasValue ?
+                new ObjectParameter("CollectionID", collectionID) :
+                new ObjectParameter("CollectionID", typeof(int));
+    
+            var subcollectionIDParameter = subcollectionID.HasValue ?
+                new ObjectParameter("SubcollectionID", subcollectionID) :
+                new ObjectParameter("SubcollectionID", typeof(int));
+    
+            var partIDParameter = partID.HasValue ?
+                new ObjectParameter("PartID", partID) :
+                new ObjectParameter("PartID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_WaterTransmissionLineLocation_Rpt_Result>("spr_src_WaterTransmissionLineLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter);
         }
     }
 }

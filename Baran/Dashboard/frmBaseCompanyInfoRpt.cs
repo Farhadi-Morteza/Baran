@@ -10,6 +10,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using BaranDataAccess;
 
 namespace Baran.Dashboard
 {
@@ -18,32 +19,23 @@ namespace Baran.Dashboard
         public frmBaseCompanyInfoRpt()
         {
             InitializeComponent();
-        }
 
-        BaranDataAccess.UnitOfWork dbContext;
+            MainMap.Overlays.Add(routes);
+            MainMap.Overlays.Add(polygons);
+            MainMap.Overlays.Add(markers);
+
+        }
 
         internal readonly GMapOverlay routes = new GMapOverlay("routes");
         internal readonly GMapOverlay polygons = new GMapOverlay("polygons");
         internal readonly GMapOverlay markers = new GMapOverlay("markers");
-
-        Color partColor = Color.Red;
-        Color LandColor = Color.Green;
-        Color FieldColor = Color.GreenYellow;
-        Color WarehouseColor = Color.BurlyWood;
-        Color BuildingColor = Color.Brown;
-        Color WaterColor = Color.SkyBlue;
-        Color WaterstorageColor = Color.Blue;
-        Color WaterTransmissionLineColor = Color.Black;
-
-        System.Drawing.Drawing2D.DashStyle DashStyleLocation = System.Drawing.Drawing2D.DashStyle.Solid;
-        int WidthLocation = 3;
 
         BaranDataAccess.Company.dstCompany.spr_src_Subcollection_SelectDataTable tblSubCollection =
             new BaranDataAccess.Company.dstCompany.spr_src_Subcollection_SelectDataTable();
         BaranDataAccess.Company.dstCompany.spr_src_Part_SelectDataTable tblPart =
             new BaranDataAccess.Company.dstCompany.spr_src_Part_SelectDataTable();
 
-        string strWhereClause;
+
 
         private void grpControls_Click(object sender, EventArgs e)
         {
@@ -54,14 +46,14 @@ namespace Baran.Dashboard
         {
             base.OnformLoad();
 
-            lblPartColor.Appearance.BackColor = partColor;
-            lblLandColor.Appearance.BackColor = LandColor;
-            lblFieldColor.Appearance.BackColor = FieldColor;
-            lblWarehouseColor.Appearance.BackColor = WarehouseColor;
-            lblBuildingColor.Appearance.BackColor = BuildingColor;
-            lblWaterColor.Appearance.BackColor = WaterColor;
-            lblWaterstorageColor.Appearance.BackColor = WaterstorageColor;
-            lblWaterTrasmissionLineColor.Appearance.BackColor = WaterTransmissionLineColor;
+            lblPartColor.Appearance.BackColor =  PublicVariables.partColor;
+            lblLandColor.Appearance.BackColor = PublicVariables.LandColor;
+            lblFieldColor.Appearance.BackColor = PublicVariables.FieldColor;
+            lblWarehouseColor.Appearance.BackColor = PublicVariables.WarehouseColor;
+            lblBuildingColor.Appearance.BackColor = PublicVariables.BuildingColor;
+            lblWaterColor.Appearance.BackColor = PublicVariables.WaterColor;
+            lblWaterstorageColor.Appearance.BackColor = PublicVariables.WaterstorageColor;
+            lblWaterTrasmissionLineColor.Appearance.BackColor = PublicVariables.WaterTransmissionLineColor;
 
             ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcCollection, cmbCollection, "");
             ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcSubcollection, cmbSubcollection, "");
@@ -80,200 +72,343 @@ namespace Baran.Dashboard
             ofrm.EnableMenuStripItems(cnsMenustripItems.Confirm, cnsMenustripItems.Cancel, cnsMenustripItems.Clear);
         }
 
+        public override void OnClear()
+        {
+            base.OnClear();
+            Baran.Classes.Common.ControlsSetting.ClearControls(grpControls.Controls);
+            this.ClearMap();
+        }
+
         public override void OnConfirm()
         {
             base.OnConfirm();
 
             this.ClearMap();
 
-            dbContext = new BaranDataAccess.UnitOfWork();
+            int? collectionId = null, subcollectionId = null, partId = null;
+            collectionId = (int?)cmbCollection.Value;
+            subcollectionId = (int?)cmbSubcollection.Value;
+            partId = (int?)cmbPart.Value;
 
-            List<PointLatLng> points = new List<PointLatLng>();
+            // Part =====================================================================================================
 
-            if (chkBuilding.Checked)
+            using (var dbContext = new AMSEntities())
             {
-                try
+                if (chkPart.Checked)
                 {
-                    strWhereClause = string.Empty;
-                    if (cmbCollection.Value != null)
-                        strWhereClause += " AND dbo.tbl_src_Collection.CollectionID = " + cmbCollection.Value;
-                    if (cmbSubcollection.Value != null)
-                        strWhereClause += " AND dbo.tbl_src_Subcollection.SubCollectionID = " + cmbSubcollection.Value;
-                    if (cmbPart.Value != null)
-                        strWhereClause += " AND dbo.tbl_src_Part.PartID = " + cmbPart.Value;
+                    var parts = dbContext.spr_src_PartLocation_Rpt(collectionId, subcollectionId, partId);
 
-                    using (BaranDataAccess.AMSEntities db = new BaranDataAccess.AMSEntities())
+                    foreach (var part in parts)
                     {
-
-
-                    var buildings = db.spr_src_Buildings_Map_Select(2, strWhereClause, CurrentUser.Instance.UserID.ToString());
-                        GMapOverlay buroutes = new GMapOverlay("routes");
-                        GMapOverlay bupolygons = new GMapOverlay("polygons");
-                        GMapOverlay bumarkers = new GMapOverlay("markers");
-                        foreach (var building in buildings)
+                        if (part.Location != null)
                         {
-                            string strTooltip =
-                                building.CollectionNmae
-                                + "\n" + building.SubCollectionName
-                                + "\n" + building.PartName
-                                + "\n" + building.BuildingName
-                                + "\n" + building.BuildingCategoryName
-                                + "\n" + building.BuildingArea;
+                            List<PointLatLng> pointsLand = new List<PointLatLng>();
+                            pointsLand = GeoUtils.ConvertStringCoordinatesToGMapPolygony(part.Location.ProviderValue.ToString());
 
-                            if (building.Location != null)
+                            GMapRoute rtPart = new GMapRoute(pointsLand, "hahahahaha");
                             {
-                                points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(building.Location.ProviderValue.ToString());
-
-                                GMapRoute rtBuildings = new GMapRoute(points, "hahahahaha");
-                                {
-                                    rtBuildings.Stroke.Color = BuildingColor;
-                                    rtBuildings.Stroke.Width = WidthLocation;
-                                    rtBuildings.Stroke.DashStyle = DashStyleLocation;
-                                }
-
-                                GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.red_dot);
-                                mark.ToolTipText = strTooltip;
-                                mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-                                mark.ToolTip.Fill = Brushes.Black;
-                                mark.ToolTip.Foreground = Brushes.White;
-                                mark.ToolTip.Stroke = Pens.Black;
-                                mark.ToolTip.TextPadding = new Size(20, 20);
-                                mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
-
-                    
-
-                                bumarkers.Markers.Add(mark);
-                                buroutes.Routes.Add(rtBuildings);
-
-
+                                rtPart.Stroke = new Pen(Color.FromArgb(255, PublicVariables.partColor));
+                                rtPart.Stroke.Width = PublicVariables.StrokeWidth;
+                                rtPart.Stroke.DashStyle = PublicVariables.StrokeDashStyle;
                             }
-                        }
-                        GMapOverlay Buildingsroutes = new GMapOverlay("Buildingsroutes");
-                        MainMap.Overlays.Add(Buildingsroutes);
 
-                    }
+                            string strTooltip = $"کشت و صنعت: {part.CollectionName} " +
+                                $"\n واحد: {part.SubCollectionName} " +
+                                $"\n واحد فرعی: {part.PartName}" +
+                                $"\n استان: {part.ProvinceName} \n شهرستان: {part.TownshipName}";
 
-                }
-                catch
-                { }
-            }
-            if (chkLand.Checked)
-            {
-                try
-                {
-                    strWhereClause = string.Empty;
-                    if (cmbCollection.Value != null)
-                        strWhereClause += " AND dbo.tbl_src_Collection.CollectionID = " + cmbCollection.Value;
-                    if (cmbSubcollection.Value != null)
-                        strWhereClause += " AND dbo.tbl_src_Subcollection.SubCollectionID = " + cmbSubcollection.Value;
-                    if (cmbPart.Value != null)
-                        strWhereClause += " AND dbo.tbl_src_Part.PartID = " + cmbPart.Value;
+                            GMapMarker markLand = new GMarkerGoogle(pointsLand[pointsLand.Count / 2], GMarkerGoogleType.red);
+                            markLand.ToolTipText = strTooltip;
+                            markLand.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+                            markLand.ToolTip.Fill = Brushes.Black;
+                            markLand.ToolTip.Foreground = Brushes.White;
+                            markLand.ToolTip.Stroke = Pens.Black;
+                            markLand.ToolTip.TextPadding = new Size(20, 20);
+                            markLand.ToolTipMode = MarkerTooltipMode.OnMouseOver;
 
-                    //====================================================================================================
-                    using (BaranDataAccess.AMSEntities db = new BaranDataAccess.AMSEntities())
-                    {
-                        var Lands = db.spr_src_Land_Map_Select(2, strWhereClause, CurrentUser.Instance.UserID.ToString());
-
-                        foreach (var land in Lands)
-                        {
-                            string strTooltip =
-                                land.PartName
-                                + "\n" +
-                                "اراضی :" + land.FieldName
-                                + "\n" +
-                                "مساحت کل:" + land.TotalArea
-                                + "\n" +
-                                "مساحت قابل استفاده::" + land.UsableArea
-                                + "\n" +
-                                "شماره سند:" + land.DocNumber;
-
-                            if (land.Location != null)
-                            {
-                                points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(land.Location.ProviderValue.ToString());
-
-                                GMapRoute rt = new GMapRoute(points, "hahahahaha");
-                                {
-                                    rt.Stroke.Color = LandColor;
-                                    rt.Stroke.Width = WidthLocation;
-                                    rt.Stroke.DashStyle = DashStyleLocation;
-                                }
-
-                                GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.yellow);
-                                mark.ToolTipText = strTooltip;
-                                mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-                                mark.ToolTip.Fill = Brushes.Black;
-                                mark.ToolTip.Foreground = Brushes.White;
-                                mark.ToolTip.Stroke = Pens.Black;
-                                mark.ToolTip.TextPadding = new Size(20, 20);
-                                mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
-
-                                markers.Markers.Add(mark);
-                                routes.Routes.Add(rt);
-
-                            }
+                            markers.Markers.Add(markLand);
+                            routes.Routes.Add(rtPart);
                         }
                     }
                 }
-                catch { }
 
-            }
+                // Land =====================================================================================================
+                if (chkLand.Checked)
+                {
+                    var results = dbContext.spr_src_LandLocation_Rpt(collectionId, subcollectionId, partId);
+
+                    foreach (var result in results)
+                    {
+                        if (result.Location != null)
+                        {
+                            List<PointLatLng> points = new List<PointLatLng>();
+                            points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(result.Location.ProviderValue.ToString());
+
+                            GMapRoute route = new GMapRoute(points, "hahahahaha");
+                            {
+                                route.Stroke = new Pen(Color.FromArgb(255, PublicVariables.LandColor));
+                                route.Stroke.Width = PublicVariables.StrokeWidth;
+                                route.Stroke.DashStyle = PublicVariables.StrokeDashStyle;
+                            }
+
+                            string strTooltip = $"کشت و صنعت: {result.CollectionName} " +
+                                $"\n واحد: {result.SubcollectionName} " +
+                                $"\n واحد فرعی: {result.PartName}" +
+                                $"\n مساحت کل: {result.TotalArea} \n مساحت قابل استفاده: {result.UsableArea} \n استان: {result.ProvinceName} \n شهرستان: {result.TownshipName} ";
+
+                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.green);
+                            mark.ToolTipText = strTooltip;
+                            mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+                            mark.ToolTip.Fill = Brushes.Black;
+                            mark.ToolTip.Foreground = Brushes.White;
+                            mark.ToolTip.Stroke = Pens.Black;
+                            mark.ToolTip.TextPadding = new Size(20, 20);
+                            mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+
+                            markers.Markers.Add(mark);
+                            routes.Routes.Add(route);
+                        }
+                    }
+                }
+            // Field ====================================================================================================
             if (chkField.Checked)
             {
-                string strWhere = "";
-                //strWhere += $" AND (dbo.tbl_src_Field.Fk_LandID = {land.LandID} )";
-                //if (cmbFieldUseType.Value != null)
-                //    strWhere += $" AND (dbo.tbl_src_FieldUseType.FieldUseTypeID = {cmbFieldUseType.Value})";
-                //if (cmbSoilTexture.Value != null)
-                //    strWhere += $"  AND (dbo.tbl_cmn_SoilTexture.SoilTextureID = {cmbSoilTexture.Value})";
-                using (BaranDataAccess.AMSEntities db = new BaranDataAccess.AMSEntities())
+                var fields = dbContext.spr_src_FieldLocation_Rpt(collectionId, subcollectionId, partId);
+
+                foreach (var result in fields)
                 {
-                    var fields = db.spr_src_Field_Map_Select(2, strWhere, CurrentUser.Instance.UserID.ToString());
-
-                    foreach (var field in fields)
+                    if (result.Location != null)
                     {
-                        string strFieldTooltip =
-                            "نام قطعه:" + field.FieldName
-                            + "\n" +
-                            "مساحت کل:" + field.TotalArea
-                            + "\n" +
-                            "مساحت قابل استفاده::" + field.UsableArea
-                            + "\n" +
-                            "بافت خاک:" + field.SoilTexture
-                            + "\n" +
-                            "نوع کاربری:" + field.FieldUseType;
+                        List<PointLatLng> points = new List<PointLatLng>();
+                        points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(result.Location.ProviderValue.ToString());
 
-
-                        List<PointLatLng> Fieldpoints = new List<PointLatLng>();
-
-                        if (field.LocationPolygon != null)
+                        GMapRoute route = new GMapRoute(points, "hahahahaha");
                         {
-                            Fieldpoints = GeoUtils.ConvertStringCoordinatesToGMapPolygony(field.LocationPolygon.ProviderValue.ToString());
-
-                            GMapRoute rtField = new GMapRoute(Fieldpoints, "hahahahaha");
-                            {
-                                rtField.Stroke.Color = FieldColor;
-                                rtField.Stroke.Width = WidthLocation;
-                                rtField.Stroke.DashStyle = DashStyleLocation;
-                            }
-
-                            GMapMarker markField = new GMarkerGoogle(Fieldpoints[Fieldpoints.Count / 2], GMarkerGoogleType.red_dot);
-                            markField.ToolTipText = strFieldTooltip;
-                            markField.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-                            markField.ToolTip.Fill = Brushes.Black;
-                            markField.ToolTip.Foreground = Brushes.White;
-                            markField.ToolTip.Stroke = Pens.Black;
-                            markField.ToolTip.TextPadding = new Size(20, 20);
-                            markField.ToolTipMode = MarkerTooltipMode.OnMouseOver;
-
-                            markers.Markers.Add(markField);
-                            routes.Routes.Add(rtField);
+                            route.Stroke = new Pen(Color.FromArgb(255, PublicVariables.FieldColor));
+                            route.Stroke.Width = PublicVariables.StrokeWidth;
+                            route.Stroke.DashStyle = PublicVariables.StrokeDashStyle;
                         }
+
+                        string strTooltip = $"کشت و صنعت: {result.CollectionName} " +
+                            $"\n واحد: {result.SubcollectionName} " +
+                            $"\n واحد فرعی: {result.PartName}" +
+                            $"\n نام : {result.LandName} " +
+                            $"\n  کد: {result.Code} " +
+                            $"\n مساحت کل: {result.TotalArea} " +
+                            $"\n مساحت قابل استفاده: {result.UsableArea} " +
+                            $"\n بافت خاک : {result.SoilTexture} " +
+                            $"\n نوع کاربری: {result.FieldUseType} ";
+
+                        GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.green);
+                        mark.ToolTipText = strTooltip;
+                        mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+                        mark.ToolTip.Fill = Brushes.Black;
+                        mark.ToolTip.Foreground = Brushes.White;
+                        mark.ToolTip.Stroke = Pens.Black;
+                        mark.ToolTip.TextPadding = new Size(20, 20);
+                        mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+
+                        markers.Markers.Add(mark);
+                        routes.Routes.Add(route);
                     }
                 }
             }
+                // Waarehhouse ==============================================================================================
+                if (chkWarehouse.Checked)
+                {
+                    var warehouses = dbContext.spr_src_WarehouseLocation_Rpt(collectionId, subcollectionId, partId);
 
-            MainMap.Overlays.Add(routes);
-            MainMap.Overlays.Add(markers);
+                    foreach (var result in warehouses)
+                    {
+                        if (result.Location != null)
+                        {
+                            List<PointLatLng> points = new List<PointLatLng>();
+                            points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(result.Location.ProviderValue.ToString());
+
+                            GMapRoute route = new GMapRoute(points, "hahahahaha");
+                            {
+                                route.Stroke = new Pen(Color.FromArgb(255, PublicVariables.WarehouseColor));
+                                route.Stroke.Width = PublicVariables.StrokeWidth;
+                                route.Stroke.DashStyle = PublicVariables.StrokeDashStyle;
+                            }
+
+                            string strTooltip = $"کشت و صنعت: {result.CollectionName} " +
+                                $"\n واحد: {result.SubcollectionName} " +
+                                $"\n واحد فرعی: {result.PartName}" +
+                                $"\n نام : {result.WarehouseName} " +
+                                $"\n  نوع انبار: {result.WarehouseType} " +
+                                $"\n نوع کاربری : {result.WarehouseUseType} " +
+                                $"\n مساحت: {result.Area} ";
+
+                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.brown_small);
+                            mark.ToolTipText = strTooltip;
+                            mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+                            mark.ToolTip.Fill = Brushes.Black;
+                            mark.ToolTip.Foreground = Brushes.White;
+                            mark.ToolTip.Stroke = Pens.Black;
+                            mark.ToolTip.TextPadding = new Size(20, 20);
+                            mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+
+                            markers.Markers.Add(mark);
+                            routes.Routes.Add(route);
+                        }
+                    }
+                }
+                // Building =================================================================================================
+                if (chkBuilding.Checked)
+                {
+                    var Buildings = dbContext.spr_src_BuildingsLocation_Rpt(collectionId, subcollectionId, partId);
+
+                    foreach (var result in Buildings)
+                    {
+                        if (result.Location != null)
+                        {
+                            List<PointLatLng> points = new List<PointLatLng>();
+                            points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(result.Location.ProviderValue.ToString());
+
+                            GMapRoute route = new GMapRoute(points, "hahahahaha");
+                            {
+                                route.Stroke = new Pen(Color.FromArgb(255, PublicVariables.BuildingColor));
+                                route.Stroke.Width = PublicVariables.StrokeWidth;
+                                route.Stroke.DashStyle = PublicVariables.StrokeDashStyle;
+                            }
+
+                            string strTooltip = $"کشت و صنعت: {result.CollectionName} " +
+                                $"\n واحد: {result.SubcollectionName} " +
+                                $"\n واحد فرعی: {result.PartName}" +
+                                $"\n نام : {result.BuildingName} " +
+                                $"\n نوع : {result.BuildingCategoryName} " +
+                                $"\n مساحت: {result.Area} ";
+
+                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.yellow);
+                            mark.ToolTipText = strTooltip;
+                            mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+                            mark.ToolTip.Fill = Brushes.Black;
+                            mark.ToolTip.Foreground = Brushes.White;
+                            mark.ToolTip.Stroke = Pens.Black;
+                            mark.ToolTip.TextPadding = new Size(20, 20);
+                            mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+
+                            markers.Markers.Add(mark);
+                            routes.Routes.Add(route);
+                        }
+                    }
+                }
+                // Water ====================================================================================================
+                if (chkWater.Checked)
+                {
+                    var Waters = dbContext.spr_src_WaterLocation_Rpt(collectionId, subcollectionId, partId);
+
+                    foreach (var result in Waters)
+                    {
+                        if (result.Location != null)
+                        {
+                            List<PointLatLng> points = new List<PointLatLng>();
+                            points = GeoUtils.ConvertStringPointToGMapPoint(result.Location.ProviderValue.ToString());
+
+                            string strTooltip = $"کشت و صنعت: {result.CollectionName} " +
+                                $"\n واحد: {result.SubcollectionName} " +
+                                $"\n واحد فرعی: {result.PartName}" +
+                                $"\n نام : {result.WaterName} " +
+                                $"\n خروجی آب لیتر بر ثانیه : {result.WaterOutput} " +
+                                $"\n منبع تامین : {result.WaterSourceTypeName} ";
+
+                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.blue_dot);
+                            mark.ToolTipText = strTooltip;
+                            mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+                            mark.ToolTip.Fill = Brushes.Black;
+                            mark.ToolTip.Foreground = Brushes.White;
+                            mark.ToolTip.Stroke = Pens.Black;
+                            mark.ToolTip.TextPadding = new Size(20, 20);
+                            mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+
+                            markers.Markers.Add(mark);
+                        }
+                    }
+                }
+                // Water Storage ============================================================================================
+                if (chkWaterStorage.Checked)
+                {
+                    var waterstorages = dbContext.spr_src_WaterStorageLocation_Rpt(collectionId, subcollectionId, partId);
+
+                    foreach (var result in waterstorages)
+                    {
+                        if (result.Location != null)
+                        {
+                            List<PointLatLng> points = new List<PointLatLng>();
+                            points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(result.Location.ProviderValue.ToString());
+
+                            GMapRoute route = new GMapRoute(points, "hahahahaha");
+                            {
+                                route.Stroke = new Pen(Color.FromArgb(255, PublicVariables.WaterstorageColor));
+                                route.Stroke.Width = PublicVariables.StrokeWidth;
+                                route.Stroke.DashStyle = PublicVariables.StrokeDashStyle;
+                            }
+
+                            string strTooltip = $"کشت و صنعت: {result.CollectionName} " +
+                                $"\n واحد: {result.SubcollectionName} " +
+                                $"\n واحد فرعی: {result.PartName}" +
+                                $"\n نام : {result.WaterStorageName} " +
+                                $"\n خروجی لیت بر ثانیه : {result.Output} " +
+                                $"\n مساحت: {result.Area} ";
+
+                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.blue);
+                            mark.ToolTipText = strTooltip;
+                            mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+                            mark.ToolTip.Fill = Brushes.Black;
+                            mark.ToolTip.Foreground = Brushes.White;
+                            mark.ToolTip.Stroke = Pens.Black;
+                            mark.ToolTip.TextPadding = new Size(20, 20);
+                            mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+
+                            markers.Markers.Add(mark);
+                            routes.Routes.Add(route);
+                        }
+                    }
+                }
+                // Water Transmission Line ===================================================================================
+                if (chkWaterTransmissionLine.Checked)
+                {
+                    var waterTransmissionLines = dbContext.spr_src_WaterTransmissionLineLocation_Rpt(collectionId, subcollectionId, partId);
+
+                    foreach (var result in waterTransmissionLines)
+                    {
+                        if (result.Location != null)
+                        {
+                            List<PointLatLng> points = new List<PointLatLng>();
+                            points = GeoUtils.ConvertStringCoordinatesToGMapRoute(result.Location.ProviderValue.ToString());
+
+                            GMapRoute route = new GMapRoute(points, "hahahahaha");
+                            {
+                                route.Stroke = new Pen(Color.FromArgb(255, PublicVariables.WaterTransmissionLineColor));
+                                route.Stroke.Width = PublicVariables.StrokeWidth;
+                                route.Stroke.DashStyle = PublicVariables.StrokeDashStyle;
+                            }
+
+                            string strTooltip = $"کشت و صنعت: {result.CollectionName} " +
+                                $"\n واحد: {result.SubcollectionName} " +
+                                $"\n واحد فرعی: {result.PartName}" +
+                                $"\n نام : {result.WaterTransmissionLineName} " +
+                                $"\n نوع : {result.WaterTransmissionTypeName} " +
+                                $"\n طول-هکتار : {result.Length} ";
+
+                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.black_small);
+                            mark.ToolTipText = strTooltip;
+                            mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+                            mark.ToolTip.Fill = Brushes.Black;
+                            mark.ToolTip.Foreground = Brushes.White;
+                            mark.ToolTip.Stroke = Pens.Black;
+                            mark.ToolTip.TextPadding = new Size(20, 20);
+                            mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+
+                            markers.Markers.Add(mark);
+                            routes.Routes.Add(route);
+                        }
+                    }
+
+                }
+
+            }
             MainMap.ZoomAndCenterRoutes("routes");
         }
 
@@ -281,14 +416,14 @@ namespace Baran.Dashboard
         {
             try
             {
-                //polygons.Polygons.Clear();
-                //routes.Routes.Clear();
-                //markers.Markers.Clear();
+                polygons.Polygons.Clear();
+                routes.Routes.Clear();
+                markers.Markers.Clear();
 
-                polygons.Clear();
-                routes.Clear();
-                markers.Clear();
-                MainMap.Overlays.Clear();
+                //polygons.Clear();
+                //routes.Clear();
+                //markers.Clear();
+                //MainMap.Overlays.Clear();
             }
             catch
             {
@@ -300,9 +435,13 @@ namespace Baran.Dashboard
         {
             if (cmbCollection.Value == null)
                 return;
-            int id = Convert.ToInt32(cmbCollection.Value.ToString());
-            var tbl = tblSubCollection.Where(s => s.Fk_CollectionID == id).ToArray();
-            cmbSubcollection.DataSource = tbl;
+            try
+            {
+                int id = Convert.ToInt32(cmbCollection.Value.ToString());
+                var tbl = tblSubCollection.Where(s => s.Fk_CollectionID == id).ToArray();
+                cmbSubcollection.DataSource = tbl;
+            }
+            catch { }
         }
 
         private void cmbSubcollection_ValueChanged(object sender, EventArgs e)
