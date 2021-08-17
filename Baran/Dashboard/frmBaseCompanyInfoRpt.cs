@@ -313,7 +313,8 @@ namespace Baran.Dashboard
                                 $"\n خروجی آب لیتر بر ثانیه : {result.WaterOutput} " +
                                 $"\n منبع تامین : {result.WaterSourceTypeName} ";
 
-                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.blue_dot);
+                            //GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.blue_dot);
+                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], new Bitmap(System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.Tree))));
                             mark.ToolTipText = strTooltip;
                             mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
                             mark.ToolTip.Fill = Brushes.Black;

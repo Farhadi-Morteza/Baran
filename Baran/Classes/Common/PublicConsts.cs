@@ -327,6 +327,7 @@ namespace Baran.Classes.Common
         public static readonly string Field = "Field.png";
         public static readonly string Detail = "Detail.png";
         public static readonly string Tree = "Tree.png";
+        public static readonly string WaterWell = "WaterWell.png";
     }
     #endregion
 
