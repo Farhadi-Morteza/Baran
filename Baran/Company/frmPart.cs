@@ -167,6 +167,8 @@ namespace Baran.Company
                 return;
             }
 
+
+
             if (!this.ControlsValidation())
             {
                 OnMessage(BaranResources.FeildIsEmpty, PublicEnum.EnmMessageCategory.Warning);
@@ -180,6 +182,9 @@ namespace Baran.Company
             {
                 waite.Show();
                 this.SetVariables();
+
+
+
                 int RowAffected = Convert.ToInt32(adp.Update(
                     PartID, strName, strEconomicCode, strRegistrationNumber, strNationalID, strPostalCode, intProvinceID, intTownshipID,
                     strCity, strAddress, strWebSite, strEmail, strTelephone1, strMobile1, strTelephone2, strMobile2, strFax, strDescription, intCompanyCategory,
@@ -242,14 +247,14 @@ namespace Baran.Company
             grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Merge(null);
         }
 
-        public override void OnDoc(int? companyID, int? collectionID, int? subcollectionID, int? partID, int? fieldID, int? warehouseID, int? buildingID, int? machineryID, int? waterID, int? waterStorageID, int? waterTransmissionLineID)
+        public override void OnDoc(int? companyID, int? collectionID, int? subcollectionID, int? partID, int? landID, int? fieldID, int? warehouseID, int? buildingID, int? machineryID, int? waterID, int? waterStorageID, int? waterTransmissionLineID)
         {
             if (PartID <= 0)
             {
                 OnMessage(BaranResources.SavedNotLastTime, PublicEnum.EnmMessageCategory.Warning);
                 return;
             }
-            base.OnDoc(null, null, null, this.PartID, null, null, null, null, null, null, null);
+            base.OnDoc(null, null, null, this.PartID, null,null, null, null, null, null, null, null);
             this.FillGridDoc();
         }
 
@@ -355,7 +360,7 @@ namespace Baran.Company
 
                 try
                 {
-                    adp.FillDocumentByFkIDTable(grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select, null, null, null, this.PartID, null, null, null, null, null, null, null);
+                    adp.FillDocumentByFkIDTable(grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select, null, null, null, this.PartID, null, null, null, null, null, null, null, null);
 
                     if (grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Count <= cnsgrdDoc.MaxRowCount)
                     {

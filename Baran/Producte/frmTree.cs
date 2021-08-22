@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Baran.Classes.Common;
+using BaranDataAccess;
 using GMap.NET;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
@@ -35,6 +36,8 @@ namespace Baran.Producte
 
         #region Variables
 
+        UnitOfWork db;
+
         BaranDataAccess.Product.dstProductTableAdapters.spr_src_Tree_SelectTableAdapter adp =
             new BaranDataAccess.Product.dstProductTableAdapters.spr_src_Tree_SelectTableAdapter();
 
@@ -51,9 +54,9 @@ namespace Baran.Producte
             strTransplantType
             ;
 
-        double
-            dclLatitude,
-            dclLongitude
+        double?
+            dclLatitude ,
+            dclLongitude 
             ;
 
         int
@@ -70,6 +73,8 @@ namespace Baran.Producte
             datDatePlanting,
             datDateScion
             ;
+
+        System.Data.Spatial.DbGeometry geoLocation ;
 
         //-------------------------------------------------------------------------------
         bool isMouseDown = false;
@@ -134,17 +139,48 @@ namespace Baran.Producte
             {
                 this.SetVariables();
 
-                int rowAffected = Convert.ToInt32(adp.Insert(intFieldID, intTreeType, strBaseCultivar, strBaseType,strScionCultivar
-                                                            , datDatePlanting, strSubInformation, strCantaminationHistory, strTreeYeild, intRow
-                                                            , intColumn, strMainCultivar, strScionLocation, strBaseBuyLocation, datDateScion
-                                                            , strTransplantType,CurrentUser.Instance.UserID, dclLatitude, dclLongitude));
-
-                if (rowAffected > 0)
+                db = new UnitOfWork();
+                tbl_src_Tree tree = new tbl_src_Tree()
                 {
+                    Fk_FieldID = intFieldID,
+                    Fk_TreeType = intTreeType,
+                    BaseCultivar = strBaseCultivar,
+                    BaseType = strBaseType,
+                    ScionCultivar = strScionCultivar,
+                    DatePlanting = datDatePlanting,
+                    SubInformation = strSubInformation,
+                    CantaminationHistory = strCantaminationHistory,
+                    TreeYeild = strTreeYeild,
+                    Row = intRow,
+                    Column = intColumn,
+                    MainCultivar = strMainCultivar,
+                    ScionLocation = strScionLocation,
+                    BaseBuyLocation = strBaseBuyLocation,
+                    DateScion = datDateScion,
+                    TransplantType = strTransplantType,
+                    CreateUserID = CurrentUser.Instance.UserID,
+                    IsActive = true,
+                    CreateDate = System.DateTime.Now,
+                    Latitude = dclLatitude,
+                    Longitude = dclLongitude,
+                    Locatioon = geoLocation
+                };
+
+                db.TreeRepository.Insert(tree);
+                db.Save();
+                TreeID = tree.TreeID;
+
+                //int rowAffected = Convert.ToInt32(adp.Insert(intFieldID, intTreeType, strBaseCultivar, strBaseType,strScionCultivar
+                //                                            , datDatePlanting, strSubInformation, strCantaminationHistory, strTreeYeild, intRow
+                //                                            , intColumn, strMainCultivar, strScionLocation, strBaseBuyLocation, datDateScion
+                //                                            , strTransplantType,CurrentUser.Instance.UserID, dclLatitude, dclLongitude));
+
+                //if (rowAffected > 0)
+                //{
                     OnMessage(BaranResources.SaveSuccessful, PublicEnum.EnmMessageCategory.Success);
-                }
-                else
-                    OnMessage(BaranResources.SaveFail, PublicEnum.EnmMessageCategory.Warning);
+                //}
+                //else
+                //    OnMessage(BaranResources.SaveFail, PublicEnum.EnmMessageCategory.Warning);
             }
             catch
             {
@@ -172,17 +208,47 @@ namespace Baran.Producte
             try
             {
                 this.SetVariables();
-                int RowAffected = Convert.ToInt32(adp.Update(TreeID, intFieldID, intTreeType, strBaseCultivar, strBaseType,
-                                                            strScionCultivar, datDatePlanting, strSubInformation, strCantaminationHistory,
-                                                            strTreeYeild, intRow, intColumn, strMainCultivar, strScionLocation, 
-                                                            strBaseBuyLocation, datDateScion, strTransplantType, CurrentUser.Instance.UserID, dclLatitude, dclLongitude));
+                db = new UnitOfWork();
+                tbl_src_Tree tree = new tbl_src_Tree();
+                tree = db.TreeRepository.GetById(TreeID);
 
-                if (RowAffected > 0)
-                {
+                tree.Fk_FieldID = intFieldID;
+                tree.Fk_TreeType = intTreeType;
+                tree.BaseCultivar = strBaseCultivar;
+                tree.BaseType = strBaseType;
+                tree.ScionCultivar = strScionCultivar;
+                tree.DatePlanting = datDatePlanting;
+                tree.SubInformation = strSubInformation;
+                tree.CantaminationHistory = strCantaminationHistory;
+                tree.TreeYeild = strTreeYeild;
+                tree.Row = intRow;
+                tree.Column = intColumn;
+                tree.MainCultivar = strMainCultivar;
+                tree.ScionLocation = strScionLocation;
+                tree.BaseBuyLocation = strBaseBuyLocation;
+                tree.DateScion = datDateScion;
+                tree.TransplantType = strTransplantType;
+                tree.UpdateUserID = CurrentUser.Instance.UserID;
+                tree.IsActive = true;
+                tree.UpdateDate = System.DateTime.Now;
+                tree.Latitude = dclLatitude;
+                tree.Longitude = dclLongitude;
+                tree.Locatioon = geoLocation;
+
+                db.TreeRepository.Update(tree);
+                db.Save();
+
+                //int RowAffected = Convert.ToInt32(adp.Update(TreeID, intFieldID, intTreeType, strBaseCultivar, strBaseType,
+                //                                            strScionCultivar, datDatePlanting, strSubInformation, strCantaminationHistory,
+                //                                            strTreeYeild, intRow, intColumn, strMainCultivar, strScionLocation, 
+                //                                            strBaseBuyLocation, datDateScion, strTransplantType, CurrentUser.Instance.UserID, dclLatitude, dclLongitude));
+
+                //if (RowAffected > 0)
+                //{
                     OnMessage(BaranResources.EditSuccessful, PublicEnum.EnmMessageCategory.Success);
-                }
-                else
-                    OnMessage(BaranResources.EditFail, PublicEnum.EnmMessageCategory.Warning);
+                //}
+                //else
+                //    OnMessage(BaranResources.EditFail, PublicEnum.EnmMessageCategory.Warning);
             }
             catch
             {
@@ -242,22 +308,55 @@ namespace Baran.Producte
 
         private void SetControlsValue()
         {
+            if (TreeID <= 0)
+                return;
+
+            //    db = new UnitOfWork();
+            //    tbl_src_Tree tree = new tbl_src_Tree();
+            //try
+            //    { 
+            //        tree = db.TreeRepository.GetById(TreeID);
+
+            //        txtBaseCultivar.Text = tree.BaseCultivar;
+            //        txtBaseType.Text = tree.BaseType;
+            //        txtScionCultivar.Text = tree.ScionCultivar;
+            //        txtSubInformation.Text = tree.SubInformation;
+            //        txtCantaminationHistory.Text = tree.CantaminationHistory;
+            //        txtTreeYeild.Text = tree.TreeYeild;
+            //        txtMainCultivar.Text = tree.MainCultivar;
+            //        txtScionLocation.Text = tree.ScionLocation;
+            //        txtBaseBuyLocation.Text = tree.BaseBuyLocation;
+            //        txtTransplantType.Text = tree.TransplantType;
+            //        txtRow.Text = tree.Row.ToString();
+            //        txtColumn.Text = tree.Column.ToString();
+            //        txtLongitude.Text = tree.Longitude == null? string.Empty: tree.Longitude.ToString();
+            //        txtLatitude.Text = tree.Latitude == null? string.Empty: tree.Latitude.ToString();
+
+            //        cmbField.Value = tree.Fk_FieldID == null ? null : tree.Fk_FieldID;
+            //        cmbTreeType.Value = tree.Fk_TreeType;
+            //        mskDatePlanting.Text = tree.DatePlanting.ToString();// tree.DatePlanting == null ? string.Empty: DateTimeUtility.ToPersian(tree.DatePlanting);
+            //        mskDateScion.Text  = tree.DateScion.ToString();// tree.DateScion == null ? string.Empty : DateTimeUtility.ToPersian(tree.DateScion);
+
+
+
+
+
             BaranDataAccess.Product.dstProduct.spr_src_Tree_SelectRow drw;
             try
             {
                 drw = adp.GetTreeByIDTable(TreeID)[0];
 
-                txtBaseCultivar.Text = drw.IsBaseCultivarNull()? string.Empty : drw.BaseCultivar;
-                txtBaseType.Text = drw.IsBaseTypeNull()? string.Empty : drw.BaseType;
-                txtScionCultivar.Text= drw.IsScionCultivarNull()? string.Empty : drw.ScionCultivar;
-                txtSubInformation.Text= drw.IsSubInformationNull()? string.Empty : drw.SubInformation;
-                txtCantaminationHistory.Text= drw.IsCantaminationHistoryNull()? string.Empty : drw.CantaminationHistory;
-                txtTreeYeild.Text= drw.IsTreeYeildNull()? string.Empty : drw.TreeYeild;
-                txtMainCultivar.Text= drw.IsMainCultivarNull()? string.Empty : drw.MainCultivar;
-                txtScionLocation.Text= drw.IsScionLocationNull()? string.Empty : drw.ScionLocation;
-                txtBaseBuyLocation.Text= drw.IsBaseBuyLocationNull()? string.Empty : drw.BaseBuyLocation;
-                txtTransplantType.Text= drw.IsTransplantTypeNull()? string.Empty : drw.TransplantType;
-                txtRow.Text= drw.IsRowNull()? string.Empty : drw.Row.ToString();
+                txtBaseCultivar.Text = drw.IsBaseCultivarNull() ? string.Empty : drw.BaseCultivar;
+                txtBaseType.Text = drw.IsBaseTypeNull() ? string.Empty : drw.BaseType;
+                txtScionCultivar.Text = drw.IsScionCultivarNull() ? string.Empty : drw.ScionCultivar;
+                txtSubInformation.Text = drw.IsSubInformationNull() ? string.Empty : drw.SubInformation;
+                txtCantaminationHistory.Text = drw.IsCantaminationHistoryNull() ? string.Empty : drw.CantaminationHistory;
+                txtTreeYeild.Text = drw.IsTreeYeildNull() ? string.Empty : drw.TreeYeild;
+                txtMainCultivar.Text = drw.IsMainCultivarNull() ? string.Empty : drw.MainCultivar;
+                txtScionLocation.Text = drw.IsScionLocationNull() ? string.Empty : drw.ScionLocation;
+                txtBaseBuyLocation.Text = drw.IsBaseBuyLocationNull() ? string.Empty : drw.BaseBuyLocation;
+                txtTransplantType.Text = drw.IsTransplantTypeNull() ? string.Empty : drw.TransplantType;
+                txtRow.Text = drw.IsRowNull() ? string.Empty : drw.Row.ToString();
                 txtColumn.Text = drw.IsColumnNull() ? string.Empty : drw.Column.ToString();
                 txtLongitude.Text = drw.IsLongitudeNull() ? string.Empty : drw.Longitude.ToString();
                 txtLatitude.Text = drw.IsLatitudeNull() ? string.Empty : drw.Latitude.ToString();
@@ -268,9 +367,11 @@ namespace Baran.Producte
                 if (!drw.IsFk_TreeTypeNull())
                     cmbTreeType.Value = drw.Fk_TreeType;
                 if (!drw.IsDatePlantingNull())
-                    mskDatePlanting.Text = DateTimeUtility.ToPersian( drw.DatePlanting);
+                    mskDatePlanting.Text = DateTimeUtility.ToPersian(drw.DatePlanting);
                 if (!drw.IsDateScionNull())
-                    mskDateScion.Text = DateTimeUtility.ToPersian( drw.DateScion);
+                    mskDateScion.Text = DateTimeUtility.ToPersian(drw.DateScion);
+
+
 
                 if ((!drw.IsLatitudeNull()) && (!drw.IsLongitudeNull()))
                 {
@@ -279,17 +380,19 @@ namespace Baran.Producte
 
 
                     ////////////////////////////
-                    GMap.NET.WindowsForms.GMapOverlay markers = new GMap.NET.WindowsForms.GMapOverlay("markers");
+                    //GMap.NET.WindowsForms.GMapOverlay markers = new GMap.NET.WindowsForms.GMapOverlay("markers");
                     GMap.NET.PointLatLng po = new GMap.NET.PointLatLng(Convert.ToDouble(drw.Latitude), Convert.ToDouble(drw.Longitude));
                     GMap.NET.WindowsForms.GMapMarker mark = new GMap.NET.WindowsForms.Markers.GMarkerGoogle(po, new Bitmap(System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.Tree))));
 
-                    markers.Markers.Add(mark);
+                    objects.Markers.Clear();
+                    objects.Markers.Add(mark);
                     ///////////////////////////
                     MainMap.Position = po;// new PointLatLng(32.843888, 51.967501);
                     MainMap.Zoom = 17;
 
-                    MainMap.Overlays.Clear();
-                    MainMap.Overlays.Add(markers);
+                    //MainMap.Overlays.Clear();
+                    //MainMap.Overlays.Add(markers);
+                    MainMap.ZoomAndCenterMarkers(objects.ToString());
                 }
 
             }
@@ -313,17 +416,29 @@ namespace Baran.Producte
             strTransplantType= txtTransplantType.Text.Trim();
             intRow = Convert.ToInt16( txtRow.Text.Trim());
             intColumn = Convert.ToInt16( txtColumn.Text.Trim());
-            dclLatitude = Convert.ToDouble(txtLatitude.Text.Trim());
-            dclLongitude = Convert.ToDouble(txtLongitude.Text.Trim());
+
+            
+            dclLatitude = txtLatitude.Text == string.Empty ? (double?)null : Convert.ToDouble(txtLatitude.Text.Trim());
+            dclLongitude = txtLongitude.Text == string.Empty ? (double?)null : Convert.ToDouble(txtLongitude.Text.Trim());
+            
+            PointLatLng SavePoints = new PointLatLng();
+            if (txtLatitude.Text != string.Empty && txtLongitude.Text != string.Empty)
+            {
+                SavePoints.Lat = Convert.ToDouble(txtLatitude.Text.Trim());
+                SavePoints.Lng = Convert.ToDouble(txtLongitude.Text.Trim());
+                geoLocation = GeoUtils.ConvertGMapPointToDbGeometryPoint(SavePoints);
+            }
 
             if (cmbField.SelectedItem != null)
                 intFieldID = Convert.ToInt32(cmbField.Value);
             if (cmbTreeType.SelectedItem != null)
                 intTreeType = Convert.ToInt32(cmbTreeType.Value);
-            if (mskDatePlanting.Value != null)
+            if (mskDatePlanting.Value.ToString() != string.Empty)
                 datDatePlanting = DateTimeUtility.ToGregorian(mskDatePlanting.Text);
-            if (mskDateScion.Value != null)
+            if (mskDateScion.Value.ToString() != string.Empty)
                 datDateScion = DateTimeUtility.ToGregorian(mskDateScion.Text);
+
+
 
         }
 
@@ -331,7 +446,12 @@ namespace Baran.Producte
         {
             bool blnResult = true;
 
-            if (txtRow.Text.Trim() == string.Empty)
+            if (cmbField.SelectedItem == null)
+            {
+                cmbField.Focus();
+                blnResult = false;
+            }
+            else if (txtRow.Text.Trim() == string.Empty)
             {
                 txtRow.Focus();
                 blnResult = false;
@@ -341,10 +461,14 @@ namespace Baran.Producte
                 txtColumn.Focus();
                 blnResult = false;
             }
-
-            else if (cmbField.SelectedItem == null)
+            else if (mskDatePlanting.Value.ToString() == string.Empty)
             {
-                cmbField.Focus();
+                mskDatePlanting.Focus();
+                blnResult = false;
+            }
+            else if (mskDateScion.Value.ToString() == string.Empty)
+            {
+                mskDateScion.Focus();
                 blnResult = false;
             }
 
@@ -478,6 +602,44 @@ namespace Baran.Producte
         private void btnAdd_Click(object sender, EventArgs e)
         {
             this.AddMarker();
+        }
+
+        private void cmbField_AfterExitEditMode(object sender, EventArgs e)
+        {
+            if (cmbField.Value == null) return;
+
+            UnitOfWork db = new UnitOfWork();
+            tbl_src_Field field = new tbl_src_Field();
+            int FieldID = Convert.ToInt32(cmbField.Value);
+            field = db.FieldRepository.GetById(FieldID);
+
+            if (field is null)
+                return;
+
+            List<PointLatLng> points = new List<PointLatLng>();
+
+            if (field.LocationPolygon != null)
+            {
+                points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(field.LocationPolygon.ProviderValue.ToString());
+            }
+
+            ////////////////////////////
+            GMapRoute rt = new GMapRoute(points, string.Empty);
+            {
+                rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
+                rt.Stroke.Width = 5;
+                rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            }
+   
+            routes.Routes.Clear();
+            routes.Routes.Add(rt);
+            //MainMap.Overlays.Remove(routes);
+            //MainMap.Overlays.Add(routes);
+            ////objects.Routes.Add(rt);
+
+            ///////////////////////////
+            //int p = MainMap.Overlays.Count;            
+            MainMap.ZoomAndCenterRoutes("routes");
         }
 
         #endregion

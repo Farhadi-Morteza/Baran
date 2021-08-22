@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 
@@ -81,7 +82,7 @@ namespace Baran.Classes.Common
         private static int _factorOperationTypeID;
         public static int FactorOperationTypeID
         {
-            get 
+            get
             {
                 return _factorOperationTypeID;
             }
@@ -112,5 +113,21 @@ namespace Baran.Classes.Common
                 return _documentPath = System.Windows.Forms.Application.StartupPath + @"\Doc\";
             }
         }
+
+
+
+        public static Color partColor = Color.Red;
+        public static Color LandColor = Color.Green;
+        public static Color FieldColor = Color.GreenYellow;
+        public static Color WarehouseColor = Color.BurlyWood;
+        public static Color BuildingColor = Color.Brown;
+        public static Color WaterColor = Color.SkyBlue;
+        public static Color WaterstorageColor = Color.Blue;
+        public static Color WaterTransmissionLineColor = Color.Black;
+
+        public static int StrokeWidth = 3;
+        public static System.Drawing.Drawing2D.DashStyle StrokeDashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+        public static System.Drawing.Font TooltipFont = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178))); 
+
     }
 }

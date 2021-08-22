@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using BaranDataAccess;
 
 namespace Baran.Source
 {
@@ -32,6 +33,7 @@ namespace Baran.Source
 
         #region Variables
         WaiteForm waite;
+        BaranDataAccess.UnitOfWork dbContext;
 
         BaranDataAccess.Source.dstSourceTableAdapters.spr_src_Buildings_SelectTableAdapter adp =
             new BaranDataAccess.Source.dstSourceTableAdapters.spr_src_Buildings_SelectTableAdapter();
@@ -77,7 +79,7 @@ namespace Baran.Source
         {
             base.OnformLoad();
             ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcBuildingsCategory, cmbBuildingsCategory, "");
-            ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcSubcollection, cmbParentCo, "");
+            ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcPart, cmbParentCo, "");
 
             btnGeo.Image = btnPrint.Image = System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.Map64));
             this.FillGridDoc();
@@ -93,6 +95,7 @@ namespace Baran.Source
         }
 
         public override void OnSave()
+        
         {
             base.OnSave();
 
@@ -116,14 +119,26 @@ namespace Baran.Source
             {
                 waite.Show();
                 this.SetVariables();
-                BuildingsID = Convert.ToInt32(adp.New_Buildings_Insert(strName, dclArea, intBuildingsCategory, intParentCo, UserID, strDescription));
 
-                if (BuildingsID > 0)
+                dbContext = new UnitOfWork();
+                tbl_src_Buildings building = new tbl_src_Buildings()
                 {
-                    OnMessage(BaranResources.SaveSuccessful, PublicEnum.EnmMessageCategory.Success);
-                }
-                else
-                    OnMessage(BaranResources.SaveFail, PublicEnum.EnmMessageCategory.Warning);
+                    Name = strName,
+                    Area = dclArea,
+                    Fk_BuildingsCategoryID = intBuildingsCategory,
+                    Fk_PartID = intParentCo,
+                    Description = strDescription,
+                    CreateUserID = UserID,
+                    CreateDate = System.DateTime.Now,
+                    IsActive = true
+                };
+
+                dbContext.BuildingsRepository.Insert(building);
+                dbContext.Save();
+                this.DialogResult = DialogResult.OK;
+
+
+                OnMessage(BaranResources.SaveSuccessful, PublicEnum.EnmMessageCategory.Success);
             }
             catch
             {
@@ -156,14 +171,32 @@ namespace Baran.Source
             {
                 waite.Show();
                 this.SetVariables();
-                int RowAffected = Convert.ToInt32(adp.Update(BuildingsID, strName, dclArea, intBuildingsCategory, intParentCo, UserID, strDescription));
 
-                if (RowAffected > 0)
-                {
+                BaranDataAccess.UnitOfWork db = new BaranDataAccess.UnitOfWork();
+
+                tbl_src_Buildings buildings = new tbl_src_Buildings();
+
+                buildings = db.BuildingsRepository.GetById(BuildingsID);
+
+                buildings.Name = strName;
+                buildings.Area = dclArea;
+                buildings.Fk_BuildingsCategoryID = intBuildingsCategory;
+                buildings.Fk_PartID = intParentCo;
+                buildings.UpdateUserID = UserID;
+                buildings.Description = strDescription;
+                buildings.UpdateDate = System.DateTime.Now;
+
+                db.BuildingsRepository.Update(buildings);
+                db.Save();
+
+                //int RowAffected = Convert.ToInt32(adp.Update(BuildingsID, strName, dclArea, intBuildingsCategory, intParentCo, UserID, strDescription));
+
+                //if (RowAffected > 0)
+                //{
                     OnMessage(BaranResources.EditSuccessful, PublicEnum.EnmMessageCategory.Success);
-                }
-                else
-                    OnMessage(BaranResources.EditFail, PublicEnum.EnmMessageCategory.Warning);
+                //}
+                //else
+                //    OnMessage(BaranResources.EditFail, PublicEnum.EnmMessageCategory.Warning);
             }
             catch
             {
@@ -186,14 +219,26 @@ namespace Baran.Source
             if (msgResult == DialogResult.No) return;
             try
             {
-                int RowAffected = (int)adp.Delete(BuildingsID, UserID);
-                if (RowAffected > 0)
-                {
+                BaranDataAccess.UnitOfWork db = new BaranDataAccess.UnitOfWork();
+                tbl_src_Buildings buildings = new tbl_src_Buildings();
+
+                buildings = db.BuildingsRepository.GetById(BuildingsID);
+
+                buildings.IsActive = false;
+                buildings.InactivationUserID = UserID;
+                buildings.InactivationDate = System.DateTime.Now;
+
+                db.BuildingsRepository.Update(buildings);
+                db.Save();
+
+                //int RowAffected = (int)adp.Delete(BuildingsID, UserID);
+                //if (RowAffected > 0)
+                //{
                     BuildingsID = 0;
                     OnMessage(BaranResources.DeleteSuccessful, PublicEnum.EnmMessageCategory.Success);
-                }
-                else
-                    OnMessage(BaranResources.DeleteFail, PublicEnum.EnmMessageCategory.Warning);
+                //}
+                //else
+                //    OnMessage(BaranResources.DeleteFail, PublicEnum.EnmMessageCategory.Warning);
             }
             catch
             {
@@ -210,14 +255,15 @@ namespace Baran.Source
             grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Clear();
         }
 
-        public override void OnDoc(int? companyID, int? collectionID, int? subcollectionID, int? partID, int? fieldID, int? warehouseID, int? buildingID, int? machineryID, int? waterID, int? waterStorageID, int? waterTransmissionLineID)
+
+        public override void OnDoc(int? companyID, int? collectionID, int? subcollectionID, int? partID, int? landID, int? fieldID, int? warehouseID, int? buildingID, int? machineryID, int? waterID, int? waterStorageID, int? waterTransmissionLineID)
         {
             if (BuildingsID <= 0)
             {
                 OnMessage(BaranResources.SavedNotLastTime, PublicEnum.EnmMessageCategory.Warning);
                 return;
             }
-            base.OnDoc(null, null, null, null, null, null, this.BuildingsID, null, null, null, null);
+            base.OnDoc(null, null, null, null, null, null, null, this.BuildingsID, null, null, null, null);
             this.FillGridDoc();
         }
 
@@ -269,7 +315,7 @@ namespace Baran.Source
 
                 try
                 {
-                    adp.FillDocumentByFkIDTable(grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select, null, null, null, null, null, null, this.BuildingsID, null, null, null, null);
+                    adp.FillDocumentByFkIDTable(grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select, null, null, null, null,null, null, null, this.BuildingsID, null, null, null, null);
 
                     if (grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Count > 0 && grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Count <= cnsgrdDoc.MaxRowCount)
                     {

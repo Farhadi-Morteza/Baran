@@ -288,6 +288,11 @@ namespace Baran.Production
             catch { }
         }
 
+        private void lblCaption_Click(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion
 
         #region Events

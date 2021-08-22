@@ -19,9 +19,7 @@ namespace Baran.Base_Forms
         {
             InitializeComponent();
             _frmChildBase = this;
-
-            
-           }
+        }
 
     #endregion
 
@@ -35,9 +33,9 @@ namespace Baran.Base_Forms
             , _PrintAccess
             ;
 
-    #endregion
+        #endregion
 
-    #region Propertise
+        #region Propertise
 
         private static frmChildBase _frmChildBase = null;
         public static frmChildBase Instanc
@@ -609,7 +607,7 @@ namespace Baran.Base_Forms
             
         }
 
-        public virtual void OnDoc(int? companyID, int? collectionID, int? subcollectionID, int? partID, int? fieldID, int? warehouseID, int? buildingID, int? machineryID, int? waterID, int? waterStorageID, int? waterTransmissionLineID)
+        public virtual void OnDoc(int? companyID, int? collectionID, int? subcollectionID, int? partID, int? landID, int? fieldID, int? warehouseID, int? buildingID, int? machineryID, int? waterID, int? waterStorageID, int? waterTransmissionLineID)
         {
             this.RefreshForm();
             ShowMainProgress();
@@ -624,6 +622,7 @@ namespace Baran.Base_Forms
                 ofrm.CollectionID = collectionID;
                 ofrm.SubcollectionID = subcollectionID;
                 ofrm.PartID = partID;
+                ofrm.LandID = landID;
                 ofrm.FieldID = fieldID;
                 ofrm.WarehouseID = warehouseID;
                 ofrm.BuildingID = buildingID;

@@ -214,14 +214,14 @@ namespace Baran.Source
             }
         }
 
-        public override void OnDoc(int? companyID, int? collectionID, int? subcollectionID, int? partID, int? fieldID, int? warehouseID, int? buildingID, int? machineryID, int? waterID, int? waterStorageID, int? waterTransmissionLineID)
+        public override void OnDoc(int? companyID, int? collectionID, int? subcollectionID, int? partID, int? landID, int? fieldID, int? warehouseID, int? buildingID, int? machineryID, int? waterID, int? waterStorageID, int? waterTransmissionLineID)
         {
             if (WaterStorageID <= 0)
             {
                 OnMessage(BaranResources.SavedNotLastTime, PublicEnum.EnmMessageCategory.Warning);
                 return;
             }
-            base.OnDoc(null, null, null, null, null, null, null, null, null, this.WaterStorageID, null);
+            base.OnDoc(null, null, null, null, null, null, null, null, null, null, this.WaterStorageID, null);
             this.FillGridDoc();
         }
 
@@ -298,15 +298,15 @@ namespace Baran.Source
 
                 try
                 {
-                    adp.FillDocumentByFkIDTable(grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select, null, null, null, null, null, null, null, null, null, this.WaterStorageID, null);
+                    adp.FillDocumentByFkIDTable(grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select,null, null, null, null, null, null, null, null, null, null, this.WaterStorageID, null);
 
-                    if (grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Count > 0 && grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Count <= 5)
+                    if (grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Count > 0 && grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Count <= 2)
                     {
-                        this.Height = this.Height + 40 + (grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Count * (grdDoc.DisplayLayout.Rows[0].Height));
+                        this.Height = this.Height + 35 + (grdDoc.dstCommon.spr_cmn_DocumentByFkID_Select.Count * (grdDoc.DisplayLayout.Rows[0].Height));
                     }
                     else
                     {
-                        this.Height = this.Height + 40 + (5 * (grdDoc.DisplayLayout.Rows[0].Height));
+                        this.Height = this.Height + 40 + (2 * (grdDoc.DisplayLayout.Rows[0].Height));
                     }
                 }
                 catch

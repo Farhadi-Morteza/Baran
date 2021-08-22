@@ -1,4 +1,7 @@
 ﻿using Baran.Classes.Common;
+using BaranDataAccess;
+using GMap.NET;
+using GMap.NET.WindowsForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -79,7 +82,7 @@ namespace Baran.Source
             imageListView1.BackColor = imageListView1.Parent.BackColor;
             try
             {
-                adpDoc.FillDocumentByFkIDTable(tblDoc, null, null, null, null, null, null, null, null, WaterID, null, null);
+                adpDoc.FillDocumentByFkIDTable(tblDoc, null, null, null, null, null, null,null,null, null, WaterID,null, null);
                 if (tblDoc.Count > 0)
                 {
                     foreach (var Doc in tblDoc)
@@ -96,35 +99,62 @@ namespace Baran.Source
 
         private void DrowMap()
         {
-            BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocation =
-               new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
-            BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter adpLocation =
-                new BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter();
+            GMapOverlay myroutes = new GMapOverlay("routes");
 
-             GMap.NET.WindowsForms.GMapOverlay markers = new GMap.NET.WindowsForms.GMapOverlay("markers");
-            
-            try
+            UnitOfWork db = new UnitOfWork();
+            tbl_src_Water water = db.WaterRepository.GetById(WaterID);
+
+            List<PointLatLng> Mypoints = new List<PointLatLng>();
+            if (water.Location != null)
             {
-                adpLocation.FillLocationByIDTable(tblLocation, null, null, null, null, WaterID, null, null);
+                GMap.NET.WindowsForms.GMapOverlay markers = new GMap.NET.WindowsForms.GMapOverlay("markers");
+                Mypoints = GeoUtils.ConvertStringPointToGMapPoint(water.Location.ProviderValue.ToString());
 
-                if (tblLocation.Count > 0)
-                {
-                    ////////////////////////////
-                    GMap.NET.PointLatLng po = new GMap.NET.PointLatLng(Convert.ToDouble(tblLocation[0].Latitude), Convert.ToDouble(tblLocation[0].Longitude));
-                    GMap.NET.WindowsForms.GMapMarker mark = new GMap.NET.WindowsForms.Markers.GMarkerGoogle(po, GMap.NET.WindowsForms.Markers.GMarkerGoogleType.red_dot);
+                GMap.NET.WindowsForms.GMapMarker mark = new GMap.NET.WindowsForms.Markers.GMarkerGoogle(Mypoints[0], GMap.NET.WindowsForms.Markers.GMarkerGoogleType.red_dot);
 
-                    markers.Markers.Add(mark);
-                    ///////////////////////////
-                    MainMap.Position = po;// new PointLatLng(32.843888, 51.967501);
-                    MainMap.Zoom = 17;
+                markers.Markers.Add(mark);
+                ///////////////////////////
+                MainMap.Position = Mypoints[0];// new PointLatLng(32.843888, 51.967501);
+                MainMap.Zoom = 17;
 
-                    MainMap.Overlays.Clear();
-                    MainMap.Overlays.Add(markers);                    
+                MainMap.Overlays.Clear();
+                MainMap.Overlays.Add(markers);
 
-                }
+
+
             }
-            catch
-            { }
+            else
+            {
+                BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocation =
+               new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
+                BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter adpLocation =
+                    new BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter();
+
+                GMap.NET.WindowsForms.GMapOverlay markers = new GMap.NET.WindowsForms.GMapOverlay("markers");
+
+                try
+                {
+                    adpLocation.FillLocationByIDTable(tblLocation, null, null, null, null, WaterID, null, null);
+
+                    if (tblLocation.Count > 0)
+                    {
+                        ////////////////////////////
+                        GMap.NET.PointLatLng po = new GMap.NET.PointLatLng(Convert.ToDouble(tblLocation[0].Latitude), Convert.ToDouble(tblLocation[0].Longitude));
+                        GMap.NET.WindowsForms.GMapMarker mark = new GMap.NET.WindowsForms.Markers.GMarkerGoogle(po, GMap.NET.WindowsForms.Markers.GMarkerGoogleType.red_dot);
+
+                        markers.Markers.Add(mark);
+                        ///////////////////////////
+                        MainMap.Position = po;// new PointLatLng(32.843888, 51.967501);
+                        MainMap.Zoom = 17;
+
+                        MainMap.Overlays.Clear();
+                        MainMap.Overlays.Add(markers);
+
+                    }
+                }
+                catch
+                { }
+            }
         }
 
         #endregion

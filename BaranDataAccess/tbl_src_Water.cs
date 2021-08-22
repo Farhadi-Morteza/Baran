@@ -27,5 +27,6 @@ namespace BaranDataAccess
         public Nullable<int> UpdateUserID { get; set; }
         public Nullable<System.DateTime> UpdateDate { get; set; }
         public string Description { get; set; }
+        public System.Data.Spatial.DbGeometry Location { get; set; }
     }
 }

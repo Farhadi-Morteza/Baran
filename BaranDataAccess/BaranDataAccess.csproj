@@ -50,6 +50,9 @@
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="ImageListView">
+      <HintPath>E:\AMS_1400-02-17\AMS\Baran\bin\Debug\ImageListView.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.configuration" />
@@ -108,6 +111,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dstCompany.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\dstDashboard.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstDashboard.xsd</DependentUpon>
     </Compile>
     <Compile Include="DateAdjustement\dstDate.cs">
       <DependentUpon>dstDate.xsd</DependentUpon>
@@ -223,577 +231,40 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dstSource.xsd</DependentUpon>
     </Compile>
-    <Compile Include="spr_AccessibleItemsForCurrentUser_Select_Result.cs">
+    <Compile Include="spr_src_BuildingsLocation_Rpt_Result.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
-    <Compile Include="spr_AccessiblePackagesForCurrentUserGrouped_Select_Result.cs">
+    <Compile Include="spr_src_Buildings_Map_Select_Result.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
-    <Compile Include="spr_cmn_ActivityByID_Select_Result.cs">
+    <Compile Include="spr_src_FieldLocation_Rpt_Result.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
-    <Compile Include="spr_cmn_Activity_cmbByBusinessID_Select_Result.cs">
+    <Compile Include="spr_src_Field_Map_Select_Result.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
-    <Compile Include="spr_cmn_Activity_lst_Select_Result.cs">
+    <Compile Include="spr_src_LandLocation_Rpt_Result.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
-    <Compile Include="spr_cmn_Activity_Select_Result.cs">
+    <Compile Include="spr_src_Land_Map_Select_Result.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
-    <Compile Include="spr_cmn_BusinessByID_Select_Result.cs">
+    <Compile Include="spr_src_PartLocation_Rpt_Result.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
-    <Compile Include="spr_cmn_BusinessCategoryByID_Select_Result.cs">
+    <Compile Include="spr_src_WarehouseLocation_Rpt_Result.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
-    <Compile Include="spr_cmn_BusinessCategory_cmb_Select_Result.cs">
+    <Compile Include="spr_src_WareHouse_Map_Select_Result.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
-    <Compile Include="spr_cmn_BusinessCategory_lst_Select_Result.cs">
+    <Compile Include="spr_src_WaterLocation_Rpt_Result.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
-    <Compile Include="spr_cmn_BusinessCategory_Select_Result.cs">
+    <Compile Include="spr_src_WaterStorageLocation_Rpt_Result.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
-    <Compile Include="spr_cmn_Business_cmbByBusinessCategoryID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_Business_cmb_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_Business_lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_Business_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_Country_cmb_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_CropByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_CropCategory_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_Crop_cmb_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_Crop_lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_Crop_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_CultivarByCropId_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_CultivarByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_CultivarList_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_Cultivar_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_DocumentByFkID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_DocumentByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_Document_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_Element_cmb_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_Gender_cmb_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_MaterialMode_cmb_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_Ownership_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_ProductCategory_cmb_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_Province_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_SoilTexture_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_Status_cmb_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_Township_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_UnitMeasurement_cmb_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_cmn_UnitMeasurement_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_geo_LocationByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_geo_Location_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_GetServerDate_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_Prd_ProductionFieldByProductinID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_Prd_ProductionField_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTaskByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTaskByProductionID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_ChemicalAnalys_ByProductionTaskID_lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_ChemicalAnalys_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_DiscussionByID_Delete_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_DiscussionByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_Discussion_ByProductionTaskID_lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_Discussion_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_DocByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_Doc_ByProductionTaskID_lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_Doc_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_Fertilizer_LinkByProductionTaskID_lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_Fertilizer_Link_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_Machinery_LinkByProductionTaskID_lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_Machinery_Link_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_Person_LinkByProductionTaskID_lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_Person_Link_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_Pesticide_LinkByProductionTaskID_lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_Pesticide_Link_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_Rpt_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_WaterStorage_LinkByProductionTaskID_lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_WaterStorage_Link_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_Water_LinkByProductionTaskID_lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_ProductionTask_Water_Link_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_Production_lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_Production_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_SeasonByProductionID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_prd_Season_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_Sec_Items_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_Sec_ItemUsers_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_Sec_Packages_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_Sec_SelectItemsByItemID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_Sec_SelectItemsByPackageID_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_Sec_SelectPackageByPackageID_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_Sec_SelectUserByUserName_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_Sec_SelectUsersByUserID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_Sec_SetupFormSequenceNumber_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_Sec_UserAuthentication_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_Sec_UsersAccessLevel_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_Sec_UsersList_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_Sec_Users_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_Sec_UserType_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_SelectUserByUserNameandPassword_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_Setting_VersionCheck_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_ShopCheckForCurrentUser_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_BuildingsByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_BuildingsCategory_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Buildings_Lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Buildings_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Buildings_Vew_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_ChemicalAnalysByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_ChemicalAnalysCategory_cmb_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_ChemicalAnalysElement_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_ChemicalAnalys_cmbLst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_ChemicalAnalys_lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_ChemicalAnalys_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Collection_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_CompanyCategory_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Company_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_FertilizerByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_FertilizerCategory_cmb_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_FertilizerElement_select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Fertilizer_cmbLst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Fertilizer_lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Fertilizer_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_FieldByID_Lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_FieldByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_FieldByUserID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_FieldUseType_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Field_Lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Field_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Field_Vew_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_MachineryByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_MachineryByUserID_cmb_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_MachineryCategory_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Machinery_Lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Machinery_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Machinery_Vew_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Part_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_PersonByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_PersonByPersonCategoriID_Cmb_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_PersonCategory_cmb_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Person_lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Person_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_PesticideByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_PesticideCategory_cmb_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Pesticide_cmbLst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Pesticide_lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Pesticide_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Subcollection_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_TreeByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_TreeType_Cmd_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Tree_lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Tree_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_WarehouseByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_WarehouseType_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_WarehouseUseType_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Warehouse_Lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Warehouse_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Warehouse_Vew_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_WaterByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_WaterByPartID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_WaterByUserID_cmb_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_WaterSourcType_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_WaterStorageAndDetails_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_WaterStorageByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_WaterStorageByUserID_cmb_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_WaterStorageD_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_WaterStorageList_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_WaterStorage_Lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_WaterStorage_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_WaterStorage_Vew_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_WaterTransmissionLineByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_WaterTransmissionLineList_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_WaterTransmissionLine_Lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_WaterTransmissionLine_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_WaterTransmissionLine_Vew_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_WaterTransmissionType_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Water_Lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Water_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_src_Water_Vew_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_TaskByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_TaskCategoriByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_TaskCategori_Cmb_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_TaskCategori_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_TasklistByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_TasklistCrop_cmb_ByCropID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_TasklistCrop_lst_ByTasklistID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_TasklistCrop_lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_Tasklist_cmb_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_Tasklist_Crop_LinkByCropID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_Tasklist_Crop_LinkByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_Tasklist_Crop_Link_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_Tasklist_lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_Tasklist_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_Tasklist_Task_LinkByTasklistID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_Tasklist_Task_Link_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_TaskSubCategoriByID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_TaskSubCategori_Cmb_ByTaskCategoryID_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_TaskSubCategori_Cmb_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_TaskSubCategori_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_TaskSubCategory_lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_Task_cmb_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_Task_lst_Select_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spr_tsk_Task_Select_Result.cs">
+    <Compile Include="spr_src_WaterTransmissionLineLocation_Rpt_Result.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagrams.cs">
@@ -990,6 +461,9 @@
     <Compile Include="tbl_src_FieldUseType.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
+    <Compile Include="tbl_src_Land.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="tbl_src_Machinery.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
@@ -1071,53 +545,8 @@
     <Compile Include="tbl_tsk_TaskSubCategory.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
-    <Compile Include="test_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="udft_Goo_Goodskarteks_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="udft_Goo_GoodsStock_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="udft_Per_PersonsAccountBalance_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="udft_Saf_SafeBoxsTransaction_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="udft_UserAccessLevel_Collection_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="udft_UserAccessLevel_Company_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="udft_UserAccessLevel_Part_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="udft_UserAccessLevel_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="udft_UserAccessLevel_Subcollection_Result.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
     <Compile Include="UnitOfWork.cs" />
-    <Compile Include="viw_Goo_GoodsBasePrice.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="viw_Goo_GoodsBasePriceOld.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="viw_Goo_GoodsUnit2QuantityRemained.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="viw_Goo_GoodsUnit2QuantityRemainedWithBasePrice.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Viw_Saf_Reason.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Viw_Saf_SumRecievePayemtByFactorNumber.cs">
+    <Compile Include="viw_Part_Location.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -1179,6 +608,17 @@
     </None>
     <None Include="Company\dstCompany.xss">
       <DependentUpon>dstCompany.xsd</DependentUpon>
+    </None>
+    <None Include="Dashboard\dstDashboard.xsc">
+      <DependentUpon>dstDashboard.xsd</DependentUpon>
+    </None>
+    <None Include="Dashboard\dstDashboard.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstDashboard.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dashboard\dstDashboard.xss">
+      <DependentUpon>dstDashboard.xsd</DependentUpon>
     </None>
     <None Include="DateAdjustement\dstDate.xsc">
       <DependentUpon>dstDate.xsd</DependentUpon>
@@ -1355,6 +795,12 @@
       <DependentUpon>Models.edmx</DependentUpon>
       <LastGenOutput>Models.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaranViewModels\BaranViewModels.csproj">
+      <Project>{9ee30ee9-7e12-4e38-9b21-6e426ac806dd}</Project>
+      <Name>BaranViewModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

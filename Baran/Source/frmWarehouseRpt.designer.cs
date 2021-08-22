@@ -145,13 +145,24 @@
             // 
             // grpButons
             // 
-            this.grpButons.Location = new System.Drawing.Point(0, 852);
-            this.grpButons.Size = new System.Drawing.Size(1261, 67);
+            this.grpButons.Location = new System.Drawing.Point(0, 636);
+            this.grpButons.Size = new System.Drawing.Size(946, 67);
             // 
             // lblLine2
             // 
-            this.lblLine2.Location = new System.Drawing.Point(1, 61);
-            this.lblLine2.Size = new System.Drawing.Size(1259, 3);
+            this.lblLine2.Size = new System.Drawing.Size(944, 3);
+            // 
+            // grpHeader
+            // 
+            this.grpHeader.Size = new System.Drawing.Size(946, 75);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(883, 10);
+            // 
+            // lblCaption
+            // 
+            this.lblCaption.Location = new System.Drawing.Point(577, 23);
             // 
             // lblMessage
             // 
@@ -160,23 +171,21 @@
             // 
             // lblLine1
             // 
-            this.lblLine1.Size = new System.Drawing.Size(1259, 3);
+            this.lblLine1.Size = new System.Drawing.Size(944, 3);
             // 
             // grpMessage
             // 
-            this.grpMessage.Location = new System.Drawing.Point(0, 65);
-            this.grpMessage.Size = new System.Drawing.Size(1261, 30);
+            this.grpMessage.Size = new System.Drawing.Size(946, 30);
             // 
             // lblLine3
             // 
-            this.lblLine3.Location = new System.Drawing.Point(1, 753);
-            this.lblLine3.Size = new System.Drawing.Size(1259, 3);
+            this.lblLine3.Location = new System.Drawing.Point(1, 527);
+            this.lblLine3.Size = new System.Drawing.Size(944, 3);
             // 
             // grpMain
             // 
             this.grpMain.Controls.Add(this.tac);
-            this.grpMain.Location = new System.Drawing.Point(0, 95);
-            this.grpMain.Size = new System.Drawing.Size(1261, 757);
+            this.grpMain.Size = new System.Drawing.Size(946, 531);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
             this.grpMain.Controls.SetChildIndex(this.tac, 0);
             // 
@@ -184,9 +193,9 @@
             // 
             this.tpcMap.Controls.Add(this.MainMap);
             this.tpcMap.Controls.Add(this.grpControls);
-            this.tpcMap.Location = new System.Drawing.Point(1, 37);
+            this.tpcMap.Location = new System.Drawing.Point(1, 30);
             this.tpcMap.Name = "tpcMap";
-            this.tpcMap.Size = new System.Drawing.Size(1257, 715);
+            this.tpcMap.Size = new System.Drawing.Size(942, 496);
             // 
             // MainMap
             // 
@@ -199,7 +208,7 @@
             this.MainMap.LevelsKeepInMemmory = 5;
             this.MainMap.Location = new System.Drawing.Point(0, 0);
             this.MainMap.MarkersEnabled = true;
-            this.MainMap.MaxZoom = 18;
+            this.MainMap.MaxZoom = 20;
             this.MainMap.MinZoom = 1;
             this.MainMap.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
             this.MainMap.Name = "MainMap";
@@ -210,7 +219,7 @@
             this.MainMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.MainMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.MainMap.ShowTileGridLines = false;
-            this.MainMap.Size = new System.Drawing.Size(967, 715);
+            this.MainMap.Size = new System.Drawing.Size(652, 496);
             this.MainMap.TabIndex = 1;
             this.MainMap.Zoom = 5D;
             // 
@@ -229,9 +238,9 @@
             this.grpControls.Controls.Add(this.cmbCollection);
             this.grpControls.Dock = System.Windows.Forms.DockStyle.Right;
             this.grpControls.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.grpControls.Location = new System.Drawing.Point(967, 0);
+            this.grpControls.Location = new System.Drawing.Point(652, 0);
             this.grpControls.Name = "grpControls";
-            this.grpControls.Size = new System.Drawing.Size(290, 715);
+            this.grpControls.Size = new System.Drawing.Size(290, 496);
             this.grpControls.TabIndex = 0;
             // 
             // label4
@@ -270,7 +279,7 @@
             this.cmbWarehouseType.Location = new System.Drawing.Point(23, 282);
             this.cmbWarehouseType.Name = "cmbWarehouseType";
             this.cmbWarehouseType.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbWarehouseType.Size = new System.Drawing.Size(257, 26);
+            this.cmbWarehouseType.Size = new System.Drawing.Size(257, 22);
             this.cmbWarehouseType.TabIndex = 25;
             // 
             // label8
@@ -309,7 +318,7 @@
             this.cmbWarehouseUseType.Location = new System.Drawing.Point(23, 223);
             this.cmbWarehouseUseType.Name = "cmbWarehouseUseType";
             this.cmbWarehouseUseType.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbWarehouseUseType.Size = new System.Drawing.Size(257, 26);
+            this.cmbWarehouseUseType.Size = new System.Drawing.Size(257, 22);
             this.cmbWarehouseUseType.TabIndex = 7;
             // 
             // label3
@@ -348,7 +357,7 @@
             this.cmbPart.Location = new System.Drawing.Point(23, 164);
             this.cmbPart.Name = "cmbPart";
             this.cmbPart.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbPart.Size = new System.Drawing.Size(257, 26);
+            this.cmbPart.Size = new System.Drawing.Size(257, 22);
             this.cmbPart.TabIndex = 2;
             // 
             // label2
@@ -387,8 +396,9 @@
             this.cmbSubcollection.Location = new System.Drawing.Point(23, 105);
             this.cmbSubcollection.Name = "cmbSubcollection";
             this.cmbSubcollection.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbSubcollection.Size = new System.Drawing.Size(257, 26);
+            this.cmbSubcollection.Size = new System.Drawing.Size(257, 22);
             this.cmbSubcollection.TabIndex = 1;
+            this.cmbSubcollection.ValueChanged += new System.EventHandler(this.cmbSubcollection_ValueChanged);
             // 
             // label1
             // 
@@ -426,8 +436,9 @@
             this.cmbCollection.Location = new System.Drawing.Point(23, 46);
             this.cmbCollection.Name = "cmbCollection";
             this.cmbCollection.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbCollection.Size = new System.Drawing.Size(257, 26);
+            this.cmbCollection.Size = new System.Drawing.Size(257, 22);
             this.cmbCollection.TabIndex = 0;
+            this.cmbCollection.ValueChanged += new System.EventHandler(this.cmbCollection_ValueChanged);
             // 
             // tpcTable
             // 
@@ -435,7 +446,7 @@
             this.tpcTable.Controls.Add(this.grpTableControls);
             this.tpcTable.Location = new System.Drawing.Point(-10000, -10000);
             this.tpcTable.Name = "tpcTable";
-            this.tpcTable.Size = new System.Drawing.Size(1257, 715);
+            this.tpcTable.Size = new System.Drawing.Size(942, 496);
             // 
             // grdItem
             // 
@@ -451,12 +462,12 @@
             ultraGridColumn1.Header.Caption = "ردیف";
             ultraGridColumn1.Header.VisiblePosition = 1;
             ultraGridColumn1.TabStop = false;
-            ultraGridColumn1.Width = 48;
+            ultraGridColumn1.Width = 41;
             ultraGridColumn2.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn2.Header.Caption = "";
             ultraGridColumn2.Header.VisiblePosition = 0;
             ultraGridColumn2.MergedCellStyle = Infragistics.Win.UltraWinGrid.MergedCellStyle.Always;
-            ultraGridColumn2.Width = 1161;
+            ultraGridColumn2.Width = 860;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2});
@@ -573,8 +584,8 @@
             this.grdItem.InputLanguage = Baran.Windows.Forms.InputLanguage.Farsi;
             this.grdItem.Location = new System.Drawing.Point(0, 99);
             this.grdItem.Name = "grdItem";
-            this.grdItem.Size = new System.Drawing.Size(1257, 616);
-            this.grdItem.SumColumnsWidth = 96;
+            this.grdItem.Size = new System.Drawing.Size(942, 397);
+            this.grdItem.SumColumnsWidth = 82;
             this.grdItem.TabIndex = 1;
             // 
             // grpTableControls
@@ -589,7 +600,7 @@
             this.grpTableControls.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpTableControls.Location = new System.Drawing.Point(0, 0);
             this.grpTableControls.Name = "grpTableControls";
-            this.grpTableControls.Size = new System.Drawing.Size(1257, 99);
+            this.grpTableControls.Size = new System.Drawing.Size(942, 99);
             this.grpTableControls.TabIndex = 0;
             this.grpTableControls.Click += new System.EventHandler(this.grpTableControls_Click);
             // 
@@ -598,10 +609,10 @@
             this.chkWarehouseType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkWarehouseType.AutoSize = true;
             this.chkWarehouseType.ForeColor = System.Drawing.Color.White;
-            this.chkWarehouseType.Location = new System.Drawing.Point(1014, 58);
+            this.chkWarehouseType.Location = new System.Drawing.Point(1029, 58);
             this.chkWarehouseType.Name = "chkWarehouseType";
             this.chkWarehouseType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkWarehouseType.Size = new System.Drawing.Size(83, 33);
+            this.chkWarehouseType.Size = new System.Drawing.Size(68, 28);
             this.chkWarehouseType.TabIndex = 33;
             this.chkWarehouseType.Text = "نوع انبار";
             this.chkWarehouseType.UseVisualStyleBackColor = true;
@@ -611,10 +622,10 @@
             this.chkWarehouseUseType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkWarehouseUseType.AutoSize = true;
             this.chkWarehouseUseType.ForeColor = System.Drawing.Color.White;
-            this.chkWarehouseUseType.Location = new System.Drawing.Point(1113, 58);
+            this.chkWarehouseUseType.Location = new System.Drawing.Point(1132, 58);
             this.chkWarehouseUseType.Name = "chkWarehouseUseType";
             this.chkWarehouseUseType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkWarehouseUseType.Size = new System.Drawing.Size(102, 33);
+            this.chkWarehouseUseType.Size = new System.Drawing.Size(83, 28);
             this.chkWarehouseUseType.TabIndex = 26;
             this.chkWarehouseUseType.Text = "نوع کاربری";
             this.chkWarehouseUseType.UseVisualStyleBackColor = true;
@@ -624,10 +635,10 @@
             this.chkPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkPart.AutoSize = true;
             this.chkPart.ForeColor = System.Drawing.Color.White;
-            this.chkPart.Location = new System.Drawing.Point(738, 19);
+            this.chkPart.Location = new System.Drawing.Point(756, 19);
             this.chkPart.Name = "chkPart";
             this.chkPart.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkPart.Size = new System.Drawing.Size(100, 33);
+            this.chkPart.Size = new System.Drawing.Size(82, 28);
             this.chkPart.TabIndex = 24;
             this.chkPart.Text = "واحد فرعی";
             this.chkPart.UseVisualStyleBackColor = true;
@@ -637,10 +648,10 @@
             this.chkSubcollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkSubcollection.AutoSize = true;
             this.chkSubcollection.ForeColor = System.Drawing.Color.White;
-            this.chkSubcollection.Location = new System.Drawing.Point(879, 19);
+            this.chkSubcollection.Location = new System.Drawing.Point(890, 19);
             this.chkSubcollection.Name = "chkSubcollection";
             this.chkSubcollection.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkSubcollection.Size = new System.Drawing.Size(63, 33);
+            this.chkSubcollection.Size = new System.Drawing.Size(52, 28);
             this.chkSubcollection.TabIndex = 23;
             this.chkSubcollection.Text = "واحد";
             this.chkSubcollection.UseVisualStyleBackColor = true;
@@ -650,10 +661,10 @@
             this.chkCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkCollection.AutoSize = true;
             this.chkCollection.ForeColor = System.Drawing.Color.White;
-            this.chkCollection.Location = new System.Drawing.Point(973, 19);
+            this.chkCollection.Location = new System.Drawing.Point(996, 19);
             this.chkCollection.Name = "chkCollection";
             this.chkCollection.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkCollection.Size = new System.Drawing.Size(124, 33);
+            this.chkCollection.Size = new System.Drawing.Size(101, 28);
             this.chkCollection.TabIndex = 22;
             this.chkCollection.Text = "کشت و صنعت";
             this.chkCollection.UseVisualStyleBackColor = true;
@@ -663,10 +674,10 @@
             this.chkCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkCompany.AutoSize = true;
             this.chkCompany.ForeColor = System.Drawing.Color.White;
-            this.chkCompany.Location = new System.Drawing.Point(1140, 19);
+            this.chkCompany.Location = new System.Drawing.Point(1154, 19);
             this.chkCompany.Name = "chkCompany";
             this.chkCompany.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkCompany.Size = new System.Drawing.Size(75, 33);
+            this.chkCompany.Size = new System.Drawing.Size(61, 28);
             this.chkCompany.TabIndex = 21;
             this.chkCompany.Text = "شرکت";
             this.chkCompany.UseVisualStyleBackColor = true;
@@ -677,7 +688,7 @@
             this.tpcChart.Controls.Add(this.grpChartControls);
             this.tpcChart.Location = new System.Drawing.Point(-10000, -10000);
             this.tpcChart.Name = "tpcChart";
-            this.tpcChart.Size = new System.Drawing.Size(1257, 715);
+            this.tpcChart.Size = new System.Drawing.Size(942, 496);
             // 
             // chtChart
             // 
@@ -802,7 +813,7 @@
             this.chtChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chtChart.Location = new System.Drawing.Point(0, 99);
             this.chtChart.Name = "chtChart";
-            this.chtChart.Size = new System.Drawing.Size(1257, 616);
+            this.chtChart.Size = new System.Drawing.Size(942, 397);
             this.chtChart.TabIndex = 1;
             this.chtChart.Visible = false;
             // 
@@ -814,7 +825,7 @@
             this.grpChartControls.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpChartControls.Location = new System.Drawing.Point(0, 0);
             this.grpChartControls.Name = "grpChartControls";
-            this.grpChartControls.Size = new System.Drawing.Size(1257, 99);
+            this.grpChartControls.Size = new System.Drawing.Size(942, 99);
             this.grpChartControls.TabIndex = 0;
             // 
             // grpSourceControls
@@ -825,7 +836,7 @@
             this.grpSourceControls.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpSourceControls.Location = new System.Drawing.Point(1, 0);
             this.grpSourceControls.Name = "grpSourceControls";
-            this.grpSourceControls.Size = new System.Drawing.Size(909, 98);
+            this.grpSourceControls.Size = new System.Drawing.Size(594, 98);
             this.grpSourceControls.TabIndex = 1;
             this.grpSourceControls.Text = "groupBox1";
             // 
@@ -834,10 +845,10 @@
             this.rdbWarehouseType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbWarehouseType.AutoSize = true;
             this.rdbWarehouseType.ForeColor = System.Drawing.Color.White;
-            this.rdbWarehouseType.Location = new System.Drawing.Point(679, 23);
+            this.rdbWarehouseType.Location = new System.Drawing.Point(694, 23);
             this.rdbWarehouseType.Name = "rdbWarehouseType";
             this.rdbWarehouseType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbWarehouseType.Size = new System.Drawing.Size(82, 33);
+            this.rdbWarehouseType.Size = new System.Drawing.Size(67, 28);
             this.rdbWarehouseType.TabIndex = 13;
             this.rdbWarehouseType.Text = "نوع انبار";
             this.rdbWarehouseType.UseVisualStyleBackColor = true;
@@ -848,10 +859,10 @@
             this.rdbWarehouseUseType.AutoSize = true;
             this.rdbWarehouseUseType.Checked = true;
             this.rdbWarehouseUseType.ForeColor = System.Drawing.Color.White;
-            this.rdbWarehouseUseType.Location = new System.Drawing.Point(793, 23);
+            this.rdbWarehouseUseType.Location = new System.Drawing.Point(812, 23);
             this.rdbWarehouseUseType.Name = "rdbWarehouseUseType";
             this.rdbWarehouseUseType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbWarehouseUseType.Size = new System.Drawing.Size(101, 33);
+            this.rdbWarehouseUseType.Size = new System.Drawing.Size(82, 28);
             this.rdbWarehouseUseType.TabIndex = 15;
             this.rdbWarehouseUseType.TabStop = true;
             this.rdbWarehouseUseType.Text = "نوع کاربری";
@@ -865,7 +876,7 @@
             this.grpCompanyControls.Controls.Add(this.rdbCollection);
             this.grpCompanyControls.Controls.Add(this.rdbPart);
             this.grpCompanyControls.Dock = System.Windows.Forms.DockStyle.Right;
-            this.grpCompanyControls.Location = new System.Drawing.Point(910, 0);
+            this.grpCompanyControls.Location = new System.Drawing.Point(595, 0);
             this.grpCompanyControls.Name = "grpCompanyControls";
             this.grpCompanyControls.Size = new System.Drawing.Size(346, 98);
             this.grpCompanyControls.TabIndex = 0;
@@ -876,10 +887,10 @@
             this.rdbCompany.AutoSize = true;
             this.rdbCompany.Checked = true;
             this.rdbCompany.ForeColor = System.Drawing.Color.White;
-            this.rdbCompany.Location = new System.Drawing.Point(234, 22);
+            this.rdbCompany.Location = new System.Drawing.Point(248, 22);
             this.rdbCompany.Name = "rdbCompany";
             this.rdbCompany.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbCompany.Size = new System.Drawing.Size(74, 33);
+            this.rdbCompany.Size = new System.Drawing.Size(60, 28);
             this.rdbCompany.TabIndex = 4;
             this.rdbCompany.TabStop = true;
             this.rdbCompany.Text = "شرکت";
@@ -890,10 +901,10 @@
             this.rdbSubcollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbSubcollection.AutoSize = true;
             this.rdbSubcollection.ForeColor = System.Drawing.Color.White;
-            this.rdbSubcollection.Location = new System.Drawing.Point(92, 22);
+            this.rdbSubcollection.Location = new System.Drawing.Point(103, 22);
             this.rdbSubcollection.Name = "rdbSubcollection";
             this.rdbSubcollection.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbSubcollection.Size = new System.Drawing.Size(62, 33);
+            this.rdbSubcollection.Size = new System.Drawing.Size(51, 28);
             this.rdbSubcollection.TabIndex = 6;
             this.rdbSubcollection.TabStop = true;
             this.rdbSubcollection.Text = "واحد";
@@ -904,10 +915,10 @@
             this.rdbCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbCollection.AutoSize = true;
             this.rdbCollection.ForeColor = System.Drawing.Color.White;
-            this.rdbCollection.Location = new System.Drawing.Point(185, 57);
+            this.rdbCollection.Location = new System.Drawing.Point(208, 57);
             this.rdbCollection.Name = "rdbCollection";
             this.rdbCollection.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbCollection.Size = new System.Drawing.Size(123, 33);
+            this.rdbCollection.Size = new System.Drawing.Size(100, 28);
             this.rdbCollection.TabIndex = 5;
             this.rdbCollection.Text = "کشت و صنعت";
             this.rdbCollection.UseVisualStyleBackColor = true;
@@ -917,10 +928,10 @@
             this.rdbPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbPart.AutoSize = true;
             this.rdbPart.ForeColor = System.Drawing.Color.White;
-            this.rdbPart.Location = new System.Drawing.Point(55, 57);
+            this.rdbPart.Location = new System.Drawing.Point(73, 57);
             this.rdbPart.Name = "rdbPart";
             this.rdbPart.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbPart.Size = new System.Drawing.Size(99, 33);
+            this.rdbPart.Size = new System.Drawing.Size(81, 28);
             this.rdbPart.TabIndex = 7;
             this.rdbPart.TabStop = true;
             this.rdbPart.Text = "واحد فرعی";
@@ -940,7 +951,7 @@
             this.tac.Location = new System.Drawing.Point(1, 0);
             this.tac.Name = "tac";
             this.tac.SharedControlsPage = this.tbcMain;
-            this.tac.Size = new System.Drawing.Size(1259, 753);
+            this.tac.Size = new System.Drawing.Size(944, 527);
             this.tac.Style = Infragistics.Win.UltraWinTabControl.UltraTabControlStyle.Flat;
             this.tac.TabIndex = 16;
             this.tac.TabOrientation = Infragistics.Win.UltraWinTabs.TabOrientation.TopRight;
@@ -964,14 +975,13 @@
             // 
             this.tbcMain.Location = new System.Drawing.Point(-10000, -10000);
             this.tbcMain.Name = "tbcMain";
-            this.tbcMain.Size = new System.Drawing.Size(1257, 715);
+            this.tbcMain.Size = new System.Drawing.Size(942, 496);
             // 
             // frmWarehouseRpt
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
-            this.ClientSize = new System.Drawing.Size(1261, 919);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(946, 703);
             this.FormMessage = "";
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmWarehouseRpt";
             ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).EndInit();

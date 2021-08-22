@@ -296,6 +296,18 @@ namespace Baran.Classes.Common
                             break;
                         }
                     #endregion
+                    #region Land
+                    case PublicEnum.EnmComboSource.srcLand:
+                        {
+                            BaranDataAccess.Common.dstCommon LandDst;
+                            LandDst = BaranDataAccess.Common.dstCommon.LandByUserID(CurrentUser.Instance.UserID);
+
+                            ComboName.DataSource = LandDst.spr_src_LandByUserID_Select;
+                            ComboName.ValueMember = LandDst.spr_src_LandByUserID_Select.LandIDColumn.ColumnName;
+                            ComboName.DisplayMember = LandDst.spr_src_LandByUserID_Select.NameColumn.ColumnName;
+                            break;
+                        }
+                    #endregion
                     #region Cultivar
                     case PublicEnum.EnmComboSource.srcCultivar:
                         {

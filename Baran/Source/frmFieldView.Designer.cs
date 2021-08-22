@@ -784,13 +784,12 @@
             this.imageListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(94)))), ((int)(((byte)(112)))));
             this.imageListView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imageListView1.DefaultImage = ((System.Drawing.Image)(resources.GetObject("imageListView1.DefaultImage")));
-            this.imageListView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.imageListView1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("imageListView1.ErrorImage")));
             this.imageListView1.ForeColor = System.Drawing.Color.White;
             this.imageListView1.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.imageListView1.Location = new System.Drawing.Point(1, 0);
             this.imageListView1.Name = "imageListView1";
-            this.imageListView1.Size = new System.Drawing.Size(561, 124);
+            this.imageListView1.Size = new System.Drawing.Size(435, 124);
             this.imageListView1.TabIndex = 0;
             this.imageListView1.Text = "";
             this.imageListView1.ItemDoubleClick += new Manina.Windows.Forms.ItemDoubleClickEventHandler(this.imageListView1_ItemDoubleClick);
@@ -816,7 +815,7 @@
             this.MainMap.LevelsKeepInMemmory = 5;
             this.MainMap.Location = new System.Drawing.Point(1, 0);
             this.MainMap.MarkersEnabled = true;
-            this.MainMap.MaxZoom = 18;
+            this.MainMap.MaxZoom = 20;
             this.MainMap.MinZoom = 1;
             this.MainMap.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
             this.MainMap.Name = "MainMap";

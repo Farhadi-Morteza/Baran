@@ -56,7 +56,7 @@
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("spr_src_Field_Rpt_Select", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RowID", 0);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FreeSpace", 1);
-            Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance34 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance57 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance58 = new Infragistics.Win.Appearance();
@@ -84,6 +84,7 @@
             this.tpcMap = new Infragistics.Win.UltraWinTabControl.UltraTabPageControl();
             this.MainMap = new Demo.WindowsForms.Map();
             this.grpControls = new Baran.Windows.Forms.GroupBox();
+            this.chkField = new Baran.Windows.Forms.CheckBox.CheckBox();
             this.chkChangeUse = new Baran.Windows.Forms.CheckBox.CheckBox();
             this.checkBox2 = new Baran.Windows.Forms.CheckBox.CheckBox();
             this.checkBox1 = new Baran.Windows.Forms.CheckBox.CheckBox();
@@ -125,6 +126,11 @@
             this.grpChartControls = new Baran.Windows.Forms.GroupBox();
             this.grpSourceControls = new Baran.Windows.Forms.GroupBox();
             this.rdbTexture = new System.Windows.Forms.RadioButton();
+            this.grpCompanyControls = new Baran.Windows.Forms.GroupBox();
+            this.rdbCompany = new System.Windows.Forms.RadioButton();
+            this.rdbSubcollection = new System.Windows.Forms.RadioButton();
+            this.rdbCollection = new System.Windows.Forms.RadioButton();
+            this.rdbPart = new System.Windows.Forms.RadioButton();
             this.rdbProvince = new System.Windows.Forms.RadioButton();
             this.rdbSalability = new System.Windows.Forms.RadioButton();
             this.rdbOpposition = new System.Windows.Forms.RadioButton();
@@ -133,11 +139,6 @@
             this.rdbTownship = new System.Windows.Forms.RadioButton();
             this.rdbCity = new System.Windows.Forms.RadioButton();
             this.rdbOwnership = new System.Windows.Forms.RadioButton();
-            this.grpCompanyControls = new Baran.Windows.Forms.GroupBox();
-            this.rdbCompany = new System.Windows.Forms.RadioButton();
-            this.rdbSubcollection = new System.Windows.Forms.RadioButton();
-            this.rdbCollection = new System.Windows.Forms.RadioButton();
-            this.rdbPart = new System.Windows.Forms.RadioButton();
             this.tac = new Baran.Windows.Forms.ultraTabControl();
             this.tbcMain = new Infragistics.Win.UltraWinTabControl.UltraTabSharedControlsPage();
             ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
@@ -182,12 +183,24 @@
             // 
             // grpButons
             // 
-            this.grpButons.Location = new System.Drawing.Point(0, 807);
-            this.grpButons.Size = new System.Drawing.Size(1291, 67);
+            this.grpButons.Location = new System.Drawing.Point(0, 783);
+            this.grpButons.Size = new System.Drawing.Size(1211, 67);
             // 
             // lblLine2
             // 
-            this.lblLine2.Size = new System.Drawing.Size(1289, 3);
+            this.lblLine2.Size = new System.Drawing.Size(1209, 3);
+            // 
+            // grpHeader
+            // 
+            this.grpHeader.Size = new System.Drawing.Size(1211, 75);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(1145, 8);
+            // 
+            // lblCaption
+            // 
+            this.lblCaption.Location = new System.Drawing.Point(839, 21);
             // 
             // lblMessage
             // 
@@ -196,21 +209,21 @@
             // 
             // lblLine1
             // 
-            this.lblLine1.Size = new System.Drawing.Size(1289, 3);
+            this.lblLine1.Size = new System.Drawing.Size(1209, 3);
             // 
             // grpMessage
             // 
-            this.grpMessage.Size = new System.Drawing.Size(1291, 30);
+            this.grpMessage.Size = new System.Drawing.Size(1211, 30);
             // 
             // lblLine3
             // 
-            this.lblLine3.Location = new System.Drawing.Point(1, 698);
-            this.lblLine3.Size = new System.Drawing.Size(1289, 3);
+            this.lblLine3.Location = new System.Drawing.Point(1, 674);
+            this.lblLine3.Size = new System.Drawing.Size(1209, 3);
             // 
             // grpMain
             // 
             this.grpMain.Controls.Add(this.tac);
-            this.grpMain.Size = new System.Drawing.Size(1291, 702);
+            this.grpMain.Size = new System.Drawing.Size(1211, 678);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
             this.grpMain.Controls.SetChildIndex(this.tac, 0);
             // 
@@ -218,9 +231,9 @@
             // 
             this.tpcMap.Controls.Add(this.MainMap);
             this.tpcMap.Controls.Add(this.grpControls);
-            this.tpcMap.Location = new System.Drawing.Point(1, 37);
+            this.tpcMap.Location = new System.Drawing.Point(1, 30);
             this.tpcMap.Name = "tpcMap";
-            this.tpcMap.Size = new System.Drawing.Size(1287, 660);
+            this.tpcMap.Size = new System.Drawing.Size(1207, 643);
             // 
             // MainMap
             // 
@@ -233,7 +246,7 @@
             this.MainMap.LevelsKeepInMemmory = 5;
             this.MainMap.Location = new System.Drawing.Point(0, 0);
             this.MainMap.MarkersEnabled = true;
-            this.MainMap.MaxZoom = 18;
+            this.MainMap.MaxZoom = 20;
             this.MainMap.MinZoom = 1;
             this.MainMap.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
             this.MainMap.Name = "MainMap";
@@ -244,13 +257,14 @@
             this.MainMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.MainMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.MainMap.ShowTileGridLines = false;
-            this.MainMap.Size = new System.Drawing.Size(1020, 660);
+            this.MainMap.Size = new System.Drawing.Size(948, 643);
             this.MainMap.TabIndex = 1;
             this.MainMap.Zoom = 5D;
             // 
             // grpControls
             // 
             this.grpControls.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
+            this.grpControls.Controls.Add(this.chkField);
             this.grpControls.Controls.Add(this.chkChangeUse);
             this.grpControls.Controls.Add(this.checkBox2);
             this.grpControls.Controls.Add(this.checkBox1);
@@ -272,54 +286,75 @@
             this.grpControls.Controls.Add(this.cmbCollection);
             this.grpControls.Dock = System.Windows.Forms.DockStyle.Right;
             this.grpControls.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.grpControls.Location = new System.Drawing.Point(1020, 0);
+            this.grpControls.Location = new System.Drawing.Point(948, 0);
             this.grpControls.Name = "grpControls";
-            this.grpControls.Size = new System.Drawing.Size(267, 660);
+            this.grpControls.Size = new System.Drawing.Size(259, 643);
             this.grpControls.TabIndex = 0;
+            this.grpControls.Click += new System.EventHandler(this.grpControls_Click);
+            // 
+            // chkField
+            // 
+            this.chkField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkField.AutoSize = true;
+            this.chkField.Checked = true;
+            this.chkField.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkField.ForeColor = System.Drawing.Color.Yellow;
+            this.chkField.Location = new System.Drawing.Point(149, 22);
+            this.chkField.Name = "chkField";
+            this.chkField.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chkField.Size = new System.Drawing.Size(102, 17);
+            this.chkField.TabIndex = 25;
+            this.chkField.Text = "به تفکیک قطعات";
+            this.chkField.UseVisualStyleBackColor = true;
+            this.chkField.CheckedChanged += new System.EventHandler(this.chkField_CheckedChanged);
             // 
             // chkChangeUse
             // 
+            this.chkChangeUse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkChangeUse.AutoSize = true;
             this.chkChangeUse.ForeColor = System.Drawing.Color.White;
-            this.chkChangeUse.Location = new System.Drawing.Point(124, 539);
+            this.chkChangeUse.Location = new System.Drawing.Point(142, 517);
             this.chkChangeUse.Name = "chkChangeUse";
             this.chkChangeUse.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkChangeUse.Size = new System.Drawing.Size(133, 21);
+            this.chkChangeUse.Size = new System.Drawing.Size(109, 17);
             this.chkChangeUse.TabIndex = 10;
             this.chkChangeUse.Text = "امکان تغییر کاربری";
             this.chkChangeUse.UseVisualStyleBackColor = true;
             // 
             // checkBox2
             // 
+            this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox2.AutoSize = true;
             this.checkBox2.ForeColor = System.Drawing.Color.White;
-            this.checkBox2.Location = new System.Drawing.Point(151, 513);
+            this.checkBox2.Location = new System.Drawing.Point(165, 493);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox2.Size = new System.Drawing.Size(106, 21);
+            this.checkBox2.Size = new System.Drawing.Size(86, 17);
             this.checkBox2.TabIndex = 9;
             this.checkBox2.Text = "قابلیت فروش";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // checkBox1
             // 
+            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox1.AutoSize = true;
             this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(154, 487);
+            this.checkBox1.Location = new System.Drawing.Point(165, 469);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox1.Size = new System.Drawing.Size(103, 21);
+            this.checkBox1.Size = new System.Drawing.Size(86, 17);
             this.checkBox1.TabIndex = 8;
             this.checkBox1.Text = "دارای معارض";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance5.ForeColor = System.Drawing.Color.White;
             appearance5.TextHAlignAsString = "Right";
             appearance5.TextVAlignAsString = "Middle";
             this.label8.Appearance = appearance5;
-            this.label8.Location = new System.Drawing.Point(157, 428);
+            this.label8.Location = new System.Drawing.Point(151, 410);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label8.Size = new System.Drawing.Size(100, 23);
@@ -328,7 +363,8 @@
             // 
             // cmbFieldUseType
             // 
-            this.cmbFieldUseType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbFieldUseType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             appearance6.BackColor = System.Drawing.Color.Transparent;
             appearance6.BorderColor = System.Drawing.Color.LightGray;
             appearance6.ForeColor = System.Drawing.Color.White;
@@ -344,19 +380,20 @@
             appearance7.TextHAlignAsString = "Right";
             appearance7.TextVAlignAsString = "Middle";
             this.cmbFieldUseType.ItemAppearance = appearance7;
-            this.cmbFieldUseType.Location = new System.Drawing.Point(18, 456);
+            this.cmbFieldUseType.Location = new System.Drawing.Point(19, 433);
             this.cmbFieldUseType.Name = "cmbFieldUseType";
             this.cmbFieldUseType.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbFieldUseType.Size = new System.Drawing.Size(239, 26);
+            this.cmbFieldUseType.Size = new System.Drawing.Size(230, 22);
             this.cmbFieldUseType.TabIndex = 7;
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance3.ForeColor = System.Drawing.Color.White;
             appearance3.TextHAlignAsString = "Right";
             appearance3.TextVAlignAsString = "Middle";
             this.label7.Appearance = appearance3;
-            this.label7.Location = new System.Drawing.Point(157, 369);
+            this.label7.Location = new System.Drawing.Point(151, 358);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label7.Size = new System.Drawing.Size(100, 23);
@@ -365,7 +402,8 @@
             // 
             // cmbOwnership
             // 
-            this.cmbOwnership.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbOwnership.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             appearance4.BackColor = System.Drawing.Color.Transparent;
             appearance4.BorderColor = System.Drawing.Color.LightGray;
             appearance4.ForeColor = System.Drawing.Color.White;
@@ -381,19 +419,20 @@
             appearance10.TextHAlignAsString = "Right";
             appearance10.TextVAlignAsString = "Middle";
             this.cmbOwnership.ItemAppearance = appearance10;
-            this.cmbOwnership.Location = new System.Drawing.Point(18, 397);
+            this.cmbOwnership.Location = new System.Drawing.Point(19, 381);
             this.cmbOwnership.Name = "cmbOwnership";
             this.cmbOwnership.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbOwnership.Size = new System.Drawing.Size(239, 26);
+            this.cmbOwnership.Size = new System.Drawing.Size(230, 22);
             this.cmbOwnership.TabIndex = 6;
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance11.ForeColor = System.Drawing.Color.White;
             appearance11.TextHAlignAsString = "Right";
             appearance11.TextVAlignAsString = "Middle";
             this.label6.Appearance = appearance11;
-            this.label6.Location = new System.Drawing.Point(157, 310);
+            this.label6.Location = new System.Drawing.Point(151, 306);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label6.Size = new System.Drawing.Size(100, 23);
@@ -402,7 +441,8 @@
             // 
             // cmbSoilTexture
             // 
-            this.cmbSoilTexture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbSoilTexture.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             appearance13.BackColor = System.Drawing.Color.Transparent;
             appearance13.BorderColor = System.Drawing.Color.LightGray;
             appearance13.ForeColor = System.Drawing.Color.White;
@@ -418,19 +458,20 @@
             appearance15.TextHAlignAsString = "Right";
             appearance15.TextVAlignAsString = "Middle";
             this.cmbSoilTexture.ItemAppearance = appearance15;
-            this.cmbSoilTexture.Location = new System.Drawing.Point(18, 338);
+            this.cmbSoilTexture.Location = new System.Drawing.Point(19, 329);
             this.cmbSoilTexture.Name = "cmbSoilTexture";
             this.cmbSoilTexture.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbSoilTexture.Size = new System.Drawing.Size(239, 26);
+            this.cmbSoilTexture.Size = new System.Drawing.Size(230, 22);
             this.cmbSoilTexture.TabIndex = 5;
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance17.ForeColor = System.Drawing.Color.White;
             appearance17.TextHAlignAsString = "Right";
             appearance17.TextVAlignAsString = "Middle";
             this.label5.Appearance = appearance17;
-            this.label5.Location = new System.Drawing.Point(157, 251);
+            this.label5.Location = new System.Drawing.Point(151, 254);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label5.Size = new System.Drawing.Size(100, 23);
@@ -439,7 +480,8 @@
             // 
             // cmbTownship
             // 
-            this.cmbTownship.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbTownship.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             appearance19.BackColor = System.Drawing.Color.Transparent;
             appearance19.BorderColor = System.Drawing.Color.LightGray;
             appearance19.ForeColor = System.Drawing.Color.White;
@@ -455,19 +497,20 @@
             appearance21.TextHAlignAsString = "Right";
             appearance21.TextVAlignAsString = "Middle";
             this.cmbTownship.ItemAppearance = appearance21;
-            this.cmbTownship.Location = new System.Drawing.Point(18, 279);
+            this.cmbTownship.Location = new System.Drawing.Point(19, 277);
             this.cmbTownship.Name = "cmbTownship";
             this.cmbTownship.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbTownship.Size = new System.Drawing.Size(239, 26);
+            this.cmbTownship.Size = new System.Drawing.Size(230, 22);
             this.cmbTownship.TabIndex = 4;
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance22.ForeColor = System.Drawing.Color.White;
             appearance22.TextHAlignAsString = "Right";
             appearance22.TextVAlignAsString = "Middle";
             this.label4.Appearance = appearance22;
-            this.label4.Location = new System.Drawing.Point(157, 192);
+            this.label4.Location = new System.Drawing.Point(151, 202);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label4.Size = new System.Drawing.Size(100, 23);
@@ -476,7 +519,8 @@
             // 
             // cmbProvince
             // 
-            this.cmbProvince.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbProvince.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             appearance23.BackColor = System.Drawing.Color.Transparent;
             appearance23.BorderColor = System.Drawing.Color.LightGray;
             appearance23.ForeColor = System.Drawing.Color.White;
@@ -492,20 +536,21 @@
             appearance24.TextHAlignAsString = "Right";
             appearance24.TextVAlignAsString = "Middle";
             this.cmbProvince.ItemAppearance = appearance24;
-            this.cmbProvince.Location = new System.Drawing.Point(18, 220);
+            this.cmbProvince.Location = new System.Drawing.Point(19, 225);
             this.cmbProvince.Name = "cmbProvince";
             this.cmbProvince.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbProvince.Size = new System.Drawing.Size(239, 26);
+            this.cmbProvince.Size = new System.Drawing.Size(230, 22);
             this.cmbProvince.TabIndex = 3;
             this.cmbProvince.ValueChanged += new System.EventHandler(this.cmbProvince_ValueChanged);
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance25.ForeColor = System.Drawing.Color.White;
             appearance25.TextHAlignAsString = "Right";
             appearance25.TextVAlignAsString = "Middle";
             this.label3.Appearance = appearance25;
-            this.label3.Location = new System.Drawing.Point(157, 133);
+            this.label3.Location = new System.Drawing.Point(151, 150);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(100, 23);
@@ -514,7 +559,8 @@
             // 
             // cmbPart
             // 
-            this.cmbPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbPart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             appearance26.BackColor = System.Drawing.Color.Transparent;
             appearance26.BorderColor = System.Drawing.Color.LightGray;
             appearance26.ForeColor = System.Drawing.Color.White;
@@ -530,19 +576,20 @@
             appearance27.TextHAlignAsString = "Right";
             appearance27.TextVAlignAsString = "Middle";
             this.cmbPart.ItemAppearance = appearance27;
-            this.cmbPart.Location = new System.Drawing.Point(18, 161);
+            this.cmbPart.Location = new System.Drawing.Point(19, 173);
             this.cmbPart.Name = "cmbPart";
             this.cmbPart.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbPart.Size = new System.Drawing.Size(239, 26);
+            this.cmbPart.Size = new System.Drawing.Size(230, 22);
             this.cmbPart.TabIndex = 2;
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance28.ForeColor = System.Drawing.Color.White;
             appearance28.TextHAlignAsString = "Right";
             appearance28.TextVAlignAsString = "Middle";
             this.label2.Appearance = appearance28;
-            this.label2.Location = new System.Drawing.Point(157, 74);
+            this.label2.Location = new System.Drawing.Point(151, 98);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(100, 23);
@@ -551,7 +598,8 @@
             // 
             // cmbSubcollection
             // 
-            this.cmbSubcollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbSubcollection.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             appearance29.BackColor = System.Drawing.Color.Transparent;
             appearance29.BorderColor = System.Drawing.Color.LightGray;
             appearance29.ForeColor = System.Drawing.Color.White;
@@ -567,19 +615,21 @@
             appearance30.TextHAlignAsString = "Right";
             appearance30.TextVAlignAsString = "Middle";
             this.cmbSubcollection.ItemAppearance = appearance30;
-            this.cmbSubcollection.Location = new System.Drawing.Point(18, 102);
+            this.cmbSubcollection.Location = new System.Drawing.Point(19, 121);
             this.cmbSubcollection.Name = "cmbSubcollection";
             this.cmbSubcollection.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbSubcollection.Size = new System.Drawing.Size(239, 26);
+            this.cmbSubcollection.Size = new System.Drawing.Size(230, 22);
             this.cmbSubcollection.TabIndex = 1;
+            this.cmbSubcollection.ValueChanged += new System.EventHandler(this.cmbSubcollection_ValueChanged);
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance31.ForeColor = System.Drawing.Color.White;
             appearance31.TextHAlignAsString = "Right";
             appearance31.TextVAlignAsString = "Middle";
             this.label1.Appearance = appearance31;
-            this.label1.Location = new System.Drawing.Point(157, 15);
+            this.label1.Location = new System.Drawing.Point(151, 45);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(100, 23);
@@ -588,7 +638,8 @@
             // 
             // cmbCollection
             // 
-            this.cmbCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbCollection.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             appearance32.BackColor = System.Drawing.Color.Transparent;
             appearance32.BorderColor = System.Drawing.Color.LightGray;
             appearance32.ForeColor = System.Drawing.Color.White;
@@ -604,11 +655,12 @@
             appearance33.TextHAlignAsString = "Right";
             appearance33.TextVAlignAsString = "Middle";
             this.cmbCollection.ItemAppearance = appearance33;
-            this.cmbCollection.Location = new System.Drawing.Point(18, 43);
+            this.cmbCollection.Location = new System.Drawing.Point(19, 69);
             this.cmbCollection.Name = "cmbCollection";
             this.cmbCollection.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbCollection.Size = new System.Drawing.Size(239, 26);
+            this.cmbCollection.Size = new System.Drawing.Size(230, 22);
             this.cmbCollection.TabIndex = 0;
+            this.cmbCollection.ValueChanged += new System.EventHandler(this.cmbCollection_ValueChanged);
             // 
             // tpcTable
             // 
@@ -616,7 +668,7 @@
             this.tpcTable.Controls.Add(this.grpTableControls);
             this.tpcTable.Location = new System.Drawing.Point(-10000, -10000);
             this.tpcTable.Name = "tpcTable";
-            this.tpcTable.Size = new System.Drawing.Size(1287, 660);
+            this.tpcTable.Size = new System.Drawing.Size(1207, 643);
             // 
             // grdItem
             // 
@@ -633,18 +685,18 @@
             ultraGridColumn1.Header.Caption = "ردیف";
             ultraGridColumn1.Header.VisiblePosition = 1;
             ultraGridColumn1.TabStop = false;
-            ultraGridColumn1.Width = 48;
+            ultraGridColumn1.Width = 41;
             ultraGridColumn2.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn2.Header.Caption = "";
             ultraGridColumn2.Header.VisiblePosition = 0;
             ultraGridColumn2.MergedCellStyle = Infragistics.Win.UltraWinGrid.MergedCellStyle.Always;
-            ultraGridColumn2.Width = 1191;
+            ultraGridColumn2.Width = 1125;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2});
             ultraGridBand1.Override.SummaryDisplayArea = Infragistics.Win.UltraWinGrid.SummaryDisplayAreas.BottomFixed;
-            appearance20.ForeColor = System.Drawing.Color.DarkBlue;
-            ultraGridBand1.Override.SummaryValueAppearance = appearance20;
+            appearance34.ForeColor = System.Drawing.Color.DarkBlue;
+            ultraGridBand1.Override.SummaryValueAppearance = appearance34;
             this.grdItem.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdItem.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
             appearance8.ForeColor = System.Drawing.Color.DarkBlue;
@@ -755,8 +807,8 @@
             this.grdItem.InputLanguage = Baran.Windows.Forms.InputLanguage.Farsi;
             this.grdItem.Location = new System.Drawing.Point(0, 99);
             this.grdItem.Name = "grdItem";
-            this.grdItem.Size = new System.Drawing.Size(1287, 561);
-            this.grdItem.SumColumnsWidth = 96;
+            this.grdItem.Size = new System.Drawing.Size(1207, 544);
+            this.grdItem.SumColumnsWidth = 82;
             this.grdItem.TabIndex = 1;
             // 
             // dstReport1
@@ -783,7 +835,7 @@
             this.grpTableControls.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpTableControls.Location = new System.Drawing.Point(0, 0);
             this.grpTableControls.Name = "grpTableControls";
-            this.grpTableControls.Size = new System.Drawing.Size(1287, 99);
+            this.grpTableControls.Size = new System.Drawing.Size(1207, 99);
             this.grpTableControls.TabIndex = 0;
             // 
             // chkSoilTexture
@@ -791,10 +843,10 @@
             this.chkSoilTexture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkSoilTexture.AutoSize = true;
             this.chkSoilTexture.ForeColor = System.Drawing.Color.White;
-            this.chkSoilTexture.Location = new System.Drawing.Point(1033, 56);
+            this.chkSoilTexture.Location = new System.Drawing.Point(1005, 55);
             this.chkSoilTexture.Name = "chkSoilTexture";
             this.chkSoilTexture.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkSoilTexture.Size = new System.Drawing.Size(99, 33);
+            this.chkSoilTexture.Size = new System.Drawing.Size(81, 28);
             this.chkSoilTexture.TabIndex = 33;
             this.chkSoilTexture.Text = "بافت خاک";
             this.chkSoilTexture.UseVisualStyleBackColor = true;
@@ -804,10 +856,10 @@
             this.checkBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox3.AutoSize = true;
             this.checkBox3.ForeColor = System.Drawing.Color.White;
-            this.checkBox3.Location = new System.Drawing.Point(422, 56);
+            this.checkBox3.Location = new System.Drawing.Point(459, 55);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox3.Size = new System.Drawing.Size(152, 33);
+            this.checkBox3.Size = new System.Drawing.Size(123, 28);
             this.checkBox3.TabIndex = 32;
             this.checkBox3.Text = "امکان تغییر کاربری";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -817,10 +869,10 @@
             this.chkSalability.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkSalability.AutoSize = true;
             this.chkSalability.ForeColor = System.Drawing.Color.White;
-            this.chkSalability.Location = new System.Drawing.Point(162, 56);
+            this.chkSalability.Location = new System.Drawing.Point(234, 55);
             this.chkSalability.Name = "chkSalability";
             this.chkSalability.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkSalability.Size = new System.Drawing.Size(115, 33);
+            this.chkSalability.Size = new System.Drawing.Size(94, 28);
             this.chkSalability.TabIndex = 31;
             this.chkSalability.Text = "قابلیت فروش";
             this.chkSalability.UseVisualStyleBackColor = true;
@@ -830,10 +882,10 @@
             this.chkOpposition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkOpposition.AutoSize = true;
             this.chkOpposition.ForeColor = System.Drawing.Color.White;
-            this.chkOpposition.Location = new System.Drawing.Point(292, 56);
+            this.chkOpposition.Location = new System.Drawing.Point(344, 55);
             this.chkOpposition.Name = "chkOpposition";
             this.chkOpposition.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkOpposition.Size = new System.Drawing.Size(115, 33);
+            this.chkOpposition.Size = new System.Drawing.Size(93, 28);
             this.chkOpposition.TabIndex = 30;
             this.chkOpposition.Text = "دارای معارض";
             this.chkOpposition.UseVisualStyleBackColor = true;
@@ -843,10 +895,10 @@
             this.chkCity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkCity.AutoSize = true;
             this.chkCity.ForeColor = System.Drawing.Color.White;
-            this.chkCity.Location = new System.Drawing.Point(589, 56);
+            this.chkCity.Location = new System.Drawing.Point(605, 55);
             this.chkCity.Name = "chkCity";
             this.chkCity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkCity.Size = new System.Drawing.Size(61, 33);
+            this.chkCity.Size = new System.Drawing.Size(49, 28);
             this.chkCity.TabIndex = 29;
             this.chkCity.Text = "شهر";
             this.chkCity.UseVisualStyleBackColor = true;
@@ -856,10 +908,10 @@
             this.chkTownship.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkTownship.AutoSize = true;
             this.chkTownship.ForeColor = System.Drawing.Color.White;
-            this.chkTownship.Location = new System.Drawing.Point(665, 56);
+            this.chkTownship.Location = new System.Drawing.Point(675, 55);
             this.chkTownship.Name = "chkTownship";
             this.chkTownship.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkTownship.Size = new System.Drawing.Size(93, 33);
+            this.chkTownship.Size = new System.Drawing.Size(75, 28);
             this.chkTownship.TabIndex = 28;
             this.chkTownship.Text = "شهرستان";
             this.chkTownship.UseVisualStyleBackColor = true;
@@ -869,10 +921,10 @@
             this.chkProvince.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkProvince.AutoSize = true;
             this.chkProvince.ForeColor = System.Drawing.Color.White;
-            this.chkProvince.Location = new System.Drawing.Point(807, 56);
+            this.chkProvince.Location = new System.Drawing.Point(803, 55);
             this.chkProvince.Name = "chkProvince";
             this.chkProvince.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkProvince.Size = new System.Drawing.Size(70, 33);
+            this.chkProvince.Size = new System.Drawing.Size(57, 28);
             this.chkProvince.TabIndex = 27;
             this.chkProvince.Text = "استان";
             this.chkProvince.UseVisualStyleBackColor = true;
@@ -882,10 +934,10 @@
             this.chkFieldUseType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkFieldUseType.AutoSize = true;
             this.chkFieldUseType.ForeColor = System.Drawing.Color.White;
-            this.chkFieldUseType.Location = new System.Drawing.Point(1143, 56);
+            this.chkFieldUseType.Location = new System.Drawing.Point(1105, 55);
             this.chkFieldUseType.Name = "chkFieldUseType";
             this.chkFieldUseType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkFieldUseType.Size = new System.Drawing.Size(102, 33);
+            this.chkFieldUseType.Size = new System.Drawing.Size(83, 28);
             this.chkFieldUseType.TabIndex = 26;
             this.chkFieldUseType.Text = "نوع کاربری";
             this.chkFieldUseType.UseVisualStyleBackColor = true;
@@ -895,10 +947,10 @@
             this.chkOwnership.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkOwnership.AutoSize = true;
             this.chkOwnership.ForeColor = System.Drawing.Color.White;
-            this.chkOwnership.Location = new System.Drawing.Point(894, 56);
+            this.chkOwnership.Location = new System.Drawing.Point(883, 55);
             this.chkOwnership.Name = "chkOwnership";
             this.chkOwnership.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkOwnership.Size = new System.Drawing.Size(104, 33);
+            this.chkOwnership.Size = new System.Drawing.Size(85, 28);
             this.chkOwnership.TabIndex = 25;
             this.chkOwnership.Text = "نوع مالکیت";
             this.chkOwnership.UseVisualStyleBackColor = true;
@@ -908,10 +960,10 @@
             this.chkPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkPart.AutoSize = true;
             this.chkPart.ForeColor = System.Drawing.Color.White;
-            this.chkPart.Location = new System.Drawing.Point(777, 22);
+            this.chkPart.Location = new System.Drawing.Point(778, 21);
             this.chkPart.Name = "chkPart";
             this.chkPart.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkPart.Size = new System.Drawing.Size(100, 33);
+            this.chkPart.Size = new System.Drawing.Size(82, 28);
             this.chkPart.TabIndex = 24;
             this.chkPart.Text = "واحد فرعی";
             this.chkPart.UseVisualStyleBackColor = true;
@@ -921,10 +973,10 @@
             this.chkSubcollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkSubcollection.AutoSize = true;
             this.chkSubcollection.ForeColor = System.Drawing.Color.White;
-            this.chkSubcollection.Location = new System.Drawing.Point(935, 22);
+            this.chkSubcollection.Location = new System.Drawing.Point(916, 21);
             this.chkSubcollection.Name = "chkSubcollection";
             this.chkSubcollection.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkSubcollection.Size = new System.Drawing.Size(63, 33);
+            this.chkSubcollection.Size = new System.Drawing.Size(52, 28);
             this.chkSubcollection.TabIndex = 23;
             this.chkSubcollection.Text = "واحد";
             this.chkSubcollection.UseVisualStyleBackColor = true;
@@ -934,10 +986,10 @@
             this.chkCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkCollection.AutoSize = true;
             this.chkCollection.ForeColor = System.Drawing.Color.White;
-            this.chkCollection.Location = new System.Drawing.Point(1008, 22);
+            this.chkCollection.Location = new System.Drawing.Point(985, 21);
             this.chkCollection.Name = "chkCollection";
             this.chkCollection.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkCollection.Size = new System.Drawing.Size(124, 33);
+            this.chkCollection.Size = new System.Drawing.Size(101, 28);
             this.chkCollection.TabIndex = 22;
             this.chkCollection.Text = "کشت و صنعت";
             this.chkCollection.UseVisualStyleBackColor = true;
@@ -947,10 +999,10 @@
             this.chkCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkCompany.AutoSize = true;
             this.chkCompany.ForeColor = System.Drawing.Color.White;
-            this.chkCompany.Location = new System.Drawing.Point(1170, 22);
+            this.chkCompany.Location = new System.Drawing.Point(1127, 21);
             this.chkCompany.Name = "chkCompany";
             this.chkCompany.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkCompany.Size = new System.Drawing.Size(75, 33);
+            this.chkCompany.Size = new System.Drawing.Size(61, 28);
             this.chkCompany.TabIndex = 21;
             this.chkCompany.Text = "شرکت";
             this.chkCompany.UseVisualStyleBackColor = true;
@@ -961,7 +1013,7 @@
             this.tpcChart.Controls.Add(this.grpChartControls);
             this.tpcChart.Location = new System.Drawing.Point(-10000, -10000);
             this.tpcChart.Name = "tpcChart";
-            this.tpcChart.Size = new System.Drawing.Size(1287, 660);
+            this.tpcChart.Size = new System.Drawing.Size(1207, 643);
             // 
             // chtChart
             // 
@@ -1086,7 +1138,7 @@
             this.chtChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chtChart.Location = new System.Drawing.Point(0, 99);
             this.chtChart.Name = "chtChart";
-            this.chtChart.Size = new System.Drawing.Size(1287, 561);
+            this.chtChart.Size = new System.Drawing.Size(1207, 544);
             this.chtChart.TabIndex = 1;
             this.chtChart.Visible = false;
             // 
@@ -1094,17 +1146,17 @@
             // 
             this.grpChartControls.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
             this.grpChartControls.Controls.Add(this.grpSourceControls);
-            this.grpChartControls.Controls.Add(this.grpCompanyControls);
             this.grpChartControls.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpChartControls.Location = new System.Drawing.Point(0, 0);
             this.grpChartControls.Name = "grpChartControls";
-            this.grpChartControls.Size = new System.Drawing.Size(1287, 99);
+            this.grpChartControls.Size = new System.Drawing.Size(1207, 99);
             this.grpChartControls.TabIndex = 0;
             // 
             // grpSourceControls
             // 
             this.grpSourceControls.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
             this.grpSourceControls.Controls.Add(this.rdbTexture);
+            this.grpSourceControls.Controls.Add(this.grpCompanyControls);
             this.grpSourceControls.Controls.Add(this.rdbProvince);
             this.grpSourceControls.Controls.Add(this.rdbSalability);
             this.grpSourceControls.Controls.Add(this.rdbOpposition);
@@ -1116,9 +1168,8 @@
             this.grpSourceControls.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpSourceControls.Location = new System.Drawing.Point(1, 0);
             this.grpSourceControls.Name = "grpSourceControls";
-            this.grpSourceControls.Size = new System.Drawing.Size(959, 98);
+            this.grpSourceControls.Size = new System.Drawing.Size(1205, 98);
             this.grpSourceControls.TabIndex = 1;
-            this.grpSourceControls.Text = "groupBox1";
             this.grpSourceControls.Click += new System.EventHandler(this.grpSourceControls_Click);
             // 
             // rdbTexture
@@ -1126,119 +1177,13 @@
             this.rdbTexture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbTexture.AutoSize = true;
             this.rdbTexture.ForeColor = System.Drawing.Color.White;
-            this.rdbTexture.Location = new System.Drawing.Point(730, 17);
+            this.rdbTexture.Location = new System.Drawing.Point(681, 19);
             this.rdbTexture.Name = "rdbTexture";
             this.rdbTexture.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbTexture.Size = new System.Drawing.Size(98, 33);
+            this.rdbTexture.Size = new System.Drawing.Size(80, 28);
             this.rdbTexture.TabIndex = 13;
             this.rdbTexture.Text = "بافت خاک";
             this.rdbTexture.UseVisualStyleBackColor = true;
-            // 
-            // rdbProvince
-            // 
-            this.rdbProvince.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdbProvince.AutoSize = true;
-            this.rdbProvince.ForeColor = System.Drawing.Color.White;
-            this.rdbProvince.Location = new System.Drawing.Point(630, 17);
-            this.rdbProvince.Name = "rdbProvince";
-            this.rdbProvince.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbProvince.Size = new System.Drawing.Size(69, 33);
-            this.rdbProvince.TabIndex = 17;
-            this.rdbProvince.Text = "استان";
-            this.rdbProvince.UseVisualStyleBackColor = true;
-            // 
-            // rdbSalability
-            // 
-            this.rdbSalability.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdbSalability.AutoSize = true;
-            this.rdbSalability.ForeColor = System.Drawing.Color.White;
-            this.rdbSalability.Location = new System.Drawing.Point(472, 58);
-            this.rdbSalability.Name = "rdbSalability";
-            this.rdbSalability.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbSalability.Size = new System.Drawing.Size(114, 33);
-            this.rdbSalability.TabIndex = 20;
-            this.rdbSalability.Text = "قابلیت فروش";
-            this.rdbSalability.UseVisualStyleBackColor = true;
-            // 
-            // rdbOpposition
-            // 
-            this.rdbOpposition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdbOpposition.AutoSize = true;
-            this.rdbOpposition.ForeColor = System.Drawing.Color.White;
-            this.rdbOpposition.Location = new System.Drawing.Point(714, 58);
-            this.rdbOpposition.Name = "rdbOpposition";
-            this.rdbOpposition.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbOpposition.Size = new System.Drawing.Size(114, 33);
-            this.rdbOpposition.TabIndex = 16;
-            this.rdbOpposition.Text = "دارای معارض";
-            this.rdbOpposition.UseVisualStyleBackColor = true;
-            // 
-            // rdbChangeUse
-            // 
-            this.rdbChangeUse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdbChangeUse.AutoSize = true;
-            this.rdbChangeUse.ForeColor = System.Drawing.Color.White;
-            this.rdbChangeUse.Location = new System.Drawing.Point(310, 17);
-            this.rdbChangeUse.Name = "rdbChangeUse";
-            this.rdbChangeUse.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbChangeUse.Size = new System.Drawing.Size(151, 33);
-            this.rdbChangeUse.TabIndex = 21;
-            this.rdbChangeUse.Text = "امکان تغییر کاربری";
-            this.rdbChangeUse.UseVisualStyleBackColor = true;
-            // 
-            // rdbFieldUseType
-            // 
-            this.rdbFieldUseType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdbFieldUseType.AutoSize = true;
-            this.rdbFieldUseType.Checked = true;
-            this.rdbFieldUseType.ForeColor = System.Drawing.Color.White;
-            this.rdbFieldUseType.Location = new System.Drawing.Point(843, 17);
-            this.rdbFieldUseType.Name = "rdbFieldUseType";
-            this.rdbFieldUseType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbFieldUseType.Size = new System.Drawing.Size(101, 33);
-            this.rdbFieldUseType.TabIndex = 15;
-            this.rdbFieldUseType.TabStop = true;
-            this.rdbFieldUseType.Text = "نوع کاربری";
-            this.rdbFieldUseType.UseVisualStyleBackColor = true;
-            // 
-            // rdbTownship
-            // 
-            this.rdbTownship.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdbTownship.AutoSize = true;
-            this.rdbTownship.ForeColor = System.Drawing.Color.White;
-            this.rdbTownship.Location = new System.Drawing.Point(607, 58);
-            this.rdbTownship.Name = "rdbTownship";
-            this.rdbTownship.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbTownship.Size = new System.Drawing.Size(92, 33);
-            this.rdbTownship.TabIndex = 18;
-            this.rdbTownship.Text = "شهرستان";
-            this.rdbTownship.UseVisualStyleBackColor = true;
-            // 
-            // rdbCity
-            // 
-            this.rdbCity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdbCity.AutoSize = true;
-            this.rdbCity.ForeColor = System.Drawing.Color.White;
-            this.rdbCity.Location = new System.Drawing.Point(526, 17);
-            this.rdbCity.Name = "rdbCity";
-            this.rdbCity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbCity.Size = new System.Drawing.Size(60, 33);
-            this.rdbCity.TabIndex = 19;
-            this.rdbCity.Text = "شهر";
-            this.rdbCity.UseVisualStyleBackColor = true;
-            // 
-            // rdbOwnership
-            // 
-            this.rdbOwnership.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdbOwnership.AutoSize = true;
-            this.rdbOwnership.ForeColor = System.Drawing.Color.White;
-            this.rdbOwnership.Location = new System.Drawing.Point(841, 58);
-            this.rdbOwnership.Name = "rdbOwnership";
-            this.rdbOwnership.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbOwnership.Size = new System.Drawing.Size(103, 33);
-            this.rdbOwnership.TabIndex = 14;
-            this.rdbOwnership.Text = "نوع مالکیت";
-            this.rdbOwnership.UseVisualStyleBackColor = true;
             // 
             // grpCompanyControls
             // 
@@ -1248,9 +1193,9 @@
             this.grpCompanyControls.Controls.Add(this.rdbCollection);
             this.grpCompanyControls.Controls.Add(this.rdbPart);
             this.grpCompanyControls.Dock = System.Windows.Forms.DockStyle.Right;
-            this.grpCompanyControls.Location = new System.Drawing.Point(960, 0);
+            this.grpCompanyControls.Location = new System.Drawing.Point(883, 0);
             this.grpCompanyControls.Name = "grpCompanyControls";
-            this.grpCompanyControls.Size = new System.Drawing.Size(326, 98);
+            this.grpCompanyControls.Size = new System.Drawing.Size(321, 97);
             this.grpCompanyControls.TabIndex = 0;
             // 
             // rdbCompany
@@ -1259,10 +1204,10 @@
             this.rdbCompany.AutoSize = true;
             this.rdbCompany.Checked = true;
             this.rdbCompany.ForeColor = System.Drawing.Color.White;
-            this.rdbCompany.Location = new System.Drawing.Point(213, 18);
+            this.rdbCompany.Location = new System.Drawing.Point(222, -4);
             this.rdbCompany.Name = "rdbCompany";
             this.rdbCompany.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbCompany.Size = new System.Drawing.Size(74, 33);
+            this.rdbCompany.Size = new System.Drawing.Size(60, 28);
             this.rdbCompany.TabIndex = 4;
             this.rdbCompany.TabStop = true;
             this.rdbCompany.Text = "شرکت";
@@ -1273,10 +1218,10 @@
             this.rdbSubcollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbSubcollection.AutoSize = true;
             this.rdbSubcollection.ForeColor = System.Drawing.Color.White;
-            this.rdbSubcollection.Location = new System.Drawing.Point(69, 18);
+            this.rdbSubcollection.Location = new System.Drawing.Point(75, -4);
             this.rdbSubcollection.Name = "rdbSubcollection";
             this.rdbSubcollection.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbSubcollection.Size = new System.Drawing.Size(62, 33);
+            this.rdbSubcollection.Size = new System.Drawing.Size(51, 28);
             this.rdbSubcollection.TabIndex = 6;
             this.rdbSubcollection.TabStop = true;
             this.rdbSubcollection.Text = "واحد";
@@ -1287,10 +1232,10 @@
             this.rdbCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbCollection.AutoSize = true;
             this.rdbCollection.ForeColor = System.Drawing.Color.White;
-            this.rdbCollection.Location = new System.Drawing.Point(164, 54);
+            this.rdbCollection.Location = new System.Drawing.Point(182, 32);
             this.rdbCollection.Name = "rdbCollection";
             this.rdbCollection.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbCollection.Size = new System.Drawing.Size(123, 33);
+            this.rdbCollection.Size = new System.Drawing.Size(100, 28);
             this.rdbCollection.TabIndex = 5;
             this.rdbCollection.Text = "کشت و صنعت";
             this.rdbCollection.UseVisualStyleBackColor = true;
@@ -1300,14 +1245,120 @@
             this.rdbPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbPart.AutoSize = true;
             this.rdbPart.ForeColor = System.Drawing.Color.White;
-            this.rdbPart.Location = new System.Drawing.Point(32, 57);
+            this.rdbPart.Location = new System.Drawing.Point(45, 35);
             this.rdbPart.Name = "rdbPart";
             this.rdbPart.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rdbPart.Size = new System.Drawing.Size(99, 33);
+            this.rdbPart.Size = new System.Drawing.Size(81, 28);
             this.rdbPart.TabIndex = 7;
             this.rdbPart.TabStop = true;
             this.rdbPart.Text = "واحد فرعی";
             this.rdbPart.UseVisualStyleBackColor = true;
+            // 
+            // rdbProvince
+            // 
+            this.rdbProvince.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdbProvince.AutoSize = true;
+            this.rdbProvince.ForeColor = System.Drawing.Color.White;
+            this.rdbProvince.Location = new System.Drawing.Point(576, 19);
+            this.rdbProvince.Name = "rdbProvince";
+            this.rdbProvince.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rdbProvince.Size = new System.Drawing.Size(56, 28);
+            this.rdbProvince.TabIndex = 17;
+            this.rdbProvince.Text = "استان";
+            this.rdbProvince.UseVisualStyleBackColor = true;
+            // 
+            // rdbSalability
+            // 
+            this.rdbSalability.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdbSalability.AutoSize = true;
+            this.rdbSalability.ForeColor = System.Drawing.Color.White;
+            this.rdbSalability.Location = new System.Drawing.Point(434, 60);
+            this.rdbSalability.Name = "rdbSalability";
+            this.rdbSalability.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rdbSalability.Size = new System.Drawing.Size(93, 28);
+            this.rdbSalability.TabIndex = 20;
+            this.rdbSalability.Text = "قابلیت فروش";
+            this.rdbSalability.UseVisualStyleBackColor = true;
+            // 
+            // rdbOpposition
+            // 
+            this.rdbOpposition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdbOpposition.AutoSize = true;
+            this.rdbOpposition.ForeColor = System.Drawing.Color.White;
+            this.rdbOpposition.Location = new System.Drawing.Point(669, 60);
+            this.rdbOpposition.Name = "rdbOpposition";
+            this.rdbOpposition.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rdbOpposition.Size = new System.Drawing.Size(92, 28);
+            this.rdbOpposition.TabIndex = 16;
+            this.rdbOpposition.Text = "دارای معارض";
+            this.rdbOpposition.UseVisualStyleBackColor = true;
+            // 
+            // rdbChangeUse
+            // 
+            this.rdbChangeUse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdbChangeUse.AutoSize = true;
+            this.rdbChangeUse.ForeColor = System.Drawing.Color.White;
+            this.rdbChangeUse.Location = new System.Drawing.Point(280, 19);
+            this.rdbChangeUse.Name = "rdbChangeUse";
+            this.rdbChangeUse.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rdbChangeUse.Size = new System.Drawing.Size(122, 28);
+            this.rdbChangeUse.TabIndex = 21;
+            this.rdbChangeUse.Text = "امکان تغییر کاربری";
+            this.rdbChangeUse.UseVisualStyleBackColor = true;
+            // 
+            // rdbFieldUseType
+            // 
+            this.rdbFieldUseType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdbFieldUseType.AutoSize = true;
+            this.rdbFieldUseType.Checked = true;
+            this.rdbFieldUseType.ForeColor = System.Drawing.Color.White;
+            this.rdbFieldUseType.Location = new System.Drawing.Point(795, 19);
+            this.rdbFieldUseType.Name = "rdbFieldUseType";
+            this.rdbFieldUseType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rdbFieldUseType.Size = new System.Drawing.Size(82, 28);
+            this.rdbFieldUseType.TabIndex = 15;
+            this.rdbFieldUseType.TabStop = true;
+            this.rdbFieldUseType.Text = "نوع کاربری";
+            this.rdbFieldUseType.UseVisualStyleBackColor = true;
+            // 
+            // rdbTownship
+            // 
+            this.rdbTownship.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdbTownship.AutoSize = true;
+            this.rdbTownship.ForeColor = System.Drawing.Color.White;
+            this.rdbTownship.Location = new System.Drawing.Point(576, 60);
+            this.rdbTownship.Name = "rdbTownship";
+            this.rdbTownship.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rdbTownship.Size = new System.Drawing.Size(74, 28);
+            this.rdbTownship.TabIndex = 18;
+            this.rdbTownship.Text = "شهرستان";
+            this.rdbTownship.UseVisualStyleBackColor = true;
+            // 
+            // rdbCity
+            // 
+            this.rdbCity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdbCity.AutoSize = true;
+            this.rdbCity.ForeColor = System.Drawing.Color.White;
+            this.rdbCity.Location = new System.Drawing.Point(479, 19);
+            this.rdbCity.Name = "rdbCity";
+            this.rdbCity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rdbCity.Size = new System.Drawing.Size(48, 28);
+            this.rdbCity.TabIndex = 19;
+            this.rdbCity.Text = "شهر";
+            this.rdbCity.UseVisualStyleBackColor = true;
+            // 
+            // rdbOwnership
+            // 
+            this.rdbOwnership.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdbOwnership.AutoSize = true;
+            this.rdbOwnership.ForeColor = System.Drawing.Color.White;
+            this.rdbOwnership.Location = new System.Drawing.Point(793, 60);
+            this.rdbOwnership.Name = "rdbOwnership";
+            this.rdbOwnership.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rdbOwnership.Size = new System.Drawing.Size(84, 28);
+            this.rdbOwnership.TabIndex = 14;
+            this.rdbOwnership.Text = "نوع مالکیت";
+            this.rdbOwnership.UseVisualStyleBackColor = true;
             // 
             // tac
             // 
@@ -1323,7 +1374,7 @@
             this.tac.Location = new System.Drawing.Point(1, 0);
             this.tac.Name = "tac";
             this.tac.SharedControlsPage = this.tbcMain;
-            this.tac.Size = new System.Drawing.Size(1289, 698);
+            this.tac.Size = new System.Drawing.Size(1209, 674);
             this.tac.Style = Infragistics.Win.UltraWinTabControl.UltraTabControlStyle.Flat;
             this.tac.TabIndex = 15;
             this.tac.TabOrientation = Infragistics.Win.UltraWinTabs.TabOrientation.TopRight;
@@ -1347,14 +1398,13 @@
             // 
             this.tbcMain.Location = new System.Drawing.Point(-10000, -10000);
             this.tbcMain.Name = "tbcMain";
-            this.tbcMain.Size = new System.Drawing.Size(1287, 660);
+            this.tbcMain.Size = new System.Drawing.Size(1207, 643);
             // 
             // frmFieldRpt
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
-            this.ClientSize = new System.Drawing.Size(1291, 874);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(1211, 850);
             this.FormMessage = "";
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmFieldRpt";
             ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).EndInit();
@@ -1459,5 +1509,6 @@
         private System.Windows.Forms.RadioButton rdbCity;
         private System.Windows.Forms.RadioButton rdbOwnership;
         private Windows.Forms.UltraChart chtChart;
+        private Windows.Forms.CheckBox.CheckBox chkField;
     }
 }

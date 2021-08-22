@@ -9,6 +9,8 @@ using Baran.Classes.Common;
 using GMap.NET;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
+using BaranDataAccess;
+using System.Linq;
 
 namespace Baran.Source
 {
@@ -17,6 +19,10 @@ namespace Baran.Source
         public frmFieldRpt()
         {
             InitializeComponent();
+
+            MainMap.Overlays.Add(routes);
+            MainMap.Overlays.Add(polygons);
+            MainMap.Overlays.Add(markers);
         }
 
         #region Variables
@@ -24,6 +30,11 @@ namespace Baran.Source
         internal readonly GMapOverlay routes = new GMapOverlay("routes");
         internal readonly GMapOverlay polygons = new GMapOverlay("polygons");
         internal readonly GMapOverlay markers = new GMapOverlay("markers");
+
+        BaranDataAccess.Company.dstCompany.spr_src_Subcollection_SelectDataTable tblSubCollection =
+            new BaranDataAccess.Company.dstCompany.spr_src_Subcollection_SelectDataTable();
+        BaranDataAccess.Company.dstCompany.spr_src_Part_SelectDataTable tblPart =
+            new BaranDataAccess.Company.dstCompany.spr_src_Part_SelectDataTable();
 
         string
             strWhereClause
@@ -49,6 +60,9 @@ namespace Baran.Source
             ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcOwnership, cmbOwnership, "");
             ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcFieldUseType, cmbFieldUseType, "");
             ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcProvince, cmbProvince, "");
+
+            tblSubCollection = (BaranDataAccess.Company.dstCompany.spr_src_Subcollection_SelectDataTable)cmbSubcollection.DataSource;
+            tblPart = (BaranDataAccess.Company.dstCompany.spr_src_Part_SelectDataTable)cmbPart.DataSource;
         }
 
         public override void OnActiveForm()
@@ -84,12 +98,14 @@ namespace Baran.Source
                 this.ClearMap();
             }
 
-
+            cmbSubcollection.DataSource = tblSubCollection;
+            cmbPart.DataSource = tblPart;
         }
 
         private void ShowMap()
         {
-            this.ClearMap();
+            //this.ClearMap();
+
             try
             {
                 strWhereClause = string.Empty;
@@ -105,70 +121,51 @@ namespace Baran.Source
                     strWhereClause += " AND dbo.tbl_cmn_Province.ProvinceID =" + cmbProvince.Value;
                 if (cmbTownship.Value != null)
                     strWhereClause += " AND dbo.tbl_cmn_Township.TownshipID = " + cmbTownship.Value;
-                if (cmbSoilTexture.Value != null)
-                    strWhereClause += " AND dbo.tbl_cmn_SoilTexture.SoilTextureID = " + cmbSoilTexture.Value;
+                //if (cmbSoilTexture.Value != null)
+                //    strWhereClause += " AND dbo.tbl_cmn_SoilTexture.SoilTextureID = " + cmbSoilTexture.Value;
                 if (cmbOwnership.Value != null)
                     strWhereClause += " AND dbo.tbl_cmn_Ownership.OwnershipID = " + cmbOwnership.Value;
-                if (cmbFieldUseType.Value != null)
-                    strWhereClause += " AND dbo.tbl_src_FieldUseType.FieldUseTypeID = " + cmbFieldUseType.Value;
+                //if (cmbFieldUseType.Value != null)
+                //    strWhereClause += " AND dbo.tbl_src_FieldUseType.FieldUseTypeID = " + cmbFieldUseType.Value;
                 if (chkChangeUse.Checked)
-                    strWhereClause += " AND dbo.tbl_src_Field.changeUse = " + chkChangeUse;
+                    strWhereClause += " AND dbo.tbl_src_Land.changeUse = " + chkChangeUse;
 
-                BaranDataAccess.Source.dstReport.spr_src_Field_Map_SelectDataTable tbl =
-                    new BaranDataAccess.Source.dstReport.spr_src_Field_Map_SelectDataTable();
-                BaranDataAccess.Source.dstReportTableAdapters.spr_src_Field_Map_SelectTableAdapter adp =
-                    new BaranDataAccess.Source.dstReportTableAdapters.spr_src_Field_Map_SelectTableAdapter();
-
-                adp.FillFieldMapTable(tbl, 2, strWhereClause, CurrentUser.Instance.UserID.ToString());
-
-
-                BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocation =
-                    new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
-                BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter adpLocation =
-                    new BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter();
-
-                if (tbl.Count > 0)
-                {
-                    MainMap.Overlays.Clear();
-                    GMapOverlay routes = new GMapOverlay("routes");
-                    foreach (var field in tbl)
+                //====================================================================================================
+                using (BaranDataAccess.AMSEntities db = new BaranDataAccess.AMSEntities())
+                { 
+                    var Lands = db.spr_src_Land_Map_Select(2, strWhereClause, CurrentUser.Instance.UserID.ToString());
+              
+                    foreach (var land in Lands)
                     {
-                      
                         string strTooltip =
-                            field.PartName
+                            land.PartName
                             + "\n" +
-                            "نام قطعه:" + field.FieldName
+                            "اراضی :" + land.FieldName
                             + "\n" +
-                            "مساحت کل:" + field.TotalArea
+                            "مساحت کل:" + land.TotalArea
                             + "\n" +
-                            "مساحت قابل استفاده::" + field.UsableArea
+                            "مساحت قابل استفاده::" + land.UsableArea
+                            //+ "\n" +
+                            //"بافت خاک:" + land.SoilTexture
+                            //+ "\n" +
+                            //"نوع کاربری:" + land.FieldUseType
                             + "\n" +
-                            "بافت خاک:" + field.SoilTexture
-                            + "\n" +
-                            "نوع کاربری:" + field.FieldUseType
-                            + "\n" +
-                            "شماره سند:" + field.DocNumber;
+                            "شماره سند:" + land.DocNumber;
 
                         List<PointLatLng> points = new List<PointLatLng>();
-                        adpLocation.FillLocationByIDTable(tblLocation, field.FieldID, null, null, null, null, null, null);
 
-                        if (tblLocation.Count > 0)
+                        if (land.Location != null)
                         {
-                            
-                            foreach (var point in tblLocation)
-                            {
-                                points.Add(new PointLatLng(Convert.ToDouble(point.Latitude), Convert.ToDouble(point.Longitude)));
-                            }
-
+                            points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(land.Location.ProviderValue.ToString());
 
                             GMapRoute rt = new GMapRoute(points, "hahahahaha");
                             {
-                                rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
+                                rt.Stroke = new Pen(Color.FromArgb(144, Color.Yellow));
                                 rt.Stroke.Width = 5;
-                                rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+                                rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.Dot;
                             }
-                            //int poi = points.Count / 2;
-                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.red_dot);
+
+                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.yellow);
                             mark.ToolTipText = strTooltip;
                             mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
                             mark.ToolTip.Fill = Brushes.Black;
@@ -178,17 +175,149 @@ namespace Baran.Source
                             mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
 
                             markers.Markers.Add(mark);
-
                             routes.Routes.Add(rt);
                         }
+
+
+                        if (chkField.Checked)
+                        {
+                            string strWhere = "";
+                            strWhere += $" AND (dbo.tbl_src_Field.Fk_LandID = {land.LandID} )";
+                            if (cmbFieldUseType.Value != null)
+                                strWhere += $" AND (dbo.tbl_src_FieldUseType.FieldUseTypeID = {cmbFieldUseType.Value})";
+                            if (cmbSoilTexture.Value != null)
+                                strWhere += $"  AND (dbo.tbl_cmn_SoilTexture.SoilTextureID = {cmbSoilTexture.Value})";
+
+                            var fields = db.spr_src_Field_Map_Select(2, strWhere, CurrentUser.Instance.UserID.ToString());
+
+                            foreach (var field in fields)
+                            {
+                                string strFieldTooltip =
+                                    land.PartName
+                                    + "\n" +
+                                    "نام قطعه:" + field.FieldName
+                                    + "\n" +
+                                    "مساحت کل:" + field.TotalArea
+                                    + "\n" +
+                                    "مساحت قابل استفاده::" + field.UsableArea
+                                    + "\n" +
+                                    "بافت خاک:" + field.SoilTexture
+                                    + "\n" +
+                                    "نوع کاربری:" + field.FieldUseType;
+
+
+                                List<PointLatLng> Fieldpoints = new List<PointLatLng>();
+
+                                if (field.LocationPolygon != null)
+                                {
+                                    Fieldpoints = GeoUtils.ConvertStringCoordinatesToGMapPolygony(field.LocationPolygon.ProviderValue.ToString());
+
+                                    GMapRoute rtField = new GMapRoute(Fieldpoints, "hahahahaha");
+                                    {
+                                        rtField.Stroke = new Pen(Color.FromArgb(144, Color.Red));
+                                        rtField.Stroke.Width = 3;
+                                        rtField.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+                                    }                                    
+
+                                    GMapMarker markField = new GMarkerGoogle(Fieldpoints[Fieldpoints.Count / 2], GMarkerGoogleType.red_dot);
+                                    markField.ToolTipText = strFieldTooltip;
+                                    markField.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+                                    markField.ToolTip.Fill = Brushes.Black;
+                                    markField.ToolTip.Foreground = Brushes.White;
+                                    markField.ToolTip.Stroke = Pens.Black;
+                                    markField.ToolTip.TextPadding = new Size(20, 20);
+                                    markField.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+
+                                    markers.Markers.Add(markField);
+                                    routes.Routes.Add(rtField);
+                                }
+                            }
+                        }
                     }
-                    MainMap.Overlays.Add(routes);
-                    MainMap.Overlays.Add(markers);
-                    //MainMap.ZoomAndCenterRoutes("routes");
-                    
+
                 }
+                //MainMap.Overlays.Add(routes);
+                //MainMap.Overlays.Add(markers);
+                MainMap.ZoomAndCenterRoutes("routes");
             }
-            catch { }
+            catch
+            { }
+
+            //BaranDataAccess.Source.dstReport.spr_src_Field_Map_SelectDataTable tbl =
+            //    new BaranDataAccess.Source.dstReport.spr_src_Field_Map_SelectDataTable();
+            //BaranDataAccess.Source.dstReportTableAdapters.spr_src_Field_Map_SelectTableAdapter adp =
+            //    new BaranDataAccess.Source.dstReportTableAdapters.spr_src_Field_Map_SelectTableAdapter();
+
+            //adp.FillFieldMapTable(tbl, 2, strWhereClause, CurrentUser.Instance.UserID.ToString());
+
+            //BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocation =
+            //    new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
+            //BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter adpLocation =
+            //    new BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter();
+
+            //if (tbl.Count > 0)
+            //{
+            //    MainMap.Overlays.Clear();
+            //    GMapOverlay routes = new GMapOverlay("routes");
+            //    foreach (var field in tbl)
+            //    {
+
+            //        string strTooltip =
+            //            field.PartName
+            //            + "\n" +
+            //            "نام قطعه:" + field.FieldName
+            //            + "\n" +
+            //            "مساحت کل:" + field.TotalArea
+            //            + "\n" +
+            //            "مساحت قابل استفاده::" + field.UsableArea
+            //            + "\n" +
+            //            "بافت خاک:" + field.SoilTexture
+            //            + "\n" +
+            //            "نوع کاربری:" + field.FieldUseType
+            //            + "\n" +
+            //            "شماره سند:" + field.DocNumber;
+
+            //        List<PointLatLng> points = new List<PointLatLng>();
+            //        //points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(field.LocationPolygon.ProviderValue.ToString());
+            //        //adpLocation.FillLocationByIDTable(tblLocation, field.FieldID, null, null, null, null, null, null);
+
+            //        if (tblLocation.Count > 0)
+            //        {
+
+            //            foreach (var point in tblLocation)
+            //            {
+            //                points.Add(new PointLatLng(Convert.ToDouble(point.Latitude), Convert.ToDouble(point.Longitude)));
+            //            }
+
+
+            //            GMapRoute rt = new GMapRoute(points, "hahahahaha");
+            //            {
+            //                rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
+            //                rt.Stroke.Width = 5;
+            //                rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            //            }
+            //            //int poi = points.Count / 2;
+            //            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.red_dot);
+            //            mark.ToolTipText = strTooltip;
+            //            mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            //            mark.ToolTip.Fill = Brushes.Black;
+            //            mark.ToolTip.Foreground = Brushes.White;
+            //            mark.ToolTip.Stroke = Pens.Black;
+            //            mark.ToolTip.TextPadding = new Size(20, 20);
+            //            mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+
+            //            markers.Markers.Add(mark);
+
+            //            routes.Routes.Add(rt);
+            //        }
+            //    }
+            //    MainMap.Overlays.Add(routes);
+            //    MainMap.Overlays.Add(markers);
+            //    //MainMap.ZoomAndCenterRoutes("routes");
+
+            //}
+            //}
+            //        catch { }
         }
 
         private void ClearMap()
@@ -477,6 +606,34 @@ namespace Baran.Source
                 }
             }
             catch { }
+        }
+
+        private void grpControls_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkField_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmbCollection_ValueChanged(object sender, EventArgs e)
+        {
+            if (cmbCollection.Value == null)
+                return;
+            int id = Convert.ToInt32(cmbCollection.Value.ToString());
+            var tbl = tblSubCollection.Where(s => s.Fk_CollectionID == id).ToArray();
+            cmbSubcollection.DataSource = tbl;
+        }
+
+        private void cmbSubcollection_ValueChanged(object sender, EventArgs e)
+        {
+            if (cmbSubcollection.Value == null)
+                return;
+            int id = Convert.ToInt32(cmbSubcollection.Value.ToString());
+            var tbl = tblPart.Where(s => s.Fk_SubcollectionID == id).ToArray();
+            cmbPart.DataSource = tbl;
         }
 
         public override void OnExport(Windows.Forms.UltraGrid grdItem)

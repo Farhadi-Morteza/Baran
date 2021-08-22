@@ -64,6 +64,7 @@ namespace Baran.Classes.Common
             srcWaterByUserIDCmb = 58,
             srcWaterStorageByUserIDCmb = 59,
             srcTaskSubCategoryByTaskCategoryID = 60,
+            srcLand = 61,
         }
 
         public enum EnmMessageType
@@ -123,6 +124,7 @@ namespace Baran.Classes.Common
             , Crop = 157
             , Document = 159
             , ProductionTask = 171
+            , Land = 178
         }
 
         public enum EnmShapeType

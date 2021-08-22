@@ -1,9 +1,14 @@
-﻿using System;
+﻿using GMap.NET;
+using GMap.NET.WindowsForms;
+using System;
+using System.Collections.Generic;
 using System.Data.Spatial;
+using System.Device.Location;
+using System.Drawing;
 using System.Globalization;
+using System.Linq;
 
-
-namespace GeoLocation
+namespace Baran.Classes.Common
 {
 
     /// <summary>
@@ -23,7 +28,7 @@ namespace GeoLocation
                                      "POINT({0} {1})", longitude, latitude);
             // 4326 is most common coordinate system used by GPS/Maps
             return DbGeography.PointFromText(text, 4326);
-          
+
         }
 
         /// <summary>
@@ -41,10 +46,143 @@ namespace GeoLocation
             if (tokens.Length != 2)
                 throw new ArgumentException("InvalidLocationStringPassed");
             var text = string.Format(CultureInfo.InvariantCulture.NumberFormat,
-                                     "POINT({0} {1})", tokens[1], tokens[0]);
+                                     "POINT({0} {1})", tokens[2], tokens[0]);
             return DbGeography.PointFromText(text, 4326);
         }
+        //============================================================================
 
+        //============================================================================
+        public static List<PointLatLng> ConvertStringPointToGMapPoint(string pointString)
+        {
+            pointString = pointString.Remove(pointString.Length - 2);
+            pointString = string.Concat(pointString.Skip(7));
+
+            string[] points = pointString.Split(',');
+            List<PointLatLng> coordinates = new List<PointLatLng>();
+
+            foreach (string point in points)
+            {
+                string[] p = point.Trim().Split(' ');
+                coordinates.Add(new PointLatLng(PublicMethods.ConvertToDouble(p.Last()), PublicMethods.ConvertToDouble(p.First())));
+                //coordinate.Lat = PublicMethods.ConvertToDouble(p.Last());
+                //coordinate.Lng = PublicMethods.ConvertToDouble(p.First());
+            }
+            return coordinates;
+        }
+        //============================================================================
+
+        //============================================================================
+        public static DbGeometry ConvertGMapPointToDbGeometryPoint(PointLatLng point)
+        {
+            var text = string.Format(CultureInfo.InvariantCulture.NumberFormat,
+                                     "POINT({0} {1})", point.Lng, point.Lat);
+            // 4326 is most common coordinate system used by GPS/Maps
+            return DbGeometry.PointFromText(text, 4326);
+        }
+        //============================================================================
+
+        //============================================================================
+        public static List<PointLatLng> ConvertStringCoordinatesToGMapPolygony(string pointString)
+        {
+            pointString = pointString.Remove(pointString.Length - 2);
+            pointString = string.Concat(pointString.Skip(10));
+
+            string[] points = pointString.Split(',');
+            List<PointLatLng> coordinates = new List<PointLatLng>();
+
+            foreach (string point in points)
+            {
+                string[] p = point.Trim().Split(' ');
+                coordinates.Add(new PointLatLng(PublicMethods.ConvertToDouble(p.Last()), PublicMethods.ConvertToDouble(p.First())));
+            }
+            return coordinates;
+        }
+        //============================================================================
+
+        //============================================================================
+        public static List<PointLatLng> ConvertStringCoordinatesToGMapRoute(string pointString)
+        {
+            pointString = pointString.Remove(pointString.Length - 1);
+            pointString = string.Concat(pointString.Skip(12));
+
+            string[] points = pointString.Split(',');
+            List<PointLatLng> coordinates = new List<PointLatLng>();
+
+            foreach (string point in points)
+            {
+                string[] p = point.Trim().Split(' ');
+                coordinates.Add(new PointLatLng(PublicMethods.ConvertToDouble(p.Last()), PublicMethods.ConvertToDouble(p.First())));
+            }
+            return coordinates;
+        }
+        //============================================================================
+
+        //============================================================================        
+        public static DbGeometry ConvertGMapPolygonPointsToDbGeometryPolygon(List<PointLatLng> coordinates)
+        {
+            var coordinateList = coordinates.ToList();
+            if (coordinateList.First() != coordinateList.Last())
+            {
+                coordinateList.Add(coordinateList.First());
+            }
+
+            var count = 0;
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+
+            sb.Append(@"POLYGON((");
+            foreach (var coordinate in coordinateList)
+            {
+                if (count == 0)
+                {
+                    sb.Append(coordinate.Lng + " " + coordinate.Lat);
+                }
+                else
+                {
+                    sb.Append("," + coordinate.Lng + " " + coordinate.Lat);
+                }
+
+                count++;
+            }
+
+            sb.Append(@"))");
+            return DbGeometry.PolygonFromText(sb.ToString().Replace("/", "."), 4326);
+        }
+        //============================================================================
+
+        //============================================================================        
+        public static DbGeometry ConvertGMapLinePointsToDbGeometryLine(List<PointLatLng> coordinates)
+        {
+            var coordinateList = coordinates.ToList();
+            //if (coordinateList.First() != coordinateList.Last())
+            //{
+            //    coordinateList.Add(coordinateList.First());
+            //}
+
+            var count = 0;
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+
+            sb.Append(@"LINESTRING(");
+            foreach (var coordinate in coordinateList)
+            {
+                if (count == 0)
+                {
+                    sb.Append(coordinate.Lng + " " + coordinate.Lat);
+                }
+                else
+                {
+                    sb.Append("," + coordinate.Lng + " " + coordinate.Lat);
+                }
+
+                count++;
+            }
+
+            sb.Append(@")");
+            string sdf = sb.ToString();
+            return DbGeometry.LineFromText(sb.ToString().Replace("/", "."), 4326);
+        }
+        //============================================================================
+
+        //============================================================================
 
         /// <summary>
         /// Convert meters to miles
@@ -85,7 +223,6 @@ namespace GeoLocation
             return miles.Value * 1609.344;
         }
 
-
         /// <summary>
         /// Displays a miles value as a string with a mile postfix
         /// 1.0
@@ -106,4 +243,23 @@ namespace GeoLocation
                 return string.Format("{0:n0} miles", miles);
         }
     }
+
+    //public class GeoMarkerGoogle : GMapMarker
+    //{
+    //    public GeoMarkerGoogle(PointLatLng p, GMap.NET.WindowsForms.Markers.GMarkerGoogleType type) : base(GeoMarkerGoogle);
+    //    public readonly GMap.NET.WindowsForms.Markers.GMarkerGoogleType Type;
+
+    //    public GMarkerGoogle(PointLatLng p, GMap.NET.WindowsForms.Markers.GMarkerGoogleType type);
+    //    public GMarkerGoogle(PointLatLng p, Bitmap Bitmap);
+    //    protected GMarkerGoogle(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);
+
+    //    public override void Dispose();
+    //    public void OnDeserialization(object sender);
+    //    public override void OnRender(Graphics g);
+    //}
 }
+
+
+
+
+

@@ -1,6 +1,8 @@
-﻿namespace BaranDataAccess.Source {
-    
-    
-    public partial class dstReport {
+﻿namespace BaranDataAccess.Source
+{
+
+
+    public partial class dstReport
+    {
     }
 }

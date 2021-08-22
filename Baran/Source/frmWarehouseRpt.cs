@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -32,7 +33,12 @@ namespace Baran.Source
         #endregion
 
         #region Variables
-              //@Action AS INT
+        //@Action AS INT
+        BaranDataAccess.Company.dstCompany.spr_src_Subcollection_SelectDataTable tblSubCollection =
+            new BaranDataAccess.Company.dstCompany.spr_src_Subcollection_SelectDataTable();
+        BaranDataAccess.Company.dstCompany.spr_src_Part_SelectDataTable tblPart =
+            new BaranDataAccess.Company.dstCompany.spr_src_Part_SelectDataTable();
+
         string
             strWhereClause
             , strSelectStatement
@@ -61,6 +67,8 @@ namespace Baran.Source
             ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcWarehouseType, cmbWarehouseType, "");
             ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcWarehouseUseType, cmbWarehouseUseType, "");
 
+            tblSubCollection = (BaranDataAccess.Company.dstCompany.spr_src_Subcollection_SelectDataTable)cmbSubcollection.DataSource;
+            tblPart = (BaranDataAccess.Company.dstCompany.spr_src_Part_SelectDataTable)cmbPart.DataSource;
         }
 
         public override void OnActiveForm()
@@ -95,6 +103,9 @@ namespace Baran.Source
                 Baran.Classes.Common.ControlsSetting.ClearControls(grpControls.Controls);
                 this.ClearMap();
             }
+
+            cmbSubcollection.DataSource = tblSubCollection;
+            cmbPart.DataSource = tblPart;
         }
 
         public override void OnExport(Windows.Forms.UltraGrid grdItem)
@@ -224,28 +235,14 @@ namespace Baran.Source
                     strWhereClause += " AND dbo.tbl_src_Part.PartID = " + cmbPart.Value;
                 if (cmbWarehouseType.Value != null)
                     strWhereClause += " AND dbo.tbl_src_WarehouseType.WarehouseTypeID = " + cmbWarehouseType.Value;
-                if(cmbWarehouseUseType.Value != null)
+                if (cmbWarehouseUseType.Value != null)
                     strWhereClause += " AND dbo.tbl_src_WareHouseUseType.WarehouseUseTypeID = " + cmbWarehouseUseType.Value;
 
-
-                BaranDataAccess.Source.dstReport.spr_src_WareHouse_Map_SelectDataTable tbl =
-                    new BaranDataAccess.Source.dstReport.spr_src_WareHouse_Map_SelectDataTable();
-                BaranDataAccess.Source.dstReportTableAdapters.spr_src_WareHouse_Map_SelectTableAdapter adp =
-                    new BaranDataAccess.Source.dstReportTableAdapters.spr_src_WareHouse_Map_SelectTableAdapter();
-
-                adp.FillWarehouseMapTable(tbl, 1, strWhereClause, CurrentUser.Instance.UserID.ToString());
-
-
-                BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocation =
-                    new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
-                BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter adpLocation =
-                    new BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter();
-
-                if (tbl.Count > 0)
+                using (BaranDataAccess.AMSEntities db = new BaranDataAccess.AMSEntities())
                 {
-                    MainMap.Overlays.Clear();
-                    GMapOverlay routes = new GMapOverlay("routes");
-                    foreach (var warehouse in tbl)
+                    var warehouses = db.spr_src_WareHouse_Map_Select(1, strWhereClause, CurrentUser.Instance.UserID.ToString());
+
+                    foreach (var warehouse in warehouses)
                     {
                         string strTooltip =
                             warehouse.PartName
@@ -257,92 +254,41 @@ namespace Baran.Source
                             "نوع انبار:" + warehouse.WarehouseTypeName
                             + "\n" +
                             "نوع کاربری:" + warehouse.WarehouseUseTypeName;
-                 
 
                         List<PointLatLng> points = new List<PointLatLng>();
-                        adpLocation.FillLocationByIDTable(tblLocation, null, null, warehouse.WarehouseID, null, null, null, null);
 
-                        if (tblLocation.Count > 0)
+                        if (warehouse.Location != null)
                         {
-                            foreach (var point in tblLocation)
-                            {
-                                points.Add(new PointLatLng(Convert.ToDouble(point.Latitude), Convert.ToDouble(point.Longitude)));
-                            }
+                            points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(warehouse.Location.ProviderValue.ToString());
 
                             GMapRoute rt = new GMapRoute(points, string.Empty);
                             {
-                                 rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
+                                rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
                                 rt.Stroke.Width = 5;
                                 rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
                             }
-                            if (points.Count > 0)
-                            {
-                                GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.red_dot);
-                                mark.ToolTipText = strTooltip;
-                                mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-                                mark.ToolTip.Fill = Brushes.Black;
-                                mark.ToolTip.Foreground = Brushes.White;
-                                mark.ToolTip.Stroke = Pens.Black;
-                                mark.ToolTip.TextPadding = new Size(20, 20);
-                                mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
 
-                                markers.Markers.Add(mark);
+                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.red_dot);
+                            mark.ToolTipText = strTooltip;
+                            mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+                            mark.ToolTip.Fill = Brushes.Black;
+                            mark.ToolTip.Foreground = Brushes.White;
+                            mark.ToolTip.Stroke = Pens.Black;
+                            mark.ToolTip.TextPadding = new Size(20, 20);
+                            mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
 
-                                routes.Routes.Add(rt);
+                            markers.Markers.Add(mark);
 
-                            }
+                            routes.Routes.Add(rt);
                         }
-                        MainMap.Overlays.Add(routes);
-                        MainMap.Overlays.Add(markers);
-                        //MainMap.ZoomAndCenterRoutes("routes");
                     }
                 }
-
-
-
-                //if (tbl.Count > 0)
-                //{
-
-                //    foreach (var warehouse in tbl)
-                //    {
-                //        List<PointLatLng> points = new List<PointLatLng>();
-                //        adpLocation.FillLocationByIDTable(tblLocation, null, null, warehouse.WarehouseID, null, null, null, null);
-
-                //        if (tblLocation.Count > 0)
-                //        {
-                //            foreach (var point in tblLocation)
-                //            {
-                //                points.Add(new PointLatLng(Convert.ToDouble(point.Latitude), Convert.ToDouble(point.Longitude)));
-                //            }
-
-                //            GMap.NET.WindowsForms.GMapPolygon rt = new GMapPolygon(points, string.Empty);
-                //            {
-                //                rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
-                //                rt.Fill = new SolidBrush(Color.FromArgb(10, Color.WhiteSmoke));
-                //                rt.Stroke.Width = 5;
-                //                rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-                //            }
-                //            if (points.Count > 0)
-                //            {
-                //                GMapMarker mark = new GMarkerGoogle(points[0], GMarkerGoogleType.green_pushpin);
-                //                mark.ToolTipText = warehouse.PartName + "\n" + warehouse.WarehouseName + "\n" + warehouse.WarehouseUseTypeName + "\n" + warehouse.WarehouseTypeName+ "\n" + warehouse.WarehouseArea;
-                //                mark.ToolTipMode = MarkerTooltipMode.Always;
-
-                //                markers.Markers.Add(mark);
-
-                //            }
-                //            rt.IsHitTestVisible = true;
-                //            polygons.Polygons.Add(rt);
-
-                //            //MainMap.Overlays.Add(routes);
-                //            MainMap.Overlays.Add(polygons);
-                //            MainMap.Overlays.Add(markers);
-                //            GMapPolygon ff = new GMapPolygon(points, "");
-                //        }
-                //    }
-                //}
+                MainMap.Overlays.Add(routes);
+                MainMap.Overlays.Add(markers);
+                MainMap.ZoomAndCenterRoutes("routes");
             }
-            catch { }
+            catch
+            { }
         }
 
         private void ClearMap()
@@ -439,6 +385,26 @@ namespace Baran.Source
         {
 
         }
+
+
+        private void cmbCollection_ValueChanged(object sender, EventArgs e)
+        {
+            if (cmbCollection.Value == null)
+                return;
+            int id = Convert.ToInt32(cmbCollection.Value.ToString());
+            var tbl = tblSubCollection.Where(s => s.Fk_CollectionID == id).ToArray();
+            cmbSubcollection.DataSource = tbl;
+        }
+
+        private void cmbSubcollection_ValueChanged(object sender, EventArgs e)
+        {
+            if (cmbSubcollection.Value == null)
+                return;
+            int id = Convert.ToInt32(cmbSubcollection.Value.ToString());
+            var tbl = tblPart.Where(s => s.Fk_SubcollectionID == id).ToArray();
+            cmbPart.DataSource = tbl;
+        }
+
 
         #region Events
 

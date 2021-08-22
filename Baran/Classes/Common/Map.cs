@@ -87,7 +87,7 @@ namespace Demo.WindowsForms
 
             CacheLocation = System.Windows.Forms.Application.StartupPath + @"\Map\";
             MapProvider = BingHybridMapProvider.Instance;//GoogleHybridMapProvider.Instance;//BingSatelliteMapProvider.Instance;//GoogleHybridMapProvider.Instance;//    GoogleHybridMapProvider.Instance;// 
-            Manager.Mode = AccessMode.CacheOnly; //.ServerAndCache;////
+            Manager.Mode = AccessMode.ServerAndCache;//.CacheOnly; ////
             String mapPath = Application.StartupPath + @"\Map\TileDBv5\en\Data.gmdb";//This is the 2G package, let the young man make it all night! ! ! !
 
 

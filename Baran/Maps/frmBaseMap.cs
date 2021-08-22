@@ -18,7 +18,8 @@ using WindowsForms.CustomMarkers;
 using System.Data.Entity;
 using System.Spatial;
 using Baran.Classes.Common;
- 
+using BaranDataAccess;
+
 namespace Baran.Maps
 {
     public partial class frmBaseMap : Form
@@ -28,10 +29,10 @@ namespace Baran.Maps
         WaiteForm waiteLoad = new WaiteForm();
         public frmBaseMap(PublicEnum.EnmShapeType shapeType)
         {
-            InitializeComponent();
-            
             waiteLoad.Show();
 
+            InitializeComponent();
+                       
             btnClose.BackgroundImage = System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.Close));
             btnMinimize.BackgroundImage = System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.minimize));
 
@@ -140,6 +141,7 @@ namespace Baran.Maps
         internal readonly GMapOverlay objects = new GMapOverlay("objects");
         internal readonly GMapOverlay routes = new GMapOverlay("routes");
         internal readonly GMapOverlay polygons = new GMapOverlay("polygons");
+        GMapOverlay myroutes = new GMapOverlay("Myroutes");
 
 
         // marker
@@ -175,6 +177,19 @@ namespace Baran.Maps
             set
             {
                 _fieldID = value;
+            }
+        }
+
+        private int? _landID = null;
+        public int? LandID
+        {
+            get
+            {
+                return _landID;
+            }
+            set
+            {
+                _landID = value;
             }
         }
 
@@ -268,6 +283,20 @@ namespace Baran.Maps
                 _shapeType = value;
             }
         }
+
+        #endregion
+
+        #region Variables
+
+        tbl_src_Part part;
+        tbl_src_Field field;
+        tbl_src_Land land;
+        tbl_src_Buildings building;
+        tbl_src_Warehouse warehouse;
+        tbl_src_Water water;
+        tbl_src_WaterTransmissionLine waterTransmissionLine;
+        tbl_src_WaterStorage waterStorage;
+
 
         #endregion
 
@@ -663,15 +692,183 @@ namespace Baran.Maps
             TopMost = true;
             TopMost = false;
 
-            BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocationByID =
-                new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
+            int? fk_PartID = null;
 
-            tblLocationByID = BaranDataAccess.Map.dstLocation.LocationByIDTable(FieldID, BuildingID, WarehouseID, WaterstorageID, WaterID, WaterTransmissionLineID, PartID).spr_geo_LocationByID_Select;
-
+            UnitOfWork db = new UnitOfWork();
             List<PointLatLng> points = new List<PointLatLng>();
-            foreach (var tbl in tblLocationByID)
+
+            if (PartID > 0)
             {
-                currentMarker.Position = new PointLatLng(tbl.Latitude, tbl.Longitude);
+                part = new tbl_src_Part();
+                part = db.PartRepository.GetById(PartID);
+
+                fk_PartID = part.PartID;
+
+                if (part.Location != null)
+                {
+                    points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(part.Location.ProviderValue.ToString());
+                }
+            }
+            else if (FieldID > 0)
+            {
+                field = new tbl_src_Field();
+                field = db.FieldRepository.GetById(FieldID);
+
+                fk_PartID = field.Fk_partID;
+
+                tbl_src_Land land = new tbl_src_Land();
+                land = db.LandRepository.GetById(field.Fk_LandID);
+
+                if (land != null)
+                {
+
+                    List<PointLatLng> Mypoints = new List<PointLatLng>();
+                    if (land.Location != null)
+                    {
+                        Mypoints = GeoUtils.ConvertStringCoordinatesToGMapPolygony(land.Location.ProviderValue.ToString());
+
+                        GMapRoute rt = new GMapRoute(Mypoints, string.Empty);
+                        {
+                            rt.Stroke = new Pen(Color.FromArgb(144, Color.White));
+                            rt.Stroke.Width = 5;
+                            rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;                        
+                       }
+                        myroutes.Routes.Add(rt);
+                        /////////////////////////////
+                        //MainMap.Overlays.Clear();
+                        MainMap.Overlays.Add(myroutes);
+                        MainMap.ZoomAndCenterRoutes("Myroutes");
+                    }
+                }
+
+                if (field.LocationPolygon != null)
+                {
+                    points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(field.LocationPolygon.ProviderValue.ToString());
+                }
+            }
+            else if (LandID > 0)
+            {
+                land = new tbl_src_Land();
+                land = db.LandRepository.GetById(LandID);
+
+                fk_PartID = land.Fk_partID;
+
+                if (land.Location != null)
+                {
+                    points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(land.Location.ProviderValue.ToString());
+                }
+            }
+            else if (BuildingID > 0)
+            {
+                building = new tbl_src_Buildings();
+                building = db.BuildingsRepository.GetById(BuildingID);
+
+                fk_PartID = building.Fk_PartID;
+
+                if (building.Location != null)
+                {
+                    points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(building.Location.ProviderValue.ToString());
+                }
+            }
+            else if (WarehouseID > 0)
+            {
+                warehouse = new tbl_src_Warehouse();
+                warehouse = db.WarehouseRepository.GetById(WarehouseID);
+
+                fk_PartID = warehouse.Fk_PartID;
+
+                if (warehouse.Location != null)
+                {
+                    points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(warehouse.Location.ProviderValue.ToString());
+                }
+            }
+            else if (WaterID > 0)
+            {
+                water = new tbl_src_Water();
+                water = db.WaterRepository.GetById(WaterID);
+
+                fk_PartID = water.Fk_PartID;
+
+                if (water.Location != null)
+                {
+                    points = GeoUtils.ConvertStringPointToGMapPoint(water.Location.ProviderValue.ToString());
+                }
+            }
+            else if (WaterstorageID > 0)
+            {
+                waterStorage = new tbl_src_WaterStorage();
+                waterStorage = db.WaterStorageRepository.GetById(WaterstorageID);
+
+                fk_PartID = waterStorage.Fk_PartID;
+
+                if (waterStorage.Location != null)
+                {
+                    points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(waterStorage.Location.ProviderValue.ToString());
+                }
+            }
+            else if (WaterTransmissionLineID > 0)
+            {
+                waterTransmissionLine = new tbl_src_WaterTransmissionLine();
+                waterTransmissionLine = db.WaterTransmissionLineRepository.GetById(WaterTransmissionLineID);
+
+                fk_PartID = waterTransmissionLine.Fk_PartID;
+
+                if (waterTransmissionLine.Location != null)
+                {
+                    points = GeoUtils.ConvertStringCoordinatesToGMapRoute(waterTransmissionLine.Location.ProviderValue.ToString());
+                }
+            }
+
+            if (fk_PartID != null)
+            {
+                tbl_src_Part partPolygon = new tbl_src_Part();
+                partPolygon = db.PartRepository.GetById(fk_PartID);
+
+                if (partPolygon != null)
+                {
+
+                    List<PointLatLng> Partpoints = new List<PointLatLng>();
+                    if (partPolygon.Location != null)
+                    {
+                        Partpoints = GeoUtils.ConvertStringCoordinatesToGMapPolygony(partPolygon.Location.ProviderValue.ToString());
+
+                        GMapRoute rt = new GMapRoute(Partpoints, string.Empty);
+                        {
+                            rt.Stroke = new Pen(Color.FromArgb(144, Color.Yellow));
+                            rt.Stroke.Width = 4;
+                            rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+                        }
+                        myroutes.Routes.Add(rt);
+                        /////////////////////////////
+                        //MainMap.Overlays.Clear();
+                        MainMap.Overlays.Add(myroutes);
+                        MainMap.ZoomAndCenterRoutes("Myroutes");
+                    }
+                }
+            }
+
+            if (points.Count == 0)
+            {
+                if (FieldID != null && BuildingID != null && WarehouseID != null && WaterstorageID != null && WaterID != null && WaterTransmissionLineID != null && PartID != null)
+                {
+                    BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocationByID =
+                        new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
+
+                    tblLocationByID = BaranDataAccess.Map.dstLocation.LocationByIDTable(FieldID, BuildingID, WarehouseID, WaterstorageID, WaterID, WaterTransmissionLineID, PartID).spr_geo_LocationByID_Select;
+
+                    //List<PointLatLng> points = new List<PointLatLng>();
+                    foreach (var tbl in tblLocationByID)
+                    {
+                        currentMarker.Position = new PointLatLng(tbl.Latitude, tbl.Longitude);
+                        this.AddMarker();
+                    }
+                }
+            }
+
+
+            foreach (var point in points)
+            {
+                currentMarker.Position = new PointLatLng(point.Lat, point.Lng);
                 this.AddMarker();
             }
             MainMap.ZoomAndCenterMarkers("objects");
@@ -912,6 +1109,7 @@ namespace Baran.Maps
             waite = new WaiteForm();
             try
             {
+                
                 waite.Show();
                 adp.Delete(FieldID, BuildingID, WarehouseID, WaterstorageID, WaterID, WaterTransmissionLineID, PartID);
 
@@ -923,13 +1121,69 @@ namespace Baran.Maps
                 else if (ShapeType == (int)PublicEnum.EnmShapeType.point)
                     SavePoints.Add(new PointLatLng((double)currentMarker.Position.Lat, (double)currentMarker.Position.Lng));
 
-                //var LocationPolygon = System.Data.Spatial.DbGeometry.FromText(SavePoints.ToString());
-                foreach (var poi in SavePoints)
+                UnitOfWork db = new UnitOfWork();
+
+                if (PartID > 0)
                 {
-                    adp.Insert(poi.Lng, poi.Lat, FieldID, BuildingID, WarehouseID, WaterstorageID, WaterID, WaterTransmissionLineID, PartID);
+                    tbl_src_Part p = new tbl_src_Part();
+                    p = db.PartRepository.GetById(PartID);
+                    p.Location = GeoUtils.ConvertGMapPolygonPointsToDbGeometryPolygon(SavePoints);
+                    db.PartRepository.Update(p);
+
+                }
+                else if (FieldID > 0)
+                {
+                    field.LocationPolygon = GeoUtils.ConvertGMapPolygonPointsToDbGeometryPolygon(SavePoints);
+                    db.FieldRepository.Update(field);
+
+                }
+                else if (LandID > 0)
+                {
+                    land.Location = GeoUtils.ConvertGMapPolygonPointsToDbGeometryPolygon(SavePoints);
+                    db.LandRepository.Update(land);
+                }
+                else if (BuildingID > 0)
+                {
+                    building.Location = GeoUtils.ConvertGMapPolygonPointsToDbGeometryPolygon(SavePoints);
+                    db.BuildingsRepository.Update(building);
+
+                }
+                else if (WarehouseID > 0)
+                {
+                    warehouse.Location = GeoUtils.ConvertGMapPolygonPointsToDbGeometryPolygon(SavePoints);
+                    db.WarehouseRepository.Update(warehouse);
 
                 }
 
+                else if (WaterstorageID > 0)
+                {
+                    waterStorage.Location = GeoUtils.ConvertGMapPolygonPointsToDbGeometryPolygon(SavePoints);
+                    db.WaterStorageRepository.Update(waterStorage);
+
+                }
+                else if (WaterID > 0)
+                {
+                    water.Location = GeoUtils.ConvertGMapPointToDbGeometryPoint(SavePoints[0]);
+                    db.WaterRepository.Update(water);
+
+                }
+                else if (WaterTransmissionLineID > 0)
+                {
+                    waterTransmissionLine.Location = GeoUtils.ConvertGMapLinePointsToDbGeometryLine(SavePoints);
+                    db.WaterTransmissionLineRepository.Update(waterTransmissionLine);
+
+                }
+
+                else
+                {
+                    foreach (var poi in SavePoints)
+                    {
+                        adp.Insert(poi.Lng, poi.Lat, FieldID, BuildingID, WarehouseID, WaterstorageID, WaterID, WaterTransmissionLineID, PartID);
+
+                    }
+                }
+                db.Save();
+                waite.Close();
                 MessageBoxX.ShowMessageBox(PublicEnum.EnmMessageType.msgSaveSuccessful);
             }
             catch 

@@ -35,6 +35,7 @@ namespace BaranDataAccess
         public Nullable<int> Count { get; set; }
         public Nullable<int> Fk_SubCollectionID { get; set; }
         public Nullable<decimal> Vigor { get; set; }
+        public Nullable<int> Fk_PartID { get; set; }
     
         public virtual tbl_src_MachineryCategory tbl_src_MachineryCategory { get; set; }
     }

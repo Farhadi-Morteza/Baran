@@ -90,8 +90,9 @@
     <Reference Include="EntityFramework">
       <HintPath>..\BaranDataAccess\bin\Debug\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="FarsiLibrary.Resources">
-      <HintPath>E:\AMS_1400-02-17\AMS\Baran\bin\Debug\FarsiLibrary.Resources.dll</HintPath>
+    <Reference Include="FarsiLibrary.Resources, Version=2.5.0.0, Culture=neutral, PublicKeyToken=def7c46cace23f8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\AMS_1400-02-17\AMS\BaranLibrary\bin\Debug\FarsiLibrary.Resources.dll</HintPath>
     </Reference>
     <Reference Include="FarsiLibrary.Utils">
       <HintPath>E:\AMS_1400-02-17\AMS\Baran\bin\Debug\FarsiLibrary.Utils.dll</HintPath>
@@ -203,7 +204,9 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -211,6 +214,7 @@
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Entity.Design" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Device" />
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Spatial, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Transactions" />
@@ -275,6 +279,7 @@
     <Compile Include="Classes\Common\CurrentDate.cs" />
     <Compile Include="Classes\Common\CurrentUser.cs" />
     <Compile Include="Classes\Common\DateTimeUtility.cs" />
+    <Compile Include="Classes\Common\GeographicCoordinate.cs" />
     <Compile Include="Classes\Common\GeoUtils.cs" />
     <Compile Include="Classes\Common\GMapMarkerCircle.cs" />
     <Compile Include="Classes\Common\GMapMarkerRect.cs" />
@@ -355,6 +360,18 @@
     </Compile>
     <Compile Include="Company\frmSubcollectionList.Designer.cs">
       <DependentUpon>frmSubcollectionList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\frmBaseCompanyInfoRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmBaseCompanyInfoRpt.Designer.cs">
+      <DependentUpon>frmBaseCompanyInfoRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\frmCurrentProductionFieldRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmCurrentProductionFieldRpt.Designer.cs">
+      <DependentUpon>frmCurrentProductionFieldRpt.cs</DependentUpon>
     </Compile>
     <Compile Include="Main\frmMain.cs">
       <SubType>Form</SubType>
@@ -659,6 +676,24 @@
     <Compile Include="Source\frmFieldView.Designer.cs">
       <DependentUpon>frmFieldView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Source\frmLand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\frmLand.Designer.cs">
+      <DependentUpon>frmLand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\frmlandList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\frmlandList.Designer.cs">
+      <DependentUpon>frmlandList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Source\frmLandView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\frmLandView.Designer.cs">
+      <DependentUpon>frmLandView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Source\frmMachinery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -884,6 +919,12 @@
     <EmbeddedResource Include="Company\frmSubcollectionList.resx">
       <DependentUpon>frmSubcollectionList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\frmBaseCompanyInfoRpt.resx">
+      <DependentUpon>frmBaseCompanyInfoRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\frmCurrentProductionFieldRpt.resx">
+      <DependentUpon>frmCurrentProductionFieldRpt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -1039,6 +1080,15 @@
     <EmbeddedResource Include="Source\frmFieldView.resx">
       <DependentUpon>frmFieldView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Source\frmLand.resx">
+      <DependentUpon>frmLand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\frmlandList.resx">
+      <DependentUpon>frmlandList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\frmLandView.resx">
+      <DependentUpon>frmLandView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Source\frmMachinery.resx">
       <DependentUpon>frmMachinery.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -1178,6 +1228,10 @@
     <ProjectReference Include="..\BaranLibrary\BaranLibrary.csproj">
       <Project>{BAEA9387-5362-4237-AF2B-897CD8A61A10}</Project>
       <Name>BaranLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaranViewModels\BaranViewModels.csproj">
+      <Project>{9ee30ee9-7e12-4e38-9b21-6e426ac806dd}</Project>
+      <Name>BaranViewModels</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

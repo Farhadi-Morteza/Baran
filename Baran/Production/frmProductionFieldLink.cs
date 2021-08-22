@@ -9,6 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using BaranDataAccess;
 
 namespace Baran.Production
 {
@@ -272,82 +273,92 @@ namespace Baran.Production
 
         #region Events
 
-        private void cmbFields_AfterExitEditMode(object sender, EventArgs e)
-        {
-
-        }
-
         private void cmbFields_ValueChanged(object sender, EventArgs e)
         {
             if (cmbFields.Value == null) return;
 
-            BaranDataAccess.Source.dstSourceTableAdapters.spr_src_FieldByID_Lst_SelectTableAdapter adp =
-                 new BaranDataAccess.Source.dstSourceTableAdapters.spr_src_FieldByID_Lst_SelectTableAdapter();
-            BaranDataAccess.Source.dstSource.spr_src_FieldByID_Lst_SelectRow drwField;
-
+            UnitOfWork db = new UnitOfWork();
+            tbl_src_Field field = new tbl_src_Field();
             FieldID = Convert.ToInt32(cmbFields.Value);
+            field = db.FieldRepository.GetById(FieldID);
 
-            drwField = adp.GetFieldListByIDTable(FieldID)[0];
-
-            txtName.Text = drwField.IsSoilTextureNameNull() ? string.Empty : drwField.SoilTextureName;
-            txtTotalArea.Text = drwField.IsTotalAreaNull() ? string.Empty : drwField.TotalArea.ToString();
-            txtUsableArea.Text = drwField.IsUsableAreaNull() ? string.Empty : drwField.UsableArea.ToString();
-            txtLinkedArea.Text = drwField.IsUsableAreaNull() ? string.Empty : drwField.UsableArea.ToString();
-
-            BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocation =
-                new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
-            BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter adpLocation =
-                new BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter();
+            if (field is null)
+                return;
+            txtName.Text = field.Name;
+            txtTotalArea.Text = field.TotalArea == null ? string.Empty : field.TotalArea.ToString();
+            txtUsableArea.Text = field.UsableArea == null ? string.Empty : field.UsableArea.ToString();
+            txtLinkedArea.Text = field.UsableArea == null ? string.Empty : field.UsableArea.ToString();
 
             List<PointLatLng> points = new List<PointLatLng>();
 
-            adpLocation.FillLocationByIDTable(tblLocation, FieldID, null, null, null, null, null, null);
-
-            if (tblLocation.Count > 0)
+            if (field.LocationPolygon != null)
             {
-                GMapOverlay routes = new GMapOverlay("routes");
-                foreach (var point in tblLocation)
-                {
-                    points.Add(new PointLatLng(Convert.ToDouble(point.Latitude), Convert.ToDouble(point.Longitude)));
-
-                }
-                ////////////////////////////
-                GMapRoute rt = new GMapRoute(points, string.Empty);
-                {
-                    rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
-                    rt.Stroke.Width = 5;
-                    rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-                }
-                routes.Routes.Add(rt);
-
-                ///////////////////////////
-                MainMap.Overlays.Clear();
-                MainMap.Overlays.Add(routes);
-                MainMap.ZoomAndCenterRoutes("routes");
-
+                points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(field.LocationPolygon.ProviderValue.ToString());
             }
+            GMapOverlay routes = new GMapOverlay("routes");
+            ////////////////////////////
+            GMapRoute rt = new GMapRoute(points, string.Empty);
+            {
+                rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
+                rt.Stroke.Width = 5;
+                rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            }
+            routes.Routes.Add(rt);
+
+            ///////////////////////////
+            MainMap.Overlays.Clear();
+            MainMap.Overlays.Add(routes);
+            MainMap.ZoomAndCenterRoutes("routes");
+
+            //BaranDataAccess.Source.dstSourceTableAdapters.spr_src_FieldByID_Lst_SelectTableAdapter adp =
+            //     new BaranDataAccess.Source.dstSourceTableAdapters.spr_src_FieldByID_Lst_SelectTableAdapter();
+            //BaranDataAccess.Source.dstSource.spr_src_FieldByID_Lst_SelectRow drwField;
+
+            //FieldID = Convert.ToInt32(cmbFields.Value);
+
+            //drwField = adp.GetFieldListByIDTable(FieldID)[0];
+
+            //txtName.Text = drwField.IsSoilTextureNameNull() ? string.Empty : drwField.SoilTextureName;
+            //txtTotalArea.Text = drwField.IsTotalAreaNull() ? string.Empty : drwField.TotalArea.ToString();
+            //txtUsableArea.Text = drwField.IsUsableAreaNull() ? string.Empty : drwField.UsableArea.ToString();
+            //txtLinkedArea.Text = drwField.IsUsableAreaNull() ? string.Empty : drwField.UsableArea.ToString();
+
+
+
+            //BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocation =
+            //    new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
+            //BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter adpLocation =
+            //    new BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter();
+
+            ////List<PointLatLng> points = new List<PointLatLng>();
+
+            //adpLocation.FillLocationByIDTable(tblLocation, FieldID, null, null, null, null, null, null);
+
+            //if (tblLocation.Count > 0)
+            //{
+            //    GMapOverlay routes = new GMapOverlay("routes");
+            //    foreach (var point in tblLocation)
+            //    {
+            //        points.Add(new PointLatLng(Convert.ToDouble(point.Latitude), Convert.ToDouble(point.Longitude)));
+
+            //    }
+            //    ////////////////////////////
+            //    GMapRoute rt = new GMapRoute(points, string.Empty);
+            //    {
+            //        rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
+            //        rt.Stroke.Width = 5;
+            //        rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            //    }
+            //    routes.Routes.Add(rt);
+
+            //    ///////////////////////////
+            //    MainMap.Overlays.Clear();
+            //    MainMap.Overlays.Add(routes);
+            //    MainMap.ZoomAndCenterRoutes("routes");
+
+            //}
         }
 
         #endregion
-
-        private void grpControllers_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void txtDescription_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblDescription_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

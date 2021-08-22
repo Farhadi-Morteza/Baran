@@ -28,5 +28,6 @@ namespace BaranDataAccess
         public Nullable<int> UpdateUserID { get; set; }
         public Nullable<System.DateTime> UpdateDate { get; set; }
         public byte[] Logo { get; set; }
+        public byte[] Icon { get; set; }
     }
 }

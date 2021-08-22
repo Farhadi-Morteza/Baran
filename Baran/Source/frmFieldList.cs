@@ -82,9 +82,10 @@ namespace Baran.Source
             if (PublicMethods.SetFormSchema(ofrm, ofrm.FormItemID))
             {
                 ofrm.FormType = cnsFormType.Change;
-                ofrm.ShowDialog();
-                this.FillGrid();
-
+                if (ofrm.ShowDialog() == DialogResult.OK)
+                {
+                    this.FillGrid();
+                }
             }
         }
 
