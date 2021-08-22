@@ -729,42 +729,48 @@
             // 
             // grpPrint
             // 
-            this.grpPrint.Location = new System.Drawing.Point(341, 0);
+            this.grpPrint.Location = new System.Drawing.Point(295, 0);
             this.grpPrint.Size = new System.Drawing.Size(127, 66);
             // 
             // grpCancel
             // 
-            this.grpCancel.Location = new System.Drawing.Point(1113, 0);
+            this.grpCancel.Location = new System.Drawing.Point(1067, 0);
+            this.grpCancel.Size = new System.Drawing.Size(127, 66);
             // 
             // grpSave
             // 
-            this.grpSave.Location = new System.Drawing.Point(986, 0);
+            this.grpSave.Location = new System.Drawing.Point(940, 0);
+            this.grpSave.Size = new System.Drawing.Size(127, 66);
             // 
             // grpChange
             // 
-            this.grpChange.Location = new System.Drawing.Point(859, 0);
+            this.grpChange.Location = new System.Drawing.Point(813, 0);
+            this.grpChange.Size = new System.Drawing.Size(127, 66);
             // 
             // grpClear
             // 
-            this.grpClear.Location = new System.Drawing.Point(732, 0);
+            this.grpClear.Location = new System.Drawing.Point(686, 0);
+            this.grpClear.Size = new System.Drawing.Size(127, 66);
             // 
             // grpDelete
             // 
-            this.grpDelete.Location = new System.Drawing.Point(605, 0);
+            this.grpDelete.Location = new System.Drawing.Point(559, 0);
+            this.grpDelete.Size = new System.Drawing.Size(127, 66);
             // 
             // grpDoc
             // 
-            this.grpDoc.Location = new System.Drawing.Point(468, 0);
+            this.grpDoc.Location = new System.Drawing.Point(422, 0);
             this.grpDoc.Size = new System.Drawing.Size(137, 66);
             // 
             // grpRefresh
             // 
-            this.grpRefresh.Location = new System.Drawing.Point(221, 0);
+            this.grpRefresh.Location = new System.Drawing.Point(175, 0);
             this.grpRefresh.Size = new System.Drawing.Size(120, 66);
             // 
             // grpNew
             // 
-            this.grpNew.Location = new System.Drawing.Point(94, 0);
+            this.grpNew.Location = new System.Drawing.Point(48, 0);
+            this.grpNew.Size = new System.Drawing.Size(127, 66);
             // 
             // btnNew
             // 
@@ -776,26 +782,26 @@
             // 
             // grpButons
             // 
-            this.grpButons.Location = new System.Drawing.Point(0, 988);
-            this.grpButons.Size = new System.Drawing.Size(1241, 67);
+            this.grpButons.Location = new System.Drawing.Point(0, 677);
+            this.grpButons.Size = new System.Drawing.Size(1195, 67);
             this.grpButons.Visible = false;
             // 
             // lblLine2
             // 
-            this.lblLine2.Size = new System.Drawing.Size(1239, 3);
+            this.lblLine2.Size = new System.Drawing.Size(1193, 3);
             // 
             // grpHeader
             // 
-            this.grpHeader.Size = new System.Drawing.Size(1241, 75);
+            this.grpHeader.Size = new System.Drawing.Size(1195, 75);
             this.grpHeader.Visible = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(1149, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(1133, 8);
             // 
             // lblCaption
             // 
-            this.lblCaption.Location = new System.Drawing.Point(846, 27);
+            this.lblCaption.Location = new System.Drawing.Point(828, 21);
             // 
             // lblMessage
             // 
@@ -805,22 +811,22 @@
             // 
             // lblLine1
             // 
-            this.lblLine1.Size = new System.Drawing.Size(1239, 3);
+            this.lblLine1.Size = new System.Drawing.Size(1193, 3);
             // 
             // grpMessage
             // 
-            this.grpMessage.Size = new System.Drawing.Size(1241, 30);
+            this.grpMessage.Size = new System.Drawing.Size(1195, 30);
             // 
             // lblLine3
             // 
-            this.lblLine3.Location = new System.Drawing.Point(1, 879);
-            this.lblLine3.Size = new System.Drawing.Size(1239, 3);
+            this.lblLine3.Location = new System.Drawing.Point(1, 568);
+            this.lblLine3.Size = new System.Drawing.Size(1193, 3);
             // 
             // grpMain
             // 
             this.grpMain.Controls.Add(this.ultraExpandableGroupBox2);
             this.grpMain.Controls.Add(this.grpProductTask);
-            this.grpMain.Size = new System.Drawing.Size(1241, 883);
+            this.grpMain.Size = new System.Drawing.Size(1195, 572);
             this.grpMain.Controls.SetChildIndex(this.grpProductTask, 0);
             this.grpMain.Controls.SetChildIndex(this.ultraExpandableGroupBox2, 0);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
@@ -854,7 +860,7 @@
             this.grpProductTask.HeaderBorderStyle = Infragistics.Win.UIElementBorderStyle.None;
             this.grpProductTask.Location = new System.Drawing.Point(1, 0);
             this.grpProductTask.Name = "grpProductTask";
-            this.grpProductTask.Size = new System.Drawing.Size(1239, 236);
+            this.grpProductTask.Size = new System.Drawing.Size(1193, 236);
             this.grpProductTask.TabIndex = 0;
             // 
             // btnUpdate
@@ -864,7 +870,7 @@
             this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdate.Location = new System.Drawing.Point(338, 179);
+            this.btnUpdate.Location = new System.Drawing.Point(279, 176);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(0);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(105, 32);
@@ -883,10 +889,10 @@
             this.grpSeason.Controls.Add(this.label11);
             this.grpSeason.Controls.Add(this.label12);
             this.grpSeason.ForeColor = System.Drawing.Color.White;
-            this.grpSeason.Location = new System.Drawing.Point(17, 13);
+            this.grpSeason.Location = new System.Drawing.Point(4, 14);
             this.grpSeason.Name = "grpSeason";
             this.grpSeason.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.grpSeason.Size = new System.Drawing.Size(426, 159);
+            this.grpSeason.Size = new System.Drawing.Size(380, 143);
             this.grpSeason.TabIndex = 159;
             this.grpSeason.TabStop = false;
             this.grpSeason.Text = "فصل زراعی";
@@ -902,12 +908,12 @@
             this.txtSeasonName.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtSeasonName.EditableText = false;
             this.txtSeasonName.FontSize = 0;
-            this.txtSeasonName.Location = new System.Drawing.Point(22, 71);
+            this.txtSeasonName.Location = new System.Drawing.Point(7, 44);
             this.txtSeasonName.Name = "txtSeasonName";
             this.txtSeasonName.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtSeasonName.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtSeasonName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtSeasonName.Size = new System.Drawing.Size(391, 26);
+            this.txtSeasonName.Size = new System.Drawing.Size(279, 22);
             this.txtSeasonName.TabIndex = 153;
             this.txtSeasonName.UnformattedText = null;
             // 
@@ -920,10 +926,10 @@
             this.label13.Appearance = appearance6;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label13.Location = new System.Drawing.Point(311, 45);
+            this.label13.Location = new System.Drawing.Point(292, 46);
             this.label13.Name = "label13";
             this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label13.Size = new System.Drawing.Size(102, 20);
+            this.label13.Size = new System.Drawing.Size(82, 16);
             this.label13.TabIndex = 158;
             this.label13.Text = "نام فصل زراعی";
             // 
@@ -940,9 +946,9 @@
             this.mskSeasonToDate.EditableText = false;
             this.mskSeasonToDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
             this.mskSeasonToDate.InputMask = "yyyy/mm/dd";
-            this.mskSeasonToDate.Location = new System.Drawing.Point(22, 103);
+            this.mskSeasonToDate.Location = new System.Drawing.Point(7, 76);
             this.mskSeasonToDate.Name = "mskSeasonToDate";
-            this.mskSeasonToDate.Size = new System.Drawing.Size(113, 24);
+            this.mskSeasonToDate.Size = new System.Drawing.Size(113, 21);
             this.mskSeasonToDate.TabIndex = 157;
             this.mskSeasonToDate.Text = "____/__/__";
             // 
@@ -959,9 +965,9 @@
             this.mskSeasonFromDate.EditableText = false;
             this.mskSeasonFromDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
             this.mskSeasonFromDate.InputMask = "yyyy/mm/dd";
-            this.mskSeasonFromDate.Location = new System.Drawing.Point(240, 103);
+            this.mskSeasonFromDate.Location = new System.Drawing.Point(173, 76);
             this.mskSeasonFromDate.Name = "mskSeasonFromDate";
-            this.mskSeasonFromDate.Size = new System.Drawing.Size(113, 24);
+            this.mskSeasonFromDate.Size = new System.Drawing.Size(113, 21);
             this.mskSeasonFromDate.TabIndex = 156;
             this.mskSeasonFromDate.Text = "____/__/__";
             // 
@@ -974,10 +980,10 @@
             this.label11.Appearance = appearance8;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label11.Location = new System.Drawing.Point(141, 107);
+            this.label11.Location = new System.Drawing.Point(122, 78);
             this.label11.Name = "label11";
             this.label11.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label11.Size = new System.Drawing.Size(54, 20);
+            this.label11.Size = new System.Drawing.Size(43, 16);
             this.label11.TabIndex = 154;
             this.label11.Text = " تا تاریخ";
             // 
@@ -990,10 +996,10 @@
             this.label12.Appearance = appearance22;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label12.Location = new System.Drawing.Point(359, 100);
+            this.label12.Location = new System.Drawing.Point(292, 78);
             this.label12.Name = "label12";
             this.label12.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label12.Size = new System.Drawing.Size(54, 20);
+            this.label12.Size = new System.Drawing.Size(43, 16);
             this.label12.TabIndex = 155;
             this.label12.Text = " از تاریخ";
             // 
@@ -1006,10 +1012,10 @@
             this.label10.Appearance = appearance7;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label10.Location = new System.Drawing.Point(1128, 185);
+            this.label10.Location = new System.Drawing.Point(994, 190);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label10.Size = new System.Drawing.Size(101, 20);
+            this.label10.Size = new System.Drawing.Size(81, 16);
             this.label10.TabIndex = 152;
             this.label10.Text = "شخص مسئول";
             // 
@@ -1031,10 +1037,10 @@
             appearance192.TextHAlignAsString = "Right";
             appearance192.TextVAlignAsString = "Middle";
             this.cmbPerson.ItemAppearance = appearance192;
-            this.cmbPerson.Location = new System.Drawing.Point(819, 185);
+            this.cmbPerson.Location = new System.Drawing.Point(685, 190);
             this.cmbPerson.Name = "cmbPerson";
             this.cmbPerson.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbPerson.Size = new System.Drawing.Size(303, 26);
+            this.cmbPerson.Size = new System.Drawing.Size(303, 22);
             this.cmbPerson.TabIndex = 6;
             // 
             // txtDescription
@@ -1047,13 +1053,13 @@
             this.txtDescription.BackColor = System.Drawing.Color.Transparent;
             this.txtDescription.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtDescription.FontSize = 0;
-            this.txtDescription.Location = new System.Drawing.Point(460, 21);
+            this.txtDescription.Location = new System.Drawing.Point(390, 22);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtDescription.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDescription.Size = new System.Drawing.Size(343, 190);
+            this.txtDescription.Size = new System.Drawing.Size(288, 190);
             this.txtDescription.TabIndex = 7;
             this.txtDescription.UnformattedText = null;
             // 
@@ -1069,9 +1075,9 @@
             this.mskEndDate.Editable = Baran.Windows.Forms.Editable.Editable;
             this.mskEndDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
             this.mskEndDate.InputMask = "yyyy/mm/dd";
-            this.mskEndDate.Location = new System.Drawing.Point(820, 121);
+            this.mskEndDate.Location = new System.Drawing.Point(686, 126);
             this.mskEndDate.Name = "mskEndDate";
-            this.mskEndDate.Size = new System.Drawing.Size(100, 24);
+            this.mskEndDate.Size = new System.Drawing.Size(100, 21);
             this.mskEndDate.TabIndex = 4;
             this.mskEndDate.Text = "____/__/__";
             // 
@@ -1087,9 +1093,9 @@
             this.mskStartDate.Editable = Baran.Windows.Forms.Editable.Editable;
             this.mskStartDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
             this.mskStartDate.InputMask = "yyyy/mm/dd";
-            this.mskStartDate.Location = new System.Drawing.Point(1022, 121);
+            this.mskStartDate.Location = new System.Drawing.Point(888, 126);
             this.mskStartDate.Name = "mskStartDate";
-            this.mskStartDate.Size = new System.Drawing.Size(100, 24);
+            this.mskStartDate.Size = new System.Drawing.Size(100, 21);
             this.mskStartDate.TabIndex = 3;
             this.mskStartDate.Text = "____/__/__";
             // 
@@ -1102,10 +1108,10 @@
             this.label8.Appearance = appearance4;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label8.Location = new System.Drawing.Point(1128, 119);
+            this.label8.Location = new System.Drawing.Point(994, 124);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label8.Size = new System.Drawing.Size(90, 20);
+            this.label8.Size = new System.Drawing.Size(72, 16);
             this.label8.TabIndex = 146;
             this.label8.Text = "شروع فعالیت";
             // 
@@ -1118,10 +1124,10 @@
             this.label9.Appearance = appearance15;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label9.Location = new System.Drawing.Point(923, 124);
+            this.label9.Location = new System.Drawing.Point(789, 129);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label9.Size = new System.Drawing.Size(81, 20);
+            this.label9.Size = new System.Drawing.Size(65, 16);
             this.label9.TabIndex = 145;
             this.label9.Text = "پایان فعالیت";
             // 
@@ -1133,10 +1139,10 @@
             appearance5.TextVAlignAsString = "Middle";
             this.label5.Appearance = appearance5;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1128, 87);
+            this.label5.Location = new System.Drawing.Point(994, 92);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label5.Size = new System.Drawing.Size(69, 19);
+            this.label5.Size = new System.Drawing.Size(55, 15);
             this.label5.TabIndex = 144;
             this.label5.Text = "گروه فرعی";
             // 
@@ -1158,10 +1164,10 @@
             appearance2.TextHAlignAsString = "Right";
             appearance2.TextVAlignAsString = "Middle";
             this.cmbTaskSubCategory.ItemAppearance = appearance2;
-            this.cmbTaskSubCategory.Location = new System.Drawing.Point(819, 88);
+            this.cmbTaskSubCategory.Location = new System.Drawing.Point(685, 93);
             this.cmbTaskSubCategory.Name = "cmbTaskSubCategory";
             this.cmbTaskSubCategory.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbTaskSubCategory.Size = new System.Drawing.Size(303, 26);
+            this.cmbTaskSubCategory.Size = new System.Drawing.Size(303, 22);
             this.cmbTaskSubCategory.TabIndex = 2;
             // 
             // label6
@@ -1172,10 +1178,10 @@
             appearance49.TextVAlignAsString = "Middle";
             this.label6.Appearance = appearance49;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1128, 55);
+            this.label6.Location = new System.Drawing.Point(994, 60);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label6.Size = new System.Drawing.Size(68, 19);
+            this.label6.Size = new System.Drawing.Size(55, 15);
             this.label6.TabIndex = 142;
             this.label6.Text = "گروه اصلی";
             // 
@@ -1197,10 +1203,10 @@
             appearance10.TextHAlignAsString = "Right";
             appearance10.TextVAlignAsString = "Middle";
             this.cmbTaskCategory.ItemAppearance = appearance10;
-            this.cmbTaskCategory.Location = new System.Drawing.Point(819, 55);
+            this.cmbTaskCategory.Location = new System.Drawing.Point(685, 60);
             this.cmbTaskCategory.Name = "cmbTaskCategory";
             this.cmbTaskCategory.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbTaskCategory.Size = new System.Drawing.Size(303, 26);
+            this.cmbTaskCategory.Size = new System.Drawing.Size(303, 22);
             this.cmbTaskCategory.TabIndex = 1;
             this.cmbTaskCategory.ValueChanged += new System.EventHandler(this.cmbTaskCategory_ValueChanged);
             // 
@@ -1214,12 +1220,12 @@
             this.txtTaskName.BackColor = System.Drawing.Color.Transparent;
             this.txtTaskName.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtTaskName.FontSize = 0;
-            this.txtTaskName.Location = new System.Drawing.Point(819, 22);
+            this.txtTaskName.Location = new System.Drawing.Point(685, 27);
             this.txtTaskName.Name = "txtTaskName";
             this.txtTaskName.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtTaskName.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtTaskName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTaskName.Size = new System.Drawing.Size(303, 26);
+            this.txtTaskName.Size = new System.Drawing.Size(303, 22);
             this.txtTaskName.TabIndex = 0;
             this.txtTaskName.UnformattedText = null;
             // 
@@ -1232,10 +1238,10 @@
             this.lblStatus.Appearance = appearance20;
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblStatus.Location = new System.Drawing.Point(1128, 152);
+            this.lblStatus.Location = new System.Drawing.Point(994, 157);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblStatus.Size = new System.Drawing.Size(51, 20);
+            this.lblStatus.Size = new System.Drawing.Size(41, 16);
             this.lblStatus.TabIndex = 139;
             this.lblStatus.Text = "وضعیت";
             // 
@@ -1257,10 +1263,10 @@
             appearance17.TextHAlignAsString = "Right";
             appearance17.TextVAlignAsString = "Middle";
             this.cmbStatus.ItemAppearance = appearance17;
-            this.cmbStatus.Location = new System.Drawing.Point(819, 152);
+            this.cmbStatus.Location = new System.Drawing.Point(685, 157);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbStatus.Size = new System.Drawing.Size(303, 26);
+            this.cmbStatus.Size = new System.Drawing.Size(303, 22);
             this.cmbStatus.TabIndex = 5;
             // 
             // label7
@@ -1272,10 +1278,10 @@
             this.label7.Appearance = appearance19;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label7.Location = new System.Drawing.Point(1128, 22);
+            this.label7.Location = new System.Drawing.Point(994, 27);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label7.Size = new System.Drawing.Size(48, 20);
+            this.label7.Size = new System.Drawing.Size(39, 16);
             this.label7.TabIndex = 137;
             this.label7.Text = "فعالیت";
             // 
@@ -1285,12 +1291,12 @@
             this.ultraExpandableGroupBox2.Controls.Add(this.egpBasePanel);
             this.ultraExpandableGroupBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ultraExpandableGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ultraExpandableGroupBox2.ExpandedSize = new System.Drawing.Size(1239, 646);
+            this.ultraExpandableGroupBox2.ExpandedSize = new System.Drawing.Size(1193, 335);
             this.ultraExpandableGroupBox2.ExpansionIndicator = Infragistics.Win.Misc.GroupBoxExpansionIndicator.None;
             this.ultraExpandableGroupBox2.HeaderBorderStyle = Infragistics.Win.UIElementBorderStyle.None;
             this.ultraExpandableGroupBox2.Location = new System.Drawing.Point(1, 236);
             this.ultraExpandableGroupBox2.Name = "ultraExpandableGroupBox2";
-            this.ultraExpandableGroupBox2.Size = new System.Drawing.Size(1239, 646);
+            this.ultraExpandableGroupBox2.Size = new System.Drawing.Size(1193, 335);
             this.ultraExpandableGroupBox2.TabIndex = 1;
             // 
             // egpBasePanel
@@ -1308,8 +1314,9 @@
             this.egpBasePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.egpBasePanel.Location = new System.Drawing.Point(1, 0);
             this.egpBasePanel.Name = "egpBasePanel";
-            this.egpBasePanel.Size = new System.Drawing.Size(1237, 645);
+            this.egpBasePanel.Size = new System.Drawing.Size(1191, 334);
             this.egpBasePanel.TabIndex = 0;
+            this.egpBasePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.egpBasePanel_Paint);
             // 
             // egbDiscussion
             // 
@@ -1320,7 +1327,7 @@
             this.egbDiscussion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.egbDiscussion.Dock = System.Windows.Forms.DockStyle.Top;
             this.egbDiscussion.Expanded = false;
-            this.egbDiscussion.ExpandedSize = new System.Drawing.Size(1237, 302);
+            this.egbDiscussion.ExpandedSize = new System.Drawing.Size(1191, 302);
             this.egbDiscussion.ExpansionIndicator = Infragistics.Win.Misc.GroupBoxExpansionIndicator.Near;
             appearance108.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(188)))), ((int)(((byte)(66)))));
             appearance108.FontData.BoldAsString = "True";
@@ -1328,10 +1335,10 @@
             appearance108.FontData.SizeInPoints = 10F;
             this.egbDiscussion.HeaderAppearance = appearance108;
             this.egbDiscussion.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOutsideBorder;
-            this.egbDiscussion.Location = new System.Drawing.Point(0, 272);
+            this.egbDiscussion.Location = new System.Drawing.Point(0, 224);
             this.egbDiscussion.Name = "egbDiscussion";
             this.egbDiscussion.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.egbDiscussion.Size = new System.Drawing.Size(1237, 34);
+            this.egbDiscussion.Size = new System.Drawing.Size(1191, 28);
             this.egbDiscussion.TabIndex = 7;
             this.egbDiscussion.Text = "بحت و نظر";
             // 
@@ -1370,17 +1377,17 @@
             ultraGridColumn3.CellAppearance = appearance12;
             ultraGridColumn3.Header.Caption = "نام";
             ultraGridColumn3.Header.VisiblePosition = 4;
-            ultraGridColumn3.Width = 315;
+            ultraGridColumn3.Width = 316;
             ultraGridColumn4.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn4.CellMultiLine = Infragistics.Win.DefaultableBoolean.True;
             ultraGridColumn4.Header.Caption = "نظر";
             ultraGridColumn4.Header.VisiblePosition = 2;
-            ultraGridColumn4.Width = 316;
+            ultraGridColumn4.Width = 318;
             ultraGridColumn5.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn5.Header.Caption = "تاریخ";
             ultraGridColumn5.Header.VisiblePosition = 3;
             ultraGridColumn5.MaxLength = 20;
-            ultraGridColumn5.Width = 314;
+            ultraGridColumn5.Width = 315;
             ultraGridColumn6.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn6.Header.Caption = "";
             ultraGridColumn6.Header.VisiblePosition = 5;
@@ -1532,7 +1539,7 @@
             this.egbDocu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.egbDocu.Dock = System.Windows.Forms.DockStyle.Top;
             this.egbDocu.Expanded = false;
-            this.egbDocu.ExpandedSize = new System.Drawing.Size(1237, 272);
+            this.egbDocu.ExpandedSize = new System.Drawing.Size(1191, 272);
             this.egbDocu.ExpansionIndicator = Infragistics.Win.Misc.GroupBoxExpansionIndicator.Near;
             appearance56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(188)))), ((int)(((byte)(66)))));
             appearance56.FontData.BoldAsString = "True";
@@ -1540,10 +1547,10 @@
             appearance56.FontData.SizeInPoints = 10F;
             this.egbDocu.HeaderAppearance = appearance56;
             this.egbDocu.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOutsideBorder;
-            this.egbDocu.Location = new System.Drawing.Point(0, 238);
+            this.egbDocu.Location = new System.Drawing.Point(0, 196);
             this.egbDocu.Name = "egbDocu";
             this.egbDocu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.egbDocu.Size = new System.Drawing.Size(1237, 34);
+            this.egbDocu.Size = new System.Drawing.Size(1191, 28);
             this.egbDocu.TabIndex = 6;
             this.egbDocu.Text = "ثبت سند";
             // 
@@ -1582,11 +1589,11 @@
             ultraGridColumn10.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn10.Header.Caption = "نام";
             ultraGridColumn10.Header.VisiblePosition = 4;
-            ultraGridColumn10.Width = 377;
+            ultraGridColumn10.Width = 362;
             ultraGridColumn11.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn11.Header.Caption = "توضیحات";
             ultraGridColumn11.Header.VisiblePosition = 2;
-            ultraGridColumn11.Width = 367;
+            ultraGridColumn11.Width = 351;
             ultraGridColumn12.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             appearance14.ImageHAlign = Infragistics.Win.HAlign.Center;
             appearance14.ImageVAlign = Infragistics.Win.VAlign.Middle;
@@ -1594,17 +1601,17 @@
             ultraGridColumn12.Header.Caption = "سند";
             ultraGridColumn12.Header.VisiblePosition = 3;
             ultraGridColumn12.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Image;
-            ultraGridColumn12.Width = 175;
+            ultraGridColumn12.Width = 170;
             ultraGridColumn13.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn13.Header.Caption = "";
             ultraGridColumn13.Header.VisiblePosition = 5;
             ultraGridColumn13.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn13.Width = 86;
+            ultraGridColumn13.Width = 83;
             ultraGridColumn14.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn14.Header.Caption = "";
             ultraGridColumn14.Header.VisiblePosition = 6;
             ultraGridColumn14.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn14.Width = 84;
+            ultraGridColumn14.Width = 81;
             ultraGridBand2.Columns.AddRange(new object[] {
             ultraGridColumn8,
             ultraGridColumn9,
@@ -1727,7 +1734,7 @@
             this.egbChemicalAnalys.Cursor = System.Windows.Forms.Cursors.Hand;
             this.egbChemicalAnalys.Dock = System.Windows.Forms.DockStyle.Top;
             this.egbChemicalAnalys.Expanded = false;
-            this.egbChemicalAnalys.ExpandedSize = new System.Drawing.Size(1237, 302);
+            this.egbChemicalAnalys.ExpandedSize = new System.Drawing.Size(1191, 302);
             this.egbChemicalAnalys.ExpansionIndicator = Infragistics.Win.Misc.GroupBoxExpansionIndicator.Near;
             appearance29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(188)))), ((int)(((byte)(66)))));
             appearance29.FontData.BoldAsString = "True";
@@ -1735,10 +1742,10 @@
             appearance29.FontData.SizeInPoints = 10F;
             this.egbChemicalAnalys.HeaderAppearance = appearance29;
             this.egbChemicalAnalys.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOutsideBorder;
-            this.egbChemicalAnalys.Location = new System.Drawing.Point(0, 204);
+            this.egbChemicalAnalys.Location = new System.Drawing.Point(0, 168);
             this.egbChemicalAnalys.Name = "egbChemicalAnalys";
             this.egbChemicalAnalys.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.egbChemicalAnalys.Size = new System.Drawing.Size(1237, 34);
+            this.egbChemicalAnalys.Size = new System.Drawing.Size(1191, 28);
             this.egbChemicalAnalys.TabIndex = 8;
             this.egbChemicalAnalys.Text = "آنالیز شیمیایی";
             this.egbChemicalAnalys.Visible = false;
@@ -1790,7 +1797,7 @@
             ultraGridColumn20.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn20.Header.Caption = "نام آزمایشگاه";
             ultraGridColumn20.Header.VisiblePosition = 0;
-            ultraGridColumn20.Width = 169;
+            ultraGridColumn20.Width = 173;
             ultraGridColumn21.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn21.Header.VisiblePosition = 6;
             ultraGridColumn21.Hidden = true;
@@ -2008,7 +2015,7 @@
             this.cmbChemicalAnalys.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.cmbChemicalAnalys.Location = new System.Drawing.Point(129, 17);
             this.cmbChemicalAnalys.Name = "cmbChemicalAnalys";
-            this.cmbChemicalAnalys.Size = new System.Drawing.Size(987, 27);
+            this.cmbChemicalAnalys.Size = new System.Drawing.Size(987, 23);
             this.cmbChemicalAnalys.TabIndex = 0;
             this.cmbChemicalAnalys.ValueMember = "ChemicalAnalysID";
             // 
@@ -2042,7 +2049,7 @@
             this.egbWaterStorage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.egbWaterStorage.Dock = System.Windows.Forms.DockStyle.Top;
             this.egbWaterStorage.Expanded = false;
-            this.egbWaterStorage.ExpandedSize = new System.Drawing.Size(1237, 260);
+            this.egbWaterStorage.ExpandedSize = new System.Drawing.Size(1191, 260);
             this.egbWaterStorage.ExpansionIndicator = Infragistics.Win.Misc.GroupBoxExpansionIndicator.Near;
             appearance163.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(188)))), ((int)(((byte)(66)))));
             appearance163.FontData.BoldAsString = "True";
@@ -2050,10 +2057,10 @@
             appearance163.FontData.SizeInPoints = 10F;
             this.egbWaterStorage.HeaderAppearance = appearance163;
             this.egbWaterStorage.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOutsideBorder;
-            this.egbWaterStorage.Location = new System.Drawing.Point(0, 170);
+            this.egbWaterStorage.Location = new System.Drawing.Point(0, 140);
             this.egbWaterStorage.Name = "egbWaterStorage";
             this.egbWaterStorage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.egbWaterStorage.Size = new System.Drawing.Size(1237, 34);
+            this.egbWaterStorage.Size = new System.Drawing.Size(1191, 28);
             this.egbWaterStorage.TabIndex = 5;
             this.egbWaterStorage.Text = "منابع ذخیره آب";
             this.egbWaterStorage.Visible = false;
@@ -2087,34 +2094,34 @@
             ultraGridColumn33.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn33.Header.Caption = "نام";
             ultraGridColumn33.Header.VisiblePosition = 7;
-            ultraGridColumn33.Width = 182;
+            ultraGridColumn33.Width = 165;
             ultraGridColumn34.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn34.Header.VisiblePosition = 0;
             ultraGridColumn34.Hidden = true;
             ultraGridColumn35.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn35.Header.Caption = "تاریخ فعالیت";
             ultraGridColumn35.Header.VisiblePosition = 6;
-            ultraGridColumn35.Width = 201;
+            ultraGridColumn35.Width = 182;
             ultraGridColumn36.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn36.Header.Caption = "ساعت شروع";
             ultraGridColumn36.Header.VisiblePosition = 5;
-            ultraGridColumn36.Width = 107;
+            ultraGridColumn36.Width = 97;
             ultraGridColumn37.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn37.Header.Caption = "ساعت پایان";
             ultraGridColumn37.Header.VisiblePosition = 4;
-            ultraGridColumn37.Width = 124;
+            ultraGridColumn37.Width = 112;
             ultraGridColumn38.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn38.Header.Caption = "حجم مصرفی";
             ultraGridColumn38.Header.VisiblePosition = 3;
-            ultraGridColumn38.Width = 130;
+            ultraGridColumn38.Width = 118;
             ultraGridColumn39.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn39.Header.Caption = "توضیحات";
             ultraGridColumn39.Header.VisiblePosition = 1;
-            ultraGridColumn39.Width = 180;
+            ultraGridColumn39.Width = 161;
             ultraGridColumn40.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn40.Header.Caption = "فعالیت/هکتار";
             ultraGridColumn40.Header.VisiblePosition = 2;
-            ultraGridColumn40.Width = 123;
+            ultraGridColumn40.Width = 112;
             ultraGridColumn41.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn41.Header.VisiblePosition = 8;
             ultraGridColumn41.Hidden = true;
@@ -2123,12 +2130,12 @@
             ultraGridColumn42.Header.Caption = "";
             ultraGridColumn42.Header.VisiblePosition = 9;
             ultraGridColumn42.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn42.Width = 50;
+            ultraGridColumn42.Width = 46;
             ultraGridColumn43.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn43.Header.Caption = "";
             ultraGridColumn43.Header.VisiblePosition = 10;
             ultraGridColumn43.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn43.Width = 40;
+            ultraGridColumn43.Width = 37;
             ultraGridBand5.Columns.AddRange(new object[] {
             ultraGridColumn33,
             ultraGridColumn34,
@@ -2265,7 +2272,7 @@
             this.cmbWaterStorage.Location = new System.Drawing.Point(829, 16);
             this.cmbWaterStorage.Name = "cmbWaterStorage";
             this.cmbWaterStorage.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbWaterStorage.Size = new System.Drawing.Size(253, 26);
+            this.cmbWaterStorage.Size = new System.Drawing.Size(253, 22);
             this.cmbWaterStorage.TabIndex = 0;
             // 
             // label42
@@ -2294,7 +2301,7 @@
             this.mskWaterStorageTreatedArea.InputMask = "{double:6.2}";
             this.mskWaterStorageTreatedArea.Location = new System.Drawing.Point(965, 49);
             this.mskWaterStorageTreatedArea.Name = "mskWaterStorageTreatedArea";
-            this.mskWaterStorageTreatedArea.Size = new System.Drawing.Size(90, 24);
+            this.mskWaterStorageTreatedArea.Size = new System.Drawing.Size(90, 21);
             this.mskWaterStorageTreatedArea.TabIndex = 5;
             this.mskWaterStorageTreatedArea.Text = "______.__";
             // 
@@ -2311,7 +2318,7 @@
             this.mskWaterStorageUsageVoulum.InputMask = "{double:6.2}";
             this.mskWaterStorageUsageVoulum.Location = new System.Drawing.Point(620, 16);
             this.mskWaterStorageUsageVoulum.Name = "mskWaterStorageUsageVoulum";
-            this.mskWaterStorageUsageVoulum.Size = new System.Drawing.Size(94, 24);
+            this.mskWaterStorageUsageVoulum.Size = new System.Drawing.Size(94, 21);
             this.mskWaterStorageUsageVoulum.TabIndex = 1;
             this.mskWaterStorageUsageVoulum.Text = "______.__";
             // 
@@ -2328,7 +2335,7 @@
             this.mskWaterStorageStartTime.InputMask = "{LOC}hh:mm";
             this.mskWaterStorageStartTime.Location = new System.Drawing.Point(262, 16);
             this.mskWaterStorageStartTime.Name = "mskWaterStorageStartTime";
-            this.mskWaterStorageStartTime.Size = new System.Drawing.Size(62, 24);
+            this.mskWaterStorageStartTime.Size = new System.Drawing.Size(62, 21);
             this.mskWaterStorageStartTime.TabIndex = 3;
             this.mskWaterStorageStartTime.Text = "__:__";
             // 
@@ -2345,7 +2352,7 @@
             this.mskWaterStorageEndTime.InputMask = "{LOC}hh:mm";
             this.mskWaterStorageEndTime.Location = new System.Drawing.Point(114, 16);
             this.mskWaterStorageEndTime.Name = "mskWaterStorageEndTime";
-            this.mskWaterStorageEndTime.Size = new System.Drawing.Size(61, 24);
+            this.mskWaterStorageEndTime.Size = new System.Drawing.Size(61, 21);
             this.mskWaterStorageEndTime.TabIndex = 4;
             this.mskWaterStorageEndTime.Text = "__:__";
             // 
@@ -2360,7 +2367,7 @@
             this.label43.Location = new System.Drawing.Point(181, 19);
             this.label43.Name = "label43";
             this.label43.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label43.Size = new System.Drawing.Size(75, 19);
+            this.label43.Size = new System.Drawing.Size(60, 15);
             this.label43.TabIndex = 4;
             this.label43.Text = "ساعت پایان";
             // 
@@ -2375,7 +2382,7 @@
             this.label44.Location = new System.Drawing.Point(720, 20);
             this.label44.Name = "label44";
             this.label44.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label44.Size = new System.Drawing.Size(101, 19);
+            this.label44.Size = new System.Drawing.Size(81, 15);
             this.label44.TabIndex = 153;
             this.label44.Text = "حجم آب مصرفی";
             // 
@@ -2393,7 +2400,7 @@
             this.mskWaterStorageDate.InputMask = "yyyy/mm/dd";
             this.mskWaterStorageDate.Location = new System.Drawing.Point(418, 16);
             this.mskWaterStorageDate.Name = "mskWaterStorageDate";
-            this.mskWaterStorageDate.Size = new System.Drawing.Size(105, 24);
+            this.mskWaterStorageDate.Size = new System.Drawing.Size(105, 21);
             this.mskWaterStorageDate.TabIndex = 2;
             this.mskWaterStorageDate.Text = "____/__/__";
             // 
@@ -2412,7 +2419,7 @@
             this.txtWaterStorageDescription.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtWaterStorageDescription.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtWaterStorageDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtWaterStorageDescription.Size = new System.Drawing.Size(892, 26);
+            this.txtWaterStorageDescription.Size = new System.Drawing.Size(892, 22);
             this.txtWaterStorageDescription.TabIndex = 6;
             this.txtWaterStorageDescription.UnformattedText = null;
             // 
@@ -2428,7 +2435,7 @@
             this.label45.Location = new System.Drawing.Point(897, 52);
             this.label45.Name = "label45";
             this.label45.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label45.Size = new System.Drawing.Size(61, 20);
+            this.label45.Size = new System.Drawing.Size(49, 16);
             this.label45.TabIndex = 151;
             this.label45.Text = "توضیحات";
             // 
@@ -2459,7 +2466,7 @@
             this.label46.Location = new System.Drawing.Point(1058, 52);
             this.label46.Name = "label46";
             this.label46.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label46.Size = new System.Drawing.Size(81, 19);
+            this.label46.Size = new System.Drawing.Size(65, 15);
             this.label46.TabIndex = 7;
             this.label46.Text = "فعالیت/هکتار";
             // 
@@ -2474,7 +2481,7 @@
             this.label47.Location = new System.Drawing.Point(330, 19);
             this.label47.Name = "label47";
             this.label47.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label47.Size = new System.Drawing.Size(84, 19);
+            this.label47.Size = new System.Drawing.Size(67, 15);
             this.label47.TabIndex = 3;
             this.label47.Text = "ساعت شروع";
             // 
@@ -2489,7 +2496,7 @@
             this.label48.Location = new System.Drawing.Point(527, 19);
             this.label48.Name = "label48";
             this.label48.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label48.Size = new System.Drawing.Size(32, 19);
+            this.label48.Size = new System.Drawing.Size(26, 15);
             this.label48.TabIndex = 2;
             this.label48.Text = "تاریخ";
             // 
@@ -2504,7 +2511,7 @@
             this.label49.Location = new System.Drawing.Point(1086, 19);
             this.label49.Name = "label49";
             this.label49.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label49.Size = new System.Drawing.Size(61, 19);
+            this.label49.Size = new System.Drawing.Size(49, 15);
             this.label49.TabIndex = 4;
             this.label49.Text = "ذخائر آبی";
             // 
@@ -2517,7 +2524,7 @@
             this.egbWater.Cursor = System.Windows.Forms.Cursors.Hand;
             this.egbWater.Dock = System.Windows.Forms.DockStyle.Top;
             this.egbWater.Expanded = false;
-            this.egbWater.ExpandedSize = new System.Drawing.Size(1237, 260);
+            this.egbWater.ExpandedSize = new System.Drawing.Size(1191, 260);
             this.egbWater.ExpansionIndicator = Infragistics.Win.Misc.GroupBoxExpansionIndicator.Near;
             appearance206.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(188)))), ((int)(((byte)(66)))));
             appearance206.FontData.BoldAsString = "True";
@@ -2525,10 +2532,10 @@
             appearance206.FontData.SizeInPoints = 10F;
             this.egbWater.HeaderAppearance = appearance206;
             this.egbWater.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOutsideBorder;
-            this.egbWater.Location = new System.Drawing.Point(0, 136);
+            this.egbWater.Location = new System.Drawing.Point(0, 112);
             this.egbWater.Name = "egbWater";
             this.egbWater.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.egbWater.Size = new System.Drawing.Size(1237, 34);
+            this.egbWater.Size = new System.Drawing.Size(1191, 28);
             this.egbWater.TabIndex = 4;
             this.egbWater.Text = "منابع آب";
             this.egbWater.Visible = false;
@@ -2562,7 +2569,7 @@
             ultraGridColumn44.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn44.Header.Caption = "نام";
             ultraGridColumn44.Header.VisiblePosition = 8;
-            ultraGridColumn44.Width = 178;
+            ultraGridColumn44.Width = 164;
             ultraGridColumn45.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn45.Header.VisiblePosition = 0;
             ultraGridColumn45.Hidden = true;
@@ -2572,37 +2579,37 @@
             ultraGridColumn47.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn47.Header.Caption = "تاریخ فعالیت";
             ultraGridColumn47.Header.VisiblePosition = 7;
-            ultraGridColumn47.Width = 178;
+            ultraGridColumn47.Width = 164;
             ultraGridColumn48.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn48.Header.Caption = "ساعت شروع";
             ultraGridColumn48.Header.VisiblePosition = 6;
-            ultraGridColumn48.Width = 108;
+            ultraGridColumn48.Width = 100;
             ultraGridColumn49.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn49.Header.Caption = "ساعت پایان";
             ultraGridColumn49.Header.VisiblePosition = 5;
-            ultraGridColumn49.Width = 102;
+            ultraGridColumn49.Width = 94;
             ultraGridColumn50.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn50.Header.Caption = "حجم مصرفی";
             ultraGridColumn50.Header.VisiblePosition = 4;
-            ultraGridColumn50.Width = 140;
+            ultraGridColumn50.Width = 129;
             ultraGridColumn51.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn51.Header.Caption = "فعالیت/هکتار";
             ultraGridColumn51.Header.VisiblePosition = 3;
-            ultraGridColumn51.Width = 134;
+            ultraGridColumn51.Width = 124;
             ultraGridColumn52.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn52.Header.Caption = "توضیحات";
             ultraGridColumn52.Header.VisiblePosition = 2;
-            ultraGridColumn52.Width = 196;
+            ultraGridColumn52.Width = 181;
             ultraGridColumn53.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn53.Header.Caption = "";
             ultraGridColumn53.Header.VisiblePosition = 9;
             ultraGridColumn53.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn53.Width = 40;
+            ultraGridColumn53.Width = 37;
             ultraGridColumn54.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn54.Header.Caption = "";
             ultraGridColumn54.Header.VisiblePosition = 10;
             ultraGridColumn54.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn54.Width = 40;
+            ultraGridColumn54.Width = 37;
             ultraGridBand6.Columns.AddRange(new object[] {
             ultraGridColumn44,
             ultraGridColumn45,
@@ -2739,7 +2746,7 @@
             this.cmbWater.Location = new System.Drawing.Point(827, 14);
             this.cmbWater.Name = "cmbWater";
             this.cmbWater.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbWater.Size = new System.Drawing.Size(253, 26);
+            this.cmbWater.Size = new System.Drawing.Size(253, 22);
             this.cmbWater.TabIndex = 0;
             // 
             // label27
@@ -2768,7 +2775,7 @@
             this.mskWaterTradetArea.InputMask = "{double:6.2}";
             this.mskWaterTradetArea.Location = new System.Drawing.Point(965, 49);
             this.mskWaterTradetArea.Name = "mskWaterTradetArea";
-            this.mskWaterTradetArea.Size = new System.Drawing.Size(90, 24);
+            this.mskWaterTradetArea.Size = new System.Drawing.Size(90, 21);
             this.mskWaterTradetArea.TabIndex = 5;
             this.mskWaterTradetArea.Text = "______.__";
             // 
@@ -2785,7 +2792,7 @@
             this.mskWaterUsageVolume.InputMask = "{double:6.2}";
             this.mskWaterUsageVolume.Location = new System.Drawing.Point(620, 16);
             this.mskWaterUsageVolume.Name = "mskWaterUsageVolume";
-            this.mskWaterUsageVolume.Size = new System.Drawing.Size(94, 24);
+            this.mskWaterUsageVolume.Size = new System.Drawing.Size(94, 21);
             this.mskWaterUsageVolume.TabIndex = 1;
             this.mskWaterUsageVolume.Text = "______.__";
             // 
@@ -2802,7 +2809,7 @@
             this.mskWaterStartTime.InputMask = "{LOC}hh:mm";
             this.mskWaterStartTime.Location = new System.Drawing.Point(262, 16);
             this.mskWaterStartTime.Name = "mskWaterStartTime";
-            this.mskWaterStartTime.Size = new System.Drawing.Size(62, 24);
+            this.mskWaterStartTime.Size = new System.Drawing.Size(62, 21);
             this.mskWaterStartTime.TabIndex = 3;
             this.mskWaterStartTime.Text = "__:__";
             // 
@@ -2819,7 +2826,7 @@
             this.mskWaterEndTime.InputMask = "{LOC}hh:mm";
             this.mskWaterEndTime.Location = new System.Drawing.Point(114, 16);
             this.mskWaterEndTime.Name = "mskWaterEndTime";
-            this.mskWaterEndTime.Size = new System.Drawing.Size(61, 24);
+            this.mskWaterEndTime.Size = new System.Drawing.Size(61, 21);
             this.mskWaterEndTime.TabIndex = 4;
             this.mskWaterEndTime.Text = "__:__";
             // 
@@ -2834,7 +2841,7 @@
             this.label35.Location = new System.Drawing.Point(179, 19);
             this.label35.Name = "label35";
             this.label35.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label35.Size = new System.Drawing.Size(75, 19);
+            this.label35.Size = new System.Drawing.Size(60, 15);
             this.label35.TabIndex = 155;
             this.label35.Text = "ساعت پایان";
             // 
@@ -2849,7 +2856,7 @@
             this.label36.Location = new System.Drawing.Point(720, 20);
             this.label36.Name = "label36";
             this.label36.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label36.Size = new System.Drawing.Size(101, 19);
+            this.label36.Size = new System.Drawing.Size(81, 15);
             this.label36.TabIndex = 153;
             this.label36.Text = "حجم آب مصرفی";
             // 
@@ -2867,7 +2874,7 @@
             this.mskWaterDate.InputMask = "yyyy/mm/dd";
             this.mskWaterDate.Location = new System.Drawing.Point(418, 16);
             this.mskWaterDate.Name = "mskWaterDate";
-            this.mskWaterDate.Size = new System.Drawing.Size(105, 24);
+            this.mskWaterDate.Size = new System.Drawing.Size(105, 21);
             this.mskWaterDate.TabIndex = 2;
             this.mskWaterDate.Text = "____/__/__";
             // 
@@ -2886,7 +2893,7 @@
             this.txtWaterDescription.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtWaterDescription.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtWaterDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtWaterDescription.Size = new System.Drawing.Size(892, 26);
+            this.txtWaterDescription.Size = new System.Drawing.Size(892, 22);
             this.txtWaterDescription.TabIndex = 6;
             this.txtWaterDescription.UnformattedText = null;
             // 
@@ -2902,7 +2909,7 @@
             this.label37.Location = new System.Drawing.Point(897, 52);
             this.label37.Name = "label37";
             this.label37.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label37.Size = new System.Drawing.Size(61, 20);
+            this.label37.Size = new System.Drawing.Size(49, 16);
             this.label37.TabIndex = 151;
             this.label37.Text = "توضیحات";
             // 
@@ -2933,7 +2940,7 @@
             this.label38.Location = new System.Drawing.Point(1058, 52);
             this.label38.Name = "label38";
             this.label38.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label38.Size = new System.Drawing.Size(81, 19);
+            this.label38.Size = new System.Drawing.Size(65, 15);
             this.label38.TabIndex = 7;
             this.label38.Text = "فعالیت/هکتار";
             // 
@@ -2948,7 +2955,7 @@
             this.label39.Location = new System.Drawing.Point(326, 19);
             this.label39.Name = "label39";
             this.label39.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label39.Size = new System.Drawing.Size(84, 19);
+            this.label39.Size = new System.Drawing.Size(67, 15);
             this.label39.TabIndex = 6;
             this.label39.Text = "ساعت شروع";
             // 
@@ -2963,7 +2970,7 @@
             this.label40.Location = new System.Drawing.Point(527, 19);
             this.label40.Name = "label40";
             this.label40.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label40.Size = new System.Drawing.Size(32, 19);
+            this.label40.Size = new System.Drawing.Size(26, 15);
             this.label40.TabIndex = 5;
             this.label40.Text = "تاریخ";
             // 
@@ -2978,7 +2985,7 @@
             this.label41.Location = new System.Drawing.Point(1086, 19);
             this.label41.Name = "label41";
             this.label41.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label41.Size = new System.Drawing.Size(53, 19);
+            this.label41.Size = new System.Drawing.Size(42, 15);
             this.label41.TabIndex = 4;
             this.label41.Text = "منابع آب";
             // 
@@ -2991,7 +2998,7 @@
             this.egbPesticide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.egbPesticide.Dock = System.Windows.Forms.DockStyle.Top;
             this.egbPesticide.Expanded = false;
-            this.egbPesticide.ExpandedSize = new System.Drawing.Size(1237, 260);
+            this.egbPesticide.ExpandedSize = new System.Drawing.Size(1191, 260);
             this.egbPesticide.ExpansionIndicator = Infragistics.Win.Misc.GroupBoxExpansionIndicator.Near;
             appearance33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(188)))), ((int)(((byte)(66)))));
             appearance33.FontData.BoldAsString = "True";
@@ -2999,10 +3006,10 @@
             appearance33.FontData.SizeInPoints = 10F;
             this.egbPesticide.HeaderAppearance = appearance33;
             this.egbPesticide.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOutsideBorder;
-            this.egbPesticide.Location = new System.Drawing.Point(0, 102);
+            this.egbPesticide.Location = new System.Drawing.Point(0, 84);
             this.egbPesticide.Name = "egbPesticide";
             this.egbPesticide.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.egbPesticide.Size = new System.Drawing.Size(1237, 34);
+            this.egbPesticide.Size = new System.Drawing.Size(1191, 28);
             this.egbPesticide.TabIndex = 3;
             this.egbPesticide.Text = "سموم";
             this.egbPesticide.Visible = false;
@@ -3064,7 +3071,7 @@
             ultraGridColumn63.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn63.Header.Caption = "توضیحات";
             ultraGridColumn63.Header.VisiblePosition = 2;
-            ultraGridColumn63.Width = 173;
+            ultraGridColumn63.Width = 177;
             ultraGridColumn64.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn64.Header.Caption = "";
             ultraGridColumn64.Header.VisiblePosition = 9;
@@ -3155,7 +3162,7 @@
             this.grdPesticide.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
             this.grdPesticide.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.grdPesticide.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.grdPesticide.Location = new System.Drawing.Point(60, 115);
+            this.grdPesticide.Location = new System.Drawing.Point(34, 115);
             this.grdPesticide.Name = "grdPesticide";
             this.grdPesticide.Size = new System.Drawing.Size(1110, 80);
             this.grdPesticide.SumColumnsWidth = 0;
@@ -3278,7 +3285,7 @@
             this.cmbPesticide.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.cmbPesticide.Location = new System.Drawing.Point(825, 16);
             this.cmbPesticide.Name = "cmbPesticide";
-            this.cmbPesticide.Size = new System.Drawing.Size(279, 27);
+            this.cmbPesticide.Size = new System.Drawing.Size(279, 23);
             this.cmbPesticide.TabIndex = 0;
             this.cmbPesticide.ValueMember = "PesticideID";
             this.cmbPesticide.ValueChanged += new System.EventHandler(this.cmbPesticide_ValueChanged);
@@ -3309,7 +3316,7 @@
             this.mskPesticideTreadetArea.InputMask = "{double:6.2}";
             this.mskPesticideTreadetArea.Location = new System.Drawing.Point(965, 49);
             this.mskPesticideTreadetArea.Name = "mskPesticideTreadetArea";
-            this.mskPesticideTreadetArea.Size = new System.Drawing.Size(90, 24);
+            this.mskPesticideTreadetArea.Size = new System.Drawing.Size(90, 21);
             this.mskPesticideTreadetArea.TabIndex = 5;
             this.mskPesticideTreadetArea.Text = "______.__";
             // 
@@ -3326,7 +3333,7 @@
             this.mskPesticideQuality.InputMask = "{double:6.2}";
             this.mskPesticideQuality.Location = new System.Drawing.Point(645, 16);
             this.mskPesticideQuality.Name = "mskPesticideQuality";
-            this.mskPesticideQuality.Size = new System.Drawing.Size(94, 24);
+            this.mskPesticideQuality.Size = new System.Drawing.Size(94, 21);
             this.mskPesticideQuality.TabIndex = 1;
             this.mskPesticideQuality.Text = "______.__";
             // 
@@ -3343,7 +3350,7 @@
             this.mskPesticideStartTime.InputMask = "{LOC}hh:mm";
             this.mskPesticideStartTime.Location = new System.Drawing.Point(259, 16);
             this.mskPesticideStartTime.Name = "mskPesticideStartTime";
-            this.mskPesticideStartTime.Size = new System.Drawing.Size(62, 24);
+            this.mskPesticideStartTime.Size = new System.Drawing.Size(62, 21);
             this.mskPesticideStartTime.TabIndex = 3;
             this.mskPesticideStartTime.Text = "__:__";
             // 
@@ -3360,7 +3367,7 @@
             this.mskPesticideEndTime.InputMask = "{LOC}hh:mm";
             this.mskPesticideEndTime.Location = new System.Drawing.Point(114, 16);
             this.mskPesticideEndTime.Name = "mskPesticideEndTime";
-            this.mskPesticideEndTime.Size = new System.Drawing.Size(61, 24);
+            this.mskPesticideEndTime.Size = new System.Drawing.Size(61, 21);
             this.mskPesticideEndTime.TabIndex = 4;
             this.mskPesticideEndTime.Text = "__:__";
             // 
@@ -3375,7 +3382,7 @@
             this.label28.Location = new System.Drawing.Point(177, 19);
             this.label28.Name = "label28";
             this.label28.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label28.Size = new System.Drawing.Size(75, 19);
+            this.label28.Size = new System.Drawing.Size(60, 15);
             this.label28.TabIndex = 4;
             this.label28.Text = "ساعت پایان";
             // 
@@ -3390,7 +3397,7 @@
             this.label29.Location = new System.Drawing.Point(742, 19);
             this.label29.Name = "label29";
             this.label29.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label29.Size = new System.Drawing.Size(77, 19);
+            this.label29.Size = new System.Drawing.Size(61, 15);
             this.label29.TabIndex = 153;
             this.label29.Text = "میزان مصرف";
             // 
@@ -3408,7 +3415,7 @@
             this.mskPesticideDate.InputMask = "yyyy/mm/dd";
             this.mskPesticideDate.Location = new System.Drawing.Point(418, 16);
             this.mskPesticideDate.Name = "mskPesticideDate";
-            this.mskPesticideDate.Size = new System.Drawing.Size(105, 24);
+            this.mskPesticideDate.Size = new System.Drawing.Size(105, 21);
             this.mskPesticideDate.TabIndex = 2;
             this.mskPesticideDate.Text = "____/__/__";
             // 
@@ -3427,7 +3434,7 @@
             this.txtPesticideDescription.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtPesticideDescription.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtPesticideDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtPesticideDescription.Size = new System.Drawing.Size(892, 26);
+            this.txtPesticideDescription.Size = new System.Drawing.Size(892, 22);
             this.txtPesticideDescription.TabIndex = 6;
             this.txtPesticideDescription.UnformattedText = null;
             // 
@@ -3443,7 +3450,7 @@
             this.label30.Location = new System.Drawing.Point(897, 52);
             this.label30.Name = "label30";
             this.label30.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label30.Size = new System.Drawing.Size(61, 20);
+            this.label30.Size = new System.Drawing.Size(49, 16);
             this.label30.TabIndex = 151;
             this.label30.Text = "توضیحات";
             // 
@@ -3474,7 +3481,7 @@
             this.label31.Location = new System.Drawing.Point(1058, 52);
             this.label31.Name = "label31";
             this.label31.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label31.Size = new System.Drawing.Size(81, 19);
+            this.label31.Size = new System.Drawing.Size(65, 15);
             this.label31.TabIndex = 7;
             this.label31.Text = "فعالیت/هکتار";
             // 
@@ -3489,7 +3496,7 @@
             this.label32.Location = new System.Drawing.Point(323, 19);
             this.label32.Name = "label32";
             this.label32.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label32.Size = new System.Drawing.Size(84, 19);
+            this.label32.Size = new System.Drawing.Size(67, 15);
             this.label32.TabIndex = 3;
             this.label32.Text = "ساعت شروع";
             // 
@@ -3504,7 +3511,7 @@
             this.label33.Location = new System.Drawing.Point(527, 19);
             this.label33.Name = "label33";
             this.label33.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label33.Size = new System.Drawing.Size(32, 19);
+            this.label33.Size = new System.Drawing.Size(26, 15);
             this.label33.TabIndex = 2;
             this.label33.Text = "تاریخ";
             // 
@@ -3519,7 +3526,7 @@
             this.label34.Location = new System.Drawing.Point(1110, 18);
             this.label34.Name = "label34";
             this.label34.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label34.Size = new System.Drawing.Size(29, 19);
+            this.label34.Size = new System.Drawing.Size(23, 15);
             this.label34.TabIndex = 4;
             this.label34.Text = "سم";
             // 
@@ -3532,7 +3539,7 @@
             this.egbFertilizer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.egbFertilizer.Dock = System.Windows.Forms.DockStyle.Top;
             this.egbFertilizer.Expanded = false;
-            this.egbFertilizer.ExpandedSize = new System.Drawing.Size(1237, 238);
+            this.egbFertilizer.ExpandedSize = new System.Drawing.Size(1191, 28);
             this.egbFertilizer.ExpansionIndicator = Infragistics.Win.Misc.GroupBoxExpansionIndicator.Near;
             appearance162.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(188)))), ((int)(((byte)(66)))));
             appearance162.FontData.BoldAsString = "True";
@@ -3540,10 +3547,10 @@
             appearance162.FontData.SizeInPoints = 10F;
             this.egbFertilizer.HeaderAppearance = appearance162;
             this.egbFertilizer.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOutsideBorder;
-            this.egbFertilizer.Location = new System.Drawing.Point(0, 68);
+            this.egbFertilizer.Location = new System.Drawing.Point(0, 56);
             this.egbFertilizer.Name = "egbFertilizer";
             this.egbFertilizer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.egbFertilizer.Size = new System.Drawing.Size(1237, 34);
+            this.egbFertilizer.Size = new System.Drawing.Size(1191, 28);
             this.egbFertilizer.TabIndex = 2;
             this.egbFertilizer.Text = "فراورده های کودی";
             this.egbFertilizer.Visible = false;
@@ -3556,7 +3563,7 @@
             this.egbFertilizerPanel.Location = new System.Drawing.Point(-10000, -10000);
             this.egbFertilizerPanel.Name = "egbFertilizerPanel";
             this.egbFertilizerPanel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
-            this.egbFertilizerPanel.Size = new System.Drawing.Size(1210, 199);
+            this.egbFertilizerPanel.Size = new System.Drawing.Size(1168, 205);
             this.egbFertilizerPanel.TabIndex = 0;
             this.egbFertilizerPanel.Visible = false;
             // 
@@ -3602,7 +3609,7 @@
             ultraGridColumn78.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn78.Header.Caption = "توضیحات";
             ultraGridColumn78.Header.VisiblePosition = 1;
-            ultraGridColumn78.Width = 174;
+            ultraGridColumn78.Width = 178;
             ultraGridColumn79.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn79.Header.VisiblePosition = 8;
             ultraGridColumn79.Hidden = true;
@@ -3727,7 +3734,7 @@
             this.grpFertilizer.Controls.Add(this.label22);
             this.grpFertilizer.Controls.Add(this.label23);
             this.grpFertilizer.Controls.Add(this.label24);
-            this.grpFertilizer.Location = new System.Drawing.Point(46, 18);
+            this.grpFertilizer.Location = new System.Drawing.Point(17, 18);
             this.grpFertilizer.Name = "grpFertilizer";
             this.grpFertilizer.Size = new System.Drawing.Size(1145, 90);
             this.grpFertilizer.TabIndex = 0;
@@ -3821,7 +3828,7 @@
             this.cmbFertilizer.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.cmbFertilizer.Location = new System.Drawing.Point(822, 15);
             this.cmbFertilizer.Name = "cmbFertilizer";
-            this.cmbFertilizer.Size = new System.Drawing.Size(287, 27);
+            this.cmbFertilizer.Size = new System.Drawing.Size(287, 23);
             this.cmbFertilizer.TabIndex = 0;
             this.cmbFertilizer.ValueMember = "FertilizerID";
             this.cmbFertilizer.ValueChanged += new System.EventHandler(this.cmbFertilizer_ValueChanged);
@@ -3852,7 +3859,7 @@
             this.txtFertilizerTreatedArea.InputMask = "{double:6.2}";
             this.txtFertilizerTreatedArea.Location = new System.Drawing.Point(965, 49);
             this.txtFertilizerTreatedArea.Name = "txtFertilizerTreatedArea";
-            this.txtFertilizerTreatedArea.Size = new System.Drawing.Size(90, 24);
+            this.txtFertilizerTreatedArea.Size = new System.Drawing.Size(90, 21);
             this.txtFertilizerTreatedArea.TabIndex = 159;
             this.txtFertilizerTreatedArea.Text = "______.__";
             // 
@@ -3869,7 +3876,7 @@
             this.mskFertilizerQuality.InputMask = "{double:6.2}";
             this.mskFertilizerQuality.Location = new System.Drawing.Point(645, 16);
             this.mskFertilizerQuality.Name = "mskFertilizerQuality";
-            this.mskFertilizerQuality.Size = new System.Drawing.Size(94, 24);
+            this.mskFertilizerQuality.Size = new System.Drawing.Size(94, 21);
             this.mskFertilizerQuality.TabIndex = 1;
             this.mskFertilizerQuality.Text = "______.__";
             // 
@@ -3886,7 +3893,7 @@
             this.mskFertilizerStartTime.InputMask = "{LOC}hh:mm";
             this.mskFertilizerStartTime.Location = new System.Drawing.Point(263, 16);
             this.mskFertilizerStartTime.Name = "mskFertilizerStartTime";
-            this.mskFertilizerStartTime.Size = new System.Drawing.Size(58, 24);
+            this.mskFertilizerStartTime.Size = new System.Drawing.Size(58, 21);
             this.mskFertilizerStartTime.TabIndex = 3;
             this.mskFertilizerStartTime.Text = "__:__";
             // 
@@ -3903,7 +3910,7 @@
             this.mskFertilizerEndTime.InputMask = "{LOC}hh:mm";
             this.mskFertilizerEndTime.Location = new System.Drawing.Point(114, 16);
             this.mskFertilizerEndTime.Name = "mskFertilizerEndTime";
-            this.mskFertilizerEndTime.Size = new System.Drawing.Size(61, 24);
+            this.mskFertilizerEndTime.Size = new System.Drawing.Size(61, 21);
             this.mskFertilizerEndTime.TabIndex = 4;
             this.mskFertilizerEndTime.Text = "__:__";
             // 
@@ -3918,7 +3925,7 @@
             this.label26.Location = new System.Drawing.Point(178, 19);
             this.label26.Name = "label26";
             this.label26.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label26.Size = new System.Drawing.Size(75, 19);
+            this.label26.Size = new System.Drawing.Size(60, 15);
             this.label26.TabIndex = 155;
             this.label26.Text = "ساعت پایان";
             // 
@@ -3933,7 +3940,7 @@
             this.label25.Location = new System.Drawing.Point(742, 19);
             this.label25.Name = "label25";
             this.label25.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label25.Size = new System.Drawing.Size(77, 19);
+            this.label25.Size = new System.Drawing.Size(61, 15);
             this.label25.TabIndex = 153;
             this.label25.Text = "میزان مصرف";
             // 
@@ -3951,7 +3958,7 @@
             this.mskFertilizerDate.InputMask = "yyyy/mm/dd";
             this.mskFertilizerDate.Location = new System.Drawing.Point(415, 16);
             this.mskFertilizerDate.Name = "mskFertilizerDate";
-            this.mskFertilizerDate.Size = new System.Drawing.Size(105, 24);
+            this.mskFertilizerDate.Size = new System.Drawing.Size(105, 21);
             this.mskFertilizerDate.TabIndex = 2;
             this.mskFertilizerDate.Text = "____/__/__";
             // 
@@ -3970,7 +3977,7 @@
             this.txtFertilizerDescription.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtFertilizerDescription.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtFertilizerDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtFertilizerDescription.Size = new System.Drawing.Size(892, 26);
+            this.txtFertilizerDescription.Size = new System.Drawing.Size(892, 22);
             this.txtFertilizerDescription.TabIndex = 5;
             this.txtFertilizerDescription.UnformattedText = null;
             // 
@@ -3986,7 +3993,7 @@
             this.label20.Location = new System.Drawing.Point(897, 52);
             this.label20.Name = "label20";
             this.label20.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label20.Size = new System.Drawing.Size(61, 20);
+            this.label20.Size = new System.Drawing.Size(49, 16);
             this.label20.TabIndex = 151;
             this.label20.Text = "توضیحات";
             // 
@@ -4017,7 +4024,7 @@
             this.label21.Location = new System.Drawing.Point(1058, 52);
             this.label21.Name = "label21";
             this.label21.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label21.Size = new System.Drawing.Size(81, 19);
+            this.label21.Size = new System.Drawing.Size(65, 15);
             this.label21.TabIndex = 7;
             this.label21.Text = "فعالیت/هکتار";
             // 
@@ -4032,7 +4039,7 @@
             this.label22.Location = new System.Drawing.Point(325, 19);
             this.label22.Name = "label22";
             this.label22.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label22.Size = new System.Drawing.Size(84, 19);
+            this.label22.Size = new System.Drawing.Size(67, 15);
             this.label22.TabIndex = 3;
             this.label22.Text = "ساعت شروع";
             // 
@@ -4047,7 +4054,7 @@
             this.label23.Location = new System.Drawing.Point(523, 19);
             this.label23.Name = "label23";
             this.label23.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label23.Size = new System.Drawing.Size(32, 19);
+            this.label23.Size = new System.Drawing.Size(26, 15);
             this.label23.TabIndex = 2;
             this.label23.Text = "تاریخ";
             // 
@@ -4062,7 +4069,7 @@
             this.label24.Location = new System.Drawing.Point(1114, 19);
             this.label24.Name = "label24";
             this.label24.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label24.Size = new System.Drawing.Size(25, 19);
+            this.label24.Size = new System.Drawing.Size(20, 15);
             this.label24.TabIndex = 4;
             this.label24.Text = "کود";
             // 
@@ -4075,7 +4082,7 @@
             this.egbMachinery.Cursor = System.Windows.Forms.Cursors.Hand;
             this.egbMachinery.Dock = System.Windows.Forms.DockStyle.Top;
             this.egbMachinery.Expanded = false;
-            this.egbMachinery.ExpandedSize = new System.Drawing.Size(1237, 243);
+            this.egbMachinery.ExpandedSize = new System.Drawing.Size(1191, 28);
             this.egbMachinery.ExpansionIndicator = Infragistics.Win.Misc.GroupBoxExpansionIndicator.Near;
             appearance18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(188)))), ((int)(((byte)(66)))));
             appearance18.FontData.BoldAsString = "True";
@@ -4083,11 +4090,11 @@
             appearance18.FontData.SizeInPoints = 10F;
             this.egbMachinery.HeaderAppearance = appearance18;
             this.egbMachinery.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOutsideBorder;
-            this.egbMachinery.Location = new System.Drawing.Point(0, 34);
+            this.egbMachinery.Location = new System.Drawing.Point(0, 28);
             this.egbMachinery.Margin = new System.Windows.Forms.Padding(3, 20, 3, 10);
             this.egbMachinery.Name = "egbMachinery";
             this.egbMachinery.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.egbMachinery.Size = new System.Drawing.Size(1237, 34);
+            this.egbMachinery.Size = new System.Drawing.Size(1191, 28);
             this.egbMachinery.TabIndex = 1;
             this.egbMachinery.Text = "ماشین و ادوات کشاورزی";
             // 
@@ -4129,7 +4136,7 @@
             ultraGridColumn89.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn89.Header.Caption = "تاریخ فعالیت";
             ultraGridColumn89.Header.VisiblePosition = 6;
-            ultraGridColumn89.Width = 164;
+            ultraGridColumn89.Width = 330;
             ultraGridColumn90.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn90.Header.VisiblePosition = 5;
             ultraGridColumn90.Hidden = true;
@@ -4137,25 +4144,25 @@
             ultraGridColumn91.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn91.Header.Caption = "توضیحات";
             ultraGridColumn91.Header.VisiblePosition = 2;
-            ultraGridColumn91.Width = 505;
+            ultraGridColumn91.Width = 1017;
             ultraGridColumn92.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn92.Header.Caption = "فعالیت/ساعت";
             ultraGridColumn92.Header.VisiblePosition = 4;
-            ultraGridColumn92.Width = 153;
+            ultraGridColumn92.Width = 309;
             ultraGridColumn93.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn93.Header.Caption = "فعالیت/هکتار";
             ultraGridColumn93.Header.VisiblePosition = 3;
-            ultraGridColumn93.Width = 133;
+            ultraGridColumn93.Width = 272;
             ultraGridColumn94.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn94.Header.Caption = "";
             ultraGridColumn94.Header.VisiblePosition = 7;
             ultraGridColumn94.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn94.Width = 61;
+            ultraGridColumn94.Width = 123;
             ultraGridColumn95.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn95.Header.Caption = "";
             ultraGridColumn95.Header.VisiblePosition = 8;
             ultraGridColumn95.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn95.Width = 73;
+            ultraGridColumn95.Width = 147;
             ultraGridBand11.Columns.AddRange(new object[] {
             ultraGridColumn87,
             ultraGridColumn88,
@@ -4236,7 +4243,7 @@
             this.grdMachinery.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.grdMachinery.Location = new System.Drawing.Point(50, 119);
             this.grdMachinery.Name = "grdMachinery";
-            this.grdMachinery.Size = new System.Drawing.Size(1110, 61);
+            this.grdMachinery.Size = new System.Drawing.Size(1156, 61);
             this.grdMachinery.SumColumnsWidth = 0;
             this.grdMachinery.TabIndex = 1;
             this.grdMachinery.Text = "ultraGridTask1";
@@ -4259,7 +4266,7 @@
             this.grpMachinery.Controls.Add(this.label17);
             this.grpMachinery.Controls.Add(this.label18);
             this.grpMachinery.Controls.Add(this.label19);
-            this.grpMachinery.Location = new System.Drawing.Point(46, 20);
+            this.grpMachinery.Location = new System.Drawing.Point(69, 20);
             this.grpMachinery.Name = "grpMachinery";
             this.grpMachinery.Size = new System.Drawing.Size(1145, 90);
             this.grpMachinery.TabIndex = 0;
@@ -4277,7 +4284,7 @@
             this.mskMachineryHours.InputMask = "{LOC}hh:mm";
             this.mskMachineryHours.Location = new System.Drawing.Point(307, 17);
             this.mskMachineryHours.Name = "mskMachineryHours";
-            this.mskMachineryHours.Size = new System.Drawing.Size(58, 24);
+            this.mskMachineryHours.Size = new System.Drawing.Size(58, 21);
             this.mskMachineryHours.TabIndex = 2;
             this.mskMachineryHours.Text = "__:__";
             // 
@@ -4294,7 +4301,7 @@
             this.mskMachineryTreatedArea.InputMask = "{double:6.2}";
             this.mskMachineryTreatedArea.Location = new System.Drawing.Point(122, 17);
             this.mskMachineryTreatedArea.Name = "mskMachineryTreatedArea";
-            this.mskMachineryTreatedArea.Size = new System.Drawing.Size(90, 24);
+            this.mskMachineryTreatedArea.Size = new System.Drawing.Size(90, 21);
             this.mskMachineryTreatedArea.TabIndex = 3;
             this.mskMachineryTreatedArea.Text = "______.__";
             // 
@@ -4312,7 +4319,7 @@
             this.mskMachineryDate.InputMask = "yyyy/mm/dd";
             this.mskMachineryDate.Location = new System.Drawing.Point(468, 17);
             this.mskMachineryDate.Name = "mskMachineryDate";
-            this.mskMachineryDate.Size = new System.Drawing.Size(102, 24);
+            this.mskMachineryDate.Size = new System.Drawing.Size(102, 21);
             this.mskMachineryDate.TabIndex = 1;
             this.mskMachineryDate.Text = "____/__/__";
             // 
@@ -4331,7 +4338,7 @@
             this.txtMachineryDescription.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtMachineryDescription.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtMachineryDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtMachineryDescription.Size = new System.Drawing.Size(1051, 26);
+            this.txtMachineryDescription.Size = new System.Drawing.Size(1051, 22);
             this.txtMachineryDescription.TabIndex = 4;
             this.txtMachineryDescription.UnformattedText = null;
             // 
@@ -4347,7 +4354,7 @@
             this.label15.Location = new System.Drawing.Point(1068, 56);
             this.label15.Name = "label15";
             this.label15.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label15.Size = new System.Drawing.Size(61, 20);
+            this.label15.Size = new System.Drawing.Size(49, 16);
             this.label15.TabIndex = 151;
             this.label15.Text = "توضیحات";
             // 
@@ -4378,7 +4385,7 @@
             this.label16.Location = new System.Drawing.Point(215, 20);
             this.label16.Name = "label16";
             this.label16.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label16.Size = new System.Drawing.Size(81, 19);
+            this.label16.Size = new System.Drawing.Size(65, 15);
             this.label16.TabIndex = 7;
             this.label16.Text = "فعالیت/هکتار";
             // 
@@ -4403,7 +4410,7 @@
             this.cmbMachinery.Location = new System.Drawing.Point(610, 16);
             this.cmbMachinery.Name = "cmbMachinery";
             this.cmbMachinery.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbMachinery.Size = new System.Drawing.Size(491, 26);
+            this.cmbMachinery.Size = new System.Drawing.Size(491, 22);
             this.cmbMachinery.TabIndex = 0;
             // 
             // label17
@@ -4417,7 +4424,7 @@
             this.label17.Location = new System.Drawing.Point(370, 20);
             this.label17.Name = "label17";
             this.label17.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label17.Size = new System.Drawing.Size(89, 19);
+            this.label17.Size = new System.Drawing.Size(72, 15);
             this.label17.TabIndex = 6;
             this.label17.Text = "فعالیت/ساعت";
             // 
@@ -4432,7 +4439,7 @@
             this.label18.Location = new System.Drawing.Point(574, 20);
             this.label18.Name = "label18";
             this.label18.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label18.Size = new System.Drawing.Size(32, 19);
+            this.label18.Size = new System.Drawing.Size(26, 15);
             this.label18.TabIndex = 5;
             this.label18.Text = "تاریخ";
             // 
@@ -4447,7 +4454,7 @@
             this.label19.Location = new System.Drawing.Point(1107, 20);
             this.label19.Name = "label19";
             this.label19.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label19.Size = new System.Drawing.Size(22, 19);
+            this.label19.Size = new System.Drawing.Size(17, 15);
             this.label19.TabIndex = 4;
             this.label19.Text = "نام";
             // 
@@ -4460,7 +4467,7 @@
             this.egbWorker.Cursor = System.Windows.Forms.Cursors.Hand;
             this.egbWorker.Dock = System.Windows.Forms.DockStyle.Top;
             this.egbWorker.Expanded = false;
-            this.egbWorker.ExpandedSize = new System.Drawing.Size(1237, 237);
+            this.egbWorker.ExpandedSize = new System.Drawing.Size(1191, 237);
             this.egbWorker.ExpansionIndicator = Infragistics.Win.Misc.GroupBoxExpansionIndicator.Near;
             this.egbWorker.GrowOnHeight = true;
             appearance103.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(188)))), ((int)(((byte)(66)))));
@@ -4472,7 +4479,7 @@
             this.egbWorker.Location = new System.Drawing.Point(0, 0);
             this.egbWorker.Name = "egbWorker";
             this.egbWorker.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.egbWorker.Size = new System.Drawing.Size(1237, 34);
+            this.egbWorker.Size = new System.Drawing.Size(1191, 28);
             this.egbWorker.TabIndex = 0;
             this.egbWorker.Text = "نیروی کارگری";
             // 
@@ -4483,7 +4490,7 @@
             this.egbWorkerPanel.Cursor = System.Windows.Forms.Cursors.Default;
             this.egbWorkerPanel.Location = new System.Drawing.Point(-10000, -10000);
             this.egbWorkerPanel.Name = "egbWorkerPanel";
-            this.egbWorkerPanel.Size = new System.Drawing.Size(1210, 198);
+            this.egbWorkerPanel.Size = new System.Drawing.Size(1168, 204);
             this.egbWorkerPanel.TabIndex = 0;
             this.egbWorkerPanel.Visible = false;
             // 
@@ -4507,16 +4514,16 @@
             ultraGridColumn97.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn97.Header.Caption = "نام";
             ultraGridColumn97.Header.VisiblePosition = 5;
-            ultraGridColumn97.Width = 284;
+            ultraGridColumn97.Width = 580;
             ultraGridColumn98.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn98.Header.Caption = "تاریخ فعالیت";
             ultraGridColumn98.Header.VisiblePosition = 4;
-            ultraGridColumn98.Width = 213;
+            ultraGridColumn98.Width = 430;
             ultraGridColumn99.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn99.CellMultiLine = Infragistics.Win.DefaultableBoolean.True;
             ultraGridColumn99.Header.Caption = "توضیحات";
             ultraGridColumn99.Header.VisiblePosition = 1;
-            ultraGridColumn99.Width = 163;
+            ultraGridColumn99.Width = 339;
             ultraGridColumn100.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn100.Header.VisiblePosition = 6;
             ultraGridColumn100.Hidden = true;
@@ -4524,21 +4531,21 @@
             ultraGridColumn101.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn101.Header.Caption = "فعاالیت/ساعت";
             ultraGridColumn101.Header.VisiblePosition = 3;
-            ultraGridColumn101.Width = 211;
+            ultraGridColumn101.Width = 424;
             ultraGridColumn102.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn102.Header.Caption = "فعالیت/هکتار";
             ultraGridColumn102.Header.VisiblePosition = 2;
-            ultraGridColumn102.Width = 137;
+            ultraGridColumn102.Width = 266;
             ultraGridColumn103.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn103.Header.Caption = "";
             ultraGridColumn103.Header.VisiblePosition = 7;
             ultraGridColumn103.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn103.Width = 38;
+            ultraGridColumn103.Width = 83;
             ultraGridColumn104.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn104.Header.Caption = "";
             ultraGridColumn104.Header.VisiblePosition = 8;
             ultraGridColumn104.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn104.Width = 43;
+            ultraGridColumn104.Width = 93;
             ultraGridBand12.Columns.AddRange(new object[] {
             ultraGridColumn96,
             ultraGridColumn97,
@@ -4621,7 +4628,7 @@
             this.grdWorker.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.grdWorker.Location = new System.Drawing.Point(60, 119);
             this.grdWorker.Name = "grdWorker";
-            this.grdWorker.Size = new System.Drawing.Size(1089, 59);
+            this.grdWorker.Size = new System.Drawing.Size(2215, 59);
             this.grdWorker.SumColumnsWidth = 0;
             this.grdWorker.TabIndex = 0;
             this.grdWorker.Text = "ultraGridTask1";
@@ -4643,7 +4650,7 @@
             this.grpWorker.Controls.Add(this.label3);
             this.grpWorker.Controls.Add(this.label2);
             this.grpWorker.Controls.Add(this.label1);
-            this.grpWorker.Location = new System.Drawing.Point(34, 20);
+            this.grpWorker.Location = new System.Drawing.Point(-5, 20);
             this.grpWorker.Name = "grpWorker";
             this.grpWorker.Size = new System.Drawing.Size(1145, 90);
             this.grpWorker.TabIndex = 0;
@@ -4661,7 +4668,7 @@
             this.mskWorkHours.InputMask = "{LOC}hh:mm";
             this.mskWorkHours.Location = new System.Drawing.Point(489, 16);
             this.mskWorkHours.Name = "mskWorkHours";
-            this.mskWorkHours.Size = new System.Drawing.Size(58, 24);
+            this.mskWorkHours.Size = new System.Drawing.Size(58, 21);
             this.mskWorkHours.TabIndex = 2;
             this.mskWorkHours.Text = "__:__";
             // 
@@ -4678,7 +4685,7 @@
             this.mskWorkerTreatedArea.InputMask = "{double:6.2}";
             this.mskWorkerTreatedArea.Location = new System.Drawing.Point(303, 16);
             this.mskWorkerTreatedArea.Name = "mskWorkerTreatedArea";
-            this.mskWorkerTreatedArea.Size = new System.Drawing.Size(90, 24);
+            this.mskWorkerTreatedArea.Size = new System.Drawing.Size(90, 21);
             this.mskWorkerTreatedArea.TabIndex = 3;
             this.mskWorkerTreatedArea.Text = "______.__";
             // 
@@ -4696,7 +4703,7 @@
             this.mskWorkDate.InputMask = "yyyy/mm/dd";
             this.mskWorkDate.Location = new System.Drawing.Point(651, 16);
             this.mskWorkDate.Name = "mskWorkDate";
-            this.mskWorkDate.Size = new System.Drawing.Size(113, 24);
+            this.mskWorkDate.Size = new System.Drawing.Size(113, 21);
             this.mskWorkDate.TabIndex = 1;
             this.mskWorkDate.Text = "____/__/__";
             // 
@@ -4715,7 +4722,7 @@
             this.txtWorkerDescription.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtWorkerDescription.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtWorkerDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtWorkerDescription.Size = new System.Drawing.Size(1055, 26);
+            this.txtWorkerDescription.Size = new System.Drawing.Size(1055, 22);
             this.txtWorkerDescription.TabIndex = 4;
             this.txtWorkerDescription.UnformattedText = null;
             // 
@@ -4731,7 +4738,7 @@
             this.label14.Location = new System.Drawing.Point(1071, 49);
             this.label14.Name = "label14";
             this.label14.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label14.Size = new System.Drawing.Size(61, 20);
+            this.label14.Size = new System.Drawing.Size(49, 16);
             this.label14.TabIndex = 151;
             this.label14.Text = "توضیحات";
             // 
@@ -4762,7 +4769,7 @@
             this.label4.Location = new System.Drawing.Point(394, 19);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(81, 19);
+            this.label4.Size = new System.Drawing.Size(65, 15);
             this.label4.TabIndex = 7;
             this.label4.Text = "فعالیت/هکتار";
             // 
@@ -4787,7 +4794,7 @@
             this.cmbWorker.Location = new System.Drawing.Point(814, 15);
             this.cmbWorker.Name = "cmbWorker";
             this.cmbWorker.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbWorker.Size = new System.Drawing.Size(253, 26);
+            this.cmbWorker.Size = new System.Drawing.Size(253, 22);
             this.cmbWorker.TabIndex = 0;
             // 
             // label3
@@ -4801,7 +4808,7 @@
             this.label3.Location = new System.Drawing.Point(548, 19);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(89, 19);
+            this.label3.Size = new System.Drawing.Size(72, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "فعالیت/ساعت";
             // 
@@ -4816,7 +4823,7 @@
             this.label2.Location = new System.Drawing.Point(767, 19);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(32, 19);
+            this.label2.Size = new System.Drawing.Size(26, 15);
             this.label2.TabIndex = 5;
             this.label2.Text = "تاریخ";
             // 
@@ -4831,15 +4838,15 @@
             this.label1.Location = new System.Drawing.Point(1066, 19);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(66, 19);
+            this.label1.Size = new System.Drawing.Size(53, 15);
             this.label1.TabIndex = 4;
             this.label1.Text = "نام شخص";
             // 
             // frmProductionTaskLinkTo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
-            this.ClientSize = new System.Drawing.Size(1241, 1055);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(1195, 744);
+            this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "frmProductionTaskLinkTo";
             ((System.ComponentModel.ISupportInitialize)(this.grpPrint)).EndInit();
             this.grpPrint.ResumeLayout(false);

@@ -134,49 +134,42 @@
             // 
             // grpPrint
             // 
-            this.grpPrint.Location = new System.Drawing.Point(62, 0);
-            this.grpPrint.Size = new System.Drawing.Size(127, 87);
+            this.grpPrint.Location = new System.Drawing.Point(13, 0);
+            this.grpPrint.Size = new System.Drawing.Size(127, 74);
             // 
             // grpCancel
             // 
-            this.grpCancel.Location = new System.Drawing.Point(837, 0);
-            this.grpCancel.Size = new System.Drawing.Size(127, 87);
+            this.grpCancel.Location = new System.Drawing.Point(788, 0);
             // 
             // grpSave
             // 
-            this.grpSave.Location = new System.Drawing.Point(710, 0);
-            this.grpSave.Size = new System.Drawing.Size(127, 87);
+            this.grpSave.Location = new System.Drawing.Point(661, 0);
             // 
             // grpChange
             // 
-            this.grpChange.Location = new System.Drawing.Point(583, 0);
-            this.grpChange.Size = new System.Drawing.Size(127, 87);
+            this.grpChange.Location = new System.Drawing.Point(534, 0);
             // 
             // grpClear
             // 
-            this.grpClear.Location = new System.Drawing.Point(456, 0);
-            this.grpClear.Size = new System.Drawing.Size(127, 87);
+            this.grpClear.Location = new System.Drawing.Point(407, 0);
             // 
             // grpDelete
             // 
-            this.grpDelete.Location = new System.Drawing.Point(329, 0);
-            this.grpDelete.Size = new System.Drawing.Size(127, 87);
+            this.grpDelete.Location = new System.Drawing.Point(280, 0);
             // 
             // grpDoc
             // 
-            this.grpDoc.Location = new System.Drawing.Point(189, 0);
-            this.grpDoc.Size = new System.Drawing.Size(140, 87);
+            this.grpDoc.Location = new System.Drawing.Point(140, 0);
             this.grpDoc.Visible = false;
             // 
             // grpRefresh
             // 
-            this.grpRefresh.Location = new System.Drawing.Point(-65, 0);
-            this.grpRefresh.Size = new System.Drawing.Size(127, 87);
+            this.grpRefresh.Location = new System.Drawing.Point(-114, 0);
+            this.grpRefresh.Size = new System.Drawing.Size(127, 74);
             // 
             // grpNew
             // 
-            this.grpNew.Location = new System.Drawing.Point(-192, 0);
-            this.grpNew.Size = new System.Drawing.Size(127, 87);
+            this.grpNew.Location = new System.Drawing.Point(-241, 0);
             // 
             // btnNew
             // 
@@ -188,26 +181,25 @@
             // 
             // grpButons
             // 
-            this.grpButons.Location = new System.Drawing.Point(0, 656);
-            this.grpButons.Size = new System.Drawing.Size(965, 88);
+            this.grpButons.Location = new System.Drawing.Point(0, 583);
+            this.grpButons.Size = new System.Drawing.Size(916, 75);
             // 
             // lblLine2
             // 
-            this.lblLine2.Location = new System.Drawing.Point(1, 93);
-            this.lblLine2.Size = new System.Drawing.Size(963, 4);
+            this.lblLine2.Size = new System.Drawing.Size(914, 3);
             // 
             // grpHeader
             // 
-            this.grpHeader.Size = new System.Drawing.Size(965, 98);
+            this.grpHeader.Size = new System.Drawing.Size(916, 75);
             this.grpHeader.Visible = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(900, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(854, 9);
             // 
             // lblCaption
             // 
-            this.lblCaption.Location = new System.Drawing.Point(592, 34);
+            this.lblCaption.Location = new System.Drawing.Point(548, 22);
             // 
             // lblMessage
             // 
@@ -216,17 +208,16 @@
             // 
             // lblLine1
             // 
-            this.lblLine1.Size = new System.Drawing.Size(963, 4);
+            this.lblLine1.Size = new System.Drawing.Size(914, 3);
             // 
             // grpMessage
             // 
-            this.grpMessage.Location = new System.Drawing.Point(0, 98);
-            this.grpMessage.Size = new System.Drawing.Size(965, 39);
+            this.grpMessage.Size = new System.Drawing.Size(916, 39);
             // 
             // lblLine3
             // 
-            this.lblLine3.Location = new System.Drawing.Point(1, 514);
-            this.lblLine3.Size = new System.Drawing.Size(963, 4);
+            this.lblLine3.Location = new System.Drawing.Point(1, 465);
+            this.lblLine3.Size = new System.Drawing.Size(914, 3);
             // 
             // grpMain
             // 
@@ -237,8 +228,8 @@
             this.grpMain.Controls.Add(this.labelTitr1);
             this.grpMain.Controls.Add(this.label2);
             this.grpMain.Controls.Add(this.label1);
-            this.grpMain.Location = new System.Drawing.Point(0, 137);
-            this.grpMain.Size = new System.Drawing.Size(965, 519);
+            this.grpMain.Location = new System.Drawing.Point(0, 114);
+            this.grpMain.Size = new System.Drawing.Size(916, 469);
             this.grpMain.Controls.SetChildIndex(this.label1, 0);
             this.grpMain.Controls.SetChildIndex(this.label2, 0);
             this.grpMain.Controls.SetChildIndex(this.labelTitr1, 0);
@@ -266,10 +257,10 @@
             appearance14.TextHAlignAsString = "Right";
             appearance14.TextVAlignAsString = "Middle";
             this.cmbCultivar.ItemAppearance = appearance14;
-            this.cmbCultivar.Location = new System.Drawing.Point(233, 140);
+            this.cmbCultivar.Location = new System.Drawing.Point(258, 103);
             this.cmbCultivar.Name = "cmbCultivar";
             this.cmbCultivar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbCultivar.Size = new System.Drawing.Size(445, 26);
+            this.cmbCultivar.Size = new System.Drawing.Size(445, 22);
             this.cmbCultivar.TabIndex = 22;
             this.cmbCultivar.ValueChanged += new System.EventHandler(this.cmbCultivar_ValueChanged);
             // 
@@ -291,10 +282,10 @@
             appearance25.TextHAlignAsString = "Right";
             appearance25.TextVAlignAsString = "Middle";
             this.cmbCrop.ItemAppearance = appearance25;
-            this.cmbCrop.Location = new System.Drawing.Point(233, 88);
+            this.cmbCrop.Location = new System.Drawing.Point(258, 51);
             this.cmbCrop.Name = "cmbCrop";
             this.cmbCrop.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbCrop.Size = new System.Drawing.Size(445, 26);
+            this.cmbCrop.Size = new System.Drawing.Size(445, 22);
             this.cmbCrop.TabIndex = 21;
             this.cmbCrop.ValueChanged += new System.EventHandler(this.cmbCrop_ValueChanged);
             // 
@@ -307,10 +298,10 @@
             this.label2.Appearance = appearance2;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(611, 57);
+            this.label2.Location = new System.Drawing.Point(654, 20);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(63, 33);
+            this.label2.Size = new System.Drawing.Size(51, 26);
             this.label2.TabIndex = 6;
             this.label2.Text = "محصول؟";
             // 
@@ -323,10 +314,10 @@
             this.label1.Appearance = appearance8;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(614, 112);
+            this.label1.Location = new System.Drawing.Point(657, 75);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(62, 33);
+            this.label1.Size = new System.Drawing.Size(49, 26);
             this.label1.TabIndex = 5;
             this.label1.Text = "نوع رقم؟";
             // 
@@ -340,9 +331,9 @@
             this.labelTitr1.Appearance = appearance1;
             this.labelTitr1.AutoSize = true;
             this.labelTitr1.Font = new System.Drawing.Font("B Nazanin", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.labelTitr1.Location = new System.Drawing.Point(310, 6);
+            this.labelTitr1.Location = new System.Drawing.Point(335, -2);
             this.labelTitr1.Name = "labelTitr1";
-            this.labelTitr1.Size = new System.Drawing.Size(290, 38);
+            this.labelTitr1.Size = new System.Drawing.Size(232, 30);
             this.labelTitr1.TabIndex = 1;
             this.labelTitr1.Text = "چه محصولی می خواهی برداشت کنی؟";
             // 
@@ -350,7 +341,7 @@
             // 
             this.picLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picLogo.BackColor = System.Drawing.Color.Transparent;
-            this.picLogo.Location = new System.Drawing.Point(31, 74);
+            this.picLogo.Location = new System.Drawing.Point(163, 26);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(89, 99);
             this.picLogo.TabIndex = 0;
@@ -374,11 +365,12 @@
             this.grplabels.Controls.Add(this.labelTitr6);
             this.grplabels.Controls.Add(this.lblCultivatedClimet);
             this.grplabels.Controls.Add(this.labelTitr4);
-            this.grplabels.Location = new System.Drawing.Point(40, 175);
+            this.grplabels.Location = new System.Drawing.Point(20, 139);
             this.grplabels.Name = "grplabels";
-            this.grplabels.Size = new System.Drawing.Size(887, 322);
+            this.grplabels.Size = new System.Drawing.Size(868, 275);
             this.grplabels.TabIndex = 35;
             this.grplabels.Visible = false;
+            this.grplabels.Click += new System.EventHandler(this.grplabels_Click);
             // 
             // lblDescription
             // 
@@ -390,10 +382,10 @@
             appearance3.TextVAlignAsString = "Top";
             this.lblDescription.Appearance = appearance3;
             this.lblDescription.Font = new System.Drawing.Font("B Nazanin", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblDescription.Location = new System.Drawing.Point(58, 186);
+            this.lblDescription.Location = new System.Drawing.Point(20, 186);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDescription.Size = new System.Drawing.Size(755, 132);
+            this.lblDescription.Size = new System.Drawing.Size(834, 119);
             this.lblDescription.TabIndex = 46;
             this.lblDescription.Text = "ویژگی";
             // 
@@ -405,7 +397,7 @@
             appearance15.TextVAlignAsString = "Middle";
             this.lblCountryName.Appearance = appearance15;
             this.lblCountryName.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblCountryName.Location = new System.Drawing.Point(175, 67);
+            this.lblCountryName.Location = new System.Drawing.Point(166, 67);
             this.lblCountryName.Name = "lblCountryName";
             this.lblCountryName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCountryName.Size = new System.Drawing.Size(401, 23);
@@ -422,10 +414,10 @@
             this.labelTitr3.Appearance = appearance12;
             this.labelTitr3.AutoSize = true;
             this.labelTitr3.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.labelTitr3.Location = new System.Drawing.Point(577, 36);
+            this.labelTitr3.Location = new System.Drawing.Point(568, 36);
             this.labelTitr3.Name = "labelTitr3";
             this.labelTitr3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelTitr3.Size = new System.Drawing.Size(65, 30);
+            this.labelTitr3.Size = new System.Drawing.Size(52, 24);
             this.labelTitr3.TabIndex = 37;
             this.labelTitr3.Text = ": نام لاتین";
             // 
@@ -437,7 +429,7 @@
             appearance16.TextVAlignAsString = "Middle";
             this.lblCultivarNameEn.Appearance = appearance16;
             this.lblCultivarNameEn.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblCultivarNameEn.Location = new System.Drawing.Point(171, 33);
+            this.lblCultivarNameEn.Location = new System.Drawing.Point(162, 33);
             this.lblCultivarNameEn.Name = "lblCultivarNameEn";
             this.lblCultivarNameEn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCultivarNameEn.Size = new System.Drawing.Size(408, 34);
@@ -454,10 +446,10 @@
             this.labelTitr2.Appearance = appearance13;
             this.labelTitr2.AutoSize = true;
             this.labelTitr2.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.labelTitr2.Location = new System.Drawing.Point(588, 6);
+            this.labelTitr2.Location = new System.Drawing.Point(579, 6);
             this.labelTitr2.Name = "labelTitr2";
             this.labelTitr2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelTitr2.Size = new System.Drawing.Size(54, 30);
+            this.labelTitr2.Size = new System.Drawing.Size(43, 24);
             this.labelTitr2.TabIndex = 35;
             this.labelTitr2.Text = ": نام رقم";
             // 
@@ -469,7 +461,7 @@
             appearance17.TextVAlignAsString = "Middle";
             this.lblCultivarName.Appearance = appearance17;
             this.lblCultivarName.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblCultivarName.Location = new System.Drawing.Point(197, 9);
+            this.lblCultivarName.Location = new System.Drawing.Point(188, 9);
             this.lblCultivarName.Name = "lblCultivarName";
             this.lblCultivarName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCultivarName.Size = new System.Drawing.Size(391, 23);
@@ -484,7 +476,7 @@
             appearance9.TextVAlignAsString = "Middle";
             this.lblYeildPerHectare.Appearance = appearance9;
             this.lblYeildPerHectare.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblYeildPerHectare.Location = new System.Drawing.Point(183, 125);
+            this.lblYeildPerHectare.Location = new System.Drawing.Point(174, 125);
             this.lblYeildPerHectare.Name = "lblYeildPerHectare";
             this.lblYeildPerHectare.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblYeildPerHectare.Size = new System.Drawing.Size(331, 23);
@@ -501,10 +493,10 @@
             this.labelTitr5.Appearance = appearance19;
             this.labelTitr5.AutoSize = true;
             this.labelTitr5.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.labelTitr5.Location = new System.Drawing.Point(520, 96);
+            this.labelTitr5.Location = new System.Drawing.Point(511, 96);
             this.labelTitr5.Name = "labelTitr5";
             this.labelTitr5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelTitr5.Size = new System.Drawing.Size(122, 30);
+            this.labelTitr5.Size = new System.Drawing.Size(98, 24);
             this.labelTitr5.TabIndex = 41;
             this.labelTitr5.Text = ": اقلیم مناسب کشت";
             // 
@@ -518,10 +510,10 @@
             this.labelTitr7.Appearance = appearance10;
             this.labelTitr7.AutoSize = true;
             this.labelTitr7.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.labelTitr7.Location = new System.Drawing.Point(514, 126);
+            this.labelTitr7.Location = new System.Drawing.Point(505, 126);
             this.labelTitr7.Name = "labelTitr7";
             this.labelTitr7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelTitr7.Size = new System.Drawing.Size(128, 30);
+            this.labelTitr7.Size = new System.Drawing.Size(103, 24);
             this.labelTitr7.TabIndex = 44;
             this.labelTitr7.Text = ":عملکرد-تن در هکتار";
             // 
@@ -535,10 +527,10 @@
             this.labelTitr6.Appearance = appearance5;
             this.labelTitr6.AutoSize = true;
             this.labelTitr6.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.labelTitr6.Location = new System.Drawing.Point(514, 156);
+            this.labelTitr6.Location = new System.Drawing.Point(505, 156);
             this.labelTitr6.Name = "labelTitr6";
             this.labelTitr6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelTitr6.Size = new System.Drawing.Size(128, 30);
+            this.labelTitr6.Size = new System.Drawing.Size(103, 24);
             this.labelTitr6.TabIndex = 43;
             this.labelTitr6.Text = ": ویژگی های بارز رقم";
             // 
@@ -550,7 +542,7 @@
             appearance18.TextVAlignAsString = "Middle";
             this.lblCultivatedClimet.Appearance = appearance18;
             this.lblCultivatedClimet.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblCultivatedClimet.Location = new System.Drawing.Point(198, 96);
+            this.lblCultivatedClimet.Location = new System.Drawing.Point(189, 96);
             this.lblCultivatedClimet.Name = "lblCultivatedClimet";
             this.lblCultivatedClimet.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCultivatedClimet.Size = new System.Drawing.Size(321, 23);
@@ -567,17 +559,17 @@
             this.labelTitr4.Appearance = appearance11;
             this.labelTitr4.AutoSize = true;
             this.labelTitr4.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.labelTitr4.Location = new System.Drawing.Point(573, 66);
+            this.labelTitr4.Location = new System.Drawing.Point(564, 66);
             this.labelTitr4.Name = "labelTitr4";
             this.labelTitr4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelTitr4.Size = new System.Drawing.Size(69, 30);
+            this.labelTitr4.Size = new System.Drawing.Size(55, 24);
             this.labelTitr4.TabIndex = 39;
             this.labelTitr4.Text = ":کشور مبدا";
             // 
             // frmProductionCultivarLink
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
-            this.ClientSize = new System.Drawing.Size(965, 744);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(916, 658);
             this.Name = "frmProductionCultivarLink";
             this.ShowIcon = false;
             this.Text = "محصول / رقم";

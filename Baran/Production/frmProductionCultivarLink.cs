@@ -218,6 +218,11 @@ namespace Baran.Production
             cmbCultivar.Text = "";
         }
 
+        private void grplabels_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void cmbCultivar_ValueChanged(object sender, EventArgs e)
         {
 

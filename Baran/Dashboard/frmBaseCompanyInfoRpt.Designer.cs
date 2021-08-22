@@ -513,6 +513,11 @@ namespace Baran.Dashboard
             this.MainMap.Size = new System.Drawing.Size(811, 548);
             this.MainMap.TabIndex = 2;
             this.MainMap.Zoom = 5D;
+            this.MainMap.OnMarkerClick += new GMap.NET.WindowsForms.MarkerClick(this.MainMap_OnMarkerClick);
+            this.MainMap.OnPolygonClick += new GMap.NET.WindowsForms.PolygonClick(this.MainMap_OnPolygonClick);
+            this.MainMap.OnRouteClick += new GMap.NET.WindowsForms.RouteClick(this.MainMap_OnRouteClick);
+            this.MainMap.OnRouteEnter += new GMap.NET.WindowsForms.RouteEnter(this.MainMap_OnRouteEnter);
+            this.MainMap.OnPolygonEnter += new GMap.NET.WindowsForms.PolygonEnter(this.MainMap_OnPolygonEnter);
             // 
             // frmBaseCompanyInfoRpt
             // 

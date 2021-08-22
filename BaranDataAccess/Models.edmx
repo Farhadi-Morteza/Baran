@@ -1734,6 +1734,7 @@ warning 6002: The table/view 'AMS.dbo.viw_Part_Location' does not have a primary
           <Parameter Name="CollectionID" Type="int" Mode="In" />
           <Parameter Name="SubcollectionID" Type="int" Mode="In" />
           <Parameter Name="PartID" Type="int" Mode="In" />
+          <Parameter Name="FieldID" Type="int" Mode="In" />
         </Function>
         <Function Name="spr_src_Land_Map_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Action" Type="int" Mode="In" />
@@ -3832,6 +3833,7 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
             <Parameter Name="CollectionID" Mode="In" Type="Int32" />
             <Parameter Name="SubcollectionID" Mode="In" Type="Int32" />
             <Parameter Name="PartID" Mode="In" Type="Int32" />
+            <Parameter Name="FieldID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_LandLocation_Rpt" ReturnType="Collection(AMSModel.spr_src_LandLocation_Rpt_Result)">
             <Parameter Name="CollectionID" Mode="In" Type="Int32" />
@@ -5881,8 +5883,8 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="false" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="UseLegacyProvider" Value="true" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>

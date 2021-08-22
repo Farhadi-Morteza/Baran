@@ -76,12 +76,24 @@
             // 
             // grpButons
             // 
-            this.grpButons.Location = new System.Drawing.Point(0, 659);
-            this.grpButons.Size = new System.Drawing.Size(893, 75);
+            this.grpButons.Location = new System.Drawing.Point(0, 693);
+            this.grpButons.Size = new System.Drawing.Size(876, 75);
             // 
             // lblLine2
             // 
-            this.lblLine2.Size = new System.Drawing.Size(891, 3);
+            this.lblLine2.Size = new System.Drawing.Size(874, 3);
+            // 
+            // grpHeader
+            // 
+            this.grpHeader.Size = new System.Drawing.Size(876, 75);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(805, 9);
+            // 
+            // lblCaption
+            // 
+            this.lblCaption.Location = new System.Drawing.Point(499, 22);
             // 
             // lblMessage
             // 
@@ -89,21 +101,21 @@
             // 
             // lblLine1
             // 
-            this.lblLine1.Size = new System.Drawing.Size(891, 3);
+            this.lblLine1.Size = new System.Drawing.Size(874, 3);
             // 
             // grpMessage
             // 
-            this.grpMessage.Size = new System.Drawing.Size(893, 30);
+            this.grpMessage.Size = new System.Drawing.Size(876, 30);
             // 
             // lblLine3
             // 
-            this.lblLine3.Location = new System.Drawing.Point(1, 550);
-            this.lblLine3.Size = new System.Drawing.Size(891, 3);
+            this.lblLine3.Location = new System.Drawing.Point(1, 584);
+            this.lblLine3.Size = new System.Drawing.Size(874, 3);
             // 
             // grpMain
             // 
             this.grpMain.Controls.Add(this.groupBox1);
-            this.grpMain.Size = new System.Drawing.Size(893, 554);
+            this.grpMain.Size = new System.Drawing.Size(876, 588);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
             this.grpMain.Controls.SetChildIndex(this.groupBox1, 0);
             // 
@@ -124,7 +136,7 @@
             this.groupBox1.Controls.Add(this.btnSaveAndContinu);
             this.groupBox1.Controls.Add(this.labelTitr2);
             this.groupBox1.Controls.Add(this.PicLogo);
-            this.groupBox1.Location = new System.Drawing.Point(265, 6);
+            this.groupBox1.Location = new System.Drawing.Point(294, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(362, 543);
             this.groupBox1.TabIndex = 1;
@@ -151,7 +163,7 @@
             this.cmbBusiness.Location = new System.Drawing.Point(28, 319);
             this.cmbBusiness.Name = "cmbBusiness";
             this.cmbBusiness.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbBusiness.Size = new System.Drawing.Size(304, 26);
+            this.cmbBusiness.Size = new System.Drawing.Size(304, 22);
             this.cmbBusiness.TabIndex = 1;
             this.cmbBusiness.ValueChanged += new System.EventHandler(this.cmbBusiness_ValueChanged);
             // 
@@ -166,7 +178,7 @@
             this.label4.Location = new System.Drawing.Point(261, 296);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(71, 19);
+            this.label4.Size = new System.Drawing.Size(57, 15);
             this.label4.TabIndex = 25;
             this.label4.Text = "کسب و کار";
             // 
@@ -192,7 +204,7 @@
             this.cmbBusinessCategory.Location = new System.Drawing.Point(28, 263);
             this.cmbBusinessCategory.Name = "cmbBusinessCategory";
             this.cmbBusinessCategory.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbBusinessCategory.Size = new System.Drawing.Size(304, 26);
+            this.cmbBusinessCategory.Size = new System.Drawing.Size(304, 22);
             this.cmbBusinessCategory.TabIndex = 0;
             this.cmbBusinessCategory.ValueChanged += new System.EventHandler(this.cmbBusinessCategory_ValueChanged);
             // 
@@ -207,7 +219,7 @@
             this.label3.Location = new System.Drawing.Point(300, 240);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(32, 19);
+            this.label3.Size = new System.Drawing.Size(26, 15);
             this.label3.TabIndex = 23;
             this.label3.Text = "حوزه";
             // 
@@ -227,7 +239,7 @@
             this.txtName.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtName.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtName.Size = new System.Drawing.Size(306, 26);
+            this.txtName.Size = new System.Drawing.Size(306, 22);
             this.txtName.TabIndex = 3;
             this.txtName.UnformattedText = null;
             // 
@@ -253,7 +265,7 @@
             this.cmbActivity.Location = new System.Drawing.Point(28, 376);
             this.cmbActivity.Name = "cmbActivity";
             this.cmbActivity.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbActivity.Size = new System.Drawing.Size(304, 26);
+            this.cmbActivity.Size = new System.Drawing.Size(304, 22);
             this.cmbActivity.TabIndex = 2;
             // 
             // label2
@@ -267,7 +279,7 @@
             this.label2.Location = new System.Drawing.Point(161, 410);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(172, 19);
+            this.label2.Size = new System.Drawing.Size(138, 15);
             this.label2.TabIndex = 21;
             this.label2.Text = "یک نام برای این فعالیت بگذار";
             // 
@@ -282,7 +294,7 @@
             this.label1.Location = new System.Drawing.Point(288, 353);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(44, 19);
+            this.label1.Size = new System.Drawing.Size(35, 15);
             this.label1.TabIndex = 20;
             this.label1.Text = "فعالیت";
             // 
@@ -313,7 +325,7 @@
             this.labelTitr2.Font = new System.Drawing.Font("B Nazanin", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.labelTitr2.Location = new System.Drawing.Point(24, 199);
             this.labelTitr2.Name = "labelTitr2";
-            this.labelTitr2.Size = new System.Drawing.Size(311, 40);
+            this.labelTitr2.Size = new System.Drawing.Size(249, 32);
             this.labelTitr2.TabIndex = 4;
             this.labelTitr2.Text = "چه فعالیتی را می خواهی شروع کنی؟";
             // 
@@ -332,9 +344,10 @@
             // 
             // frmCropPlantation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
-            this.ClientSize = new System.Drawing.Size(893, 734);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(876, 768);
             this.FormMessage = "";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmCropPlantation";
             ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).EndInit();
