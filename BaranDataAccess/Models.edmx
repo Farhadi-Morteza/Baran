@@ -90,6 +90,7 @@
           <Property Name="UpdateUserID" Type="int" />
           <Property Name="UpdateDate" Type="date" />
           <Property Name="Logo" Type="varbinary(max)" />
+          <Property Name="Icon" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="tbl_cmn_CropCategory">
           <Key>
@@ -1713,6 +1714,7 @@ warning 6002: The table/view 'AMS.dbo.viw_Part_Location' does not have a primary
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        
         <Function Name="spr_src_Buildings_Map_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Action" Type="int" Mode="In" />
           <Parameter Name="WhereClause" Type="nvarchar(max)" Mode="In" />
@@ -2063,6 +2065,7 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
           <Property Name="UpdateUserID" Type="Int32" />
           <Property Name="UpdateDate" Type="DateTime" Precision="0" />
           <Property Name="Logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Icon" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="tbl_cmn_CropCategory">
           <Key>
@@ -4231,6 +4234,7 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
           <EntitySetMapping Name="tbl_cmn_Crop">
             <EntityTypeMapping TypeName="AMSModel.tbl_cmn_Crop">
               <MappingFragment StoreEntitySet="tbl_cmn_Crop">
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
                 <ScalarProperty Name="CropID" ColumnName="CropID" />
                 <ScalarProperty Name="NameEn" ColumnName="NameEn" />
                 <ScalarProperty Name="NameFa" ColumnName="NameFa" />

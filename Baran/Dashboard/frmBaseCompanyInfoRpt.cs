@@ -298,7 +298,6 @@ namespace Baran.Dashboard
                 if (chkWater.Checked)
                 {
                     var Waters = dbContext.spr_src_WaterLocation_Rpt(collectionId, subcollectionId, partId);
-
                     foreach (var result in Waters)
                     {
                         if (result.Location != null)

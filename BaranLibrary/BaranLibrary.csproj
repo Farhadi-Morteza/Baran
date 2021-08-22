@@ -56,9 +56,8 @@
     <Reference Include="FarsiLibrary.Win">
       <HintPath>E:\AMS_1400-02-17\AMS\Baran\bin\Debug\FarsiLibrary.Win.dll</HintPath>
     </Reference>
-    <Reference Include="ImageListView, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\AMS_1400-02-17\AMS\BaranLibrary\bin\Debug\ImageListView.dll</HintPath>
+    <Reference Include="ImageListView">
+      <HintPath>E:\AMS_1400-02-17\AMS\Baran\bin\Debug\ImageListView.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics2.Shared.v8.3, Version=8.3.20083.1009, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
     <Reference Include="Infragistics2.Win.AppStylistSupport.v8.3, Version=8.3.20083.1009, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
