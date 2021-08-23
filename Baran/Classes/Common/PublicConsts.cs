@@ -326,19 +326,8 @@ namespace Baran.Classes.Common
         public static readonly string Crops = "Crops.png";
         public static readonly string Field = "Field.png";
         public static readonly string Detail = "Detail.png";
-
-        public static readonly string PartMarker = "PartMarker.png";
-        public static readonly string LandMarker = "LandMarker.png";
-        public static readonly string FieldMarker = "FieldMarker.png";
-        public static readonly string WarehouseMarker = "WarehouseMarker.png";
-        public static readonly string BuildingMarker = "BuildingMarker.png";
-        public static readonly string WaterMarker = "WaterMarker.png";
-        public static readonly string WaterStorageMarker = "WaterStorageMarker.png";
-        public static readonly string WaterTransmissionLineMarker = "WaterTransmissionLineMarker.png";
-
-
         public static readonly string Tree = "Tree.png";
-
+        public static readonly string WaterWell = "WaterWell.png";
     }
     #endregion
 

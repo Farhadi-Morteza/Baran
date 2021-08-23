@@ -163,11 +163,6 @@ namespace Baran.Production
             }
         }
 
-        private void txtDescription_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         public override void OnClear()
         {
             base.OnClear();

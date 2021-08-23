@@ -80,9 +80,10 @@
             this.panel1.Controls.Add(this.btnFields);
             this.panel1.Controls.Add(this.btnSeasons);
             this.panel1.Controls.Add(this.btnTasks);
-            this.panel1.Location = new System.Drawing.Point(0, 20);
+            this.panel1.Location = new System.Drawing.Point(0, 23);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(279, 667);
+            this.panel1.Size = new System.Drawing.Size(279, 823);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -94,11 +95,10 @@
             appearance7.TextHAlignAsString = "Right";
             appearance7.TextVAlignAsString = "Middle";
             this.label1.Appearance = appearance7;
-            this.label1.Location = new System.Drawing.Point(14, 91);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.label1.Location = new System.Drawing.Point(19, 112);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(253, 2);
+            this.label1.Size = new System.Drawing.Size(244, 3);
             this.label1.TabIndex = 8;
             // 
             // lblCaption
@@ -111,10 +111,9 @@
             appearance6.TextVAlignAsString = "Bottom";
             this.lblCaption.Appearance = appearance6;
             this.lblCaption.Font = new System.Drawing.Font("B Nazanin", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblCaption.Location = new System.Drawing.Point(14, 11);
-            this.lblCaption.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblCaption.Location = new System.Drawing.Point(19, 13);
             this.lblCaption.Name = "lblCaption";
-            this.lblCaption.Size = new System.Drawing.Size(253, 76);
+            this.lblCaption.Size = new System.Drawing.Size(244, 93);
             this.lblCaption.TabIndex = 7;
             this.lblCaption.Text = "labelTitr1";
             // 
@@ -125,9 +124,10 @@
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetting.Font = new System.Drawing.Font("B Nazanin", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnSetting.ForeColor = System.Drawing.Color.White;
-            this.btnSetting.Location = new System.Drawing.Point(14, 408);
+            this.btnSetting.Location = new System.Drawing.Point(19, 502);
+            this.btnSetting.Margin = new System.Windows.Forms.Padding(4);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(253, 57);
+            this.btnSetting.Size = new System.Drawing.Size(244, 70);
             this.btnSetting.TabIndex = 6;
             this.btnSetting.Text = "ابزار";
             this.btnSetting.UseVisualStyleBackColor = true;
@@ -140,9 +140,10 @@
             this.btnCropAndCultivar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCropAndCultivar.Font = new System.Drawing.Font("B Nazanin", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnCropAndCultivar.ForeColor = System.Drawing.Color.White;
-            this.btnCropAndCultivar.Location = new System.Drawing.Point(14, 179);
+            this.btnCropAndCultivar.Location = new System.Drawing.Point(19, 220);
+            this.btnCropAndCultivar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCropAndCultivar.Name = "btnCropAndCultivar";
-            this.btnCropAndCultivar.Size = new System.Drawing.Size(253, 57);
+            this.btnCropAndCultivar.Size = new System.Drawing.Size(244, 70);
             this.btnCropAndCultivar.TabIndex = 5;
             this.btnCropAndCultivar.Text = "محصول / رقم";
             this.btnCropAndCultivar.UseVisualStyleBackColor = true;
@@ -155,9 +156,10 @@
             this.btnDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDocument.Font = new System.Drawing.Font("B Nazanin", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnDocument.ForeColor = System.Drawing.Color.White;
-            this.btnDocument.Location = new System.Drawing.Point(16, 496);
+            this.btnDocument.Location = new System.Drawing.Point(22, 611);
+            this.btnDocument.Margin = new System.Windows.Forms.Padding(4);
             this.btnDocument.Name = "btnDocument";
-            this.btnDocument.Size = new System.Drawing.Size(253, 57);
+            this.btnDocument.Size = new System.Drawing.Size(244, 70);
             this.btnDocument.TabIndex = 4;
             this.btnDocument.Text = "ثبت سند";
             this.btnDocument.UseVisualStyleBackColor = true;
@@ -170,9 +172,10 @@
             this.btnPests.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPests.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPests.ForeColor = System.Drawing.Color.White;
-            this.btnPests.Location = new System.Drawing.Point(14, 569);
+            this.btnPests.Location = new System.Drawing.Point(19, 700);
+            this.btnPests.Margin = new System.Windows.Forms.Padding(4);
             this.btnPests.Name = "btnPests";
-            this.btnPests.Size = new System.Drawing.Size(253, 57);
+            this.btnPests.Size = new System.Drawing.Size(244, 70);
             this.btnPests.TabIndex = 3;
             this.btnPests.Text = "Pests";
             this.btnPests.UseVisualStyleBackColor = true;
@@ -185,9 +188,10 @@
             this.btnFields.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFields.Font = new System.Drawing.Font("B Nazanin", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnFields.ForeColor = System.Drawing.Color.White;
-            this.btnFields.Location = new System.Drawing.Point(14, 101);
+            this.btnFields.Location = new System.Drawing.Point(19, 124);
+            this.btnFields.Margin = new System.Windows.Forms.Padding(4);
             this.btnFields.Name = "btnFields";
-            this.btnFields.Size = new System.Drawing.Size(253, 57);
+            this.btnFields.Size = new System.Drawing.Size(244, 70);
             this.btnFields.TabIndex = 2;
             this.btnFields.Text = "زمین";
             this.btnFields.UseVisualStyleBackColor = true;
@@ -200,9 +204,10 @@
             this.btnSeasons.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeasons.Font = new System.Drawing.Font("B Nazanin", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnSeasons.ForeColor = System.Drawing.Color.White;
-            this.btnSeasons.Location = new System.Drawing.Point(14, 257);
+            this.btnSeasons.Location = new System.Drawing.Point(19, 316);
+            this.btnSeasons.Margin = new System.Windows.Forms.Padding(4);
             this.btnSeasons.Name = "btnSeasons";
-            this.btnSeasons.Size = new System.Drawing.Size(253, 57);
+            this.btnSeasons.Size = new System.Drawing.Size(244, 70);
             this.btnSeasons.TabIndex = 1;
             this.btnSeasons.Text = "فصل زراعی";
             this.btnSeasons.UseVisualStyleBackColor = true;
@@ -215,9 +220,10 @@
             this.btnTasks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTasks.Font = new System.Drawing.Font("B Nazanin", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnTasks.ForeColor = System.Drawing.Color.White;
-            this.btnTasks.Location = new System.Drawing.Point(14, 335);
+            this.btnTasks.Location = new System.Drawing.Point(19, 412);
+            this.btnTasks.Margin = new System.Windows.Forms.Padding(4);
             this.btnTasks.Name = "btnTasks";
-            this.btnTasks.Size = new System.Drawing.Size(253, 57);
+            this.btnTasks.Size = new System.Drawing.Size(244, 70);
             this.btnTasks.TabIndex = 0;
             this.btnTasks.Text = "لیست فعالیت ها";
             this.btnTasks.UseVisualStyleBackColor = true;
@@ -258,47 +264,52 @@
             // _frmBaseProductionUnpinnedTabAreaLeft
             // 
             this._frmBaseProductionUnpinnedTabAreaLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this._frmBaseProductionUnpinnedTabAreaLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._frmBaseProductionUnpinnedTabAreaLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._frmBaseProductionUnpinnedTabAreaLeft.Location = new System.Drawing.Point(0, 0);
+            this._frmBaseProductionUnpinnedTabAreaLeft.Margin = new System.Windows.Forms.Padding(4);
             this._frmBaseProductionUnpinnedTabAreaLeft.Name = "_frmBaseProductionUnpinnedTabAreaLeft";
             this._frmBaseProductionUnpinnedTabAreaLeft.Owner = this.ultraDockManager1;
-            this._frmBaseProductionUnpinnedTabAreaLeft.Size = new System.Drawing.Size(0, 687);
+            this._frmBaseProductionUnpinnedTabAreaLeft.Size = new System.Drawing.Size(0, 846);
             this._frmBaseProductionUnpinnedTabAreaLeft.TabIndex = 2;
             // 
             // _frmBaseProductionUnpinnedTabAreaRight
             // 
             this._frmBaseProductionUnpinnedTabAreaRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this._frmBaseProductionUnpinnedTabAreaRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._frmBaseProductionUnpinnedTabAreaRight.Location = new System.Drawing.Point(832, 0);
+            this._frmBaseProductionUnpinnedTabAreaRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._frmBaseProductionUnpinnedTabAreaRight.Location = new System.Drawing.Point(1109, 0);
+            this._frmBaseProductionUnpinnedTabAreaRight.Margin = new System.Windows.Forms.Padding(4);
             this._frmBaseProductionUnpinnedTabAreaRight.Name = "_frmBaseProductionUnpinnedTabAreaRight";
             this._frmBaseProductionUnpinnedTabAreaRight.Owner = this.ultraDockManager1;
-            this._frmBaseProductionUnpinnedTabAreaRight.Size = new System.Drawing.Size(0, 687);
+            this._frmBaseProductionUnpinnedTabAreaRight.Size = new System.Drawing.Size(0, 846);
             this._frmBaseProductionUnpinnedTabAreaRight.TabIndex = 3;
             // 
             // _frmBaseProductionUnpinnedTabAreaTop
             // 
             this._frmBaseProductionUnpinnedTabAreaTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this._frmBaseProductionUnpinnedTabAreaTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._frmBaseProductionUnpinnedTabAreaTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._frmBaseProductionUnpinnedTabAreaTop.Location = new System.Drawing.Point(0, 0);
+            this._frmBaseProductionUnpinnedTabAreaTop.Margin = new System.Windows.Forms.Padding(4);
             this._frmBaseProductionUnpinnedTabAreaTop.Name = "_frmBaseProductionUnpinnedTabAreaTop";
             this._frmBaseProductionUnpinnedTabAreaTop.Owner = this.ultraDockManager1;
-            this._frmBaseProductionUnpinnedTabAreaTop.Size = new System.Drawing.Size(832, 0);
+            this._frmBaseProductionUnpinnedTabAreaTop.Size = new System.Drawing.Size(1109, 0);
             this._frmBaseProductionUnpinnedTabAreaTop.TabIndex = 4;
             // 
             // _frmBaseProductionUnpinnedTabAreaBottom
             // 
             this._frmBaseProductionUnpinnedTabAreaBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this._frmBaseProductionUnpinnedTabAreaBottom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._frmBaseProductionUnpinnedTabAreaBottom.Location = new System.Drawing.Point(0, 687);
+            this._frmBaseProductionUnpinnedTabAreaBottom.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._frmBaseProductionUnpinnedTabAreaBottom.Location = new System.Drawing.Point(0, 846);
+            this._frmBaseProductionUnpinnedTabAreaBottom.Margin = new System.Windows.Forms.Padding(4);
             this._frmBaseProductionUnpinnedTabAreaBottom.Name = "_frmBaseProductionUnpinnedTabAreaBottom";
             this._frmBaseProductionUnpinnedTabAreaBottom.Owner = this.ultraDockManager1;
-            this._frmBaseProductionUnpinnedTabAreaBottom.Size = new System.Drawing.Size(832, 0);
+            this._frmBaseProductionUnpinnedTabAreaBottom.Size = new System.Drawing.Size(1109, 0);
             this._frmBaseProductionUnpinnedTabAreaBottom.TabIndex = 5;
             // 
             // _frmBaseProductionAutoHideControl
             // 
-            this._frmBaseProductionAutoHideControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._frmBaseProductionAutoHideControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._frmBaseProductionAutoHideControl.Location = new System.Drawing.Point(0, 0);
+            this._frmBaseProductionAutoHideControl.Margin = new System.Windows.Forms.Padding(4);
             this._frmBaseProductionAutoHideControl.Name = "_frmBaseProductionAutoHideControl";
             this._frmBaseProductionAutoHideControl.Owner = this.ultraDockManager1;
             this._frmBaseProductionAutoHideControl.Size = new System.Drawing.Size(0, 0);
@@ -308,20 +319,22 @@
             // 
             this.windowDockingArea1.Controls.Add(this.dockableWindow1);
             this.windowDockingArea1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.windowDockingArea1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.windowDockingArea1.Location = new System.Drawing.Point(548, 0);
+            this.windowDockingArea1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.windowDockingArea1.Location = new System.Drawing.Point(825, 0);
+            this.windowDockingArea1.Margin = new System.Windows.Forms.Padding(4);
             this.windowDockingArea1.Name = "windowDockingArea1";
             this.windowDockingArea1.Owner = this.ultraDockManager1;
-            this.windowDockingArea1.Size = new System.Drawing.Size(284, 687);
+            this.windowDockingArea1.Size = new System.Drawing.Size(284, 846);
             this.windowDockingArea1.TabIndex = 7;
             // 
             // dockableWindow1
             // 
             this.dockableWindow1.Controls.Add(this.panel1);
             this.dockableWindow1.Location = new System.Drawing.Point(5, 0);
+            this.dockableWindow1.Margin = new System.Windows.Forms.Padding(4);
             this.dockableWindow1.Name = "dockableWindow1";
             this.dockableWindow1.Owner = this.ultraDockManager1;
-            this.dockableWindow1.Size = new System.Drawing.Size(279, 687);
+            this.dockableWindow1.Size = new System.Drawing.Size(279, 846);
             this.dockableWindow1.TabIndex = 9;
             // 
             // ultraTabbedMdiManager1
@@ -348,9 +361,9 @@
             // 
             // frmBaseProduction
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 687);
+            this.ClientSize = new System.Drawing.Size(1109, 846);
             this.Controls.Add(this._frmBaseProductionAutoHideControl);
             this.Controls.Add(this._frmBaseProductionUnpinnedTabAreaLeft);
             this.Controls.Add(this._frmBaseProductionUnpinnedTabAreaTop);
@@ -358,6 +371,7 @@
             this.Controls.Add(this._frmBaseProductionUnpinnedTabAreaRight);
             this.Controls.Add(this.windowDockingArea1);
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmBaseProduction";
             this.ShowIcon = false;
             this.Text = "محصول";
