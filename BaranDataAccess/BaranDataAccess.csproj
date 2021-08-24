@@ -231,6 +231,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dstSource.xsd</DependentUpon>
     </Compile>
+    <Compile Include="spr_dsb_FieldTaskList_rpt_Select_Result.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="spr_src_BuildingsLocation_Rpt_Result.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>

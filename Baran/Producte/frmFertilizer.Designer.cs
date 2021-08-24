@@ -196,49 +196,43 @@
             // 
             // grpPrint
             // 
-            this.grpPrint.Location = new System.Drawing.Point(134, 0);
+            this.grpPrint.Location = new System.Drawing.Point(69, 0);
             this.grpPrint.Size = new System.Drawing.Size(71, 74);
             // 
             // grpCancel
             // 
-            this.grpCancel.Location = new System.Drawing.Point(850, 0);
-            this.grpCancel.Size = new System.Drawing.Size(127, 74);
+            this.grpCancel.Location = new System.Drawing.Point(785, 0);
             // 
             // grpSave
             // 
-            this.grpSave.Location = new System.Drawing.Point(723, 0);
-            this.grpSave.Size = new System.Drawing.Size(127, 74);
+            this.grpSave.Location = new System.Drawing.Point(658, 0);
             // 
             // grpChange
             // 
-            this.grpChange.Location = new System.Drawing.Point(596, 0);
-            this.grpChange.Size = new System.Drawing.Size(127, 74);
+            this.grpChange.Location = new System.Drawing.Point(531, 0);
             // 
             // grpClear
             // 
-            this.grpClear.Location = new System.Drawing.Point(469, 0);
-            this.grpClear.Size = new System.Drawing.Size(127, 74);
+            this.grpClear.Location = new System.Drawing.Point(404, 0);
             // 
             // grpDelete
             // 
-            this.grpDelete.Location = new System.Drawing.Point(342, 0);
-            this.grpDelete.Size = new System.Drawing.Size(127, 74);
+            this.grpDelete.Location = new System.Drawing.Point(277, 0);
             // 
             // grpDoc
             // 
-            this.grpDoc.Location = new System.Drawing.Point(205, 0);
+            this.grpDoc.Location = new System.Drawing.Point(140, 0);
             this.grpDoc.Size = new System.Drawing.Size(137, 74);
             this.grpDoc.Visible = false;
             // 
             // grpRefresh
             // 
-            this.grpRefresh.Location = new System.Drawing.Point(63, 0);
+            this.grpRefresh.Location = new System.Drawing.Point(-2, 0);
             this.grpRefresh.Size = new System.Drawing.Size(71, 74);
             // 
             // grpNew
             // 
-            this.grpNew.Location = new System.Drawing.Point(-64, 0);
-            this.grpNew.Size = new System.Drawing.Size(127, 74);
+            this.grpNew.Location = new System.Drawing.Point(-129, 0);
             // 
             // btnNew
             // 
@@ -250,26 +244,26 @@
             // 
             // grpButons
             // 
-            this.grpButons.Location = new System.Drawing.Point(0, 608);
-            this.grpButons.Size = new System.Drawing.Size(978, 75);
+            this.grpButons.Location = new System.Drawing.Point(0, 447);
+            this.grpButons.Size = new System.Drawing.Size(913, 75);
             // 
             // lblLine2
             // 
             this.lblLine2.Location = new System.Drawing.Point(1, 66);
-            this.lblLine2.Size = new System.Drawing.Size(976, 3);
+            this.lblLine2.Size = new System.Drawing.Size(911, 3);
             // 
             // grpHeader
             // 
-            this.grpHeader.Size = new System.Drawing.Size(978, 70);
+            this.grpHeader.Size = new System.Drawing.Size(913, 70);
             this.grpHeader.Visible = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(920, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(853, 6);
             // 
             // lblCaption
             // 
-            this.lblCaption.Location = new System.Drawing.Point(617, 22);
+            this.lblCaption.Location = new System.Drawing.Point(550, 19);
             // 
             // lblMessage
             // 
@@ -278,17 +272,17 @@
             // 
             // lblLine1
             // 
-            this.lblLine1.Size = new System.Drawing.Size(976, 3);
+            this.lblLine1.Size = new System.Drawing.Size(911, 3);
             // 
             // grpMessage
             // 
             this.grpMessage.Location = new System.Drawing.Point(0, 70);
-            this.grpMessage.Size = new System.Drawing.Size(978, 30);
+            this.grpMessage.Size = new System.Drawing.Size(913, 30);
             // 
             // lblLine3
             // 
-            this.lblLine3.Location = new System.Drawing.Point(1, 504);
-            this.lblLine3.Size = new System.Drawing.Size(976, 3);
+            this.lblLine3.Location = new System.Drawing.Point(1, 343);
+            this.lblLine3.Size = new System.Drawing.Size(911, 3);
             // 
             // grpMain
             // 
@@ -296,7 +290,7 @@
             this.grpMain.Controls.Add(this.grdItem);
             this.grpMain.Controls.Add(this.grpControls);
             this.grpMain.Location = new System.Drawing.Point(0, 100);
-            this.grpMain.Size = new System.Drawing.Size(978, 508);
+            this.grpMain.Size = new System.Drawing.Size(913, 347);
             this.grpMain.Controls.SetChildIndex(this.grpControls, 0);
             this.grpMain.Controls.SetChildIndex(this.grdItem, 0);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
@@ -319,7 +313,7 @@
             ultraGridColumn2.CellAppearance = appearance21;
             ultraGridColumn2.Header.Caption = "";
             ultraGridColumn2.Header.VisiblePosition = 1;
-            ultraGridColumn2.Width = 223;
+            ultraGridColumn2.Width = 227;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2});
@@ -396,127 +390,127 @@
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance2.ForeColor = System.Drawing.Color.White;
             appearance2.TextHAlignAsString = "Right";
             appearance2.TextVAlignAsString = "Middle";
             this.label8.Appearance = appearance2;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(864, 120);
+            this.label8.Location = new System.Drawing.Point(825, 105);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label8.Size = new System.Drawing.Size(56, 19);
+            this.label8.Size = new System.Drawing.Size(45, 15);
             this.label8.TabIndex = 15;
             this.label8.Text = "توضیحات";
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance5.ForeColor = System.Drawing.Color.White;
             appearance5.TextHAlignAsString = "Right";
             appearance5.TextVAlignAsString = "Middle";
             this.label7.Appearance = appearance5;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(375, 66);
+            this.label7.Location = new System.Drawing.Point(348, 55);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label7.Size = new System.Drawing.Size(101, 19);
+            this.label7.Size = new System.Drawing.Size(81, 15);
             this.label7.TabIndex = 14;
             this.label7.Text = "واحد اندازه گیری";
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance6.ForeColor = System.Drawing.Color.White;
             appearance6.TextHAlignAsString = "Right";
             appearance6.TextVAlignAsString = "Middle";
             this.label6.Appearance = appearance6;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(629, 66);
+            this.label6.Location = new System.Drawing.Point(592, 55);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label6.Size = new System.Drawing.Size(55, 19);
+            this.label6.Size = new System.Drawing.Size(44, 15);
             this.label6.TabIndex = 13;
             this.label6.Text = "نوع تولید";
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance7.ForeColor = System.Drawing.Color.White;
             appearance7.TextHAlignAsString = "Right";
             appearance7.TextVAlignAsString = "Middle";
             this.label5.Appearance = appearance7;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(826, 66);
+            this.label5.Location = new System.Drawing.Point(795, 55);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label5.Size = new System.Drawing.Size(94, 19);
+            this.label5.Size = new System.Drawing.Size(75, 15);
             this.label5.TabIndex = 12;
             this.label5.Text = "وضعیت فیزیکی";
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance8.ForeColor = System.Drawing.Color.White;
             appearance8.TextHAlignAsString = "Right";
             appearance8.TextVAlignAsString = "Middle";
             this.label4.Appearance = appearance8;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(109, 12);
+            this.label4.Location = new System.Drawing.Point(88, 4);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(136, 19);
+            this.label4.Size = new System.Drawing.Size(109, 15);
             this.label4.TabIndex = 11;
             this.label4.Text = "شماره ثبت ماده کودی";
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance9.ForeColor = System.Drawing.Color.White;
             appearance9.TextHAlignAsString = "Right";
             appearance9.TextVAlignAsString = "Middle";
             this.label3.Appearance = appearance9;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(385, 12);
+            this.label3.Location = new System.Drawing.Point(356, 4);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(91, 19);
+            this.label3.Size = new System.Drawing.Size(73, 15);
             this.label3.TabIndex = 10;
             this.label3.Text = "شرکت سازنده";
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance10.ForeColor = System.Drawing.Color.White;
             appearance10.TextHAlignAsString = "Right";
             appearance10.TextVAlignAsString = "Middle";
             this.label2.Appearance = appearance10;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(636, 12);
+            this.label2.Location = new System.Drawing.Point(597, 4);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(48, 19);
+            this.label2.Size = new System.Drawing.Size(39, 15);
             this.label2.TabIndex = 9;
             this.label2.Text = "نوع کود";
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance11.ForeColor = System.Drawing.Color.White;
             appearance11.TextHAlignAsString = "Right";
             appearance11.TextVAlignAsString = "Middle";
             this.label1.Appearance = appearance11;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(835, 12);
+            this.label1.Location = new System.Drawing.Point(802, 4);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(85, 19);
+            this.label1.Size = new System.Drawing.Size(68, 15);
             this.label1.TabIndex = 8;
             this.label1.Text = "نام تجاری کود";
             // 
             // txtDescription
             // 
-            this.txtDescription.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance34.BackColor = System.Drawing.Color.Transparent;
             appearance34.ForeColor = System.Drawing.Color.White;
             appearance34.TextHAlignAsString = "Right";
@@ -524,18 +518,19 @@
             this.txtDescription.BackColor = System.Drawing.Color.Transparent;
             this.txtDescription.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtDescription.FontSize = 0;
-            this.txtDescription.Location = new System.Drawing.Point(66, 141);
+            this.txtDescription.Location = new System.Drawing.Point(16, 124);
+            this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtDescription.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDescription.Size = new System.Drawing.Size(854, 26);
+            this.txtDescription.Size = new System.Drawing.Size(854, 44);
             this.txtDescription.TabIndex = 7;
             this.txtDescription.UnformattedText = null;
             // 
             // cmbUnitMeasurement
             // 
-            this.cmbUnitMeasurement.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbUnitMeasurement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance14.BackColor = System.Drawing.Color.Transparent;
             appearance14.BorderColor = System.Drawing.Color.LightGray;
             appearance14.ForeColor = System.Drawing.Color.White;
@@ -551,15 +546,15 @@
             appearance35.TextHAlignAsString = "Right";
             appearance35.TextVAlignAsString = "Middle";
             this.cmbUnitMeasurement.ItemAppearance = appearance35;
-            this.cmbUnitMeasurement.Location = new System.Drawing.Point(250, 88);
+            this.cmbUnitMeasurement.Location = new System.Drawing.Point(203, 73);
             this.cmbUnitMeasurement.Name = "cmbUnitMeasurement";
             this.cmbUnitMeasurement.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbUnitMeasurement.Size = new System.Drawing.Size(226, 26);
+            this.cmbUnitMeasurement.Size = new System.Drawing.Size(226, 22);
             this.cmbUnitMeasurement.TabIndex = 6;
             // 
             // cmbMaterialMode
             // 
-            this.cmbMaterialMode.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbMaterialMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance3.BackColor = System.Drawing.Color.Transparent;
             appearance3.BorderColor = System.Drawing.Color.LightGray;
             appearance3.ForeColor = System.Drawing.Color.White;
@@ -575,15 +570,15 @@
             appearance4.TextHAlignAsString = "Right";
             appearance4.TextVAlignAsString = "Middle";
             this.cmbMaterialMode.ItemAppearance = appearance4;
-            this.cmbMaterialMode.Location = new System.Drawing.Point(691, 88);
+            this.cmbMaterialMode.Location = new System.Drawing.Point(641, 73);
             this.cmbMaterialMode.Name = "cmbMaterialMode";
             this.cmbMaterialMode.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbMaterialMode.Size = new System.Drawing.Size(229, 26);
+            this.cmbMaterialMode.Size = new System.Drawing.Size(229, 22);
             this.cmbMaterialMode.TabIndex = 4;
             // 
             // cmbProductCategory
             // 
-            this.cmbProductCategory.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbProductCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance12.BackColor = System.Drawing.Color.Transparent;
             appearance12.BorderColor = System.Drawing.Color.LightGray;
             appearance12.ForeColor = System.Drawing.Color.White;
@@ -599,15 +594,15 @@
             appearance36.TextHAlignAsString = "Right";
             appearance36.TextVAlignAsString = "Middle";
             this.cmbProductCategory.ItemAppearance = appearance36;
-            this.cmbProductCategory.Location = new System.Drawing.Point(481, 88);
+            this.cmbProductCategory.Location = new System.Drawing.Point(433, 73);
             this.cmbProductCategory.Name = "cmbProductCategory";
             this.cmbProductCategory.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbProductCategory.Size = new System.Drawing.Size(203, 26);
+            this.cmbProductCategory.Size = new System.Drawing.Size(203, 22);
             this.cmbProductCategory.TabIndex = 5;
             // 
             // txtRegistrationNumber
             // 
-            this.txtRegistrationNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtRegistrationNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance37.BackColor = System.Drawing.Color.Transparent;
             appearance37.ForeColor = System.Drawing.Color.White;
             appearance37.TextHAlignAsString = "Right";
@@ -615,18 +610,18 @@
             this.txtRegistrationNumber.BackColor = System.Drawing.Color.Transparent;
             this.txtRegistrationNumber.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtRegistrationNumber.FontSize = 0;
-            this.txtRegistrationNumber.Location = new System.Drawing.Point(67, 34);
+            this.txtRegistrationNumber.Location = new System.Drawing.Point(19, 23);
             this.txtRegistrationNumber.Name = "txtRegistrationNumber";
             this.txtRegistrationNumber.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtRegistrationNumber.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtRegistrationNumber.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtRegistrationNumber.Size = new System.Drawing.Size(178, 26);
+            this.txtRegistrationNumber.Size = new System.Drawing.Size(178, 22);
             this.txtRegistrationNumber.TabIndex = 3;
             this.txtRegistrationNumber.UnformattedText = null;
             // 
             // txtManufacture
             // 
-            this.txtManufacture.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtManufacture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance38.BackColor = System.Drawing.Color.Transparent;
             appearance38.ForeColor = System.Drawing.Color.White;
             appearance38.TextHAlignAsString = "Right";
@@ -634,18 +629,18 @@
             this.txtManufacture.BackColor = System.Drawing.Color.Transparent;
             this.txtManufacture.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtManufacture.FontSize = 0;
-            this.txtManufacture.Location = new System.Drawing.Point(250, 34);
+            this.txtManufacture.Location = new System.Drawing.Point(203, 23);
             this.txtManufacture.Name = "txtManufacture";
             this.txtManufacture.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtManufacture.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtManufacture.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtManufacture.Size = new System.Drawing.Size(226, 26);
+            this.txtManufacture.Size = new System.Drawing.Size(226, 22);
             this.txtManufacture.TabIndex = 2;
             this.txtManufacture.UnformattedText = null;
             // 
             // cmbFertilizerCategory
             // 
-            this.cmbFertilizerCategory.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbFertilizerCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance39.BackColor = System.Drawing.Color.Transparent;
             appearance39.BorderColor = System.Drawing.Color.LightGray;
             appearance39.ForeColor = System.Drawing.Color.White;
@@ -661,15 +656,15 @@
             appearance52.TextHAlignAsString = "Right";
             appearance52.TextVAlignAsString = "Middle";
             this.cmbFertilizerCategory.ItemAppearance = appearance52;
-            this.cmbFertilizerCategory.Location = new System.Drawing.Point(481, 34);
+            this.cmbFertilizerCategory.Location = new System.Drawing.Point(433, 23);
             this.cmbFertilizerCategory.Name = "cmbFertilizerCategory";
             this.cmbFertilizerCategory.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbFertilizerCategory.Size = new System.Drawing.Size(203, 26);
+            this.cmbFertilizerCategory.Size = new System.Drawing.Size(203, 22);
             this.cmbFertilizerCategory.TabIndex = 1;
             // 
             // txtName
             // 
-            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance1.BackColor = System.Drawing.Color.Transparent;
             appearance1.ForeColor = System.Drawing.Color.White;
             appearance1.TextHAlignAsString = "Right";
@@ -677,12 +672,12 @@
             this.txtName.BackColor = System.Drawing.Color.Transparent;
             this.txtName.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtName.FontSize = 0;
-            this.txtName.Location = new System.Drawing.Point(691, 34);
+            this.txtName.Location = new System.Drawing.Point(641, 23);
             this.txtName.Name = "txtName";
             this.txtName.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtName.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtName.Size = new System.Drawing.Size(229, 26);
+            this.txtName.Size = new System.Drawing.Size(229, 22);
             this.txtName.TabIndex = 0;
             this.txtName.UnformattedText = null;
             // 
@@ -700,7 +695,7 @@
             ultraGridColumn3.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn3.Header.VisiblePosition = 1;
             ultraGridColumn3.Hidden = true;
-            ultraGridColumn3.Width = 36;
+            ultraGridColumn3.Width = 31;
             ultraGridColumn4.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn4.Header.Caption = "عنصر";
             ultraGridColumn4.Header.VisiblePosition = 3;
@@ -714,19 +709,19 @@
             ultraGridColumn5.MaskDisplayMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.IncludeBoth;
             ultraGridColumn5.MaskInput = "nn.nn";
             ultraGridColumn5.TabIndex = 1;
-            ultraGridColumn5.Width = 56;
+            ultraGridColumn5.Width = 47;
             ultraGridColumn6.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn6.Header.VisiblePosition = 4;
             ultraGridColumn6.Hidden = true;
-            ultraGridColumn6.Width = 36;
+            ultraGridColumn6.Width = 31;
             ultraGridColumn7.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn7.Header.VisiblePosition = 5;
             ultraGridColumn7.Hidden = true;
-            ultraGridColumn7.Width = 36;
+            ultraGridColumn7.Width = 31;
             ultraGridColumn8.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn8.Header.VisiblePosition = 6;
             ultraGridColumn8.Hidden = true;
-            ultraGridColumn8.Width = 130;
+            ultraGridColumn8.Width = 106;
             ultraGridColumn9.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn9.Header.VisiblePosition = 7;
             ultraGridColumn9.Hidden = true;
@@ -734,30 +729,30 @@
             ultraGridColumn10.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn10.Header.VisiblePosition = 8;
             ultraGridColumn10.Hidden = true;
-            ultraGridColumn10.Width = 36;
+            ultraGridColumn10.Width = 31;
             ultraGridColumn11.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn11.Header.VisiblePosition = 9;
             ultraGridColumn11.Hidden = true;
-            ultraGridColumn11.Width = 130;
+            ultraGridColumn11.Width = 106;
             ultraGridColumn12.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn12.Header.VisiblePosition = 10;
             ultraGridColumn12.Hidden = true;
-            ultraGridColumn12.Width = 36;
+            ultraGridColumn12.Width = 31;
             ultraGridColumn13.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn13.Header.VisiblePosition = 11;
             ultraGridColumn13.Hidden = true;
-            ultraGridColumn13.Width = 130;
+            ultraGridColumn13.Width = 106;
             ultraGridColumn14.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn14.Header.Caption = "";
             ultraGridColumn14.Header.VisiblePosition = 0;
             ultraGridColumn14.MergedCellStyle = Infragistics.Win.UltraWinGrid.MergedCellStyle.Always;
             ultraGridColumn14.TabStop = false;
-            ultraGridColumn14.Width = 524;
+            ultraGridColumn14.Width = 482;
             ultraGridColumn15.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn15.Header.Caption = "#";
             ultraGridColumn15.Header.VisiblePosition = 12;
             ultraGridColumn15.TabStop = false;
-            ultraGridColumn15.Width = 48;
+            ultraGridColumn15.Width = 41;
             ultraGridBand2.Columns.AddRange(new object[] {
             ultraGridColumn3,
             ultraGridColumn4,
@@ -814,7 +809,7 @@
             appearance42.BorderColor = System.Drawing.Color.Gray;
             appearance42.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
             this.grdItem.DisplayLayout.Override.CellAppearance = appearance42;
-            this.grdItem.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
+            this.grdItem.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.RowSelect;
             this.grdItem.DisplayLayout.Override.CellPadding = 0;
             this.grdItem.DisplayLayout.Override.CellSpacing = 2;
             this.grdItem.DisplayLayout.Override.DefaultRowHeight = 25;
@@ -884,10 +879,10 @@
             this.grdItem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdItem.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.grdItem.InputLanguage = Baran.Windows.Forms.InputLanguage.Farsi;
-            this.grdItem.Location = new System.Drawing.Point(1, 198);
+            this.grdItem.Location = new System.Drawing.Point(1, 192);
             this.grdItem.Name = "grdItem";
-            this.grdItem.Size = new System.Drawing.Size(976, 309);
-            this.grdItem.SumColumnsWidth = 452;
+            this.grdItem.Size = new System.Drawing.Size(911, 154);
+            this.grdItem.SumColumnsWidth = 429;
             this.grdItem.TabIndex = 1;
             this.grdItem.InitializeLayout += new Infragistics.Win.UltraWinGrid.InitializeLayoutEventHandler(this.grdItem_InitializeLayout);
             // 
@@ -913,15 +908,14 @@
             this.grpControls.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpControls.Location = new System.Drawing.Point(1, 0);
             this.grpControls.Name = "grpControls";
-            this.grpControls.Size = new System.Drawing.Size(976, 198);
+            this.grpControls.Size = new System.Drawing.Size(911, 192);
             this.grpControls.TabIndex = 0;
-            this.grpControls.Text = "groupBox1";
             // 
             // frmFertilizer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
-            this.ClientSize = new System.Drawing.Size(978, 683);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(913, 522);
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.Name = "frmFertilizer";
             ((System.ComponentModel.ISupportInitialize)(this.grpPrint)).EndInit();
             this.grpPrint.ResumeLayout(false);

@@ -132,40 +132,49 @@
             // 
             // grpPrint
             // 
-            this.grpPrint.Location = new System.Drawing.Point(141, 0);
+            this.grpPrint.Location = new System.Drawing.Point(-187, 0);
+            this.grpPrint.Size = new System.Drawing.Size(95, 66);
             // 
             // grpCancel
             // 
-            this.grpCancel.Location = new System.Drawing.Point(884, 0);
+            this.grpCancel.Location = new System.Drawing.Point(556, 0);
+            this.grpCancel.Size = new System.Drawing.Size(127, 66);
             // 
             // grpSave
             // 
-            this.grpSave.Location = new System.Drawing.Point(757, 0);
+            this.grpSave.Location = new System.Drawing.Point(429, 0);
+            this.grpSave.Size = new System.Drawing.Size(127, 66);
             // 
             // grpChange
             // 
-            this.grpChange.Location = new System.Drawing.Point(630, 0);
+            this.grpChange.Location = new System.Drawing.Point(302, 0);
+            this.grpChange.Size = new System.Drawing.Size(127, 66);
             // 
             // grpClear
             // 
-            this.grpClear.Location = new System.Drawing.Point(503, 0);
+            this.grpClear.Location = new System.Drawing.Point(175, 0);
+            this.grpClear.Size = new System.Drawing.Size(127, 66);
             // 
             // grpDelete
             // 
-            this.grpDelete.Location = new System.Drawing.Point(376, 0);
+            this.grpDelete.Location = new System.Drawing.Point(48, 0);
+            this.grpDelete.Size = new System.Drawing.Size(127, 66);
             // 
             // grpDoc
             // 
-            this.grpDoc.Location = new System.Drawing.Point(236, 0);
+            this.grpDoc.Location = new System.Drawing.Point(-92, 0);
+            this.grpDoc.Size = new System.Drawing.Size(140, 66);
             this.grpDoc.Visible = false;
             // 
             // grpRefresh
             // 
-            this.grpRefresh.Location = new System.Drawing.Point(46, 0);
+            this.grpRefresh.Location = new System.Drawing.Point(-282, 0);
+            this.grpRefresh.Size = new System.Drawing.Size(95, 66);
             // 
             // grpNew
             // 
-            this.grpNew.Location = new System.Drawing.Point(-81, 0);
+            this.grpNew.Location = new System.Drawing.Point(-409, 0);
+            this.grpNew.Size = new System.Drawing.Size(127, 66);
             // 
             // btnNew
             // 
@@ -178,25 +187,25 @@
             // grpButons
             // 
             this.grpButons.Location = new System.Drawing.Point(0, 571);
-            this.grpButons.Size = new System.Drawing.Size(1012, 67);
+            this.grpButons.Size = new System.Drawing.Size(684, 67);
             // 
             // lblLine2
             // 
             this.lblLine2.Location = new System.Drawing.Point(1, 70);
-            this.lblLine2.Size = new System.Drawing.Size(1010, 3);
+            this.lblLine2.Size = new System.Drawing.Size(682, 3);
             // 
             // grpHeader
             // 
-            this.grpHeader.Size = new System.Drawing.Size(1012, 74);
+            this.grpHeader.Size = new System.Drawing.Size(684, 74);
             this.grpHeader.Visible = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(946, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(624, 7);
             // 
             // lblCaption
             // 
-            this.lblCaption.Location = new System.Drawing.Point(644, 21);
+            this.lblCaption.Location = new System.Drawing.Point(322, 20);
             // 
             // lblMessage
             // 
@@ -205,17 +214,17 @@
             // 
             // lblLine1
             // 
-            this.lblLine1.Size = new System.Drawing.Size(1010, 2);
+            this.lblLine1.Size = new System.Drawing.Size(682, 2);
             // 
             // grpMessage
             // 
             this.grpMessage.Location = new System.Drawing.Point(0, 74);
-            this.grpMessage.Size = new System.Drawing.Size(1012, 30);
+            this.grpMessage.Size = new System.Drawing.Size(684, 30);
             // 
             // lblLine3
             // 
             this.lblLine3.Location = new System.Drawing.Point(1, 463);
-            this.lblLine3.Size = new System.Drawing.Size(1010, 3);
+            this.lblLine3.Size = new System.Drawing.Size(682, 3);
             // 
             // grpMain
             // 
@@ -236,7 +245,7 @@
             this.grpMain.Controls.Add(this.txtNameEn);
             this.grpMain.Controls.Add(this.txtNameFa);
             this.grpMain.Location = new System.Drawing.Point(0, 104);
-            this.grpMain.Size = new System.Drawing.Size(1012, 467);
+            this.grpMain.Size = new System.Drawing.Size(684, 467);
             this.grpMain.TabIndex = 0;
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
             this.grpMain.Controls.SetChildIndex(this.txtNameFa, 0);
@@ -267,12 +276,12 @@
             this.txtNameFa.BackColor = System.Drawing.Color.Transparent;
             this.txtNameFa.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtNameFa.FontSize = 0;
-            this.txtNameFa.Location = new System.Drawing.Point(581, 28);
+            this.txtNameFa.Location = new System.Drawing.Point(460, 24);
             this.txtNameFa.Name = "txtNameFa";
             this.txtNameFa.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtNameFa.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtNameFa.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtNameFa.Size = new System.Drawing.Size(350, 26);
+            this.txtNameFa.Size = new System.Drawing.Size(200, 22);
             this.txtNameFa.TabIndex = 0;
             this.txtNameFa.UnformattedText = null;
             // 
@@ -286,12 +295,12 @@
             this.txtNameEn.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtNameEn.FontSize = 0;
             this.txtNameEn.InputLanguage = Baran.Windows.Forms.InputLanguage.English;
-            this.txtNameEn.Location = new System.Drawing.Point(322, 28);
+            this.txtNameEn.Location = new System.Drawing.Point(254, 24);
             this.txtNameEn.Name = "txtNameEn";
             this.txtNameEn.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtNameEn.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtNameEn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtNameEn.Size = new System.Drawing.Size(250, 26);
+            this.txtNameEn.Size = new System.Drawing.Size(200, 22);
             this.txtNameEn.TabIndex = 1;
             this.txtNameEn.UnformattedText = null;
             // 
@@ -312,10 +321,10 @@
             appearance16.TextHAlignAsString = "Right";
             appearance16.TextVAlignAsString = "Middle";
             this.cmbCrop.ItemAppearance = appearance16;
-            this.cmbCrop.Location = new System.Drawing.Point(64, 28);
+            this.cmbCrop.Location = new System.Drawing.Point(20, 27);
             this.cmbCrop.Name = "cmbCrop";
             this.cmbCrop.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbCrop.Size = new System.Drawing.Size(250, 26);
+            this.cmbCrop.Size = new System.Drawing.Size(228, 22);
             this.cmbCrop.TabIndex = 2;
             // 
             // txtCultivatedClimate
@@ -329,12 +338,12 @@
             this.txtCultivatedClimate.BackColor = System.Drawing.Color.Transparent;
             this.txtCultivatedClimate.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtCultivatedClimate.FontSize = 0;
-            this.txtCultivatedClimate.Location = new System.Drawing.Point(445, 80);
+            this.txtCultivatedClimate.Location = new System.Drawing.Point(379, 79);
             this.txtCultivatedClimate.Name = "txtCultivatedClimate";
             this.txtCultivatedClimate.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtCultivatedClimate.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtCultivatedClimate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCultivatedClimate.Size = new System.Drawing.Size(486, 26);
+            this.txtCultivatedClimate.Size = new System.Drawing.Size(281, 22);
             this.txtCultivatedClimate.TabIndex = 3;
             this.txtCultivatedClimate.UnformattedText = null;
             // 
@@ -349,14 +358,14 @@
             this.txtProperty.BackColor = System.Drawing.Color.Transparent;
             this.txtProperty.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtProperty.FontSize = 0;
-            this.txtProperty.Location = new System.Drawing.Point(64, 133);
+            this.txtProperty.Location = new System.Drawing.Point(20, 130);
             this.txtProperty.MaxLength = 1000;
             this.txtProperty.Multiline = true;
             this.txtProperty.Name = "txtProperty";
             this.txtProperty.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtProperty.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtProperty.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtProperty.Size = new System.Drawing.Size(867, 206);
+            this.txtProperty.Size = new System.Drawing.Size(640, 140);
             this.txtProperty.TabIndex = 6;
             this.txtProperty.UnformattedText = null;
             // 
@@ -368,10 +377,10 @@
             appearance13.TextVAlignAsString = "Middle";
             this.label1.Appearance = appearance13;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(909, 4);
+            this.label1.Location = new System.Drawing.Point(643, 3);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(22, 19);
+            this.label1.Size = new System.Drawing.Size(17, 15);
             this.label1.TabIndex = 59;
             this.label1.Text = "نام";
             // 
@@ -382,10 +391,10 @@
             appearance12.TextVAlignAsString = "Middle";
             this.label2.Appearance = appearance12;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(518, 4);
+            this.label2.Location = new System.Drawing.Point(411, 3);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(54, 19);
+            this.label2.Size = new System.Drawing.Size(43, 15);
             this.label2.TabIndex = 60;
             this.label2.Text = "نام لاتین";
             // 
@@ -396,10 +405,10 @@
             appearance11.TextVAlignAsString = "Middle";
             this.label3.Appearance = appearance11;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(266, 4);
+            this.label3.Location = new System.Drawing.Point(200, 3);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(48, 19);
+            this.label3.Size = new System.Drawing.Size(39, 15);
             this.label3.TabIndex = 61;
             this.label3.Text = "محصول";
             // 
@@ -411,10 +420,10 @@
             appearance10.TextVAlignAsString = "Middle";
             this.label4.Appearance = appearance10;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(810, 58);
+            this.label4.Location = new System.Drawing.Point(563, 57);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(121, 19);
+            this.label4.Size = new System.Drawing.Size(97, 15);
             this.label4.TabIndex = 62;
             this.label4.Text = "اقلیم مناسب کشت";
             // 
@@ -425,10 +434,10 @@
             appearance4.TextVAlignAsString = "Middle";
             this.label5.Appearance = appearance4;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(320, 58);
+            this.label5.Location = new System.Drawing.Point(278, 57);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label5.Size = new System.Drawing.Size(119, 19);
+            this.label5.Size = new System.Drawing.Size(95, 15);
             this.label5.TabIndex = 63;
             this.label5.Text = "عملکرد-تن در هکتار";
             // 
@@ -440,10 +449,10 @@
             appearance19.TextVAlignAsString = "Middle";
             this.label6.Appearance = appearance19;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(811, 110);
+            this.label6.Location = new System.Drawing.Point(564, 109);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label6.Size = new System.Drawing.Size(120, 19);
+            this.label6.Size = new System.Drawing.Size(96, 15);
             this.label6.TabIndex = 64;
             this.label6.Text = "ویژگی های بارز رقم";
             // 
@@ -464,10 +473,10 @@
             appearance3.TextHAlignAsString = "Right";
             appearance3.TextVAlignAsString = "Middle";
             this.cmbCountry.ItemAppearance = appearance3;
-            this.cmbCountry.Location = new System.Drawing.Point(64, 80);
+            this.cmbCountry.Location = new System.Drawing.Point(20, 79);
             this.cmbCountry.Name = "cmbCountry";
             this.cmbCountry.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbCountry.Size = new System.Drawing.Size(250, 26);
+            this.cmbCountry.Size = new System.Drawing.Size(228, 22);
             this.cmbCountry.TabIndex = 5;
             // 
             // label7
@@ -477,10 +486,10 @@
             appearance6.TextVAlignAsString = "Middle";
             this.label7.Appearance = appearance6;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(248, 58);
+            this.label7.Location = new System.Drawing.Point(182, 57);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label7.Size = new System.Drawing.Size(66, 19);
+            this.label7.Size = new System.Drawing.Size(53, 15);
             this.label7.TabIndex = 66;
             this.label7.Text = "کشور مبدا";
             // 
@@ -495,9 +504,9 @@
             this.txtYieldPerHectare.Editable = Baran.Windows.Forms.Editable.Editable;
             this.txtYieldPerHectare.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
             this.txtYieldPerHectare.InputMask = "{double:6.2}";
-            this.txtYieldPerHectare.Location = new System.Drawing.Point(320, 80);
+            this.txtYieldPerHectare.Location = new System.Drawing.Point(254, 79);
             this.txtYieldPerHectare.Name = "txtYieldPerHectare";
-            this.txtYieldPerHectare.Size = new System.Drawing.Size(119, 24);
+            this.txtYieldPerHectare.Size = new System.Drawing.Size(119, 21);
             this.txtYieldPerHectare.TabIndex = 4;
             // 
             // label8
@@ -508,10 +517,10 @@
             appearance5.TextVAlignAsString = "Middle";
             this.label8.Appearance = appearance5;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(875, 345);
+            this.label8.Location = new System.Drawing.Point(615, 284);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label8.Size = new System.Drawing.Size(56, 19);
+            this.label8.Size = new System.Drawing.Size(45, 15);
             this.label8.TabIndex = 70;
             this.label8.Text = "توضیحات";
             // 
@@ -527,21 +536,21 @@
             this.txtDescription.BackColor = System.Drawing.Color.Transparent;
             this.txtDescription.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtDescription.FontSize = 0;
-            this.txtDescription.Location = new System.Drawing.Point(64, 382);
+            this.txtDescription.Location = new System.Drawing.Point(20, 305);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtDescription.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDescription.Size = new System.Drawing.Size(867, 124);
+            this.txtDescription.Size = new System.Drawing.Size(640, 140);
             this.txtDescription.TabIndex = 7;
             this.txtDescription.UnformattedText = null;
             // 
             // frmCultivar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
-            this.ClientSize = new System.Drawing.Size(1012, 638);
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(684, 638);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmCultivar";
             ((System.ComponentModel.ISupportInitialize)(this.grpPrint)).EndInit();
             this.grpPrint.ResumeLayout(false);
@@ -565,7 +574,6 @@
             this.grpButons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).EndInit();
             this.grpHeader.ResumeLayout(false);
-            this.grpHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpMessage)).EndInit();
             this.grpMessage.ResumeLayout(false);

@@ -73,10 +73,10 @@
             Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
             this.dstProduct1 = new BaranDataAccess.Product.dstProduct();
             this.grdItem = new Baran.Windows.Forms.UltraGrid();
+            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).BeginInit();
             this.grpHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpMessage)).BeginInit();
             this.grpMessage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).BeginInit();
@@ -85,21 +85,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdItem)).BeginInit();
             this.SuspendLayout();
             // 
-            // grpHeader
-            // 
-            this.grpHeader.Size = new System.Drawing.Size(832, 74);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(760, 7);
-            // 
             // btnMaxMin
             // 
             this.btnMaxMin.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
-            // 
-            // lblMessage
-            // 
-            this.lblMessage.Text = "";
             // 
             // grpButons
             // 
@@ -110,6 +98,22 @@
             // 
             this.lblLine2.Location = new System.Drawing.Point(1, 70);
             this.lblLine2.Size = new System.Drawing.Size(830, 3);
+            // 
+            // grpHeader
+            // 
+            this.grpHeader.Size = new System.Drawing.Size(832, 74);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(772, 7);
+            // 
+            // lblCaption
+            // 
+            this.lblCaption.Location = new System.Drawing.Point(467, 20);
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.Text = "";
             // 
             // lblLine1
             // 
@@ -124,10 +128,6 @@
             // 
             this.lblLine3.Location = new System.Drawing.Point(1, 312);
             this.lblLine3.Size = new System.Drawing.Size(830, 3);
-            // 
-            // lblCaption
-            // 
-            this.lblCaption.Location = new System.Drawing.Point(455, 23);
             // 
             // grpMain
             // 
@@ -392,10 +392,10 @@
             this.ClientSize = new System.Drawing.Size(832, 487);
             this.FormMessage = "";
             this.Name = "frmTreeList";
+            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).EndInit();
             this.grpHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpMessage)).EndInit();
             this.grpMessage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).EndInit();
