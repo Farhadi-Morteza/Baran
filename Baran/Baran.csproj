@@ -375,11 +375,23 @@
     <Compile Include="Dashboard\frmCurrentProductionFieldRpt.Designer.cs">
       <DependentUpon>frmCurrentProductionFieldRpt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard\frmFertilizerRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmFertilizerRpt.designer.cs">
+      <DependentUpon>frmFertilizerRpt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard\frmFieldTaskListRpt.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dashboard\frmFieldTaskListRpt.Designer.cs">
       <DependentUpon>frmFieldTaskListRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\frmMachineryRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmMachineryRpt.Designer.cs">
+      <DependentUpon>frmMachineryRpt.cs</DependentUpon>
     </Compile>
     <Compile Include="Dashboard\frmWorkerRpt.cs">
       <SubType>Form</SubType>
@@ -939,8 +951,14 @@
     <EmbeddedResource Include="Dashboard\frmCurrentProductionFieldRpt.resx">
       <DependentUpon>frmCurrentProductionFieldRpt.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\frmFertilizerRpt.resx">
+      <DependentUpon>frmFertilizerRpt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmFieldTaskListRpt.resx">
       <DependentUpon>frmFieldTaskListRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\frmMachineryRpt.resx">
+      <DependentUpon>frmMachineryRpt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmWorkerRpt.resx">
       <DependentUpon>frmWorkerRpt.cs</DependentUpon>
