@@ -1714,9 +1714,7 @@ warning 6002: The table/view 'AMS.dbo.viw_Part_Location' does not have a primary
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="spr_dsb_FieldTaskList_rpt_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="FieldID" Type="int" Mode="In" />
-        </Function>
+        
         <Function Name="spr_src_Buildings_Map_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Action" Type="int" Mode="In" />
           <Parameter Name="WhereClause" Type="nvarchar(max)" Mode="In" />
@@ -1736,7 +1734,6 @@ warning 6002: The table/view 'AMS.dbo.viw_Part_Location' does not have a primary
           <Parameter Name="CollectionID" Type="int" Mode="In" />
           <Parameter Name="SubcollectionID" Type="int" Mode="In" />
           <Parameter Name="PartID" Type="int" Mode="In" />
-          <Parameter Name="FieldID" Type="int" Mode="In" />
         </Function>
         <Function Name="spr_src_Land_Map_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Action" Type="int" Mode="In" />
@@ -3835,7 +3832,6 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
             <Parameter Name="CollectionID" Mode="In" Type="Int32" />
             <Parameter Name="SubcollectionID" Mode="In" Type="Int32" />
             <Parameter Name="PartID" Mode="In" Type="Int32" />
-            <Parameter Name="FieldID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_LandLocation_Rpt" ReturnType="Collection(AMSModel.spr_src_LandLocation_Rpt_Result)">
             <Parameter Name="CollectionID" Mode="In" Type="Int32" />
@@ -3861,9 +3857,6 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
             <Parameter Name="CollectionID" Mode="In" Type="Int32" />
             <Parameter Name="SubcollectionID" Mode="In" Type="Int32" />
             <Parameter Name="PartID" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="spr_dsb_FieldTaskList_rpt_Select" ReturnType="Collection(AMSModel.spr_dsb_FieldTaskList_rpt_Select_Result)">
-          <Parameter Name="FieldID" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <EntityType Name="tbl_src_Land">
@@ -4158,18 +4151,6 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
           <Property Type="Decimal" Name="Length" Nullable="true" Precision="6" Scale="2" />
           <Property Type="String" Name="WaterTransmissionTypeName" Nullable="true" MaxLength="50" />
           <Property Type="Geometry" Name="Location" Nullable="false" />
-        </ComplexType>
-        <ComplexType Name="spr_dsb_FieldTaskList_rpt_Select_Result">
-          <Property Type="Int32" Name="FieldID" Nullable="false" />
-          <Property Type="Decimal" Name="LinkedArea" Nullable="true" Precision="8" Scale="2" />
-          <Property Type="String" Name="ProductionName" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="CropName" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="CultivarName" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="TaskName" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="StatusName" Nullable="true" MaxLength="50" />
-          <Property Type="Int64" Name="ProductionTaskID" Nullable="false" />
-          <Property Type="DateTime" Name="StartDate" Nullable="true" />
-          <Property Type="DateTime" Name="EndDate" Nullable="true" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -5883,22 +5864,6 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
                 <ScalarProperty Name="WaterTransmissionLineName" ColumnName="WaterTransmissionLineName" />
                 <ScalarProperty Name="Length" ColumnName="Length" />
                 <ScalarProperty Name="WaterTransmissionTypeName" ColumnName="WaterTransmissionTypeName" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="spr_dsb_FieldTaskList_rpt_Select" FunctionName="AMSModel.Store.spr_dsb_FieldTaskList_rpt_Select">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="AMSModel.spr_dsb_FieldTaskList_rpt_Select_Result">
-                <ScalarProperty Name="FieldID" ColumnName="FieldID" />
-                <ScalarProperty Name="LinkedArea" ColumnName="LinkedArea" />
-                <ScalarProperty Name="ProductionName" ColumnName="ProductionName" />
-                <ScalarProperty Name="CropName" ColumnName="CropName" />
-                <ScalarProperty Name="CultivarName" ColumnName="CultivarName" />
-                <ScalarProperty Name="TaskName" ColumnName="TaskName" />
-                <ScalarProperty Name="StatusName" ColumnName="StatusName" />
-                <ScalarProperty Name="ProductionTaskID" ColumnName="ProductionTaskID" />
-                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
-                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

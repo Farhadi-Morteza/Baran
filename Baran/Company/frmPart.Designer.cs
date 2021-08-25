@@ -418,7 +418,7 @@
             this.grdDoc.Location = new System.Drawing.Point(1, 223);
             this.grdDoc.Name = "grdDoc";
             this.grdDoc.Size = new System.Drawing.Size(1060, 189);
-            this.grdDoc.TabIndex = 1;
+            this.grdDoc.TabIndex = 0;
             this.grdDoc.Text = "ultraGridDoc1";
             this.grdDoc.ClickCellButton += new Infragistics.Win.UltraWinGrid.CellEventHandler(this.grdDoc_ClickCellButton);
             // 
@@ -470,7 +470,7 @@
             this.btnGeo.Location = new System.Drawing.Point(26, 45);
             this.btnGeo.Name = "btnGeo";
             this.btnGeo.Size = new System.Drawing.Size(64, 64);
-            this.btnGeo.TabIndex = 15;
+            this.btnGeo.TabIndex = 31;
             this.btnGeo.UseVisualStyleBackColor = true;
             this.btnGeo.Click += new System.EventHandler(this.btnGeo_Click);
             // 

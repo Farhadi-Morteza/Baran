@@ -117,7 +117,7 @@ namespace Baran.Dashboard
                                 $"\n واحد فرعی: {part.PartName}" +
                                 $"\n استان: {part.ProvinceName} \n شهرستان: {part.TownshipName}";
 
-                            GMapMarker markLand = new GMarkerGoogle(pointsLand[pointsLand.Count / 2],new Bitmap(System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.PartMarker))));
+                            GMapMarker markLand = new GMarkerGoogle(pointsLand[pointsLand.Count / 2], GMarkerGoogleType.red);
                             markLand.ToolTipText = strTooltip;
                             markLand.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
                             markLand.ToolTip.Fill = Brushes.Black;
@@ -156,7 +156,7 @@ namespace Baran.Dashboard
                                 $"\n واحد فرعی: {result.PartName}" +
                                 $"\n مساحت کل: {result.TotalArea} \n مساحت قابل استفاده: {result.UsableArea} \n استان: {result.ProvinceName} \n شهرستان: {result.TownshipName} ";
 
-                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], new Bitmap(System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.LandMarker))));
+                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.green);
                             mark.ToolTipText = strTooltip;
                             mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
                             mark.ToolTip.Fill = Brushes.Black;
@@ -173,7 +173,7 @@ namespace Baran.Dashboard
             // Field ====================================================================================================
             if (chkField.Checked)
             {
-                var fields = dbContext.spr_src_FieldLocation_Rpt(collectionId, subcollectionId, partId, null);
+                var fields = dbContext.spr_src_FieldLocation_Rpt(collectionId, subcollectionId, partId);
 
                 foreach (var result in fields)
                 {
@@ -199,8 +199,8 @@ namespace Baran.Dashboard
                             $"\n بافت خاک : {result.SoilTexture} " +
                             $"\n نوع کاربری: {result.FieldUseType} ";
 
-                        GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], new Bitmap(System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.FieldMarker))));
-                            mark.ToolTipText = strTooltip;
+                        GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.green);
+                        mark.ToolTipText = strTooltip;
                         mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
                         mark.ToolTip.Fill = Brushes.Black;
                         mark.ToolTip.Foreground = Brushes.White;
@@ -240,7 +240,7 @@ namespace Baran.Dashboard
                                 $"\n نوع کاربری : {result.WarehouseUseType} " +
                                 $"\n مساحت: {result.Area} ";
 
-                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], new Bitmap(System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.WarehouseMarker))));
+                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.brown_small);
                             mark.ToolTipText = strTooltip;
                             mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
                             mark.ToolTip.Fill = Brushes.Black;
@@ -280,7 +280,7 @@ namespace Baran.Dashboard
                                 $"\n نوع : {result.BuildingCategoryName} " +
                                 $"\n مساحت: {result.Area} ";
 
-                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], new Bitmap(System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.BuildingMarker))));
+                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.yellow);
                             mark.ToolTipText = strTooltip;
                             mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
                             mark.ToolTip.Fill = Brushes.Black;
@@ -313,7 +313,7 @@ namespace Baran.Dashboard
                                 $"\n منبع تامین : {result.WaterSourceTypeName} ";
 
                             //GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.blue_dot);
-                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], new Bitmap(System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.WaterMarker))));
+                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], new Bitmap(System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.Tree))));
                             mark.ToolTipText = strTooltip;
                             mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
                             mark.ToolTip.Fill = Brushes.Black;
@@ -352,7 +352,7 @@ namespace Baran.Dashboard
                                 $"\n خروجی لیت بر ثانیه : {result.Output} " +
                                 $"\n مساحت: {result.Area} ";
 
-                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], new Bitmap(System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.WaterStorageMarker))));
+                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.blue);
                             mark.ToolTipText = strTooltip;
                             mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
                             mark.ToolTip.Fill = Brushes.Black;
@@ -392,7 +392,7 @@ namespace Baran.Dashboard
                                 $"\n نوع : {result.WaterTransmissionTypeName} " +
                                 $"\n طول-هکتار : {result.Length} ";
 
-                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], new Bitmap(System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.WaterTransmissionLineMarker))));
+                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.black_small);
                             mark.ToolTipText = strTooltip;
                             mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
                             mark.ToolTip.Fill = Brushes.Black;

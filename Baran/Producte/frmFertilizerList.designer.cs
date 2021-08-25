@@ -60,10 +60,10 @@
             Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
             this.dstProduct1 = new BaranDataAccess.Product.dstProduct();
             this.grdItem = new Baran.Windows.Forms.UltraGrid();
-            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).BeginInit();
             this.grpHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpMessage)).BeginInit();
             this.grpMessage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).BeginInit();
@@ -72,9 +72,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdItem)).BeginInit();
             this.SuspendLayout();
             // 
+            // grpHeader
+            // 
+            this.grpHeader.Size = new System.Drawing.Size(682, 74);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(618, 9);
+            // 
             // btnMaxMin
             // 
             this.btnMaxMin.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.Text = "";
             // 
             // grpButons
             // 
@@ -85,22 +97,6 @@
             // 
             this.lblLine2.Location = new System.Drawing.Point(1, 70);
             this.lblLine2.Size = new System.Drawing.Size(680, 3);
-            // 
-            // grpHeader
-            // 
-            this.grpHeader.Size = new System.Drawing.Size(682, 74);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(622, 8);
-            // 
-            // lblCaption
-            // 
-            this.lblCaption.Location = new System.Drawing.Point(320, 21);
-            // 
-            // lblMessage
-            // 
-            this.lblMessage.Text = "";
             // 
             // lblLine1
             // 
@@ -115,6 +111,10 @@
             // 
             this.lblLine3.Location = new System.Drawing.Point(1, 312);
             this.lblLine3.Size = new System.Drawing.Size(680, 3);
+            // 
+            // lblCaption
+            // 
+            this.lblCaption.Location = new System.Drawing.Point(316, 24);
             // 
             // grpMain
             // 
@@ -310,10 +310,10 @@
             this.ClientSize = new System.Drawing.Size(682, 487);
             this.FormMessage = "";
             this.Name = "frmFertilizerList";
-            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).EndInit();
             this.grpHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpMessage)).EndInit();
             this.grpMessage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).EndInit();

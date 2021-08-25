@@ -131,9 +131,6 @@
     <Compile Include="UltraChart.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UltraChartMain.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="ultraCombo.cs">
       <SubType>Component</SubType>
     </Compile>

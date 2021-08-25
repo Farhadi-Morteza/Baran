@@ -419,21 +419,21 @@ namespace Baran.Source
                 cmbTownship.Focus();
                 blnResult = false;
             }
-            //else if (cmbSoilTexture.Value == null)
-            //{
-            //    cmbSoilTexture.Focus();
-            //    blnResult = false;
-            //}
-            //else if (cmbOwnership.Value == null)
-            //{
-            //    cmbOwnership.Focus();
-            //    blnResult = false;
-            //}
-            //else if (cmbFieldUseType.Value == null)
-            //{
-            //    cmbFieldUseType.Focus();
-            //    blnResult = false;
-            //}
+            else if (cmbSoilTexture.Value == null)
+            {
+                cmbSoilTexture.Focus();
+                blnResult = false;
+            }
+            else if (cmbOwnership.Value == null)
+            {
+                cmbOwnership.Focus();
+                blnResult = false;
+            }
+            else if (cmbFieldUseType.Value == null)
+            {
+                cmbFieldUseType.Focus();
+                blnResult = false;
+            }
             else if (cmbParentCo.Value == null)
             {
                 cmbParentCo.Focus();

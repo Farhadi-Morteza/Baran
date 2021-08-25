@@ -83,10 +83,10 @@
             Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
             this.dstCompany1 = new BaranDataAccess.Company.dstCompany();
             this.grdItem = new Baran.Windows.Forms.UltraGrid();
-            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).BeginInit();
             this.grpHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpMessage)).BeginInit();
             this.grpMessage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).BeginInit();
@@ -99,48 +99,17 @@
             // 
             this.btnMaxMin.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             // 
-            // grpButons
-            // 
-            this.grpButons.Location = new System.Drawing.Point(0, 441);
-            this.grpButons.Size = new System.Drawing.Size(851, 75);
-            // 
-            // lblLine2
-            // 
-            this.lblLine2.Size = new System.Drawing.Size(849, 3);
-            // 
-            // grpHeader
-            // 
-            this.grpHeader.Size = new System.Drawing.Size(851, 75);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(790, 9);
-            // 
-            // lblCaption
-            // 
-            this.lblCaption.Location = new System.Drawing.Point(485, 22);
-            // 
             // lblMessage
             // 
             this.lblMessage.Text = "";
             // 
-            // lblLine1
+            // lblCaption
             // 
-            this.lblLine1.Size = new System.Drawing.Size(849, 3);
-            // 
-            // grpMessage
-            // 
-            this.grpMessage.Size = new System.Drawing.Size(851, 30);
-            // 
-            // lblLine3
-            // 
-            this.lblLine3.Location = new System.Drawing.Point(1, 332);
-            this.lblLine3.Size = new System.Drawing.Size(849, 3);
+            this.lblCaption.Location = new System.Drawing.Point(275, 21);
             // 
             // grpMain
             // 
             this.grpMain.Controls.Add(this.grdItem);
-            this.grpMain.Size = new System.Drawing.Size(851, 336);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
             this.grpMain.Controls.SetChildIndex(this.grdItem, 0);
             // 
@@ -445,7 +414,7 @@
             this.grdItem.InputLanguage = Baran.Windows.Forms.InputLanguage.Farsi;
             this.grdItem.Location = new System.Drawing.Point(1, 0);
             this.grdItem.Name = "grdItem";
-            this.grdItem.Size = new System.Drawing.Size(849, 332);
+            this.grdItem.Size = new System.Drawing.Size(644, 303);
             this.grdItem.SumColumnsWidth = 923;
             this.grdItem.TabIndex = 4;
             this.grdItem.TabStop = false;
@@ -455,13 +424,13 @@
             // frmSubcollectionList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(851, 516);
+            this.ClientSize = new System.Drawing.Size(646, 487);
             this.FormMessage = "";
             this.Name = "frmSubcollectionList";
-            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).EndInit();
             this.grpHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpMessage)).EndInit();
             this.grpMessage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).EndInit();

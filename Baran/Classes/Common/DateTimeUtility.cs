@@ -61,7 +61,7 @@ namespace Baran.Classes.Common
 
 
                 //return new DateTime(Year, Month, Day, Calendar);
-                var p = Calendar.ToDateTime(Year, Month, Day, 0, 0, 0, 0);
+
                 return Calendar.ToDateTime(Year, Month, Day, 0, 0, 0, 0);
             }
             catch (Exception)

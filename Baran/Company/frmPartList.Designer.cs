@@ -63,7 +63,7 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn31 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("TownshipName");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn32 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CollectionName");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn33 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RowID", 0);
-            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance22 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
@@ -103,25 +103,25 @@
             // 
             // grpButons
             // 
-            this.grpButons.Location = new System.Drawing.Point(0, 462);
-            this.grpButons.Size = new System.Drawing.Size(858, 67);
+            this.grpButons.Location = new System.Drawing.Point(0, 420);
+            this.grpButons.Size = new System.Drawing.Size(757, 67);
             // 
             // lblLine2
             // 
             this.lblLine2.Location = new System.Drawing.Point(1, 70);
-            this.lblLine2.Size = new System.Drawing.Size(856, 3);
+            this.lblLine2.Size = new System.Drawing.Size(755, 3);
             // 
             // grpHeader
             // 
-            this.grpHeader.Size = new System.Drawing.Size(858, 74);
+            this.grpHeader.Size = new System.Drawing.Size(757, 74);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(795, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(685, 7);
             // 
             // lblCaption
             // 
-            this.lblCaption.Location = new System.Drawing.Point(489, 20);
+            this.lblCaption.Location = new System.Drawing.Point(379, 20);
             // 
             // lblMessage
             // 
@@ -130,23 +130,23 @@
             // 
             // lblLine1
             // 
-            this.lblLine1.Size = new System.Drawing.Size(856, 2);
+            this.lblLine1.Size = new System.Drawing.Size(755, 2);
             // 
             // grpMessage
             // 
             this.grpMessage.Location = new System.Drawing.Point(0, 74);
-            this.grpMessage.Size = new System.Drawing.Size(858, 30);
+            this.grpMessage.Size = new System.Drawing.Size(757, 30);
             // 
             // lblLine3
             // 
-            this.lblLine3.Location = new System.Drawing.Point(1, 354);
-            this.lblLine3.Size = new System.Drawing.Size(856, 3);
+            this.lblLine3.Location = new System.Drawing.Point(1, 312);
+            this.lblLine3.Size = new System.Drawing.Size(755, 3);
             // 
             // grpMain
             // 
             this.grpMain.Controls.Add(this.grdItem);
             this.grpMain.Location = new System.Drawing.Point(0, 104);
-            this.grpMain.Size = new System.Drawing.Size(858, 358);
+            this.grpMain.Size = new System.Drawing.Size(757, 316);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
             this.grpMain.Controls.SetChildIndex(this.grdItem, 0);
             // 
@@ -339,8 +339,8 @@
             ultraGridColumn32,
             ultraGridColumn33});
             ultraGridBand1.Override.SummaryDisplayArea = Infragistics.Win.UltraWinGrid.SummaryDisplayAreas.BottomFixed;
-            appearance1.ForeColor = System.Drawing.Color.DarkBlue;
-            ultraGridBand1.Override.SummaryValueAppearance = appearance1;
+            appearance22.ForeColor = System.Drawing.Color.DarkBlue;
+            ultraGridBand1.Override.SummaryValueAppearance = appearance22;
             this.grdItem.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdItem.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
             appearance4.ForeColor = System.Drawing.Color.DarkBlue;
@@ -458,7 +458,7 @@
             this.grdItem.InputLanguage = Baran.Windows.Forms.InputLanguage.Farsi;
             this.grdItem.Location = new System.Drawing.Point(1, 0);
             this.grdItem.Name = "grdItem";
-            this.grdItem.Size = new System.Drawing.Size(856, 354);
+            this.grdItem.Size = new System.Drawing.Size(755, 312);
             this.grdItem.SumColumnsWidth = 990;
             this.grdItem.TabIndex = 5;
             this.grdItem.TabStop = false;
@@ -468,7 +468,7 @@
             // frmPartList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(858, 529);
+            this.ClientSize = new System.Drawing.Size(757, 487);
             this.FormMessage = "";
             this.Name = "frmPartList";
             ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();

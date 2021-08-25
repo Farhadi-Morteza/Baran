@@ -119,10 +119,10 @@
             this.cmbSubcollection = new Baran.Windows.Forms.UltraComboEditor();
             this.label1 = new Baran.Windows.Forms.Label();
             this.cmbCollection = new Baran.Windows.Forms.UltraComboEditor();
-            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).BeginInit();
             this.grpHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpMessage)).BeginInit();
             this.grpMessage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).BeginInit();
@@ -152,9 +152,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbCollection)).BeginInit();
             this.SuspendLayout();
             // 
+            // grpHeader
+            // 
+            this.grpHeader.Size = new System.Drawing.Size(969, 74);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(902, 8);
+            // 
             // btnMaxMin
             // 
             this.btnMaxMin.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.Size = new System.Drawing.Size(967, 29);
+            this.lblMessage.Text = "";
             // 
             // grpButons
             // 
@@ -165,23 +178,6 @@
             // 
             this.lblLine2.Location = new System.Drawing.Point(1, 70);
             this.lblLine2.Size = new System.Drawing.Size(967, 3);
-            // 
-            // grpHeader
-            // 
-            this.grpHeader.Size = new System.Drawing.Size(969, 74);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(902, 8);
-            // 
-            // lblCaption
-            // 
-            this.lblCaption.Location = new System.Drawing.Point(597, 26);
-            // 
-            // lblMessage
-            // 
-            this.lblMessage.Size = new System.Drawing.Size(967, 29);
-            this.lblMessage.Text = "";
             // 
             // lblLine1
             // 
@@ -197,6 +193,10 @@
             this.lblLine3.Location = new System.Drawing.Point(1, 448);
             this.lblLine3.Size = new System.Drawing.Size(967, 3);
             // 
+            // lblCaption
+            // 
+            this.lblCaption.Location = new System.Drawing.Point(597, 26);
+            // 
             // grpMain
             // 
             this.grpMain.Controls.Add(this.tac);
@@ -209,7 +209,7 @@
             // 
             this.tpcTable.Controls.Add(this.grdItem);
             this.tpcTable.Controls.Add(this.grpTableControls);
-            this.tpcTable.Location = new System.Drawing.Point(-10000, -10000);
+            this.tpcTable.Location = new System.Drawing.Point(1, 30);
             this.tpcTable.Name = "tpcTable";
             this.tpcTable.Size = new System.Drawing.Size(965, 417);
             // 
@@ -436,7 +436,7 @@
             // 
             this.tpcChart.Controls.Add(this.chtChart);
             this.tpcChart.Controls.Add(this.grpChartControls);
-            this.tpcChart.Location = new System.Drawing.Point(1, 30);
+            this.tpcChart.Location = new System.Drawing.Point(-10000, -10000);
             this.tpcChart.Name = "tpcChart";
             this.tpcChart.Size = new System.Drawing.Size(965, 417);
             // 
@@ -561,7 +561,6 @@
             this.chtChart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.chtChart.ColorModel.AlphaLevel = ((byte)(150));
             this.chtChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chtChart.EmptyChartText = "";
             this.chtChart.Location = new System.Drawing.Point(0, 99);
             this.chtChart.Name = "chtChart";
             this.chtChart.Size = new System.Drawing.Size(965, 318);
@@ -1081,10 +1080,10 @@
             this.ClientSize = new System.Drawing.Size(969, 623);
             this.FormMessage = "";
             this.Name = "frmMachineryRpt";
-            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).EndInit();
             this.grpHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpMessage)).EndInit();
             this.grpMessage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).EndInit();

@@ -167,12 +167,12 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(837, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(833, 9);
             this.pictureBox1.Size = new System.Drawing.Size(54, 55);
             // 
             // lblCaption
             // 
-            this.lblCaption.Location = new System.Drawing.Point(532, 21);
+            this.lblCaption.Location = new System.Drawing.Point(527, 21);
             // 
             // lblMessage
             // 
@@ -211,7 +211,7 @@
             this.btnShowPic.Location = new System.Drawing.Point(12, 6);
             this.btnShowPic.Name = "btnShowPic";
             this.btnShowPic.Size = new System.Drawing.Size(104, 32);
-            this.btnShowPic.TabIndex = 2;
+            this.btnShowPic.TabIndex = 19;
             this.btnShowPic.Text = "نمایش";
             this.btnShowPic.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnShowPic.UseVisualStyleBackColor = true;
@@ -241,7 +241,7 @@
             this.grpControls.Location = new System.Drawing.Point(1, 0);
             this.grpControls.Name = "grpControls";
             this.grpControls.Size = new System.Drawing.Size(896, 94);
-            this.grpControls.TabIndex = 0;
+            this.grpControls.TabIndex = 95;
             // 
             // txtDescription
             // 
@@ -260,7 +260,7 @@
             this.txtDescription.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtDescription.Size = new System.Drawing.Size(819, 44);
-            this.txtDescription.TabIndex = 1;
+            this.txtDescription.TabIndex = 98;
             this.txtDescription.UnformattedText = null;
             // 
             // txtName
@@ -279,7 +279,7 @@
             this.txtName.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtName.Size = new System.Drawing.Size(284, 22);
-            this.txtName.TabIndex = 0;
+            this.txtName.TabIndex = 97;
             this.txtName.UnformattedText = null;
             // 
             // label2

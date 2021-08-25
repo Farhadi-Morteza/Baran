@@ -56,7 +56,7 @@
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("spr_src_Field_Rpt_Select", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RowID", 0);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FreeSpace", 1);
-            Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance34 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance57 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance58 = new Infragistics.Win.Appearance();
@@ -231,7 +231,7 @@
             // 
             this.tpcMap.Controls.Add(this.MainMap);
             this.tpcMap.Controls.Add(this.grpControls);
-            this.tpcMap.Location = new System.Drawing.Point(-10000, -10000);
+            this.tpcMap.Location = new System.Drawing.Point(1, 30);
             this.tpcMap.Name = "tpcMap";
             this.tpcMap.Size = new System.Drawing.Size(1207, 643);
             // 
@@ -695,8 +695,8 @@
             ultraGridColumn1,
             ultraGridColumn2});
             ultraGridBand1.Override.SummaryDisplayArea = Infragistics.Win.UltraWinGrid.SummaryDisplayAreas.BottomFixed;
-            appearance20.ForeColor = System.Drawing.Color.DarkBlue;
-            ultraGridBand1.Override.SummaryValueAppearance = appearance20;
+            appearance34.ForeColor = System.Drawing.Color.DarkBlue;
+            ultraGridBand1.Override.SummaryValueAppearance = appearance34;
             this.grdItem.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdItem.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
             appearance8.ForeColor = System.Drawing.Color.DarkBlue;
@@ -1011,7 +1011,7 @@
             // 
             this.tpcChart.Controls.Add(this.chtChart);
             this.tpcChart.Controls.Add(this.grpChartControls);
-            this.tpcChart.Location = new System.Drawing.Point(1, 30);
+            this.tpcChart.Location = new System.Drawing.Point(-10000, -10000);
             this.tpcChart.Name = "tpcChart";
             this.tpcChart.Size = new System.Drawing.Size(1207, 643);
             // 
@@ -1204,7 +1204,7 @@
             this.rdbCompany.AutoSize = true;
             this.rdbCompany.Checked = true;
             this.rdbCompany.ForeColor = System.Drawing.Color.White;
-            this.rdbCompany.Location = new System.Drawing.Point(222, 19);
+            this.rdbCompany.Location = new System.Drawing.Point(222, -4);
             this.rdbCompany.Name = "rdbCompany";
             this.rdbCompany.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rdbCompany.Size = new System.Drawing.Size(60, 28);
@@ -1218,7 +1218,7 @@
             this.rdbSubcollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbSubcollection.AutoSize = true;
             this.rdbSubcollection.ForeColor = System.Drawing.Color.White;
-            this.rdbSubcollection.Location = new System.Drawing.Point(75, 19);
+            this.rdbSubcollection.Location = new System.Drawing.Point(75, -4);
             this.rdbSubcollection.Name = "rdbSubcollection";
             this.rdbSubcollection.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rdbSubcollection.Size = new System.Drawing.Size(51, 28);
@@ -1232,7 +1232,7 @@
             this.rdbCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbCollection.AutoSize = true;
             this.rdbCollection.ForeColor = System.Drawing.Color.White;
-            this.rdbCollection.Location = new System.Drawing.Point(182, 55);
+            this.rdbCollection.Location = new System.Drawing.Point(182, 32);
             this.rdbCollection.Name = "rdbCollection";
             this.rdbCollection.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rdbCollection.Size = new System.Drawing.Size(100, 28);
@@ -1245,7 +1245,7 @@
             this.rdbPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdbPart.AutoSize = true;
             this.rdbPart.ForeColor = System.Drawing.Color.White;
-            this.rdbPart.Location = new System.Drawing.Point(45, 58);
+            this.rdbPart.Location = new System.Drawing.Point(45, 35);
             this.rdbPart.Name = "rdbPart";
             this.rdbPart.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rdbPart.Size = new System.Drawing.Size(81, 28);

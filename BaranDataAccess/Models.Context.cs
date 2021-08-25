@@ -222,7 +222,7 @@ namespace BaranDataAccess
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_BuildingsLocation_Rpt_Result>("spr_src_BuildingsLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter);
         }
     
-        public virtual ObjectResult<spr_src_FieldLocation_Rpt_Result> spr_src_FieldLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID, Nullable<int> fieldID)
+        public virtual ObjectResult<spr_src_FieldLocation_Rpt_Result> spr_src_FieldLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID)
         {
             var collectionIDParameter = collectionID.HasValue ?
                 new ObjectParameter("CollectionID", collectionID) :
@@ -236,11 +236,7 @@ namespace BaranDataAccess
                 new ObjectParameter("PartID", partID) :
                 new ObjectParameter("PartID", typeof(int));
     
-            var fieldIDParameter = fieldID.HasValue ?
-                new ObjectParameter("FieldID", fieldID) :
-                new ObjectParameter("FieldID", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_FieldLocation_Rpt_Result>("spr_src_FieldLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter, fieldIDParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_FieldLocation_Rpt_Result>("spr_src_FieldLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter);
         }
     
         public virtual ObjectResult<spr_src_LandLocation_Rpt_Result> spr_src_LandLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID)
@@ -326,15 +322,6 @@ namespace BaranDataAccess
                 new ObjectParameter("PartID", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_WaterTransmissionLineLocation_Rpt_Result>("spr_src_WaterTransmissionLineLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter);
-        }
-    
-        public virtual ObjectResult<spr_dsb_FieldTaskList_rpt_Select_Result> spr_dsb_FieldTaskList_rpt_Select(Nullable<int> fieldID)
-        {
-            var fieldIDParameter = fieldID.HasValue ?
-                new ObjectParameter("FieldID", fieldID) :
-                new ObjectParameter("FieldID", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_dsb_FieldTaskList_rpt_Select_Result>("spr_dsb_FieldTaskList_rpt_Select", fieldIDParameter);
         }
     }
 }

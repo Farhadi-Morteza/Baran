@@ -146,13 +146,11 @@
             this.grpDoc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpRefresh)).BeginInit();
             this.grpRefresh.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grpNew)).BeginInit();
-            this.grpNew.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
-            this.grpButons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).BeginInit();
             this.grpHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
+            this.grpButons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpMessage)).BeginInit();
             this.grpMessage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).BeginInit();
@@ -215,66 +213,36 @@
             // 
             // grpPrint
             // 
-            this.grpPrint.Location = new System.Drawing.Point(211, 0);
-            this.grpPrint.Size = new System.Drawing.Size(95, 66);
+            this.grpPrint.Location = new System.Drawing.Point(406, 0);
+            this.grpPrint.Visible = false;
             // 
             // grpCancel
             // 
-            this.grpCancel.Location = new System.Drawing.Point(954, 0);
-            this.grpCancel.Size = new System.Drawing.Size(127, 66);
+            this.grpCancel.Location = new System.Drawing.Point(986, 0);
             // 
             // grpSave
             // 
-            this.grpSave.Location = new System.Drawing.Point(827, 0);
-            this.grpSave.Size = new System.Drawing.Size(127, 66);
+            this.grpSave.Location = new System.Drawing.Point(891, 0);
             // 
             // grpChange
             // 
-            this.grpChange.Location = new System.Drawing.Point(700, 0);
-            this.grpChange.Size = new System.Drawing.Size(127, 66);
+            this.grpChange.Location = new System.Drawing.Point(796, 0);
             // 
             // grpClear
             // 
-            this.grpClear.Location = new System.Drawing.Point(573, 0);
-            this.grpClear.Size = new System.Drawing.Size(127, 66);
+            this.grpClear.Location = new System.Drawing.Point(701, 0);
             // 
             // grpDelete
             // 
-            this.grpDelete.Location = new System.Drawing.Point(446, 0);
-            this.grpDelete.Size = new System.Drawing.Size(127, 66);
+            this.grpDelete.Location = new System.Drawing.Point(606, 0);
             // 
             // grpDoc
             // 
-            this.grpDoc.Location = new System.Drawing.Point(306, 0);
-            this.grpDoc.Size = new System.Drawing.Size(140, 66);
+            this.grpDoc.Location = new System.Drawing.Point(501, 0);
             // 
             // grpRefresh
             // 
-            this.grpRefresh.Location = new System.Drawing.Point(116, 0);
-            this.grpRefresh.Size = new System.Drawing.Size(95, 66);
-            // 
-            // grpNew
-            // 
-            this.grpNew.Location = new System.Drawing.Point(-11, 0);
-            this.grpNew.Size = new System.Drawing.Size(127, 66);
-            // 
-            // btnNew
-            // 
-            this.btnNew.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
-            // 
-            // btnMaxMin
-            // 
-            this.btnMaxMin.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
-            // 
-            // grpButons
-            // 
-            this.grpButons.Location = new System.Drawing.Point(0, 456);
-            this.grpButons.Size = new System.Drawing.Size(1082, 67);
-            // 
-            // lblLine2
-            // 
-            this.lblLine2.Location = new System.Drawing.Point(1, 70);
-            this.lblLine2.Size = new System.Drawing.Size(1080, 3);
+            this.grpRefresh.Location = new System.Drawing.Point(311, 0);
             // 
             // grpHeader
             // 
@@ -282,16 +250,26 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(1018, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(1016, 7);
             // 
-            // lblCaption
+            // btnMaxMin
             // 
-            this.lblCaption.Location = new System.Drawing.Point(713, 20);
+            this.btnMaxMin.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             // 
             // lblMessage
             // 
             this.lblMessage.Location = new System.Drawing.Point(1, 0);
             this.lblMessage.Size = new System.Drawing.Size(1102, 29);
+            // 
+            // grpButons
+            // 
+            this.grpButons.Location = new System.Drawing.Point(0, 465);
+            this.grpButons.Size = new System.Drawing.Size(1082, 67);
+            // 
+            // lblLine2
+            // 
+            this.lblLine2.Location = new System.Drawing.Point(1, 70);
+            this.lblLine2.Size = new System.Drawing.Size(1080, 3);
             // 
             // lblLine1
             // 
@@ -304,15 +282,19 @@
             // 
             // lblLine3
             // 
-            this.lblLine3.Location = new System.Drawing.Point(1, 348);
+            this.lblLine3.Location = new System.Drawing.Point(1, 357);
             this.lblLine3.Size = new System.Drawing.Size(1080, 3);
+            // 
+            // lblCaption
+            // 
+            this.lblCaption.Location = new System.Drawing.Point(711, 21);
             // 
             // grpMain
             // 
             this.grpMain.Controls.Add(this.grdDoc);
             this.grpMain.Controls.Add(this.grpControls);
             this.grpMain.Location = new System.Drawing.Point(0, 104);
-            this.grpMain.Size = new System.Drawing.Size(1082, 352);
+            this.grpMain.Size = new System.Drawing.Size(1082, 361);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
             this.grpMain.Controls.SetChildIndex(this.grpControls, 0);
             this.grpMain.Controls.SetChildIndex(this.grdDoc, 0);
@@ -373,7 +355,7 @@
             this.btnShowLogo.Location = new System.Drawing.Point(17, 148);
             this.btnShowLogo.Name = "btnShowLogo";
             this.btnShowLogo.Size = new System.Drawing.Size(99, 37);
-            this.btnShowLogo.TabIndex = 18;
+            this.btnShowLogo.TabIndex = 36;
             this.btnShowLogo.Text = "نمایش";
             this.btnShowLogo.UseVisualStyleBackColor = true;
             this.btnShowLogo.Click += new System.EventHandler(this.btnShowLogo_Click);
@@ -1158,7 +1140,7 @@
             this.grdDoc.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.grdDoc.Location = new System.Drawing.Point(1, 204);
             this.grdDoc.Name = "grdDoc";
-            this.grdDoc.Size = new System.Drawing.Size(1080, 144);
+            this.grdDoc.Size = new System.Drawing.Size(1080, 153);
             this.grdDoc.TabIndex = 54;
             this.grdDoc.Text = "ultraGridDoc1";
             this.grdDoc.ClickCellButton += new Infragistics.Win.UltraWinGrid.CellEventHandler(this.grdDoc_ClickCellButton);
@@ -1166,7 +1148,7 @@
             // frmCollection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1082, 523);
+            this.ClientSize = new System.Drawing.Size(1082, 532);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmCollection";
             ((System.ComponentModel.ISupportInitialize)(this.grpPrint)).EndInit();
@@ -1185,18 +1167,15 @@
             this.grpDoc.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpRefresh)).EndInit();
             this.grpRefresh.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grpNew)).EndInit();
-            this.grpNew.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
-            this.grpButons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).EndInit();
             this.grpHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
+            this.grpButons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpMessage)).EndInit();
             this.grpMessage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).EndInit();
             this.grpMain.ResumeLayout(false);
-            this.grpMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpControls)).EndInit();
             this.grpControls.ResumeLayout(false);
             this.grpControls.PerformLayout();
