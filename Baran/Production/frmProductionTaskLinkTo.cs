@@ -2160,6 +2160,18 @@ namespace Baran.Production
             egbDiscussion.Size = new Size(egbDiscussion.Size.Width, grpDiscussion.Size.Height + grdDiscusssion.Size.Height + 60);
         }
 
+        private void egpBasePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void grpWater_Click(object sender, EventArgs e)
+        {
+
+
+
+        }
+
         private void grdDiscusssion_ClickCellButton(object sender, Infragistics.Win.UltraWinGrid.CellEventArgs e)
         {
             #region Delete
