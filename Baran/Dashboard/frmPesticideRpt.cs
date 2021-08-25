@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace Baran.Dashboard
 {
-    public partial class frmFertilizerRpt : Baran.Base_Forms.frmChildBase
+    public partial class frmPesticideRpt : Baran.Base_Forms.frmChildBase
     {
-        public frmFertilizerRpt()
+        public frmPesticideRpt()
         {
             InitializeComponent();
         }
 
-        private int? FertilizerID = null;
+        private int? PesticideID = null;
         private Nullable<DateTime>
             FromDate
             , ToDate;
@@ -30,10 +30,10 @@ namespace Baran.Dashboard
         {
             base.OnformLoad();
 
-            dstProduct1.spr_src_Fertilizer_cmbLst_Select.Clear();
-            BaranDataAccess.Product.dstProductTableAdapters.spr_src_Fertilizer_cmbLst_SelectTableAdapter adpFertilizer =
-                new BaranDataAccess.Product.dstProductTableAdapters.spr_src_Fertilizer_cmbLst_SelectTableAdapter();
-            adpFertilizer.FillFertilizerCmdLstTable(dstProduct1.spr_src_Fertilizer_cmbLst_Select);
+            dstProduct1.spr_src_Pesticide_cmbLst_Select.Clear();
+            BaranDataAccess.Product.dstProductTableAdapters.spr_src_Pesticide_cmbLst_SelectTableAdapter adpPesticide =
+                new BaranDataAccess.Product.dstProductTableAdapters.spr_src_Pesticide_cmbLst_SelectTableAdapter();
+            adpPesticide.FillPesticideCmdLstTable(dstProduct1.spr_src_Pesticide_cmbLst_Select);
         }
 
         public override void OnActiveForm()
@@ -55,8 +55,8 @@ namespace Baran.Dashboard
                 return;
             }
 
-            BaranDataAccess.Dashboard.dstDashboardTableAdapters.spr_dsb_Fertilizer_rptTableAdapter adp =
-                new BaranDataAccess.Dashboard.dstDashboardTableAdapters.spr_dsb_Fertilizer_rptTableAdapter();
+            BaranDataAccess.Dashboard.dstDashboardTableAdapters.spr_dsb_Pesticide_rptTableAdapter adp =
+                new BaranDataAccess.Dashboard.dstDashboardTableAdapters.spr_dsb_Pesticide_rptTableAdapter();
             waite = new WaiteForm();
             try
             {
@@ -67,7 +67,7 @@ namespace Baran.Dashboard
                     ToDate = DateTimeUtility.ToGregorian(mskToDate.Value.ToString());
 
                 waite.Show();
-                adp.FillFertilizerTable(dstDashboard1.spr_dsb_Fertilizer_rpt, CurrentUser.Instance.UserID, FromDate, ToDate, FertilizerID);
+                adp.FillPesticideTable(dstDashboard1.spr_dsb_Pesticide_rpt, CurrentUser.Instance.UserID, FromDate, ToDate, PesticideID);
                 grdItem.FreeSpaceGenerator();
 
                 this.DrowChart();
@@ -85,6 +85,7 @@ namespace Baran.Dashboard
             ControlsSetting.ClearControls(grpControls.Controls);
             dstDashboard1.spr_dsb_Fertilizer_rpt.Clear();
             chtMain.Visible = false;
+            //cmbPesticide.Value = null;
         }
 
         public override void OnExport(UltraGrid grdItem)
@@ -164,21 +165,21 @@ namespace Baran.Dashboard
             }
         }
 
-        private void cmbFertilizer_ValueChanged(object sender, EventArgs e)
+        private void cmbPesticide_InitializeLayout(object sender, Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs e)
         {
             try
             {
-                if (cmbFertilizer.Value != null)
-                    FertilizerID = Convert.ToInt32(cmbFertilizer.Value);
-                else
-                    FertilizerID = null;
+                //if (cmbPesticide.Value != null)
+                //    PesticideID = Convert.ToInt32(cmbPesticide.Value);
+                //else
+                //    PesticideID = null;
             }
             catch
             {
-                FertilizerID = null;
+                PesticideID = null;
             }
         }
-        
+
         private void grdItem_AfterRowFilterChanged(object sender, Infragistics.Win.UltraWinGrid.AfterRowFilterChangedEventArgs e)
         {
             DrowChart();

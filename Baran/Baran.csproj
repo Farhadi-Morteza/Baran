@@ -393,6 +393,12 @@
     <Compile Include="Dashboard\frmMachineryRpt.Designer.cs">
       <DependentUpon>frmMachineryRpt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard\frmPesticideRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmPesticideRpt.Designer.cs">
+      <DependentUpon>frmPesticideRpt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard\frmWorkerRpt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -959,6 +965,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmMachineryRpt.resx">
       <DependentUpon>frmMachineryRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\frmPesticideRpt.resx">
+      <DependentUpon>frmPesticideRpt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmWorkerRpt.resx">
       <DependentUpon>frmWorkerRpt.cs</DependentUpon>

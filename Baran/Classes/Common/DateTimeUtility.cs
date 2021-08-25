@@ -149,7 +149,7 @@ namespace Baran.Classes.Common
 
                     if (Year < 1 || Year > 99)
                     {
-                        if (Year < 1300 || Year > 1400)
+                        if (Year < 1300 || Year > 1500)
                         {
                             return false;
                         }

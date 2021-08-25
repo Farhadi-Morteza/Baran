@@ -1335,7 +1335,7 @@
             appearance108.FontData.SizeInPoints = 10F;
             this.egbDiscussion.HeaderAppearance = appearance108;
             this.egbDiscussion.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOutsideBorder;
-            this.egbDiscussion.Location = new System.Drawing.Point(0, 224);
+            this.egbDiscussion.Location = new System.Drawing.Point(0, 447);
             this.egbDiscussion.Name = "egbDiscussion";
             this.egbDiscussion.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.egbDiscussion.Size = new System.Drawing.Size(1123, 28);
@@ -1546,7 +1546,7 @@
             appearance56.FontData.SizeInPoints = 10F;
             this.egbDocu.HeaderAppearance = appearance56;
             this.egbDocu.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOutsideBorder;
-            this.egbDocu.Location = new System.Drawing.Point(0, 196);
+            this.egbDocu.Location = new System.Drawing.Point(0, 419);
             this.egbDocu.Name = "egbDocu";
             this.egbDocu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.egbDocu.Size = new System.Drawing.Size(1123, 28);
@@ -1741,7 +1741,7 @@
             appearance29.FontData.SizeInPoints = 10F;
             this.egbChemicalAnalys.HeaderAppearance = appearance29;
             this.egbChemicalAnalys.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOutsideBorder;
-            this.egbChemicalAnalys.Location = new System.Drawing.Point(0, 168);
+            this.egbChemicalAnalys.Location = new System.Drawing.Point(0, 391);
             this.egbChemicalAnalys.Name = "egbChemicalAnalys";
             this.egbChemicalAnalys.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.egbChemicalAnalys.Size = new System.Drawing.Size(1123, 28);
@@ -2055,7 +2055,7 @@
             appearance163.FontData.SizeInPoints = 10F;
             this.egbWaterStorage.HeaderAppearance = appearance163;
             this.egbWaterStorage.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOutsideBorder;
-            this.egbWaterStorage.Location = new System.Drawing.Point(0, 140);
+            this.egbWaterStorage.Location = new System.Drawing.Point(0, 363);
             this.egbWaterStorage.Name = "egbWaterStorage";
             this.egbWaterStorage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.egbWaterStorage.Size = new System.Drawing.Size(1123, 28);
@@ -2523,7 +2523,7 @@
             appearance206.FontData.SizeInPoints = 10F;
             this.egbWater.HeaderAppearance = appearance206;
             this.egbWater.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.TopOutsideBorder;
-            this.egbWater.Location = new System.Drawing.Point(0, 112);
+            this.egbWater.Location = new System.Drawing.Point(0, 335);
             this.egbWater.Name = "egbWater";
             this.egbWater.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.egbWater.Size = new System.Drawing.Size(1123, 28);
@@ -2978,7 +2978,6 @@
             this.egbPesticide.Controls.Add(this.egbPesticidePanel);
             this.egbPesticide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.egbPesticide.Dock = System.Windows.Forms.DockStyle.Top;
-            this.egbPesticide.Expanded = false;
             this.egbPesticide.ExpandedSize = new System.Drawing.Size(1123, 251);
             this.egbPesticide.ExpansionIndicator = Infragistics.Win.Misc.GroupBoxExpansionIndicator.Near;
             appearance33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(188)))), ((int)(((byte)(66)))));
@@ -2990,7 +2989,7 @@
             this.egbPesticide.Location = new System.Drawing.Point(0, 84);
             this.egbPesticide.Name = "egbPesticide";
             this.egbPesticide.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.egbPesticide.Size = new System.Drawing.Size(1123, 28);
+            this.egbPesticide.Size = new System.Drawing.Size(1123, 251);
             this.egbPesticide.TabIndex = 3;
             this.egbPesticide.Text = "سموم";
             this.egbPesticide.Visible = false;
@@ -3000,12 +2999,12 @@
             this.egbPesticidePanel.Controls.Add(this.grdPesticide);
             this.egbPesticidePanel.Controls.Add(this.grpPesticide);
             this.egbPesticidePanel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.egbPesticidePanel.Location = new System.Drawing.Point(-10000, -10000);
+            this.egbPesticidePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.egbPesticidePanel.Location = new System.Drawing.Point(3, 30);
             this.egbPesticidePanel.Name = "egbPesticidePanel";
             this.egbPesticidePanel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
-            this.egbPesticidePanel.Size = new System.Drawing.Size(1279, 221);
+            this.egbPesticidePanel.Size = new System.Drawing.Size(1117, 218);
             this.egbPesticidePanel.TabIndex = 0;
-            this.egbPesticidePanel.Visible = false;
             // 
             // grdPesticide
             // 
@@ -3172,7 +3171,7 @@
             this.grpPesticide.Controls.Add(this.label32);
             this.grpPesticide.Controls.Add(this.label33);
             this.grpPesticide.Controls.Add(this.label34);
-            this.grpPesticide.Location = new System.Drawing.Point(96, 3);
+            this.grpPesticide.Location = new System.Drawing.Point(15, 3);
             this.grpPesticide.Name = "grpPesticide";
             this.grpPesticide.Size = new System.Drawing.Size(1090, 100);
             this.grpPesticide.TabIndex = 0;
