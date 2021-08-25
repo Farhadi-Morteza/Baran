@@ -63,12 +63,12 @@ namespace Baran.Windows.Forms
 
         protected override void OnClick(System.EventArgs e)
         {
-            base.OnClick(e);
+            //base.OnClick(e);
 
-            if (this.Expanded)
-                this.Expanded = false;
-            else
-                this.Expanded = true;
+            //if (this.Expanded)
+            //    this.Expanded = false;
+            //else
+            //    this.Expanded = true;
         }
     }
 }

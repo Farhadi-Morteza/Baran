@@ -43,6 +43,7 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ShamshiDate");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ChemicalAnalysCategoryName");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RowID", 0);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FreeSpace", 1);
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance29 = new Infragistics.Win.Appearance();
@@ -82,12 +83,24 @@
             // 
             // grpButons
             // 
-            this.grpButons.Location = new System.Drawing.Point(0, 465);
-            this.grpButons.Size = new System.Drawing.Size(973, 75);
+            this.grpButons.Location = new System.Drawing.Point(0, 338);
+            this.grpButons.Size = new System.Drawing.Size(730, 75);
             // 
             // lblLine2
             // 
-            this.lblLine2.Size = new System.Drawing.Size(971, 3);
+            this.lblLine2.Size = new System.Drawing.Size(728, 3);
+            // 
+            // grpHeader
+            // 
+            this.grpHeader.Size = new System.Drawing.Size(730, 75);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(670, 9);
+            // 
+            // lblCaption
+            // 
+            this.lblCaption.Location = new System.Drawing.Point(364, 22);
             // 
             // lblMessage
             // 
@@ -95,21 +108,21 @@
             // 
             // lblLine1
             // 
-            this.lblLine1.Size = new System.Drawing.Size(971, 3);
+            this.lblLine1.Size = new System.Drawing.Size(728, 3);
             // 
             // grpMessage
             // 
-            this.grpMessage.Size = new System.Drawing.Size(973, 30);
+            this.grpMessage.Size = new System.Drawing.Size(730, 30);
             // 
             // lblLine3
             // 
-            this.lblLine3.Location = new System.Drawing.Point(1, 356);
-            this.lblLine3.Size = new System.Drawing.Size(971, 3);
+            this.lblLine3.Location = new System.Drawing.Point(1, 229);
+            this.lblLine3.Size = new System.Drawing.Size(728, 3);
             // 
             // grpMain
             // 
             this.grpMain.Controls.Add(this.grdItem);
-            this.grpMain.Size = new System.Drawing.Size(973, 360);
+            this.grpMain.Size = new System.Drawing.Size(730, 233);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
             this.grpMain.Controls.SetChildIndex(this.grdItem, 0);
             // 
@@ -130,58 +143,62 @@
             appearance28.TextVAlignAsString = "Middle";
             this.grdItem.DisplayLayout.Appearance = appearance28;
             ultraGridColumn1.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
-            ultraGridColumn1.Header.VisiblePosition = 0;
+            ultraGridColumn1.Header.VisiblePosition = 1;
             ultraGridColumn1.Hidden = true;
-            ultraGridColumn1.Width = 34;
+            ultraGridColumn1.Width = 29;
             ultraGridColumn2.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn2.Header.Caption = "نام";
-            ultraGridColumn2.Header.VisiblePosition = 11;
-            ultraGridColumn2.Width = 48;
+            ultraGridColumn2.Header.VisiblePosition = 12;
+            ultraGridColumn2.Width = 41;
             ultraGridColumn3.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn3.Header.Caption = "شماره آزمایش";
-            ultraGridColumn3.Header.VisiblePosition = 6;
-            ultraGridColumn3.Width = 103;
+            ultraGridColumn3.Header.VisiblePosition = 7;
+            ultraGridColumn3.Width = 84;
             ultraGridColumn4.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn4.Header.Caption = "نام آزمایشگاه";
-            ultraGridColumn4.Header.VisiblePosition = 5;
-            ultraGridColumn4.Width = 98;
+            ultraGridColumn4.Header.VisiblePosition = 6;
+            ultraGridColumn4.Width = 79;
             ultraGridColumn5.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn5.Header.Caption = "عمق نمونه گیری";
-            ultraGridColumn5.Header.VisiblePosition = 8;
-            ultraGridColumn5.Width = 117;
+            ultraGridColumn5.Header.VisiblePosition = 9;
+            ultraGridColumn5.Width = 94;
             ultraGridColumn6.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn6.Header.Caption = "کد آزمایشگاه";
-            ultraGridColumn6.Header.VisiblePosition = 4;
-            ultraGridColumn6.Width = 98;
+            ultraGridColumn6.Header.VisiblePosition = 5;
+            ultraGridColumn6.Width = 79;
             ultraGridColumn7.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn7.Header.Caption = "شماره تلفن";
-            ultraGridColumn7.Header.VisiblePosition = 3;
-            ultraGridColumn7.Width = 84;
+            ultraGridColumn7.Header.VisiblePosition = 4;
+            ultraGridColumn7.Width = 68;
             ultraGridColumn8.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn8.Header.Caption = "توضیحات";
-            ultraGridColumn8.Header.VisiblePosition = 2;
-            ultraGridColumn8.Width = 73;
+            ultraGridColumn8.Header.VisiblePosition = 3;
+            ultraGridColumn8.Width = 60;
             ultraGridColumn9.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn9.Header.Caption = "نوع آزمایش";
-            ultraGridColumn9.Header.VisiblePosition = 1;
-            ultraGridColumn9.Width = 87;
+            ultraGridColumn9.Header.VisiblePosition = 2;
+            ultraGridColumn9.Width = 70;
             ultraGridColumn10.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn10.Header.Caption = "محل نمونه";
-            ultraGridColumn10.Header.VisiblePosition = 9;
-            ultraGridColumn10.Width = 78;
+            ultraGridColumn10.Header.VisiblePosition = 10;
+            ultraGridColumn10.Width = 63;
             ultraGridColumn11.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn11.Header.Caption = "تاریخ آزمایش";
-            ultraGridColumn11.Header.VisiblePosition = 7;
-            ultraGridColumn11.Width = 99;
+            ultraGridColumn11.Header.VisiblePosition = 8;
+            ultraGridColumn11.Width = 80;
             ultraGridColumn12.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn12.Header.Caption = "نوع آنالیز";
-            ultraGridColumn12.Header.VisiblePosition = 10;
-            ultraGridColumn12.Width = 71;
+            ultraGridColumn12.Header.VisiblePosition = 11;
+            ultraGridColumn12.Width = 58;
             ultraGridColumn13.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn13.Header.Caption = "#";
-            ultraGridColumn13.Header.VisiblePosition = 12;
+            ultraGridColumn13.Header.VisiblePosition = 13;
             ultraGridColumn13.TabStop = false;
-            ultraGridColumn13.Width = 48;
+            ultraGridColumn13.Width = 41;
+            ultraGridColumn14.Header.Caption = "";
+            ultraGridColumn14.Header.VisiblePosition = 0;
+            ultraGridColumn14.MergedCellStyle = Infragistics.Win.UltraWinGrid.MergedCellStyle.Always;
+            ultraGridColumn14.Width = 41;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2,
@@ -195,7 +212,8 @@
             ultraGridColumn10,
             ultraGridColumn11,
             ultraGridColumn12,
-            ultraGridColumn13});
+            ultraGridColumn13,
+            ultraGridColumn14});
             ultraGridBand1.Override.SummaryDisplayArea = Infragistics.Win.UltraWinGrid.SummaryDisplayAreas.BottomFixed;
             appearance1.ForeColor = System.Drawing.Color.DarkBlue;
             ultraGridBand1.Override.SummaryValueAppearance = appearance1;
@@ -308,16 +326,17 @@
             this.grdItem.InputLanguage = Baran.Windows.Forms.InputLanguage.Farsi;
             this.grdItem.Location = new System.Drawing.Point(1, 0);
             this.grdItem.Name = "grdItem";
-            this.grdItem.Size = new System.Drawing.Size(971, 356);
-            this.grdItem.SumColumnsWidth = 1004;
+            this.grdItem.Size = new System.Drawing.Size(728, 229);
+            this.grdItem.SumColumnsWidth = 858;
             this.grdItem.TabIndex = 1;
             this.grdItem.Click += new System.EventHandler(this.grdItem_Click);
             // 
             // frmChemicalAnalysList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
-            this.ClientSize = new System.Drawing.Size(973, 540);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(730, 413);
             this.FormMessage = "";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmChemicalAnalysList";
             ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).EndInit();

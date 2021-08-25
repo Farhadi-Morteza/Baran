@@ -102,41 +102,50 @@
             // 
             // grpPrint
             // 
-            this.grpPrint.Location = new System.Drawing.Point(-159, 0);
+            this.grpPrint.Location = new System.Drawing.Point(-187, 0);
+            this.grpPrint.Size = new System.Drawing.Size(95, 66);
             // 
             // grpCancel
             // 
-            this.grpCancel.Location = new System.Drawing.Point(584, 0);
+            this.grpCancel.Location = new System.Drawing.Point(556, 0);
+            this.grpCancel.Size = new System.Drawing.Size(127, 66);
             // 
             // grpSave
             // 
-            this.grpSave.Location = new System.Drawing.Point(457, 0);
+            this.grpSave.Location = new System.Drawing.Point(429, 0);
+            this.grpSave.Size = new System.Drawing.Size(127, 66);
             // 
             // grpChange
             // 
-            this.grpChange.Location = new System.Drawing.Point(330, 0);
+            this.grpChange.Location = new System.Drawing.Point(302, 0);
+            this.grpChange.Size = new System.Drawing.Size(127, 66);
             // 
             // grpClear
             // 
-            this.grpClear.Location = new System.Drawing.Point(203, 0);
+            this.grpClear.Location = new System.Drawing.Point(175, 0);
+            this.grpClear.Size = new System.Drawing.Size(127, 66);
             this.grpClear.Visible = false;
             // 
             // grpDelete
             // 
-            this.grpDelete.Location = new System.Drawing.Point(76, 0);
+            this.grpDelete.Location = new System.Drawing.Point(48, 0);
+            this.grpDelete.Size = new System.Drawing.Size(127, 66);
             // 
             // grpDoc
             // 
-            this.grpDoc.Location = new System.Drawing.Point(-64, 0);
+            this.grpDoc.Location = new System.Drawing.Point(-92, 0);
+            this.grpDoc.Size = new System.Drawing.Size(140, 66);
             this.grpDoc.Visible = false;
             // 
             // grpRefresh
             // 
-            this.grpRefresh.Location = new System.Drawing.Point(-254, 0);
+            this.grpRefresh.Location = new System.Drawing.Point(-282, 0);
+            this.grpRefresh.Size = new System.Drawing.Size(95, 66);
             // 
             // grpNew
             // 
-            this.grpNew.Location = new System.Drawing.Point(-381, 0);
+            this.grpNew.Location = new System.Drawing.Point(-409, 0);
+            this.grpNew.Size = new System.Drawing.Size(127, 66);
             // 
             // btnNew
             // 
@@ -148,26 +157,26 @@
             // 
             // grpButons
             // 
-            this.grpButons.Location = new System.Drawing.Point(0, 316);
-            this.grpButons.Size = new System.Drawing.Size(712, 67);
+            this.grpButons.Location = new System.Drawing.Point(0, 294);
+            this.grpButons.Size = new System.Drawing.Size(684, 67);
             // 
             // lblLine2
             // 
             this.lblLine2.Location = new System.Drawing.Point(1, 70);
-            this.lblLine2.Size = new System.Drawing.Size(710, 3);
+            this.lblLine2.Size = new System.Drawing.Size(682, 3);
             // 
             // grpHeader
             // 
-            this.grpHeader.Size = new System.Drawing.Size(712, 74);
+            this.grpHeader.Size = new System.Drawing.Size(684, 74);
             this.grpHeader.Visible = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(646, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(624, 8);
             // 
             // lblCaption
             // 
-            this.lblCaption.Location = new System.Drawing.Point(341, 21);
+            this.lblCaption.Location = new System.Drawing.Point(319, 21);
             // 
             // lblMessage
             // 
@@ -176,17 +185,17 @@
             // 
             // lblLine1
             // 
-            this.lblLine1.Size = new System.Drawing.Size(710, 2);
+            this.lblLine1.Size = new System.Drawing.Size(682, 2);
             // 
             // grpMessage
             // 
             this.grpMessage.Location = new System.Drawing.Point(0, 74);
-            this.grpMessage.Size = new System.Drawing.Size(712, 30);
+            this.grpMessage.Size = new System.Drawing.Size(684, 30);
             // 
             // lblLine3
             // 
-            this.lblLine3.Location = new System.Drawing.Point(1, 208);
-            this.lblLine3.Size = new System.Drawing.Size(710, 3);
+            this.lblLine3.Location = new System.Drawing.Point(1, 186);
+            this.lblLine3.Size = new System.Drawing.Size(682, 3);
             // 
             // grpMain
             // 
@@ -195,7 +204,8 @@
             this.grpMain.Controls.Add(this.cmbBusinessCategory);
             this.grpMain.Controls.Add(this.txtName);
             this.grpMain.Location = new System.Drawing.Point(0, 104);
-            this.grpMain.Size = new System.Drawing.Size(712, 212);
+            this.grpMain.Size = new System.Drawing.Size(684, 190);
+            this.grpMain.TabIndex = 0;
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
             this.grpMain.Controls.SetChildIndex(this.txtName, 0);
             this.grpMain.Controls.SetChildIndex(this.cmbBusinessCategory, 0);
@@ -213,13 +223,13 @@
             this.txtName.BackColor = System.Drawing.Color.Transparent;
             this.txtName.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtName.FontSize = 0;
-            this.txtName.Location = new System.Drawing.Point(211, 58);
+            this.txtName.Location = new System.Drawing.Point(106, 54);
             this.txtName.Name = "txtName";
             this.txtName.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtName.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtName.Size = new System.Drawing.Size(300, 26);
-            this.txtName.TabIndex = 53;
+            this.txtName.Size = new System.Drawing.Size(450, 22);
+            this.txtName.TabIndex = 0;
             this.txtName.UnformattedText = null;
             // 
             // cmbBusinessCategory
@@ -241,11 +251,11 @@
             appearance3.TextHAlignAsString = "Right";
             appearance3.TextVAlignAsString = "Middle";
             this.cmbBusinessCategory.ItemAppearance = appearance3;
-            this.cmbBusinessCategory.Location = new System.Drawing.Point(211, 116);
+            this.cmbBusinessCategory.Location = new System.Drawing.Point(106, 111);
             this.cmbBusinessCategory.Name = "cmbBusinessCategory";
             this.cmbBusinessCategory.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbBusinessCategory.Size = new System.Drawing.Size(300, 26);
-            this.cmbBusinessCategory.TabIndex = 54;
+            this.cmbBusinessCategory.Size = new System.Drawing.Size(450, 22);
+            this.cmbBusinessCategory.TabIndex = 1;
             // 
             // label1
             // 
@@ -255,10 +265,10 @@
             appearance5.TextVAlignAsString = "Middle";
             this.label1.Appearance = appearance5;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(429, 33);
+            this.label1.Location = new System.Drawing.Point(491, 29);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(82, 19);
+            this.label1.Size = new System.Drawing.Size(65, 15);
             this.label1.TabIndex = 55;
             this.label1.Text = "نام کسب کار";
             // 
@@ -270,18 +280,18 @@
             appearance4.TextVAlignAsString = "Middle";
             this.label2.Appearance = appearance4;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(458, 92);
+            this.label2.Location = new System.Drawing.Point(513, 86);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(53, 19);
+            this.label2.Size = new System.Drawing.Size(43, 15);
             this.label2.TabIndex = 56;
             this.label2.Text = "نام حوزه";
             // 
             // frmBusiness
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
-            this.ClientSize = new System.Drawing.Size(712, 383);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(684, 361);
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.Name = "frmBusiness";
             ((System.ComponentModel.ISupportInitialize)(this.grpPrint)).EndInit();
             this.grpPrint.ResumeLayout(false);
@@ -305,7 +315,6 @@
             this.grpButons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).EndInit();
             this.grpHeader.ResumeLayout(false);
-            this.grpHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpMessage)).EndInit();
             this.grpMessage.ResumeLayout(false);
