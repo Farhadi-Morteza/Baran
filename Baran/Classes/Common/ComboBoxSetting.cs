@@ -424,6 +424,18 @@ namespace Baran.Classes.Common
                             break;
                         }
                     #endregion
+                    #region Production
+                    case PublicEnum.EnmComboSource.srcProductionByUserID:
+                        {
+                            BaranDataAccess.Production.dstProducts ProductionDst;
+                            ProductionDst = BaranDataAccess.Production.dstProducts.ProductonCmbTable(CurrentUser.Instance.UserID);
+
+                            ComboName.DataSource = ProductionDst.spr_prd_Production_cmb_Select;
+                            ComboName.ValueMember = ProductionDst.spr_prd_Production_cmb_Select.ProductionIDColumn.ColumnName;
+                            ComboName.DisplayMember = ProductionDst.spr_prd_Production_cmb_Select.ProductionNameColumn.ColumnName;
+                            break;
+                        }
+                    #endregion
                     #region Element
                     case PublicEnum.EnmComboSource.srcElement:
                         {

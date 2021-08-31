@@ -32,6 +32,11 @@
             Infragistics.UltraChart.Resources.Appearance.LineChartAppearance lineChartAppearance1 = new Infragistics.UltraChart.Resources.Appearance.LineChartAppearance();
             Infragistics.UltraChart.Resources.Appearance.LineAppearance lineAppearance1 = new Infragistics.UltraChart.Resources.Appearance.LineAppearance();
             Infragistics.UltraChart.Resources.Appearance.PaintElement paintElement2 = new Infragistics.UltraChart.Resources.Appearance.PaintElement();
+            Infragistics.Win.Appearance appearance100 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance26 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance37 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("spr_dsb_Pesticide_rpt", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("PesticideName");
@@ -47,7 +52,7 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("LinkedArea");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FreeSpace", 0);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RowID", 1);
-            Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance38 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance39 = new Infragistics.Win.Appearance();
@@ -66,21 +71,36 @@
             Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance100 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance26 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance134 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance135 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand2 = new Infragistics.Win.UltraWinGrid.UltraGridBand("spr_src_Pesticide_cmbLst_Select", -1);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("PesticideID");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn15 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("PesticideName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn16 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Manufacture");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn17 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("UnitMeasurement");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn18 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("MaterialMode");
+            Infragistics.Win.Appearance appearance136 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance137 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance138 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance139 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance140 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance141 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance142 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance175 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance176 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance177 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance178 = new Infragistics.Win.Appearance();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.chtMain = new Baran.Windows.Forms.UltraChartMain();
-            this.grdItem = new Baran.Windows.Forms.UltraGrid();
-            this.dstDashboard1 = new BaranDataAccess.Dashboard.dstDashboard();
             this.grpControls = new Baran.Windows.Forms.GroupBox();
             this.label3 = new Baran.Windows.Forms.Label();
             this.mskToDate = new Baran.Windows.Forms.UltraMaskedDate();
             this.mskFromDate = new Baran.Windows.Forms.UltraMaskedDate();
             this.label1 = new Baran.Windows.Forms.Label();
             this.label2 = new Baran.Windows.Forms.Label();
+            this.grdItem = new Baran.Windows.Forms.UltraGrid();
+            this.dstDashboard1 = new BaranDataAccess.Dashboard.dstDashboard();
+            this.cmbPesticide = new Baran.Windows.Forms.ultraCombo();
             this.dstProduct1 = new BaranDataAccess.Product.dstProduct();
             ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).BeginInit();
@@ -92,10 +112,11 @@
             this.grpMain.SuspendLayout();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chtMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdItem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dstDashboard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpControls)).BeginInit();
             this.grpControls.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dstDashboard1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbPesticide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dstProduct1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -307,6 +328,104 @@
             this.chtMain.Size = new System.Drawing.Size(1036, 167);
             this.chtMain.TabIndex = 3;
             // 
+            // grpControls
+            // 
+            this.grpControls.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
+            this.grpControls.Controls.Add(this.cmbPesticide);
+            this.grpControls.Controls.Add(this.label3);
+            this.grpControls.Controls.Add(this.mskToDate);
+            this.grpControls.Controls.Add(this.mskFromDate);
+            this.grpControls.Controls.Add(this.label1);
+            this.grpControls.Controls.Add(this.label2);
+            this.grpControls.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grpControls.Location = new System.Drawing.Point(1, 0);
+            this.grpControls.Name = "grpControls";
+            this.grpControls.Size = new System.Drawing.Size(1042, 42);
+            this.grpControls.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            appearance100.ForeColor = System.Drawing.Color.White;
+            appearance100.TextHAlignAsString = "Right";
+            appearance100.TextVAlignAsString = "Middle";
+            this.label3.Appearance = appearance100;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(638, 13);
+            this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label3.Size = new System.Drawing.Size(27, 15);
+            this.label3.TabIndex = 128;
+            this.label3.Text = ":سم";
+            // 
+            // mskToDate
+            // 
+            this.mskToDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            appearance26.BackColor = System.Drawing.Color.Transparent;
+            appearance26.ForeColor = System.Drawing.Color.White;
+            appearance26.TextHAlignAsString = "Center";
+            this.mskToDate.Appearance = appearance26;
+            this.mskToDate.DataMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.IncludeBoth;
+            this.mskToDate.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
+            this.mskToDate.Editable = Baran.Windows.Forms.Editable.Editable;
+            this.mskToDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
+            this.mskToDate.InputMask = "yyyy/mm/dd";
+            this.mskToDate.Location = new System.Drawing.Point(710, 9);
+            this.mskToDate.Name = "mskToDate";
+            this.mskToDate.Size = new System.Drawing.Size(90, 21);
+            this.mskToDate.TabIndex = 126;
+            this.mskToDate.Text = "____/__/__";
+            // 
+            // mskFromDate
+            // 
+            this.mskFromDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            appearance18.BackColor = System.Drawing.Color.Transparent;
+            appearance18.ForeColor = System.Drawing.Color.White;
+            appearance18.TextHAlignAsString = "Center";
+            this.mskFromDate.Appearance = appearance18;
+            this.mskFromDate.DataMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.IncludeBoth;
+            this.mskFromDate.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
+            this.mskFromDate.Editable = Baran.Windows.Forms.Editable.Editable;
+            this.mskFromDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
+            this.mskFromDate.InputMask = "yyyy/mm/dd";
+            this.mskFromDate.Location = new System.Drawing.Point(882, 10);
+            this.mskFromDate.Name = "mskFromDate";
+            this.mskFromDate.Size = new System.Drawing.Size(90, 21);
+            this.mskFromDate.TabIndex = 125;
+            this.mskFromDate.Text = "____/__/__";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            appearance2.ForeColor = System.Drawing.Color.LightGray;
+            appearance2.TextHAlignAsString = "Right";
+            appearance2.TextVAlignAsString = "Middle";
+            this.label1.Appearance = appearance2;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.Location = new System.Drawing.Point(977, 12);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(48, 16);
+            this.label1.TabIndex = 124;
+            this.label1.Text = ": از تاریخ";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            appearance8.ForeColor = System.Drawing.Color.LightGray;
+            appearance8.TextHAlignAsString = "Right";
+            appearance8.TextVAlignAsString = "Middle";
+            this.label2.Appearance = appearance8;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label2.Location = new System.Drawing.Point(806, 11);
+            this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label2.Size = new System.Drawing.Size(47, 16);
+            this.label2.TabIndex = 123;
+            this.label2.Text = ": تا تاریخ";
+            // 
             // grdItem
             // 
             this.grdItem.BaseUltraGrid = this.grdItem;
@@ -387,8 +506,8 @@
             ultraGridColumn12,
             ultraGridColumn13});
             ultraGridBand1.Override.SummaryDisplayArea = Infragistics.Win.UltraWinGrid.SummaryDisplayAreas.BottomFixed;
-            appearance3.ForeColor = System.Drawing.Color.DarkBlue;
-            ultraGridBand1.Override.SummaryValueAppearance = appearance3;
+            appearance1.ForeColor = System.Drawing.Color.DarkBlue;
+            ultraGridBand1.Override.SummaryValueAppearance = appearance1;
             this.grdItem.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdItem.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
             appearance4.ForeColor = System.Drawing.Color.DarkBlue;
@@ -509,102 +628,101 @@
             this.dstDashboard1.DataSetName = "dstDashboard";
             this.dstDashboard1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // grpControls
+            // cmbPesticide
             // 
-            this.grpControls.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
-            this.grpControls.Controls.Add(this.label3);
-            this.grpControls.Controls.Add(this.mskToDate);
-            this.grpControls.Controls.Add(this.mskFromDate);
-            this.grpControls.Controls.Add(this.label1);
-            this.grpControls.Controls.Add(this.label2);
-            this.grpControls.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpControls.Location = new System.Drawing.Point(1, 0);
-            this.grpControls.Name = "grpControls";
-            this.grpControls.Size = new System.Drawing.Size(1042, 42);
-            this.grpControls.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance100.ForeColor = System.Drawing.Color.White;
-            appearance100.TextHAlignAsString = "Right";
-            appearance100.TextVAlignAsString = "Middle";
-            this.label3.Appearance = appearance100;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(638, 13);
-            this.label3.Name = "label3";
-            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(27, 15);
-            this.label3.TabIndex = 128;
-            this.label3.Text = ":سم";
-            // 
-            // mskToDate
-            // 
-            this.mskToDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance26.BackColor = System.Drawing.Color.Transparent;
-            appearance26.ForeColor = System.Drawing.Color.White;
-            appearance26.TextHAlignAsString = "Center";
-            this.mskToDate.Appearance = appearance26;
-            this.mskToDate.DataMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.IncludeBoth;
-            this.mskToDate.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
-            this.mskToDate.Editable = Baran.Windows.Forms.Editable.Editable;
-            this.mskToDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
-            this.mskToDate.InputMask = "yyyy/mm/dd";
-            this.mskToDate.Location = new System.Drawing.Point(710, 9);
-            this.mskToDate.Name = "mskToDate";
-            this.mskToDate.Size = new System.Drawing.Size(90, 21);
-            this.mskToDate.TabIndex = 126;
-            this.mskToDate.Text = "____/__/__";
-            // 
-            // mskFromDate
-            // 
-            this.mskFromDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance18.BackColor = System.Drawing.Color.Transparent;
-            appearance18.ForeColor = System.Drawing.Color.White;
-            appearance18.TextHAlignAsString = "Center";
-            this.mskFromDate.Appearance = appearance18;
-            this.mskFromDate.DataMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.IncludeBoth;
-            this.mskFromDate.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
-            this.mskFromDate.Editable = Baran.Windows.Forms.Editable.Editable;
-            this.mskFromDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
-            this.mskFromDate.InputMask = "yyyy/mm/dd";
-            this.mskFromDate.Location = new System.Drawing.Point(882, 10);
-            this.mskFromDate.Name = "mskFromDate";
-            this.mskFromDate.Size = new System.Drawing.Size(90, 21);
-            this.mskFromDate.TabIndex = 125;
-            this.mskFromDate.Text = "____/__/__";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance2.ForeColor = System.Drawing.Color.LightGray;
-            appearance2.TextHAlignAsString = "Right";
-            appearance2.TextVAlignAsString = "Middle";
-            this.label1.Appearance = appearance2;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(977, 12);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(48, 16);
-            this.label1.TabIndex = 124;
-            this.label1.Text = ": از تاریخ";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance8.ForeColor = System.Drawing.Color.LightGray;
-            appearance8.TextHAlignAsString = "Right";
-            appearance8.TextVAlignAsString = "Middle";
-            this.label2.Appearance = appearance8;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(806, 11);
-            this.label2.Name = "label2";
-            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(47, 16);
-            this.label2.TabIndex = 123;
-            this.label2.Text = ": تا تاریخ";
+            this.cmbPesticide.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            appearance134.BackColor = System.Drawing.Color.Transparent;
+            appearance134.ForeColor = System.Drawing.Color.White;
+            appearance134.TextHAlignAsString = "Right";
+            this.cmbPesticide.Appearance = appearance134;
+            this.cmbPesticide.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Suggest;
+            this.cmbPesticide.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.cmbPesticide.DataMember = "spr_src_Pesticide_cmbLst_Select";
+            this.cmbPesticide.DataSource = this.dstProduct1;
+            appearance135.BackColor = System.Drawing.SystemColors.Window;
+            appearance135.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cmbPesticide.DisplayLayout.Appearance = appearance135;
+            ultraGridColumn14.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn14.Header.VisiblePosition = 0;
+            ultraGridColumn14.Hidden = true;
+            ultraGridColumn15.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn15.Header.Caption = "نام";
+            ultraGridColumn15.Header.VisiblePosition = 4;
+            ultraGridColumn16.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn16.Header.Caption = "شرکت سازنده";
+            ultraGridColumn16.Header.VisiblePosition = 3;
+            ultraGridColumn17.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn17.Header.VisiblePosition = 1;
+            ultraGridColumn17.Hidden = true;
+            ultraGridColumn18.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn18.Header.Caption = "نوع";
+            ultraGridColumn18.Header.VisiblePosition = 2;
+            ultraGridBand2.Columns.AddRange(new object[] {
+            ultraGridColumn14,
+            ultraGridColumn15,
+            ultraGridColumn16,
+            ultraGridColumn17,
+            ultraGridColumn18});
+            this.cmbPesticide.DisplayLayout.BandsSerializer.Add(ultraGridBand2);
+            this.cmbPesticide.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
+            this.cmbPesticide.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
+            appearance136.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            appearance136.BackColor2 = System.Drawing.SystemColors.ControlDark;
+            appearance136.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
+            appearance136.BorderColor = System.Drawing.SystemColors.Window;
+            this.cmbPesticide.DisplayLayout.GroupByBox.Appearance = appearance136;
+            appearance137.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.cmbPesticide.DisplayLayout.GroupByBox.BandLabelAppearance = appearance137;
+            this.cmbPesticide.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
+            appearance138.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            appearance138.BackColor2 = System.Drawing.SystemColors.Control;
+            appearance138.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
+            appearance138.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.cmbPesticide.DisplayLayout.GroupByBox.PromptAppearance = appearance138;
+            this.cmbPesticide.DisplayLayout.MaxColScrollRegions = 1;
+            this.cmbPesticide.DisplayLayout.MaxRowScrollRegions = 1;
+            appearance139.BackColor = System.Drawing.SystemColors.Window;
+            appearance139.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cmbPesticide.DisplayLayout.Override.ActiveCellAppearance = appearance139;
+            appearance140.BackColor = System.Drawing.SystemColors.Highlight;
+            appearance140.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.cmbPesticide.DisplayLayout.Override.ActiveRowAppearance = appearance140;
+            this.cmbPesticide.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
+            this.cmbPesticide.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted;
+            appearance141.BackColor = System.Drawing.SystemColors.Window;
+            this.cmbPesticide.DisplayLayout.Override.CardAreaAppearance = appearance141;
+            appearance142.BorderColor = System.Drawing.Color.Silver;
+            appearance142.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
+            this.cmbPesticide.DisplayLayout.Override.CellAppearance = appearance142;
+            this.cmbPesticide.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
+            this.cmbPesticide.DisplayLayout.Override.CellPadding = 0;
+            appearance175.BackColor = System.Drawing.SystemColors.Control;
+            appearance175.BackColor2 = System.Drawing.SystemColors.ControlDark;
+            appearance175.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
+            appearance175.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
+            appearance175.BorderColor = System.Drawing.SystemColors.Window;
+            this.cmbPesticide.DisplayLayout.Override.GroupByRowAppearance = appearance175;
+            appearance176.TextHAlignAsString = "Left";
+            this.cmbPesticide.DisplayLayout.Override.HeaderAppearance = appearance176;
+            this.cmbPesticide.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
+            this.cmbPesticide.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand;
+            appearance177.BackColor = System.Drawing.SystemColors.Window;
+            appearance177.BorderColor = System.Drawing.Color.Silver;
+            this.cmbPesticide.DisplayLayout.Override.RowAppearance = appearance177;
+            this.cmbPesticide.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False;
+            appearance178.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.cmbPesticide.DisplayLayout.Override.TemplateAddRowAppearance = appearance178;
+            this.cmbPesticide.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
+            this.cmbPesticide.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
+            this.cmbPesticide.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
+            this.cmbPesticide.DisplayMember = "PesticideName";
+            this.cmbPesticide.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.cmbPesticide.Location = new System.Drawing.Point(319, 8);
+            this.cmbPesticide.Name = "cmbPesticide";
+            this.cmbPesticide.Size = new System.Drawing.Size(313, 23);
+            this.cmbPesticide.TabIndex = 129;
+            this.cmbPesticide.ValueMember = "PesticideID";
             // 
             // dstProduct1
             // 
@@ -627,11 +745,12 @@
             this.grpMain.ResumeLayout(false);
             this.tableLayoutPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chtMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdItem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dstDashboard1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpControls)).EndInit();
             this.grpControls.ResumeLayout(false);
             this.grpControls.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dstDashboard1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbPesticide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dstProduct1)).EndInit();
             this.ResumeLayout(false);
 
@@ -650,7 +769,6 @@
         private Windows.Forms.UltraGrid grdItem;
         private BaranDataAccess.Dashboard.dstDashboard dstDashboard1;
         private BaranDataAccess.Product.dstProduct dstProduct1;
-
-
+        private Windows.Forms.ultraCombo cmbPesticide;
     }
 }

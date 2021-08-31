@@ -1,8 +1,8 @@
-﻿namespace BaranDataAccess.Product 
+﻿namespace BaranDataAccess.Product
 {
-    
-    
-    public partial class dstProduct 
+
+
+    public partial class dstProduct
     {
         public static dstProduct FertilizerCategoryCmbTable()
         {
@@ -103,7 +103,7 @@
         public static dstProduct FertilizerElementTable(int fertilizerID)
         {
             dstProduct returnDst = new dstProduct();
-            
+
             dstProductTableAdapters.spr_src_FertilizerElement_selectTableAdapter adapter =
                 new dstProductTableAdapters.spr_src_FertilizerElement_selectTableAdapter();
             try

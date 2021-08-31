@@ -181,6 +181,19 @@ namespace Baran.Production
             }
         }
 
+        private int? _fieldID;
+        public int? FieldID
+        {
+            get
+            {
+                return _fieldID;
+            }
+            set
+            {
+                _fieldID = value;
+            }
+        }
+
         #endregion
 
         #region Methods
@@ -244,7 +257,7 @@ namespace Baran.Production
                 BaranDataAccess.Product.dstProductTableAdapters.spr_src_ChemicalAnalys_cmbLst_SelectTableAdapter adpChemicalAnalys =
                    new BaranDataAccess.Product.dstProductTableAdapters.spr_src_ChemicalAnalys_cmbLst_SelectTableAdapter();
 
-                adpChemicalAnalys.FillChemicalAnalysCmbLstTable(dstProduct1.spr_src_ChemicalAnalys_cmbLst_Select);
+                adpChemicalAnalys.FillChemicalAnalysFieldByFieldIDTable(dstProduct1.spr_src_ChemicalAnalys_cmbLst_Select, FieldID);
 
                 this.FillChemicalAnalysGrid();
                 egbChemicalAnalys.Visible = true;
@@ -302,6 +315,8 @@ namespace Baran.Production
                 mskStartDate.Text = drw.IsStartDateNull() ? null: mskStartDate.Text = DateTimeUtility.ToPersian(drw.StartDate);
                 mskEndDate.Text = drw.IsEndDateNull() ? null : mskEndDate.Text = DateTimeUtility.ToPersian(drw.EndDate);
                 txtDescription.Text = drw.Descripton;
+
+                FieldID = drw.Fk_FieldID;
             }
             catch 
             {
@@ -1765,11 +1780,11 @@ namespace Baran.Production
 
             WaterStorageID = Convert.ToInt32(cmbWaterStorage.Value);
             WaterStorageDate = DateTimeUtility.ToGregorian(mskWaterStorageDate.Value.ToString());
-            if (mskWaterStartTime.Value.ToString() != "")
+            if (mskWaterStorageStartTime.Value.ToString() != "")
                 WaterStorageStartTime = TimeSpan.Parse(mskWaterStorageStartTime.Value.ToString());
-            if (mskWaterEndTime.Value.ToString() != "")
+            if (mskWaterStorageEndTime.Value.ToString() != "")
                 WaterStorageEndTime = TimeSpan.Parse(mskWaterStorageEndTime.Value.ToString());
-            if (mskWaterTradetArea.Value.ToString() != "")
+            if (mskWaterStorageTreatedArea.Value.ToString() != "")
                 WaterStorageTreatedArea = Convert.ToDecimal(mskWaterStorageTreatedArea.Value);
             WaterStorageDescription = txtWaterStorageDescription.Text.Trim();
             WaterStorageUsageVolume = decimal.Parse(mskWaterStorageUsageVoulum.Value.ToString());

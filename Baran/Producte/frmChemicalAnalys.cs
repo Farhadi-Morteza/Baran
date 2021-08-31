@@ -285,13 +285,13 @@ namespace Baran.Producte
             datDate = DateTimeUtility.ToGregorian(mskDate.Value.ToString());
 
             intChemicalAnalysCategoryID = Convert.ToInt32(cmbChemicalAnalysisCategory.Value);
-            if (ChemicalAnalysID == 1)
+            if (intChemicalAnalysCategoryID == 1)
                 intFieldID = Convert.ToInt32( cmbSource.Value);
-            if (ChemicalAnalysID == 2)
+            if (intChemicalAnalysCategoryID == 2)
                 intWaterID = Convert.ToInt32(cmbSource.Value);
-            if (ChemicalAnalysID == 3)
+            if (intChemicalAnalysCategoryID == 3)
                 intFertilizerID = Convert.ToInt32(cmbSource.Value);
-            if (ChemicalAnalysID == 4)
+            if (intChemicalAnalysCategoryID == 4)
                 intFieldID = Convert.ToInt32(cmbSource.Value);
 
 

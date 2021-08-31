@@ -363,11 +363,23 @@
     <Compile Include="Company\frmSubcollectionList.Designer.cs">
       <DependentUpon>frmSubcollectionList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard\frmBaseCompanyInfoRpt.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dashboard\frmBaseCompanyInfoRpt.Designer.cs">
       <DependentUpon>frmBaseCompanyInfoRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\frmChemicalAnalysRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmChemicalAnalysRpt.Designer.cs">
+      <DependentUpon>frmChemicalAnalysRpt.cs</DependentUpon>
     </Compile>
     <Compile Include="Dashboard\frmCurrentProductionFieldRpt.cs">
       <SubType>Form</SubType>
@@ -380,6 +392,12 @@
     </Compile>
     <Compile Include="Dashboard\frmFertilizerRpt.designer.cs">
       <DependentUpon>frmFertilizerRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\frmFieldRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmFieldRpt.Designer.cs">
+      <DependentUpon>frmFieldRpt.cs</DependentUpon>
     </Compile>
     <Compile Include="Dashboard\frmFieldTaskListRpt.cs">
       <SubType>Form</SubType>
@@ -398,6 +416,18 @@
     </Compile>
     <Compile Include="Dashboard\frmPesticideRpt.Designer.cs">
       <DependentUpon>frmPesticideRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\frmWaterRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmWaterRpt.Designer.cs">
+      <DependentUpon>frmWaterRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\frmWaterStorageRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmWaterStorageRpt.Designer.cs">
+      <DependentUpon>frmWaterStorageRpt.cs</DependentUpon>
     </Compile>
     <Compile Include="Dashboard\frmWorkerRpt.cs">
       <SubType>Form</SubType>
@@ -951,14 +981,23 @@
     <EmbeddedResource Include="Company\frmSubcollectionList.resx">
       <DependentUpon>frmSubcollectionList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmBaseCompanyInfoRpt.resx">
       <DependentUpon>frmBaseCompanyInfoRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\frmChemicalAnalysRpt.resx">
+      <DependentUpon>frmChemicalAnalysRpt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmCurrentProductionFieldRpt.resx">
       <DependentUpon>frmCurrentProductionFieldRpt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmFertilizerRpt.resx">
       <DependentUpon>frmFertilizerRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\frmFieldRpt.resx">
+      <DependentUpon>frmFieldRpt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmFieldTaskListRpt.resx">
       <DependentUpon>frmFieldTaskListRpt.cs</DependentUpon>
@@ -968,6 +1007,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmPesticideRpt.resx">
       <DependentUpon>frmPesticideRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\frmWaterRpt.resx">
+      <DependentUpon>frmWaterRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\frmWaterStorageRpt.resx">
+      <DependentUpon>frmWaterStorageRpt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmWorkerRpt.resx">
       <DependentUpon>frmWorkerRpt.cs</DependentUpon>

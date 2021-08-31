@@ -117,6 +117,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dstDashboard.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard\dstField.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstField.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DateAdjustement\dstDate.cs">
       <DependentUpon>dstDate.xsd</DependentUpon>
     </Compile>
@@ -622,6 +627,17 @@
     </None>
     <None Include="Dashboard\dstDashboard.xss">
       <DependentUpon>dstDashboard.xsd</DependentUpon>
+    </None>
+    <None Include="Dashboard\dstField.xsc">
+      <DependentUpon>dstField.xsd</DependentUpon>
+    </None>
+    <None Include="Dashboard\dstField.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstField.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dashboard\dstField.xss">
+      <DependentUpon>dstField.xsd</DependentUpon>
     </None>
     <None Include="DateAdjustement\dstDate.xsc">
       <DependentUpon>dstDate.xsd</DependentUpon>
