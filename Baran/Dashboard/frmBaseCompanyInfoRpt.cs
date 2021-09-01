@@ -54,6 +54,7 @@ namespace Baran.Dashboard
             lblWaterColor.Appearance.BackColor = PublicVariables.WaterColor;
             lblWaterstorageColor.Appearance.BackColor = PublicVariables.WaterstorageColor;
             lblWaterTrasmissionLineColor.Appearance.BackColor = PublicVariables.WaterTransmissionLineColor;
+            lblTreeColor.Appearance.BackColor = PublicVariables.TreeColor;
 
             ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcCollection, cmbCollection, "");
             ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcSubcollection, cmbSubcollection, "");
@@ -403,6 +404,40 @@ namespace Baran.Dashboard
 
                             markers.Markers.Add(mark);
                             routes.Routes.Add(route);
+                        }
+                    }
+
+                }
+                // Tree ======================================================================================================
+                if (chkTree.Checked)
+                {
+                    var tree = dbContext.spr_src_TreeLocation_Rpt(collectionId, subcollectionId, partId);
+
+                    foreach (var result in tree)
+                    {
+                        if (result.Location != null)
+                        {
+                            List<PointLatLng> points = new List<PointLatLng>();
+                            points = GeoUtils.ConvertStringPointToGMapPoint(result.Location.ProviderValue.ToString());
+
+                            string strTooltip = $"کشت و صنعت: {result.CollectionName} " +
+                                $"\n واحد: {result.SubcollectionName} " +
+                                $"\n واحد فرعی: {result.PartName}" +
+                                $"\n زمین : {result.FieldName} " +
+                                $"\n سطر-ستون : {result.Row} - {result.Column} " +
+                                $"\n رقم پایه : {result.BaseCultivar} " +
+                                $"\n نوع پایه : {result.BaseType} ";
+
+                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], new Bitmap(System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.TreeMarker))));
+                            mark.ToolTipText = strTooltip;
+                            mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+                            mark.ToolTip.Fill = Brushes.Black;
+                            mark.ToolTip.Foreground = Brushes.White;
+                            mark.ToolTip.Stroke = Pens.Black;
+                            mark.ToolTip.TextPadding = new Size(20, 20);
+                            mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+
+                            markers.Markers.Add(mark);
                         }
                     }
 

@@ -337,7 +337,7 @@ namespace Baran.Classes.Common
         public static readonly string WaterStorageMarker = "WaterStorageMarker.png";
         public static readonly string WaterTransmissionLineMarker = "WaterTransmissionLineMarker.png";
 
-        public static readonly string Tree = "Tree.png";
+        public static readonly string TreeMarker = "TreeMarker.png";
         public static readonly string WaterWell = "WaterWell.png";
     }
     #endregion

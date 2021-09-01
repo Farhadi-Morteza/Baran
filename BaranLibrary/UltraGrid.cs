@@ -149,7 +149,8 @@ namespace Baran.Windows.Forms
             e.Layout.BorderStyle = UIElementBorderStyle.None;
             e.Layout.Appearance.BackColor = System.Drawing.Color.Transparent;
             e.Layout.CaptionVisible = DefaultableBoolean.True;
-            e.Layout.CaptionAppearance.ForeColor = System.Drawing.Color.DarkBlue;
+            e.Layout.CaptionAppearance.ForeColor = System.Drawing.Color.Black;
+            e.Layout.CaptionAppearance.BackColor = System.Drawing.Color.WhiteSmoke;
             //-------------------------------------------------------------------------------------------------------------------------
 
             //Row ------------------------------------------------------------------------------------------------------------------

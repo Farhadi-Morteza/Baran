@@ -163,7 +163,7 @@ namespace Baran.Producte
                     CreateDate = System.DateTime.Now,
                     Latitude = dclLatitude,
                     Longitude = dclLongitude,
-                    Locatioon = geoLocation
+                    Location = geoLocation
                 };
 
                 db.TreeRepository.Insert(tree);
@@ -233,7 +233,7 @@ namespace Baran.Producte
                 tree.UpdateDate = System.DateTime.Now;
                 tree.Latitude = dclLatitude;
                 tree.Longitude = dclLongitude;
-                tree.Locatioon = geoLocation;
+                tree.Location = geoLocation;
 
                 db.TreeRepository.Update(tree);
                 db.Save();
@@ -294,7 +294,7 @@ namespace Baran.Producte
 
         void AddMarker()
         {
-            GMarkerGoogle m = new GMarkerGoogle(currentMarker.Position, new Bitmap(System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.Tree))));
+            GMarkerGoogle m = new GMarkerGoogle(currentMarker.Position, new Bitmap(System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.TreeMarker))));
 
             txtLatitude.Text = currentMarker.Position.Lat.ToString();
             txtLongitude.Text = currentMarker.Position.Lng.ToString();
@@ -382,7 +382,7 @@ namespace Baran.Producte
                     ////////////////////////////
                     //GMap.NET.WindowsForms.GMapOverlay markers = new GMap.NET.WindowsForms.GMapOverlay("markers");
                     GMap.NET.PointLatLng po = new GMap.NET.PointLatLng(Convert.ToDouble(drw.Latitude), Convert.ToDouble(drw.Longitude));
-                    GMap.NET.WindowsForms.GMapMarker mark = new GMap.NET.WindowsForms.Markers.GMarkerGoogle(po, new Bitmap(System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.Tree))));
+                    GMap.NET.WindowsForms.GMapMarker mark = new GMap.NET.WindowsForms.Markers.GMarkerGoogle(po, new Bitmap(System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.TreeMarker))));
 
                     objects.Markers.Clear();
                     objects.Markers.Add(mark);

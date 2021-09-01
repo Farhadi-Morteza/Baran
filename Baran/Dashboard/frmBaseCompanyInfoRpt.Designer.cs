@@ -30,6 +30,7 @@ namespace Baran.Dashboard
         private void InitializeComponent()
         {
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
@@ -47,6 +48,8 @@ namespace Baran.Dashboard
             Infragistics.Win.Appearance appearance32 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance33 = new Infragistics.Win.Appearance();
             this.grpControls = new Baran.Windows.Forms.GroupBox();
+            this.lblTreeColor = new Baran.Windows.Forms.Label();
+            this.chkTree = new Baran.Windows.Forms.CheckBox.CheckBox();
             this.lblWaterTrasmissionLineColor = new Baran.Windows.Forms.Label();
             this.lblWaterstorageColor = new Baran.Windows.Forms.Label();
             this.lblWaterColor = new Baran.Windows.Forms.Label();
@@ -139,6 +142,8 @@ namespace Baran.Dashboard
             // grpControls
             // 
             this.grpControls.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
+            this.grpControls.Controls.Add(this.lblTreeColor);
+            this.grpControls.Controls.Add(this.chkTree);
             this.grpControls.Controls.Add(this.lblWaterTrasmissionLineColor);
             this.grpControls.Controls.Add(this.lblWaterstorageColor);
             this.grpControls.Controls.Add(this.lblWaterColor);
@@ -169,13 +174,38 @@ namespace Baran.Dashboard
             this.grpControls.TabIndex = 1;
             this.grpControls.Click += new System.EventHandler(this.grpControls_Click);
             // 
-            // lblWaterTrasmissionLineColor
+            // lblTreeColor
             // 
             appearance1.BackColor = System.Drawing.Color.Red;
             appearance1.ForeColor = System.Drawing.Color.White;
             appearance1.TextHAlignAsString = "Right";
             appearance1.TextVAlignAsString = "Middle";
-            this.lblWaterTrasmissionLineColor.Appearance = appearance1;
+            this.lblTreeColor.Appearance = appearance1;
+            this.lblTreeColor.Location = new System.Drawing.Point(26, 256);
+            this.lblTreeColor.Name = "lblTreeColor";
+            this.lblTreeColor.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTreeColor.Size = new System.Drawing.Size(170, 3);
+            this.lblTreeColor.TabIndex = 32;
+            // 
+            // chkTree
+            // 
+            this.chkTree.AutoSize = true;
+            this.chkTree.ForeColor = System.Drawing.Color.White;
+            this.chkTree.Location = new System.Drawing.Point(196, 248);
+            this.chkTree.Name = "chkTree";
+            this.chkTree.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chkTree.Size = new System.Drawing.Size(52, 17);
+            this.chkTree.TabIndex = 31;
+            this.chkTree.Text = "درخت";
+            this.chkTree.UseVisualStyleBackColor = true;
+            // 
+            // lblWaterTrasmissionLineColor
+            // 
+            appearance9.BackColor = System.Drawing.Color.Red;
+            appearance9.ForeColor = System.Drawing.Color.White;
+            appearance9.TextHAlignAsString = "Right";
+            appearance9.TextVAlignAsString = "Middle";
+            this.lblWaterTrasmissionLineColor.Appearance = appearance9;
             this.lblWaterTrasmissionLineColor.Location = new System.Drawing.Point(25, 225);
             this.lblWaterTrasmissionLineColor.Name = "lblWaterTrasmissionLineColor";
             this.lblWaterTrasmissionLineColor.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -564,5 +594,7 @@ namespace Baran.Dashboard
         private Windows.Forms.Label lblLandColor;
         private Windows.Forms.Label lblPartColor;
         private Demo.WindowsForms.Map MainMap;
+        private Windows.Forms.Label lblTreeColor;
+        private Windows.Forms.CheckBox.CheckBox chkTree;
     }
 }

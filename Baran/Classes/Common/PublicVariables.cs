@@ -124,6 +124,7 @@ namespace Baran.Classes.Common
         public static Color WaterColor = Color.SkyBlue;
         public static Color WaterstorageColor = Color.Blue;
         public static Color WaterTransmissionLineColor = Color.Black;
+        public static Color TreeColor = Color.LightGreen;
 
         public static int StrokeWidth = 3;
         public static System.Drawing.Drawing2D.DashStyle StrokeDashStyle = System.Drawing.Drawing2D.DashStyle.Solid;

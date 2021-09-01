@@ -18,6 +18,17 @@ namespace Baran.Dashboard
             InitializeComponent();
         }
 
+        public frmWaterRpt(string fromDate, string toDate)
+        {
+            InitializeComponent();
+            grpHeader.Visible = false;
+
+            mskFromDate.Text = fromDate;
+            mskToDate.Text = toDate;
+
+            FillControls();
+        }
+
         private int? WaterID = null;
         private Nullable<DateTime>
             FromDate
@@ -45,7 +56,11 @@ namespace Baran.Dashboard
         public override void OnConfirm()
         {
             base.OnConfirm();
+            FillControls();
+        }
 
+        private void FillControls()
+        {
             if (!this.ControlsValidation())
             {
                 OnMessage(BaranResources.FeildIsEmpty, PublicEnum.EnmMessageCategory.Warning);
@@ -54,7 +69,7 @@ namespace Baran.Dashboard
 
             BaranDataAccess.Dashboard.dstDashboardTableAdapters.spr_dsb_Water_rptTableAdapter adp =
                 new BaranDataAccess.Dashboard.dstDashboardTableAdapters.spr_dsb_Water_rptTableAdapter();
-            waite = new WaiteForm();
+
             try
             {
                 if (mskFromDate.Text != null)
@@ -63,7 +78,6 @@ namespace Baran.Dashboard
                 if (mskToDate.Text != null)
                     ToDate = DateTimeUtility.ToGregorian(mskToDate.Value.ToString());
 
-                waite.Show();
                 adp.FillWaterTable(dstDashboard1.spr_dsb_Water_rpt, CurrentUser.Instance.UserID, FromDate, ToDate, WaterID);
                 grdItem.FreeSpaceGenerator();
 
@@ -73,7 +87,6 @@ namespace Baran.Dashboard
             {
                 OnMessage(BaranResources.DoNotDoPleaseTryAgine, PublicEnum.EnmMessageCategory.Warning);
             }
-            waite.Close();
         }
 
         public override void OnClear()

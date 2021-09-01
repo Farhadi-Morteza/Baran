@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'F:\AN\BaranDataAccess\Models.edmx'. 
+﻿// T4 code generation is enabled for model 'E:\MyAMS\Baran\BaranDataAccess\Models.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

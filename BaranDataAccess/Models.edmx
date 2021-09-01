@@ -1203,7 +1203,7 @@
           <Property Name="UpdateUserID" Type="int" />
           <Property Name="UpdateDate" Type="date" />
           <Property Name="Code" Type="int" />
-          <Property Name="Locatioon" Type="geometry" />
+          <Property Name="Location" Type="geometry" />
         </EntityType>
         <EntityType Name="tbl_src_TreeType">
           <Key>
@@ -1714,6 +1714,13 @@ warning 6002: The table/view 'AMS.dbo.viw_Part_Location' does not have a primary
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="spr_dsb_Field_Location_rpt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserID" Type="int" Mode="In" />
+          <Parameter Name="FromDate" Type="date" Mode="In" />
+          <Parameter Name="ToDate" Type="date" Mode="In" />
+          <Parameter Name="FieldID" Type="int" Mode="In" />
+          <Parameter Name="ProductionID" Type="int" Mode="In" />
+        </Function>
         <Function Name="spr_dsb_FieldTaskList_rpt_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="FieldID" Type="int" Mode="In" />
         </Function>
@@ -1749,6 +1756,11 @@ warning 6002: The table/view 'AMS.dbo.viw_Part_Location' does not have a primary
           <Parameter Name="PartID" Type="int" Mode="In" />
         </Function>
         <Function Name="spr_src_PartLocation_Rpt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CollectionID" Type="int" Mode="In" />
+          <Parameter Name="SubcollectionID" Type="int" Mode="In" />
+          <Parameter Name="PartID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_src_TreeLocation_Rpt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="CollectionID" Type="int" Mode="In" />
           <Parameter Name="SubcollectionID" Type="int" Mode="In" />
           <Parameter Name="PartID" Type="int" Mode="In" />
@@ -3128,39 +3140,6 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
           <NavigationProperty Name="tbl_src_CompanyCategory" Relationship="Self.FK_tbl_src_Subcollection_tbl_src_CompanyCategory" FromRole="tbl_src_Subcollection" ToRole="tbl_src_CompanyCategory" />
           <NavigationProperty Name="tbl_src_Part" Relationship="AMSModel.FK_tbl_src_Part_tbl_src_Subcollection" FromRole="tbl_src_Subcollection" ToRole="tbl_src_Part" />
         </EntityType>
-        <EntityType Name="tbl_src_Tree">
-          <Key>
-            <PropertyRef Name="TreeID" />
-          </Key>
-          <Property Name="TreeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Fk_FieldID" Type="Int32" />
-          <Property Name="Fk_TreeType" Type="Int32" />
-          <Property Name="BaseCultivar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="BaseType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ScionCultivar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="DatePlanting" Type="DateTime" Precision="0" />
-          <Property Name="SubInformation" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="CantaminationHistory" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="TreeYeild" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Row" Type="Int16" />
-          <Property Name="Column" Type="Int16" />
-          <Property Name="MainCultivar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ScionLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="BaseBuyLocation" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="DateScion" Type="DateTime" Precision="0" />
-          <Property Name="TransplantType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Longitude" Type="Double" />
-          <Property Name="Latitude" Type="Double" />
-          <Property Name="CreateUserID" Type="Int32" />
-          <Property Name="CreateDate" Type="DateTime" Precision="0" />
-          <Property Name="IsActive" Type="Boolean" />
-          <Property Name="InactivationUserID" Type="Int32" />
-          <Property Name="InactivationDate" Type="DateTime" Precision="0" />
-          <Property Name="UpdateUserID" Type="Int32" />
-          <Property Name="UpdateDate" Type="DateTime" Precision="0" />
-          <Property Name="Code" Type="Int32" />
-          <Property Name="Locatioon" Type="Geometry" />
-        </EntityType>
         <EntityType Name="tbl_src_TreeType">
           <Key>
             <PropertyRef Name="TreeTypeID" />
@@ -3685,7 +3664,6 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
           <EntitySet Name="tbl_src_Seed" EntityType="Self.tbl_src_Seed" />
           <EntitySet Name="tbl_src_SeedType" EntityType="Self.tbl_src_SeedType" />
           <EntitySet Name="tbl_src_Subcollection" EntityType="Self.tbl_src_Subcollection" />
-          <EntitySet Name="tbl_src_Tree" EntityType="Self.tbl_src_Tree" />
           <EntitySet Name="tbl_src_TreeType" EntityType="Self.tbl_src_TreeType" />
           <EntitySet Name="tbl_src_Warehouse" EntityType="Self.tbl_src_Warehouse" />
           <EntitySet Name="tbl_src_WarehouseType" EntityType="Self.tbl_src_WarehouseType" />
@@ -3864,6 +3842,19 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
           </FunctionImport>
           <FunctionImport Name="spr_dsb_FieldTaskList_rpt_Select" ReturnType="Collection(AMSModel.spr_dsb_FieldTaskList_rpt_Select_Result)">
           <Parameter Name="FieldID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_src_TreeLocation_Rpt" ReturnType="Collection(AMSModel.spr_src_TreeLocation_Rpt_Result)">
+            <Parameter Name="CollectionID" Mode="In" Type="Int32" />
+            <Parameter Name="SubcollectionID" Mode="In" Type="Int32" />
+            <Parameter Name="PartID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="tbl_src_Tree" EntityType="AMSModel.tbl_src_Tree" />
+          <FunctionImport Name="spr_dsb_Field_Location_rpt" ReturnType="Collection(AMSModel.spr_dsb_Field_Location_rpt_Result)">
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+            <Parameter Name="FieldID" Mode="In" Type="Int32" />
+            <Parameter Name="ProductionID" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <EntityType Name="tbl_src_Land">
@@ -4170,6 +4161,62 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
           <Property Type="Int64" Name="ProductionTaskID" Nullable="false" />
           <Property Type="DateTime" Name="StartDate" Nullable="true" />
           <Property Type="DateTime" Name="EndDate" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spr_src_TreeLocation_Rpt_Result">
+          <Property Type="String" Name="PartName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="SubcollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="CollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="PartID" Nullable="false" />
+          <Property Type="Int32" Name="SubCollectionID" Nullable="false" />
+          <Property Type="Int32" Name="CollectionID" Nullable="false" />
+          <Property Type="String" Name="FieldName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="BaseCultivar" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="BaseType" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="DatePlanting" Nullable="true" />
+          <Property Type="String" Name="SubInformation" Nullable="true" MaxLength="500" />
+          <Property Type="Int16" Name="Row" Nullable="true" />
+          <Property Type="Int16" Name="Column" Nullable="true" />
+          <Property Type="Geometry" Name="Location" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="tbl_src_Tree">
+          <Key>
+            <PropertyRef Name="TreeID" />
+          </Key>
+          <Property Name="TreeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Fk_FieldID" Type="Int32" />
+          <Property Name="Fk_TreeType" Type="Int32" />
+          <Property Name="BaseCultivar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BaseType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ScionCultivar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DatePlanting" Type="DateTime" Precision="0" />
+          <Property Name="SubInformation" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CantaminationHistory" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TreeYeild" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Row" Type="Int16" />
+          <Property Name="Column" Type="Int16" />
+          <Property Name="MainCultivar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ScionLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BaseBuyLocation" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DateScion" Type="DateTime" Precision="0" />
+          <Property Name="TransplantType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Longitude" Type="Double" />
+          <Property Name="Latitude" Type="Double" />
+          <Property Name="CreateUserID" Type="Int32" />
+          <Property Name="CreateDate" Type="DateTime" Precision="0" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="InactivationUserID" Type="Int32" />
+          <Property Name="InactivationDate" Type="DateTime" Precision="0" />
+          <Property Name="UpdateUserID" Type="Int32" />
+          <Property Name="UpdateDate" Type="DateTime" Precision="0" />
+          <Property Name="Code" Type="Int32" />
+          <Property Name="Location" Type="Geometry" />
+        </EntityType>
+        <ComplexType Name="spr_dsb_Field_Location_rpt_Result">
+          <Property Type="String" Name="CollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="SubCollectionName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="PartName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="FieldName" Nullable="true" MaxLength="50" />
+          <Property Type="Geometry" Name="LocationPolygon" Nullable="false" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -5348,40 +5395,6 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="tbl_src_Tree">
-            <EntityTypeMapping TypeName="AMSModel.tbl_src_Tree">
-              <MappingFragment StoreEntitySet="tbl_src_Tree">
-                <ScalarProperty Name="Locatioon" ColumnName="Locatioon" />
-                <ScalarProperty Name="TreeID" ColumnName="TreeID" />
-                <ScalarProperty Name="Fk_FieldID" ColumnName="Fk_FieldID" />
-                <ScalarProperty Name="Fk_TreeType" ColumnName="Fk_TreeType" />
-                <ScalarProperty Name="BaseCultivar" ColumnName="BaseCultivar" />
-                <ScalarProperty Name="BaseType" ColumnName="BaseType" />
-                <ScalarProperty Name="ScionCultivar" ColumnName="ScionCultivar" />
-                <ScalarProperty Name="DatePlanting" ColumnName="DatePlanting" />
-                <ScalarProperty Name="SubInformation" ColumnName="SubInformation" />
-                <ScalarProperty Name="CantaminationHistory" ColumnName="CantaminationHistory" />
-                <ScalarProperty Name="TreeYeild" ColumnName="TreeYeild" />
-                <ScalarProperty Name="Row" ColumnName="Row" />
-                <ScalarProperty Name="Column" ColumnName="Column" />
-                <ScalarProperty Name="MainCultivar" ColumnName="MainCultivar" />
-                <ScalarProperty Name="ScionLocation" ColumnName="ScionLocation" />
-                <ScalarProperty Name="BaseBuyLocation" ColumnName="BaseBuyLocation" />
-                <ScalarProperty Name="DateScion" ColumnName="DateScion" />
-                <ScalarProperty Name="TransplantType" ColumnName="TransplantType" />
-                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
-                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
-                <ScalarProperty Name="CreateUserID" ColumnName="CreateUserID" />
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-                <ScalarProperty Name="InactivationUserID" ColumnName="InactivationUserID" />
-                <ScalarProperty Name="InactivationDate" ColumnName="InactivationDate" />
-                <ScalarProperty Name="UpdateUserID" ColumnName="UpdateUserID" />
-                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="tbl_src_TreeType">
             <EntityTypeMapping TypeName="AMSModel.tbl_src_TreeType">
               <MappingFragment StoreEntitySet="tbl_src_TreeType">
@@ -5899,6 +5912,69 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
                 <ScalarProperty Name="ProductionTaskID" ColumnName="ProductionTaskID" />
                 <ScalarProperty Name="StartDate" ColumnName="StartDate" />
                 <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_src_TreeLocation_Rpt" FunctionName="AMSModel.Store.spr_src_TreeLocation_Rpt">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AMSModel.spr_src_TreeLocation_Rpt_Result">
+                <ScalarProperty Name="PartName" ColumnName="PartName" />
+                <ScalarProperty Name="SubcollectionName" ColumnName="SubcollectionName" />
+                <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+                <ScalarProperty Name="PartID" ColumnName="PartID" />
+                <ScalarProperty Name="SubCollectionID" ColumnName="SubCollectionID" />
+                <ScalarProperty Name="CollectionID" ColumnName="CollectionID" />
+                <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+                <ScalarProperty Name="BaseCultivar" ColumnName="BaseCultivar" />
+                <ScalarProperty Name="BaseType" ColumnName="BaseType" />
+                <ScalarProperty Name="DatePlanting" ColumnName="DatePlanting" />
+                <ScalarProperty Name="SubInformation" ColumnName="SubInformation" />
+                <ScalarProperty Name="Row" ColumnName="Row" />
+                <ScalarProperty Name="Column" ColumnName="Column" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="tbl_src_Tree">
+            <EntityTypeMapping TypeName="AMSModel.tbl_src_Tree">
+              <MappingFragment StoreEntitySet="tbl_src_Tree">
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="UpdateUserID" ColumnName="UpdateUserID" />
+                <ScalarProperty Name="InactivationDate" ColumnName="InactivationDate" />
+                <ScalarProperty Name="InactivationUserID" ColumnName="InactivationUserID" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUserID" ColumnName="CreateUserID" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="TransplantType" ColumnName="TransplantType" />
+                <ScalarProperty Name="DateScion" ColumnName="DateScion" />
+                <ScalarProperty Name="BaseBuyLocation" ColumnName="BaseBuyLocation" />
+                <ScalarProperty Name="ScionLocation" ColumnName="ScionLocation" />
+                <ScalarProperty Name="MainCultivar" ColumnName="MainCultivar" />
+                <ScalarProperty Name="Column" ColumnName="Column" />
+                <ScalarProperty Name="Row" ColumnName="Row" />
+                <ScalarProperty Name="TreeYeild" ColumnName="TreeYeild" />
+                <ScalarProperty Name="CantaminationHistory" ColumnName="CantaminationHistory" />
+                <ScalarProperty Name="SubInformation" ColumnName="SubInformation" />
+                <ScalarProperty Name="DatePlanting" ColumnName="DatePlanting" />
+                <ScalarProperty Name="ScionCultivar" ColumnName="ScionCultivar" />
+                <ScalarProperty Name="BaseType" ColumnName="BaseType" />
+                <ScalarProperty Name="BaseCultivar" ColumnName="BaseCultivar" />
+                <ScalarProperty Name="Fk_TreeType" ColumnName="Fk_TreeType" />
+                <ScalarProperty Name="Fk_FieldID" ColumnName="Fk_FieldID" />
+                <ScalarProperty Name="TreeID" ColumnName="TreeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spr_dsb_Field_Location_rpt" FunctionName="AMSModel.Store.spr_dsb_Field_Location_rpt">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AMSModel.spr_dsb_Field_Location_rpt_Result">
+                <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+                <ScalarProperty Name="SubCollectionName" ColumnName="SubCollectionName" />
+                <ScalarProperty Name="PartName" ColumnName="PartName" />
+                <ScalarProperty Name="FieldName" ColumnName="FieldName" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

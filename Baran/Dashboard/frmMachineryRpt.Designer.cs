@@ -29,10 +29,13 @@ namespace Baran.Dashboard
         /// </summary>
         private void InitializeComponent()
         {
-            Infragistics.UltraChart.Resources.Appearance.PaintElement paintElement1 = new Infragistics.UltraChart.Resources.Appearance.PaintElement();
-            Infragistics.UltraChart.Resources.Appearance.LineChartAppearance lineChartAppearance1 = new Infragistics.UltraChart.Resources.Appearance.LineChartAppearance();
-            Infragistics.UltraChart.Resources.Appearance.LineAppearance lineAppearance1 = new Infragistics.UltraChart.Resources.Appearance.LineAppearance();
-            Infragistics.UltraChart.Resources.Appearance.PaintElement paintElement2 = new Infragistics.UltraChart.Resources.Appearance.PaintElement();
+            Infragistics.Win.Appearance appearance96 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance97 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance100 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance26 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance32 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("spr_dsb_Machinery_rpt", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("MachineryName");
@@ -50,11 +53,11 @@ namespace Baran.Dashboard
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("LinkedArea");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RowID", 0);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn15 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FreeSpace", 1);
-            Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.SummarySettings summarySettings1 = new Infragistics.Win.UltraWinGrid.SummarySettings("", Infragistics.Win.UltraWinGrid.SummaryType.Sum, null, "WorkHoursDecimal", 5, true, "spr_dsb_Machinery_rpt", 0, Infragistics.Win.UltraWinGrid.SummaryPosition.UseSummaryPositionColumn, "WorkHours", 4, true);
-            Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.SummarySettings summarySettings2 = new Infragistics.Win.UltraWinGrid.SummarySettings("", Infragistics.Win.UltraWinGrid.SummaryType.Sum, null, "TreatedArea", 6, true, "spr_dsb_Machinery_rpt", 0, Infragistics.Win.UltraWinGrid.SummaryPosition.UseSummaryPositionColumn, "TreatedArea", 6, true);
-            Infragistics.Win.Appearance appearance14 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance33 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance34 = new Infragistics.Win.Appearance();
@@ -73,16 +76,10 @@ namespace Baran.Dashboard
             Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance96 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance97 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance100 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance26 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
-            this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.chtMain = new Baran.Windows.Forms.UltraChartMain();
-            this.grdItem = new Baran.Windows.Forms.UltraGrid();
+            Infragistics.UltraChart.Resources.Appearance.PaintElement paintElement1 = new Infragistics.UltraChart.Resources.Appearance.PaintElement();
+            Infragistics.UltraChart.Resources.Appearance.LineChartAppearance lineChartAppearance1 = new Infragistics.UltraChart.Resources.Appearance.LineChartAppearance();
+            Infragistics.UltraChart.Resources.Appearance.LineAppearance lineAppearance1 = new Infragistics.UltraChart.Resources.Appearance.LineAppearance();
+            Infragistics.UltraChart.Resources.Appearance.PaintElement paintElement2 = new Infragistics.UltraChart.Resources.Appearance.PaintElement();
             this.dstDashboard1 = new BaranDataAccess.Dashboard.dstDashboard();
             this.grpControls = new Baran.Windows.Forms.GroupBox();
             this.cmbMachinery = new Baran.Windows.Forms.UltraComboEditor();
@@ -91,6 +88,9 @@ namespace Baran.Dashboard
             this.mskFromDate = new Baran.Windows.Forms.UltraMaskedDate();
             this.label1 = new Baran.Windows.Forms.Label();
             this.label2 = new Baran.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.grdItem = new Baran.Windows.Forms.UltraGrid();
+            this.chtMain = new Baran.Windows.Forms.UltraChartMain();
             ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).BeginInit();
             this.grpHeader.SuspendLayout();
@@ -99,13 +99,13 @@ namespace Baran.Dashboard
             this.grpMessage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).BeginInit();
             this.grpMain.SuspendLayout();
-            this.tableLayoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chtMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdItem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dstDashboard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpControls)).BeginInit();
             this.grpControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbMachinery)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chtMain)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMaxMin
@@ -114,24 +114,24 @@ namespace Baran.Dashboard
             // 
             // grpButons
             // 
-            this.grpButons.Location = new System.Drawing.Point(0, 651);
-            this.grpButons.Size = new System.Drawing.Size(1232, 75);
+            this.grpButons.Location = new System.Drawing.Point(0, 686);
+            this.grpButons.Size = new System.Drawing.Size(884, 75);
             // 
             // lblLine2
             // 
-            this.lblLine2.Size = new System.Drawing.Size(1230, 3);
+            this.lblLine2.Size = new System.Drawing.Size(882, 3);
             // 
             // grpHeader
             // 
-            this.grpHeader.Size = new System.Drawing.Size(1232, 75);
+            this.grpHeader.Size = new System.Drawing.Size(884, 75);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(1167, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(819, 9);
             // 
             // lblCaption
             // 
-            this.lblCaption.Location = new System.Drawing.Point(861, 22);
+            this.lblCaption.Location = new System.Drawing.Point(513, 22);
             // 
             // lblMessage
             // 
@@ -139,182 +139,170 @@ namespace Baran.Dashboard
             // 
             // lblLine1
             // 
-            this.lblLine1.Size = new System.Drawing.Size(1230, 3);
+            this.lblLine1.Size = new System.Drawing.Size(882, 3);
             // 
             // grpMessage
             // 
-            this.grpMessage.Size = new System.Drawing.Size(1232, 30);
+            this.grpMessage.Size = new System.Drawing.Size(884, 30);
             // 
             // lblLine3
             // 
-            this.lblLine3.Location = new System.Drawing.Point(1, 542);
-            this.lblLine3.Size = new System.Drawing.Size(1230, 3);
+            this.lblLine3.Location = new System.Drawing.Point(1, 577);
+            this.lblLine3.Size = new System.Drawing.Size(882, 3);
             // 
             // grpMain
             // 
-            this.grpMain.Controls.Add(this.tableLayoutPanel);
+            this.grpMain.Controls.Add(this.tableLayoutPanel1);
             this.grpMain.Controls.Add(this.grpControls);
-            this.grpMain.Size = new System.Drawing.Size(1232, 546);
+            this.grpMain.Size = new System.Drawing.Size(884, 581);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
             this.grpMain.Controls.SetChildIndex(this.grpControls, 0);
-            this.grpMain.Controls.SetChildIndex(this.tableLayoutPanel, 0);
+            this.grpMain.Controls.SetChildIndex(this.tableLayoutPanel1, 0);
             // 
-            // tableLayoutPanel
+            // dstDashboard1
             // 
-            this.tableLayoutPanel.ColumnCount = 1;
-            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel.Controls.Add(this.chtMain, 0, 0);
-            this.tableLayoutPanel.Controls.Add(this.grdItem, 0, 1);
-            this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel.Location = new System.Drawing.Point(1, 42);
-            this.tableLayoutPanel.Name = "tableLayoutPanel";
-            this.tableLayoutPanel.RowCount = 2;
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel.Size = new System.Drawing.Size(1230, 500);
-            this.tableLayoutPanel.TabIndex = 5;
+            this.dstDashboard1.DataSetName = "dstDashboard";
+            this.dstDashboard1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-//			'UltraChartMain' properties's serialization: Since 'ChartType' changes the way axes look,
-//			'ChartType' must be persisted ahead of any Axes change made in design time.
-//		
-            this.chtMain.ChartType = Infragistics.UltraChart.Shared.Styles.ChartType.LineChart;
+            // grpControls
             // 
-            // chtMain
+            this.grpControls.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
+            this.grpControls.Controls.Add(this.cmbMachinery);
+            this.grpControls.Controls.Add(this.label3);
+            this.grpControls.Controls.Add(this.mskToDate);
+            this.grpControls.Controls.Add(this.mskFromDate);
+            this.grpControls.Controls.Add(this.label1);
+            this.grpControls.Controls.Add(this.label2);
+            this.grpControls.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grpControls.Location = new System.Drawing.Point(1, 0);
+            this.grpControls.Name = "grpControls";
+            this.grpControls.Size = new System.Drawing.Size(882, 42);
+            this.grpControls.TabIndex = 4;
             // 
-            this.chtMain.Axis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
-            paintElement1.ElementType = Infragistics.UltraChart.Shared.Styles.PaintElementType.None;
-            paintElement1.Fill = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
-            this.chtMain.Axis.PE = paintElement1;
-            this.chtMain.Axis.X.Labels.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.chtMain.Axis.X.Labels.FontColor = System.Drawing.Color.White;
-            this.chtMain.Axis.X.Labels.HorizontalAlign = System.Drawing.StringAlignment.Near;
-            this.chtMain.Axis.X.Labels.ItemFormatString = "<ITEM_LABEL>";
-            this.chtMain.Axis.X.Labels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.VerticalLeftFacing;
-            this.chtMain.Axis.X.Labels.SeriesLabels.FormatString = "";
-            this.chtMain.Axis.X.Labels.SeriesLabels.HorizontalAlign = System.Drawing.StringAlignment.Near;
-            this.chtMain.Axis.X.Labels.SeriesLabels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.VerticalLeftFacing;
-            this.chtMain.Axis.X.Labels.SeriesLabels.VerticalAlign = System.Drawing.StringAlignment.Center;
-            this.chtMain.Axis.X.Labels.VerticalAlign = System.Drawing.StringAlignment.Center;
-            this.chtMain.Axis.X.LineColor = System.Drawing.Color.White;
-            this.chtMain.Axis.X.MajorGridLines.AlphaLevel = ((byte)(255));
-            this.chtMain.Axis.X.MajorGridLines.Color = System.Drawing.Color.Gainsboro;
-            this.chtMain.Axis.X.MajorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
-            this.chtMain.Axis.X.MajorGridLines.Visible = true;
-            this.chtMain.Axis.X.MinorGridLines.AlphaLevel = ((byte)(255));
-            this.chtMain.Axis.X.MinorGridLines.Color = System.Drawing.Color.LightGray;
-            this.chtMain.Axis.X.MinorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
-            this.chtMain.Axis.X.MinorGridLines.Visible = false;
-            this.chtMain.Axis.X.Visible = true;
-            this.chtMain.Axis.X2.Labels.HorizontalAlign = System.Drawing.StringAlignment.Far;
-            this.chtMain.Axis.X2.Labels.ItemFormatString = "<ITEM_LABEL>";
-            this.chtMain.Axis.X2.Labels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.VerticalLeftFacing;
-            this.chtMain.Axis.X2.Labels.SeriesLabels.FormatString = "";
-            this.chtMain.Axis.X2.Labels.SeriesLabels.HorizontalAlign = System.Drawing.StringAlignment.Far;
-            this.chtMain.Axis.X2.Labels.SeriesLabels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.VerticalLeftFacing;
-            this.chtMain.Axis.X2.Labels.SeriesLabels.VerticalAlign = System.Drawing.StringAlignment.Center;
-            this.chtMain.Axis.X2.Labels.VerticalAlign = System.Drawing.StringAlignment.Center;
-            this.chtMain.Axis.X2.MajorGridLines.AlphaLevel = ((byte)(255));
-            this.chtMain.Axis.X2.MajorGridLines.Color = System.Drawing.Color.Gainsboro;
-            this.chtMain.Axis.X2.MajorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
-            this.chtMain.Axis.X2.MajorGridLines.Visible = true;
-            this.chtMain.Axis.X2.MinorGridLines.AlphaLevel = ((byte)(255));
-            this.chtMain.Axis.X2.MinorGridLines.Color = System.Drawing.Color.LightGray;
-            this.chtMain.Axis.X2.MinorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
-            this.chtMain.Axis.X2.MinorGridLines.Visible = false;
-            this.chtMain.Axis.X2.Visible = false;
-            this.chtMain.Axis.Y.Labels.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.chtMain.Axis.Y.Labels.FontColor = System.Drawing.Color.White;
-            this.chtMain.Axis.Y.Labels.HorizontalAlign = System.Drawing.StringAlignment.Far;
-            this.chtMain.Axis.Y.Labels.ItemFormatString = "<DATA_VALUE:00.##>";
-            this.chtMain.Axis.Y.Labels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.Horizontal;
-            this.chtMain.Axis.Y.Labels.SeriesLabels.FormatString = "";
-            this.chtMain.Axis.Y.Labels.SeriesLabels.HorizontalAlign = System.Drawing.StringAlignment.Far;
-            this.chtMain.Axis.Y.Labels.SeriesLabels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.Horizontal;
-            this.chtMain.Axis.Y.Labels.SeriesLabels.VerticalAlign = System.Drawing.StringAlignment.Center;
-            this.chtMain.Axis.Y.Labels.VerticalAlign = System.Drawing.StringAlignment.Center;
-            this.chtMain.Axis.Y.LineColor = System.Drawing.Color.White;
-            this.chtMain.Axis.Y.MajorGridLines.AlphaLevel = ((byte)(255));
-            this.chtMain.Axis.Y.MajorGridLines.Color = System.Drawing.Color.Gainsboro;
-            this.chtMain.Axis.Y.MajorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
-            this.chtMain.Axis.Y.MajorGridLines.Visible = true;
-            this.chtMain.Axis.Y.MinorGridLines.AlphaLevel = ((byte)(255));
-            this.chtMain.Axis.Y.MinorGridLines.Color = System.Drawing.Color.LightGray;
-            this.chtMain.Axis.Y.MinorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
-            this.chtMain.Axis.Y.MinorGridLines.Visible = false;
-            this.chtMain.Axis.Y.Visible = true;
-            this.chtMain.Axis.Y2.Labels.HorizontalAlign = System.Drawing.StringAlignment.Near;
-            this.chtMain.Axis.Y2.Labels.ItemFormatString = "<DATA_VALUE:00.##>";
-            this.chtMain.Axis.Y2.Labels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.Horizontal;
-            this.chtMain.Axis.Y2.Labels.SeriesLabels.FormatString = "";
-            this.chtMain.Axis.Y2.Labels.SeriesLabels.HorizontalAlign = System.Drawing.StringAlignment.Near;
-            this.chtMain.Axis.Y2.Labels.SeriesLabels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.Horizontal;
-            this.chtMain.Axis.Y2.Labels.SeriesLabels.VerticalAlign = System.Drawing.StringAlignment.Center;
-            this.chtMain.Axis.Y2.Labels.VerticalAlign = System.Drawing.StringAlignment.Center;
-            this.chtMain.Axis.Y2.MajorGridLines.AlphaLevel = ((byte)(255));
-            this.chtMain.Axis.Y2.MajorGridLines.Color = System.Drawing.Color.Gainsboro;
-            this.chtMain.Axis.Y2.MajorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
-            this.chtMain.Axis.Y2.MajorGridLines.Visible = true;
-            this.chtMain.Axis.Y2.MinorGridLines.AlphaLevel = ((byte)(255));
-            this.chtMain.Axis.Y2.MinorGridLines.Color = System.Drawing.Color.LightGray;
-            this.chtMain.Axis.Y2.MinorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
-            this.chtMain.Axis.Y2.MinorGridLines.Visible = false;
-            this.chtMain.Axis.Y2.Visible = false;
-            this.chtMain.Axis.Z.Labels.HorizontalAlign = System.Drawing.StringAlignment.Near;
-            this.chtMain.Axis.Z.Labels.ItemFormatString = "<ITEM_LABEL>";
-            this.chtMain.Axis.Z.Labels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.Horizontal;
-            this.chtMain.Axis.Z.Labels.SeriesLabels.HorizontalAlign = System.Drawing.StringAlignment.Near;
-            this.chtMain.Axis.Z.Labels.SeriesLabels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.Horizontal;
-            this.chtMain.Axis.Z.Labels.SeriesLabels.VerticalAlign = System.Drawing.StringAlignment.Center;
-            this.chtMain.Axis.Z.Labels.VerticalAlign = System.Drawing.StringAlignment.Center;
-            this.chtMain.Axis.Z.MajorGridLines.AlphaLevel = ((byte)(255));
-            this.chtMain.Axis.Z.MajorGridLines.Color = System.Drawing.Color.Gainsboro;
-            this.chtMain.Axis.Z.MajorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
-            this.chtMain.Axis.Z.MajorGridLines.Visible = true;
-            this.chtMain.Axis.Z.MinorGridLines.AlphaLevel = ((byte)(255));
-            this.chtMain.Axis.Z.MinorGridLines.Color = System.Drawing.Color.LightGray;
-            this.chtMain.Axis.Z.MinorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
-            this.chtMain.Axis.Z.MinorGridLines.Visible = false;
-            this.chtMain.Axis.Z.Visible = false;
-            this.chtMain.Axis.Z2.Labels.HorizontalAlign = System.Drawing.StringAlignment.Near;
-            this.chtMain.Axis.Z2.Labels.ItemFormatString = "";
-            this.chtMain.Axis.Z2.Labels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.Horizontal;
-            this.chtMain.Axis.Z2.Labels.SeriesLabels.HorizontalAlign = System.Drawing.StringAlignment.Near;
-            this.chtMain.Axis.Z2.Labels.SeriesLabels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.Horizontal;
-            this.chtMain.Axis.Z2.Labels.SeriesLabels.VerticalAlign = System.Drawing.StringAlignment.Center;
-            this.chtMain.Axis.Z2.Labels.VerticalAlign = System.Drawing.StringAlignment.Center;
-            this.chtMain.Axis.Z2.MajorGridLines.AlphaLevel = ((byte)(255));
-            this.chtMain.Axis.Z2.MajorGridLines.Color = System.Drawing.Color.Gainsboro;
-            this.chtMain.Axis.Z2.MajorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
-            this.chtMain.Axis.Z2.MajorGridLines.Visible = true;
-            this.chtMain.Axis.Z2.MinorGridLines.AlphaLevel = ((byte)(255));
-            this.chtMain.Axis.Z2.MinorGridLines.Color = System.Drawing.Color.LightGray;
-            this.chtMain.Axis.Z2.MinorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
-            this.chtMain.Axis.Z2.MinorGridLines.Visible = false;
-            this.chtMain.Axis.Z2.Visible = false;
-            this.chtMain.BackColor = System.Drawing.Color.Transparent;
-            this.chtMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.chtMain.ColorModel.AlphaLevel = ((byte)(150));
-            this.chtMain.ColorModel.ColorBegin = System.Drawing.Color.Gold;
-            this.chtMain.ColorModel.ColorEnd = System.Drawing.Color.Red;
-            this.chtMain.ColorModel.ModelStyle = Infragistics.UltraChart.Shared.Styles.ColorModels.Office2007Style;
-            this.chtMain.Data.SwapRowsAndColumns = true;
-            this.chtMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chtMain.EmptyChartText = "";
-            this.chtMain.Legend.BackgroundColor = System.Drawing.Color.Transparent;
-            this.chtMain.Legend.BorderColor = System.Drawing.Color.White;
-            this.chtMain.Legend.FontColor = System.Drawing.Color.White;
-            this.chtMain.Legend.SpanPercentage = 10;
-            this.chtMain.Legend.Visible = true;
-            paintElement2.ElementType = Infragistics.UltraChart.Shared.Styles.PaintElementType.None;
-            lineAppearance1.IconAppearance.PE = paintElement2;
-            lineAppearance1.Thickness = 3;
-            lineChartAppearance1.LineAppearances.Add(lineAppearance1);
-            lineChartAppearance1.Thickness = 15;
-            this.chtMain.LineChart = lineChartAppearance1;
-            this.chtMain.Location = new System.Drawing.Point(3, 3);
-            this.chtMain.Name = "chtMain";
-            this.chtMain.Size = new System.Drawing.Size(1224, 194);
-            this.chtMain.TabIndex = 3;
+            // cmbMachinery
+            // 
+            this.cmbMachinery.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            appearance96.BackColor = System.Drawing.Color.Transparent;
+            appearance96.BorderColor = System.Drawing.Color.LightGray;
+            appearance96.ForeColor = System.Drawing.Color.White;
+            appearance96.TextHAlignAsString = "Right";
+            appearance96.TextVAlignAsString = "Middle";
+            this.cmbMachinery.Appearance = appearance96;
+            this.cmbMachinery.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Suggest;
+            this.cmbMachinery.BackColor = System.Drawing.Color.Transparent;
+            this.cmbMachinery.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
+            this.cmbMachinery.Editable = Baran.Windows.Forms.Editable.Editable;
+            this.cmbMachinery.InputLanguage = Baran.Windows.Forms.InputLanguage.Farsi;
+            appearance97.BackColor = System.Drawing.Color.Transparent;
+            appearance97.TextHAlignAsString = "Right";
+            appearance97.TextVAlignAsString = "Middle";
+            this.cmbMachinery.ItemAppearance = appearance97;
+            this.cmbMachinery.Location = new System.Drawing.Point(19, 9);
+            this.cmbMachinery.Name = "cmbMachinery";
+            this.cmbMachinery.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cmbMachinery.Size = new System.Drawing.Size(460, 22);
+            this.cmbMachinery.TabIndex = 127;
+            this.cmbMachinery.ValueChanged += new System.EventHandler(this.cmbMachinery_ValueChanged);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            appearance100.ForeColor = System.Drawing.Color.White;
+            appearance100.TextHAlignAsString = "Right";
+            appearance100.TextVAlignAsString = "Middle";
+            this.label3.Appearance = appearance100;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(478, 13);
+            this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label3.Size = new System.Drawing.Size(67, 15);
+            this.label3.TabIndex = 128;
+            this.label3.Text = ": ماشین آلات";
+            // 
+            // mskToDate
+            // 
+            this.mskToDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            appearance26.BackColor = System.Drawing.Color.Transparent;
+            appearance26.ForeColor = System.Drawing.Color.White;
+            appearance26.TextHAlignAsString = "Center";
+            this.mskToDate.Appearance = appearance26;
+            this.mskToDate.DataMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.IncludeBoth;
+            this.mskToDate.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
+            this.mskToDate.Editable = Baran.Windows.Forms.Editable.Editable;
+            this.mskToDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
+            this.mskToDate.InputMask = "yyyy/mm/dd";
+            this.mskToDate.Location = new System.Drawing.Point(550, 9);
+            this.mskToDate.Name = "mskToDate";
+            this.mskToDate.Size = new System.Drawing.Size(90, 21);
+            this.mskToDate.TabIndex = 126;
+            this.mskToDate.Text = "____/__/__";
+            // 
+            // mskFromDate
+            // 
+            this.mskFromDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            appearance18.BackColor = System.Drawing.Color.Transparent;
+            appearance18.ForeColor = System.Drawing.Color.White;
+            appearance18.TextHAlignAsString = "Center";
+            this.mskFromDate.Appearance = appearance18;
+            this.mskFromDate.DataMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.IncludeBoth;
+            this.mskFromDate.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
+            this.mskFromDate.Editable = Baran.Windows.Forms.Editable.Editable;
+            this.mskFromDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
+            this.mskFromDate.InputMask = "yyyy/mm/dd";
+            this.mskFromDate.Location = new System.Drawing.Point(722, 10);
+            this.mskFromDate.Name = "mskFromDate";
+            this.mskFromDate.Size = new System.Drawing.Size(90, 21);
+            this.mskFromDate.TabIndex = 125;
+            this.mskFromDate.Text = "____/__/__";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            appearance2.ForeColor = System.Drawing.Color.LightGray;
+            appearance2.TextHAlignAsString = "Right";
+            appearance2.TextVAlignAsString = "Middle";
+            this.label1.Appearance = appearance2;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.Location = new System.Drawing.Point(817, 12);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(48, 16);
+            this.label1.TabIndex = 124;
+            this.label1.Text = ": از تاریخ";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            appearance8.ForeColor = System.Drawing.Color.LightGray;
+            appearance8.TextHAlignAsString = "Right";
+            appearance8.TextVAlignAsString = "Middle";
+            this.label2.Appearance = appearance8;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label2.Location = new System.Drawing.Point(646, 11);
+            this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label2.Size = new System.Drawing.Size(47, 16);
+            this.label2.TabIndex = 123;
+            this.label2.Text = ": تا تاریخ";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.grdItem, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.chtMain, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 42);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 250F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 400F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(882, 535);
+            this.tableLayoutPanel1.TabIndex = 5;
             // 
             // grdItem
             // 
@@ -389,7 +377,7 @@ namespace Baran.Dashboard
             ultraGridColumn15.Header.Caption = "";
             ultraGridColumn15.Header.VisiblePosition = 0;
             ultraGridColumn15.MergedCellStyle = Infragistics.Win.UltraWinGrid.MergedCellStyle.Always;
-            ultraGridColumn15.Width = 297;
+            ultraGridColumn15.Width = 41;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2,
@@ -407,19 +395,20 @@ namespace Baran.Dashboard
             ultraGridColumn14,
             ultraGridColumn15});
             ultraGridBand1.Override.SummaryDisplayArea = Infragistics.Win.UltraWinGrid.SummaryDisplayAreas.BottomFixed;
-            appearance12.ForeColor = System.Drawing.Color.DarkBlue;
-            ultraGridBand1.Override.SummaryValueAppearance = appearance12;
+            appearance1.ForeColor = System.Drawing.Color.DarkBlue;
+            ultraGridBand1.Override.SummaryValueAppearance = appearance1;
             summarySettings1.DisplayFormat = "{0:#,###,###,###.##}";
-            summarySettings1.GroupBySummaryValueAppearance = appearance13;
+            summarySettings1.GroupBySummaryValueAppearance = appearance10;
             summarySettings2.DisplayFormat = "{0:#,###,###,###.##}";
-            summarySettings2.GroupBySummaryValueAppearance = appearance14;
+            summarySettings2.GroupBySummaryValueAppearance = appearance11;
             ultraGridBand1.Summaries.AddRange(new Infragistics.Win.UltraWinGrid.SummarySettings[] {
             summarySettings1,
             summarySettings2});
             ultraGridBand1.SummaryFooterCaption = "";
             this.grdItem.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdItem.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
-            appearance3.ForeColor = System.Drawing.Color.DarkBlue;
+            appearance3.BackColor = System.Drawing.Color.WhiteSmoke;
+            appearance3.ForeColor = System.Drawing.Color.Black;
             this.grdItem.DisplayLayout.CaptionAppearance = appearance3;
             this.grdItem.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.True;
             appearance33.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -526,148 +515,166 @@ namespace Baran.Dashboard
             this.grdItem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdItem.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.grdItem.InputLanguage = Baran.Windows.Forms.InputLanguage.Farsi;
-            this.grdItem.Location = new System.Drawing.Point(3, 203);
+            this.grdItem.Location = new System.Drawing.Point(3, 253);
             this.grdItem.Name = "grdItem";
-            this.grdItem.Size = new System.Drawing.Size(1224, 294);
+            this.grdItem.Size = new System.Drawing.Size(876, 394);
             this.grdItem.SumColumnsWidth = 927;
-            this.grdItem.TabIndex = 4;
-            this.grdItem.AfterRowFilterChanged += new Infragistics.Win.UltraWinGrid.AfterRowFilterChangedEventHandler(this.grdItem_AfterRowFilterChanged);
+            this.grdItem.TabIndex = 6;
             // 
-            // dstDashboard1
+//			'UltraChartMain' properties's serialization: Since 'ChartType' changes the way axes look,
+//			'ChartType' must be persisted ahead of any Axes change made in design time.
+//		
+            this.chtMain.ChartType = Infragistics.UltraChart.Shared.Styles.ChartType.LineChart;
             // 
-            this.dstDashboard1.DataSetName = "dstDashboard";
-            this.dstDashboard1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // chtMain
             // 
-            // grpControls
-            // 
-            this.grpControls.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
-            this.grpControls.Controls.Add(this.cmbMachinery);
-            this.grpControls.Controls.Add(this.label3);
-            this.grpControls.Controls.Add(this.mskToDate);
-            this.grpControls.Controls.Add(this.mskFromDate);
-            this.grpControls.Controls.Add(this.label1);
-            this.grpControls.Controls.Add(this.label2);
-            this.grpControls.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpControls.Location = new System.Drawing.Point(1, 0);
-            this.grpControls.Name = "grpControls";
-            this.grpControls.Size = new System.Drawing.Size(1230, 42);
-            this.grpControls.TabIndex = 4;
-            // 
-            // cmbMachinery
-            // 
-            this.cmbMachinery.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            appearance96.BackColor = System.Drawing.Color.Transparent;
-            appearance96.BorderColor = System.Drawing.Color.LightGray;
-            appearance96.ForeColor = System.Drawing.Color.White;
-            appearance96.TextHAlignAsString = "Right";
-            appearance96.TextVAlignAsString = "Middle";
-            this.cmbMachinery.Appearance = appearance96;
-            this.cmbMachinery.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Suggest;
-            this.cmbMachinery.BackColor = System.Drawing.Color.Transparent;
-            this.cmbMachinery.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
-            this.cmbMachinery.Editable = Baran.Windows.Forms.Editable.Editable;
-            this.cmbMachinery.InputLanguage = Baran.Windows.Forms.InputLanguage.Farsi;
-            appearance97.BackColor = System.Drawing.Color.Transparent;
-            appearance97.TextHAlignAsString = "Right";
-            appearance97.TextVAlignAsString = "Middle";
-            this.cmbMachinery.ItemAppearance = appearance97;
-            this.cmbMachinery.Location = new System.Drawing.Point(154, 9);
-            this.cmbMachinery.Name = "cmbMachinery";
-            this.cmbMachinery.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbMachinery.Size = new System.Drawing.Size(673, 22);
-            this.cmbMachinery.TabIndex = 127;
-            this.cmbMachinery.ValueChanged += new System.EventHandler(this.cmbMachinery_ValueChanged);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance100.ForeColor = System.Drawing.Color.White;
-            appearance100.TextHAlignAsString = "Right";
-            appearance100.TextVAlignAsString = "Middle";
-            this.label3.Appearance = appearance100;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(826, 13);
-            this.label3.Name = "label3";
-            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(67, 15);
-            this.label3.TabIndex = 128;
-            this.label3.Text = ": ماشین آلات";
-            // 
-            // mskToDate
-            // 
-            this.mskToDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance26.BackColor = System.Drawing.Color.Transparent;
-            appearance26.ForeColor = System.Drawing.Color.White;
-            appearance26.TextHAlignAsString = "Center";
-            this.mskToDate.Appearance = appearance26;
-            this.mskToDate.DataMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.IncludeBoth;
-            this.mskToDate.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
-            this.mskToDate.Editable = Baran.Windows.Forms.Editable.Editable;
-            this.mskToDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
-            this.mskToDate.InputMask = "yyyy/mm/dd";
-            this.mskToDate.Location = new System.Drawing.Point(898, 9);
-            this.mskToDate.Name = "mskToDate";
-            this.mskToDate.Size = new System.Drawing.Size(90, 21);
-            this.mskToDate.TabIndex = 126;
-            this.mskToDate.Text = "____/__/__";
-            // 
-            // mskFromDate
-            // 
-            this.mskFromDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance18.BackColor = System.Drawing.Color.Transparent;
-            appearance18.ForeColor = System.Drawing.Color.White;
-            appearance18.TextHAlignAsString = "Center";
-            this.mskFromDate.Appearance = appearance18;
-            this.mskFromDate.DataMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.IncludeBoth;
-            this.mskFromDate.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
-            this.mskFromDate.Editable = Baran.Windows.Forms.Editable.Editable;
-            this.mskFromDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
-            this.mskFromDate.InputMask = "yyyy/mm/dd";
-            this.mskFromDate.Location = new System.Drawing.Point(1070, 10);
-            this.mskFromDate.Name = "mskFromDate";
-            this.mskFromDate.Size = new System.Drawing.Size(90, 21);
-            this.mskFromDate.TabIndex = 125;
-            this.mskFromDate.Text = "____/__/__";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance2.ForeColor = System.Drawing.Color.LightGray;
-            appearance2.TextHAlignAsString = "Right";
-            appearance2.TextVAlignAsString = "Middle";
-            this.label1.Appearance = appearance2;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(1165, 12);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(48, 16);
-            this.label1.TabIndex = 124;
-            this.label1.Text = ": از تاریخ";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance8.ForeColor = System.Drawing.Color.LightGray;
-            appearance8.TextHAlignAsString = "Right";
-            appearance8.TextVAlignAsString = "Middle";
-            this.label2.Appearance = appearance8;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(994, 11);
-            this.label2.Name = "label2";
-            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(47, 16);
-            this.label2.TabIndex = 123;
-            this.label2.Text = ": تا تاریخ";
+            this.chtMain.Axis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
+            paintElement1.ElementType = Infragistics.UltraChart.Shared.Styles.PaintElementType.None;
+            paintElement1.Fill = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
+            this.chtMain.Axis.PE = paintElement1;
+            this.chtMain.Axis.X.Labels.Flip = true;
+            this.chtMain.Axis.X.Labels.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.chtMain.Axis.X.Labels.FontColor = System.Drawing.Color.White;
+            this.chtMain.Axis.X.Labels.HorizontalAlign = System.Drawing.StringAlignment.Near;
+            this.chtMain.Axis.X.Labels.ItemFormatString = "<ITEM_LABEL>";
+            this.chtMain.Axis.X.Labels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.VerticalLeftFacing;
+            this.chtMain.Axis.X.Labels.SeriesLabels.FormatString = "";
+            this.chtMain.Axis.X.Labels.SeriesLabels.HorizontalAlign = System.Drawing.StringAlignment.Near;
+            this.chtMain.Axis.X.Labels.SeriesLabels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.VerticalLeftFacing;
+            this.chtMain.Axis.X.Labels.SeriesLabels.VerticalAlign = System.Drawing.StringAlignment.Center;
+            this.chtMain.Axis.X.Labels.VerticalAlign = System.Drawing.StringAlignment.Near;
+            this.chtMain.Axis.X.LineColor = System.Drawing.Color.White;
+            this.chtMain.Axis.X.MajorGridLines.AlphaLevel = ((byte)(255));
+            this.chtMain.Axis.X.MajorGridLines.Color = System.Drawing.Color.Gainsboro;
+            this.chtMain.Axis.X.MajorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
+            this.chtMain.Axis.X.MajorGridLines.Visible = true;
+            this.chtMain.Axis.X.MinorGridLines.AlphaLevel = ((byte)(255));
+            this.chtMain.Axis.X.MinorGridLines.Color = System.Drawing.Color.LightGray;
+            this.chtMain.Axis.X.MinorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
+            this.chtMain.Axis.X.MinorGridLines.Visible = false;
+            this.chtMain.Axis.X.Visible = true;
+            this.chtMain.Axis.X2.Labels.HorizontalAlign = System.Drawing.StringAlignment.Far;
+            this.chtMain.Axis.X2.Labels.ItemFormatString = "<ITEM_LABEL>";
+            this.chtMain.Axis.X2.Labels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.VerticalLeftFacing;
+            this.chtMain.Axis.X2.Labels.SeriesLabels.FormatString = "";
+            this.chtMain.Axis.X2.Labels.SeriesLabels.HorizontalAlign = System.Drawing.StringAlignment.Far;
+            this.chtMain.Axis.X2.Labels.SeriesLabels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.VerticalLeftFacing;
+            this.chtMain.Axis.X2.Labels.SeriesLabels.VerticalAlign = System.Drawing.StringAlignment.Center;
+            this.chtMain.Axis.X2.Labels.VerticalAlign = System.Drawing.StringAlignment.Center;
+            this.chtMain.Axis.X2.MajorGridLines.AlphaLevel = ((byte)(255));
+            this.chtMain.Axis.X2.MajorGridLines.Color = System.Drawing.Color.Gainsboro;
+            this.chtMain.Axis.X2.MajorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
+            this.chtMain.Axis.X2.MajorGridLines.Visible = true;
+            this.chtMain.Axis.X2.MinorGridLines.AlphaLevel = ((byte)(255));
+            this.chtMain.Axis.X2.MinorGridLines.Color = System.Drawing.Color.LightGray;
+            this.chtMain.Axis.X2.MinorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
+            this.chtMain.Axis.X2.MinorGridLines.Visible = false;
+            this.chtMain.Axis.X2.Visible = false;
+            this.chtMain.Axis.Y.Labels.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.chtMain.Axis.Y.Labels.FontColor = System.Drawing.Color.White;
+            this.chtMain.Axis.Y.Labels.HorizontalAlign = System.Drawing.StringAlignment.Far;
+            this.chtMain.Axis.Y.Labels.ItemFormatString = "<DATA_VALUE:00.##>";
+            this.chtMain.Axis.Y.Labels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.Horizontal;
+            this.chtMain.Axis.Y.Labels.SeriesLabels.FormatString = "";
+            this.chtMain.Axis.Y.Labels.SeriesLabels.HorizontalAlign = System.Drawing.StringAlignment.Far;
+            this.chtMain.Axis.Y.Labels.SeriesLabels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.Horizontal;
+            this.chtMain.Axis.Y.Labels.SeriesLabels.VerticalAlign = System.Drawing.StringAlignment.Center;
+            this.chtMain.Axis.Y.Labels.VerticalAlign = System.Drawing.StringAlignment.Center;
+            this.chtMain.Axis.Y.LineColor = System.Drawing.Color.White;
+            this.chtMain.Axis.Y.MajorGridLines.AlphaLevel = ((byte)(255));
+            this.chtMain.Axis.Y.MajorGridLines.Color = System.Drawing.Color.Gainsboro;
+            this.chtMain.Axis.Y.MajorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
+            this.chtMain.Axis.Y.MajorGridLines.Visible = true;
+            this.chtMain.Axis.Y.MinorGridLines.AlphaLevel = ((byte)(255));
+            this.chtMain.Axis.Y.MinorGridLines.Color = System.Drawing.Color.LightGray;
+            this.chtMain.Axis.Y.MinorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
+            this.chtMain.Axis.Y.MinorGridLines.Visible = false;
+            this.chtMain.Axis.Y.Visible = true;
+            this.chtMain.Axis.Y2.Labels.HorizontalAlign = System.Drawing.StringAlignment.Near;
+            this.chtMain.Axis.Y2.Labels.ItemFormatString = "<DATA_VALUE:00.##>";
+            this.chtMain.Axis.Y2.Labels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.Horizontal;
+            this.chtMain.Axis.Y2.Labels.SeriesLabels.FormatString = "";
+            this.chtMain.Axis.Y2.Labels.SeriesLabels.HorizontalAlign = System.Drawing.StringAlignment.Near;
+            this.chtMain.Axis.Y2.Labels.SeriesLabels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.Horizontal;
+            this.chtMain.Axis.Y2.Labels.SeriesLabels.VerticalAlign = System.Drawing.StringAlignment.Center;
+            this.chtMain.Axis.Y2.Labels.VerticalAlign = System.Drawing.StringAlignment.Center;
+            this.chtMain.Axis.Y2.MajorGridLines.AlphaLevel = ((byte)(255));
+            this.chtMain.Axis.Y2.MajorGridLines.Color = System.Drawing.Color.Gainsboro;
+            this.chtMain.Axis.Y2.MajorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
+            this.chtMain.Axis.Y2.MajorGridLines.Visible = true;
+            this.chtMain.Axis.Y2.MinorGridLines.AlphaLevel = ((byte)(255));
+            this.chtMain.Axis.Y2.MinorGridLines.Color = System.Drawing.Color.LightGray;
+            this.chtMain.Axis.Y2.MinorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
+            this.chtMain.Axis.Y2.MinorGridLines.Visible = false;
+            this.chtMain.Axis.Y2.Visible = false;
+            this.chtMain.Axis.Z.Labels.HorizontalAlign = System.Drawing.StringAlignment.Near;
+            this.chtMain.Axis.Z.Labels.ItemFormatString = "<ITEM_LABEL>";
+            this.chtMain.Axis.Z.Labels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.Horizontal;
+            this.chtMain.Axis.Z.Labels.SeriesLabels.HorizontalAlign = System.Drawing.StringAlignment.Near;
+            this.chtMain.Axis.Z.Labels.SeriesLabels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.Horizontal;
+            this.chtMain.Axis.Z.Labels.SeriesLabels.VerticalAlign = System.Drawing.StringAlignment.Center;
+            this.chtMain.Axis.Z.Labels.VerticalAlign = System.Drawing.StringAlignment.Center;
+            this.chtMain.Axis.Z.MajorGridLines.AlphaLevel = ((byte)(255));
+            this.chtMain.Axis.Z.MajorGridLines.Color = System.Drawing.Color.Gainsboro;
+            this.chtMain.Axis.Z.MajorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
+            this.chtMain.Axis.Z.MajorGridLines.Visible = true;
+            this.chtMain.Axis.Z.MinorGridLines.AlphaLevel = ((byte)(255));
+            this.chtMain.Axis.Z.MinorGridLines.Color = System.Drawing.Color.LightGray;
+            this.chtMain.Axis.Z.MinorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
+            this.chtMain.Axis.Z.MinorGridLines.Visible = false;
+            this.chtMain.Axis.Z.Visible = false;
+            this.chtMain.Axis.Z2.Labels.HorizontalAlign = System.Drawing.StringAlignment.Near;
+            this.chtMain.Axis.Z2.Labels.ItemFormatString = "";
+            this.chtMain.Axis.Z2.Labels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.Horizontal;
+            this.chtMain.Axis.Z2.Labels.SeriesLabels.HorizontalAlign = System.Drawing.StringAlignment.Near;
+            this.chtMain.Axis.Z2.Labels.SeriesLabels.Orientation = Infragistics.UltraChart.Shared.Styles.TextOrientation.Horizontal;
+            this.chtMain.Axis.Z2.Labels.SeriesLabels.VerticalAlign = System.Drawing.StringAlignment.Center;
+            this.chtMain.Axis.Z2.Labels.VerticalAlign = System.Drawing.StringAlignment.Center;
+            this.chtMain.Axis.Z2.MajorGridLines.AlphaLevel = ((byte)(255));
+            this.chtMain.Axis.Z2.MajorGridLines.Color = System.Drawing.Color.Gainsboro;
+            this.chtMain.Axis.Z2.MajorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
+            this.chtMain.Axis.Z2.MajorGridLines.Visible = true;
+            this.chtMain.Axis.Z2.MinorGridLines.AlphaLevel = ((byte)(255));
+            this.chtMain.Axis.Z2.MinorGridLines.Color = System.Drawing.Color.LightGray;
+            this.chtMain.Axis.Z2.MinorGridLines.DrawStyle = Infragistics.UltraChart.Shared.Styles.LineDrawStyle.Dot;
+            this.chtMain.Axis.Z2.MinorGridLines.Visible = false;
+            this.chtMain.Axis.Z2.Visible = false;
+            this.chtMain.BackColor = System.Drawing.Color.Transparent;
+            this.chtMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.chtMain.ColorModel.AlphaLevel = ((byte)(150));
+            this.chtMain.ColorModel.ColorBegin = System.Drawing.Color.Gold;
+            this.chtMain.ColorModel.ColorEnd = System.Drawing.Color.Red;
+            this.chtMain.ColorModel.ModelStyle = Infragistics.UltraChart.Shared.Styles.ColorModels.CustomLinear;
+            this.chtMain.Data.DataMember = "spr_dsb_Machinery_rpt";
+            this.chtMain.Data.SwapRowsAndColumns = true;
+            this.chtMain.DataMember = "spr_dsb_Machinery_rpt";
+            this.chtMain.DataSource = this.dstDashboard1;
+            this.chtMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chtMain.EmptyChartText = "";
+            this.chtMain.Legend.BackgroundColor = System.Drawing.Color.Transparent;
+            this.chtMain.Legend.BorderColor = System.Drawing.Color.White;
+            this.chtMain.Legend.FontColor = System.Drawing.Color.White;
+            this.chtMain.Legend.SpanPercentage = 10;
+            this.chtMain.Legend.Visible = true;
+            paintElement2.ElementType = Infragistics.UltraChart.Shared.Styles.PaintElementType.None;
+            lineAppearance1.IconAppearance.PE = paintElement2;
+            lineAppearance1.Thickness = 3;
+            lineChartAppearance1.LineAppearances.Add(lineAppearance1);
+            lineChartAppearance1.Thickness = 15;
+            this.chtMain.LineChart = lineChartAppearance1;
+            this.chtMain.Location = new System.Drawing.Point(3, 3);
+            this.chtMain.Name = "chtMain";
+            this.chtMain.Size = new System.Drawing.Size(876, 244);
+            this.chtMain.TabIndex = 5;
             // 
             // frmMachineryRpt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1232, 726);
+            this.ClientSize = new System.Drawing.Size(884, 761);
             this.FormMessage = "";
             this.Name = "frmMachineryRpt";
+            this.ShowInTaskbar = true;
+            this.Text = "ماشین و ادوات کشاورزی";
             ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).EndInit();
             this.grpHeader.ResumeLayout(false);
@@ -676,22 +683,20 @@ namespace Baran.Dashboard
             this.grpMessage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).EndInit();
             this.grpMain.ResumeLayout(false);
-            this.tableLayoutPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chtMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdItem)).EndInit();
+            this.grpMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dstDashboard1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpControls)).EndInit();
             this.grpControls.ResumeLayout(false);
             this.grpControls.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbMachinery)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chtMain)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
-        private Windows.Forms.UltraChartMain chtMain;
         private Windows.Forms.GroupBox grpControls;
         private Windows.Forms.UltraComboEditor cmbMachinery;
         private Windows.Forms.Label label3;
@@ -699,7 +704,9 @@ namespace Baran.Dashboard
         private Windows.Forms.UltraMaskedDate mskFromDate;
         private Windows.Forms.Label label1;
         private Windows.Forms.Label label2;
-        private Windows.Forms.UltraGrid grdItem;
         private BaranDataAccess.Dashboard.dstDashboard dstDashboard1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private Windows.Forms.UltraGrid grdItem;
+        private Windows.Forms.UltraChartMain chtMain;
     }
 }

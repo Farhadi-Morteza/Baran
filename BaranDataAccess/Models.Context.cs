@@ -99,7 +99,6 @@ namespace BaranDataAccess
         public DbSet<tbl_src_Seed> tbl_src_Seed { get; set; }
         public DbSet<tbl_src_SeedType> tbl_src_SeedType { get; set; }
         public DbSet<tbl_src_Subcollection> tbl_src_Subcollection { get; set; }
-        public DbSet<tbl_src_Tree> tbl_src_Tree { get; set; }
         public DbSet<tbl_src_TreeType> tbl_src_TreeType { get; set; }
         public DbSet<tbl_src_Warehouse> tbl_src_Warehouse { get; set; }
         public DbSet<tbl_src_WarehouseType> tbl_src_WarehouseType { get; set; }
@@ -119,6 +118,7 @@ namespace BaranDataAccess
         public DbSet<tbl_src_Land> tbl_src_Land { get; set; }
         public DbSet<tbl_src_Part> tbl_src_Part { get; set; }
         public DbSet<viw_Part_Location> viw_Part_Location { get; set; }
+        public DbSet<tbl_src_Tree> tbl_src_Tree { get; set; }
     
         public virtual ObjectResult<spr_src_Land_Map_Select_Result> spr_src_Land_Map_Select(Nullable<int> action, string whereClause, string userID)
         {
@@ -335,6 +335,48 @@ namespace BaranDataAccess
                 new ObjectParameter("FieldID", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_dsb_FieldTaskList_rpt_Select_Result>("spr_dsb_FieldTaskList_rpt_Select", fieldIDParameter);
+        }
+    
+        public virtual ObjectResult<spr_src_TreeLocation_Rpt_Result> spr_src_TreeLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID)
+        {
+            var collectionIDParameter = collectionID.HasValue ?
+                new ObjectParameter("CollectionID", collectionID) :
+                new ObjectParameter("CollectionID", typeof(int));
+    
+            var subcollectionIDParameter = subcollectionID.HasValue ?
+                new ObjectParameter("SubcollectionID", subcollectionID) :
+                new ObjectParameter("SubcollectionID", typeof(int));
+    
+            var partIDParameter = partID.HasValue ?
+                new ObjectParameter("PartID", partID) :
+                new ObjectParameter("PartID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_TreeLocation_Rpt_Result>("spr_src_TreeLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter);
+        }
+    
+        public virtual ObjectResult<spr_dsb_Field_Location_rpt_Result> spr_dsb_Field_Location_rpt(Nullable<int> userID, Nullable<System.DateTime> fromDate, Nullable<System.DateTime> toDate, Nullable<int> fieldID, Nullable<int> productionID)
+        {
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+    
+            var fromDateParameter = fromDate.HasValue ?
+                new ObjectParameter("FromDate", fromDate) :
+                new ObjectParameter("FromDate", typeof(System.DateTime));
+    
+            var toDateParameter = toDate.HasValue ?
+                new ObjectParameter("ToDate", toDate) :
+                new ObjectParameter("ToDate", typeof(System.DateTime));
+    
+            var fieldIDParameter = fieldID.HasValue ?
+                new ObjectParameter("FieldID", fieldID) :
+                new ObjectParameter("FieldID", typeof(int));
+    
+            var productionIDParameter = productionID.HasValue ?
+                new ObjectParameter("ProductionID", productionID) :
+                new ObjectParameter("ProductionID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_dsb_Field_Location_rpt_Result>("spr_dsb_Field_Location_rpt", userIDParameter, fromDateParameter, toDateParameter, fieldIDParameter, productionIDParameter);
         }
     }
 }

@@ -239,6 +239,9 @@
     <Compile Include="spr_dsb_FieldTaskList_rpt_Select_Result.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
+    <Compile Include="spr_dsb_Field_Location_rpt_Result.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="spr_src_BuildingsLocation_Rpt_Result.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
@@ -258,6 +261,9 @@
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
     <Compile Include="spr_src_PartLocation_Rpt_Result.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spr_src_TreeLocation_Rpt_Result.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
     <Compile Include="spr_src_WarehouseLocation_Rpt_Result.cs">

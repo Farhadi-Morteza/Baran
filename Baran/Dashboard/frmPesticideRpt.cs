@@ -18,6 +18,17 @@ namespace Baran.Dashboard
             InitializeComponent();
         }
 
+        public frmPesticideRpt(string fromDate, string toDate)
+        {
+            InitializeComponent();
+            grpHeader.Visible = false;  
+
+            mskFromDate.Text = fromDate;
+            mskToDate.Text = toDate;
+
+            FillControls();
+        }
+
         private int? PesticideID = null;
         private Nullable<DateTime>
             FromDate
@@ -48,6 +59,11 @@ namespace Baran.Dashboard
         public override void OnConfirm()
         {
             base.OnConfirm();
+            FillControls();
+        }
+
+        private void FillControls()
+        {
 
             if (!this.ControlsValidation())
             {
@@ -57,7 +73,6 @@ namespace Baran.Dashboard
 
             BaranDataAccess.Dashboard.dstDashboardTableAdapters.spr_dsb_Pesticide_rptTableAdapter adp =
                 new BaranDataAccess.Dashboard.dstDashboardTableAdapters.spr_dsb_Pesticide_rptTableAdapter();
-            waite = new WaiteForm();
             try
             {
                 if (mskFromDate.Text != null)
@@ -66,7 +81,6 @@ namespace Baran.Dashboard
                 if (mskToDate.Text != null)
                     ToDate = DateTimeUtility.ToGregorian(mskToDate.Value.ToString());
 
-                waite.Show();
                 adp.FillPesticideTable(dstDashboard1.spr_dsb_Pesticide_rpt, CurrentUser.Instance.UserID, FromDate, ToDate, PesticideID);
                 grdItem.FreeSpaceGenerator();
 
@@ -76,7 +90,6 @@ namespace Baran.Dashboard
             {
                 OnMessage(BaranResources.DoNotDoPleaseTryAgine, PublicEnum.EnmMessageCategory.Warning);
             }
-            waite.Close();
         }
 
         public override void OnClear()

@@ -76,7 +76,6 @@
         <EntityTypeShape EntityType="AMSModel.tbl_src_Seed" Width="1.5" PointX="27.75" PointY="26.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AMSModel.tbl_src_SeedType" Width="1.5" PointX="15.75" PointY="28.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AMSModel.tbl_src_Subcollection" Width="1.5" PointX="11.25" PointY="9.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="AMSModel.tbl_src_Tree" Width="1.5" PointX="21.75" PointY="28.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AMSModel.tbl_src_TreeType" Width="1.5" PointX="29.75" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AMSModel.tbl_src_Warehouse" Width="1.5" PointX="0.75" PointY="29.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AMSModel.tbl_src_WarehouseType" Width="1.5" PointX="2.75" PointY="29.875" IsExpanded="true" />
@@ -120,6 +119,7 @@
         <AssociationConnector Association="AMSModel.FK_tbl_src_Part_tbl_src_CompanyCategory" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Part_tbl_src_Subcollection" />
         <EntityTypeShape EntityType="AMSModel.viw_Part_Location" Width="1.5" PointX="32.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AMSModel.tbl_src_Tree" Width="1.5" PointX="20.375" PointY="30.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

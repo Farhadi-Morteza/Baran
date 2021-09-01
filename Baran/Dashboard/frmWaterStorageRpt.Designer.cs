@@ -48,13 +48,13 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("LinkedArea");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FreeSpace", 0);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RowID", 1);
-            Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.SummarySettings summarySettings1 = new Infragistics.Win.UltraWinGrid.SummarySettings("", Infragistics.Win.UltraWinGrid.SummaryType.Sum, null, "UsageVolume", 2, true, "spr_dsb_WaterStorage_rpt", 0, Infragistics.Win.UltraWinGrid.SummaryPosition.UseSummaryPositionColumn, "UsageVolume", 2, true);
-            Infragistics.Win.Appearance appearance14 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.SummarySettings summarySettings2 = new Infragistics.Win.UltraWinGrid.SummarySettings("", Infragistics.Win.UltraWinGrid.SummaryType.Sum, null, "TreatedArea", 3, true, "spr_dsb_WaterStorage_rpt", 0, Infragistics.Win.UltraWinGrid.SummaryPosition.UseSummaryPositionColumn, "TreatedArea", 3, true);
-            Infragistics.Win.Appearance appearance15 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.SummarySettings summarySettings3 = new Infragistics.Win.UltraWinGrid.SummarySettings("", Infragistics.Win.UltraWinGrid.SummaryType.Sum, null, "LinkedArea", 11, true, "spr_dsb_WaterStorage_rpt", 0, Infragistics.Win.UltraWinGrid.SummaryPosition.UseSummaryPositionColumn, "LinkedArea", 11, true);
-            Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance37 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance38 = new Infragistics.Win.Appearance();
@@ -83,6 +83,7 @@
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.chtMain = new Baran.Windows.Forms.UltraChartMain();
             this.grdItem = new Baran.Windows.Forms.UltraGrid();
+            this.dstDashboard1 = new BaranDataAccess.Dashboard.dstDashboard();
             this.grpControls = new Baran.Windows.Forms.GroupBox();
             this.cmbWaterStorage = new Baran.Windows.Forms.UltraComboEditor();
             this.label3 = new Baran.Windows.Forms.Label();
@@ -90,7 +91,6 @@
             this.mskFromDate = new Baran.Windows.Forms.UltraMaskedDate();
             this.label1 = new Baran.Windows.Forms.Label();
             this.label2 = new Baran.Windows.Forms.Label();
-            this.dstDashboard1 = new BaranDataAccess.Dashboard.dstDashboard();
             ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).BeginInit();
             this.grpHeader.SuspendLayout();
@@ -102,10 +102,10 @@
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chtMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dstDashboard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpControls)).BeginInit();
             this.grpControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbWaterStorage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dstDashboard1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMaxMin
@@ -114,24 +114,24 @@
             // 
             // grpButons
             // 
-            this.grpButons.Location = new System.Drawing.Point(0, 586);
-            this.grpButons.Size = new System.Drawing.Size(952, 75);
+            this.grpButons.Location = new System.Drawing.Point(0, 686);
+            this.grpButons.Size = new System.Drawing.Size(884, 75);
             // 
             // lblLine2
             // 
-            this.lblLine2.Size = new System.Drawing.Size(950, 3);
+            this.lblLine2.Size = new System.Drawing.Size(882, 3);
             // 
             // grpHeader
             // 
-            this.grpHeader.Size = new System.Drawing.Size(952, 75);
+            this.grpHeader.Size = new System.Drawing.Size(884, 75);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(887, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(819, 9);
             // 
             // lblCaption
             // 
-            this.lblCaption.Location = new System.Drawing.Point(581, 22);
+            this.lblCaption.Location = new System.Drawing.Point(513, 22);
             // 
             // lblMessage
             // 
@@ -139,22 +139,22 @@
             // 
             // lblLine1
             // 
-            this.lblLine1.Size = new System.Drawing.Size(950, 3);
+            this.lblLine1.Size = new System.Drawing.Size(882, 3);
             // 
             // grpMessage
             // 
-            this.grpMessage.Size = new System.Drawing.Size(952, 30);
+            this.grpMessage.Size = new System.Drawing.Size(884, 30);
             // 
             // lblLine3
             // 
-            this.lblLine3.Location = new System.Drawing.Point(1, 477);
-            this.lblLine3.Size = new System.Drawing.Size(950, 3);
+            this.lblLine3.Location = new System.Drawing.Point(1, 577);
+            this.lblLine3.Size = new System.Drawing.Size(882, 3);
             // 
             // grpMain
             // 
             this.grpMain.Controls.Add(this.tableLayoutPanel);
             this.grpMain.Controls.Add(this.grpControls);
-            this.grpMain.Size = new System.Drawing.Size(952, 481);
+            this.grpMain.Size = new System.Drawing.Size(884, 581);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
             this.grpMain.Controls.SetChildIndex(this.grpControls, 0);
             this.grpMain.Controls.SetChildIndex(this.tableLayoutPanel, 0);
@@ -171,7 +171,7 @@
             this.tableLayoutPanel.RowCount = 2;
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel.Size = new System.Drawing.Size(950, 435);
+            this.tableLayoutPanel.Size = new System.Drawing.Size(882, 535);
             this.tableLayoutPanel.TabIndex = 11;
             // 
 //			'UltraChartMain' properties's serialization: Since 'ChartType' changes the way axes look,
@@ -313,7 +313,7 @@
             this.chtMain.LineChart = lineChartAppearance1;
             this.chtMain.Location = new System.Drawing.Point(3, 3);
             this.chtMain.Name = "chtMain";
-            this.chtMain.Size = new System.Drawing.Size(944, 168);
+            this.chtMain.Size = new System.Drawing.Size(876, 208);
             this.chtMain.TabIndex = 3;
             // 
             // grdItem
@@ -330,7 +330,7 @@
             ultraGridColumn1.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn1.Header.Caption = "منمبع ذخیره آب";
             ultraGridColumn1.Header.VisiblePosition = 12;
-            ultraGridColumn1.Width = 162;
+            ultraGridColumn1.Width = 96;
             ultraGridColumn2.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn2.Header.Caption = "تاریخ";
             ultraGridColumn2.Header.VisiblePosition = 11;
@@ -401,14 +401,14 @@
             ultraGridColumn13,
             ultraGridColumn14});
             ultraGridBand1.Override.SummaryDisplayArea = Infragistics.Win.UltraWinGrid.SummaryDisplayAreas.BottomFixed;
-            appearance13.ForeColor = System.Drawing.Color.DarkBlue;
-            ultraGridBand1.Override.SummaryValueAppearance = appearance13;
+            appearance1.ForeColor = System.Drawing.Color.DarkBlue;
+            ultraGridBand1.Override.SummaryValueAppearance = appearance1;
             summarySettings1.DisplayFormat = "{0:#,###,###,###.##}";
-            summarySettings1.GroupBySummaryValueAppearance = appearance14;
+            summarySettings1.GroupBySummaryValueAppearance = appearance10;
             summarySettings2.DisplayFormat = "{0:#,###,###,###.##}";
-            summarySettings2.GroupBySummaryValueAppearance = appearance15;
+            summarySettings2.GroupBySummaryValueAppearance = appearance11;
             summarySettings3.DisplayFormat = "{0:#,###,###,###.##}";
-            summarySettings3.GroupBySummaryValueAppearance = appearance16;
+            summarySettings3.GroupBySummaryValueAppearance = appearance12;
             ultraGridBand1.Summaries.AddRange(new Infragistics.Win.UltraWinGrid.SummarySettings[] {
             summarySettings1,
             summarySettings2,
@@ -416,7 +416,8 @@
             ultraGridBand1.SummaryFooterCaption = "";
             this.grdItem.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdItem.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
-            appearance3.ForeColor = System.Drawing.Color.DarkBlue;
+            appearance3.BackColor = System.Drawing.Color.WhiteSmoke;
+            appearance3.ForeColor = System.Drawing.Color.Black;
             this.grdItem.DisplayLayout.CaptionAppearance = appearance3;
             this.grdItem.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.True;
             appearance37.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -523,12 +524,17 @@
             this.grdItem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdItem.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.grdItem.InputLanguage = Baran.Windows.Forms.InputLanguage.Farsi;
-            this.grdItem.Location = new System.Drawing.Point(3, 177);
+            this.grdItem.Location = new System.Drawing.Point(3, 217);
             this.grdItem.Name = "grdItem";
-            this.grdItem.Size = new System.Drawing.Size(944, 255);
-            this.grdItem.SumColumnsWidth = 975;
+            this.grdItem.Size = new System.Drawing.Size(876, 315);
+            this.grdItem.SumColumnsWidth = 909;
             this.grdItem.TabIndex = 4;
             this.grdItem.AfterRowFilterChanged += new Infragistics.Win.UltraWinGrid.AfterRowFilterChangedEventHandler(this.grdItem_AfterRowFilterChanged);
+            // 
+            // dstDashboard1
+            // 
+            this.dstDashboard1.DataSetName = "dstDashboard";
+            this.dstDashboard1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // grpControls
             // 
@@ -542,7 +548,7 @@
             this.grpControls.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpControls.Location = new System.Drawing.Point(1, 0);
             this.grpControls.Name = "grpControls";
-            this.grpControls.Size = new System.Drawing.Size(950, 42);
+            this.grpControls.Size = new System.Drawing.Size(882, 42);
             this.grpControls.TabIndex = 10;
             // 
             // cmbWaterStorage
@@ -564,10 +570,10 @@
             appearance97.TextHAlignAsString = "Right";
             appearance97.TextVAlignAsString = "Middle";
             this.cmbWaterStorage.ItemAppearance = appearance97;
-            this.cmbWaterStorage.Location = new System.Drawing.Point(282, 8);
+            this.cmbWaterStorage.Location = new System.Drawing.Point(19, 8);
             this.cmbWaterStorage.Name = "cmbWaterStorage";
             this.cmbWaterStorage.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbWaterStorage.Size = new System.Drawing.Size(244, 22);
+            this.cmbWaterStorage.Size = new System.Drawing.Size(439, 22);
             this.cmbWaterStorage.TabIndex = 129;
             this.cmbWaterStorage.ValueChanged += new System.EventHandler(this.cmbWaterStorage_ValueChanged);
             // 
@@ -579,7 +585,7 @@
             appearance100.TextVAlignAsString = "Middle";
             this.label3.Appearance = appearance100;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(532, 13);
+            this.label3.Location = new System.Drawing.Point(464, 13);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(80, 15);
@@ -598,7 +604,7 @@
             this.mskToDate.Editable = Baran.Windows.Forms.Editable.Editable;
             this.mskToDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
             this.mskToDate.InputMask = "yyyy/mm/dd";
-            this.mskToDate.Location = new System.Drawing.Point(618, 9);
+            this.mskToDate.Location = new System.Drawing.Point(550, 9);
             this.mskToDate.Name = "mskToDate";
             this.mskToDate.Size = new System.Drawing.Size(90, 21);
             this.mskToDate.TabIndex = 126;
@@ -616,7 +622,7 @@
             this.mskFromDate.Editable = Baran.Windows.Forms.Editable.Editable;
             this.mskFromDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
             this.mskFromDate.InputMask = "yyyy/mm/dd";
-            this.mskFromDate.Location = new System.Drawing.Point(790, 10);
+            this.mskFromDate.Location = new System.Drawing.Point(722, 10);
             this.mskFromDate.Name = "mskFromDate";
             this.mskFromDate.Size = new System.Drawing.Size(90, 21);
             this.mskFromDate.TabIndex = 125;
@@ -631,7 +637,7 @@
             this.label1.Appearance = appearance2;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(885, 12);
+            this.label1.Location = new System.Drawing.Point(817, 12);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(48, 16);
@@ -647,24 +653,22 @@
             this.label2.Appearance = appearance8;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(714, 11);
+            this.label2.Location = new System.Drawing.Point(646, 11);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(47, 16);
             this.label2.TabIndex = 123;
             this.label2.Text = ": تا تاریخ";
             // 
-            // dstDashboard1
-            // 
-            this.dstDashboard1.DataSetName = "dstDashboard";
-            this.dstDashboard1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // frmWaterStorageRpt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(952, 661);
+            this.ClientSize = new System.Drawing.Size(884, 761);
             this.FormMessage = "";
             this.Name = "frmWaterStorageRpt";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = true;
+            this.Text = "منابع ذخیره آب";
             ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).EndInit();
             this.grpHeader.ResumeLayout(false);
@@ -676,11 +680,11 @@
             this.tableLayoutPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chtMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dstDashboard1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpControls)).EndInit();
             this.grpControls.ResumeLayout(false);
             this.grpControls.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbWaterStorage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dstDashboard1)).EndInit();
             this.ResumeLayout(false);
 
         }

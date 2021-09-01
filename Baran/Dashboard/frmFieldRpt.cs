@@ -7,7 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Baran.Classes.Common;
-
+using BaranDataAccess;
+using GMap.NET;
+using GMap.NET.WindowsForms;
+using GMap.NET.WindowsForms.Markers;
 
 namespace Baran.Dashboard
 {
@@ -16,9 +19,26 @@ namespace Baran.Dashboard
         public frmFieldRpt()
         {
             InitializeComponent();
+            setDate();
+
+            for(int i = 0; i < tlpMain.RowCount; i++)
+            {
+                tlpMain.RowStyles[i].Height = 300;
+            }
+
+            MainMap.Overlays.Add(routes);
+            MainMap.Overlays.Add(markers);
+
         }
 
-        WaiteForm waite;
+
+
+     
+
+    internal readonly GMapOverlay routes = new GMapOverlay("routes");
+    internal readonly GMapOverlay markers = new GMapOverlay("markers");
+
+    WaiteForm waite;
         private int? FieldID = null, ProductionID = null;
         private Nullable<DateTime> FromDate , ToDate;
 
@@ -34,7 +54,11 @@ namespace Baran.Dashboard
 
             tblProductionCmb = (BaranDataAccess.Production.dstProducts.spr_prd_Production_cmb_SelectDataTable)cmbProduction.DataSource;
 
+            mskFromDate.Text = CurrentDate.Instance.CurrentDateShamsi;
+            mskToDate.Text = DateTimeUtility.AddDay(CurrentDate.Instance.CurrentDateShamsi, 30);
+
             DrowCharts();
+         
         }
 
         public override void OnActiveForm()
@@ -56,33 +80,101 @@ namespace Baran.Dashboard
                 return;
             }
 
-            waite = new WaiteForm();
-            try
-            {
-                if (mskFromDate.Value.ToString() != string.Empty)
-                    FromDate = DateTimeUtility.ToGregorian(mskFromDate.Value.ToString());
+             DrowCharts();
 
-                if (mskToDate.Value.ToString() != string.Empty)
-                    ToDate = DateTimeUtility.ToGregorian(mskToDate.Value.ToString());
-
-
-                DrowCharts();
-            }
-            catch 
-            {
-
-            }
         }
 
         private void DrowCharts()
         {
-            DrowWorker();
-            DrowMachinery();
-            DrowFertilizer();
-            DrowPesticide();
-            DrowWater();
-            DrowWaterStorage();
-            DrowChemicalAnalys();
+      
+            try
+            {
+                if (mskFromDate.Value.ToString() == "")
+                    FromDate = null;
+                else
+                    FromDate = DateTimeUtility.ToGregorian(mskFromDate.Value.ToString());
+                
+
+                if (mskToDate.Value.ToString() != "")
+                    ToDate = DateTimeUtility.ToGregorian(mskToDate.Value.ToString());
+                else
+                    ToDate = null;
+
+                FillGride();
+                DrowWorker();
+                DrowMachinery();
+                DrowFertilizer();
+                DrowPesticide();
+                DrowWater();
+                DrowWaterStorage();
+                DrowChemicalAnalys();
+                FillgrdProduction();
+                DrowMap();
+                
+            }
+            catch
+            {
+
+            }
+      
+        }
+
+        private void DrowMap()
+        {
+            using (var dbContext = new AMSEntities())
+            {
+                var fields = dbContext.spr_dsb_Field_Location_rpt(CurrentUser.Instance.UserID, FromDate, ToDate, FieldID, ProductionID);
+
+                foreach (var result in fields)
+                {
+                    if (result.LocationPolygon != null)
+                    {
+                        List<PointLatLng> points = new List<PointLatLng>();
+                        points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(result.LocationPolygon.ProviderValue.ToString());
+
+                        GMapRoute route = new GMapRoute(points, "hahahahaha");
+                        {
+                            route.Stroke = new Pen(Color.FromArgb(255, PublicVariables.FieldColor));
+                            route.Stroke.Width = PublicVariables.StrokeWidth;
+                            route.Stroke.DashStyle = PublicVariables.StrokeDashStyle;
+                        }
+
+                        string strTooltip = $"کشت و صنعت: {result.CollectionName} " +
+                            $"\n واحد: {result.SubCollectionName} " +
+                            $"\n واحد فرعی: {result.PartName}" +
+                            $"\n نام : {result.FieldName} ";
+
+                        GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], new Bitmap(System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.FieldMarker))));
+                        mark.ToolTipText = strTooltip;
+                        mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+                        mark.ToolTip.Fill = Brushes.Black;
+                        mark.ToolTip.Foreground = Brushes.White;
+                        mark.ToolTip.Stroke = Pens.Black;
+                        mark.ToolTip.TextPadding = new Size(20, 20);
+                        mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+
+                        markers.Markers.Add(mark);
+                        routes.Routes.Add(route);
+                    }
+                }
+                MainMap.ZoomAndCenterRoutes("routes");
+            }
+        }
+
+        private void FillGride()
+        {
+            BaranDataAccess.Dashboard.dstFieldTableAdapters.spr_dsb_Field_ProducttionTask_rptTableAdapter adp =
+                new BaranDataAccess.Dashboard.dstFieldTableAdapters.spr_dsb_Field_ProducttionTask_rptTableAdapter();
+            adp.FillFieldProductionTaskTable(dstField1.spr_dsb_Field_ProducttionTask_rpt, CurrentUser.Instance.UserID, FromDate, ToDate, FieldID, ProductionID);
+            grdItem.FreeSpaceGenerator();
+        }
+
+        private void FillgrdProduction()
+        {
+            BaranDataAccess.Dashboard.dstFieldTableAdapters.spr_dsb_Field_Producttion_rptTableAdapter adp =
+                new BaranDataAccess.Dashboard.dstFieldTableAdapters.spr_dsb_Field_Producttion_rptTableAdapter();
+            adp.FillFieldProductionTable(dstField1.spr_dsb_Field_Producttion_rpt, CurrentUser.Instance.UserID, FromDate, ToDate, FieldID, ProductionID);
+            grdProduction.FreeSpaceGenerator();
         }
 
         private void DrowWorker()
@@ -185,6 +277,11 @@ namespace Baran.Dashboard
 
             chtChemicalAnalys.DataSource = tbl;
             chtChemicalAnalys.DataMember = tbl.TableName;
+
+            if (tbl.Rows.Count > 0)
+                chtChemicalAnalys.Visible = true;
+            else
+                chtChemicalAnalys.Visible = false;
         }
 
         public override void OnClear()
@@ -196,6 +293,7 @@ namespace Baran.Dashboard
             ProductionID = null;
             FromDate = null;
             ToDate = null;
+            chtChemicalAnalys.Visible = false;
         }
 
         private bool ControlsValidation()
@@ -221,6 +319,20 @@ namespace Baran.Dashboard
             return blnResult;
         }
 
+        private void setDate()
+        {
+            mskToDate.Text = CurrentDate.Instance.CurrentDateShamsi;
+
+            if (rdbTreeDays.Checked)
+                mskFromDate.Text = DateTimeUtility.AddDay(CurrentDate.Instance.CurrentDateShamsi, -3);
+            else if(rdbWeek.Checked)
+                mskFromDate.Text = DateTimeUtility.AddDay(CurrentDate.Instance.CurrentDateShamsi, -7);
+            else if (rdbMonth.Checked)
+                mskFromDate.Text = DateTimeUtility.AddDay(CurrentDate.Instance.CurrentDateShamsi, -30);
+            else if (rdbYear.Checked)
+                mskFromDate.Text = DateTimeUtility.AddDay(CurrentDate.Instance.CurrentDateShamsi, -360);
+        }
+
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -239,6 +351,79 @@ namespace Baran.Dashboard
             {
                 ProductionID = null;
             }
+        }
+
+        private void lblMachinery_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Baran.Dashboard.frmMachineryRpt ofrm = new frmMachineryRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString());            
+            ofrm.Show();
+        }
+
+        private void lblWorker_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmWorkerRpt ofrm = new frmWorkerRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString());
+            ofrm.Show();
+        }
+
+        private void lblWater_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmWaterRpt ofrm = new frmWaterRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString());
+            ofrm.Show();
+        }
+
+        private void lblPesticide_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmPesticideRpt ofrm = new frmPesticideRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString());
+            ofrm.Show();
+        }
+
+        private void lblWaterStorage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmWaterStorageRpt ofrm = new frmWaterStorageRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString());
+            ofrm.Show();
+        }
+
+        private void lblChemicalAnalys_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmChemicalAnalysRpt ofrm = new frmChemicalAnalysRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString());
+            ofrm.Show();
+        }
+
+        private void lblFertilizer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmFertilizerRpt ofrm = new frmFertilizerRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString());
+            ofrm.Show();
+
+        }
+
+        private void rdbTreeDays_CheckedChanged(object sender, EventArgs e)
+        {
+            setDate();
+        }
+
+        private void rdbWeek_CheckedChanged(object sender, EventArgs e)
+        {
+            setDate();
+        }
+
+        private void rdbMonth_CheckedChanged(object sender, EventArgs e)
+        {
+            setDate();
+        }
+
+        private void rdbYear_CheckedChanged(object sender, EventArgs e)
+        {
+            setDate();
+        }
+
+        private void mapMain_MouseEnter(object sender, EventArgs e)
+        {
+            ultraExpandableGroupBoxPanel1.AutoScroll = false;
+        }
+
+        private void mapMain_MouseLeave(object sender, EventArgs e)
+        {
+            ultraExpandableGroupBoxPanel1.AutoScroll = true;
         }
 
         private void cmbField_ValueChanged(object sender, EventArgs e)

@@ -17,6 +17,17 @@ namespace Baran.Dashboard
             InitializeComponent();
         }
 
+        public frmWorkerRpt(string fromDate, string toDate)
+        {
+            InitializeComponent();
+            grpHeader.Visible = false;
+
+            mskFromDate.Text = fromDate;
+            mskToDate.Text = toDate;
+
+            FillControls();
+        }
+
         private int? PersonID = null;
         private Nullable<DateTime>
             FromDate
@@ -28,6 +39,13 @@ namespace Baran.Dashboard
             base.OnformLoad();
 
             ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcPersonByPersonCategoryIDCmb, cmbWorker, cnsPersonCategory.Worker.ToString());
+
+            //Size mySize  = grpMain.Size;// new Size(egbMain.Size.Width, Screen.PrimaryScreen.WorkingArea.Height);
+
+            //for (int i = 0; i < tlpMain.RowCount; i++)
+            //{
+            //    tlpMain.RowStyles[i].Height = (mySize.Height - 100) / 2;
+            //}
         }
 
         public override void OnActiveForm()
@@ -42,7 +60,11 @@ namespace Baran.Dashboard
         public override void OnConfirm()
         {
             base.OnConfirm();
+            FillControls();
+        }
 
+        private void FillControls()
+        {
             if (!this.ControlsValidation())
             {
                 OnMessage(BaranResources.FeildIsEmpty, PublicEnum.EnmMessageCategory.Warning);
