@@ -47,6 +47,10 @@
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("spr_src_Field_Rpt_Select", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RowID", 0);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FreeSpace", 1);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("New", 2);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn4 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Detail", 3);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn5 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Delete", 4);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn6 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Update", 5);
             Infragistics.Win.Appearance appearance34 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance57 = new Infragistics.Win.Appearance();
@@ -193,7 +197,7 @@
             // 
             this.tpcMap.Controls.Add(this.MainMap);
             this.tpcMap.Controls.Add(this.grpControls);
-            this.tpcMap.Location = new System.Drawing.Point(1, 30);
+            this.tpcMap.Location = new System.Drawing.Point(-10000, -10000);
             this.tpcMap.Name = "tpcMap";
             this.tpcMap.Size = new System.Drawing.Size(942, 496);
             // 
@@ -468,15 +472,36 @@
             ultraGridColumn2.Header.VisiblePosition = 0;
             ultraGridColumn2.MergedCellStyle = Infragistics.Win.UltraWinGrid.MergedCellStyle.Always;
             ultraGridColumn2.Width = 860;
+            ultraGridColumn3.Header.Caption = "...";
+            ultraGridColumn3.Header.VisiblePosition = 2;
+            ultraGridColumn3.Hidden = true;
+            ultraGridColumn3.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn4.Header.Caption = "...";
+            ultraGridColumn4.Header.VisiblePosition = 3;
+            ultraGridColumn4.Hidden = true;
+            ultraGridColumn4.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn5.Header.Caption = "...";
+            ultraGridColumn5.Header.VisiblePosition = 4;
+            ultraGridColumn5.Hidden = true;
+            ultraGridColumn5.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn6.Header.Caption = "...";
+            ultraGridColumn6.Header.VisiblePosition = 5;
+            ultraGridColumn6.Hidden = true;
+            ultraGridColumn6.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
-            ultraGridColumn2});
+            ultraGridColumn2,
+            ultraGridColumn3,
+            ultraGridColumn4,
+            ultraGridColumn5,
+            ultraGridColumn6});
             ultraGridBand1.Override.SummaryDisplayArea = Infragistics.Win.UltraWinGrid.SummaryDisplayAreas.BottomFixed;
             appearance34.ForeColor = System.Drawing.Color.DarkBlue;
             ultraGridBand1.Override.SummaryValueAppearance = appearance34;
             this.grdItem.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdItem.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
-            appearance8.ForeColor = System.Drawing.Color.DarkBlue;
+            appearance8.BackColor = System.Drawing.Color.WhiteSmoke;
+            appearance8.ForeColor = System.Drawing.Color.Black;
             this.grdItem.DisplayLayout.CaptionAppearance = appearance8;
             this.grdItem.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.True;
             appearance57.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -609,7 +634,7 @@
             this.chkWarehouseType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkWarehouseType.AutoSize = true;
             this.chkWarehouseType.ForeColor = System.Drawing.Color.White;
-            this.chkWarehouseType.Location = new System.Drawing.Point(1029, 58);
+            this.chkWarehouseType.Location = new System.Drawing.Point(733, 57);
             this.chkWarehouseType.Name = "chkWarehouseType";
             this.chkWarehouseType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkWarehouseType.Size = new System.Drawing.Size(68, 28);
@@ -622,7 +647,7 @@
             this.chkWarehouseUseType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkWarehouseUseType.AutoSize = true;
             this.chkWarehouseUseType.ForeColor = System.Drawing.Color.White;
-            this.chkWarehouseUseType.Location = new System.Drawing.Point(1132, 58);
+            this.chkWarehouseUseType.Location = new System.Drawing.Point(836, 57);
             this.chkWarehouseUseType.Name = "chkWarehouseUseType";
             this.chkWarehouseUseType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkWarehouseUseType.Size = new System.Drawing.Size(83, 28);
@@ -635,7 +660,7 @@
             this.chkPart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkPart.AutoSize = true;
             this.chkPart.ForeColor = System.Drawing.Color.White;
-            this.chkPart.Location = new System.Drawing.Point(756, 19);
+            this.chkPart.Location = new System.Drawing.Point(460, 18);
             this.chkPart.Name = "chkPart";
             this.chkPart.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkPart.Size = new System.Drawing.Size(82, 28);
@@ -648,7 +673,7 @@
             this.chkSubcollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkSubcollection.AutoSize = true;
             this.chkSubcollection.ForeColor = System.Drawing.Color.White;
-            this.chkSubcollection.Location = new System.Drawing.Point(890, 19);
+            this.chkSubcollection.Location = new System.Drawing.Point(594, 18);
             this.chkSubcollection.Name = "chkSubcollection";
             this.chkSubcollection.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkSubcollection.Size = new System.Drawing.Size(52, 28);
@@ -661,7 +686,7 @@
             this.chkCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkCollection.AutoSize = true;
             this.chkCollection.ForeColor = System.Drawing.Color.White;
-            this.chkCollection.Location = new System.Drawing.Point(996, 19);
+            this.chkCollection.Location = new System.Drawing.Point(700, 18);
             this.chkCollection.Name = "chkCollection";
             this.chkCollection.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkCollection.Size = new System.Drawing.Size(101, 28);
@@ -674,7 +699,7 @@
             this.chkCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkCompany.AutoSize = true;
             this.chkCompany.ForeColor = System.Drawing.Color.White;
-            this.chkCompany.Location = new System.Drawing.Point(1154, 19);
+            this.chkCompany.Location = new System.Drawing.Point(858, 18);
             this.chkCompany.Name = "chkCompany";
             this.chkCompany.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkCompany.Size = new System.Drawing.Size(61, 28);
@@ -686,7 +711,7 @@
             // 
             this.tpcChart.Controls.Add(this.chtChart);
             this.tpcChart.Controls.Add(this.grpChartControls);
-            this.tpcChart.Location = new System.Drawing.Point(-10000, -10000);
+            this.tpcChart.Location = new System.Drawing.Point(1, 30);
             this.tpcChart.Name = "tpcChart";
             this.tpcChart.Size = new System.Drawing.Size(942, 496);
             // 
@@ -838,7 +863,6 @@
             this.grpSourceControls.Name = "grpSourceControls";
             this.grpSourceControls.Size = new System.Drawing.Size(594, 98);
             this.grpSourceControls.TabIndex = 1;
-            this.grpSourceControls.Text = "groupBox1";
             // 
             // rdbWarehouseType
             // 

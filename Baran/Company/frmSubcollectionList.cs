@@ -75,7 +75,7 @@ namespace Baran.Company
         public override void OnChange()
         {
             base.OnChange();
-            if (grdItem.Selected.Rows.Count == 0)
+            if ( SubcollectionID <= 0)
             {
                 OnMessage(BaranResources.NoRowSelectedError, PublicEnum.EnmMessageCategory.Warning);
                 return;
@@ -95,14 +95,11 @@ namespace Baran.Company
         public override void OnDelete()
         {
             base.OnDelete();
-            if (grdItem.Selected.Rows.Count == 0)
+            if (SubcollectionID <= 0)
             {
                 OnMessage(BaranResources.NoRowSelectedError, PublicEnum.EnmMessageCategory.Warning);
                 return;
             }
-
-            if (SubcollectionID <= 0)
-                return;
 
             DialogResult msgResult = MessageBoxX.ShowMessageBox(PublicEnum.EnmMessageType.msgDeleteConfirm);
             if (msgResult == DialogResult.No) return;
@@ -167,5 +164,20 @@ namespace Baran.Company
 
         #endregion
 
+        private void grdItem_ClickCellButton(object sender, Infragistics.Win.UltraWinGrid.CellEventArgs e)
+        {
+            try
+            {
+                if (e.Cell.Column.Key == ColumnKey.Update)
+                    OnChange();
+                else if (e.Cell.Column.Key == ColumnKey.Delete)
+                    OnDelete();
+                else if (e.Cell.Column.Key == ColumnKey.New)
+                    OnNew();
+                else if (e.Cell.Column.Key == ColumnKey.Detail)
+                    OnDetail();
+            }
+            catch { }
+        }
     }
 }

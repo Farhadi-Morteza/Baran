@@ -40,6 +40,10 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn8 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("حجم خروجی- لیتر بر ثانیه");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn9 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FreeSpace", 0);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn10 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RowID", 1);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("New", 2);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Detail", 3);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Delete", 4);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Update", 5);
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance29 = new Infragistics.Win.Appearance();
@@ -61,10 +65,10 @@
             Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
             this.dstSource1 = new BaranDataAccess.Source.dstSource();
             this.grdItem = new Baran.Windows.Forms.UltraGrid();
+            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).BeginInit();
             this.grpHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpMessage)).BeginInit();
             this.grpMessage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).BeginInit();
@@ -73,22 +77,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdItem)).BeginInit();
             this.SuspendLayout();
             // 
-            // grpHeader
-            // 
-            this.grpHeader.Size = new System.Drawing.Size(662, 74);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(595, 8);
-            // 
             // btnMaxMin
             // 
             this.btnMaxMin.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
-            // 
-            // lblMessage
-            // 
-            this.lblMessage.Size = new System.Drawing.Size(697, 29);
-            this.lblMessage.Text = "";
             // 
             // grpButons
             // 
@@ -99,6 +90,23 @@
             // 
             this.lblLine2.Location = new System.Drawing.Point(1, 70);
             this.lblLine2.Size = new System.Drawing.Size(660, 3);
+            // 
+            // grpHeader
+            // 
+            this.grpHeader.Size = new System.Drawing.Size(662, 74);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(595, 8);
+            // 
+            // lblCaption
+            // 
+            this.lblCaption.Location = new System.Drawing.Point(290, 24);
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.Size = new System.Drawing.Size(697, 29);
+            this.lblMessage.Text = "";
             // 
             // lblLine1
             // 
@@ -113,10 +121,6 @@
             // 
             this.lblLine3.Location = new System.Drawing.Point(1, 224);
             this.lblLine3.Size = new System.Drawing.Size(660, 3);
-            // 
-            // lblCaption
-            // 
-            this.lblCaption.Location = new System.Drawing.Point(290, 24);
             // 
             // grpMain
             // 
@@ -174,12 +178,29 @@
             ultraGridColumn9.Header.Caption = "";
             ultraGridColumn9.Header.VisiblePosition = 0;
             ultraGridColumn9.MergedCellStyle = Infragistics.Win.UltraWinGrid.MergedCellStyle.Always;
-            ultraGridColumn9.Width = 42;
+            ultraGridColumn9.Width = 41;
             ultraGridColumn10.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn10.Header.Caption = "ردیف";
-            ultraGridColumn10.Header.VisiblePosition = 9;
+            ultraGridColumn10.Header.VisiblePosition = 13;
             ultraGridColumn10.TabStop = false;
             ultraGridColumn10.Width = 41;
+            ultraGridColumn11.Header.Caption = "...";
+            ultraGridColumn11.Header.VisiblePosition = 9;
+            ultraGridColumn11.Hidden = true;
+            ultraGridColumn11.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn11.Width = 41;
+            ultraGridColumn12.Header.Caption = "...";
+            ultraGridColumn12.Header.VisiblePosition = 10;
+            ultraGridColumn12.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn12.Width = 41;
+            ultraGridColumn13.Header.Caption = "...";
+            ultraGridColumn13.Header.VisiblePosition = 11;
+            ultraGridColumn13.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn13.Width = 41;
+            ultraGridColumn14.Header.Caption = "...";
+            ultraGridColumn14.Header.VisiblePosition = 12;
+            ultraGridColumn14.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn14.Width = 41;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2,
@@ -190,13 +211,18 @@
             ultraGridColumn7,
             ultraGridColumn8,
             ultraGridColumn9,
-            ultraGridColumn10});
+            ultraGridColumn10,
+            ultraGridColumn11,
+            ultraGridColumn12,
+            ultraGridColumn13,
+            ultraGridColumn14});
             ultraGridBand1.Override.SummaryDisplayArea = Infragistics.Win.UltraWinGrid.SummaryDisplayAreas.BottomFixed;
             appearance1.ForeColor = System.Drawing.Color.DarkBlue;
             ultraGridBand1.Override.SummaryValueAppearance = appearance1;
             this.grdItem.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdItem.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
-            appearance2.ForeColor = System.Drawing.Color.DarkBlue;
+            appearance2.BackColor = System.Drawing.Color.WhiteSmoke;
+            appearance2.ForeColor = System.Drawing.Color.Black;
             this.grdItem.DisplayLayout.CaptionAppearance = appearance2;
             this.grdItem.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.True;
             appearance29.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -304,9 +330,10 @@
             this.grdItem.Location = new System.Drawing.Point(1, 0);
             this.grdItem.Name = "grdItem";
             this.grdItem.Size = new System.Drawing.Size(660, 224);
-            this.grdItem.SumColumnsWidth = 618;
+            this.grdItem.SumColumnsWidth = 741;
             this.grdItem.TabIndex = 15;
             this.grdItem.AfterRowActivate += new System.EventHandler(this.grdItem_AfterRowActivate);
+            this.grdItem.ClickCellButton += new Infragistics.Win.UltraWinGrid.CellEventHandler(this.grdItem_ClickCellButton);
             this.grdItem.DoubleClickRow += new Infragistics.Win.UltraWinGrid.DoubleClickRowEventHandler(this.grdItem_DoubleClickRow);
             // 
             // frmWaterList
@@ -315,10 +342,10 @@
             this.ClientSize = new System.Drawing.Size(662, 399);
             this.FormMessage = "";
             this.Name = "frmWaterList";
+            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).EndInit();
             this.grpHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpMessage)).EndInit();
             this.grpMessage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).EndInit();

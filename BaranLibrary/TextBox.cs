@@ -389,7 +389,7 @@
         protected override void OnEnter(System.EventArgs e)
         {
 
-            base.OnEnter(e);
+           base.OnEnter(e);
 
             //BaranLibrary.GeneralProperties.ControlPreviousBorderColore = this.Appearance.BorderColor;
             //this.Appearance.BorderColor = BaranLibrary.GeneralProperties.ControlNewBorderColor;

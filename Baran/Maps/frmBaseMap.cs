@@ -382,7 +382,7 @@ namespace Baran.Maps
 
         void AddMarker()
         {
-            GMarkerGoogle m = new GMarkerGoogle(currentMarker.Position, GMarkerGoogleType.green_pushpin);
+            GMarkerGoogle m = new GMarkerGoogle(currentMarker.Position, GMarkerGoogleType.yellow_pushpin);
             GMapMarkerRect mBorders = new GMapMarkerRect(currentMarker.Position);
             {
                 mBorders.InnerMarker = m;
@@ -849,7 +849,7 @@ namespace Baran.Maps
 
             if (points.Count == 0)
             {
-                if (FieldID != null && BuildingID != null && WarehouseID != null && WaterstorageID != null && WaterID != null && WaterTransmissionLineID != null && PartID != null)
+                if (FieldID != null || BuildingID != null || WarehouseID != null || WaterstorageID != null || WaterID != null || WaterTransmissionLineID != null || PartID != null)
                 {
                     BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocationByID =
                         new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();

@@ -33,7 +33,7 @@ namespace Baran.Classes.Common
                         break;
 
                     case PublicEnum.EnmMessageType.msgDeleteConfirm:
-                        Result = MessageBox.Show(BaranResources.DeleteConfirm, "Delete Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        Result = MessageBox.Show(BaranResources.DeleteConfirm, "Delete Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
                         break;
 
                     case PublicEnum.EnmMessageType.msgDeleteFail:

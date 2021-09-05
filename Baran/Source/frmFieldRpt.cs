@@ -104,7 +104,7 @@ namespace Baran.Source
 
         private void ShowMap()
         {
-            //this.ClearMap();
+            this.ClearMap();
 
             try
             {
@@ -134,7 +134,7 @@ namespace Baran.Source
                 using (BaranDataAccess.AMSEntities db = new BaranDataAccess.AMSEntities())
                 { 
                     var Lands = db.spr_src_Land_Map_Select(2, strWhereClause, CurrentUser.Instance.UserID.ToString());
-              
+
                     foreach (var land in Lands)
                     {
                         string strTooltip =
@@ -178,7 +178,7 @@ namespace Baran.Source
                             routes.Routes.Add(rt);
                         }
 
-
+                    
                         if (chkField.Checked)
                         {
                             string strWhere = "";
@@ -324,14 +324,14 @@ namespace Baran.Source
         {
             try
             {
-                //polygons.Polygons.Clear();
-                //routes.Routes.Clear();
-                //markers.Markers.Clear();
+                polygons.Polygons.Clear();
+                routes.Routes.Clear();
+                markers.Markers.Clear();
 
-                polygons.Clear();
-                routes.Clear();
-                markers.Clear();
-                MainMap.Overlays.Clear();
+                //polygons.Clear();
+                //routes.Clear();
+                //markers.Clear();
+                //MainMap.Overlays.Clear();
             }
             catch
             {

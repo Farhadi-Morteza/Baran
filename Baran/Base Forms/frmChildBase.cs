@@ -332,7 +332,8 @@ namespace Baran.Base_Forms
 
         public virtual void OnExport(Baran.Windows.Forms.UltraGrid grdItem)
         {
-            ShowMainProgress();
+            //ShowMainProgress();
+          
 
             //System.IO.Stream myStream;
             SaveFileDialog sfdSaveFileDialog = new SaveFileDialog();
@@ -352,7 +353,7 @@ namespace Baran.Base_Forms
             {
                 //    if ((myStream = sfdSaveFileDialog.OpenFile()) != null)
                 //    {
-
+                waitForm.Show();
                 string myfileName = sfdSaveFileDialog.FileName;
 
 
@@ -366,14 +367,15 @@ namespace Baran.Base_Forms
                         break;
                 }
 
-                
 
-               
+
+                waitForm.Close();
                 msgResult = MessageBoxX.ShowMessageBox(PublicEnum.EnmMessageType.msgSaveAndOpenFile);
                 if (msgResult == DialogResult.Yes)
                     System.Diagnostics.Process.Start(myfileName);
                 //myStream.Close();
                 //    }
+               
             }
 
             
@@ -382,7 +384,7 @@ namespace Baran.Base_Forms
 
         public virtual void OnExport(Baran.Windows.Forms.UltraGrid2 ugItems)
         {
-            ShowMainProgress();
+            //ShowMainProgress();
 
             //System.IO.Stream myStream;
             SaveFileDialog sfdSaveFileDialog = new SaveFileDialog();
@@ -402,7 +404,7 @@ namespace Baran.Base_Forms
             {
                 //    if ((myStream = sfdSaveFileDialog.OpenFile()) != null)
                 //    {
-
+                waitForm.Show();
                 string myfileName = sfdSaveFileDialog.FileName;
 
 
@@ -418,12 +420,14 @@ namespace Baran.Base_Forms
 
 
 
-
+                waitForm.Close();
                 msgResult = MessageBoxX.ShowMessageBox(PublicEnum.EnmMessageType.msgSaveAndOpenFile);
                 if (msgResult == DialogResult.Yes)
                     System.Diagnostics.Process.Start(myfileName);
                 //myStream.Close();
                 //    }
+
+                
             }
 
 

@@ -58,7 +58,7 @@
             Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance29 = new Infragistics.Win.Appearance();
@@ -68,8 +68,10 @@
             Infragistics.Win.Appearance appearance14 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance19 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance21 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance22 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFieldView));
+            Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance22 = new Infragistics.Win.Appearance();
             this.grpControls = new Baran.Windows.Forms.GroupBox();
             this.lblchangeUse = new Baran.Windows.Forms.Label();
             this.label31 = new Baran.Windows.Forms.Label();
@@ -116,6 +118,8 @@
             this.imageListView1 = new Manina.Windows.Forms.imageListView();
             this.grpMap = new Baran.Windows.Forms.GroupBox();
             this.MainMap = new Demo.WindowsForms.Map();
+            this.lblLand = new Baran.Windows.Forms.Label();
+            this.label12 = new Baran.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grpControls)).BeginInit();
             this.grpControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpDoc)).BeginInit();
@@ -127,6 +131,8 @@
             // grpControls
             // 
             this.grpControls.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
+            this.grpControls.Controls.Add(this.lblLand);
+            this.grpControls.Controls.Add(this.label12);
             this.grpControls.Controls.Add(this.lblchangeUse);
             this.grpControls.Controls.Add(this.label31);
             this.grpControls.Controls.Add(this.lblSalability);
@@ -188,6 +194,7 @@
             this.lblchangeUse.Size = new System.Drawing.Size(228, 15);
             this.lblchangeUse.TabIndex = 53;
             this.lblchangeUse.Text = ": آدرس";
+            this.lblchangeUse.Visible = false;
             // 
             // label31
             // 
@@ -203,6 +210,7 @@
             this.label31.Size = new System.Drawing.Size(93, 15);
             this.label31.TabIndex = 52;
             this.label31.Text = ":امکان تغییر کاربری";
+            this.label31.Visible = false;
             // 
             // lblSalability
             // 
@@ -217,6 +225,7 @@
             this.lblSalability.Size = new System.Drawing.Size(254, 15);
             this.lblSalability.TabIndex = 51;
             this.lblSalability.Text = ": آدرس";
+            this.lblSalability.Visible = false;
             // 
             // label29
             // 
@@ -232,6 +241,7 @@
             this.label29.Size = new System.Drawing.Size(69, 15);
             this.label29.TabIndex = 50;
             this.label29.Text = ":قابلیت فروش";
+            this.label29.Visible = false;
             // 
             // lblOpposition
             // 
@@ -246,6 +256,7 @@
             this.lblOpposition.Size = new System.Drawing.Size(276, 15);
             this.lblOpposition.TabIndex = 49;
             this.lblOpposition.Text = ": آدرس";
+            this.lblOpposition.Visible = false;
             // 
             // label23
             // 
@@ -261,6 +272,7 @@
             this.label23.Size = new System.Drawing.Size(36, 15);
             this.label23.TabIndex = 48;
             this.label23.Text = "معارض";
+            this.label23.Visible = false;
             // 
             // lblDocPlace
             // 
@@ -275,6 +287,7 @@
             this.lblDocPlace.Size = new System.Drawing.Size(253, 15);
             this.lblDocPlace.TabIndex = 47;
             this.lblDocPlace.Text = ": آدرس";
+            this.lblDocPlace.Visible = false;
             // 
             // label25
             // 
@@ -290,6 +303,7 @@
             this.label25.Size = new System.Drawing.Size(75, 15);
             this.label25.TabIndex = 46;
             this.label25.Text = ": سند در اختیار";
+            this.label25.Visible = false;
             // 
             // lblFutureProgram
             // 
@@ -304,6 +318,7 @@
             this.lblFutureProgram.Size = new System.Drawing.Size(248, 15);
             this.lblFutureProgram.TabIndex = 45;
             this.lblFutureProgram.Text = ": آدرس";
+            this.lblFutureProgram.Visible = false;
             // 
             // label27
             // 
@@ -319,6 +334,7 @@
             this.label27.Size = new System.Drawing.Size(86, 15);
             this.label27.TabIndex = 44;
             this.label27.Text = ": برنامه آتی اقدام";
+            this.label27.Visible = false;
             // 
             // lblAddress
             // 
@@ -333,6 +349,7 @@
             this.lblAddress.Size = new System.Drawing.Size(292, 15);
             this.lblAddress.TabIndex = 43;
             this.lblAddress.Text = ": آدرس";
+            this.lblAddress.Visible = false;
             // 
             // label21
             // 
@@ -348,6 +365,7 @@
             this.label21.Size = new System.Drawing.Size(45, 15);
             this.label21.TabIndex = 42;
             this.label21.Text = ": نشانی";
+            this.label21.Visible = false;
             // 
             // lblCity
             // 
@@ -362,6 +380,7 @@
             this.lblCity.Size = new System.Drawing.Size(276, 15);
             this.lblCity.TabIndex = 41;
             this.lblCity.Text = ": آدرس";
+            this.lblCity.Visible = false;
             // 
             // label15
             // 
@@ -377,6 +396,7 @@
             this.label15.Size = new System.Drawing.Size(34, 15);
             this.label15.TabIndex = 40;
             this.label15.Text = ": شهر ";
+            this.label15.Visible = false;
             // 
             // lblTownshipName
             // 
@@ -391,6 +411,7 @@
             this.lblTownshipName.Size = new System.Drawing.Size(276, 15);
             this.lblTownshipName.TabIndex = 39;
             this.lblTownshipName.Text = ": آدرس";
+            this.lblTownshipName.Visible = false;
             // 
             // lblProvinceName
             // 
@@ -405,6 +426,7 @@
             this.lblProvinceName.Size = new System.Drawing.Size(255, 15);
             this.lblProvinceName.TabIndex = 38;
             this.lblProvinceName.Text = ": نام انباردار";
+            this.lblProvinceName.Visible = false;
             // 
             // label18
             // 
@@ -420,6 +442,7 @@
             this.label18.Size = new System.Drawing.Size(56, 15);
             this.label18.TabIndex = 37;
             this.label18.Text = ":شهرستان";
+            this.label18.Visible = false;
             // 
             // label19
             // 
@@ -435,6 +458,7 @@
             this.label19.Size = new System.Drawing.Size(40, 15);
             this.label19.TabIndex = 36;
             this.label19.Text = ": استان ";
+            this.label19.Visible = false;
             // 
             // lblFieldUseType
             // 
@@ -443,7 +467,7 @@
             appearance25.TextHAlignAsString = "Right";
             appearance25.TextVAlignAsString = "Middle";
             this.lblFieldUseType.Appearance = appearance25;
-            this.lblFieldUseType.Location = new System.Drawing.Point(10, 272);
+            this.lblFieldUseType.Location = new System.Drawing.Point(8, 270);
             this.lblFieldUseType.Name = "lblFieldUseType";
             this.lblFieldUseType.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblFieldUseType.Size = new System.Drawing.Size(276, 15);
@@ -458,7 +482,7 @@
             appearance26.TextVAlignAsString = "Middle";
             this.label13.Appearance = appearance26;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(283, 272);
+            this.label13.Location = new System.Drawing.Point(281, 270);
             this.label13.Name = "label13";
             this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label13.Size = new System.Drawing.Size(61, 15);
@@ -500,12 +524,13 @@
             appearance27.TextHAlignAsString = "Right";
             appearance27.TextVAlignAsString = "Middle";
             this.lblOwnership.Appearance = appearance27;
-            this.lblOwnership.Location = new System.Drawing.Point(10, 246);
+            this.lblOwnership.Location = new System.Drawing.Point(8, 448);
             this.lblOwnership.Name = "lblOwnership";
             this.lblOwnership.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblOwnership.Size = new System.Drawing.Size(276, 15);
             this.lblOwnership.TabIndex = 31;
             this.lblOwnership.Text = ": آدرس";
+            this.lblOwnership.Visible = false;
             // 
             // lblDescription
             // 
@@ -528,7 +553,7 @@
             appearance28.TextHAlignAsString = "Right";
             appearance28.TextVAlignAsString = "Middle";
             this.lblSoilTextre.Appearance = appearance28;
-            this.lblSoilTextre.Location = new System.Drawing.Point(32, 220);
+            this.lblSoilTextre.Location = new System.Drawing.Point(32, 245);
             this.lblSoilTextre.Name = "lblSoilTextre";
             this.lblSoilTextre.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblSoilTextre.Size = new System.Drawing.Size(255, 15);
@@ -542,7 +567,7 @@
             appearance16.TextHAlignAsString = "Right";
             appearance16.TextVAlignAsString = "Middle";
             this.lblDocNumber.Appearance = appearance16;
-            this.lblDocNumber.Location = new System.Drawing.Point(16, 194);
+            this.lblDocNumber.Location = new System.Drawing.Point(16, 219);
             this.lblDocNumber.Name = "lblDocNumber";
             this.lblDocNumber.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblDocNumber.Size = new System.Drawing.Size(233, 15);
@@ -556,7 +581,7 @@
             appearance17.TextHAlignAsString = "Right";
             appearance17.TextVAlignAsString = "Middle";
             this.lblCode.Appearance = appearance17;
-            this.lblCode.Location = new System.Drawing.Point(51, 168);
+            this.lblCode.Location = new System.Drawing.Point(51, 193);
             this.lblCode.Name = "lblCode";
             this.lblCode.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCode.Size = new System.Drawing.Size(243, 15);
@@ -570,7 +595,7 @@
             appearance13.TextHAlignAsString = "Right";
             appearance13.TextVAlignAsString = "Middle";
             this.lblUsableArea.Appearance = appearance13;
-            this.lblUsableArea.Location = new System.Drawing.Point(7, 142);
+            this.lblUsableArea.Location = new System.Drawing.Point(7, 167);
             this.lblUsableArea.Name = "lblUsableArea";
             this.lblUsableArea.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblUsableArea.Size = new System.Drawing.Size(227, 15);
@@ -584,7 +609,7 @@
             appearance12.TextHAlignAsString = "Right";
             appearance12.TextVAlignAsString = "Middle";
             this.lblTotalArea.Appearance = appearance12;
-            this.lblTotalArea.Location = new System.Drawing.Point(13, 116);
+            this.lblTotalArea.Location = new System.Drawing.Point(13, 141);
             this.lblTotalArea.Name = "lblTotalArea";
             this.lblTotalArea.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblTotalArea.Size = new System.Drawing.Size(266, 15);
@@ -608,11 +633,11 @@
             // lblFieldName
             // 
             this.lblFieldName.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            appearance18.ForeColor = System.Drawing.Color.White;
-            appearance18.TextHAlignAsString = "Right";
-            appearance18.TextVAlignAsString = "Middle";
-            this.lblFieldName.Appearance = appearance18;
-            this.lblFieldName.Location = new System.Drawing.Point(2, 90);
+            appearance5.ForeColor = System.Drawing.Color.White;
+            appearance5.TextHAlignAsString = "Right";
+            appearance5.TextVAlignAsString = "Middle";
+            this.lblFieldName.Appearance = appearance5;
+            this.lblFieldName.Location = new System.Drawing.Point(2, 115);
             this.lblFieldName.Name = "lblFieldName";
             this.lblFieldName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblFieldName.Size = new System.Drawing.Size(268, 15);
@@ -657,12 +682,13 @@
             appearance29.TextVAlignAsString = "Middle";
             this.label9.Appearance = appearance29;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(281, 246);
+            this.label9.Location = new System.Drawing.Point(279, 448);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label9.Size = new System.Drawing.Size(63, 15);
             this.label9.TabIndex = 20;
             this.label9.Text = ": نوع مالکیت";
+            this.label9.Visible = false;
             // 
             // label7
             // 
@@ -672,7 +698,7 @@
             appearance30.TextVAlignAsString = "Middle";
             this.label7.Appearance = appearance30;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(286, 220);
+            this.label7.Location = new System.Drawing.Point(286, 245);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label7.Size = new System.Drawing.Size(58, 15);
@@ -687,7 +713,7 @@
             appearance8.TextVAlignAsString = "Middle";
             this.label6.Appearance = appearance8;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(248, 194);
+            this.label6.Location = new System.Drawing.Point(248, 219);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label6.Size = new System.Drawing.Size(96, 15);
@@ -702,7 +728,7 @@
             appearance9.TextVAlignAsString = "Middle";
             this.label5.Appearance = appearance9;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(295, 168);
+            this.label5.Location = new System.Drawing.Point(295, 193);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label5.Size = new System.Drawing.Size(49, 15);
@@ -717,7 +743,7 @@
             appearance14.TextVAlignAsString = "Middle";
             this.label4.Appearance = appearance14;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(233, 142);
+            this.label4.Location = new System.Drawing.Point(233, 167);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label4.Size = new System.Drawing.Size(111, 15);
@@ -732,7 +758,7 @@
             appearance19.TextVAlignAsString = "Middle";
             this.label3.Appearance = appearance19;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(279, 116);
+            this.label3.Location = new System.Drawing.Point(279, 141);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(65, 15);
@@ -757,12 +783,12 @@
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            appearance22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(179)))), ((int)(((byte)(4)))));
-            appearance22.TextHAlignAsString = "Right";
-            appearance22.TextVAlignAsString = "Middle";
-            this.label1.Appearance = appearance22;
+            appearance6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(179)))), ((int)(((byte)(4)))));
+            appearance6.TextHAlignAsString = "Right";
+            appearance6.TextVAlignAsString = "Middle";
+            this.label1.Appearance = appearance6;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(265, 90);
+            this.label1.Location = new System.Drawing.Point(265, 115);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(79, 15);
@@ -829,6 +855,35 @@
             this.MainMap.Size = new System.Drawing.Size(561, 463);
             this.MainMap.TabIndex = 0;
             this.MainMap.Zoom = 5D;
+            // 
+            // lblLand
+            // 
+            this.lblLand.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            appearance18.ForeColor = System.Drawing.Color.White;
+            appearance18.TextHAlignAsString = "Right";
+            appearance18.TextVAlignAsString = "Middle";
+            this.lblLand.Appearance = appearance18;
+            this.lblLand.Location = new System.Drawing.Point(4, 91);
+            this.lblLand.Name = "lblLand";
+            this.lblLand.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblLand.Size = new System.Drawing.Size(285, 15);
+            this.lblLand.TabIndex = 55;
+            this.lblLand.Text = ": نام انبار";
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            appearance22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(179)))), ((int)(((byte)(4)))));
+            appearance22.TextHAlignAsString = "Right";
+            appearance22.TextVAlignAsString = "Middle";
+            this.label12.Appearance = appearance22;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(293, 91);
+            this.label12.Name = "label12";
+            this.label12.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label12.Size = new System.Drawing.Size(51, 15);
+            this.label12.TabIndex = 54;
+            this.label12.Text = ": نام زمین";
             // 
             // frmFieldView
             // 
@@ -900,5 +955,7 @@
         private Windows.Forms.Label label31;
         private Windows.Forms.Label lblSalability;
         private Windows.Forms.Label label29;
+        private Windows.Forms.Label lblLand;
+        private Windows.Forms.Label label12;
     }
 }

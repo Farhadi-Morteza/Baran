@@ -339,6 +339,7 @@ namespace Baran.Classes.Common
 
         public static readonly string TreeMarker = "TreeMarker.png";
         public static readonly string WaterWell = "WaterWell.png";
+        public static readonly string AddMarker = "AddMarker.png";
     }
     #endregion
 
@@ -447,5 +448,14 @@ namespace Baran.Classes.Common
 
     }
     #endregion
+
+    public static class ColumnKey
+    {
+        public static readonly string RowID = "RowID";
+        public static readonly string New = "New";
+        public static readonly string Delete = "Delete";
+        public static readonly string Update = "Update";
+        public static readonly string Detail = "Detail";
+    }
 
 }

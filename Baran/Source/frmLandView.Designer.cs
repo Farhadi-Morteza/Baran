@@ -130,7 +130,9 @@ namespace Baran.Source
             this.grpControls.Controls.Add(this.lblSalability);
             this.grpControls.Controls.Add(this.label29);
             this.grpControls.Controls.Add(this.lblOpposition);
+            this.grpControls.Controls.Add(this.lblSoilTextre);
             this.grpControls.Controls.Add(this.label23);
+            this.grpControls.Controls.Add(this.label7);
             this.grpControls.Controls.Add(this.lblDocPlace);
             this.grpControls.Controls.Add(this.label25);
             this.grpControls.Controls.Add(this.lblFutureProgram);
@@ -149,7 +151,6 @@ namespace Baran.Source
             this.grpControls.Controls.Add(this.lblSubcollection);
             this.grpControls.Controls.Add(this.lblOwnership);
             this.grpControls.Controls.Add(this.lblDescription);
-            this.grpControls.Controls.Add(this.lblSoilTextre);
             this.grpControls.Controls.Add(this.lblDocNumber);
             this.grpControls.Controls.Add(this.lblCode);
             this.grpControls.Controls.Add(this.lblUsableArea);
@@ -159,7 +160,6 @@ namespace Baran.Source
             this.grpControls.Controls.Add(this.label11);
             this.grpControls.Controls.Add(this.label10);
             this.grpControls.Controls.Add(this.label9);
-            this.grpControls.Controls.Add(this.label7);
             this.grpControls.Controls.Add(this.label6);
             this.grpControls.Controls.Add(this.label5);
             this.grpControls.Controls.Add(this.label4);
@@ -179,7 +179,7 @@ namespace Baran.Source
             appearance40.TextHAlignAsString = "Right";
             appearance40.TextVAlignAsString = "Middle";
             this.lblchangeUse.Appearance = appearance40;
-            this.lblchangeUse.Location = new System.Drawing.Point(22, 506);
+            this.lblchangeUse.Location = new System.Drawing.Point(22, 479);
             this.lblchangeUse.Name = "lblchangeUse";
             this.lblchangeUse.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblchangeUse.Size = new System.Drawing.Size(228, 15);
@@ -194,7 +194,7 @@ namespace Baran.Source
             appearance41.TextVAlignAsString = "Middle";
             this.label31.Appearance = appearance41;
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(251, 506);
+            this.label31.Location = new System.Drawing.Point(251, 479);
             this.label31.Name = "label31";
             this.label31.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label31.Size = new System.Drawing.Size(93, 15);
@@ -208,7 +208,7 @@ namespace Baran.Source
             appearance42.TextHAlignAsString = "Right";
             appearance42.TextVAlignAsString = "Middle";
             this.lblSalability.Appearance = appearance42;
-            this.lblSalability.Location = new System.Drawing.Point(24, 480);
+            this.lblSalability.Location = new System.Drawing.Point(24, 452);
             this.lblSalability.Name = "lblSalability";
             this.lblSalability.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblSalability.Size = new System.Drawing.Size(254, 15);
@@ -223,7 +223,7 @@ namespace Baran.Source
             appearance43.TextVAlignAsString = "Middle";
             this.label29.Appearance = appearance43;
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(275, 480);
+            this.label29.Location = new System.Drawing.Point(275, 452);
             this.label29.Name = "label29";
             this.label29.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label29.Size = new System.Drawing.Size(69, 15);
@@ -237,7 +237,7 @@ namespace Baran.Source
             appearance44.TextHAlignAsString = "Right";
             appearance44.TextVAlignAsString = "Middle";
             this.lblOpposition.Appearance = appearance44;
-            this.lblOpposition.Location = new System.Drawing.Point(34, 454);
+            this.lblOpposition.Location = new System.Drawing.Point(34, 426);
             this.lblOpposition.Name = "lblOpposition";
             this.lblOpposition.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblOpposition.Size = new System.Drawing.Size(276, 15);
@@ -252,7 +252,7 @@ namespace Baran.Source
             appearance45.TextVAlignAsString = "Middle";
             this.label23.Appearance = appearance45;
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(308, 454);
+            this.label23.Location = new System.Drawing.Point(308, 426);
             this.label23.Name = "label23";
             this.label23.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label23.Size = new System.Drawing.Size(36, 15);
@@ -266,7 +266,7 @@ namespace Baran.Source
             appearance31.TextHAlignAsString = "Right";
             appearance31.TextVAlignAsString = "Middle";
             this.lblDocPlace.Appearance = appearance31;
-            this.lblDocPlace.Location = new System.Drawing.Point(16, 428);
+            this.lblDocPlace.Location = new System.Drawing.Point(16, 400);
             this.lblDocPlace.Name = "lblDocPlace";
             this.lblDocPlace.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblDocPlace.Size = new System.Drawing.Size(253, 15);
@@ -281,7 +281,7 @@ namespace Baran.Source
             appearance33.TextVAlignAsString = "Middle";
             this.label25.Appearance = appearance33;
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(269, 428);
+            this.label25.Location = new System.Drawing.Point(269, 400);
             this.label25.Name = "label25";
             this.label25.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label25.Size = new System.Drawing.Size(75, 15);
@@ -295,7 +295,7 @@ namespace Baran.Source
             appearance23.TextHAlignAsString = "Right";
             appearance23.TextVAlignAsString = "Middle";
             this.lblFutureProgram.Appearance = appearance23;
-            this.lblFutureProgram.Location = new System.Drawing.Point(10, 402);
+            this.lblFutureProgram.Location = new System.Drawing.Point(10, 374);
             this.lblFutureProgram.Name = "lblFutureProgram";
             this.lblFutureProgram.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblFutureProgram.Size = new System.Drawing.Size(248, 15);
@@ -310,7 +310,7 @@ namespace Baran.Source
             appearance24.TextVAlignAsString = "Middle";
             this.label27.Appearance = appearance24;
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(258, 402);
+            this.label27.Location = new System.Drawing.Point(258, 374);
             this.label27.Name = "label27";
             this.label27.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label27.Size = new System.Drawing.Size(86, 15);
@@ -324,7 +324,7 @@ namespace Baran.Source
             appearance34.TextHAlignAsString = "Right";
             appearance34.TextVAlignAsString = "Middle";
             this.lblAddress.Appearance = appearance34;
-            this.lblAddress.Location = new System.Drawing.Point(10, 376);
+            this.lblAddress.Location = new System.Drawing.Point(10, 348);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblAddress.Size = new System.Drawing.Size(292, 15);
@@ -339,7 +339,7 @@ namespace Baran.Source
             appearance35.TextVAlignAsString = "Middle";
             this.label21.Appearance = appearance35;
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(299, 376);
+            this.label21.Location = new System.Drawing.Point(299, 348);
             this.label21.Name = "label21";
             this.label21.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label21.Size = new System.Drawing.Size(45, 15);
@@ -353,7 +353,7 @@ namespace Baran.Source
             appearance36.TextHAlignAsString = "Right";
             appearance36.TextVAlignAsString = "Middle";
             this.lblCity.Appearance = appearance36;
-            this.lblCity.Location = new System.Drawing.Point(34, 350);
+            this.lblCity.Location = new System.Drawing.Point(34, 322);
             this.lblCity.Name = "lblCity";
             this.lblCity.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCity.Size = new System.Drawing.Size(276, 15);
@@ -368,7 +368,7 @@ namespace Baran.Source
             appearance37.TextVAlignAsString = "Middle";
             this.label15.Appearance = appearance37;
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(310, 350);
+            this.label15.Location = new System.Drawing.Point(310, 322);
             this.label15.Name = "label15";
             this.label15.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label15.Size = new System.Drawing.Size(34, 15);
@@ -382,7 +382,7 @@ namespace Baran.Source
             appearance38.TextHAlignAsString = "Right";
             appearance38.TextVAlignAsString = "Middle";
             this.lblTownshipName.Appearance = appearance38;
-            this.lblTownshipName.Location = new System.Drawing.Point(13, 324);
+            this.lblTownshipName.Location = new System.Drawing.Point(13, 296);
             this.lblTownshipName.Name = "lblTownshipName";
             this.lblTownshipName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblTownshipName.Size = new System.Drawing.Size(276, 15);
@@ -396,7 +396,7 @@ namespace Baran.Source
             appearance15.TextHAlignAsString = "Right";
             appearance15.TextVAlignAsString = "Middle";
             this.lblProvinceName.Appearance = appearance15;
-            this.lblProvinceName.Location = new System.Drawing.Point(47, 298);
+            this.lblProvinceName.Location = new System.Drawing.Point(47, 270);
             this.lblProvinceName.Name = "lblProvinceName";
             this.lblProvinceName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblProvinceName.Size = new System.Drawing.Size(255, 15);
@@ -411,7 +411,7 @@ namespace Baran.Source
             appearance39.TextVAlignAsString = "Middle";
             this.label18.Appearance = appearance39;
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(288, 324);
+            this.label18.Location = new System.Drawing.Point(288, 296);
             this.label18.Name = "label18";
             this.label18.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label18.Size = new System.Drawing.Size(56, 15);
@@ -426,7 +426,7 @@ namespace Baran.Source
             appearance7.TextVAlignAsString = "Middle";
             this.label19.Appearance = appearance7;
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(304, 298);
+            this.label19.Location = new System.Drawing.Point(304, 270);
             this.label19.Name = "label19";
             this.label19.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label19.Size = new System.Drawing.Size(40, 15);
@@ -440,7 +440,7 @@ namespace Baran.Source
             appearance25.TextHAlignAsString = "Right";
             appearance25.TextVAlignAsString = "Middle";
             this.lblFieldUseType.Appearance = appearance25;
-            this.lblFieldUseType.Location = new System.Drawing.Point(10, 272);
+            this.lblFieldUseType.Location = new System.Drawing.Point(10, 244);
             this.lblFieldUseType.Name = "lblFieldUseType";
             this.lblFieldUseType.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblFieldUseType.Size = new System.Drawing.Size(276, 15);
@@ -455,7 +455,7 @@ namespace Baran.Source
             appearance26.TextVAlignAsString = "Middle";
             this.label13.Appearance = appearance26;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(283, 272);
+            this.label13.Location = new System.Drawing.Point(283, 244);
             this.label13.Name = "label13";
             this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label13.Size = new System.Drawing.Size(61, 15);
@@ -497,7 +497,7 @@ namespace Baran.Source
             appearance27.TextHAlignAsString = "Right";
             appearance27.TextVAlignAsString = "Middle";
             this.lblOwnership.Appearance = appearance27;
-            this.lblOwnership.Location = new System.Drawing.Point(10, 246);
+            this.lblOwnership.Location = new System.Drawing.Point(10, 218);
             this.lblOwnership.Name = "lblOwnership";
             this.lblOwnership.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblOwnership.Size = new System.Drawing.Size(276, 15);
@@ -511,7 +511,7 @@ namespace Baran.Source
             appearance20.TextHAlignAsString = "Right";
             appearance20.TextVAlignAsString = "Top";
             this.lblDescription.Appearance = appearance20;
-            this.lblDescription.Location = new System.Drawing.Point(16, 532);
+            this.lblDescription.Location = new System.Drawing.Point(16, 505);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblDescription.Size = new System.Drawing.Size(327, 38);
@@ -525,12 +525,13 @@ namespace Baran.Source
             appearance28.TextHAlignAsString = "Right";
             appearance28.TextVAlignAsString = "Middle";
             this.lblSoilTextre.Appearance = appearance28;
-            this.lblSoilTextre.Location = new System.Drawing.Point(32, 220);
+            this.lblSoilTextre.Location = new System.Drawing.Point(10, 0);
             this.lblSoilTextre.Name = "lblSoilTextre";
             this.lblSoilTextre.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblSoilTextre.Size = new System.Drawing.Size(255, 15);
             this.lblSoilTextre.TabIndex = 29;
             this.lblSoilTextre.Text = "...";
+            this.lblSoilTextre.Visible = false;
             // 
             // lblDocNumber
             // 
@@ -654,7 +655,7 @@ namespace Baran.Source
             appearance29.TextVAlignAsString = "Middle";
             this.label9.Appearance = appearance29;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(281, 246);
+            this.label9.Location = new System.Drawing.Point(281, 218);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label9.Size = new System.Drawing.Size(63, 15);
@@ -669,12 +670,13 @@ namespace Baran.Source
             appearance30.TextVAlignAsString = "Middle";
             this.label7.Appearance = appearance30;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(286, 220);
+            this.label7.Location = new System.Drawing.Point(264, 0);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label7.Size = new System.Drawing.Size(58, 15);
             this.label7.TabIndex = 18;
             this.label7.Text = ": بافت خاک";
+            this.label7.Visible = false;
             // 
             // label6
             // 

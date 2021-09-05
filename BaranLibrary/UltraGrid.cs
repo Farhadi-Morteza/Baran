@@ -1,4 +1,5 @@
-﻿using Infragistics.Win;
+﻿using BaranLibrary;
+using Infragistics.Win;
 namespace Baran.Windows.Forms
 {
     [System.Drawing.ToolboxBitmap(typeof(Infragistics.Win.UltraWinGrid.UltraGrid))]
@@ -20,6 +21,24 @@ namespace Baran.Windows.Forms
         System.Globalization.CultureInfo _faCultureInfo = new System.Globalization.CultureInfo("fa-IR", false);
         System.Globalization.CultureInfo _enCultureInfo = new System.Globalization.CultureInfo("en-US", false);
 
+        public static class ColumnKey
+        {
+            public static readonly string RowID = "RowID";
+            public static readonly string New = "New";
+            public static readonly string Delete = "Delete";
+            public static readonly string Update = "Update";
+            public static readonly string Detail = "Detail";
+        }
+
+        public static class ColumnCaption
+        {
+            public static readonly string RowID = "#";
+            public static readonly string New = "...";
+            public static readonly string Delete = "...";
+            public static readonly string Update = "...";
+            public static readonly string Detail = "...";
+        }
+
         private bool _IsfreeSpaceGenerator = true;
         [System.ComponentModel.DefaultValue(true)]
         public bool IsFreeSpaceGenerator
@@ -34,7 +53,6 @@ namespace Baran.Windows.Forms
             }
         }
 
-
         private int _SumColumnsWidth;
         public int SumColumnsWidth
         {
@@ -47,7 +65,6 @@ namespace Baran.Windows.Forms
                 _SumColumnsWidth = value;
             }
         }
-
 
         private Infragistics.Win.UltraWinGrid.UltraGrid _BaseUltraGrid;
         public Infragistics.Win.UltraWinGrid.UltraGrid BaseUltraGrid
@@ -134,11 +151,47 @@ namespace Baran.Windows.Forms
             catch
             { }
 
-            e.Layout.Bands[0].Columns["RowID"].TabStop = false;
-            //e.Layout.Bands[0].Columns["RowID"].TabIndex = 1;
-            e.Layout.Bands[0].Columns["RowID"].Header.VisiblePosition = BaseUltraGrid.DisplayLayout.Bands[0].Columns.Count;
-            
-        
+            try
+            {
+                e.Layout.Bands[0].Columns.Add(ColumnKey.New, ColumnCaption.New);
+                e.Layout.Bands[0].Columns.Add(ColumnKey.Detail, ColumnCaption.Detail);
+                e.Layout.Bands[0].Columns.Add(ColumnKey.Delete, ColumnCaption.Delete);
+                e.Layout.Bands[0].Columns.Add(ColumnKey.Update, ColumnCaption.Update);
+                e.Layout.Bands[0].Columns.Add(ColumnKey.RowID, ColumnCaption.RowID);
+
+                e.Layout.Bands[0].Columns[ColumnKey.New].Width = 30;
+                e.Layout.Bands[0].Columns[ColumnKey.Detail].Width = 30;
+                e.Layout.Bands[0].Columns[ColumnKey.Delete].Width = 30;
+                e.Layout.Bands[0].Columns[ColumnKey.Update].Width = 30;
+                e.Layout.Bands[0].Columns[ColumnKey.RowID].Width = 30;
+
+            }
+            catch { }
+
+            try
+            {
+                e.Layout.Bands[0].Columns[ColumnKey.RowID].TabStop = false;
+                //e.Layout.Bands[0].Columns["RowID"].TabIndex = 1;
+                e.Layout.Bands[0].Columns[ColumnKey.RowID].Header.VisiblePosition = BaseUltraGrid.DisplayLayout.Bands[0].Columns.Count;
+                e.Layout.Bands[0].Columns[ColumnKey.Update].Header.VisiblePosition = BaseUltraGrid.DisplayLayout.Bands[0].Columns.Count - 1;
+                e.Layout.Bands[0].Columns[ColumnKey.Delete].Header.VisiblePosition = BaseUltraGrid.DisplayLayout.Bands[0].Columns.Count - 2;
+                e.Layout.Bands[0].Columns[ColumnKey.Detail].Header.VisiblePosition = BaseUltraGrid.DisplayLayout.Bands[0].Columns.Count - 3;
+                e.Layout.Bands[0].Columns[ColumnKey.New].Header.VisiblePosition = BaseUltraGrid.DisplayLayout.Bands[0].Columns.Count - 4;
+
+                e.Layout.Bands[0].Columns[ColumnKey.New].Hidden = true;
+            }
+            catch { }
+
+            try
+            {
+                e.Layout.Bands[0].Columns[ColumnKey.Update].Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+                e.Layout.Bands[0].Columns[ColumnKey.Delete].Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+                e.Layout.Bands[0].Columns[ColumnKey.Detail].Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+                e.Layout.Bands[0].Columns[ColumnKey.New].Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            }
+            catch 
+            { }
+
             e.Layout.Bands[0].Override.SummaryDisplayArea = Infragistics.Win.UltraWinGrid.SummaryDisplayAreas.BottomFixed;
             e.Layout.Bands[0].Override.SummaryValueAppearance.ForeColor = System.Drawing.Color.DarkBlue;
                        
@@ -239,10 +292,33 @@ namespace Baran.Windows.Forms
         protected override void OnInitializeRow(Infragistics.Win.UltraWinGrid.InitializeRowEventArgs e)
         {
             base.OnInitializeRow(e);
-            e.Row.Cells["RowID"].Value = e.Row.Index + 1;
+            e.Row.Cells[ColumnKey.RowID].Value = e.Row.Index + 1;
             
-            e.Row.Cells["RowID"].Appearance.BackColor = System.Drawing.Color.Transparent;
+            e.Row.Cells[ColumnKey.RowID].Appearance.BackColor = System.Drawing.Color.Transparent;
+
+            try
+            {
+                e.Row.Cells[ColumnKey.Update].Appearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("replaceColore16.png"));
+                e.Row.Cells[ColumnKey.Update].ButtonAppearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("replaceColore16.png"));
+
+                e.Row.Cells[ColumnKey.Delete].Appearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("deleteColore16.png"));
+                e.Row.Cells[ColumnKey.Delete].ButtonAppearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("deleteColore16.png"));
+
+                e.Row.Cells[ColumnKey.New].Appearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("replaceColore16.png"));
+                e.Row.Cells[ColumnKey.New].ButtonAppearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("replaceColore16.png"));
+
+                e.Row.Cells[ColumnKey.Detail].Appearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("DetailColore16.png"));
+                e.Row.Cells[ColumnKey.Detail].ButtonAppearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("DetailColore16.png"));
+
+
+                e.Row.Cells[ColumnKey.Update].ToolTipText = "تغییر";
+                e.Row.Cells[ColumnKey.Delete].ToolTipText = "حذف";
+                e.Row.Cells[ColumnKey.New].ToolTipText = "جدید";
+                e.Row.Cells[ColumnKey.Detail].ToolTipText = "جزئیات";
+            }
+            catch { }
         }
+
 
         protected override void OnAfterCellUpdate(Infragistics.Win.UltraWinGrid.CellEventArgs e)
         {

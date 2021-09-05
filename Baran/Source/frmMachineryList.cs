@@ -76,7 +76,7 @@ namespace Baran.Source
         public override void OnChange()
         {
             base.OnChange();
-            if (grdItem.Selected.Rows.Count == 0)
+            if (MachineryID <= 0)
             {
                 OnMessage(BaranResources.NoRowSelectedError, PublicEnum.EnmMessageCategory.Warning);
                 return;
@@ -97,14 +97,13 @@ namespace Baran.Source
         public override void OnDelete()
         {
             base.OnDelete();
-            if (grdItem.Selected.Rows.Count == 0)
+            if (MachineryID <= 0)
             {
                 OnMessage(BaranResources.NoRowSelectedError, PublicEnum.EnmMessageCategory.Warning);
                 return;
             }
 
-            if (MachineryID <= 0)
-                return;
+
 
             DialogResult msgResult = MessageBoxX.ShowMessageBox(PublicEnum.EnmMessageType.msgDeleteConfirm);
             if (msgResult == DialogResult.No) return;
@@ -153,7 +152,13 @@ namespace Baran.Source
         }
 
         private void Detail()
-        {            
+        {
+            if (MachineryID <= 0)
+            {
+                OnMessage(BaranResources.NoRowSelectedError, PublicEnum.EnmMessageCategory.Warning);
+                return;
+            }
+
             Baran.Source.frmMachineryView ofrm = new frmMachineryView(MachineryID);
             ofrm.ShowDialog();
         }
@@ -174,6 +179,22 @@ namespace Baran.Source
         private void grdItem_DoubleClickRow(object sender, Infragistics.Win.UltraWinGrid.DoubleClickRowEventArgs e)
         {
             this.Detail();
+        }
+
+        private void grdItem_ClickCellButton(object sender, Infragistics.Win.UltraWinGrid.CellEventArgs e)
+        {
+            try
+            { 
+                if (e.Cell.Column.Key == ColumnKey.Update)
+                    OnChange();
+                else if (e.Cell.Column.Key == ColumnKey.Delete)
+                    OnDelete();
+                else if (e.Cell.Column.Key == ColumnKey.New)
+                    OnNew();
+                else if (e.Cell.Column.Key == ColumnKey.Detail)
+                    OnDetail();
+            }
+            catch { }
         }
     }
 }

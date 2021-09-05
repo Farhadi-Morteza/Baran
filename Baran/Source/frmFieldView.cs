@@ -68,9 +68,10 @@ namespace Baran.Source
                 dst = BaranDataAccess.Source.dstSource.FieldViewTable(FieldID);
                 rwField = dst.spr_src_Field_Vew_Select[0];
 
-                lblCollection.Text = rwField.IsCollectionNameNull() ? string.Empty : rwField.CollectionName;
-                lblSubcollection.Text = rwField.IsSubcollectionNameNull() ? string.Empty : rwField.SubcollectionName;
-                lblPart.Text = rwField.IsPartNameNull() ? string.Empty : rwField.PartName;
+                lblCollection.Text =  rwField.CollectionName;
+                lblSubcollection.Text = rwField.SubcollectionName;
+                lblPart.Text = rwField.PartName;
+                lblLand.Text = rwField.LandName;
                 lblFieldName.Text = rwField.IsFieldNameNull() ? string.Empty : rwField.FieldName;
                 lblTotalArea.Text = rwField.IsTotalAreaNull() ? string.Empty : rwField.TotalArea.ToString();
                 lblUsableArea.Text = rwField.IsUsableAreaNull() ? string.Empty : rwField.UsableArea.ToString();

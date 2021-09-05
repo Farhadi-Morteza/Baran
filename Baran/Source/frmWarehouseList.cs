@@ -75,7 +75,7 @@ namespace Baran.Source
         public override void OnChange()
         {
             base.OnChange();
-            if (grdItem.Selected.Rows.Count == 0)
+            if (WarehouseID <= 0)
             {
                 OnMessage(BaranResources.NoRowSelectedError, PublicEnum.EnmMessageCategory.Warning);
                 return;
@@ -97,14 +97,11 @@ namespace Baran.Source
         public override void OnDelete()
         {
             base.OnDelete();
-            if (grdItem.Selected.Rows.Count == 0)
+            if (WarehouseID <= 0)
             {
                 OnMessage(BaranResources.NoRowSelectedError, PublicEnum.EnmMessageCategory.Warning);
                 return;
             }
-
-            if (WarehouseID <= 0)
-                return;
 
             DialogResult msgResult = MessageBoxX.ShowMessageBox(PublicEnum.EnmMessageType.msgDeleteConfirm);
             if (msgResult == DialogResult.No) return;
@@ -144,9 +141,7 @@ namespace Baran.Source
         private void FillGrid()
         {
             dstSource1.spr_src_Warehouse_Lst_Select.Clear();
-            dstSource1.spr_src_Warehouse_Lst_Select.Merge(BaranDataAccess.Source.dstSource.WarehouseListTable(CurrentUser.Instance.UserID).spr_src_Warehouse_Lst_Select);
-
-            
+            dstSource1.spr_src_Warehouse_Lst_Select.Merge(BaranDataAccess.Source.dstSource.WarehouseListTable(CurrentUser.Instance.UserID).spr_src_Warehouse_Lst_Select);            
         }
 
         public override void OnExport(Windows.Forms.UltraGrid grdItem)
@@ -156,6 +151,11 @@ namespace Baran.Source
 
         private void Detail()
         {
+            if (WarehouseID <= 0)
+            {
+                OnMessage(BaranResources.NoRowSelectedError, PublicEnum.EnmMessageCategory.Warning);
+                return;
+            }
             Baran.Source.frmWarehouseView ofrm = new frmWarehouseView(WarehouseID);
             ofrm.ShowDialog();
         }
@@ -176,8 +176,23 @@ namespace Baran.Source
             this.Detail();
         }
 
+
         #endregion
 
-
+        private void grdItem_ClickCellButton(object sender, Infragistics.Win.UltraWinGrid.CellEventArgs e)
+        {
+            try
+            {
+                if (e.Cell.Column.Key == ColumnKey.Update)
+                    OnChange();
+                else if (e.Cell.Column.Key == ColumnKey.Delete)
+                    OnDelete();
+                else if (e.Cell.Column.Key == ColumnKey.New)
+                    OnNew();
+                else if (e.Cell.Column.Key == ColumnKey.Detail)
+                    OnDetail();
+            }
+            catch { }
+        }
     }
 }

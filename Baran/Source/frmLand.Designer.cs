@@ -361,7 +361,7 @@ namespace Baran.Source
             this.btnGeo.Location = new System.Drawing.Point(19, 30);
             this.btnGeo.Name = "btnGeo";
             this.btnGeo.Size = new System.Drawing.Size(65, 65);
-            this.btnGeo.TabIndex = 115;
+            this.btnGeo.TabIndex = 17;
             this.btnGeo.UseVisualStyleBackColor = true;
             this.btnGeo.Click += new System.EventHandler(this.btnGeo_Click);
             // 
@@ -374,7 +374,7 @@ namespace Baran.Source
             this.chkChangeUse.Name = "chkChangeUse";
             this.chkChangeUse.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkChangeUse.Size = new System.Drawing.Size(109, 17);
-            this.chkChangeUse.TabIndex = 16;
+            this.chkChangeUse.TabIndex = 14;
             this.chkChangeUse.Text = "امکان تغییر کاربری";
             this.chkChangeUse.UseVisualStyleBackColor = true;
             // 
@@ -387,7 +387,7 @@ namespace Baran.Source
             this.chkSalability.Name = "chkSalability";
             this.chkSalability.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkSalability.Size = new System.Drawing.Size(86, 17);
-            this.chkSalability.TabIndex = 15;
+            this.chkSalability.TabIndex = 13;
             this.chkSalability.Text = "قابلیت فروش";
             this.chkSalability.UseVisualStyleBackColor = true;
             // 
@@ -400,7 +400,7 @@ namespace Baran.Source
             this.chkOpposition.Name = "chkOpposition";
             this.chkOpposition.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkOpposition.Size = new System.Drawing.Size(86, 17);
-            this.chkOpposition.TabIndex = 14;
+            this.chkOpposition.TabIndex = 12;
             this.chkOpposition.Text = "دارای معارض";
             this.chkOpposition.UseVisualStyleBackColor = true;
             // 
@@ -451,7 +451,7 @@ namespace Baran.Source
             this.txtDescription.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtDescription.Size = new System.Drawing.Size(947, 44);
-            this.txtDescription.TabIndex = 18;
+            this.txtDescription.TabIndex = 16;
             this.txtDescription.UnformattedText = null;
             // 
             // label13
@@ -524,7 +524,7 @@ namespace Baran.Source
             this.txtDocPlace.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtDocPlace.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtDocPlace.Size = new System.Drawing.Size(516, 22);
-            this.txtDocPlace.TabIndex = 9;
+            this.txtDocPlace.TabIndex = 8;
             this.txtDocPlace.UnformattedText = null;
             // 
             // label10
@@ -558,7 +558,7 @@ namespace Baran.Source
             this.txtFutureProgram.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtFutureProgram.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtFutureProgram.Size = new System.Drawing.Size(422, 22);
-            this.txtFutureProgram.TabIndex = 8;
+            this.txtFutureProgram.TabIndex = 7;
             this.txtFutureProgram.UnformattedText = null;
             // 
             // label9
@@ -654,7 +654,7 @@ namespace Baran.Source
             this.cmbOwnership.Name = "cmbOwnership";
             this.cmbOwnership.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbOwnership.Size = new System.Drawing.Size(218, 22);
-            this.cmbOwnership.TabIndex = 6;
+            this.cmbOwnership.TabIndex = 5;
             // 
             // label6
             // 
@@ -759,7 +759,7 @@ namespace Baran.Source
             this.txtAddress.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtAddress.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAddress.Size = new System.Drawing.Size(947, 22);
-            this.txtAddress.TabIndex = 17;
+            this.txtAddress.TabIndex = 15;
             this.txtAddress.UnformattedText = null;
             // 
             // cmbProvince
@@ -784,7 +784,7 @@ namespace Baran.Source
             this.cmbProvince.Name = "cmbProvince";
             this.cmbProvince.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbProvince.Size = new System.Drawing.Size(195, 22);
-            this.cmbProvince.TabIndex = 11;
+            this.cmbProvince.TabIndex = 9;
             this.cmbProvince.ValueChanged += new System.EventHandler(this.cmbProvince_ValueChanged);
             // 
             // label14
@@ -819,7 +819,7 @@ namespace Baran.Source
             this.txtCity.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtCity.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtCity.Size = new System.Drawing.Size(218, 22);
-            this.txtCity.TabIndex = 13;
+            this.txtCity.TabIndex = 11;
             this.txtCity.UnformattedText = null;
             // 
             // cmbTownship
@@ -844,7 +844,7 @@ namespace Baran.Source
             this.cmbTownship.Name = "cmbTownship";
             this.cmbTownship.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbTownship.Size = new System.Drawing.Size(221, 22);
-            this.cmbTownship.TabIndex = 12;
+            this.cmbTownship.TabIndex = 10;
             // 
             // txtDocNumber
             // 
@@ -862,7 +862,7 @@ namespace Baran.Source
             this.txtDocNumber.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtDocNumber.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtDocNumber.Size = new System.Drawing.Size(208, 22);
-            this.txtDocNumber.TabIndex = 10;
+            this.txtDocNumber.TabIndex = 6;
             this.txtDocNumber.UnformattedText = null;
             // 
             // label5

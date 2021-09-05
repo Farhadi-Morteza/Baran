@@ -68,7 +68,7 @@ namespace Baran.Source
         public override void OnChange()
         {
             base.OnChange();
-            if (grdItem.Selected.Rows.Count == 0)
+            if (WaterID <= 0)
             {
                 OnMessage(BaranResources.NoRowSelectedError, PublicEnum.EnmMessageCategory.Warning);
                 return;
@@ -87,14 +87,11 @@ namespace Baran.Source
         public override void OnDelete()
         {
             base.OnDelete();
-            if (grdItem.Selected.Rows.Count == 0)
+            if (WaterID <= 0)
             {
                 OnMessage(BaranResources.NoRowSelectedError, PublicEnum.EnmMessageCategory.Warning);
                 return;
             }
-
-            if (WaterID <= 0)
-                return;
 
             DialogResult msgResult = MessageBoxX.ShowMessageBox(PublicEnum.EnmMessageType.msgDeleteConfirm);
             if (msgResult == DialogResult.No) return;
@@ -150,6 +147,12 @@ namespace Baran.Source
 
         private void Detail()
         {
+            if (WaterID <= 0)
+            {
+                OnMessage(BaranResources.NoRowSelectedError, PublicEnum.EnmMessageCategory.Warning);
+                return;
+            }
+
             Baran.Source.frmWaterView ofrm = new frmWaterView(WaterID);
             ofrm.ShowDialog();
         }
@@ -171,8 +174,23 @@ namespace Baran.Source
             this.Detail();
         }
 
+
         #endregion
 
-
+        private void grdItem_ClickCellButton(object sender, Infragistics.Win.UltraWinGrid.CellEventArgs e)
+        {
+            try
+            {
+                if (e.Cell.Column.Key == ColumnKey.Update)
+                    OnChange();
+                else if (e.Cell.Column.Key == ColumnKey.Delete)
+                    OnDelete();
+                else if (e.Cell.Column.Key == ColumnKey.New)
+                    OnNew();
+                else if (e.Cell.Column.Key == ColumnKey.Detail)
+                    OnDetail();
+            }
+            catch { }
+        }
     }
 }
