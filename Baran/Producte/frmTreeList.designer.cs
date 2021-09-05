@@ -52,7 +52,11 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn20 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("TreeID");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn21 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RowID", 0);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn22 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FreeSpace", 1);
-            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn23 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("New", 2);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn24 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Detail", 3);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn25 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Delete", 4);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn26 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Update", 5);
+            Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance29 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance30 = new Infragistics.Win.Appearance();
@@ -238,7 +242,7 @@
             ultraGridColumn20.Width = 29;
             ultraGridColumn21.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn21.Header.Caption = "ردیف";
-            ultraGridColumn21.Header.VisiblePosition = 21;
+            ultraGridColumn21.Header.VisiblePosition = 25;
             ultraGridColumn21.TabStop = false;
             ultraGridColumn21.Width = 41;
             ultraGridColumn22.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
@@ -246,6 +250,28 @@
             ultraGridColumn22.Header.VisiblePosition = 0;
             ultraGridColumn22.MergedCellStyle = Infragistics.Win.UltraWinGrid.MergedCellStyle.Always;
             ultraGridColumn22.Width = 41;
+            ultraGridColumn23.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn23.Header.Caption = "...";
+            ultraGridColumn23.Header.VisiblePosition = 21;
+            ultraGridColumn23.Hidden = true;
+            ultraGridColumn23.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn23.Width = 41;
+            ultraGridColumn24.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn24.Header.Caption = "...";
+            ultraGridColumn24.Header.VisiblePosition = 22;
+            ultraGridColumn24.Hidden = true;
+            ultraGridColumn24.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn24.Width = 41;
+            ultraGridColumn25.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn25.Header.Caption = "...";
+            ultraGridColumn25.Header.VisiblePosition = 23;
+            ultraGridColumn25.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn25.Width = 41;
+            ultraGridColumn26.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn26.Header.Caption = "...";
+            ultraGridColumn26.Header.VisiblePosition = 24;
+            ultraGridColumn26.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn26.Width = 41;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2,
@@ -268,13 +294,18 @@
             ultraGridColumn19,
             ultraGridColumn20,
             ultraGridColumn21,
-            ultraGridColumn22});
+            ultraGridColumn22,
+            ultraGridColumn23,
+            ultraGridColumn24,
+            ultraGridColumn25,
+            ultraGridColumn26});
             ultraGridBand1.Override.SummaryDisplayArea = Infragistics.Win.UltraWinGrid.SummaryDisplayAreas.BottomFixed;
-            appearance1.ForeColor = System.Drawing.Color.DarkBlue;
-            ultraGridBand1.Override.SummaryValueAppearance = appearance1;
+            appearance8.ForeColor = System.Drawing.Color.DarkBlue;
+            ultraGridBand1.Override.SummaryValueAppearance = appearance8;
             this.grdItem.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdItem.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
-            appearance2.ForeColor = System.Drawing.Color.DarkBlue;
+            appearance2.BackColor = System.Drawing.Color.WhiteSmoke;
+            appearance2.ForeColor = System.Drawing.Color.Black;
             this.grdItem.DisplayLayout.CaptionAppearance = appearance2;
             this.grdItem.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.True;
             appearance29.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -382,9 +413,10 @@
             this.grdItem.Location = new System.Drawing.Point(1, 0);
             this.grdItem.Name = "grdItem";
             this.grdItem.Size = new System.Drawing.Size(830, 312);
-            this.grdItem.SumColumnsWidth = 1316;
+            this.grdItem.SumColumnsWidth = 1439;
             this.grdItem.TabIndex = 15;
             this.grdItem.AfterRowActivate += new System.EventHandler(this.grdItem_AfterRowActivate);
+            this.grdItem.ClickCellButton += new Infragistics.Win.UltraWinGrid.CellEventHandler(this.grdItem_ClickCellButton);
             // 
             // frmTreeList
             // 
