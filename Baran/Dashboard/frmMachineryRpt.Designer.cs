@@ -53,11 +53,15 @@ namespace Baran.Dashboard
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("LinkedArea");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RowID", 0);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn15 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FreeSpace", 1);
-            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn16 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("New", 2);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn17 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Detail", 3);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn18 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Delete", 4);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn19 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Update", 5);
+            Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.SummarySettings summarySettings1 = new Infragistics.Win.UltraWinGrid.SummarySettings("", Infragistics.Win.UltraWinGrid.SummaryType.Sum, null, "WorkHoursDecimal", 5, true, "spr_dsb_Machinery_rpt", 0, Infragistics.Win.UltraWinGrid.SummaryPosition.UseSummaryPositionColumn, "WorkHours", 4, true);
-            Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.SummarySettings summarySettings2 = new Infragistics.Win.UltraWinGrid.SummarySettings("", Infragistics.Win.UltraWinGrid.SummaryType.Sum, null, "TreatedArea", 6, true, "spr_dsb_Machinery_rpt", 0, Infragistics.Win.UltraWinGrid.SummaryPosition.UseSummaryPositionColumn, "TreatedArea", 6, true);
-            Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance14 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance33 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance34 = new Infragistics.Win.Appearance();
@@ -299,8 +303,8 @@ namespace Baran.Dashboard
             this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 42);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 250F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 400F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(882, 535);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
@@ -339,7 +343,7 @@ namespace Baran.Dashboard
             ultraGridColumn6.Header.Caption = "فعالیت/ساعت";
             ultraGridColumn6.Header.VisiblePosition = 9;
             ultraGridColumn6.Hidden = true;
-            ultraGridColumn6.Width = 41;
+            ultraGridColumn6.Width = 34;
             ultraGridColumn7.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn7.Header.Caption = "فعالیت/هکتار";
             ultraGridColumn7.Header.VisiblePosition = 7;
@@ -370,7 +374,7 @@ namespace Baran.Dashboard
             ultraGridColumn13.Width = 85;
             ultraGridColumn14.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn14.Header.Caption = "#";
-            ultraGridColumn14.Header.VisiblePosition = 14;
+            ultraGridColumn14.Header.VisiblePosition = 18;
             ultraGridColumn14.TabStop = false;
             ultraGridColumn14.Width = 41;
             ultraGridColumn15.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
@@ -378,6 +382,30 @@ namespace Baran.Dashboard
             ultraGridColumn15.Header.VisiblePosition = 0;
             ultraGridColumn15.MergedCellStyle = Infragistics.Win.UltraWinGrid.MergedCellStyle.Always;
             ultraGridColumn15.Width = 41;
+            ultraGridColumn16.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn16.Header.Caption = "...";
+            ultraGridColumn16.Header.VisiblePosition = 14;
+            ultraGridColumn16.Hidden = true;
+            ultraGridColumn16.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn16.Width = 41;
+            ultraGridColumn17.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn17.Header.Caption = "...";
+            ultraGridColumn17.Header.VisiblePosition = 15;
+            ultraGridColumn17.Hidden = true;
+            ultraGridColumn17.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn17.Width = 41;
+            ultraGridColumn18.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn18.Header.Caption = "...";
+            ultraGridColumn18.Header.VisiblePosition = 16;
+            ultraGridColumn18.Hidden = true;
+            ultraGridColumn18.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn18.Width = 41;
+            ultraGridColumn19.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn19.Header.Caption = "...";
+            ultraGridColumn19.Header.VisiblePosition = 17;
+            ultraGridColumn19.Hidden = true;
+            ultraGridColumn19.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn19.Width = 41;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2,
@@ -393,14 +421,18 @@ namespace Baran.Dashboard
             ultraGridColumn12,
             ultraGridColumn13,
             ultraGridColumn14,
-            ultraGridColumn15});
+            ultraGridColumn15,
+            ultraGridColumn16,
+            ultraGridColumn17,
+            ultraGridColumn18,
+            ultraGridColumn19});
             ultraGridBand1.Override.SummaryDisplayArea = Infragistics.Win.UltraWinGrid.SummaryDisplayAreas.BottomFixed;
-            appearance1.ForeColor = System.Drawing.Color.DarkBlue;
-            ultraGridBand1.Override.SummaryValueAppearance = appearance1;
+            appearance12.ForeColor = System.Drawing.Color.DarkBlue;
+            ultraGridBand1.Override.SummaryValueAppearance = appearance12;
             summarySettings1.DisplayFormat = "{0:#,###,###,###.##}";
-            summarySettings1.GroupBySummaryValueAppearance = appearance10;
+            summarySettings1.GroupBySummaryValueAppearance = appearance13;
             summarySettings2.DisplayFormat = "{0:#,###,###,###.##}";
-            summarySettings2.GroupBySummaryValueAppearance = appearance11;
+            summarySettings2.GroupBySummaryValueAppearance = appearance14;
             ultraGridBand1.Summaries.AddRange(new Infragistics.Win.UltraWinGrid.SummarySettings[] {
             summarySettings1,
             summarySettings2});
@@ -512,13 +544,12 @@ namespace Baran.Dashboard
             this.grdItem.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
             this.grdItem.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.grdItem.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
-            this.grdItem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdItem.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.grdItem.InputLanguage = Baran.Windows.Forms.InputLanguage.Farsi;
-            this.grdItem.Location = new System.Drawing.Point(3, 253);
+            this.grdItem.Location = new System.Drawing.Point(3, 270);
             this.grdItem.Name = "grdItem";
-            this.grdItem.Size = new System.Drawing.Size(876, 394);
-            this.grdItem.SumColumnsWidth = 927;
+            this.grdItem.Size = new System.Drawing.Size(876, 231);
+            this.grdItem.SumColumnsWidth = 1050;
             this.grdItem.TabIndex = 6;
             // 
 //			'UltraChartMain' properties's serialization: Since 'ChartType' changes the way axes look,
@@ -664,7 +695,7 @@ namespace Baran.Dashboard
             this.chtMain.LineChart = lineChartAppearance1;
             this.chtMain.Location = new System.Drawing.Point(3, 3);
             this.chtMain.Name = "chtMain";
-            this.chtMain.Size = new System.Drawing.Size(876, 244);
+            this.chtMain.Size = new System.Drawing.Size(876, 261);
             this.chtMain.TabIndex = 5;
             // 
             // frmMachineryRpt

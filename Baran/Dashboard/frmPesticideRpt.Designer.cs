@@ -47,6 +47,10 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("LinkedArea");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FreeSpace", 0);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RowID", 1);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("New", 2);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn15 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Detail", 3);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn16 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Delete", 4);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn17 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Update", 5);
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance38 = new Infragistics.Win.Appearance();
@@ -69,11 +73,11 @@
             Infragistics.Win.Appearance appearance134 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance135 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand2 = new Infragistics.Win.UltraWinGrid.UltraGridBand("spr_src_Pesticide_cmbLst_Select", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("PesticideID");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn15 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("PesticideName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn16 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Manufacture");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn17 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("UnitMeasurement");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn18 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("MaterialMode");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn18 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("PesticideID");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn19 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("PesticideName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn20 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Manufacture");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn21 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("UnitMeasurement");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn22 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("MaterialMode");
             Infragistics.Win.Appearance appearance136 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance137 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance138 = new Infragistics.Win.Appearance();
@@ -387,12 +391,36 @@
             ultraGridColumn12.Header.Caption = "";
             ultraGridColumn12.Header.VisiblePosition = 0;
             ultraGridColumn12.MergedCellStyle = Infragistics.Win.UltraWinGrid.MergedCellStyle.Always;
-            ultraGridColumn12.Width = 71;
+            ultraGridColumn12.Width = 41;
             ultraGridColumn13.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn13.Header.Caption = "#";
-            ultraGridColumn13.Header.VisiblePosition = 12;
+            ultraGridColumn13.Header.VisiblePosition = 16;
             ultraGridColumn13.TabStop = false;
             ultraGridColumn13.Width = 41;
+            ultraGridColumn14.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn14.Header.Caption = "...";
+            ultraGridColumn14.Header.VisiblePosition = 12;
+            ultraGridColumn14.Hidden = true;
+            ultraGridColumn14.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn14.Width = 41;
+            ultraGridColumn15.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn15.Header.Caption = "...";
+            ultraGridColumn15.Header.VisiblePosition = 13;
+            ultraGridColumn15.Hidden = true;
+            ultraGridColumn15.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn15.Width = 41;
+            ultraGridColumn16.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn16.Header.Caption = "...";
+            ultraGridColumn16.Header.VisiblePosition = 14;
+            ultraGridColumn16.Hidden = true;
+            ultraGridColumn16.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn16.Width = 41;
+            ultraGridColumn17.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn17.Header.Caption = "...";
+            ultraGridColumn17.Header.VisiblePosition = 15;
+            ultraGridColumn17.Hidden = true;
+            ultraGridColumn17.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn17.Width = 41;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2,
@@ -406,7 +434,11 @@
             ultraGridColumn10,
             ultraGridColumn11,
             ultraGridColumn12,
-            ultraGridColumn13});
+            ultraGridColumn13,
+            ultraGridColumn14,
+            ultraGridColumn15,
+            ultraGridColumn16,
+            ultraGridColumn17});
             ultraGridBand1.Override.SummaryDisplayArea = Infragistics.Win.UltraWinGrid.SummaryDisplayAreas.BottomFixed;
             appearance3.ForeColor = System.Drawing.Color.DarkBlue;
             ultraGridBand1.Override.SummaryValueAppearance = appearance3;
@@ -522,7 +554,7 @@
             this.grdItem.Location = new System.Drawing.Point(3, 217);
             this.grdItem.Name = "grdItem";
             this.grdItem.Size = new System.Drawing.Size(876, 315);
-            this.grdItem.SumColumnsWidth = 805;
+            this.grdItem.SumColumnsWidth = 928;
             this.grdItem.TabIndex = 4;
             this.grdItem.AfterRowFilterChanged += new Infragistics.Win.UltraWinGrid.AfterRowFilterChangedEventHandler(this.grdItem_AfterRowFilterChanged);
             // 
@@ -561,27 +593,27 @@
             appearance135.BackColor = System.Drawing.SystemColors.Window;
             appearance135.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.cmbPesticide.DisplayLayout.Appearance = appearance135;
-            ultraGridColumn14.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
-            ultraGridColumn14.Header.VisiblePosition = 0;
-            ultraGridColumn14.Hidden = true;
-            ultraGridColumn15.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
-            ultraGridColumn15.Header.Caption = "نام";
-            ultraGridColumn15.Header.VisiblePosition = 4;
-            ultraGridColumn16.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
-            ultraGridColumn16.Header.Caption = "شرکت سازنده";
-            ultraGridColumn16.Header.VisiblePosition = 3;
-            ultraGridColumn17.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
-            ultraGridColumn17.Header.VisiblePosition = 1;
-            ultraGridColumn17.Hidden = true;
             ultraGridColumn18.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
-            ultraGridColumn18.Header.Caption = "نوع";
-            ultraGridColumn18.Header.VisiblePosition = 2;
+            ultraGridColumn18.Header.VisiblePosition = 0;
+            ultraGridColumn18.Hidden = true;
+            ultraGridColumn19.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn19.Header.Caption = "نام";
+            ultraGridColumn19.Header.VisiblePosition = 4;
+            ultraGridColumn20.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn20.Header.Caption = "شرکت سازنده";
+            ultraGridColumn20.Header.VisiblePosition = 3;
+            ultraGridColumn21.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn21.Header.VisiblePosition = 1;
+            ultraGridColumn21.Hidden = true;
+            ultraGridColumn22.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn22.Header.Caption = "نوع";
+            ultraGridColumn22.Header.VisiblePosition = 2;
             ultraGridBand2.Columns.AddRange(new object[] {
-            ultraGridColumn14,
-            ultraGridColumn15,
-            ultraGridColumn16,
-            ultraGridColumn17,
-            ultraGridColumn18});
+            ultraGridColumn18,
+            ultraGridColumn19,
+            ultraGridColumn20,
+            ultraGridColumn21,
+            ultraGridColumn22});
             this.cmbPesticide.DisplayLayout.BandsSerializer.Add(ultraGridBand2);
             this.cmbPesticide.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
             this.cmbPesticide.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;

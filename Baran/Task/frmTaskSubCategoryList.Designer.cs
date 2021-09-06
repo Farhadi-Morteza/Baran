@@ -35,7 +35,11 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CategoryName");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn4 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RowID", 0);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn5 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FreeSpace", 1);
-            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn6 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("New", 2);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn7 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Detail", 3);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn8 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Delete", 4);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn9 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Update", 5);
+            Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance29 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance30 = new Infragistics.Win.Appearance();
@@ -74,12 +78,24 @@
             // 
             // grpButons
             // 
-            this.grpButons.Location = new System.Drawing.Point(0, 451);
-            this.grpButons.Size = new System.Drawing.Size(767, 75);
+            this.grpButons.Location = new System.Drawing.Point(0, 396);
+            this.grpButons.Size = new System.Drawing.Size(782, 75);
             // 
             // lblLine2
             // 
-            this.lblLine2.Size = new System.Drawing.Size(765, 3);
+            this.lblLine2.Size = new System.Drawing.Size(780, 3);
+            // 
+            // grpHeader
+            // 
+            this.grpHeader.Size = new System.Drawing.Size(782, 75);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(722, 10);
+            // 
+            // lblCaption
+            // 
+            this.lblCaption.Location = new System.Drawing.Point(416, 23);
             // 
             // lblMessage
             // 
@@ -87,21 +103,21 @@
             // 
             // lblLine1
             // 
-            this.lblLine1.Size = new System.Drawing.Size(765, 3);
+            this.lblLine1.Size = new System.Drawing.Size(780, 3);
             // 
             // grpMessage
             // 
-            this.grpMessage.Size = new System.Drawing.Size(767, 30);
+            this.grpMessage.Size = new System.Drawing.Size(782, 30);
             // 
             // lblLine3
             // 
-            this.lblLine3.Location = new System.Drawing.Point(1, 342);
-            this.lblLine3.Size = new System.Drawing.Size(765, 3);
+            this.lblLine3.Location = new System.Drawing.Point(1, 287);
+            this.lblLine3.Size = new System.Drawing.Size(780, 3);
             // 
             // grpMain
             // 
             this.grpMain.Controls.Add(this.grdItem);
-            this.grpMain.Size = new System.Drawing.Size(767, 346);
+            this.grpMain.Size = new System.Drawing.Size(782, 291);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
             this.grpMain.Controls.SetChildIndex(this.grdItem, 0);
             // 
@@ -124,38 +140,65 @@
             ultraGridColumn1.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn1.Header.VisiblePosition = 1;
             ultraGridColumn1.Hidden = true;
-            ultraGridColumn1.Width = 34;
+            ultraGridColumn1.Width = 29;
             ultraGridColumn2.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn2.Header.Caption = "گروه فرعی فعالیت";
             ultraGridColumn2.Header.VisiblePosition = 2;
-            ultraGridColumn2.Width = 128;
+            ultraGridColumn2.Width = 104;
             ultraGridColumn3.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn3.Header.Caption = "گروه اصلی فعالیت";
             ultraGridColumn3.Header.VisiblePosition = 3;
             ultraGridColumn3.MergedCellStyle = Infragistics.Win.UltraWinGrid.MergedCellStyle.Always;
-            ultraGridColumn3.Width = 127;
+            ultraGridColumn3.Width = 102;
             ultraGridColumn4.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn4.Header.Caption = "ردیف";
-            ultraGridColumn4.Header.VisiblePosition = 4;
+            ultraGridColumn4.Header.VisiblePosition = 8;
             ultraGridColumn4.TabStop = false;
-            ultraGridColumn4.Width = 48;
+            ultraGridColumn4.Width = 41;
             ultraGridColumn5.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn5.Header.Caption = "";
             ultraGridColumn5.Header.VisiblePosition = 0;
             ultraGridColumn5.MergedCellStyle = Infragistics.Win.UltraWinGrid.MergedCellStyle.Always;
-            ultraGridColumn5.Width = 414;
+            ultraGridColumn5.Width = 369;
+            ultraGridColumn6.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn6.Header.Caption = "...";
+            ultraGridColumn6.Header.VisiblePosition = 4;
+            ultraGridColumn6.Hidden = true;
+            ultraGridColumn6.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn6.Width = 41;
+            ultraGridColumn7.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn7.Header.Caption = "...";
+            ultraGridColumn7.Header.VisiblePosition = 5;
+            ultraGridColumn7.Hidden = true;
+            ultraGridColumn7.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn7.Width = 41;
+            ultraGridColumn8.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn8.Header.Caption = "...";
+            ultraGridColumn8.Header.VisiblePosition = 6;
+            ultraGridColumn8.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn8.Width = 41;
+            ultraGridColumn9.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn9.Header.Caption = "...";
+            ultraGridColumn9.Header.VisiblePosition = 7;
+            ultraGridColumn9.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn9.Width = 41;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2,
             ultraGridColumn3,
             ultraGridColumn4,
-            ultraGridColumn5});
+            ultraGridColumn5,
+            ultraGridColumn6,
+            ultraGridColumn7,
+            ultraGridColumn8,
+            ultraGridColumn9});
             ultraGridBand1.Override.SummaryDisplayArea = Infragistics.Win.UltraWinGrid.SummaryDisplayAreas.BottomFixed;
-            appearance1.ForeColor = System.Drawing.Color.DarkBlue;
-            ultraGridBand1.Override.SummaryValueAppearance = appearance1;
+            appearance8.ForeColor = System.Drawing.Color.DarkBlue;
+            ultraGridBand1.Override.SummaryValueAppearance = appearance8;
             this.grdItem.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdItem.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
-            appearance2.ForeColor = System.Drawing.Color.DarkBlue;
+            appearance2.BackColor = System.Drawing.Color.WhiteSmoke;
+            appearance2.ForeColor = System.Drawing.Color.Black;
             this.grdItem.DisplayLayout.CaptionAppearance = appearance2;
             this.grdItem.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.True;
             appearance29.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -262,17 +305,18 @@
             this.grdItem.InputLanguage = Baran.Windows.Forms.InputLanguage.Farsi;
             this.grdItem.Location = new System.Drawing.Point(1, 0);
             this.grdItem.Name = "grdItem";
-            this.grdItem.Size = new System.Drawing.Size(765, 342);
-            this.grdItem.SumColumnsWidth = 351;
+            this.grdItem.Size = new System.Drawing.Size(780, 287);
+            this.grdItem.SumColumnsWidth = 411;
             this.grdItem.TabIndex = 15;
+            this.grdItem.ClickCellButton += new Infragistics.Win.UltraWinGrid.CellEventHandler(this.grdItem_ClickCellButton);
             this.grdItem.Click += new System.EventHandler(this.grdItem_Click);
             // 
             // frmTaskSubCategoryList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
-            this.ClientSize = new System.Drawing.Size(767, 526);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(782, 471);
             this.FormMessage = "";
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmTaskSubCategoryList";
             ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).EndInit();

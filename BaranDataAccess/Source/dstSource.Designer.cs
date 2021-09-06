@@ -10530,6 +10530,8 @@ namespace BaranDataAccess.Source {
             
             private global::System.Data.DataColumn columnنام_کشت_و_صنعت;
             
+            private global::System.Data.DataColumn columnWarehouseID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public spr_src_Warehouse_Lst_SelectDataTable() {
@@ -10653,6 +10655,14 @@ namespace BaranDataAccess.Source {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn WarehouseIDColumn {
+                get {
+                    return this.columnWarehouseID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -10688,7 +10698,7 @@ namespace BaranDataAccess.Source {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public spr_src_Warehouse_Lst_SelectRow Addspr_src_Warehouse_Lst_SelectRow(string توضیحات, string انباردار, string آدرس, string نوع_انبار, string نوع_کاربری, decimal _حجم__متر_مکعب, decimal _مساحت_مترمربع, string نام_انبار, string نام_واحد_فرعی, string نام_واحد, string نام_کشت_و_صنعت) {
+            public spr_src_Warehouse_Lst_SelectRow Addspr_src_Warehouse_Lst_SelectRow(string توضیحات, string انباردار, string آدرس, string نوع_انبار, string نوع_کاربری, decimal _حجم__متر_مکعب, decimal _مساحت_مترمربع, string نام_انبار, string نام_واحد_فرعی, string نام_واحد, string نام_کشت_و_صنعت, int WarehouseID) {
                 spr_src_Warehouse_Lst_SelectRow rowspr_src_Warehouse_Lst_SelectRow = ((spr_src_Warehouse_Lst_SelectRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         توضیحات,
@@ -10701,7 +10711,8 @@ namespace BaranDataAccess.Source {
                         نام_انبار,
                         نام_واحد_فرعی,
                         نام_واحد,
-                        نام_کشت_و_صنعت};
+                        نام_کشت_و_صنعت,
+                        WarehouseID};
                 rowspr_src_Warehouse_Lst_SelectRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowspr_src_Warehouse_Lst_SelectRow);
                 return rowspr_src_Warehouse_Lst_SelectRow;
@@ -10735,6 +10746,7 @@ namespace BaranDataAccess.Source {
                 this.columnنام_واحد_فرعی = base.Columns["نام واحد فرعی"];
                 this.columnنام_واحد = base.Columns["نام واحد"];
                 this.columnنام_کشت_و_صنعت = base.Columns["نام کشت و صنعت"];
+                this.columnWarehouseID = base.Columns["WarehouseID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10766,6 +10778,8 @@ namespace BaranDataAccess.Source {
                 base.Columns.Add(this.columnنام_واحد);
                 this.columnنام_کشت_و_صنعت = new global::System.Data.DataColumn("نام کشت و صنعت", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnنام_کشت_و_صنعت);
+                this.columnWarehouseID = new global::System.Data.DataColumn("WarehouseID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWarehouseID);
                 this.columnتوضیحات.MaxLength = 500;
                 this.columnانباردار.MaxLength = 50;
                 this.columnآدرس.MaxLength = 500;
@@ -10776,6 +10790,7 @@ namespace BaranDataAccess.Source {
                 this.columnنام_واحد_فرعی.MaxLength = 50;
                 this.columnنام_واحد.MaxLength = 50;
                 this.columnنام_کشت_و_صنعت.MaxLength = 50;
+                this.columnWarehouseID.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -25232,6 +25247,23 @@ namespace BaranDataAccess.Source {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int WarehouseID {
+                get {
+                    try {
+                        return ((int)(this[this.tablespr_src_Warehouse_Lst_Select.WarehouseIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WarehouseID\' in table \'spr_src_Warehouse_Lst_Select\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_src_Warehouse_Lst_Select.WarehouseIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsتوضیحاتNull() {
                 return this.IsNull(this.tablespr_src_Warehouse_Lst_Select.توضیحاتColumn);
             }
@@ -25348,6 +25380,18 @@ namespace BaranDataAccess.Source {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setنام_کشت_و_صنعتNull() {
                 this[this.tablespr_src_Warehouse_Lst_Select.نام_کشت_و_صنعتColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsWarehouseIDNull() {
+                return this.IsNull(this.tablespr_src_Warehouse_Lst_Select.WarehouseIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetWarehouseIDNull() {
+                this[this.tablespr_src_Warehouse_Lst_Select.WarehouseIDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -37724,6 +37768,7 @@ namespace BaranDataAccess.Source.dstSourceTableAdapters {
             tableMapping.ColumnMappings.Add("نام واحد فرعی", "نام واحد فرعی");
             tableMapping.ColumnMappings.Add("نام واحد", "نام واحد");
             tableMapping.ColumnMappings.Add("نام کشت و صنعت", "نام کشت و صنعت");
+            tableMapping.ColumnMappings.Add("WarehouseID", "WarehouseID");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

@@ -48,13 +48,17 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("LinkedArea");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FreeSpace", 0);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RowID", 1);
-            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn15 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("New", 2);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn16 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Detail", 3);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn17 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Delete", 4);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn18 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Update", 5);
+            Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.SummarySettings summarySettings1 = new Infragistics.Win.UltraWinGrid.SummarySettings("", Infragistics.Win.UltraWinGrid.SummaryType.Sum, null, "UsageVolume", 2, true, "spr_dsb_WaterStorage_rpt", 0, Infragistics.Win.UltraWinGrid.SummaryPosition.UseSummaryPositionColumn, "UsageVolume", 2, true);
-            Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance14 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.SummarySettings summarySettings2 = new Infragistics.Win.UltraWinGrid.SummarySettings("", Infragistics.Win.UltraWinGrid.SummaryType.Sum, null, "TreatedArea", 3, true, "spr_dsb_WaterStorage_rpt", 0, Infragistics.Win.UltraWinGrid.SummaryPosition.UseSummaryPositionColumn, "TreatedArea", 3, true);
-            Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance15 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.SummarySettings summarySettings3 = new Infragistics.Win.UltraWinGrid.SummarySettings("", Infragistics.Win.UltraWinGrid.SummaryType.Sum, null, "LinkedArea", 11, true, "spr_dsb_WaterStorage_rpt", 0, Infragistics.Win.UltraWinGrid.SummaryPosition.UseSummaryPositionColumn, "LinkedArea", 11, true);
-            Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance37 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance38 = new Infragistics.Win.Appearance();
@@ -296,7 +300,7 @@
             this.chtMain.ColorModel.AlphaLevel = ((byte)(150));
             this.chtMain.ColorModel.ColorBegin = System.Drawing.Color.Gold;
             this.chtMain.ColorModel.ColorEnd = System.Drawing.Color.Red;
-            this.chtMain.ColorModel.ModelStyle = Infragistics.UltraChart.Shared.Styles.ColorModels.Office2007Style;
+            this.chtMain.ColorModel.ModelStyle = Infragistics.UltraChart.Shared.Styles.ColorModels.CustomLinear;
             this.chtMain.Data.SwapRowsAndColumns = true;
             this.chtMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chtMain.EmptyChartText = "";
@@ -382,9 +386,33 @@
             ultraGridColumn13.Width = 41;
             ultraGridColumn14.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn14.Header.Caption = "#";
-            ultraGridColumn14.Header.VisiblePosition = 13;
+            ultraGridColumn14.Header.VisiblePosition = 17;
             ultraGridColumn14.TabStop = false;
             ultraGridColumn14.Width = 41;
+            ultraGridColumn15.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn15.Header.Caption = "...";
+            ultraGridColumn15.Header.VisiblePosition = 13;
+            ultraGridColumn15.Hidden = true;
+            ultraGridColumn15.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn15.Width = 41;
+            ultraGridColumn16.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn16.Header.Caption = "...";
+            ultraGridColumn16.Header.VisiblePosition = 14;
+            ultraGridColumn16.Hidden = true;
+            ultraGridColumn16.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn16.Width = 41;
+            ultraGridColumn17.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn17.Header.Caption = "...";
+            ultraGridColumn17.Header.VisiblePosition = 15;
+            ultraGridColumn17.Hidden = true;
+            ultraGridColumn17.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn17.Width = 41;
+            ultraGridColumn18.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn18.Header.Caption = "...";
+            ultraGridColumn18.Header.VisiblePosition = 16;
+            ultraGridColumn18.Hidden = true;
+            ultraGridColumn18.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn18.Width = 41;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2,
@@ -399,16 +427,20 @@
             ultraGridColumn11,
             ultraGridColumn12,
             ultraGridColumn13,
-            ultraGridColumn14});
+            ultraGridColumn14,
+            ultraGridColumn15,
+            ultraGridColumn16,
+            ultraGridColumn17,
+            ultraGridColumn18});
             ultraGridBand1.Override.SummaryDisplayArea = Infragistics.Win.UltraWinGrid.SummaryDisplayAreas.BottomFixed;
-            appearance1.ForeColor = System.Drawing.Color.DarkBlue;
-            ultraGridBand1.Override.SummaryValueAppearance = appearance1;
+            appearance13.ForeColor = System.Drawing.Color.DarkBlue;
+            ultraGridBand1.Override.SummaryValueAppearance = appearance13;
             summarySettings1.DisplayFormat = "{0:#,###,###,###.##}";
-            summarySettings1.GroupBySummaryValueAppearance = appearance10;
+            summarySettings1.GroupBySummaryValueAppearance = appearance14;
             summarySettings2.DisplayFormat = "{0:#,###,###,###.##}";
-            summarySettings2.GroupBySummaryValueAppearance = appearance11;
+            summarySettings2.GroupBySummaryValueAppearance = appearance15;
             summarySettings3.DisplayFormat = "{0:#,###,###,###.##}";
-            summarySettings3.GroupBySummaryValueAppearance = appearance12;
+            summarySettings3.GroupBySummaryValueAppearance = appearance16;
             ultraGridBand1.Summaries.AddRange(new Infragistics.Win.UltraWinGrid.SummarySettings[] {
             summarySettings1,
             summarySettings2,
@@ -527,7 +559,7 @@
             this.grdItem.Location = new System.Drawing.Point(3, 217);
             this.grdItem.Name = "grdItem";
             this.grdItem.Size = new System.Drawing.Size(876, 315);
-            this.grdItem.SumColumnsWidth = 909;
+            this.grdItem.SumColumnsWidth = 1032;
             this.grdItem.TabIndex = 4;
             this.grdItem.AfterRowFilterChanged += new Infragistics.Win.UltraWinGrid.AfterRowFilterChangedEventHandler(this.grdItem_AfterRowFilterChanged);
             // 

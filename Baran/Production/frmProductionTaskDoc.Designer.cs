@@ -107,40 +107,49 @@
             // 
             // grpPrint
             // 
-            this.grpPrint.Location = new System.Drawing.Point(10, 0);
+            this.grpPrint.Location = new System.Drawing.Point(-55, 0);
+            this.grpPrint.Size = new System.Drawing.Size(95, 66);
             // 
             // grpCancel
             // 
-            this.grpCancel.Location = new System.Drawing.Point(753, 0);
+            this.grpCancel.Location = new System.Drawing.Point(688, 0);
+            this.grpCancel.Size = new System.Drawing.Size(127, 66);
             // 
             // grpSave
             // 
-            this.grpSave.Location = new System.Drawing.Point(626, 0);
+            this.grpSave.Location = new System.Drawing.Point(561, 0);
+            this.grpSave.Size = new System.Drawing.Size(127, 66);
             // 
             // grpChange
             // 
-            this.grpChange.Location = new System.Drawing.Point(499, 0);
+            this.grpChange.Location = new System.Drawing.Point(434, 0);
+            this.grpChange.Size = new System.Drawing.Size(127, 66);
             // 
             // grpClear
             // 
-            this.grpClear.Location = new System.Drawing.Point(372, 0);
+            this.grpClear.Location = new System.Drawing.Point(307, 0);
+            this.grpClear.Size = new System.Drawing.Size(127, 66);
             // 
             // grpDelete
             // 
-            this.grpDelete.Location = new System.Drawing.Point(245, 0);
+            this.grpDelete.Location = new System.Drawing.Point(180, 0);
+            this.grpDelete.Size = new System.Drawing.Size(127, 66);
             // 
             // grpDoc
             // 
-            this.grpDoc.Location = new System.Drawing.Point(105, 0);
+            this.grpDoc.Location = new System.Drawing.Point(40, 0);
+            this.grpDoc.Size = new System.Drawing.Size(140, 66);
             this.grpDoc.Visible = false;
             // 
             // grpRefresh
             // 
-            this.grpRefresh.Location = new System.Drawing.Point(-85, 0);
+            this.grpRefresh.Location = new System.Drawing.Point(-150, 0);
+            this.grpRefresh.Size = new System.Drawing.Size(95, 66);
             // 
             // grpNew
             // 
-            this.grpNew.Location = new System.Drawing.Point(-212, 0);
+            this.grpNew.Location = new System.Drawing.Point(-277, 0);
+            this.grpNew.Size = new System.Drawing.Size(127, 66);
             // 
             // btnNew
             // 
@@ -152,25 +161,25 @@
             // 
             // grpButons
             // 
-            this.grpButons.Location = new System.Drawing.Point(0, 586);
-            this.grpButons.Size = new System.Drawing.Size(881, 67);
+            this.grpButons.Location = new System.Drawing.Point(0, 624);
+            this.grpButons.Size = new System.Drawing.Size(816, 67);
             // 
             // lblLine2
             // 
-            this.lblLine2.Size = new System.Drawing.Size(879, 3);
+            this.lblLine2.Size = new System.Drawing.Size(814, 3);
             // 
             // grpHeader
             // 
-            this.grpHeader.Size = new System.Drawing.Size(881, 75);
+            this.grpHeader.Size = new System.Drawing.Size(816, 75);
             this.grpHeader.Visible = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(818, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(754, 9);
             // 
             // lblCaption
             // 
-            this.lblCaption.Location = new System.Drawing.Point(515, 27);
+            this.lblCaption.Location = new System.Drawing.Point(451, 22);
             // 
             // lblMessage
             // 
@@ -179,22 +188,22 @@
             // 
             // lblLine1
             // 
-            this.lblLine1.Size = new System.Drawing.Size(879, 3);
+            this.lblLine1.Size = new System.Drawing.Size(814, 3);
             // 
             // grpMessage
             // 
-            this.grpMessage.Size = new System.Drawing.Size(881, 30);
+            this.grpMessage.Size = new System.Drawing.Size(816, 30);
             // 
             // lblLine3
             // 
-            this.lblLine3.Location = new System.Drawing.Point(1, 477);
-            this.lblLine3.Size = new System.Drawing.Size(879, 3);
+            this.lblLine3.Location = new System.Drawing.Point(1, 515);
+            this.lblLine3.Size = new System.Drawing.Size(814, 3);
             // 
             // grpMain
             // 
             this.grpMain.Controls.Add(this.picImage);
             this.grpMain.Controls.Add(this.grpControls);
-            this.grpMain.Size = new System.Drawing.Size(881, 481);
+            this.grpMain.Size = new System.Drawing.Size(816, 519);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
             this.grpMain.Controls.SetChildIndex(this.grpControls, 0);
             this.grpMain.Controls.SetChildIndex(this.picImage, 0);
@@ -210,9 +219,8 @@
             this.grpControls.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpControls.Location = new System.Drawing.Point(1, 0);
             this.grpControls.Name = "grpControls";
-            this.grpControls.Size = new System.Drawing.Size(879, 113);
+            this.grpControls.Size = new System.Drawing.Size(814, 113);
             this.grpControls.TabIndex = 1;
-            this.grpControls.Text = "groupBox1";
             this.grpControls.Click += new System.EventHandler(this.groupBox1_Click);
             // 
             // txtDescription
@@ -225,13 +233,13 @@
             this.txtDescription.BackColor = System.Drawing.Color.Transparent;
             this.txtDescription.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtDescription.FontSize = 0;
-            this.txtDescription.Location = new System.Drawing.Point(19, 51);
+            this.txtDescription.Location = new System.Drawing.Point(15, 56);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtDescription.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDescription.Size = new System.Drawing.Size(778, 48);
+            this.txtDescription.Size = new System.Drawing.Size(724, 48);
             this.txtDescription.TabIndex = 103;
             this.txtDescription.UnformattedText = null;
             // 
@@ -245,12 +253,12 @@
             this.txtName.BackColor = System.Drawing.Color.Transparent;
             this.txtName.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtName.FontSize = 0;
-            this.txtName.Location = new System.Drawing.Point(588, 16);
+            this.txtName.Location = new System.Drawing.Point(530, 21);
             this.txtName.Name = "txtName";
             this.txtName.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtName.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtName.Size = new System.Drawing.Size(209, 26);
+            this.txtName.Size = new System.Drawing.Size(209, 22);
             this.txtName.TabIndex = 102;
             this.txtName.UnformattedText = null;
             // 
@@ -262,10 +270,10 @@
             appearance3.TextVAlignAsString = "Middle";
             this.label2.Appearance = appearance3;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(799, 56);
+            this.label2.Location = new System.Drawing.Point(741, 61);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(66, 19);
+            this.label2.Size = new System.Drawing.Size(53, 15);
             this.label2.TabIndex = 101;
             this.label2.Text = ": توضیحات";
             // 
@@ -277,10 +285,10 @@
             appearance4.TextVAlignAsString = "Middle";
             this.label1.Appearance = appearance4;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(805, 16);
+            this.label1.Location = new System.Drawing.Point(745, 25);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(62, 19);
+            this.label1.Size = new System.Drawing.Size(50, 15);
             this.label1.TabIndex = 100;
             this.label1.Text = ": نام سند";
             // 
@@ -289,7 +297,7 @@
             this.btnShow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShow.ForeColor = System.Drawing.Color.White;
-            this.btnShow.Location = new System.Drawing.Point(19, 12);
+            this.btnShow.Location = new System.Drawing.Point(15, 18);
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(104, 32);
             this.btnShow.TabIndex = 99;
@@ -304,15 +312,15 @@
             this.picImage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picImage.Location = new System.Drawing.Point(1, 113);
             this.picImage.Name = "picImage";
-            this.picImage.Size = new System.Drawing.Size(879, 364);
+            this.picImage.Size = new System.Drawing.Size(814, 402);
             this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picImage.TabIndex = 2;
             this.picImage.TabStop = false;
             // 
             // frmProductionTaskDoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
-            this.ClientSize = new System.Drawing.Size(881, 653);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(816, 691);
             this.Name = "frmProductionTaskDoc";
             this.Text = "ثبت سند";
             ((System.ComponentModel.ISupportInitialize)(this.grpPrint)).EndInit();

@@ -55,7 +55,11 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FieldName");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FreeSpace", 0);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RowID", 1);
-            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn15 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("New", 2);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn16 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Detail", 3);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn17 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Delete", 4);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn18 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Update", 5);
+            Infragistics.Win.Appearance appearance40 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance14 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance36 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance37 = new Infragistics.Win.Appearance();
@@ -74,37 +78,41 @@
             Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
-            Infragistics.UltraChart.Resources.Appearance.PaintElement paintElement8 = new Infragistics.UltraChart.Resources.Appearance.PaintElement();
-            Infragistics.UltraChart.Resources.Appearance.LineChartAppearance lineChartAppearance2 = new Infragistics.UltraChart.Resources.Appearance.LineChartAppearance();
-            Infragistics.UltraChart.Resources.Appearance.PaintElement paintElement9 = new Infragistics.UltraChart.Resources.Appearance.PaintElement();
-            Infragistics.UltraChart.Resources.Appearance.PieChartAppearance pieChartAppearance7 = new Infragistics.UltraChart.Resources.Appearance.PieChartAppearance();
-            Infragistics.UltraChart.Resources.Appearance.PaintElement paintElement10 = new Infragistics.UltraChart.Resources.Appearance.PaintElement();
-            Infragistics.UltraChart.Resources.Appearance.PieChartAppearance pieChartAppearance8 = new Infragistics.UltraChart.Resources.Appearance.PieChartAppearance();
-            Infragistics.UltraChart.Resources.Appearance.PaintElement paintElement11 = new Infragistics.UltraChart.Resources.Appearance.PaintElement();
-            Infragistics.UltraChart.Resources.Appearance.PieChartAppearance pieChartAppearance9 = new Infragistics.UltraChart.Resources.Appearance.PieChartAppearance();
-            Infragistics.UltraChart.Resources.Appearance.PaintElement paintElement12 = new Infragistics.UltraChart.Resources.Appearance.PaintElement();
-            Infragistics.UltraChart.Resources.Appearance.PieChartAppearance pieChartAppearance10 = new Infragistics.UltraChart.Resources.Appearance.PieChartAppearance();
-            Infragistics.UltraChart.Resources.Appearance.PaintElement paintElement13 = new Infragistics.UltraChart.Resources.Appearance.PaintElement();
-            Infragistics.UltraChart.Resources.Appearance.PieChartAppearance pieChartAppearance11 = new Infragistics.UltraChart.Resources.Appearance.PieChartAppearance();
-            Infragistics.UltraChart.Resources.Appearance.PaintElement paintElement14 = new Infragistics.UltraChart.Resources.Appearance.PaintElement();
-            Infragistics.UltraChart.Resources.Appearance.PieChartAppearance pieChartAppearance12 = new Infragistics.UltraChart.Resources.Appearance.PieChartAppearance();
+            Infragistics.UltraChart.Resources.Appearance.PaintElement paintElement1 = new Infragistics.UltraChart.Resources.Appearance.PaintElement();
+            Infragistics.UltraChart.Resources.Appearance.LineChartAppearance lineChartAppearance1 = new Infragistics.UltraChart.Resources.Appearance.LineChartAppearance();
+            Infragistics.UltraChart.Resources.Appearance.PaintElement paintElement2 = new Infragistics.UltraChart.Resources.Appearance.PaintElement();
+            Infragistics.UltraChart.Resources.Appearance.PieChartAppearance pieChartAppearance1 = new Infragistics.UltraChart.Resources.Appearance.PieChartAppearance();
+            Infragistics.UltraChart.Resources.Appearance.PaintElement paintElement3 = new Infragistics.UltraChart.Resources.Appearance.PaintElement();
+            Infragistics.UltraChart.Resources.Appearance.PieChartAppearance pieChartAppearance2 = new Infragistics.UltraChart.Resources.Appearance.PieChartAppearance();
+            Infragistics.UltraChart.Resources.Appearance.PaintElement paintElement4 = new Infragistics.UltraChart.Resources.Appearance.PaintElement();
+            Infragistics.UltraChart.Resources.Appearance.PieChartAppearance pieChartAppearance3 = new Infragistics.UltraChart.Resources.Appearance.PieChartAppearance();
+            Infragistics.UltraChart.Resources.Appearance.PaintElement paintElement5 = new Infragistics.UltraChart.Resources.Appearance.PaintElement();
+            Infragistics.UltraChart.Resources.Appearance.PieChartAppearance pieChartAppearance4 = new Infragistics.UltraChart.Resources.Appearance.PieChartAppearance();
+            Infragistics.UltraChart.Resources.Appearance.PaintElement paintElement6 = new Infragistics.UltraChart.Resources.Appearance.PaintElement();
+            Infragistics.UltraChart.Resources.Appearance.PieChartAppearance pieChartAppearance5 = new Infragistics.UltraChart.Resources.Appearance.PieChartAppearance();
+            Infragistics.UltraChart.Resources.Appearance.PaintElement paintElement7 = new Infragistics.UltraChart.Resources.Appearance.PaintElement();
+            Infragistics.UltraChart.Resources.Appearance.PieChartAppearance pieChartAppearance6 = new Infragistics.UltraChart.Resources.Appearance.PieChartAppearance();
             Infragistics.Win.Appearance appearance22 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand2 = new Infragistics.Win.UltraWinGrid.UltraGridBand("spr_dsb_Field_Producttion_rpt", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn15 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CollectionName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn16 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("SubCollectionName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn17 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("PartName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn18 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FieldName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn19 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("UsableArea");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn20 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("LinkedArea");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn21 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ProductionName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn22 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CropName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn23 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CultivarName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn24 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CropLogo");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn25 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FromDate");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn26 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ToDate");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn27 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RowID", 0);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn28 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FreeSpace", 1);
-            Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn19 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CollectionName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn20 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("SubCollectionName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn21 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("PartName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn22 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FieldName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn23 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("UsableArea");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn24 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("LinkedArea");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn25 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ProductionName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn26 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CropName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn27 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CultivarName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn28 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CropLogo");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn29 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FromDate");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn30 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ToDate");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn31 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RowID", 0);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn32 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FreeSpace", 1);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn33 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("New", 2);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn34 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Detail", 3);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn35 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Delete", 4);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn36 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Update", 5);
+            Infragistics.Win.Appearance appearance41 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance23 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance24 = new Infragistics.Win.Appearance();
@@ -602,12 +610,12 @@
             ultraGridColumn4.Header.Caption = "مساحت-هکتار";
             ultraGridColumn4.Header.VisiblePosition = 4;
             ultraGridColumn4.Hidden = true;
-            ultraGridColumn4.Width = 41;
+            ultraGridColumn4.Width = 34;
             ultraGridColumn5.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn5.Header.Caption = "مساحت مورد اسنفاده";
             ultraGridColumn5.Header.VisiblePosition = 3;
             ultraGridColumn5.Hidden = true;
-            ultraGridColumn5.Width = 41;
+            ultraGridColumn5.Width = 34;
             ultraGridColumn6.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn6.Header.Caption = "فرایند تولید";
             ultraGridColumn6.Header.VisiblePosition = 2;
@@ -640,12 +648,36 @@
             ultraGridColumn13.Header.Caption = "";
             ultraGridColumn13.Header.VisiblePosition = 0;
             ultraGridColumn13.MergedCellStyle = Infragistics.Win.UltraWinGrid.MergedCellStyle.Always;
-            ultraGridColumn13.Width = 565;
+            ultraGridColumn13.Width = 442;
             ultraGridColumn14.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn14.Header.Caption = "#";
-            ultraGridColumn14.Header.VisiblePosition = 13;
+            ultraGridColumn14.Header.VisiblePosition = 17;
             ultraGridColumn14.TabStop = false;
             ultraGridColumn14.Width = 41;
+            ultraGridColumn15.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn15.Header.Caption = "...";
+            ultraGridColumn15.Header.VisiblePosition = 13;
+            ultraGridColumn15.Hidden = true;
+            ultraGridColumn15.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn15.Width = 41;
+            ultraGridColumn16.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn16.Header.Caption = "...";
+            ultraGridColumn16.Header.VisiblePosition = 14;
+            ultraGridColumn16.Hidden = true;
+            ultraGridColumn16.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn16.Width = 41;
+            ultraGridColumn17.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn17.Header.Caption = "...";
+            ultraGridColumn17.Header.VisiblePosition = 15;
+            ultraGridColumn17.Hidden = true;
+            ultraGridColumn17.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn17.Width = 41;
+            ultraGridColumn18.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn18.Header.Caption = "...";
+            ultraGridColumn18.Header.VisiblePosition = 16;
+            ultraGridColumn18.Hidden = true;
+            ultraGridColumn18.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn18.Width = 41;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2,
@@ -660,10 +692,14 @@
             ultraGridColumn11,
             ultraGridColumn12,
             ultraGridColumn13,
-            ultraGridColumn14});
+            ultraGridColumn14,
+            ultraGridColumn15,
+            ultraGridColumn16,
+            ultraGridColumn17,
+            ultraGridColumn18});
             ultraGridBand1.Override.SummaryDisplayArea = Infragistics.Win.UltraWinGrid.SummaryDisplayAreas.BottomFixed;
-            appearance1.ForeColor = System.Drawing.Color.DarkBlue;
-            ultraGridBand1.Override.SummaryValueAppearance = appearance1;
+            appearance40.ForeColor = System.Drawing.Color.DarkBlue;
+            ultraGridBand1.Override.SummaryValueAppearance = appearance40;
             this.grdItem.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdItem.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
             appearance14.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -776,7 +812,7 @@
             this.grdItem.Location = new System.Drawing.Point(3, 553);
             this.grdItem.Name = "grdItem";
             this.grdItem.Size = new System.Drawing.Size(1144, 144);
-            this.grdItem.SumColumnsWidth = 579;
+            this.grdItem.SumColumnsWidth = 702;
             this.grdItem.TabIndex = 7;
             this.grdItem.Text = "لیست فعالیت ها";
             // 
@@ -819,9 +855,9 @@
             // chtChemicalAnalys
             // 
             this.chtChemicalAnalys.Axis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
-            paintElement8.ElementType = Infragistics.UltraChart.Shared.Styles.PaintElementType.None;
-            paintElement8.Fill = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
-            this.chtChemicalAnalys.Axis.PE = paintElement8;
+            paintElement1.ElementType = Infragistics.UltraChart.Shared.Styles.PaintElementType.None;
+            paintElement1.Fill = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
+            this.chtChemicalAnalys.Axis.PE = paintElement1;
             this.chtChemicalAnalys.Axis.X.Labels.Flip = true;
             this.chtChemicalAnalys.Axis.X.Labels.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.chtChemicalAnalys.Axis.X.Labels.FontColor = System.Drawing.Color.White;
@@ -946,8 +982,8 @@
             this.chtChemicalAnalys.Legend.Margins.Top = 0;
             this.chtChemicalAnalys.Legend.SpanPercentage = 15;
             this.chtChemicalAnalys.Legend.Visible = true;
-            lineChartAppearance2.HighLightLines = true;
-            this.chtChemicalAnalys.LineChart = lineChartAppearance2;
+            lineChartAppearance1.HighLightLines = true;
+            this.chtChemicalAnalys.LineChart = lineChartAppearance1;
             this.chtChemicalAnalys.Location = new System.Drawing.Point(1, 32);
             this.chtChemicalAnalys.Margin = new System.Windows.Forms.Padding(0);
             this.chtChemicalAnalys.Name = "chtChemicalAnalys";
@@ -1012,9 +1048,9 @@
             // chtWater
             // 
             this.chtWater.Axis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
-            paintElement9.ElementType = Infragistics.UltraChart.Shared.Styles.PaintElementType.None;
-            paintElement9.Fill = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
-            this.chtWater.Axis.PE = paintElement9;
+            paintElement2.ElementType = Infragistics.UltraChart.Shared.Styles.PaintElementType.None;
+            paintElement2.Fill = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
+            this.chtWater.Axis.PE = paintElement2;
             this.chtWater.Axis.X.Labels.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.chtWater.Axis.X.Labels.FontColor = System.Drawing.Color.White;
             this.chtWater.Axis.X.Labels.HorizontalAlign = System.Drawing.StringAlignment.Near;
@@ -1139,9 +1175,9 @@
             this.chtWater.Legend.Visible = true;
             this.chtWater.Location = new System.Drawing.Point(3, 30);
             this.chtWater.Name = "chtWater";
-            pieChartAppearance7.Labels.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            pieChartAppearance7.Labels.FontColor = System.Drawing.Color.White;
-            this.chtWater.PieChart = pieChartAppearance7;
+            pieChartAppearance1.Labels.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            pieChartAppearance1.Labels.FontColor = System.Drawing.Color.White;
+            this.chtWater.PieChart = pieChartAppearance1;
             this.chtWater.Size = new System.Drawing.Size(137, 97);
             this.chtWater.TabIndex = 7;
             // 
@@ -1164,7 +1200,6 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox7.Image = global::Baran.Properties.Resources.worker_32;
             this.pictureBox7.Location = new System.Drawing.Point(3, 3);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(137, 10);
@@ -1198,9 +1233,9 @@
             // 
             this.chtPesticide.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.chtPesticide.Axis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
-            paintElement10.ElementType = Infragistics.UltraChart.Shared.Styles.PaintElementType.None;
-            paintElement10.Fill = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
-            this.chtPesticide.Axis.PE = paintElement10;
+            paintElement3.ElementType = Infragistics.UltraChart.Shared.Styles.PaintElementType.None;
+            paintElement3.Fill = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
+            this.chtPesticide.Axis.PE = paintElement3;
             this.chtPesticide.Axis.X.Labels.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.chtPesticide.Axis.X.Labels.FontColor = System.Drawing.Color.White;
             this.chtPesticide.Axis.X.Labels.HorizontalAlign = System.Drawing.StringAlignment.Near;
@@ -1326,9 +1361,9 @@
             this.chtPesticide.Legend.Visible = true;
             this.chtPesticide.Location = new System.Drawing.Point(3, 30);
             this.chtPesticide.Name = "chtPesticide";
-            pieChartAppearance8.Labels.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            pieChartAppearance8.Labels.FontColor = System.Drawing.Color.White;
-            this.chtPesticide.PieChart = pieChartAppearance8;
+            pieChartAppearance2.Labels.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            pieChartAppearance2.Labels.FontColor = System.Drawing.Color.White;
+            this.chtPesticide.PieChart = pieChartAppearance2;
             this.chtPesticide.Size = new System.Drawing.Size(137, 97);
             this.chtPesticide.TabIndex = 6;
             // 
@@ -1351,7 +1386,6 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox3.Image = global::Baran.Properties.Resources.worker_32;
             this.pictureBox3.Location = new System.Drawing.Point(3, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(137, 10);
@@ -1384,9 +1418,9 @@
             // chtFertilizer
             // 
             this.chtFertilizer.Axis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
-            paintElement11.ElementType = Infragistics.UltraChart.Shared.Styles.PaintElementType.None;
-            paintElement11.Fill = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
-            this.chtFertilizer.Axis.PE = paintElement11;
+            paintElement4.ElementType = Infragistics.UltraChart.Shared.Styles.PaintElementType.None;
+            paintElement4.Fill = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
+            this.chtFertilizer.Axis.PE = paintElement4;
             this.chtFertilizer.Axis.X.Labels.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.chtFertilizer.Axis.X.Labels.FontColor = System.Drawing.Color.White;
             this.chtFertilizer.Axis.X.Labels.HorizontalAlign = System.Drawing.StringAlignment.Near;
@@ -1511,9 +1545,9 @@
             this.chtFertilizer.Legend.Visible = true;
             this.chtFertilizer.Location = new System.Drawing.Point(3, 30);
             this.chtFertilizer.Name = "chtFertilizer";
-            pieChartAppearance9.Labels.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            pieChartAppearance9.Labels.FontColor = System.Drawing.Color.White;
-            this.chtFertilizer.PieChart = pieChartAppearance9;
+            pieChartAppearance3.Labels.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            pieChartAppearance3.Labels.FontColor = System.Drawing.Color.White;
+            this.chtFertilizer.PieChart = pieChartAppearance3;
             this.chtFertilizer.Size = new System.Drawing.Size(137, 97);
             this.chtFertilizer.TabIndex = 10;
             // 
@@ -1536,7 +1570,6 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox8.Image = global::Baran.Properties.Resources.worker_32;
             this.pictureBox8.Location = new System.Drawing.Point(3, 3);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(137, 10);
@@ -1630,9 +1663,9 @@
             // chtWaterStorage
             // 
             this.chtWaterStorage.Axis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
-            paintElement12.ElementType = Infragistics.UltraChart.Shared.Styles.PaintElementType.None;
-            paintElement12.Fill = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
-            this.chtWaterStorage.Axis.PE = paintElement12;
+            paintElement5.ElementType = Infragistics.UltraChart.Shared.Styles.PaintElementType.None;
+            paintElement5.Fill = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
+            this.chtWaterStorage.Axis.PE = paintElement5;
             this.chtWaterStorage.Axis.X.Labels.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.chtWaterStorage.Axis.X.Labels.FontColor = System.Drawing.Color.White;
             this.chtWaterStorage.Axis.X.Labels.HorizontalAlign = System.Drawing.StringAlignment.Near;
@@ -1757,9 +1790,9 @@
             this.chtWaterStorage.Legend.Visible = true;
             this.chtWaterStorage.Location = new System.Drawing.Point(3, 30);
             this.chtWaterStorage.Name = "chtWaterStorage";
-            pieChartAppearance10.Labels.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            pieChartAppearance10.Labels.FontColor = System.Drawing.Color.White;
-            this.chtWaterStorage.PieChart = pieChartAppearance10;
+            pieChartAppearance4.Labels.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            pieChartAppearance4.Labels.FontColor = System.Drawing.Color.White;
+            this.chtWaterStorage.PieChart = pieChartAppearance4;
             this.chtWaterStorage.Size = new System.Drawing.Size(137, 97);
             this.chtWaterStorage.TabIndex = 12;
             // 
@@ -1767,7 +1800,6 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox6.Image = global::Baran.Properties.Resources.worker_32;
             this.pictureBox6.Location = new System.Drawing.Point(3, 3);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(137, 10);
@@ -1815,9 +1847,9 @@
             // chtMachinery
             // 
             this.chtMachinery.Axis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
-            paintElement13.ElementType = Infragistics.UltraChart.Shared.Styles.PaintElementType.None;
-            paintElement13.Fill = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
-            this.chtMachinery.Axis.PE = paintElement13;
+            paintElement6.ElementType = Infragistics.UltraChart.Shared.Styles.PaintElementType.None;
+            paintElement6.Fill = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
+            this.chtMachinery.Axis.PE = paintElement6;
             this.chtMachinery.Axis.X.Labels.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.chtMachinery.Axis.X.Labels.FontColor = System.Drawing.Color.White;
             this.chtMachinery.Axis.X.Labels.HorizontalAlign = System.Drawing.StringAlignment.Near;
@@ -1942,9 +1974,9 @@
             this.chtMachinery.Legend.Visible = true;
             this.chtMachinery.Location = new System.Drawing.Point(3, 30);
             this.chtMachinery.Name = "chtMachinery";
-            pieChartAppearance11.Labels.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            pieChartAppearance11.Labels.FontColor = System.Drawing.Color.White;
-            this.chtMachinery.PieChart = pieChartAppearance11;
+            pieChartAppearance5.Labels.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            pieChartAppearance5.Labels.FontColor = System.Drawing.Color.White;
+            this.chtMachinery.PieChart = pieChartAppearance5;
             this.chtMachinery.Size = new System.Drawing.Size(137, 97);
             this.chtMachinery.TabIndex = 7;
             // 
@@ -1967,7 +1999,6 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox4.Image = global::Baran.Properties.Resources.worker_32;
             this.pictureBox4.Location = new System.Drawing.Point(3, 3);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(137, 10);
@@ -2000,9 +2031,9 @@
             // chtWorker
             // 
             this.chtWorker.Axis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
-            paintElement14.ElementType = Infragistics.UltraChart.Shared.Styles.PaintElementType.None;
-            paintElement14.Fill = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
-            this.chtWorker.Axis.PE = paintElement14;
+            paintElement7.ElementType = Infragistics.UltraChart.Shared.Styles.PaintElementType.None;
+            paintElement7.Fill = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
+            this.chtWorker.Axis.PE = paintElement7;
             this.chtWorker.Axis.X.Labels.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.chtWorker.Axis.X.Labels.FontColor = System.Drawing.Color.White;
             this.chtWorker.Axis.X.Labels.HorizontalAlign = System.Drawing.StringAlignment.Near;
@@ -2127,9 +2158,9 @@
             this.chtWorker.Legend.Visible = true;
             this.chtWorker.Location = new System.Drawing.Point(3, 30);
             this.chtWorker.Name = "chtWorker";
-            pieChartAppearance12.Labels.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            pieChartAppearance12.Labels.FontColor = System.Drawing.Color.White;
-            this.chtWorker.PieChart = pieChartAppearance12;
+            pieChartAppearance6.Labels.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            pieChartAppearance6.Labels.FontColor = System.Drawing.Color.White;
+            this.chtWorker.PieChart = pieChartAppearance6;
             this.chtWorker.Size = new System.Drawing.Size(137, 97);
             this.chtWorker.TabIndex = 4;
             // 
@@ -2137,7 +2168,6 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::Baran.Properties.Resources.worker_32;
             this.pictureBox2.Location = new System.Drawing.Point(3, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(137, 10);
@@ -2185,71 +2215,91 @@
             appearance22.TextHAlignAsString = "Right";
             appearance22.TextVAlignAsString = "Middle";
             this.grdProduction.DisplayLayout.Appearance = appearance22;
-            ultraGridColumn15.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
-            ultraGridColumn15.Header.VisiblePosition = 1;
-            ultraGridColumn15.Hidden = true;
-            ultraGridColumn15.Width = 41;
-            ultraGridColumn16.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
-            ultraGridColumn16.Header.VisiblePosition = 2;
-            ultraGridColumn16.Hidden = true;
-            ultraGridColumn16.Width = 41;
-            ultraGridColumn17.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
-            ultraGridColumn17.Header.Caption = "واحد فرعی";
-            ultraGridColumn17.Header.VisiblePosition = 11;
-            ultraGridColumn17.Width = 67;
-            ultraGridColumn18.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
-            ultraGridColumn18.Header.Caption = "قطعه زمین";
-            ultraGridColumn18.Header.VisiblePosition = 10;
-            ultraGridColumn18.Width = 65;
             ultraGridColumn19.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
-            ultraGridColumn19.Header.Caption = "مساحت-هکتار";
-            ultraGridColumn19.Header.VisiblePosition = 4;
-            ultraGridColumn19.Width = 88;
+            ultraGridColumn19.Header.VisiblePosition = 1;
+            ultraGridColumn19.Hidden = true;
+            ultraGridColumn19.Width = 41;
             ultraGridColumn20.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
-            ultraGridColumn20.Header.Caption = "مساحت استفاده شده";
-            ultraGridColumn20.Header.VisiblePosition = 3;
-            ultraGridColumn20.Width = 119;
+            ultraGridColumn20.Header.VisiblePosition = 2;
+            ultraGridColumn20.Hidden = true;
+            ultraGridColumn20.Width = 41;
             ultraGridColumn21.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
-            ultraGridColumn21.Header.Caption = "فرآیند تولید";
-            ultraGridColumn21.Header.VisiblePosition = 7;
-            ultraGridColumn21.Width = 74;
+            ultraGridColumn21.Header.Caption = "واحد فرعی";
+            ultraGridColumn21.Header.VisiblePosition = 11;
+            ultraGridColumn21.Width = 67;
             ultraGridColumn22.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
-            ultraGridColumn22.Header.Caption = "محصول";
-            ultraGridColumn22.Header.VisiblePosition = 9;
-            ultraGridColumn22.Width = 50;
+            ultraGridColumn22.Header.Caption = "قطعه زمین";
+            ultraGridColumn22.Header.VisiblePosition = 10;
+            ultraGridColumn22.Width = 65;
             ultraGridColumn23.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
-            ultraGridColumn23.Header.Caption = "رقم";
-            ultraGridColumn23.Header.VisiblePosition = 8;
-            ultraGridColumn23.Width = 41;
+            ultraGridColumn23.Header.Caption = "مساحت-هکتار";
+            ultraGridColumn23.Header.VisiblePosition = 4;
+            ultraGridColumn23.Width = 88;
             ultraGridColumn24.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
-            ultraGridColumn24.Header.Caption = "";
-            ultraGridColumn24.Header.VisiblePosition = 12;
-            ultraGridColumn24.MaxLength = 50;
-            ultraGridColumn24.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Image;
-            ultraGridColumn24.Width = 50;
+            ultraGridColumn24.Header.Caption = "مساحت استفاده شده";
+            ultraGridColumn24.Header.VisiblePosition = 3;
+            ultraGridColumn24.Width = 119;
             ultraGridColumn25.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
-            ultraGridColumn25.Header.Caption = "ازتاریخ";
-            ultraGridColumn25.Header.VisiblePosition = 6;
-            ultraGridColumn25.Width = 46;
+            ultraGridColumn25.Header.Caption = "فرآیند تولید";
+            ultraGridColumn25.Header.VisiblePosition = 7;
+            ultraGridColumn25.Width = 74;
             ultraGridColumn26.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
-            ultraGridColumn26.Header.Caption = "تا تاریخ";
-            ultraGridColumn26.Header.VisiblePosition = 5;
-            ultraGridColumn26.Width = 49;
+            ultraGridColumn26.Header.Caption = "محصول";
+            ultraGridColumn26.Header.VisiblePosition = 9;
+            ultraGridColumn26.Width = 50;
             ultraGridColumn27.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
-            ultraGridColumn27.Header.Caption = "#";
-            ultraGridColumn27.Header.VisiblePosition = 13;
-            ultraGridColumn27.TabStop = false;
+            ultraGridColumn27.Header.Caption = "رقم";
+            ultraGridColumn27.Header.VisiblePosition = 8;
             ultraGridColumn27.Width = 41;
             ultraGridColumn28.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn28.Header.Caption = "";
-            ultraGridColumn28.Header.VisiblePosition = 0;
-            ultraGridColumn28.MergedCellStyle = Infragistics.Win.UltraWinGrid.MergedCellStyle.Always;
-            ultraGridColumn28.Width = 407;
+            ultraGridColumn28.Header.VisiblePosition = 12;
+            ultraGridColumn28.MaxLength = 50;
+            ultraGridColumn28.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Image;
+            ultraGridColumn28.Width = 50;
+            ultraGridColumn29.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn29.Header.Caption = "ازتاریخ";
+            ultraGridColumn29.Header.VisiblePosition = 6;
+            ultraGridColumn29.Width = 46;
+            ultraGridColumn30.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn30.Header.Caption = "تا تاریخ";
+            ultraGridColumn30.Header.VisiblePosition = 5;
+            ultraGridColumn30.Width = 49;
+            ultraGridColumn31.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn31.Header.Caption = "#";
+            ultraGridColumn31.Header.VisiblePosition = 17;
+            ultraGridColumn31.TabStop = false;
+            ultraGridColumn31.Width = 41;
+            ultraGridColumn32.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn32.Header.Caption = "";
+            ultraGridColumn32.Header.VisiblePosition = 0;
+            ultraGridColumn32.MergedCellStyle = Infragistics.Win.UltraWinGrid.MergedCellStyle.Always;
+            ultraGridColumn32.Width = 284;
+            ultraGridColumn33.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn33.Header.Caption = "...";
+            ultraGridColumn33.Header.VisiblePosition = 13;
+            ultraGridColumn33.Hidden = true;
+            ultraGridColumn33.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn33.Width = 41;
+            ultraGridColumn34.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn34.Header.Caption = "...";
+            ultraGridColumn34.Header.VisiblePosition = 14;
+            ultraGridColumn34.Hidden = true;
+            ultraGridColumn34.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn34.Width = 41;
+            ultraGridColumn35.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn35.Header.Caption = "...";
+            ultraGridColumn35.Header.VisiblePosition = 15;
+            ultraGridColumn35.Hidden = true;
+            ultraGridColumn35.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn35.Width = 41;
+            ultraGridColumn36.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn36.Header.Caption = "...";
+            ultraGridColumn36.Header.VisiblePosition = 16;
+            ultraGridColumn36.Hidden = true;
+            ultraGridColumn36.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn36.Width = 41;
             ultraGridBand2.Columns.AddRange(new object[] {
-            ultraGridColumn15,
-            ultraGridColumn16,
-            ultraGridColumn17,
-            ultraGridColumn18,
             ultraGridColumn19,
             ultraGridColumn20,
             ultraGridColumn21,
@@ -2259,12 +2309,20 @@
             ultraGridColumn25,
             ultraGridColumn26,
             ultraGridColumn27,
-            ultraGridColumn28});
+            ultraGridColumn28,
+            ultraGridColumn29,
+            ultraGridColumn30,
+            ultraGridColumn31,
+            ultraGridColumn32,
+            ultraGridColumn33,
+            ultraGridColumn34,
+            ultraGridColumn35,
+            ultraGridColumn36});
             ultraGridBand2.Override.DefaultRowHeight = 45;
             ultraGridBand2.Override.RowSizing = Infragistics.Win.UltraWinGrid.RowSizing.Free;
             ultraGridBand2.Override.SummaryDisplayArea = Infragistics.Win.UltraWinGrid.SummaryDisplayAreas.BottomFixed;
-            appearance13.ForeColor = System.Drawing.Color.DarkBlue;
-            ultraGridBand2.Override.SummaryValueAppearance = appearance13;
+            appearance41.ForeColor = System.Drawing.Color.DarkBlue;
+            ultraGridBand2.Override.SummaryValueAppearance = appearance41;
             this.grdProduction.DisplayLayout.BandsSerializer.Add(ultraGridBand2);
             this.grdProduction.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
             appearance2.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -2377,7 +2435,7 @@
             this.grdProduction.Location = new System.Drawing.Point(3, 3);
             this.grdProduction.Name = "grdProduction";
             this.grdProduction.Size = new System.Drawing.Size(1138, 238);
-            this.grdProduction.SumColumnsWidth = 731;
+            this.grdProduction.SumColumnsWidth = 854;
             this.grdProduction.TabIndex = 0;
             this.grdProduction.Text = "تناوب کشت";
             // 

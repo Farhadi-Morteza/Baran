@@ -203,11 +203,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(740, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(741, 8);
             // 
             // lblCaption
             // 
-            this.lblCaption.Location = new System.Drawing.Point(434, 21);
+            this.lblCaption.Location = new System.Drawing.Point(435, 21);
             // 
             // lblMessage
             // 
@@ -440,13 +440,13 @@
             this.txtDescription.BackColor = System.Drawing.Color.Transparent;
             this.txtDescription.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtDescription.FontSize = 0;
-            this.txtDescription.Location = new System.Drawing.Point(14, 409);
+            this.txtDescription.Location = new System.Drawing.Point(14, 406);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtDescription.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDescription.Size = new System.Drawing.Size(251, 240);
+            this.txtDescription.Size = new System.Drawing.Size(251, 127);
             this.txtDescription.TabIndex = 125;
             this.txtDescription.UnformattedText = null;
             // 
@@ -458,7 +458,7 @@
             this.label4.Appearance = appearance1;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.Location = new System.Drawing.Point(72, 246);
+            this.label4.Location = new System.Drawing.Point(80, 246);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label4.Size = new System.Drawing.Size(32, 16);

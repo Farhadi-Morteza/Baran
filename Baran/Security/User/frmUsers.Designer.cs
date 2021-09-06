@@ -30,11 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance17 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance32 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance14 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance24 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance19 = new Infragistics.Win.Appearance();
@@ -57,13 +53,15 @@
             Infragistics.Win.Appearance appearance21 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance22 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance31 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance23 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
             this.grbPersonalInfo = new Baran.Windows.Forms.GroupBox();
             this.label6 = new Baran.Windows.Forms.Label();
-            this.cmbUserAccessLevel = new Baran.Windows.Forms.UltraComboEditor();
-            this.cmbUserType = new Baran.Windows.Forms.UltraComboEditor();
             this.label5 = new Baran.Windows.Forms.Label();
             this.txtAddress = new Baran.Windows.Forms.TextBox();
             this.lblAddress = new Baran.Windows.Forms.Label();
@@ -106,16 +104,18 @@
             this.chkChange = new Baran.Windows.Forms.CheckBox.CheckBox();
             this.chkNew = new Baran.Windows.Forms.CheckBox.CheckBox();
             this.imgAccessLevel = new System.Windows.Forms.ImageList(this.components);
+            this.cmbUserType = new Baran.Windows.Forms.UltraComboEditor();
+            this.cmbUserAccessLevel = new Baran.Windows.Forms.UltraComboEditor();
             ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).BeginInit();
+            this.grpHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpMessage)).BeginInit();
             this.grpMessage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).BeginInit();
             this.grpMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grbPersonalInfo)).BeginInit();
             this.grbPersonalInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbUserAccessLevel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbUserType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail)).BeginInit();
@@ -138,38 +138,27 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grbAccessLevel)).BeginInit();
             this.grbAccessLevel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbUserType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbUserAccessLevel)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblMessage
+            // btnMaxMin
             // 
-            this.lblMessage.Size = new System.Drawing.Size(944, 29);
-            this.lblMessage.TabIndex = 0;
-            // 
-            // grpHeader
-            // 
-            this.grpHeader.Size = new System.Drawing.Size(946, 65);
+            this.btnMaxMin.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             // 
             // grpButons
             // 
             this.grpButons.Location = new System.Drawing.Point(0, 635);
             this.grpButons.Size = new System.Drawing.Size(946, 67);
             // 
-            // grpMessage
+            // lblLine2
             // 
-            this.grpMessage.Size = new System.Drawing.Size(946, 30);
+            this.lblLine2.Location = new System.Drawing.Point(1, 61);
+            this.lblLine2.Size = new System.Drawing.Size(944, 3);
             // 
-            // grpMain
+            // grpHeader
             // 
-            this.grpMain.Controls.Add(this.groupBox2);
-            this.grpMain.Controls.Add(this.groupBox1);
-            this.grpMain.Location = new System.Drawing.Point(0, 65);
-            this.grpMain.Size = new System.Drawing.Size(946, 570);
-            this.grpMain.Controls.SetChildIndex(this.groupBox1, 0);
-            this.grpMain.Controls.SetChildIndex(this.groupBox2, 0);
-            // 
-            // lblLine1
-            // 
-            this.lblLine1.Size = new System.Drawing.Size(944, 3);
+            this.grpHeader.Size = new System.Drawing.Size(946, 65);
             // 
             // pictureBox1
             // 
@@ -178,12 +167,35 @@
             // lblCaption
             // 
             this.lblCaption.Location = new System.Drawing.Point(590, 21);
-            this.lblCaption.TabIndex = 1;
             // 
-            // lblLine2
+            // lblMessage
             // 
-            this.lblLine2.Location = new System.Drawing.Point(1, 61);
-            this.lblLine2.Size = new System.Drawing.Size(944, 3);
+            this.lblMessage.Size = new System.Drawing.Size(944, 29);
+            this.lblMessage.Text = "";
+            // 
+            // lblLine1
+            // 
+            this.lblLine1.Size = new System.Drawing.Size(944, 3);
+            // 
+            // grpMessage
+            // 
+            this.grpMessage.Location = new System.Drawing.Point(0, 65);
+            this.grpMessage.Size = new System.Drawing.Size(946, 30);
+            // 
+            // lblLine3
+            // 
+            this.lblLine3.Location = new System.Drawing.Point(1, 536);
+            this.lblLine3.Size = new System.Drawing.Size(944, 3);
+            // 
+            // grpMain
+            // 
+            this.grpMain.Controls.Add(this.groupBox2);
+            this.grpMain.Controls.Add(this.groupBox1);
+            this.grpMain.Location = new System.Drawing.Point(0, 95);
+            this.grpMain.Size = new System.Drawing.Size(946, 540);
+            this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
+            this.grpMain.Controls.SetChildIndex(this.groupBox1, 0);
+            this.grpMain.Controls.SetChildIndex(this.groupBox2, 0);
             // 
             // grbPersonalInfo
             // 
@@ -191,9 +203,9 @@
             this.grbPersonalInfo.Appearance = appearance20;
             this.grbPersonalInfo.BackColorInternal = System.Drawing.SystemColors.Control;
             this.grbPersonalInfo.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
-            this.grbPersonalInfo.Controls.Add(this.label6);
             this.grbPersonalInfo.Controls.Add(this.cmbUserAccessLevel);
             this.grbPersonalInfo.Controls.Add(this.cmbUserType);
+            this.grbPersonalInfo.Controls.Add(this.label6);
             this.grbPersonalInfo.Controls.Add(this.label5);
             this.grbPersonalInfo.Controls.Add(this.txtAddress);
             this.grbPersonalInfo.Controls.Add(this.lblAddress);
@@ -221,68 +233,22 @@
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance9.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label6.Appearance = appearance9;
+            appearance32.ForeColor = System.Drawing.Color.White;
+            this.label6.Appearance = appearance32;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label6.Location = new System.Drawing.Point(289, 239);
+            this.label6.Location = new System.Drawing.Point(231, 239);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label6.Size = new System.Drawing.Size(98, 16);
             this.label6.TabIndex = 16;
             this.label6.Text = ": سطح دسترسی";
             // 
-            // cmbUserAccessLevel
-            // 
-            this.cmbUserAccessLevel.AllowDrop = true;
-            this.cmbUserAccessLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance12.TextHAlignAsString = "Right";
-            appearance12.TextVAlignAsString = "Middle";
-            this.cmbUserAccessLevel.Appearance = appearance12;
-            this.cmbUserAccessLevel.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.SuggestAppend;
-            this.cmbUserAccessLevel.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
-            this.cmbUserAccessLevel.DropDownButtonAlignment = Infragistics.Win.ButtonAlignment.Left;
-            this.cmbUserAccessLevel.Editable = Baran.Windows.Forms.Editable.Editable;
-            this.cmbUserAccessLevel.InputLanguage = Baran.Windows.Forms.InputLanguage.Farsi;
-            appearance13.BackColor = System.Drawing.Color.LightCyan;
-            appearance13.TextHAlignAsString = "Right";
-            appearance13.TextVAlignAsString = "Middle";
-            this.cmbUserAccessLevel.ItemAppearance = appearance13;
-            this.cmbUserAccessLevel.Location = new System.Drawing.Point(194, 257);
-            this.cmbUserAccessLevel.Name = "cmbUserAccessLevel";
-            this.cmbUserAccessLevel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbUserAccessLevel.Size = new System.Drawing.Size(193, 22);
-            this.cmbUserAccessLevel.TabIndex = 15;
-            this.cmbUserAccessLevel.ValueChanged += new System.EventHandler(this.cmbUserAccessLevel_ValueChanged);
-            // 
-            // cmbUserType
-            // 
-            this.cmbUserType.AllowDrop = true;
-            this.cmbUserType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance17.TextHAlignAsString = "Right";
-            appearance17.TextVAlignAsString = "Middle";
-            this.cmbUserType.Appearance = appearance17;
-            this.cmbUserType.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.SuggestAppend;
-            this.cmbUserType.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
-            this.cmbUserType.DropDownButtonAlignment = Infragistics.Win.ButtonAlignment.Left;
-            this.cmbUserType.Editable = Baran.Windows.Forms.Editable.Editable;
-            this.cmbUserType.InputLanguage = Baran.Windows.Forms.InputLanguage.Farsi;
-            appearance18.BackColor = System.Drawing.Color.LightCyan;
-            appearance18.TextHAlignAsString = "Right";
-            appearance18.TextVAlignAsString = "Middle";
-            this.cmbUserType.ItemAppearance = appearance18;
-            this.cmbUserType.Location = new System.Drawing.Point(396, 257);
-            this.cmbUserType.Name = "cmbUserType";
-            this.cmbUserType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbUserType.Size = new System.Drawing.Size(193, 22);
-            this.cmbUserType.TabIndex = 14;
-            this.cmbUserType.ValueChanged += new System.EventHandler(this.cmbUserType_ValueChanged);
-            // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance14.ForeColor = System.Drawing.Color.DarkBlue;
+            appearance14.ForeColor = System.Drawing.Color.White;
             this.label5.Appearance = appearance14;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
@@ -297,28 +263,28 @@
             // txtAddress
             // 
             this.txtAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance24.BackColor = System.Drawing.SystemColors.Window;
+            appearance24.BackColor = System.Drawing.Color.Transparent;
             appearance24.ForeColor = System.Drawing.SystemColors.WindowText;
             appearance24.TextHAlignAsString = "Right";
             this.txtAddress.Appearance = appearance24;
-            this.txtAddress.BackColor = System.Drawing.SystemColors.Window;
+            this.txtAddress.BackColor = System.Drawing.Color.Transparent;
             this.txtAddress.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtAddress.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txtAddress.FontSize = 10;
             this.txtAddress.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtAddress.Location = new System.Drawing.Point(190, 203);
+            this.txtAddress.Location = new System.Drawing.Point(23, 203);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtAddress.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtAddress.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtAddress.Size = new System.Drawing.Size(399, 25);
+            this.txtAddress.Size = new System.Drawing.Size(566, 25);
             this.txtAddress.TabIndex = 6;
             this.txtAddress.UnformattedText = null;
             // 
             // lblAddress
             // 
             this.lblAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance19.ForeColor = System.Drawing.Color.DarkBlue;
+            appearance19.ForeColor = System.Drawing.Color.White;
             this.lblAddress.Appearance = appearance19;
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
@@ -333,33 +299,33 @@
             // txtDescription
             // 
             this.txtDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance25.BackColor = System.Drawing.SystemColors.Window;
+            appearance25.BackColor = System.Drawing.Color.Transparent;
             appearance25.ForeColor = System.Drawing.SystemColors.WindowText;
             appearance25.TextHAlignAsString = "Right";
             this.txtDescription.Appearance = appearance25;
-            this.txtDescription.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDescription.BackColor = System.Drawing.Color.Transparent;
             this.txtDescription.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtDescription.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txtDescription.FontSize = 10;
             this.txtDescription.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtDescription.Location = new System.Drawing.Point(188, 149);
+            this.txtDescription.Location = new System.Drawing.Point(23, 149);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtDescription.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDescription.Size = new System.Drawing.Size(193, 25);
+            this.txtDescription.Size = new System.Drawing.Size(300, 25);
             this.txtDescription.TabIndex = 5;
             this.txtDescription.UnformattedText = null;
             // 
             // lblDescription
             // 
             this.lblDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance2.ForeColor = System.Drawing.Color.DarkBlue;
+            appearance2.ForeColor = System.Drawing.Color.White;
             this.lblDescription.Appearance = appearance2;
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblDescription.Location = new System.Drawing.Point(343, 131);
+            this.lblDescription.Location = new System.Drawing.Point(285, 131);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblDescription.Size = new System.Drawing.Size(38, 16);
@@ -369,29 +335,29 @@
             // txtEmail
             // 
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance26.BackColor = System.Drawing.SystemColors.Window;
+            appearance26.BackColor = System.Drawing.Color.Transparent;
             appearance26.ForeColor = System.Drawing.SystemColors.WindowText;
             appearance26.TextHAlignAsString = "Left";
             this.txtEmail.Appearance = appearance26;
-            this.txtEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.txtEmail.BackColor = System.Drawing.Color.Transparent;
             this.txtEmail.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtEmail.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txtEmail.FontSize = 10;
             this.txtEmail.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtEmail.InputLanguage = Baran.Windows.Forms.InputLanguage.English;
-            this.txtEmail.Location = new System.Drawing.Point(396, 149);
+            this.txtEmail.Location = new System.Drawing.Point(329, 149);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtEmail.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtEmail.Size = new System.Drawing.Size(193, 25);
+            this.txtEmail.Size = new System.Drawing.Size(260, 25);
             this.txtEmail.TabIndex = 4;
             this.txtEmail.UnformattedText = null;
             // 
             // lblEmail
             // 
             this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance3.ForeColor = System.Drawing.Color.DarkBlue;
+            appearance3.ForeColor = System.Drawing.Color.White;
             this.lblEmail.Appearance = appearance3;
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
@@ -406,33 +372,33 @@
             // txtTelephone
             // 
             this.txtTelephone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance27.BackColor = System.Drawing.SystemColors.Window;
+            appearance27.BackColor = System.Drawing.Color.Transparent;
             appearance27.ForeColor = System.Drawing.SystemColors.WindowText;
             appearance27.TextHAlignAsString = "Right";
             this.txtTelephone.Appearance = appearance27;
-            this.txtTelephone.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTelephone.BackColor = System.Drawing.Color.Transparent;
             this.txtTelephone.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtTelephone.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txtTelephone.FontSize = 10;
             this.txtTelephone.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtTelephone.Location = new System.Drawing.Point(396, 95);
+            this.txtTelephone.Location = new System.Drawing.Point(329, 95);
             this.txtTelephone.Name = "txtTelephone";
             this.txtTelephone.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtTelephone.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtTelephone.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTelephone.Size = new System.Drawing.Size(193, 25);
+            this.txtTelephone.Size = new System.Drawing.Size(260, 25);
             this.txtTelephone.TabIndex = 2;
             this.txtTelephone.UnformattedText = null;
             // 
             // lblFamily
             // 
             this.lblFamily.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance4.ForeColor = System.Drawing.Color.DarkBlue;
+            appearance4.ForeColor = System.Drawing.Color.White;
             this.lblFamily.Appearance = appearance4;
             this.lblFamily.AutoSize = true;
             this.lblFamily.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblFamily.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblFamily.Location = new System.Drawing.Point(302, 22);
+            this.lblFamily.Location = new System.Drawing.Point(244, 22);
             this.lblFamily.Name = "lblFamily";
             this.lblFamily.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblFamily.Size = new System.Drawing.Size(79, 16);
@@ -442,33 +408,33 @@
             // txtFamily
             // 
             this.txtFamily.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance28.BackColor = System.Drawing.SystemColors.Window;
+            appearance28.BackColor = System.Drawing.Color.Transparent;
             appearance28.ForeColor = System.Drawing.SystemColors.WindowText;
             appearance28.TextHAlignAsString = "Right";
             this.txtFamily.Appearance = appearance28;
-            this.txtFamily.BackColor = System.Drawing.SystemColors.Window;
+            this.txtFamily.BackColor = System.Drawing.Color.Transparent;
             this.txtFamily.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtFamily.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txtFamily.FontSize = 10;
             this.txtFamily.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtFamily.Location = new System.Drawing.Point(188, 41);
+            this.txtFamily.Location = new System.Drawing.Point(23, 41);
             this.txtFamily.Name = "txtFamily";
             this.txtFamily.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtFamily.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtFamily.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtFamily.Size = new System.Drawing.Size(193, 25);
+            this.txtFamily.Size = new System.Drawing.Size(300, 25);
             this.txtFamily.TabIndex = 1;
             this.txtFamily.UnformattedText = null;
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance5.ForeColor = System.Drawing.Color.DarkBlue;
+            appearance5.ForeColor = System.Drawing.Color.White;
             this.label2.Appearance = appearance5;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label2.Location = new System.Drawing.Point(311, 77);
+            this.label2.Location = new System.Drawing.Point(253, 77);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(70, 16);
@@ -478,28 +444,28 @@
             // txtMobile
             // 
             this.txtMobile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance29.BackColor = System.Drawing.SystemColors.Window;
+            appearance29.BackColor = System.Drawing.Color.Transparent;
             appearance29.ForeColor = System.Drawing.SystemColors.WindowText;
             appearance29.TextHAlignAsString = "Right";
             this.txtMobile.Appearance = appearance29;
-            this.txtMobile.BackColor = System.Drawing.SystemColors.Window;
+            this.txtMobile.BackColor = System.Drawing.Color.Transparent;
             this.txtMobile.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtMobile.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txtMobile.FontSize = 10;
             this.txtMobile.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtMobile.Location = new System.Drawing.Point(188, 95);
+            this.txtMobile.Location = new System.Drawing.Point(23, 95);
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtMobile.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtMobile.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtMobile.Size = new System.Drawing.Size(193, 25);
+            this.txtMobile.Size = new System.Drawing.Size(300, 25);
             this.txtMobile.TabIndex = 3;
             this.txtMobile.UnformattedText = null;
             // 
             // lblTelephone
             // 
             this.lblTelephone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance6.ForeColor = System.Drawing.Color.DarkBlue;
+            appearance6.ForeColor = System.Drawing.Color.White;
             this.lblTelephone.Appearance = appearance6;
             this.lblTelephone.AutoSize = true;
             this.lblTelephone.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
@@ -514,28 +480,28 @@
             // txtName
             // 
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance30.BackColor = System.Drawing.SystemColors.Window;
+            appearance30.BackColor = System.Drawing.Color.Transparent;
             appearance30.ForeColor = System.Drawing.SystemColors.WindowText;
             appearance30.TextHAlignAsString = "Right";
             this.txtName.Appearance = appearance30;
-            this.txtName.BackColor = System.Drawing.SystemColors.Window;
+            this.txtName.BackColor = System.Drawing.Color.Transparent;
             this.txtName.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtName.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txtName.FontSize = 10;
             this.txtName.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtName.Location = new System.Drawing.Point(396, 41);
+            this.txtName.Location = new System.Drawing.Point(329, 41);
             this.txtName.Name = "txtName";
             this.txtName.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtName.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtName.Size = new System.Drawing.Size(193, 25);
+            this.txtName.Size = new System.Drawing.Size(260, 25);
             this.txtName.TabIndex = 0;
             this.txtName.UnformattedText = null;
             // 
             // lblName
             // 
             this.lblName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance7.ForeColor = System.Drawing.Color.DarkBlue;
+            appearance7.ForeColor = System.Drawing.Color.White;
             this.lblName.Appearance = appearance7;
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
@@ -634,31 +600,31 @@
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            appearance21.BackColor = System.Drawing.SystemColors.Window;
+            appearance21.BackColor = System.Drawing.Color.Transparent;
             appearance21.ForeColor = System.Drawing.SystemColors.WindowText;
             appearance21.TextHAlignAsString = "Left";
             this.txtConfirmPassword.Appearance = appearance21;
-            this.txtConfirmPassword.BackColor = System.Drawing.SystemColors.Window;
+            this.txtConfirmPassword.BackColor = System.Drawing.Color.Transparent;
             this.txtConfirmPassword.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtConfirmPassword.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txtConfirmPassword.FontSize = 10;
             this.txtConfirmPassword.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtConfirmPassword.InputLanguage = Baran.Windows.Forms.InputLanguage.English;
-            this.txtConfirmPassword.Location = new System.Drawing.Point(262, 69);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(218, 66);
             this.txtConfirmPassword.MaxLength = 14;
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '*';
             this.txtConfirmPassword.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtConfirmPassword.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtConfirmPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtConfirmPassword.Size = new System.Drawing.Size(193, 25);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(288, 25);
             this.txtConfirmPassword.TabIndex = 2;
             this.txtConfirmPassword.UnformattedText = null;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            appearance11.ForeColor = System.Drawing.Color.DarkBlue;
+            appearance11.ForeColor = System.Drawing.Color.White;
             this.label1.Appearance = appearance11;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
@@ -673,32 +639,32 @@
             // txtPassword
             // 
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            appearance22.BackColor = System.Drawing.SystemColors.Window;
+            appearance22.BackColor = System.Drawing.Color.Transparent;
             appearance22.ForeColor = System.Drawing.SystemColors.WindowText;
             appearance22.TextHAlignAsString = "Left";
             this.txtPassword.Appearance = appearance22;
-            this.txtPassword.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPassword.BackColor = System.Drawing.Color.Transparent;
             this.txtPassword.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtPassword.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txtPassword.FontSize = 10;
             this.txtPassword.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtPassword.InputLanguage = Baran.Windows.Forms.InputLanguage.English;
-            this.txtPassword.Location = new System.Drawing.Point(262, 42);
+            this.txtPassword.Location = new System.Drawing.Point(218, 39);
             this.txtPassword.MaxLength = 14;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtPassword.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtPassword.Size = new System.Drawing.Size(193, 25);
+            this.txtPassword.Size = new System.Drawing.Size(288, 25);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.UnformattedText = null;
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            appearance10.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label3.Appearance = appearance10;
+            appearance31.ForeColor = System.Drawing.Color.White;
+            this.label3.Appearance = appearance31;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -712,29 +678,29 @@
             // txtUserName
             // 
             this.txtUserName.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            appearance23.BackColor = System.Drawing.SystemColors.Window;
+            appearance23.BackColor = System.Drawing.Color.Transparent;
             appearance23.ForeColor = System.Drawing.SystemColors.WindowText;
             appearance23.TextHAlignAsString = "Left";
             this.txtUserName.Appearance = appearance23;
-            this.txtUserName.BackColor = System.Drawing.SystemColors.Window;
+            this.txtUserName.BackColor = System.Drawing.Color.Transparent;
             this.txtUserName.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtUserName.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txtUserName.FontSize = 10;
             this.txtUserName.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtUserName.InputLanguage = Baran.Windows.Forms.InputLanguage.English;
-            this.txtUserName.Location = new System.Drawing.Point(262, 15);
+            this.txtUserName.Location = new System.Drawing.Point(218, 12);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtUserName.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtUserName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtUserName.Size = new System.Drawing.Size(193, 25);
+            this.txtUserName.Size = new System.Drawing.Size(288, 25);
             this.txtUserName.TabIndex = 0;
             this.txtUserName.UnformattedText = null;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            appearance8.ForeColor = System.Drawing.Color.DarkBlue;
+            appearance8.ForeColor = System.Drawing.Color.White;
             this.label4.Appearance = appearance8;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
@@ -841,7 +807,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Location = new System.Drawing.Point(1, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(336, 569);
+            this.groupBox1.Size = new System.Drawing.Size(336, 536);
             this.groupBox1.TabIndex = 4;
             // 
             // trvItems
@@ -850,10 +816,11 @@
             this.trvItems.CheckBoxes = true;
             this.trvItems.Cursor = System.Windows.Forms.Cursors.Hand;
             this.trvItems.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.trvItems.ForeColor = System.Drawing.Color.White;
             this.trvItems.HotTracking = true;
             this.trvItems.Location = new System.Drawing.Point(1, 0);
             this.trvItems.Name = "trvItems";
-            this.trvItems.Size = new System.Drawing.Size(334, 568);
+            this.trvItems.Size = new System.Drawing.Size(334, 535);
             this.trvItems.TabIndex = 0;
             this.trvItems.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.trvItems_AfterCheck);
             // 
@@ -867,7 +834,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(337, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(608, 569);
+            this.groupBox2.Size = new System.Drawing.Size(608, 536);
             this.groupBox2.TabIndex = 1;
             // 
             // grbAccessLevel
@@ -971,26 +938,75 @@
             this.imgAccessLevel.Images.SetKeyName(3, "filenew.png");
             this.imgAccessLevel.Images.SetKeyName(4, "printer2.png");
             // 
+            // cmbUserType
+            // 
+            this.cmbUserType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            appearance13.BackColor = System.Drawing.Color.Transparent;
+            appearance13.BorderColor = System.Drawing.Color.LightGray;
+            appearance13.ForeColor = System.Drawing.Color.White;
+            appearance13.TextHAlignAsString = "Right";
+            appearance13.TextVAlignAsString = "Middle";
+            this.cmbUserType.Appearance = appearance13;
+            this.cmbUserType.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Suggest;
+            this.cmbUserType.BackColor = System.Drawing.Color.Transparent;
+            this.cmbUserType.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
+            this.cmbUserType.Editable = Baran.Windows.Forms.Editable.Editable;
+            this.cmbUserType.InputLanguage = Baran.Windows.Forms.InputLanguage.Farsi;
+            appearance18.BackColor = System.Drawing.Color.Transparent;
+            appearance18.TextHAlignAsString = "Right";
+            appearance18.TextVAlignAsString = "Middle";
+            this.cmbUserType.ItemAppearance = appearance18;
+            this.cmbUserType.Location = new System.Drawing.Point(329, 261);
+            this.cmbUserType.Name = "cmbUserType";
+            this.cmbUserType.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cmbUserType.Size = new System.Drawing.Size(263, 22);
+            this.cmbUserType.TabIndex = 17;
+            // 
+            // cmbUserAccessLevel
+            // 
+            this.cmbUserAccessLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            appearance9.BackColor = System.Drawing.Color.Transparent;
+            appearance9.BorderColor = System.Drawing.Color.LightGray;
+            appearance9.ForeColor = System.Drawing.Color.White;
+            appearance9.TextHAlignAsString = "Right";
+            appearance9.TextVAlignAsString = "Middle";
+            this.cmbUserAccessLevel.Appearance = appearance9;
+            this.cmbUserAccessLevel.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Suggest;
+            this.cmbUserAccessLevel.BackColor = System.Drawing.Color.Transparent;
+            this.cmbUserAccessLevel.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
+            this.cmbUserAccessLevel.Editable = Baran.Windows.Forms.Editable.Editable;
+            this.cmbUserAccessLevel.InputLanguage = Baran.Windows.Forms.InputLanguage.Farsi;
+            appearance10.BackColor = System.Drawing.Color.Transparent;
+            appearance10.TextHAlignAsString = "Right";
+            appearance10.TextVAlignAsString = "Middle";
+            this.cmbUserAccessLevel.ItemAppearance = appearance10;
+            this.cmbUserAccessLevel.Location = new System.Drawing.Point(23, 261);
+            this.cmbUserAccessLevel.Name = "cmbUserAccessLevel";
+            this.cmbUserAccessLevel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cmbUserAccessLevel.Size = new System.Drawing.Size(300, 22);
+            this.cmbUserAccessLevel.TabIndex = 18;
+            // 
             // frmUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(946, 702);
+            this.FormMessage = "";
             this.Name = "frmUsers";
             this.Text = "تغییر کاربر";
             this.Activated += new System.EventHandler(this.frmUsers_Activated);
             this.Load += new System.EventHandler(this.frmUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).EndInit();
+            this.grpHeader.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpMessage)).EndInit();
             this.grpMessage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).EndInit();
             this.grpMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grbPersonalInfo)).EndInit();
             this.grbPersonalInfo.ResumeLayout(false);
             this.grbPersonalInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbUserAccessLevel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbUserType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail)).EndInit();
@@ -1016,6 +1032,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.grbAccessLevel)).EndInit();
             this.grbAccessLevel.ResumeLayout(false);
             this.grbAccessLevel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbUserType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbUserAccessLevel)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1065,8 +1083,8 @@
         private Windows.Forms.Button btnShowPic;
         private Windows.Forms.PictureBox picUser;
         private Windows.Forms.Label label6;
+        private Windows.Forms.Label label5;
         private Windows.Forms.UltraComboEditor cmbUserAccessLevel;
         private Windows.Forms.UltraComboEditor cmbUserType;
-        private Windows.Forms.Label label5;
     }
 }

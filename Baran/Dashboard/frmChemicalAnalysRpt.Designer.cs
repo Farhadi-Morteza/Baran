@@ -45,7 +45,11 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ElementName");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("FreeSpace", 0);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn15 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RowID", 1);
-            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn16 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("New", 2);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn17 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Detail", 3);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn18 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Delete", 4);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn19 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Update", 5);
+            Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance33 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance34 = new Infragistics.Win.Appearance();
@@ -64,6 +68,7 @@
             Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
+            Infragistics.UltraChart.Resources.Appearance.PaintElement paintElement1 = new Infragistics.UltraChart.Resources.Appearance.PaintElement();
             Infragistics.Win.Appearance appearance26 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
@@ -71,12 +76,12 @@
             this.dstDashboard1 = new BaranDataAccess.Dashboard.dstDashboard();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.grdItem = new Baran.Windows.Forms.UltraGrid();
+            this.chtMain = new Baran.Windows.Forms.UltraChartMain();
             this.grpControls = new Baran.Windows.Forms.GroupBox();
             this.mskToDate = new Baran.Windows.Forms.UltraMaskedDate();
             this.mskFromDate = new Baran.Windows.Forms.UltraMaskedDate();
             this.label1 = new Baran.Windows.Forms.Label();
             this.label2 = new Baran.Windows.Forms.Label();
-            this.chtMain = new Baran.Windows.Forms.UltraChartMain();
             ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).BeginInit();
             this.grpHeader.SuspendLayout();
@@ -88,9 +93,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dstDashboard1)).BeginInit();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chtMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpControls)).BeginInit();
             this.grpControls.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chtMain)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMaxMin
@@ -198,7 +203,7 @@
             ultraGridColumn6.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn6.Header.VisiblePosition = 2;
             ultraGridColumn6.Hidden = true;
-            ultraGridColumn6.Width = 22;
+            ultraGridColumn6.Width = 29;
             ultraGridColumn7.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn7.Header.Caption = "فعالیت";
             ultraGridColumn7.Header.VisiblePosition = 8;
@@ -231,12 +236,36 @@
             ultraGridColumn14.Header.Caption = "";
             ultraGridColumn14.Header.VisiblePosition = 0;
             ultraGridColumn14.MergedCellStyle = Infragistics.Win.UltraWinGrid.MergedCellStyle.Always;
-            ultraGridColumn14.Width = 160;
+            ultraGridColumn14.Width = 37;
             ultraGridColumn15.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn15.Header.Caption = "#";
-            ultraGridColumn15.Header.VisiblePosition = 14;
+            ultraGridColumn15.Header.VisiblePosition = 18;
             ultraGridColumn15.TabStop = false;
             ultraGridColumn15.Width = 41;
+            ultraGridColumn16.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn16.Header.Caption = "...";
+            ultraGridColumn16.Header.VisiblePosition = 14;
+            ultraGridColumn16.Hidden = true;
+            ultraGridColumn16.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn16.Width = 41;
+            ultraGridColumn17.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn17.Header.Caption = "...";
+            ultraGridColumn17.Header.VisiblePosition = 15;
+            ultraGridColumn17.Hidden = true;
+            ultraGridColumn17.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn17.Width = 41;
+            ultraGridColumn18.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn18.Header.Caption = "...";
+            ultraGridColumn18.Header.VisiblePosition = 16;
+            ultraGridColumn18.Hidden = true;
+            ultraGridColumn18.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn18.Width = 41;
+            ultraGridColumn19.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
+            ultraGridColumn19.Header.Caption = "...";
+            ultraGridColumn19.Header.VisiblePosition = 17;
+            ultraGridColumn19.Hidden = true;
+            ultraGridColumn19.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn19.Width = 41;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2,
@@ -252,13 +281,18 @@
             ultraGridColumn12,
             ultraGridColumn13,
             ultraGridColumn14,
-            ultraGridColumn15});
+            ultraGridColumn15,
+            ultraGridColumn16,
+            ultraGridColumn17,
+            ultraGridColumn18,
+            ultraGridColumn19});
             ultraGridBand1.Override.SummaryDisplayArea = Infragistics.Win.UltraWinGrid.SummaryDisplayAreas.BottomFixed;
-            appearance1.ForeColor = System.Drawing.Color.DarkBlue;
-            ultraGridBand1.Override.SummaryValueAppearance = appearance1;
+            appearance11.ForeColor = System.Drawing.Color.DarkBlue;
+            ultraGridBand1.Override.SummaryValueAppearance = appearance11;
             this.grdItem.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdItem.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
-            appearance3.ForeColor = System.Drawing.Color.DarkBlue;
+            appearance3.BackColor = System.Drawing.Color.WhiteSmoke;
+            appearance3.ForeColor = System.Drawing.Color.Black;
             this.grdItem.DisplayLayout.CaptionAppearance = appearance3;
             this.grdItem.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.True;
             appearance33.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -367,90 +401,9 @@
             this.grdItem.Location = new System.Drawing.Point(3, 217);
             this.grdItem.Name = "grdItem";
             this.grdItem.Size = new System.Drawing.Size(876, 315);
-            this.grdItem.SumColumnsWidth = 716;
+            this.grdItem.SumColumnsWidth = 839;
             this.grdItem.TabIndex = 8;
             this.grdItem.AfterRowFilterChanged += new Infragistics.Win.UltraWinGrid.AfterRowFilterChangedEventHandler(this.grdItem_AfterRowFilterChanged);
-            // 
-            // grpControls
-            // 
-            this.grpControls.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
-            this.grpControls.Controls.Add(this.mskToDate);
-            this.grpControls.Controls.Add(this.mskFromDate);
-            this.grpControls.Controls.Add(this.label1);
-            this.grpControls.Controls.Add(this.label2);
-            this.grpControls.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpControls.Location = new System.Drawing.Point(1, 0);
-            this.grpControls.Name = "grpControls";
-            this.grpControls.Size = new System.Drawing.Size(882, 42);
-            this.grpControls.TabIndex = 12;
-            // 
-            // mskToDate
-            // 
-            this.mskToDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance26.BackColor = System.Drawing.Color.Transparent;
-            appearance26.ForeColor = System.Drawing.Color.White;
-            appearance26.TextHAlignAsString = "Center";
-            this.mskToDate.Appearance = appearance26;
-            this.mskToDate.DataMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.IncludeBoth;
-            this.mskToDate.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
-            this.mskToDate.Editable = Baran.Windows.Forms.Editable.Editable;
-            this.mskToDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
-            this.mskToDate.InputMask = "yyyy/mm/dd";
-            this.mskToDate.Location = new System.Drawing.Point(550, 9);
-            this.mskToDate.Name = "mskToDate";
-            this.mskToDate.Size = new System.Drawing.Size(90, 21);
-            this.mskToDate.TabIndex = 126;
-            this.mskToDate.Text = "____/__/__";
-            // 
-            // mskFromDate
-            // 
-            this.mskFromDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance18.BackColor = System.Drawing.Color.Transparent;
-            appearance18.ForeColor = System.Drawing.Color.White;
-            appearance18.TextHAlignAsString = "Center";
-            this.mskFromDate.Appearance = appearance18;
-            this.mskFromDate.DataMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.IncludeBoth;
-            this.mskFromDate.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
-            this.mskFromDate.Editable = Baran.Windows.Forms.Editable.Editable;
-            this.mskFromDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
-            this.mskFromDate.InputMask = "yyyy/mm/dd";
-            this.mskFromDate.Location = new System.Drawing.Point(722, 10);
-            this.mskFromDate.Name = "mskFromDate";
-            this.mskFromDate.Size = new System.Drawing.Size(90, 21);
-            this.mskFromDate.TabIndex = 125;
-            this.mskFromDate.Text = "____/__/__";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance2.ForeColor = System.Drawing.Color.LightGray;
-            appearance2.TextHAlignAsString = "Right";
-            appearance2.TextVAlignAsString = "Middle";
-            this.label1.Appearance = appearance2;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(817, 12);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(48, 16);
-            this.label1.TabIndex = 124;
-            this.label1.Text = ": از تاریخ";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            appearance8.ForeColor = System.Drawing.Color.LightGray;
-            appearance8.TextHAlignAsString = "Right";
-            appearance8.TextVAlignAsString = "Middle";
-            this.label2.Appearance = appearance8;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(646, 11);
-            this.label2.Name = "label2";
-            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(47, 16);
-            this.label2.TabIndex = 123;
-            this.label2.Text = ": تا تاریخ";
             // 
 //			'UltraChartMain' properties's serialization: Since 'ChartType' changes the way axes look,
 //			'ChartType' must be persisted ahead of any Axes change made in design time.
@@ -460,6 +413,9 @@
             // chtMain
             // 
             this.chtMain.Axis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
+            paintElement1.ElementType = Infragistics.UltraChart.Shared.Styles.PaintElementType.None;
+            paintElement1.Fill = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
+            this.chtMain.Axis.PE = paintElement1;
             this.chtMain.Axis.X.Labels.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.chtMain.Axis.X.Labels.FontColor = System.Drawing.Color.White;
             this.chtMain.Axis.X.Labels.HorizontalAlign = System.Drawing.StringAlignment.Near;
@@ -576,13 +532,94 @@
             this.chtMain.Legend.BackgroundColor = System.Drawing.Color.Transparent;
             this.chtMain.Legend.BorderColor = System.Drawing.Color.White;
             this.chtMain.Legend.FontColor = System.Drawing.Color.White;
-            this.chtMain.Legend.SpanPercentage = 15;
+            this.chtMain.Legend.SpanPercentage = 10;
             this.chtMain.Legend.Visible = true;
             this.chtMain.Location = new System.Drawing.Point(0, 0);
             this.chtMain.Margin = new System.Windows.Forms.Padding(0);
             this.chtMain.Name = "chtMain";
             this.chtMain.Size = new System.Drawing.Size(882, 214);
             this.chtMain.TabIndex = 9;
+            // 
+            // grpControls
+            // 
+            this.grpControls.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
+            this.grpControls.Controls.Add(this.mskToDate);
+            this.grpControls.Controls.Add(this.mskFromDate);
+            this.grpControls.Controls.Add(this.label1);
+            this.grpControls.Controls.Add(this.label2);
+            this.grpControls.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grpControls.Location = new System.Drawing.Point(1, 0);
+            this.grpControls.Name = "grpControls";
+            this.grpControls.Size = new System.Drawing.Size(882, 42);
+            this.grpControls.TabIndex = 12;
+            // 
+            // mskToDate
+            // 
+            this.mskToDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            appearance26.BackColor = System.Drawing.Color.Transparent;
+            appearance26.ForeColor = System.Drawing.Color.White;
+            appearance26.TextHAlignAsString = "Center";
+            this.mskToDate.Appearance = appearance26;
+            this.mskToDate.DataMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.IncludeBoth;
+            this.mskToDate.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
+            this.mskToDate.Editable = Baran.Windows.Forms.Editable.Editable;
+            this.mskToDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
+            this.mskToDate.InputMask = "yyyy/mm/dd";
+            this.mskToDate.Location = new System.Drawing.Point(550, 9);
+            this.mskToDate.Name = "mskToDate";
+            this.mskToDate.Size = new System.Drawing.Size(90, 21);
+            this.mskToDate.TabIndex = 126;
+            this.mskToDate.Text = "____/__/__";
+            // 
+            // mskFromDate
+            // 
+            this.mskFromDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            appearance18.BackColor = System.Drawing.Color.Transparent;
+            appearance18.ForeColor = System.Drawing.Color.White;
+            appearance18.TextHAlignAsString = "Center";
+            this.mskFromDate.Appearance = appearance18;
+            this.mskFromDate.DataMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.IncludeBoth;
+            this.mskFromDate.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
+            this.mskFromDate.Editable = Baran.Windows.Forms.Editable.Editable;
+            this.mskFromDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
+            this.mskFromDate.InputMask = "yyyy/mm/dd";
+            this.mskFromDate.Location = new System.Drawing.Point(722, 10);
+            this.mskFromDate.Name = "mskFromDate";
+            this.mskFromDate.Size = new System.Drawing.Size(90, 21);
+            this.mskFromDate.TabIndex = 125;
+            this.mskFromDate.Text = "____/__/__";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            appearance2.ForeColor = System.Drawing.Color.LightGray;
+            appearance2.TextHAlignAsString = "Right";
+            appearance2.TextVAlignAsString = "Middle";
+            this.label1.Appearance = appearance2;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.Location = new System.Drawing.Point(817, 12);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(48, 16);
+            this.label1.TabIndex = 124;
+            this.label1.Text = ": از تاریخ";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            appearance8.ForeColor = System.Drawing.Color.LightGray;
+            appearance8.TextHAlignAsString = "Right";
+            appearance8.TextVAlignAsString = "Middle";
+            this.label2.Appearance = appearance8;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label2.Location = new System.Drawing.Point(646, 11);
+            this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label2.Size = new System.Drawing.Size(47, 16);
+            this.label2.TabIndex = 123;
+            this.label2.Text = ": تا تاریخ";
             // 
             // frmChemicalAnalysRpt
             // 
@@ -604,10 +641,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dstDashboard1)).EndInit();
             this.tableLayoutPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chtMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpControls)).EndInit();
             this.grpControls.ResumeLayout(false);
             this.grpControls.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chtMain)).EndInit();
             this.ResumeLayout(false);
 
         }

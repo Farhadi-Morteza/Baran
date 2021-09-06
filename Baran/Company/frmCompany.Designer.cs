@@ -560,11 +560,12 @@
             this.txtDescription.FontSize = 0;
             this.txtDescription.Location = new System.Drawing.Point(33, 377);
             this.txtDescription.MaxLength = 500;
+            this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtDescription.PreviousForeColor = System.Drawing.Color.Transparent;
             this.txtDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDescription.Size = new System.Drawing.Size(919, 22);
+            this.txtDescription.Size = new System.Drawing.Size(919, 44);
             this.txtDescription.TabIndex = 17;
             this.txtDescription.UnformattedText = null;
             // 
@@ -791,7 +792,7 @@
             this.grpControls.Controls.Add(this.txtEconomicCode);
             this.grpControls.Location = new System.Drawing.Point(5, 6);
             this.grpControls.Name = "grpControls";
-            this.grpControls.Size = new System.Drawing.Size(998, 415);
+            this.grpControls.Size = new System.Drawing.Size(998, 433);
             this.grpControls.TabIndex = 0;
             // 
             // btnShowLogo
