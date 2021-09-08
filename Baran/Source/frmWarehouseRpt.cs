@@ -142,6 +142,10 @@ namespace Baran.Source
 
                     grdItem.DisplayLayout.Bands[0].Columns["RowID"].Header.VisiblePosition = grdItem.DisplayLayout.Bands[0].Columns.Count;
                     grdItem.DisplayLayout.Bands[0].Columns["FreeSpace"].Header.VisiblePosition = 0;
+                    grdItem.DisplayLayout.Bands[0].Columns[ColumnKey.New].Hidden = true;
+                    grdItem.DisplayLayout.Bands[0].Columns[ColumnKey.Delete].Hidden = true;
+                    grdItem.DisplayLayout.Bands[0].Columns[ColumnKey.Update].Hidden = true;
+                    grdItem.DisplayLayout.Bands[0].Columns[ColumnKey.Detail].Hidden = true;
 
                     Infragistics.Win.UltraWinGrid.UltraGridBand band = this.grdItem.DisplayLayout.Bands[0];
 

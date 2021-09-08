@@ -145,8 +145,8 @@ namespace Baran.Source
 
                 dbContext.FieldRepository.Insert(field);
                 dbContext.Save();
-                this.DialogResult = DialogResult.OK;
-
+                //this.DialogResult = DialogResult.OK;
+                //FieldID = field.FieldID;
                 OnMessage(BaranResources.SaveSuccessful, PublicEnum.EnmMessageCategory.Success);
             }
             catch
@@ -195,7 +195,7 @@ namespace Baran.Source
 
                 dbContext.FieldRepository.Update(field);
                 dbContext.Save();
-                this.DialogResult = DialogResult.OK;
+                //this.DialogResult = DialogResult.OK;
 
                 OnMessage(BaranResources.EditSuccessful, PublicEnum.EnmMessageCategory.Success);
                 waite.Close();

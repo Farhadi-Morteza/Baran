@@ -739,7 +739,8 @@ namespace Baran.Base_Forms
         {
             this.AccessLevel();
             OnformLoad();
-     
+            grpHeader.Size = new Size(grpHeader.Size.Width, 65);
+            grpButons.Size = new Size(grpButons.Size.Width, 65);
         }
 
         private void btnMaxMin_Click(object sender, EventArgs e)

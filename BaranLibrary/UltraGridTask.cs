@@ -12,7 +12,7 @@ namespace Baran.Windows.Forms
     {
         public UltraGridTask()
         {
-            this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             //Dock = System.Windows.Forms.DockStyle.Fill;       
             //this.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.None;
 
@@ -54,9 +54,9 @@ namespace Baran.Windows.Forms
         protected override void OnInitializeLayout(Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs e)
         {
             base.OnInitializeLayout(e);
-            this.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ResizeAllColumns;  
-           
+            this.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ResizeAllColumns;
 
+            this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             try
             {
                 e.Layout.Bands[0].Columns.Add("Delete", "");

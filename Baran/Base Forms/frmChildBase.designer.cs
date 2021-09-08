@@ -75,9 +75,9 @@
             this.grpMain.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
             this.grpMain.Controls.Add(this.lblLine3);
             this.grpMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpMain.Location = new System.Drawing.Point(0, 105);
+            this.grpMain.Location = new System.Drawing.Point(0, 95);
             this.grpMain.Name = "grpMain";
-            this.grpMain.Size = new System.Drawing.Size(664, 307);
+            this.grpMain.Size = new System.Drawing.Size(664, 327);
             this.grpMain.TabIndex = 4;
             // 
             // lblLine3
@@ -88,7 +88,7 @@
             appearance5.TextVAlignAsString = "Middle";
             this.lblLine3.Appearance = appearance5;
             this.lblLine3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblLine3.Location = new System.Drawing.Point(1, 303);
+            this.lblLine3.Location = new System.Drawing.Point(1, 323);
             this.lblLine3.Name = "lblLine3";
             this.lblLine3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblLine3.Size = new System.Drawing.Size(662, 3);
@@ -100,9 +100,9 @@
             this.grpButons.Appearance = appearance3;
             this.grpButons.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
             this.grpButons.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grpButons.Location = new System.Drawing.Point(0, 412);
+            this.grpButons.Location = new System.Drawing.Point(0, 422);
             this.grpButons.Name = "grpButons";
-            this.grpButons.Size = new System.Drawing.Size(664, 75);
+            this.grpButons.Size = new System.Drawing.Size(664, 65);
             this.grpButons.TabIndex = 3;
             this.grpButons.Visible = false;
             // 
@@ -113,7 +113,7 @@
             this.grpMessage.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
             this.grpMessage.Controls.Add(this.lblMessage);
             this.grpMessage.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpMessage.Location = new System.Drawing.Point(0, 75);
+            this.grpMessage.Location = new System.Drawing.Point(0, 65);
             this.grpMessage.Name = "grpMessage";
             this.grpMessage.Size = new System.Drawing.Size(664, 30);
             this.grpMessage.TabIndex = 1;
@@ -125,7 +125,7 @@
             appearance1.TextVAlignAsString = "Middle";
             this.lblMessage.Appearance = appearance1;
             this.lblMessage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblMessage.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblMessage.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblMessage.Location = new System.Drawing.Point(1, 0);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -149,7 +149,7 @@
             this.grpHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpHeader.Location = new System.Drawing.Point(0, 0);
             this.grpHeader.Name = "grpHeader";
-            this.grpHeader.Size = new System.Drawing.Size(664, 75);
+            this.grpHeader.Size = new System.Drawing.Size(664, 65);
             this.grpHeader.TabIndex = 0;
             // 
             // btnMaxMin
@@ -213,7 +213,7 @@
             appearance16.TextVAlignAsString = "Middle";
             this.lblLine2.Appearance = appearance16;
             this.lblLine2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblLine2.Location = new System.Drawing.Point(1, 71);
+            this.lblLine2.Location = new System.Drawing.Point(1, 61);
             this.lblLine2.Name = "lblLine2";
             this.lblLine2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblLine2.Size = new System.Drawing.Size(662, 3);
@@ -243,8 +243,8 @@
             appearance14.TextHAlignAsString = "Right";
             appearance14.TextVAlignAsString = "Middle";
             this.lblCaption.Appearance = appearance14;
-            this.lblCaption.Font = new System.Drawing.Font("B Nazanin", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblCaption.Location = new System.Drawing.Point(293, 22);
+            this.lblCaption.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblCaption.Location = new System.Drawing.Point(306, 17);
             this.lblCaption.Name = "lblCaption";
             this.lblCaption.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCaption.Size = new System.Drawing.Size(300, 30);
@@ -255,9 +255,9 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(599, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(612, 9);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(54, 56);
+            this.pictureBox1.Size = new System.Drawing.Size(44, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -270,7 +270,7 @@
             // 
             // frmChildBase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(48)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(664, 487);

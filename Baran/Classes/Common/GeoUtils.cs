@@ -242,21 +242,80 @@ namespace Baran.Classes.Common
             else
                 return string.Format("{0:n0} miles", miles);
         }
+
+        public static PointLatLng FindCentroid(List<PointLatLng> Points)
+        {
+            // Add the first point at the end of the array.
+            int num_points = Points.Count;
+            PointLatLng[] pts = new PointLatLng[num_points + 1];
+            Points.CopyTo(pts, 0);
+            pts[num_points] = Points[0];
+
+            // Find the centroid.
+            double X = 0;
+            double Y = 0;
+            double second_factor;
+            for (int i = 0; i < num_points; i++)
+            {
+                second_factor =
+                    pts[i].Lat * pts[i + 1].Lng -
+                    pts[i + 1].Lat * pts[i].Lng;
+                X += (pts[i].Lat + pts[i + 1].Lat) * second_factor;
+                Y += (pts[i].Lng + pts[i + 1].Lng) * second_factor;
+            }
+
+            // Divide by 6 times the polygon's area.
+            //float polygon_area = PolygonArea();
+            //X /= (6 * polygon_area);
+            //Y /= (6 * polygon_area);
+
+            // If the values are negative, the polygon is
+            // oriented counterclockwise so reverse the signs.
+            if (X < 0)
+            {
+                X = -X;
+                Y = -Y;
+            }
+
+            return new PointLatLng(X, Y);
+        }
+
+        private static decimal PolygonArea(List<PointLatLng> Points)
+        {
+            //    // Add the first point to the end.
+            //    int num_points = Points.Count;
+            //    PointLatLng[] pts = new PointLatLng[num_points + 1];
+            //    Points.CopyTo(pts, 0);
+            //    pts[num_points] = Points[0];
+
+            //    // Get the areas.
+            decimal area = 0;
+            //    for (int i = 0; i < num_points; i++)
+            //    {
+            //        area =
+            //            (pts[i + 1].Lat - pts[i].Lat) *
+            //            (pts[i + 1].Lng + pts[i].Lng) / 2;
+            //    }
+
+            //    // Return the result.
+            return area;
+            //}
+        }
+
+        //public class GeoMarkerGoogle : GMapMarker
+        //{
+        //    public GeoMarkerGoogle(PointLatLng p, GMap.NET.WindowsForms.Markers.GMarkerGoogleType type) : base(GeoMarkerGoogle);
+        //    public readonly GMap.NET.WindowsForms.Markers.GMarkerGoogleType Type;
+
+        //    public GMarkerGoogle(PointLatLng p, GMap.NET.WindowsForms.Markers.GMarkerGoogleType type);
+        //    public GMarkerGoogle(PointLatLng p, Bitmap Bitmap);
+        //    protected GMarkerGoogle(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);
+
+        //    public override void Dispose();
+        //    public void OnDeserialization(object sender);
+        //    public override void OnRender(Graphics g);
+        //}
     }
-
-    //public class GeoMarkerGoogle : GMapMarker
-    //{
-    //    public GeoMarkerGoogle(PointLatLng p, GMap.NET.WindowsForms.Markers.GMarkerGoogleType type) : base(GeoMarkerGoogle);
-    //    public readonly GMap.NET.WindowsForms.Markers.GMarkerGoogleType Type;
-
-    //    public GMarkerGoogle(PointLatLng p, GMap.NET.WindowsForms.Markers.GMarkerGoogleType type);
-    //    public GMarkerGoogle(PointLatLng p, Bitmap Bitmap);
-    //    protected GMarkerGoogle(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);
-
-    //    public override void Dispose();
-    //    public void OnDeserialization(object sender);
-    //    public override void OnRender(Graphics g);
-    //}
 }
 
 

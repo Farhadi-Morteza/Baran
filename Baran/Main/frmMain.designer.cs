@@ -163,7 +163,7 @@
             appearance4.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Tiled;
             this.uebMainExplorerBar.Appearances.Add(appearance4);
             this.uebMainExplorerBar.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
-            this.uebMainExplorerBar.Font = new System.Drawing.Font("B Nazanin", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.uebMainExplorerBar.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             appearance9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(45)))));
             appearance9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(147)))), ((int)(((byte)(30)))));
             this.uebMainExplorerBar.GroupSettings.AppearancesSmall.Appearance = appearance9;
@@ -180,12 +180,12 @@
             appearance14.ImageHAlign = Infragistics.Win.HAlign.Right;
             appearance14.TextHAlignAsString = "Right";
             this.uebMainExplorerBar.ItemSettings.AppearancesSmall.Appearance = appearance14;
-            this.uebMainExplorerBar.Location = new System.Drawing.Point(0, 32);
-            this.uebMainExplorerBar.Margin = new System.Windows.Forms.Padding(3, 8, 3, 5);
+            this.uebMainExplorerBar.Location = new System.Drawing.Point(0, 24);
+            this.uebMainExplorerBar.Margin = new System.Windows.Forms.Padding(2, 6, 2, 4);
             this.uebMainExplorerBar.Margins.Top = 6;
             this.uebMainExplorerBar.Name = "uebMainExplorerBar";
             this.uebMainExplorerBar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.uebMainExplorerBar.Size = new System.Drawing.Size(270, 621);
+            this.uebMainExplorerBar.Size = new System.Drawing.Size(241, 640);
             this.uebMainExplorerBar.Style = Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarStyle.Listbar;
             this.uebMainExplorerBar.TabIndex = 8;
             this.uebMainExplorerBar.TabStop = false;
@@ -204,8 +204,8 @@
             this.usbMainStatusBar.BorderStyle = Infragistics.Win.UIElementBorderStyle.Rounded1;
             this.usbMainStatusBar.BorderStylePanel = Infragistics.Win.UIElementBorderStyle.Rounded1;
             this.usbMainStatusBar.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Flat;
-            this.usbMainStatusBar.Location = new System.Drawing.Point(0, 707);
-            this.usbMainStatusBar.Margin = new System.Windows.Forms.Padding(8);
+            this.usbMainStatusBar.Location = new System.Drawing.Point(0, 689);
+            this.usbMainStatusBar.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.usbMainStatusBar.Name = "usbMainStatusBar";
             appearance1.TextHAlignAsString = "Right";
             appearance1.TextVAlignAsString = "Middle";
@@ -246,7 +246,7 @@
             ultraStatusPanel6,
             ultraStatusPanel7,
             ultraStatusPanel8});
-            this.usbMainStatusBar.Size = new System.Drawing.Size(1362, 35);
+            this.usbMainStatusBar.Size = new System.Drawing.Size(1052, 25);
             this.usbMainStatusBar.TabIndex = 0;
             // 
             // tmrClock
@@ -263,10 +263,10 @@
             this.toolStripItemsMenuToolStripMenuItem,
             this.documentMenuToolStripMenuItem,
             this.ToolsMenuToolStripMenuItem});
-            this.menustripMain.Location = new System.Drawing.Point(101, 383);
+            this.menustripMain.Location = new System.Drawing.Point(61, 271);
             this.menustripMain.Name = "menustripMain";
-            this.menustripMain.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menustripMain.Size = new System.Drawing.Size(331, 24);
+            this.menustripMain.Padding = new System.Windows.Forms.Padding(5, 1, 0, 1);
+            this.menustripMain.Size = new System.Drawing.Size(328, 24);
             this.menustripMain.TabIndex = 51;
             this.menustripMain.Text = "menustrip1";
             this.menustripMain.Visible = false;
@@ -278,7 +278,7 @@
             this.ToolStripMenuItemLogOff,
             this.ToolStripMenuItemExit});
             this.ExitMenu.Name = "ExitMenu";
-            this.ExitMenu.Size = new System.Drawing.Size(44, 20);
+            this.ExitMenu.Size = new System.Drawing.Size(44, 22);
             this.ExitMenu.Text = "خروج";
             // 
             // ToolStripMenuItemExchangeUsers
@@ -320,7 +320,7 @@
             this.tolMenuItemExport,
             this.tolMenuItemDetail});
             this.toolStripItemsMenuToolStripMenuItem.Name = "toolStripItemsMenuToolStripMenuItem";
-            this.toolStripItemsMenuToolStripMenuItem.Size = new System.Drawing.Size(125, 20);
+            this.toolStripItemsMenuToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.toolStripItemsMenuToolStripMenuItem.Text = "ToolStripItemsMenu";
             // 
             // tolMenuItemCansel
@@ -426,7 +426,7 @@
             this.tolMenuItemCheque,
             this.tolMenuItemPos});
             this.documentMenuToolStripMenuItem.Name = "documentMenuToolStripMenuItem";
-            this.documentMenuToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
+            this.documentMenuToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
             this.documentMenuToolStripMenuItem.Text = "DocumentMenu";
             // 
             // tolMenuItemCash
@@ -459,7 +459,7 @@
             this.toolStripButtonPrintCalculator,
             this.mnuSettings});
             this.ToolsMenuToolStripMenuItem.Name = "ToolsMenuToolStripMenuItem";
-            this.ToolsMenuToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.ToolsMenuToolStripMenuItem.Size = new System.Drawing.Size(46, 22);
             this.ToolsMenuToolStripMenuItem.Text = "Tools";
             // 
             // toolStripButtonPrintCalculator
@@ -513,9 +513,10 @@
             this.toolStripProgressBar1});
             this.toolStripTop.Location = new System.Drawing.Point(0, 0);
             this.toolStripTop.Name = "toolStripTop";
-            this.toolStripTop.Size = new System.Drawing.Size(1362, 29);
+            this.toolStripTop.Size = new System.Drawing.Size(1052, 29);
             this.toolStripTop.TabIndex = 58;
             this.toolStripTop.Text = "toolStrip1";
+            this.toolStripTop.Visible = false;
             // 
             // toolStripButtonClose
             // 
@@ -542,7 +543,7 @@
             this.toolStripProgressBar1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.toolStripProgressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(500, 26);
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(300, 26);
             this.toolStripProgressBar1.Visible = false;
             // 
             // udmMainDockManager
@@ -573,7 +574,7 @@
             dockableControlPane1.Text = "منو کاربری";
             dockAreaPane1.Panes.AddRange(new Infragistics.Win.UltraWinDock.DockablePaneBase[] {
             dockableControlPane1});
-            dockAreaPane1.Size = new System.Drawing.Size(270, 650);
+            dockAreaPane1.Size = new System.Drawing.Size(241, 664);
             dockAreaPane2.ChildPaneStyle = Infragistics.Win.UltraWinDock.ChildPaneStyle.TabGroup;
             dockAreaPane2.FloatingLocation = new System.Drawing.Point(766, 241);
             dockAreaPane2.Size = new System.Drawing.Size(270, 643);
@@ -596,52 +597,52 @@
             // _frmMainUnpinnedTabAreaLeft
             // 
             this._frmMainUnpinnedTabAreaLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this._frmMainUnpinnedTabAreaLeft.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this._frmMainUnpinnedTabAreaLeft.Location = new System.Drawing.Point(0, 54);
-            this._frmMainUnpinnedTabAreaLeft.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this._frmMainUnpinnedTabAreaLeft.Font = new System.Drawing.Font("B Nazanin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this._frmMainUnpinnedTabAreaLeft.Location = new System.Drawing.Point(0, 25);
+            this._frmMainUnpinnedTabAreaLeft.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this._frmMainUnpinnedTabAreaLeft.Name = "_frmMainUnpinnedTabAreaLeft";
             this._frmMainUnpinnedTabAreaLeft.Owner = this.udmMainDockManager;
-            this._frmMainUnpinnedTabAreaLeft.Size = new System.Drawing.Size(0, 653);
+            this._frmMainUnpinnedTabAreaLeft.Size = new System.Drawing.Size(0, 664);
             this._frmMainUnpinnedTabAreaLeft.TabIndex = 60;
             // 
             // _frmMainUnpinnedTabAreaRight
             // 
             this._frmMainUnpinnedTabAreaRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this._frmMainUnpinnedTabAreaRight.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this._frmMainUnpinnedTabAreaRight.Location = new System.Drawing.Point(1362, 54);
-            this._frmMainUnpinnedTabAreaRight.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this._frmMainUnpinnedTabAreaRight.Font = new System.Drawing.Font("B Nazanin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this._frmMainUnpinnedTabAreaRight.Location = new System.Drawing.Point(1052, 25);
+            this._frmMainUnpinnedTabAreaRight.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this._frmMainUnpinnedTabAreaRight.Name = "_frmMainUnpinnedTabAreaRight";
             this._frmMainUnpinnedTabAreaRight.Owner = this.udmMainDockManager;
-            this._frmMainUnpinnedTabAreaRight.Size = new System.Drawing.Size(0, 653);
+            this._frmMainUnpinnedTabAreaRight.Size = new System.Drawing.Size(0, 664);
             this._frmMainUnpinnedTabAreaRight.TabIndex = 61;
             // 
             // _frmMainUnpinnedTabAreaTop
             // 
             this._frmMainUnpinnedTabAreaTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this._frmMainUnpinnedTabAreaTop.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this._frmMainUnpinnedTabAreaTop.Location = new System.Drawing.Point(0, 54);
-            this._frmMainUnpinnedTabAreaTop.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this._frmMainUnpinnedTabAreaTop.Font = new System.Drawing.Font("B Nazanin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this._frmMainUnpinnedTabAreaTop.Location = new System.Drawing.Point(0, 25);
+            this._frmMainUnpinnedTabAreaTop.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this._frmMainUnpinnedTabAreaTop.Name = "_frmMainUnpinnedTabAreaTop";
             this._frmMainUnpinnedTabAreaTop.Owner = this.udmMainDockManager;
-            this._frmMainUnpinnedTabAreaTop.Size = new System.Drawing.Size(1362, 0);
+            this._frmMainUnpinnedTabAreaTop.Size = new System.Drawing.Size(1052, 0);
             this._frmMainUnpinnedTabAreaTop.TabIndex = 62;
             // 
             // _frmMainUnpinnedTabAreaBottom
             // 
             this._frmMainUnpinnedTabAreaBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this._frmMainUnpinnedTabAreaBottom.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this._frmMainUnpinnedTabAreaBottom.Location = new System.Drawing.Point(0, 707);
-            this._frmMainUnpinnedTabAreaBottom.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this._frmMainUnpinnedTabAreaBottom.Font = new System.Drawing.Font("B Nazanin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this._frmMainUnpinnedTabAreaBottom.Location = new System.Drawing.Point(0, 689);
+            this._frmMainUnpinnedTabAreaBottom.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this._frmMainUnpinnedTabAreaBottom.Name = "_frmMainUnpinnedTabAreaBottom";
             this._frmMainUnpinnedTabAreaBottom.Owner = this.udmMainDockManager;
-            this._frmMainUnpinnedTabAreaBottom.Size = new System.Drawing.Size(1362, 0);
+            this._frmMainUnpinnedTabAreaBottom.Size = new System.Drawing.Size(1052, 0);
             this._frmMainUnpinnedTabAreaBottom.TabIndex = 63;
             // 
             // _frmMainAutoHideControl
             // 
-            this._frmMainAutoHideControl.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this._frmMainAutoHideControl.Font = new System.Drawing.Font("B Nazanin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this._frmMainAutoHideControl.Location = new System.Drawing.Point(0, 0);
-            this._frmMainAutoHideControl.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this._frmMainAutoHideControl.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this._frmMainAutoHideControl.Name = "_frmMainAutoHideControl";
             this._frmMainAutoHideControl.Owner = this.udmMainDockManager;
             this._frmMainAutoHideControl.Size = new System.Drawing.Size(0, 0);
@@ -651,22 +652,22 @@
             // 
             this.windowDockingArea2.Controls.Add(this.dockableWindow1);
             this.windowDockingArea2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.windowDockingArea2.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.windowDockingArea2.Location = new System.Drawing.Point(1087, 54);
-            this.windowDockingArea2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.windowDockingArea2.Font = new System.Drawing.Font("B Nazanin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.windowDockingArea2.Location = new System.Drawing.Point(806, 25);
+            this.windowDockingArea2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.windowDockingArea2.Name = "windowDockingArea2";
             this.windowDockingArea2.Owner = this.udmMainDockManager;
-            this.windowDockingArea2.Size = new System.Drawing.Size(275, 653);
+            this.windowDockingArea2.Size = new System.Drawing.Size(246, 664);
             this.windowDockingArea2.TabIndex = 0;
             // 
             // dockableWindow1
             // 
             this.dockableWindow1.Controls.Add(this.uebMainExplorerBar);
             this.dockableWindow1.Location = new System.Drawing.Point(5, 0);
-            this.dockableWindow1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.dockableWindow1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.dockableWindow1.Name = "dockableWindow1";
             this.dockableWindow1.Owner = this.udmMainDockManager;
-            this.dockableWindow1.Size = new System.Drawing.Size(270, 653);
+            this.dockableWindow1.Size = new System.Drawing.Size(241, 664);
             this.dockableWindow1.TabIndex = 69;
             // 
             // toolStripMain
@@ -674,8 +675,8 @@
             this.toolStripMain.AllowDrop = true;
             this.toolStripMain.AllowMerge = false;
             this.toolStripMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(14)))));
-            this.toolStripMain.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripMain.ImageScalingSize = new System.Drawing.Size(25, 25);
+            this.toolStripMain.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonExit,
             this.toolStripSeparator1,
@@ -714,10 +715,10 @@
             this.toolStripButtonExport,
             this.toolStripButtonProgressBar,
             this.toolStripSeparator16});
-            this.toolStripMain.Location = new System.Drawing.Point(0, 29);
-            this.toolStripMain.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.toolStripMain.Location = new System.Drawing.Point(0, 0);
+            this.toolStripMain.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.toolStripMain.Name = "toolStripMain";
-            this.toolStripMain.Size = new System.Drawing.Size(1362, 25);
+            this.toolStripMain.Size = new System.Drawing.Size(1052, 25);
             this.toolStripMain.TabIndex = 67;
             // 
             // toolStripButtonExit
@@ -729,14 +730,14 @@
             this.toolStripButtonExit.ForeColor = System.Drawing.Color.Navy;
             this.toolStripButtonExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonExit.Name = "toolStripButtonExit";
-            this.toolStripButtonExit.Size = new System.Drawing.Size(88, 22);
+            this.toolStripButtonExit.Size = new System.Drawing.Size(78, 22);
             this.toolStripButtonExit.Text = "Exti Alt+F4";
             // 
             // toolStripButtonExchangeUser
             // 
             this.toolStripButtonExchangeUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(14)))));
             this.toolStripButtonExchangeUser.Name = "toolStripButtonExchangeUser";
-            this.toolStripButtonExchangeUser.Size = new System.Drawing.Size(189, 22);
+            this.toolStripButtonExchangeUser.Size = new System.Drawing.Size(163, 22);
             this.toolStripButtonExchangeUser.Text = "Switch User Ctrl+D";
             this.toolStripButtonExchangeUser.Visible = false;
             // 
@@ -744,14 +745,14 @@
             // 
             this.toolStripButtonLogOff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(14)))));
             this.toolStripButtonLogOff.Name = "toolStripButtonLogOff";
-            this.toolStripButtonLogOff.Size = new System.Drawing.Size(189, 22);
+            this.toolStripButtonLogOff.Size = new System.Drawing.Size(163, 22);
             this.toolStripButtonLogOff.Text = "Exit User Ctrl+L";
             this.toolStripButtonLogOff.Click += new System.EventHandler(this.ToolStripMenuItemLogOff_Click);
             // 
             // toolStripButtonLogOut
             // 
             this.toolStripButtonLogOut.Name = "toolStripButtonLogOut";
-            this.toolStripButtonLogOut.Size = new System.Drawing.Size(189, 22);
+            this.toolStripButtonLogOut.Size = new System.Drawing.Size(163, 22);
             this.toolStripButtonLogOut.Text = "خروج";
             this.toolStripButtonLogOut.Click += new System.EventHandler(this.toolStripButtonLogOut_Click);
             // 
@@ -766,7 +767,7 @@
             this.toolStripButtonCancel.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonCancel.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonCancel.Name = "toolStripButtonCancel";
-            this.toolStripButtonCancel.Size = new System.Drawing.Size(69, 22);
+            this.toolStripButtonCancel.Size = new System.Drawing.Size(57, 22);
             this.toolStripButtonCancel.Text = "Close F12";
             this.toolStripButtonCancel.ToolTipText = "انصراف F12";
             this.toolStripButtonCancel.Click += new System.EventHandler(this.toolStripButtonCancel_Click);
@@ -783,7 +784,7 @@
             this.toolStripButtonSave.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonSave.Name = "toolStripButtonSave";
             this.toolStripButtonSave.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.toolStripButtonSave.Size = new System.Drawing.Size(58, 22);
+            this.toolStripButtonSave.Size = new System.Drawing.Size(47, 22);
             this.toolStripButtonSave.Text = "Save F2";
             this.toolStripButtonSave.ToolTipText = "ثبت F2";
             this.toolStripButtonSave.Click += new System.EventHandler(this.toolStripButtonSave_Click);
@@ -799,7 +800,7 @@
             this.toolStripButtonDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonDelete.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonDelete.Name = "toolStripButtonDelete";
-            this.toolStripButtonDelete.Size = new System.Drawing.Size(66, 22);
+            this.toolStripButtonDelete.Size = new System.Drawing.Size(56, 22);
             this.toolStripButtonDelete.Text = "Delete F3";
             this.toolStripButtonDelete.ToolTipText = "حذف F3";
             this.toolStripButtonDelete.Click += new System.EventHandler(this.toolStripButtonDelete_Click);
@@ -815,7 +816,7 @@
             this.toolStripButtonChange.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonChange.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonChange.Name = "toolStripButtonChange";
-            this.toolStripButtonChange.Size = new System.Drawing.Size(70, 22);
+            this.toolStripButtonChange.Size = new System.Drawing.Size(59, 22);
             this.toolStripButtonChange.Text = "Update F4";
             this.toolStripButtonChange.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.toolStripButtonChange.ToolTipText = "تغییر F4";
@@ -834,7 +835,7 @@
             this.toolStripButtonNew.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonNew.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonNew.Name = "toolStripButtonNew";
-            this.toolStripButtonNew.Size = new System.Drawing.Size(58, 22);
+            this.toolStripButtonNew.Size = new System.Drawing.Size(46, 22);
             this.toolStripButtonNew.Text = "New F6";
             this.toolStripButtonNew.ToolTipText = "جدید  F6";
             this.toolStripButtonNew.Click += new System.EventHandler(this.toolStripButtonNew_Click);
@@ -850,7 +851,7 @@
             this.toolStripButtonClear.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonClear.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonClear.Name = "toolStripButtonClear";
-            this.toolStripButtonClear.Size = new System.Drawing.Size(60, 22);
+            this.toolStripButtonClear.Size = new System.Drawing.Size(50, 22);
             this.toolStripButtonClear.Text = "Clear F7";
             this.toolStripButtonClear.ToolTipText = "پاک F7";
             this.toolStripButtonClear.Click += new System.EventHandler(this.toolStripButtonClear_Click);
@@ -866,7 +867,7 @@
             this.toolStripButtonRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonRefresh.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonRefresh.Name = "toolStripButtonRefresh";
-            this.toolStripButtonRefresh.Size = new System.Drawing.Size(75, 22);
+            this.toolStripButtonRefresh.Size = new System.Drawing.Size(61, 22);
             this.toolStripButtonRefresh.Text = "Refresh F5";
             this.toolStripButtonRefresh.ToolTipText = "احیاء F5";
             this.toolStripButtonRefresh.Click += new System.EventHandler(this.toolStripButtonRefresh_Click);
@@ -883,7 +884,7 @@
             this.toolStripButtonFilter.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonFilter.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonFilter.Name = "toolStripButtonFilter";
-            this.toolStripButtonFilter.Size = new System.Drawing.Size(70, 22);
+            this.toolStripButtonFilter.Size = new System.Drawing.Size(56, 22);
             this.toolStripButtonFilter.Text = "Search F8";
             this.toolStripButtonFilter.ToolTipText = "جستجو F8";
             this.toolStripButtonFilter.Visible = false;
@@ -901,7 +902,7 @@
             this.toolStripButtonPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonPrint.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonPrint.Name = "toolStripButtonPrint";
-            this.toolStripButtonPrint.Size = new System.Drawing.Size(58, 22);
+            this.toolStripButtonPrint.Size = new System.Drawing.Size(50, 22);
             this.toolStripButtonPrint.Text = "Print F9";
             this.toolStripButtonPrint.ToolTipText = "چاپ F9";
             this.toolStripButtonPrint.Visible = false;
@@ -919,7 +920,7 @@
             this.toolStripButtonConfirm.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonConfirm.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonConfirm.Name = "toolStripButtonConfirm";
-            this.toolStripButtonConfirm.Size = new System.Drawing.Size(57, 22);
+            this.toolStripButtonConfirm.Size = new System.Drawing.Size(48, 22);
             this.toolStripButtonConfirm.Text = "OK F10";
             this.toolStripButtonConfirm.ToolTipText = "تایید F10";
             this.toolStripButtonConfirm.Click += new System.EventHandler(this.toolStripButtonConfirm_Click);
@@ -934,7 +935,7 @@
             this.toolStripButtonDetail.ForeColor = System.Drawing.Color.Navy;
             this.toolStripButtonDetail.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonDetail.Name = "toolStripButtonDetail";
-            this.toolStripButtonDetail.Size = new System.Drawing.Size(76, 22);
+            this.toolStripButtonDetail.Size = new System.Drawing.Size(62, 22);
             this.toolStripButtonDetail.Text = "View Alt+V";
             this.toolStripButtonDetail.Click += new System.EventHandler(this.toolStripButtonDetail_Click);
             // 
@@ -948,7 +949,7 @@
             this.toolStripButtonLast.ForeColor = System.Drawing.Color.Navy;
             this.toolStripButtonLast.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonLast.Name = "toolStripButtonLast";
-            this.toolStripButtonLast.Size = new System.Drawing.Size(39, 22);
+            this.toolStripButtonLast.Size = new System.Drawing.Size(33, 22);
             this.toolStripButtonLast.Text = "آخرین";
             this.toolStripButtonLast.Visible = false;
             this.toolStripButtonLast.Click += new System.EventHandler(this.toolStripButtonLast_Click);
@@ -964,19 +965,18 @@
             this.toolStripButtonNext.ForeColor = System.Drawing.Color.Navy;
             this.toolStripButtonNext.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonNext.Name = "toolStripButtonNext";
-            this.toolStripButtonNext.Size = new System.Drawing.Size(35, 22);
+            this.toolStripButtonNext.Size = new System.Drawing.Size(29, 22);
             this.toolStripButtonNext.Text = "بعدی";
             this.toolStripButtonNext.Visible = false;
             this.toolStripButtonNext.Click += new System.EventHandler(this.toolStripButtonNext_Click);
             // 
             // toolStripTextBoxNumberOfRecords
             // 
-            this.toolStripTextBoxNumberOfRecords.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBoxNumberOfRecords.ForeColor = System.Drawing.Color.Navy;
             this.toolStripTextBoxNumberOfRecords.MaxLength = 9;
             this.toolStripTextBoxNumberOfRecords.Name = "toolStripTextBoxNumberOfRecords";
             this.toolStripTextBoxNumberOfRecords.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripTextBoxNumberOfRecords.Size = new System.Drawing.Size(124, 25);
+            this.toolStripTextBoxNumberOfRecords.Size = new System.Drawing.Size(76, 25);
             this.toolStripTextBoxNumberOfRecords.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolStripTextBoxNumberOfRecords.Visible = false;
             // 
@@ -985,7 +985,7 @@
             this.toolStripButtonprevious.ForeColor = System.Drawing.Color.Navy;
             this.toolStripButtonprevious.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonprevious.Name = "toolStripButtonprevious";
-            this.toolStripButtonprevious.Size = new System.Drawing.Size(30, 22);
+            this.toolStripButtonprevious.Size = new System.Drawing.Size(25, 22);
             this.toolStripButtonprevious.Text = "قبلی";
             this.toolStripButtonprevious.Visible = false;
             this.toolStripButtonprevious.Click += new System.EventHandler(this.toolStripButtonprevious_Click);
@@ -1001,7 +1001,7 @@
             this.toolStripButtonFirstRecord.ForeColor = System.Drawing.Color.Navy;
             this.toolStripButtonFirstRecord.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonFirstRecord.Name = "toolStripButtonFirstRecord";
-            this.toolStripButtonFirstRecord.Size = new System.Drawing.Size(34, 22);
+            this.toolStripButtonFirstRecord.Size = new System.Drawing.Size(29, 22);
             this.toolStripButtonFirstRecord.Text = "اولین";
             this.toolStripButtonFirstRecord.Visible = false;
             this.toolStripButtonFirstRecord.Click += new System.EventHandler(this.toolStripButtonFirstRecord_Click);
@@ -1017,7 +1017,7 @@
             this.toolStripButtonCalculator.ForeColor = System.Drawing.Color.Navy;
             this.toolStripButtonCalculator.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonCalculator.Name = "toolStripButtonCalculator";
-            this.toolStripButtonCalculator.Size = new System.Drawing.Size(37, 22);
+            this.toolStripButtonCalculator.Size = new System.Drawing.Size(31, 22);
             this.toolStripButtonCalculator.Text = "Calc";
             this.toolStripButtonCalculator.Click += new System.EventHandler(this.toolStripButtonCalculator_Click);
             // 
@@ -1031,7 +1031,7 @@
             this.toolStripButtonExport.ForeColor = System.Drawing.Color.Navy;
             this.toolStripButtonExport.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonExport.Name = "toolStripButtonExport";
-            this.toolStripButtonExport.Size = new System.Drawing.Size(50, 22);
+            this.toolStripButtonExport.Size = new System.Drawing.Size(44, 22);
             this.toolStripButtonExport.Text = "Export";
             this.toolStripButtonExport.ToolTipText = "خروجی فایل";
             this.toolStripButtonExport.Click += new System.EventHandler(this.tolMenuItemExport_Click);
@@ -1052,7 +1052,7 @@
             // windowDockingArea3
             // 
             this.windowDockingArea3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.windowDockingArea3.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.windowDockingArea3.Font = new System.Drawing.Font("B Nazanin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.windowDockingArea3.Location = new System.Drawing.Point(873, 54);
             this.windowDockingArea3.Name = "windowDockingArea3";
             this.windowDockingArea3.Owner = this.udmMainDockManager;
@@ -1066,29 +1066,28 @@
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1362, 742);
+            this.ClientSize = new System.Drawing.Size(1052, 714);
             this.Controls.Add(this._frmMainAutoHideControl);
+            this.Controls.Add(this.toolStripTop);
             this.Controls.Add(this.windowDockingArea2);
             this.Controls.Add(this._frmMainUnpinnedTabAreaTop);
             this.Controls.Add(this._frmMainUnpinnedTabAreaBottom);
             this.Controls.Add(this._frmMainUnpinnedTabAreaLeft);
             this.Controls.Add(this._frmMainUnpinnedTabAreaRight);
             this.Controls.Add(this.toolStripMain);
-            this.Controls.Add(this.toolStripTop);
             this.Controls.Add(this.usbMainStatusBar);
             this.Controls.Add(this.menustripMain);
-            this.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Font = new System.Drawing.Font("B Nazanin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menustripMain;
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.Name = "frmMain";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Text = "AMS";
+            this.Text = "Agricultural Management System";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Activated += new System.EventHandler(this.frmMain_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);

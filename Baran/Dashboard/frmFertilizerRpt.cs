@@ -18,16 +18,21 @@ namespace Baran.Dashboard
             InitializeComponent();
         }
 
-        public frmFertilizerRpt(string fromDate, string toDate)
+        public frmFertilizerRpt(string fromDate, string toDate, int? fieldID, int? productionID)
         {
             InitializeComponent();
             grpHeader.Visible = false;
 
             mskFromDate.Text = fromDate;
             mskToDate.Text = toDate;
+            FieldID = fieldID;
+            ProductionID = productionID;
 
             FillControls();
         }
+
+        public int? FieldID { get; set; }
+        public int? ProductionID { get; set; }
 
         private int? FertilizerID = null;
         private Nullable<DateTime>
@@ -83,7 +88,7 @@ namespace Baran.Dashboard
                     ToDate = DateTimeUtility.ToGregorian(mskToDate.Value.ToString());
 
       
-                adp.FillFertilizerTable(dstDashboard1.spr_dsb_Fertilizer_rpt, CurrentUser.Instance.UserID, FromDate, ToDate, FertilizerID);
+                adp.FillFertilizerTable(dstDashboard1.spr_dsb_Fertilizer_rpt, CurrentUser.Instance.UserID, FromDate, ToDate, FertilizerID, FieldID, ProductionID);
                 grdItem.FreeSpaceGenerator();
 
                 this.DrowChart();

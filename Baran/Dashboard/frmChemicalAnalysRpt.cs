@@ -18,16 +18,21 @@ namespace Baran.Dashboard
             InitializeComponent();
         }
 
-        public frmChemicalAnalysRpt(string fromDate, string toDate)
+        public frmChemicalAnalysRpt(string fromDate, string toDate, int? fieldID, int? productionID)
         {
             InitializeComponent();
             grpHeader.Visible = false;  
 
             mskFromDate.Text = fromDate;
             mskToDate.Text = toDate;
+            FieldID = fieldID;
+            ProductionID = productionID;
 
             FillControls();
         }
+
+        public int? FieldID { get; set; }
+        public int? ProductionID { get; set; }
 
         private Nullable<DateTime>
             FromDate
@@ -74,7 +79,7 @@ namespace Baran.Dashboard
                 if (mskToDate.Text != null)
                     ToDate = DateTimeUtility.ToGregorian(mskToDate.Value.ToString());
 
-                adp.FillChemicalAnalysTable(dstDashboard1.spr_dsb_ChemicalAnalys_rpt, CurrentUser.Instance.UserID, FromDate, ToDate);
+                adp.FillChemicalAnalysTable(dstDashboard1.spr_dsb_ChemicalAnalys_rpt, CurrentUser.Instance.UserID, FromDate, ToDate, FieldID,  ProductionID);
                 grdItem.FreeSpaceGenerator();
 
                 this.DrowChart();

@@ -458,4 +458,26 @@ namespace Baran.Classes.Common
         public static readonly string Detail = "Detail";
     }
 
+    public static class BaseInfoCoModels
+    {
+        public static readonly string Company = "Company";
+        public static readonly string Collection = "Collection";
+        public static readonly string Subcollection = "Subcollection";
+        public static readonly string Part = "Part";
+        public static readonly string Land = "Land";
+        public static readonly string Field = "Field";
+        public static readonly string Building = "Building";
+        public static readonly string Warehouser = "Warehouser";
+        public static readonly string Water = "Water";
+        public static readonly string WaterStorage = "WaterStorage";
+        public static readonly string WaterTransmissionLine = "WaterTransmissionLine";
+        public static readonly string Machinery = "Machinery";
+        public static readonly string Tree = "Tree";
+    }
+
+    public static class SpecialChar
+    {
+        public static readonly string SplitChar = ",";
+    }
+
 }

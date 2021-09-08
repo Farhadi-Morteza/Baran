@@ -700,21 +700,25 @@
             ultraGridColumn3.Header.VisiblePosition = 2;
             ultraGridColumn3.Hidden = true;
             ultraGridColumn3.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn3.Width = 41;
             ultraGridColumn4.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn4.Header.Caption = "...";
             ultraGridColumn4.Header.VisiblePosition = 3;
             ultraGridColumn4.Hidden = true;
             ultraGridColumn4.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn4.Width = 41;
             ultraGridColumn5.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn5.Header.Caption = "...";
             ultraGridColumn5.Header.VisiblePosition = 4;
             ultraGridColumn5.Hidden = true;
             ultraGridColumn5.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn5.Width = 41;
             ultraGridColumn6.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn6.Header.Caption = "...";
             ultraGridColumn6.Header.VisiblePosition = 5;
             ultraGridColumn6.Hidden = true;
             ultraGridColumn6.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ultraGridColumn6.Width = 41;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2,

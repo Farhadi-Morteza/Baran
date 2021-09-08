@@ -121,6 +121,9 @@ namespace Baran.Dashboard
 
         private void DrowMap()
         {
+            markers.Markers.Clear();
+            routes.Routes.Clear();
+
             using (var dbContext = new AMSEntities())
             {
                 var fields = dbContext.spr_dsb_Field_Location_rpt(CurrentUser.Instance.UserID, FromDate, ToDate, FieldID, ProductionID);
@@ -355,43 +358,43 @@ namespace Baran.Dashboard
 
         private void lblMachinery_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Baran.Dashboard.frmMachineryRpt ofrm = new frmMachineryRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString());            
+            Baran.Dashboard.frmMachineryRpt ofrm = new frmMachineryRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString(), FieldID, ProductionID);            
             ofrm.Show();
         }
 
         private void lblWorker_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmWorkerRpt ofrm = new frmWorkerRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString());
+            frmWorkerRpt ofrm = new frmWorkerRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString(), FieldID, ProductionID);
             ofrm.Show();
         }
 
         private void lblWater_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmWaterRpt ofrm = new frmWaterRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString());
+            frmWaterRpt ofrm = new frmWaterRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString(), FieldID, ProductionID);
             ofrm.Show();
         }
 
         private void lblPesticide_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmPesticideRpt ofrm = new frmPesticideRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString());
+            frmPesticideRpt ofrm = new frmPesticideRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString(), FieldID, ProductionID);
             ofrm.Show();
         }
 
         private void lblWaterStorage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmWaterStorageRpt ofrm = new frmWaterStorageRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString());
+            frmWaterStorageRpt ofrm = new frmWaterStorageRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString(), FieldID, ProductionID);
             ofrm.Show();
         }
 
         private void lblChemicalAnalys_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmChemicalAnalysRpt ofrm = new frmChemicalAnalysRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString());
+            frmChemicalAnalysRpt ofrm = new frmChemicalAnalysRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString(), FieldID, ProductionID);
             ofrm.Show();
         }
 
         private void lblFertilizer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmFertilizerRpt ofrm = new frmFertilizerRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString());
+            frmFertilizerRpt ofrm = new frmFertilizerRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString(), FieldID, ProductionID);
             ofrm.Show();
 
         }

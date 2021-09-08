@@ -148,7 +148,6 @@ namespace Baran.Dashboard
         {
             if (FieldID == Convert.ToInt32(item.Tag))
                 return;
-
             FieldID = Convert.ToInt32( item.Tag);
             cmbField.Value = FieldID;
             this.FillGrid();

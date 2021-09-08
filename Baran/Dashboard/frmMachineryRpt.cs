@@ -18,16 +18,21 @@ namespace Baran.Dashboard
             InitializeComponent();
         }
 
-        public frmMachineryRpt(string fromDate, string toDate)
+        public frmMachineryRpt(string fromDate, string toDate, int? fieldID , int? productionID)
         {
             InitializeComponent();
             grpHeader.Visible = false;
 
             mskFromDate.Text = fromDate;
             mskToDate.Text = toDate;
+            FieldID = fieldID;
+            ProductionID = productionID;
 
             FillControls();
         }
+
+        public int? FieldID { get; set; }
+        public int? ProductionID { get; set; }
 
         private int? MachineryID = null;
         public Nullable<DateTime>
@@ -80,7 +85,7 @@ namespace Baran.Dashboard
                     ToDate = DateTimeUtility.ToGregorian(mskToDate.Value.ToString());
 
              
-                adp.FillMachineryTable(dstDashboard1.spr_dsb_Machinery_rpt, CurrentUser.Instance.UserID, FromDate, ToDate, MachineryID);
+                adp.FillMachineryTable(dstDashboard1.spr_dsb_Machinery_rpt, CurrentUser.Instance.UserID, FromDate, ToDate, MachineryID, FieldID, ProductionID);
                 grdItem.FreeSpaceGenerator();
 
                 this.DrowChart();

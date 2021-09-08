@@ -18,16 +18,21 @@ namespace Baran.Dashboard
             InitializeComponent();
         }
 
-        public frmWaterRpt(string fromDate, string toDate)
+        public frmWaterRpt(string fromDate, string toDate, int? fieldID, int? productionID)
         {
             InitializeComponent();
             grpHeader.Visible = false;
 
             mskFromDate.Text = fromDate;
             mskToDate.Text = toDate;
+            FieldID = fieldID;
+            ProductionID = productionID;
 
             FillControls();
         }
+
+        public int? FieldID { get; set; }
+        public int? ProductionID { get; set; }
 
         private int? WaterID = null;
         private Nullable<DateTime>
@@ -78,7 +83,7 @@ namespace Baran.Dashboard
                 if (mskToDate.Text != null)
                     ToDate = DateTimeUtility.ToGregorian(mskToDate.Value.ToString());
 
-                adp.FillWaterTable(dstDashboard1.spr_dsb_Water_rpt, CurrentUser.Instance.UserID, FromDate, ToDate, WaterID);
+                adp.FillWaterTable(dstDashboard1.spr_dsb_Water_rpt, CurrentUser.Instance.UserID, FromDate, ToDate, WaterID, FieldID, ProductionID);
                 grdItem.FreeSpaceGenerator();
 
                 this.DrowChart();

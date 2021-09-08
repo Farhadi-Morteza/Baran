@@ -1724,6 +1724,12 @@ warning 6002: The table/view 'AMS.dbo.viw_Part_Location' does not have a primary
         <Function Name="spr_dsb_FieldTaskList_rpt_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="FieldID" Type="int" Mode="In" />
         </Function>
+        <Function Name="spr_dsb_Product_rpt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserID" Type="int" Mode="In" />
+          <Parameter Name="Date" Type="date" Mode="In" />
+          <Parameter Name="FieldID" Type="int" Mode="In" />
+          <Parameter Name="CropID" Type="int" Mode="In" />
+        </Function>
         <Function Name="spr_src_Buildings_Map_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Action" Type="int" Mode="In" />
           <Parameter Name="WhereClause" Type="nvarchar(max)" Mode="In" />
@@ -3856,6 +3862,12 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
             <Parameter Name="FieldID" Mode="In" Type="Int32" />
             <Parameter Name="ProductionID" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="spr_dsb_Product_rpt" ReturnType="Collection(AMSModel.spr_dsb_Product_rpt_Result)">
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
+            <Parameter Name="Date" Mode="In" Type="DateTime" />
+            <Parameter Name="FieldID" Mode="In" Type="Int32" />
+            <Parameter Name="CropID" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="tbl_src_Land">
           <Key>
@@ -4217,6 +4229,19 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
           <Property Type="String" Name="PartName" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="FieldName" Nullable="true" MaxLength="50" />
           <Property Type="Geometry" Name="LocationPolygon" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_dsb_Product_rpt_Result">
+          <Property Type="String" Name="Crop" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Cultivar" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="LinkedArea" Nullable="true" Precision="8" Scale="2" />
+          <Property Type="String" Name="Field" Nullable="true" MaxLength="50" />
+          <Property Type="Binary" Name="Logo" Nullable="true" />
+          <Property Type="Binary" Name="Icon" Nullable="true" />
+          <Property Type="String" Name="Part" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Collection" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Subcollection" Nullable="false" MaxLength="50" />
+          <Property Type="Geometry" Name="FieldLocation" Nullable="false" />
+          <Property Type="Geometry" Name="LandLocation" Nullable="false" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -5975,6 +6000,21 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
                 <ScalarProperty Name="SubCollectionName" ColumnName="SubCollectionName" />
                 <ScalarProperty Name="PartName" ColumnName="PartName" />
                 <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_dsb_Product_rpt" FunctionName="AMSModel.Store.spr_dsb_Product_rpt">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AMSModel.spr_dsb_Product_rpt_Result">
+                <ScalarProperty Name="Crop" ColumnName="Crop" />
+                <ScalarProperty Name="Cultivar" ColumnName="Cultivar" />
+                <ScalarProperty Name="LinkedArea" ColumnName="LinkedArea" />
+                <ScalarProperty Name="Field" ColumnName="Field" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="Part" ColumnName="Part" />
+                <ScalarProperty Name="Collection" ColumnName="Collection" />
+                <ScalarProperty Name="Subcollection" ColumnName="Subcollection" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

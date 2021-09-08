@@ -102,8 +102,8 @@
             this.grpButons.Controls.Add(this.grpChange);
             this.grpButons.Controls.Add(this.grpSave);
             this.grpButons.Controls.Add(this.grpCancel);
-            this.grpButons.Location = new System.Drawing.Point(0, 429);
-            this.grpButons.Size = new System.Drawing.Size(836, 75);
+            this.grpButons.Location = new System.Drawing.Point(0, 439);
+            this.grpButons.Size = new System.Drawing.Size(836, 65);
             this.grpButons.Visible = true;
             // 
             // lblLine2
@@ -112,7 +112,7 @@
             // 
             // grpHeader
             // 
-            this.grpHeader.Size = new System.Drawing.Size(836, 75);
+            this.grpHeader.Size = new System.Drawing.Size(836, 65);
             // 
             // pictureBox1
             // 
@@ -138,13 +138,13 @@
             // 
             // lblLine3
             // 
-            this.lblLine3.Location = new System.Drawing.Point(1, 320);
+            this.lblLine3.Location = new System.Drawing.Point(1, 340);
             this.lblLine3.Size = new System.Drawing.Size(834, 3);
             // 
             // grpMain
             // 
             this.grpMain.Controls.Add(this.menustripMain);
-            this.grpMain.Size = new System.Drawing.Size(836, 324);
+            this.grpMain.Size = new System.Drawing.Size(836, 344);
             this.grpMain.Controls.SetChildIndex(this.menustripMain, 0);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
             // 
@@ -155,7 +155,7 @@
             this.grpCancel.Dock = System.Windows.Forms.DockStyle.Right;
             this.grpCancel.Location = new System.Drawing.Point(708, 0);
             this.grpCancel.Name = "grpCancel";
-            this.grpCancel.Size = new System.Drawing.Size(127, 74);
+            this.grpCancel.Size = new System.Drawing.Size(127, 64);
             this.grpCancel.TabIndex = 0;
             // 
             // btnCancle
@@ -165,7 +165,7 @@
             this.btnCancle.ForeColor = System.Drawing.Color.White;
             this.btnCancle.Location = new System.Drawing.Point(0, 11);
             this.btnCancle.Name = "btnCancle";
-            this.btnCancle.Size = new System.Drawing.Size(120, 44);
+            this.btnCancle.Size = new System.Drawing.Size(120, 39);
             this.btnCancle.TabIndex = 0;
             this.btnCancle.TabStop = false;
             this.btnCancle.Text = "Close F12";
@@ -180,7 +180,7 @@
             this.grpSave.Dock = System.Windows.Forms.DockStyle.Right;
             this.grpSave.Location = new System.Drawing.Point(581, 0);
             this.grpSave.Name = "grpSave";
-            this.grpSave.Size = new System.Drawing.Size(127, 74);
+            this.grpSave.Size = new System.Drawing.Size(127, 64);
             this.grpSave.TabIndex = 1;
             // 
             // btnSave
@@ -190,7 +190,7 @@
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(0, 11);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(120, 44);
+            this.btnSave.Size = new System.Drawing.Size(120, 39);
             this.btnSave.TabIndex = 0;
             this.btnSave.TabStop = false;
             this.btnSave.Text = "Save F2";
@@ -207,7 +207,7 @@
             this.grpChange.Dock = System.Windows.Forms.DockStyle.Right;
             this.grpChange.Location = new System.Drawing.Point(454, 0);
             this.grpChange.Name = "grpChange";
-            this.grpChange.Size = new System.Drawing.Size(127, 74);
+            this.grpChange.Size = new System.Drawing.Size(127, 64);
             this.grpChange.TabIndex = 2;
             // 
             // btnChange
@@ -217,7 +217,7 @@
             this.btnChange.ForeColor = System.Drawing.Color.White;
             this.btnChange.Location = new System.Drawing.Point(0, 11);
             this.btnChange.Name = "btnChange";
-            this.btnChange.Size = new System.Drawing.Size(120, 44);
+            this.btnChange.Size = new System.Drawing.Size(120, 39);
             this.btnChange.TabIndex = 0;
             this.btnChange.TabStop = false;
             this.btnChange.Text = "Update F4";
@@ -232,7 +232,7 @@
             this.grpClear.Dock = System.Windows.Forms.DockStyle.Right;
             this.grpClear.Location = new System.Drawing.Point(327, 0);
             this.grpClear.Name = "grpClear";
-            this.grpClear.Size = new System.Drawing.Size(127, 74);
+            this.grpClear.Size = new System.Drawing.Size(127, 64);
             this.grpClear.TabIndex = 3;
             // 
             // btnClear
@@ -242,7 +242,7 @@
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.Location = new System.Drawing.Point(0, 11);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(120, 44);
+            this.btnClear.Size = new System.Drawing.Size(120, 39);
             this.btnClear.TabIndex = 0;
             this.btnClear.TabStop = false;
             this.btnClear.Text = "Clear F7";
@@ -257,7 +257,7 @@
             this.grpDelete.Dock = System.Windows.Forms.DockStyle.Right;
             this.grpDelete.Location = new System.Drawing.Point(200, 0);
             this.grpDelete.Name = "grpDelete";
-            this.grpDelete.Size = new System.Drawing.Size(127, 74);
+            this.grpDelete.Size = new System.Drawing.Size(127, 64);
             this.grpDelete.TabIndex = 4;
             // 
             // btnDelete
@@ -267,7 +267,7 @@
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Location = new System.Drawing.Point(0, 11);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(120, 44);
+            this.btnDelete.Size = new System.Drawing.Size(120, 39);
             this.btnDelete.TabIndex = 0;
             this.btnDelete.TabStop = false;
             this.btnDelete.Text = "Delete F3";
@@ -282,7 +282,7 @@
             this.grpDoc.Dock = System.Windows.Forms.DockStyle.Right;
             this.grpDoc.Location = new System.Drawing.Point(60, 0);
             this.grpDoc.Name = "grpDoc";
-            this.grpDoc.Size = new System.Drawing.Size(140, 74);
+            this.grpDoc.Size = new System.Drawing.Size(140, 64);
             this.grpDoc.TabIndex = 5;
             // 
             // btnDoc
@@ -292,7 +292,7 @@
             this.btnDoc.ForeColor = System.Drawing.Color.White;
             this.btnDoc.Location = new System.Drawing.Point(0, 11);
             this.btnDoc.Name = "btnDoc";
-            this.btnDoc.Size = new System.Drawing.Size(133, 44);
+            this.btnDoc.Size = new System.Drawing.Size(133, 39);
             this.btnDoc.TabIndex = 0;
             this.btnDoc.TabStop = false;
             this.btnDoc.Text = "Doc Ctrl+D";
@@ -307,7 +307,7 @@
             this.grpPrint.Dock = System.Windows.Forms.DockStyle.Right;
             this.grpPrint.Location = new System.Drawing.Point(-35, 0);
             this.grpPrint.Name = "grpPrint";
-            this.grpPrint.Size = new System.Drawing.Size(95, 74);
+            this.grpPrint.Size = new System.Drawing.Size(95, 64);
             this.grpPrint.TabIndex = 6;
             this.grpPrint.Visible = false;
             // 
@@ -316,7 +316,7 @@
             this.btnPrint.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Location = new System.Drawing.Point(0, 16);
+            this.btnPrint.Location = new System.Drawing.Point(0, 11);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(90, 34);
             this.btnPrint.TabIndex = 0;
@@ -333,7 +333,7 @@
             this.grpRefresh.Dock = System.Windows.Forms.DockStyle.Right;
             this.grpRefresh.Location = new System.Drawing.Point(-130, 0);
             this.grpRefresh.Name = "grpRefresh";
-            this.grpRefresh.Size = new System.Drawing.Size(95, 74);
+            this.grpRefresh.Size = new System.Drawing.Size(95, 64);
             this.grpRefresh.TabIndex = 7;
             this.grpRefresh.Visible = false;
             // 
@@ -459,7 +459,7 @@
             this.grpNew.Dock = System.Windows.Forms.DockStyle.Right;
             this.grpNew.Location = new System.Drawing.Point(-257, 0);
             this.grpNew.Name = "grpNew";
-            this.grpNew.Size = new System.Drawing.Size(127, 74);
+            this.grpNew.Size = new System.Drawing.Size(127, 64);
             this.grpNew.TabIndex = 8;
             this.grpNew.Visible = false;
             // 

@@ -242,6 +242,9 @@
     <Compile Include="spr_dsb_Field_Location_rpt_Result.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
+    <Compile Include="spr_dsb_Product_rpt_Result.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="spr_src_BuildingsLocation_Rpt_Result.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>

@@ -9,7 +9,7 @@ namespace Baran.Windows.Forms
         {
             this.InputLanguage = InputLanguage.Farsi;
 
-            this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
 
             Dock = System.Windows.Forms.DockStyle.Fill;
 
@@ -143,6 +143,8 @@ namespace Baran.Windows.Forms
             base.OnInitializeLayout(e);
             this.FreeSpaceGenerator();
 
+            this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+
             try
             {
                 e.Layout.Bands[0].Columns.Add("RowID", "#");
@@ -209,9 +211,10 @@ namespace Baran.Windows.Forms
             //Row ------------------------------------------------------------------------------------------------------------------
             e.Layout.Override.BorderStyleRow = UIElementBorderStyle.None;
             e.Layout.Override.BorderStyleRowSelector = UIElementBorderStyle.None;
-            e.Layout.Override.DefaultRowHeight = 25;
+            e.Layout.Override.DefaultRowHeight = 20;
             e.Layout.Override.RowAppearance.BackColor = System.Drawing.Color.Transparent;
             e.Layout.Override.HotTrackRowAppearance.ForeColor = System.Drawing.Color.Yellow;
+            
             //e.Layout.Override.RowAppearance.TextHAlign = HAlign.Center;
             //e.Layout.Override.RowAppearance.TextVAlign = VAlign.Middle;
             //e.Layout.Override.HotTrackRowAppearance.FontData.Bold = DefaultableBoolean.True;
@@ -238,7 +241,7 @@ namespace Baran.Windows.Forms
             e.Layout.Override.HeaderAppearance.BackGradientStyle = GradientStyle.None;
             e.Layout.Override.HeaderAppearance.FontData.Name = "B Nazanin";
             e.Layout.Override.HeaderAppearance.FontData.Bold = DefaultableBoolean.True;
-            e.Layout.Override.HeaderAppearance.FontData.SizeInPoints = 11F;
+            e.Layout.Override.HeaderAppearance.FontData.SizeInPoints = 10F;
             //-------------------------------------------------------------------------------------------------------------------------
 
             //Filter------------------------------------------------------------------------------------------------------------------

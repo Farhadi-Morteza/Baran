@@ -40,6 +40,8 @@ namespace BaranDataAccess.Dashboard {
         
         private spr_dsb_ChemicalAnalys_rptDataTable tablespr_dsb_ChemicalAnalys_rpt;
         
+        private spr_dsb_Product_lst_rptDataTable tablespr_dsb_Product_lst_rpt;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -91,6 +93,9 @@ namespace BaranDataAccess.Dashboard {
                 }
                 if ((ds.Tables["spr_dsb_ChemicalAnalys_rpt"] != null)) {
                     base.Tables.Add(new spr_dsb_ChemicalAnalys_rptDataTable(ds.Tables["spr_dsb_ChemicalAnalys_rpt"]));
+                }
+                if ((ds.Tables["spr_dsb_Product_lst_rpt"] != null)) {
+                    base.Tables.Add(new spr_dsb_Product_lst_rptDataTable(ds.Tables["spr_dsb_Product_lst_rpt"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -192,6 +197,16 @@ namespace BaranDataAccess.Dashboard {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public spr_dsb_Product_lst_rptDataTable spr_dsb_Product_lst_rpt {
+            get {
+                return this.tablespr_dsb_Product_lst_rpt;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -281,6 +296,9 @@ namespace BaranDataAccess.Dashboard {
                 if ((ds.Tables["spr_dsb_ChemicalAnalys_rpt"] != null)) {
                     base.Tables.Add(new spr_dsb_ChemicalAnalys_rptDataTable(ds.Tables["spr_dsb_ChemicalAnalys_rpt"]));
                 }
+                if ((ds.Tables["spr_dsb_Product_lst_rpt"] != null)) {
+                    base.Tables.Add(new spr_dsb_Product_lst_rptDataTable(ds.Tables["spr_dsb_Product_lst_rpt"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -362,6 +380,12 @@ namespace BaranDataAccess.Dashboard {
                     this.tablespr_dsb_ChemicalAnalys_rpt.InitVars();
                 }
             }
+            this.tablespr_dsb_Product_lst_rpt = ((spr_dsb_Product_lst_rptDataTable)(base.Tables["spr_dsb_Product_lst_rpt"]));
+            if ((initTable == true)) {
+                if ((this.tablespr_dsb_Product_lst_rpt != null)) {
+                    this.tablespr_dsb_Product_lst_rpt.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -388,6 +412,8 @@ namespace BaranDataAccess.Dashboard {
             base.Tables.Add(this.tablespr_dsb_WaterStorage_rpt);
             this.tablespr_dsb_ChemicalAnalys_rpt = new spr_dsb_ChemicalAnalys_rptDataTable();
             base.Tables.Add(this.tablespr_dsb_ChemicalAnalys_rpt);
+            this.tablespr_dsb_Product_lst_rpt = new spr_dsb_Product_lst_rptDataTable();
+            base.Tables.Add(this.tablespr_dsb_Product_lst_rpt);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -435,6 +461,12 @@ namespace BaranDataAccess.Dashboard {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private bool ShouldSerializespr_dsb_ChemicalAnalys_rpt() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private bool ShouldSerializespr_dsb_Product_lst_rpt() {
             return false;
         }
         
@@ -516,6 +548,9 @@ namespace BaranDataAccess.Dashboard {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void spr_dsb_ChemicalAnalys_rptRowChangeEventHandler(object sender, spr_dsb_ChemicalAnalys_rptRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public delegate void spr_dsb_Product_lst_rptRowChangeEventHandler(object sender, spr_dsb_Product_lst_rptRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -3819,6 +3854,331 @@ namespace BaranDataAccess.Dashboard {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class spr_dsb_Product_lst_rptDataTable : global::System.Data.TypedTableBase<spr_dsb_Product_lst_rptRow> {
+            
+            private global::System.Data.DataColumn columnCrop;
+            
+            private global::System.Data.DataColumn columnCultivar;
+            
+            private global::System.Data.DataColumn columnLinkedArea;
+            
+            private global::System.Data.DataColumn columnPart;
+            
+            private global::System.Data.DataColumn columnCollection;
+            
+            private global::System.Data.DataColumn columnSubcollection;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public spr_dsb_Product_lst_rptDataTable() {
+                this.TableName = "spr_dsb_Product_lst_rpt";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal spr_dsb_Product_lst_rptDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected spr_dsb_Product_lst_rptDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CropColumn {
+                get {
+                    return this.columnCrop;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CultivarColumn {
+                get {
+                    return this.columnCultivar;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn LinkedAreaColumn {
+                get {
+                    return this.columnLinkedArea;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn PartColumn {
+                get {
+                    return this.columnPart;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CollectionColumn {
+                get {
+                    return this.columnCollection;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn SubcollectionColumn {
+                get {
+                    return this.columnSubcollection;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public spr_dsb_Product_lst_rptRow this[int index] {
+                get {
+                    return ((spr_dsb_Product_lst_rptRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event spr_dsb_Product_lst_rptRowChangeEventHandler spr_dsb_Product_lst_rptRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event spr_dsb_Product_lst_rptRowChangeEventHandler spr_dsb_Product_lst_rptRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event spr_dsb_Product_lst_rptRowChangeEventHandler spr_dsb_Product_lst_rptRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event spr_dsb_Product_lst_rptRowChangeEventHandler spr_dsb_Product_lst_rptRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Addspr_dsb_Product_lst_rptRow(spr_dsb_Product_lst_rptRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public spr_dsb_Product_lst_rptRow Addspr_dsb_Product_lst_rptRow(string Crop, string Cultivar, decimal LinkedArea, string Part, string Collection, string Subcollection) {
+                spr_dsb_Product_lst_rptRow rowspr_dsb_Product_lst_rptRow = ((spr_dsb_Product_lst_rptRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Crop,
+                        Cultivar,
+                        LinkedArea,
+                        Part,
+                        Collection,
+                        Subcollection};
+                rowspr_dsb_Product_lst_rptRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowspr_dsb_Product_lst_rptRow);
+                return rowspr_dsb_Product_lst_rptRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                spr_dsb_Product_lst_rptDataTable cln = ((spr_dsb_Product_lst_rptDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new spr_dsb_Product_lst_rptDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal void InitVars() {
+                this.columnCrop = base.Columns["Crop"];
+                this.columnCultivar = base.Columns["Cultivar"];
+                this.columnLinkedArea = base.Columns["LinkedArea"];
+                this.columnPart = base.Columns["Part"];
+                this.columnCollection = base.Columns["Collection"];
+                this.columnSubcollection = base.Columns["Subcollection"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            private void InitClass() {
+                this.columnCrop = new global::System.Data.DataColumn("Crop", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCrop);
+                this.columnCultivar = new global::System.Data.DataColumn("Cultivar", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCultivar);
+                this.columnLinkedArea = new global::System.Data.DataColumn("LinkedArea", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLinkedArea);
+                this.columnPart = new global::System.Data.DataColumn("Part", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPart);
+                this.columnCollection = new global::System.Data.DataColumn("Collection", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCollection);
+                this.columnSubcollection = new global::System.Data.DataColumn("Subcollection", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSubcollection);
+                this.columnCrop.MaxLength = 50;
+                this.columnCultivar.MaxLength = 50;
+                this.columnPart.AllowDBNull = false;
+                this.columnPart.MaxLength = 50;
+                this.columnCollection.AllowDBNull = false;
+                this.columnCollection.MaxLength = 50;
+                this.columnSubcollection.AllowDBNull = false;
+                this.columnSubcollection.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public spr_dsb_Product_lst_rptRow Newspr_dsb_Product_lst_rptRow() {
+                return ((spr_dsb_Product_lst_rptRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new spr_dsb_Product_lst_rptRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(spr_dsb_Product_lst_rptRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.spr_dsb_Product_lst_rptRowChanged != null)) {
+                    this.spr_dsb_Product_lst_rptRowChanged(this, new spr_dsb_Product_lst_rptRowChangeEvent(((spr_dsb_Product_lst_rptRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.spr_dsb_Product_lst_rptRowChanging != null)) {
+                    this.spr_dsb_Product_lst_rptRowChanging(this, new spr_dsb_Product_lst_rptRowChangeEvent(((spr_dsb_Product_lst_rptRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.spr_dsb_Product_lst_rptRowDeleted != null)) {
+                    this.spr_dsb_Product_lst_rptRowDeleted(this, new spr_dsb_Product_lst_rptRowChangeEvent(((spr_dsb_Product_lst_rptRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.spr_dsb_Product_lst_rptRowDeleting != null)) {
+                    this.spr_dsb_Product_lst_rptRowDeleting(this, new spr_dsb_Product_lst_rptRowChangeEvent(((spr_dsb_Product_lst_rptRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Removespr_dsb_Product_lst_rptRow(spr_dsb_Product_lst_rptRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dstDashboard ds = new dstDashboard();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "spr_dsb_Product_lst_rptDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class spr_dsb_FieldTaskList_rpt_SelectRow : global::System.Data.DataRow {
@@ -6232,6 +6592,138 @@ namespace BaranDataAccess.Dashboard {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class spr_dsb_Product_lst_rptRow : global::System.Data.DataRow {
+            
+            private spr_dsb_Product_lst_rptDataTable tablespr_dsb_Product_lst_rpt;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal spr_dsb_Product_lst_rptRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablespr_dsb_Product_lst_rpt = ((spr_dsb_Product_lst_rptDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Crop {
+                get {
+                    try {
+                        return ((string)(this[this.tablespr_dsb_Product_lst_rpt.CropColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Crop\' in table \'spr_dsb_Product_lst_rpt\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_dsb_Product_lst_rpt.CropColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Cultivar {
+                get {
+                    try {
+                        return ((string)(this[this.tablespr_dsb_Product_lst_rpt.CultivarColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Cultivar\' in table \'spr_dsb_Product_lst_rpt\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_dsb_Product_lst_rpt.CultivarColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal LinkedArea {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespr_dsb_Product_lst_rpt.LinkedAreaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LinkedArea\' in table \'spr_dsb_Product_lst_rpt\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespr_dsb_Product_lst_rpt.LinkedAreaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Part {
+                get {
+                    return ((string)(this[this.tablespr_dsb_Product_lst_rpt.PartColumn]));
+                }
+                set {
+                    this[this.tablespr_dsb_Product_lst_rpt.PartColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Collection {
+                get {
+                    return ((string)(this[this.tablespr_dsb_Product_lst_rpt.CollectionColumn]));
+                }
+                set {
+                    this[this.tablespr_dsb_Product_lst_rpt.CollectionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Subcollection {
+                get {
+                    return ((string)(this[this.tablespr_dsb_Product_lst_rpt.SubcollectionColumn]));
+                }
+                set {
+                    this[this.tablespr_dsb_Product_lst_rpt.SubcollectionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCropNull() {
+                return this.IsNull(this.tablespr_dsb_Product_lst_rpt.CropColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCropNull() {
+                this[this.tablespr_dsb_Product_lst_rpt.CropColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCultivarNull() {
+                return this.IsNull(this.tablespr_dsb_Product_lst_rpt.CultivarColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCultivarNull() {
+                this[this.tablespr_dsb_Product_lst_rpt.CultivarColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsLinkedAreaNull() {
+                return this.IsNull(this.tablespr_dsb_Product_lst_rpt.LinkedAreaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetLinkedAreaNull() {
+                this[this.tablespr_dsb_Product_lst_rpt.LinkedAreaColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -6489,6 +6981,40 @@ namespace BaranDataAccess.Dashboard {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public spr_dsb_ChemicalAnalys_rptRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public class spr_dsb_Product_lst_rptRowChangeEvent : global::System.EventArgs {
+            
+            private spr_dsb_Product_lst_rptRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public spr_dsb_Product_lst_rptRowChangeEvent(spr_dsb_Product_lst_rptRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public spr_dsb_Product_lst_rptRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -6853,13 +7379,15 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FromDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PersonID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FieldID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProductionID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillWorkerTable(dstDashboard.spr_dsb_Worker_rptDataTable dataTable, global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> PersonID) {
+        public virtual int FillWorkerTable(dstDashboard.spr_dsb_Worker_rptDataTable dataTable, global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> PersonID, global::System.Nullable<int> FieldID, global::System.Nullable<int> ProductionID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((UserID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(UserID.Value));
@@ -6884,6 +7412,18 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((FieldID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(FieldID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((ProductionID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(ProductionID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6896,7 +7436,7 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dstDashboard.spr_dsb_Worker_rptDataTable GetWorkerTable(global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> PersonID) {
+        public virtual dstDashboard.spr_dsb_Worker_rptDataTable GetWorkerTable(global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> PersonID, global::System.Nullable<int> FieldID, global::System.Nullable<int> ProductionID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((UserID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(UserID.Value));
@@ -6921,6 +7461,18 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((FieldID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(FieldID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((ProductionID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(ProductionID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             dstDashboard.spr_dsb_Worker_rptDataTable dataTable = new dstDashboard.spr_dsb_Worker_rptDataTable();
             this.Adapter.Fill(dataTable);
@@ -7085,13 +7637,15 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FromDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MachineryID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FieldID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProductionID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillMachineryTable(dstDashboard.spr_dsb_Machinery_rptDataTable dataTable, global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> MachineryID) {
+        public virtual int FillMachineryTable(dstDashboard.spr_dsb_Machinery_rptDataTable dataTable, global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> MachineryID, global::System.Nullable<int> FieldID, global::System.Nullable<int> ProductionID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((UserID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(UserID.Value));
@@ -7116,6 +7670,18 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((FieldID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(FieldID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((ProductionID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(ProductionID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7128,7 +7694,7 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dstDashboard.spr_dsb_Machinery_rptDataTable GetMachineryTable(global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> MachineryID) {
+        public virtual dstDashboard.spr_dsb_Machinery_rptDataTable GetMachineryTable(global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> MachineryID, global::System.Nullable<int> FieldID, global::System.Nullable<int> ProductionID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((UserID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(UserID.Value));
@@ -7153,6 +7719,18 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((FieldID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(FieldID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((ProductionID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(ProductionID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             dstDashboard.spr_dsb_Machinery_rptDataTable dataTable = new dstDashboard.spr_dsb_Machinery_rptDataTable();
             this.Adapter.Fill(dataTable);
@@ -7315,13 +7893,15 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FromDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FertilizerID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FieldID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProductionID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillFertilizerTable(dstDashboard.spr_dsb_Fertilizer_rptDataTable dataTable, global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> FertilizerID) {
+        public virtual int FillFertilizerTable(dstDashboard.spr_dsb_Fertilizer_rptDataTable dataTable, global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> FertilizerID, global::System.Nullable<int> FieldID, global::System.Nullable<int> ProductionID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((UserID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(UserID.Value));
@@ -7346,6 +7926,18 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((FieldID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(FieldID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((ProductionID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(ProductionID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7358,7 +7950,7 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dstDashboard.spr_dsb_Fertilizer_rptDataTable GetFertilizerTable(global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> FertilizerID) {
+        public virtual dstDashboard.spr_dsb_Fertilizer_rptDataTable GetFertilizerTable(global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> FertilizerID, global::System.Nullable<int> FieldID, global::System.Nullable<int> ProductionID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((UserID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(UserID.Value));
@@ -7383,6 +7975,18 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((FieldID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(FieldID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((ProductionID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(ProductionID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             dstDashboard.spr_dsb_Fertilizer_rptDataTable dataTable = new dstDashboard.spr_dsb_Fertilizer_rptDataTable();
             this.Adapter.Fill(dataTable);
@@ -7545,13 +8149,15 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FromDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PesticideID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FieldID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProductionID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillPesticideTable(dstDashboard.spr_dsb_Pesticide_rptDataTable dataTable, global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> PesticideID) {
+        public virtual int FillPesticideTable(dstDashboard.spr_dsb_Pesticide_rptDataTable dataTable, global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> PesticideID, global::System.Nullable<int> FieldID, global::System.Nullable<int> ProductionID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((UserID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(UserID.Value));
@@ -7576,6 +8182,18 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((FieldID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(FieldID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((ProductionID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(ProductionID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7588,7 +8206,7 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dstDashboard.spr_dsb_Pesticide_rptDataTable GetPesticideTable(global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> PesticideID) {
+        public virtual dstDashboard.spr_dsb_Pesticide_rptDataTable GetPesticideTable(global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> PesticideID, global::System.Nullable<int> FieldID, global::System.Nullable<int> ProductionID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((UserID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(UserID.Value));
@@ -7613,6 +8231,18 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((FieldID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(FieldID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((ProductionID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(ProductionID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             dstDashboard.spr_dsb_Pesticide_rptDataTable dataTable = new dstDashboard.spr_dsb_Pesticide_rptDataTable();
             this.Adapter.Fill(dataTable);
@@ -7777,13 +8407,15 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FromDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WaterID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FieldID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProductionID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillWaterTable(dstDashboard.spr_dsb_Water_rptDataTable dataTable, global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> WaterID) {
+        public virtual int FillWaterTable(dstDashboard.spr_dsb_Water_rptDataTable dataTable, global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> WaterID, global::System.Nullable<int> FieldID, global::System.Nullable<int> ProductionID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((UserID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(UserID.Value));
@@ -7808,6 +8440,18 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((FieldID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(FieldID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((ProductionID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(ProductionID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7820,7 +8464,7 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dstDashboard.spr_dsb_Water_rptDataTable GetWaterTable(global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> WaterID) {
+        public virtual dstDashboard.spr_dsb_Water_rptDataTable GetWaterTable(global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> WaterID, global::System.Nullable<int> FieldID, global::System.Nullable<int> ProductionID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((UserID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(UserID.Value));
@@ -7845,6 +8489,18 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((FieldID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(FieldID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((ProductionID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(ProductionID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             dstDashboard.spr_dsb_Water_rptDataTable dataTable = new dstDashboard.spr_dsb_Water_rptDataTable();
             this.Adapter.Fill(dataTable);
@@ -8008,13 +8664,15 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FromDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WaterStorageID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FieldID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProductionID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillWaterStorageTable(dstDashboard.spr_dsb_WaterStorage_rptDataTable dataTable, global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> WaterStorageID) {
+        public virtual int FillWaterStorageTable(dstDashboard.spr_dsb_WaterStorage_rptDataTable dataTable, global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> WaterStorageID, global::System.Nullable<int> FieldID, global::System.Nullable<int> ProductionID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((UserID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(UserID.Value));
@@ -8039,6 +8697,18 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((FieldID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(FieldID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((ProductionID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(ProductionID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8051,7 +8721,7 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dstDashboard.spr_dsb_WaterStorage_rptDataTable GetWaterStorageTable(global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> WaterStorageID) {
+        public virtual dstDashboard.spr_dsb_WaterStorage_rptDataTable GetWaterStorageTable(global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> WaterStorageID, global::System.Nullable<int> FieldID, global::System.Nullable<int> ProductionID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((UserID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(UserID.Value));
@@ -8076,6 +8746,18 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((FieldID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(FieldID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((ProductionID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(ProductionID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             dstDashboard.spr_dsb_WaterStorage_rptDataTable dataTable = new dstDashboard.spr_dsb_WaterStorage_rptDataTable();
             this.Adapter.Fill(dataTable);
@@ -8239,13 +8921,15 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FromDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FieldID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProductionID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillChemicalAnalysTable(dstDashboard.spr_dsb_ChemicalAnalys_rptDataTable dataTable, global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate) {
+        public virtual int FillChemicalAnalysTable(dstDashboard.spr_dsb_ChemicalAnalys_rptDataTable dataTable, global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> FieldID, global::System.Nullable<int> ProductionID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((UserID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(UserID.Value));
@@ -8264,6 +8948,18 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((FieldID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(FieldID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((ProductionID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(ProductionID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8276,7 +8972,7 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dstDashboard.spr_dsb_ChemicalAnalys_rptDataTable GetChemicalAnalysTable(global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate) {
+        public virtual dstDashboard.spr_dsb_ChemicalAnalys_rptDataTable GetChemicalAnalysTable(global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Nullable<int> FieldID, global::System.Nullable<int> ProductionID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((UserID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(UserID.Value));
@@ -8296,7 +8992,244 @@ namespace BaranDataAccess.Dashboard.dstDashboardTableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
+            if ((FieldID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(FieldID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((ProductionID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(ProductionID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
             dstDashboard.spr_dsb_ChemicalAnalys_rptDataTable dataTable = new dstDashboard.spr_dsb_ChemicalAnalys_rptDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class spr_dsb_Product_lst_rptTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public spr_dsb_Product_lst_rptTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "spr_dsb_Product_lst_rpt";
+            tableMapping.ColumnMappings.Add("Crop", "Crop");
+            tableMapping.ColumnMappings.Add("Cultivar", "Cultivar");
+            tableMapping.ColumnMappings.Add("LinkedArea", "LinkedArea");
+            tableMapping.ColumnMappings.Add("Part", "Part");
+            tableMapping.ColumnMappings.Add("Collection", "Collection");
+            tableMapping.ColumnMappings.Add("Subcollection", "Subcollection");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::BaranDataAccess.Properties.Settings.Default.BaranConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.spr_dsb_Product_lst_rpt";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FieldID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CropID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int FillProductLstTable(dstDashboard.spr_dsb_Product_lst_rptDataTable dataTable, global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> Date, global::System.Nullable<int> FieldID, global::System.Nullable<int> CropID) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((UserID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(UserID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Date.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(Date.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((FieldID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((int)(FieldID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((CropID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(CropID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual dstDashboard.spr_dsb_Product_lst_rptDataTable GetProductLstTable(global::System.Nullable<int> UserID, global::System.Nullable<global::System.DateTime> Date, global::System.Nullable<int> FieldID, global::System.Nullable<int> CropID) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((UserID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(UserID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Date.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(Date.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((FieldID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((int)(FieldID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((CropID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(CropID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            dstDashboard.spr_dsb_Product_lst_rptDataTable dataTable = new dstDashboard.spr_dsb_Product_lst_rptDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

@@ -378,5 +378,26 @@ namespace BaranDataAccess
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_dsb_Field_Location_rpt_Result>("spr_dsb_Field_Location_rpt", userIDParameter, fromDateParameter, toDateParameter, fieldIDParameter, productionIDParameter);
         }
+    
+        public virtual ObjectResult<spr_dsb_Product_rpt_Result> spr_dsb_Product_rpt(Nullable<int> userID, Nullable<System.DateTime> date, Nullable<int> fieldID, Nullable<int> cropID)
+        {
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+    
+            var dateParameter = date.HasValue ?
+                new ObjectParameter("Date", date) :
+                new ObjectParameter("Date", typeof(System.DateTime));
+    
+            var fieldIDParameter = fieldID.HasValue ?
+                new ObjectParameter("FieldID", fieldID) :
+                new ObjectParameter("FieldID", typeof(int));
+    
+            var cropIDParameter = cropID.HasValue ?
+                new ObjectParameter("CropID", cropID) :
+                new ObjectParameter("CropID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_dsb_Product_rpt_Result>("spr_dsb_Product_rpt", userIDParameter, dateParameter, fieldIDParameter, cropIDParameter);
+        }
     }
 }

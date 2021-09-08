@@ -417,6 +417,12 @@
     <Compile Include="Dashboard\frmPesticideRpt.Designer.cs">
       <DependentUpon>frmPesticideRpt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard\frmProductRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmProductRpt.Designer.cs">
+      <DependentUpon>frmProductRpt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard\frmWaterRpt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1007,6 +1013,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmPesticideRpt.resx">
       <DependentUpon>frmPesticideRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\frmProductRpt.resx">
+      <DependentUpon>frmProductRpt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmWaterRpt.resx">
       <DependentUpon>frmWaterRpt.cs</DependentUpon>

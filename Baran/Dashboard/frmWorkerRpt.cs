@@ -17,7 +17,7 @@ namespace Baran.Dashboard
             InitializeComponent();
         }
 
-        public frmWorkerRpt(string fromDate, string toDate)
+        public frmWorkerRpt(string fromDate, string toDate , int? fieldID, int? productionID)
         {
             InitializeComponent();
             grpHeader.Visible = false;
@@ -25,8 +25,14 @@ namespace Baran.Dashboard
             mskFromDate.Text = fromDate;
             mskToDate.Text = toDate;
 
+            FieldID = fieldID;
+            ProductionID = productionID;
+
             FillControls();
         }
+
+        public int? FieldID { get; set; }
+        public int? ProductionID { get; set; }
 
         private int? PersonID = null;
         private Nullable<DateTime>
@@ -80,7 +86,7 @@ namespace Baran.Dashboard
             if (mskToDate.Text != null)
                 ToDate = DateTimeUtility.ToGregorian(mskToDate.Value.ToString());
 
-            adp.FillWorkerTable(dstDashboard1.spr_dsb_Worker_rpt, CurrentUser.Instance.UserID, FromDate, ToDate, PersonID);
+            adp.FillWorkerTable(dstDashboard1.spr_dsb_Worker_rpt, CurrentUser.Instance.UserID, FromDate, ToDate, PersonID, FieldID, ProductionID);
             grdItem.FreeSpaceGenerator();
 
             this.DrowChart();

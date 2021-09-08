@@ -18,16 +18,21 @@ namespace Baran.Dashboard
             InitializeComponent();
         }
 
-        public frmPesticideRpt(string fromDate, string toDate)
+        public frmPesticideRpt(string fromDate, string toDate, int? fieldID, int? productionID)
         {
             InitializeComponent();
             grpHeader.Visible = false;  
 
             mskFromDate.Text = fromDate;
             mskToDate.Text = toDate;
+            FieldID = fieldID;
+            ProductionID = productionID;
 
             FillControls();
         }
+
+        public int? FieldID { get; set; }
+        public int? ProductionID { get; set; }
 
         private int? PesticideID = null;
         private Nullable<DateTime>
@@ -81,7 +86,7 @@ namespace Baran.Dashboard
                 if (mskToDate.Text != null)
                     ToDate = DateTimeUtility.ToGregorian(mskToDate.Value.ToString());
 
-                adp.FillPesticideTable(dstDashboard1.spr_dsb_Pesticide_rpt, CurrentUser.Instance.UserID, FromDate, ToDate, PesticideID);
+                adp.FillPesticideTable(dstDashboard1.spr_dsb_Pesticide_rpt, CurrentUser.Instance.UserID, FromDate, ToDate, PesticideID, FieldID, ProductionID);
                 grdItem.FreeSpaceGenerator();
 
                 this.DrowChart();
