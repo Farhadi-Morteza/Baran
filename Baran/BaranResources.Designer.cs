@@ -19,7 +19,7 @@ namespace Baran {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class BaranResources {
@@ -1276,7 +1276,7 @@ namespace Baran {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ورژن برنامه تغیر کرده، لطفا برنامه را بروزرسانی نمایید و یا با پشتیبانی 09195665573 تماس بگیرید.
+        ///   Looks up a localized string similar to ورژن برنامه تغیر کرده است، آیا برنامه بروزرسانی شود؟ در صورت بروز مشکل با پشتیبانی 09195665573 تماس بگیرید /n  آیا برنامه بروزرسانی شود؟.
         /// </summary>
         internal static string VersionErrorMessage {
             get {

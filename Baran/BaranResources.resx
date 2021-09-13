@@ -490,7 +490,7 @@
     <value>امکان ثبت اطلاعات برای نوع کاربری شما تعریف نشده است </value>
   </data>
   <data name="VersionErrorMessage" xml:space="preserve">
-    <value>ورژن برنامه تغیر کرده، لطفا برنامه را بروزرسانی نمایید و یا با پشتیبانی 09195665573 تماس بگیرید</value>
+    <value>ورژن برنامه تغیر کرده است، آیا برنامه بروزرسانی شود؟ در صورت بروز مشکل با پشتیبانی 09195665573 تماس بگیرید /n  آیا برنامه بروزرسانی شود؟</value>
   </data>
   <data name="ShopTableShopCodeColumn" xml:space="preserve">
     <value>ShopCode</value>
@@ -543,7 +543,6 @@
   <data name="PartitionNameIsEmpty" xml:space="preserve">
     <value>نام پارتیشن را تعریف نکرده اید</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="UserNameOrPasswordIsWrong" xml:space="preserve">
     <value>نام کاربری یا رمز عبور اشتباه می باشد</value>
   </data>

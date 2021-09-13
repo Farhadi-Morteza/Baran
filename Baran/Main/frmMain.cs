@@ -4,6 +4,8 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.IO;
 using System;
+using System.Net;
+using System.IO.Compression;
 
 namespace Baran
 {
@@ -64,8 +66,13 @@ namespace Baran
                     drwVersion = (BaranDataAccess.Settings.dstSettings.spr_Setting_VersionCheck_SelectRow)tblVersionInfo.Rows[0];
                     if (drwVersion.VersionNumber != BaranResources.CrossCheckForVersionNumber)
                     {
-                        System.Windows.Forms.MessageBox.Show(BaranResources.VersionErrorMessage, "", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
-                        return false;
+                        DialogResult result = System.Windows.Forms.MessageBox.Show(BaranResources.VersionErrorMessage, "", System.Windows.Forms.MessageBoxButtons.YesNo, System.Windows.Forms.MessageBoxIcon.Error);
+                        if (result == DialogResult.Yes)
+                        {
+                            UpdateSofteware();
+                        }
+                        else
+                            return false;
                     }
                 }
                 BaranDataAccess.Security.dstSecurityTableAdapters.spr_ShopCheckForCurrentUser_SelectTableAdapter adpCheckLegitimation = new BaranDataAccess.Security.dstSecurityTableAdapters.spr_ShopCheckForCurrentUser_SelectTableAdapter();
@@ -154,6 +161,58 @@ namespace Baran
 
                 return true;
             }
+        }
+
+        private void UpdateSofteware()
+        {
+
+            int bufferSize = 100000;
+
+            Uri url = new Uri(Path.Combine(ftpServerInfo.UpdateHost, UpdateSoftwareInfo.FileName));
+            try
+            {
+                if (url.Scheme == Uri.UriSchemeFtp)
+                {
+                    FtpWebRequest objRequest = (FtpWebRequest)FtpWebRequest.Create(url);
+                    NetworkCredential objCredential = new NetworkCredential(ftpServerInfo.User, ftpServerInfo.Pass);
+
+                    objRequest.Credentials = objCredential;
+                    objRequest.Method = WebRequestMethods.Ftp.DownloadFile;
+                    FtpWebResponse objResponse = (FtpWebResponse)objRequest.GetResponse();
+                    StreamReader objReader = new StreamReader(objResponse.GetResponseStream());
+
+                    byte[] buffer = new byte[bufferSize];
+                    int len = 0;
+                    
+                    FileStream objfs = new FileStream(Path.Combine(Application.StartupPath, UpdateSoftwareInfo.FileName), FileMode.Create, FileAccess.Write, FileShare.Read);
+
+                    while ((len = objReader.BaseStream.Read(buffer, 0, buffer.Length)) != 0)
+                    {
+                        objfs.Write(buffer, 0, len);
+                    }
+
+                    objfs.Close();
+                    objResponse.Close();
+
+                    string extractPath = Application.StartupPath;
+                    string zipPath = Path.Combine(Application.StartupPath, UpdateSoftwareInfo.FileName);
+                    extractPath = Path.GetFullPath(extractPath);
+
+                    if (!extractPath.EndsWith(Path.DirectorySeparatorChar.ToString(), StringComparison.Ordinal))
+                        extractPath += Path.DirectorySeparatorChar;
+
+ 
+                    ZipFile.ExtractToDirectory(Path.Combine(Application.StartupPath, UpdateSoftwareInfo.FileName), extractPath);// Application.StartupPath);
+
+                    File.Delete(zipPath);
+                   
+                }
+            }
+            catch
+            {
+                MessageBoxX.ShowMessageBox(PublicEnum.EnmMessageType.msgDoNotDoPleaseTryAgine);
+            }
+
         }
 
         private void PaintBackGround(System.Drawing.Graphics graphics)

@@ -480,4 +480,17 @@ namespace Baran.Classes.Common
         public static readonly string SplitChar = ",";
     }
 
+    public static class ftpServerInfo
+    {
+        public static readonly string UpdateHost = "ftp://1.11.101.30/%D9%87%D9%84%D8%AF%DB%8C%D9%86%DA%AF%20%D9%85%D8%B2%D8%A7%D8%B1%D8%B9%20%D9%86%D9%88%DB%8C%D9%86%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C%D8%A7%D9%86/%D8%B3%D8%A7%D9%85%D8%A7%D9%86%D9%87%20%D8%AA%D8%AE%D8%B5%D8%B5%DB%8C%20%DA%A9%D8%B4%D8%A7%D9%88%D8%B1%D8%B2%DB%8C/";
+        public static readonly string User = "Tarh-s";
+        public static readonly string Pass = "226112";
+
+    }
+
+    public static class UpdateSoftwareInfo
+    {
+        public static readonly string FileName = "Baran.zip";
+    }
+
 }

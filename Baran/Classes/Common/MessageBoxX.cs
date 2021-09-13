@@ -91,6 +91,9 @@ namespace Baran.Classes.Common
                     case PublicEnum.EnmMessageType.msgFileExists:
                         Result = MessageBox.Show(OptParam + "\n" + BaranResources.FileAlreadyExistsDoYouWantToReplace, BaranResources.ainFormClosingMessageBoxCaption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         break;
+                    case PublicEnum.EnmMessageType.msgDoNotDoPleaseTryAgine:
+                        Result = MessageBox.Show(BaranResources.DoNotDoPleaseTryAgine, BaranResources.ainFormClosingMessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        break;
 
                     default: 
                         throw new ArgumentOutOfRangeException();     

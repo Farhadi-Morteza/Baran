@@ -99,6 +99,7 @@ namespace Baran.Classes.Common
             msgSaveNotLastTimeSaveConfirm = 26,
             msgExitConfirm = 27,
             msgFileExists = 28,
+            msgDoNotDoPleaseTryAgine = 29,
         }
 
         public enum EnmMessageCategory
