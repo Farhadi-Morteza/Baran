@@ -76,11 +76,12 @@
             // 
             // grpButons
             // 
-            this.grpButons.Location = new System.Drawing.Point(0, 700);
+            this.grpButons.Location = new System.Drawing.Point(0, 658);
             this.grpButons.Size = new System.Drawing.Size(984, 75);
             // 
             // lblLine2
             // 
+            this.lblLine2.Location = new System.Drawing.Point(1, 71);
             this.lblLine2.Size = new System.Drawing.Size(982, 3);
             // 
             // grpHeader
@@ -105,17 +106,19 @@
             // 
             // grpMessage
             // 
+            this.grpMessage.Location = new System.Drawing.Point(0, 75);
             this.grpMessage.Size = new System.Drawing.Size(984, 30);
             // 
             // lblLine3
             // 
-            this.lblLine3.Location = new System.Drawing.Point(1, 591);
+            this.lblLine3.Location = new System.Drawing.Point(1, 549);
             this.lblLine3.Size = new System.Drawing.Size(982, 3);
             // 
             // grpMain
             // 
             this.grpMain.Controls.Add(this.groupBox1);
-            this.grpMain.Size = new System.Drawing.Size(984, 595);
+            this.grpMain.Location = new System.Drawing.Point(0, 105);
+            this.grpMain.Size = new System.Drawing.Size(984, 553);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
             this.grpMain.Controls.SetChildIndex(this.groupBox1, 0);
             // 
@@ -138,7 +141,7 @@
             this.groupBox1.Controls.Add(this.PicLogo);
             this.groupBox1.Location = new System.Drawing.Point(337, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(363, 543);
+            this.groupBox1.Size = new System.Drawing.Size(363, 486);
             this.groupBox1.TabIndex = 1;
             // 
             // cmbBusiness
@@ -160,7 +163,7 @@
             appearance13.TextHAlignAsString = "Right";
             appearance13.TextVAlignAsString = "Middle";
             this.cmbBusiness.ItemAppearance = appearance13;
-            this.cmbBusiness.Location = new System.Drawing.Point(28, 319);
+            this.cmbBusiness.Location = new System.Drawing.Point(28, 287);
             this.cmbBusiness.Name = "cmbBusiness";
             this.cmbBusiness.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbBusiness.Size = new System.Drawing.Size(305, 22);
@@ -175,7 +178,7 @@
             appearance15.TextVAlignAsString = "Middle";
             this.label4.Appearance = appearance15;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(276, 295);
+            this.label4.Location = new System.Drawing.Point(276, 268);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label4.Size = new System.Drawing.Size(57, 15);
@@ -201,7 +204,7 @@
             appearance3.TextHAlignAsString = "Right";
             appearance3.TextVAlignAsString = "Middle";
             this.cmbBusinessCategory.ItemAppearance = appearance3;
-            this.cmbBusinessCategory.Location = new System.Drawing.Point(28, 264);
+            this.cmbBusinessCategory.Location = new System.Drawing.Point(28, 238);
             this.cmbBusinessCategory.Name = "cmbBusinessCategory";
             this.cmbBusinessCategory.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbBusinessCategory.Size = new System.Drawing.Size(305, 22);
@@ -216,7 +219,7 @@
             appearance6.TextVAlignAsString = "Middle";
             this.label3.Appearance = appearance6;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(307, 240);
+            this.label3.Location = new System.Drawing.Point(307, 221);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(26, 15);
@@ -234,7 +237,7 @@
             this.txtName.BackColor = System.Drawing.Color.Transparent;
             this.txtName.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2007;
             this.txtName.FontSize = 0;
-            this.txtName.Location = new System.Drawing.Point(27, 429);
+            this.txtName.Location = new System.Drawing.Point(27, 384);
             this.txtName.Name = "txtName";
             this.txtName.PreviousBackColor = System.Drawing.Color.Transparent;
             this.txtName.PreviousForeColor = System.Drawing.Color.Transparent;
@@ -262,7 +265,7 @@
             appearance10.TextHAlignAsString = "Right";
             appearance10.TextVAlignAsString = "Middle";
             this.cmbActivity.ItemAppearance = appearance10;
-            this.cmbActivity.Location = new System.Drawing.Point(28, 374);
+            this.cmbActivity.Location = new System.Drawing.Point(28, 336);
             this.cmbActivity.Name = "cmbActivity";
             this.cmbActivity.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbActivity.Size = new System.Drawing.Size(305, 22);
@@ -276,7 +279,7 @@
             appearance11.TextVAlignAsString = "Middle";
             this.label2.Appearance = appearance11;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(195, 405);
+            this.label2.Location = new System.Drawing.Point(195, 367);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(138, 15);
@@ -291,7 +294,7 @@
             appearance14.TextVAlignAsString = "Middle";
             this.label1.Appearance = appearance14;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(298, 350);
+            this.label1.Location = new System.Drawing.Point(298, 318);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(35, 15);
@@ -304,7 +307,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveAndContinu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveAndContinu.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnSaveAndContinu.Location = new System.Drawing.Point(123, 493);
+            this.btnSaveAndContinu.Location = new System.Drawing.Point(120, 426);
             this.btnSaveAndContinu.Name = "btnSaveAndContinu";
             this.btnSaveAndContinu.Size = new System.Drawing.Size(116, 40);
             this.btnSaveAndContinu.TabIndex = 4;
@@ -322,10 +325,10 @@
             appearance7.TextVAlignAsString = "Middle";
             this.labelTitr2.Appearance = appearance7;
             this.labelTitr2.AutoSize = true;
-            this.labelTitr2.Font = new System.Drawing.Font("B Nazanin", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.labelTitr2.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.labelTitr2.Location = new System.Drawing.Point(56, 199);
             this.labelTitr2.Name = "labelTitr2";
-            this.labelTitr2.Size = new System.Drawing.Size(249, 32);
+            this.labelTitr2.Size = new System.Drawing.Size(193, 26);
             this.labelTitr2.TabIndex = 4;
             this.labelTitr2.Text = "چه فعالیتی را می خواهی شروع کنی؟";
             // 
@@ -345,7 +348,7 @@
             // frmCropPlantation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(984, 775);
+            this.ClientSize = new System.Drawing.Size(984, 733);
             this.FormMessage = "";
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCropPlantation";

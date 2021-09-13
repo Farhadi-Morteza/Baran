@@ -243,7 +243,7 @@
             appearance14.TextHAlignAsString = "Right";
             appearance14.TextVAlignAsString = "Middle";
             this.lblCaption.Appearance = appearance14;
-            this.lblCaption.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblCaption.Font = new System.Drawing.Font("B Nazanin", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblCaption.Location = new System.Drawing.Point(306, 17);
             this.lblCaption.Name = "lblCaption";
             this.lblCaption.RightToLeft = System.Windows.Forms.RightToLeft.No;

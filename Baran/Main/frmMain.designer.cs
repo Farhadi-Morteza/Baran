@@ -163,7 +163,7 @@
             appearance4.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Tiled;
             this.uebMainExplorerBar.Appearances.Add(appearance4);
             this.uebMainExplorerBar.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
-            this.uebMainExplorerBar.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.uebMainExplorerBar.Font = new System.Drawing.Font("B Nazanin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             appearance9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(45)))));
             appearance9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(147)))), ((int)(((byte)(30)))));
             this.uebMainExplorerBar.GroupSettings.AppearancesSmall.Appearance = appearance9;
@@ -199,6 +199,7 @@
             appearance8.BackColor2 = System.Drawing.Color.Black;
             appearance8.BackColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(179)))), ((int)(((byte)(4)))));
             appearance8.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
+            appearance8.FontData.SizeInPoints = 11F;
             appearance8.ForeColor = System.Drawing.Color.White;
             this.usbMainStatusBar.Appearance = appearance8;
             this.usbMainStatusBar.BorderStyle = Infragistics.Win.UIElementBorderStyle.Rounded1;
@@ -266,7 +267,7 @@
             this.menustripMain.Location = new System.Drawing.Point(61, 271);
             this.menustripMain.Name = "menustripMain";
             this.menustripMain.Padding = new System.Windows.Forms.Padding(5, 1, 0, 1);
-            this.menustripMain.Size = new System.Drawing.Size(328, 24);
+            this.menustripMain.Size = new System.Drawing.Size(332, 24);
             this.menustripMain.TabIndex = 51;
             this.menustripMain.Text = "menustrip1";
             this.menustripMain.Visible = false;
@@ -320,7 +321,7 @@
             this.tolMenuItemExport,
             this.tolMenuItemDetail});
             this.toolStripItemsMenuToolStripMenuItem.Name = "toolStripItemsMenuToolStripMenuItem";
-            this.toolStripItemsMenuToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.toolStripItemsMenuToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.toolStripItemsMenuToolStripMenuItem.Text = "ToolStripItemsMenu";
             // 
             // tolMenuItemCansel
@@ -459,7 +460,7 @@
             this.toolStripButtonPrintCalculator,
             this.mnuSettings});
             this.ToolsMenuToolStripMenuItem.Name = "ToolsMenuToolStripMenuItem";
-            this.ToolsMenuToolStripMenuItem.Size = new System.Drawing.Size(46, 22);
+            this.ToolsMenuToolStripMenuItem.Size = new System.Drawing.Size(48, 22);
             this.ToolsMenuToolStripMenuItem.Text = "Tools";
             // 
             // toolStripButtonPrintCalculator
@@ -675,7 +676,7 @@
             this.toolStripMain.AllowDrop = true;
             this.toolStripMain.AllowMerge = false;
             this.toolStripMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(14)))));
-            this.toolStripMain.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMain.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripMain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonExit,
@@ -730,14 +731,14 @@
             this.toolStripButtonExit.ForeColor = System.Drawing.Color.Navy;
             this.toolStripButtonExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonExit.Name = "toolStripButtonExit";
-            this.toolStripButtonExit.Size = new System.Drawing.Size(78, 22);
+            this.toolStripButtonExit.Size = new System.Drawing.Size(80, 22);
             this.toolStripButtonExit.Text = "Exti Alt+F4";
             // 
             // toolStripButtonExchangeUser
             // 
             this.toolStripButtonExchangeUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(14)))));
             this.toolStripButtonExchangeUser.Name = "toolStripButtonExchangeUser";
-            this.toolStripButtonExchangeUser.Size = new System.Drawing.Size(163, 22);
+            this.toolStripButtonExchangeUser.Size = new System.Drawing.Size(171, 22);
             this.toolStripButtonExchangeUser.Text = "Switch User Ctrl+D";
             this.toolStripButtonExchangeUser.Visible = false;
             // 
@@ -745,14 +746,14 @@
             // 
             this.toolStripButtonLogOff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(14)))));
             this.toolStripButtonLogOff.Name = "toolStripButtonLogOff";
-            this.toolStripButtonLogOff.Size = new System.Drawing.Size(163, 22);
+            this.toolStripButtonLogOff.Size = new System.Drawing.Size(171, 22);
             this.toolStripButtonLogOff.Text = "Exit User Ctrl+L";
             this.toolStripButtonLogOff.Click += new System.EventHandler(this.ToolStripMenuItemLogOff_Click);
             // 
             // toolStripButtonLogOut
             // 
             this.toolStripButtonLogOut.Name = "toolStripButtonLogOut";
-            this.toolStripButtonLogOut.Size = new System.Drawing.Size(163, 22);
+            this.toolStripButtonLogOut.Size = new System.Drawing.Size(171, 22);
             this.toolStripButtonLogOut.Text = "خروج";
             this.toolStripButtonLogOut.Click += new System.EventHandler(this.toolStripButtonLogOut_Click);
             // 
@@ -767,7 +768,7 @@
             this.toolStripButtonCancel.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonCancel.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonCancel.Name = "toolStripButtonCancel";
-            this.toolStripButtonCancel.Size = new System.Drawing.Size(57, 22);
+            this.toolStripButtonCancel.Size = new System.Drawing.Size(60, 22);
             this.toolStripButtonCancel.Text = "Close F12";
             this.toolStripButtonCancel.ToolTipText = "انصراف F12";
             this.toolStripButtonCancel.Click += new System.EventHandler(this.toolStripButtonCancel_Click);
@@ -784,7 +785,7 @@
             this.toolStripButtonSave.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonSave.Name = "toolStripButtonSave";
             this.toolStripButtonSave.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.toolStripButtonSave.Size = new System.Drawing.Size(47, 22);
+            this.toolStripButtonSave.Size = new System.Drawing.Size(49, 22);
             this.toolStripButtonSave.Text = "Save F2";
             this.toolStripButtonSave.ToolTipText = "ثبت F2";
             this.toolStripButtonSave.Click += new System.EventHandler(this.toolStripButtonSave_Click);
@@ -800,7 +801,7 @@
             this.toolStripButtonDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonDelete.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonDelete.Name = "toolStripButtonDelete";
-            this.toolStripButtonDelete.Size = new System.Drawing.Size(56, 22);
+            this.toolStripButtonDelete.Size = new System.Drawing.Size(58, 22);
             this.toolStripButtonDelete.Text = "Delete F3";
             this.toolStripButtonDelete.ToolTipText = "حذف F3";
             this.toolStripButtonDelete.Click += new System.EventHandler(this.toolStripButtonDelete_Click);
@@ -816,7 +817,7 @@
             this.toolStripButtonChange.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonChange.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonChange.Name = "toolStripButtonChange";
-            this.toolStripButtonChange.Size = new System.Drawing.Size(59, 22);
+            this.toolStripButtonChange.Size = new System.Drawing.Size(63, 22);
             this.toolStripButtonChange.Text = "Update F4";
             this.toolStripButtonChange.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.toolStripButtonChange.ToolTipText = "تغییر F4";
@@ -835,7 +836,7 @@
             this.toolStripButtonNew.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonNew.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonNew.Name = "toolStripButtonNew";
-            this.toolStripButtonNew.Size = new System.Drawing.Size(46, 22);
+            this.toolStripButtonNew.Size = new System.Drawing.Size(50, 22);
             this.toolStripButtonNew.Text = "New F6";
             this.toolStripButtonNew.ToolTipText = "جدید  F6";
             this.toolStripButtonNew.Click += new System.EventHandler(this.toolStripButtonNew_Click);
@@ -851,7 +852,7 @@
             this.toolStripButtonClear.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonClear.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonClear.Name = "toolStripButtonClear";
-            this.toolStripButtonClear.Size = new System.Drawing.Size(50, 22);
+            this.toolStripButtonClear.Size = new System.Drawing.Size(52, 22);
             this.toolStripButtonClear.Text = "Clear F7";
             this.toolStripButtonClear.ToolTipText = "پاک F7";
             this.toolStripButtonClear.Click += new System.EventHandler(this.toolStripButtonClear_Click);
@@ -867,7 +868,7 @@
             this.toolStripButtonRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonRefresh.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonRefresh.Name = "toolStripButtonRefresh";
-            this.toolStripButtonRefresh.Size = new System.Drawing.Size(61, 22);
+            this.toolStripButtonRefresh.Size = new System.Drawing.Size(64, 22);
             this.toolStripButtonRefresh.Text = "Refresh F5";
             this.toolStripButtonRefresh.ToolTipText = "احیاء F5";
             this.toolStripButtonRefresh.Click += new System.EventHandler(this.toolStripButtonRefresh_Click);
@@ -884,7 +885,7 @@
             this.toolStripButtonFilter.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonFilter.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonFilter.Name = "toolStripButtonFilter";
-            this.toolStripButtonFilter.Size = new System.Drawing.Size(56, 22);
+            this.toolStripButtonFilter.Size = new System.Drawing.Size(58, 22);
             this.toolStripButtonFilter.Text = "Search F8";
             this.toolStripButtonFilter.ToolTipText = "جستجو F8";
             this.toolStripButtonFilter.Visible = false;
@@ -902,7 +903,7 @@
             this.toolStripButtonPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonPrint.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonPrint.Name = "toolStripButtonPrint";
-            this.toolStripButtonPrint.Size = new System.Drawing.Size(50, 22);
+            this.toolStripButtonPrint.Size = new System.Drawing.Size(51, 22);
             this.toolStripButtonPrint.Text = "Print F9";
             this.toolStripButtonPrint.ToolTipText = "چاپ F9";
             this.toolStripButtonPrint.Visible = false;
@@ -920,7 +921,7 @@
             this.toolStripButtonConfirm.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonConfirm.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonConfirm.Name = "toolStripButtonConfirm";
-            this.toolStripButtonConfirm.Size = new System.Drawing.Size(48, 22);
+            this.toolStripButtonConfirm.Size = new System.Drawing.Size(51, 22);
             this.toolStripButtonConfirm.Text = "OK F10";
             this.toolStripButtonConfirm.ToolTipText = "تایید F10";
             this.toolStripButtonConfirm.Click += new System.EventHandler(this.toolStripButtonConfirm_Click);
@@ -935,7 +936,7 @@
             this.toolStripButtonDetail.ForeColor = System.Drawing.Color.Navy;
             this.toolStripButtonDetail.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonDetail.Name = "toolStripButtonDetail";
-            this.toolStripButtonDetail.Size = new System.Drawing.Size(62, 22);
+            this.toolStripButtonDetail.Size = new System.Drawing.Size(68, 22);
             this.toolStripButtonDetail.Text = "View Alt+V";
             this.toolStripButtonDetail.Click += new System.EventHandler(this.toolStripButtonDetail_Click);
             // 
@@ -949,7 +950,7 @@
             this.toolStripButtonLast.ForeColor = System.Drawing.Color.Navy;
             this.toolStripButtonLast.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonLast.Name = "toolStripButtonLast";
-            this.toolStripButtonLast.Size = new System.Drawing.Size(33, 22);
+            this.toolStripButtonLast.Size = new System.Drawing.Size(34, 22);
             this.toolStripButtonLast.Text = "آخرین";
             this.toolStripButtonLast.Visible = false;
             this.toolStripButtonLast.Click += new System.EventHandler(this.toolStripButtonLast_Click);
@@ -965,7 +966,7 @@
             this.toolStripButtonNext.ForeColor = System.Drawing.Color.Navy;
             this.toolStripButtonNext.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonNext.Name = "toolStripButtonNext";
-            this.toolStripButtonNext.Size = new System.Drawing.Size(29, 22);
+            this.toolStripButtonNext.Size = new System.Drawing.Size(31, 22);
             this.toolStripButtonNext.Text = "بعدی";
             this.toolStripButtonNext.Visible = false;
             this.toolStripButtonNext.Click += new System.EventHandler(this.toolStripButtonNext_Click);
@@ -985,7 +986,7 @@
             this.toolStripButtonprevious.ForeColor = System.Drawing.Color.Navy;
             this.toolStripButtonprevious.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonprevious.Name = "toolStripButtonprevious";
-            this.toolStripButtonprevious.Size = new System.Drawing.Size(25, 22);
+            this.toolStripButtonprevious.Size = new System.Drawing.Size(26, 22);
             this.toolStripButtonprevious.Text = "قبلی";
             this.toolStripButtonprevious.Visible = false;
             this.toolStripButtonprevious.Click += new System.EventHandler(this.toolStripButtonprevious_Click);
@@ -1017,7 +1018,7 @@
             this.toolStripButtonCalculator.ForeColor = System.Drawing.Color.Navy;
             this.toolStripButtonCalculator.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.toolStripButtonCalculator.Name = "toolStripButtonCalculator";
-            this.toolStripButtonCalculator.Size = new System.Drawing.Size(31, 22);
+            this.toolStripButtonCalculator.Size = new System.Drawing.Size(32, 22);
             this.toolStripButtonCalculator.Text = "Calc";
             this.toolStripButtonCalculator.Click += new System.EventHandler(this.toolStripButtonCalculator_Click);
             // 
@@ -1071,7 +1072,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1052, 714);
             this.Controls.Add(this._frmMainAutoHideControl);
-            this.Controls.Add(this.toolStripTop);
             this.Controls.Add(this.windowDockingArea2);
             this.Controls.Add(this._frmMainUnpinnedTabAreaTop);
             this.Controls.Add(this._frmMainUnpinnedTabAreaBottom);
@@ -1079,6 +1079,7 @@
             this.Controls.Add(this._frmMainUnpinnedTabAreaRight);
             this.Controls.Add(this.toolStripMain);
             this.Controls.Add(this.usbMainStatusBar);
+            this.Controls.Add(this.toolStripTop);
             this.Controls.Add(this.menustripMain);
             this.Font = new System.Drawing.Font("B Nazanin", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

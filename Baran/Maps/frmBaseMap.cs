@@ -1039,8 +1039,7 @@ namespace Baran.Maps
         {
             objects.Markers.Clear();
             polygons.Polygons.Clear();
-            routes.Routes.Clear();
-           
+            routes.Routes.Clear();           
         }
 
         private void button1_Click(object sender, EventArgs e)

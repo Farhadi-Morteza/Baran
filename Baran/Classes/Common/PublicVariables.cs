@@ -116,15 +116,15 @@ namespace Baran.Classes.Common
 
 
 
-        public static Color partColor = Color.Red;
-        public static Color LandColor = Color.Green;
-        public static Color FieldColor = Color.GreenYellow;
-        public static Color WarehouseColor = Color.BurlyWood;
-        public static Color BuildingColor = Color.Brown;
-        public static Color WaterColor = Color.SkyBlue;
-        public static Color WaterstorageColor = Color.Blue;
-        public static Color WaterTransmissionLineColor = Color.Black;
-        public static Color TreeColor = Color.LightGreen;
+        public static Color partColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(146)))), ((int)(((byte)(172)))));
+        public static Color LandColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(190)))), ((int)(((byte)(11)))));
+        public static Color FieldColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
+        public static Color WarehouseColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(15)))), ((int)(((byte)(64)))));
+        public static Color BuildingColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(74)))), ((int)(((byte)(63)))));
+        public static Color WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+        public static Color WaterstorageColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
+        public static Color WaterTransmissionLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(92)))));
+        public static Color TreeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(213)))), ((int)(((byte)(178)))));
 
         public static int StrokeWidth = 3;
         public static System.Drawing.Drawing2D.DashStyle StrokeDashStyle = System.Drawing.Drawing2D.DashStyle.Solid;

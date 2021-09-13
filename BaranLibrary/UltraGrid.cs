@@ -301,16 +301,16 @@ namespace Baran.Windows.Forms
 
             try
             {
-                e.Row.Cells[ColumnKey.Update].Appearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("replaceColore16.png"));
+                e.Row.Cells[ColumnKey.Update].Appearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("replaceWhite16.png"));
                 e.Row.Cells[ColumnKey.Update].ButtonAppearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("replaceColore16.png"));
 
-                e.Row.Cells[ColumnKey.Delete].Appearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("deleteColore16.png"));
+                e.Row.Cells[ColumnKey.Delete].Appearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("deleteWhite16.png"));
                 e.Row.Cells[ColumnKey.Delete].ButtonAppearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("deleteColore16.png"));
 
-                e.Row.Cells[ColumnKey.New].Appearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("replaceColore16.png"));
+                e.Row.Cells[ColumnKey.New].Appearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("replaceWhite16.png"));
                 e.Row.Cells[ColumnKey.New].ButtonAppearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("replaceColore16.png"));
 
-                e.Row.Cells[ColumnKey.Detail].Appearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("DetailColore16.png"));
+                e.Row.Cells[ColumnKey.Detail].Appearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("DetailWhite16.png"));
                 e.Row.Cells[ColumnKey.Detail].ButtonAppearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("DetailColore16.png"));
 
 

@@ -221,7 +221,7 @@ namespace Baran.Dashboard
             // 
             // grpButons
             // 
-            this.grpButons.Location = new System.Drawing.Point(0, 898);
+            this.grpButons.Location = new System.Drawing.Point(0, 658);
             this.grpButons.Size = new System.Drawing.Size(1071, 75);
             // 
             // lblLine2
@@ -256,14 +256,14 @@ namespace Baran.Dashboard
             // 
             // lblLine3
             // 
-            this.lblLine3.Location = new System.Drawing.Point(1, 789);
+            this.lblLine3.Location = new System.Drawing.Point(1, 549);
             this.lblLine3.Size = new System.Drawing.Size(1069, 3);
             // 
             // grpMain
             // 
             this.grpMain.Controls.Add(this.egbMain);
             this.grpMain.Location = new System.Drawing.Point(0, 105);
-            this.grpMain.Size = new System.Drawing.Size(1071, 793);
+            this.grpMain.Size = new System.Drawing.Size(1071, 553);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
             this.grpMain.Controls.SetChildIndex(this.egbMain, 0);
             // 
@@ -273,7 +273,7 @@ namespace Baran.Dashboard
             this.egbMain.Controls.Add(this.egbMainPanel);
             this.egbMain.Cursor = System.Windows.Forms.Cursors.Hand;
             this.egbMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.egbMain.ExpandedSize = new System.Drawing.Size(1069, 789);
+            this.egbMain.ExpandedSize = new System.Drawing.Size(1069, 549);
             this.egbMain.HeaderBorderStyle = Infragistics.Win.UIElementBorderStyle.None;
             this.egbMain.HeaderClickAction = Infragistics.Win.Misc.GroupBoxHeaderClickAction.None;
             this.egbMain.HeaderPosition = Infragistics.Win.Misc.GroupBoxHeaderPosition.BottomOutsideBorder;
@@ -281,7 +281,7 @@ namespace Baran.Dashboard
             this.egbMain.Margin = new System.Windows.Forms.Padding(0);
             this.egbMain.Name = "egbMain";
             this.egbMain.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.egbMain.Size = new System.Drawing.Size(1069, 789);
+            this.egbMain.Size = new System.Drawing.Size(1069, 549);
             this.egbMain.TabIndex = 2;
             this.egbMain.UseHotTracking = Infragistics.Win.DefaultableBoolean.False;
             // 
@@ -293,7 +293,7 @@ namespace Baran.Dashboard
             this.egbMainPanel.Location = new System.Drawing.Point(1, 1);
             this.egbMainPanel.Name = "egbMainPanel";
             this.egbMainPanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.egbMainPanel.Size = new System.Drawing.Size(1067, 768);
+            this.egbMainPanel.Size = new System.Drawing.Size(1067, 528);
             this.egbMainPanel.TabIndex = 0;
             // 
             // tlpMain
@@ -1557,7 +1557,7 @@ namespace Baran.Dashboard
             // frmBaseCompanyInfoRpt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1071, 973);
+            this.ClientSize = new System.Drawing.Size(1071, 733);
             this.FormMessage = "";
             this.Name = "frmBaseCompanyInfoRpt";
             ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
