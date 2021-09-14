@@ -308,7 +308,6 @@
         private Infragistics.Win.UltraWinGrid.DocumentExport.UltraGridDocumentExporter ultraGridDocumentExporter1;
         private BaranLibrary.Timer tmrTimer;
         protected Windows.Forms.Button btnMaxMin;
-        protected Windows.Forms.GroupBox grpButons;
         public Windows.Forms.Label lblLine2;
         public Windows.Forms.GroupBox grpHeader;
         public Windows.Forms.PictureBox pictureBox1;
@@ -321,5 +320,6 @@
         public Windows.Forms.GroupBox grpMessage;
         public Windows.Forms.Label lblLine3;
         public Windows.Forms.GroupBox grpMain;
+        public Windows.Forms.GroupBox grpButons;
     }
 }

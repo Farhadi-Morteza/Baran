@@ -54,8 +54,8 @@ namespace Baran.Dashboard
 
             tblProductionCmb = (BaranDataAccess.Production.dstProducts.spr_prd_Production_cmb_SelectDataTable)cmbProduction.DataSource;
 
-            mskFromDate.Text = CurrentDate.Instance.CurrentDateShamsi;
-            mskToDate.Text = DateTimeUtility.AddDay(CurrentDate.Instance.CurrentDateShamsi, 30);
+            mskFromDate.Text = DateTimeUtility.AddDay(CurrentDate.Instance.CurrentDateShamsi, -30);
+            mskToDate.Text = CurrentDate.Instance.CurrentDateShamsi;
 
             DrowCharts();
          
@@ -358,43 +358,50 @@ namespace Baran.Dashboard
 
         private void lblMachinery_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Baran.Dashboard.frmMachineryRpt ofrm = new frmMachineryRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString(), FieldID, ProductionID);            
+            Baran.Dashboard.frmMachineryRpt ofrm = new frmMachineryRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString(), FieldID, ProductionID);
+            ofrm.grpButons.Visible = true;
             ofrm.Show();
         }
 
         private void lblWorker_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmWorkerRpt ofrm = new frmWorkerRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString(), FieldID, ProductionID);
+            ofrm.grpButons.Visible = true;
             ofrm.Show();
         }
 
         private void lblWater_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmWaterRpt ofrm = new frmWaterRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString(), FieldID, ProductionID);
+            ofrm.grpButons.Visible = true;
             ofrm.Show();
         }
 
         private void lblPesticide_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmPesticideRpt ofrm = new frmPesticideRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString(), FieldID, ProductionID);
+            ofrm.grpButons.Visible = true;
             ofrm.Show();
         }
 
         private void lblWaterStorage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmWaterStorageRpt ofrm = new frmWaterStorageRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString(), FieldID, ProductionID);
+            ofrm.grpButons.Visible = true;
             ofrm.Show();
         }
 
         private void lblChemicalAnalys_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmChemicalAnalysRpt ofrm = new frmChemicalAnalysRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString(), FieldID, ProductionID);
+            ofrm.grpButons.Visible = true;
             ofrm.Show();
         }
 
         private void lblFertilizer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmFertilizerRpt ofrm = new frmFertilizerRpt(mskFromDate.Value.ToString(), mskToDate.Value.ToString(), FieldID, ProductionID);
+            ofrm.grpButons.Visible = true;
             ofrm.Show();
 
         }

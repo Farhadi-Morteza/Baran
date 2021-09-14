@@ -490,7 +490,9 @@ namespace Baran.Classes.Common
 
     public static class UpdateSoftwareInfo
     {
-        public static readonly string FileName = "Baran.zip";
+        public static readonly string FileName = "AMSUpdate.zip";
+        public static readonly string ConfirmMessage = "نرم افزار بایستی بروز رسانی شود! /n  با توجه به اینکه نرم افزار برای بروز رسانی به ftp متصل می شود، ممکن است کمی زمان ببرد! /n  لطفا صبور باشید /n/n  آیا برنامه بروزرسانی شود؟";
+        public static readonly string SuccessUpdateMessage = "بروزرسانی با موفقیت انجام شد";
     }
 
 }

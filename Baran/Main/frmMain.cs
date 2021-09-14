@@ -66,10 +66,18 @@ namespace Baran
                     drwVersion = (BaranDataAccess.Settings.dstSettings.spr_Setting_VersionCheck_SelectRow)tblVersionInfo.Rows[0];
                     if (drwVersion.VersionNumber != BaranResources.CrossCheckForVersionNumber)
                     {
-                        DialogResult result = System.Windows.Forms.MessageBox.Show(BaranResources.VersionErrorMessage, "", System.Windows.Forms.MessageBoxButtons.YesNo, System.Windows.Forms.MessageBoxIcon.Error);
+                        DialogResult result = System.Windows.Forms.MessageBox.Show(UpdateSoftwareInfo.ConfirmMessage,
+                                                                                    "Software Update", 
+                                                                                    System.Windows.Forms.MessageBoxButtons.YesNo, 
+                                                                                    MessageBoxIcon.Information, 
+                                                                                    MessageBoxDefaultButton.Button1, 
+                                                                                    MessageBoxOptions.RtlReading |MessageBoxOptions.RightAlign);
                         if (result == DialogResult.Yes)
                         {
-                            UpdateSofteware();
+                            if (UpdateSofteware())
+                                MessageBox.Show(UpdateSoftwareInfo.SuccessUpdateMessage, "Update", MessageBoxButtons.OK);
+                            else
+                                return false;
                         }
                         else
                             return false;
@@ -163,9 +171,10 @@ namespace Baran
             }
         }
 
-        private void UpdateSofteware()
+        private bool UpdateSofteware()
         {
-
+            WaiteForm waite = new WaiteForm();
+            bool blnResult = false;
             int bufferSize = 100000;
 
             Uri url = new Uri(Path.Combine(ftpServerInfo.UpdateHost, UpdateSoftwareInfo.FileName));
@@ -201,18 +210,54 @@ namespace Baran
                     if (!extractPath.EndsWith(Path.DirectorySeparatorChar.ToString(), StringComparison.Ordinal))
                         extractPath += Path.DirectorySeparatorChar;
 
- 
-                    ZipFile.ExtractToDirectory(Path.Combine(Application.StartupPath, UpdateSoftwareInfo.FileName), extractPath);// Application.StartupPath);
+                    using (ZipArchive archive = ZipFile.OpenRead(zipPath))
+                    {
+                        foreach (ZipArchiveEntry entry in archive.Entries)
+                        {
+                            string entryFullName = Path.Combine(extractPath, entry.FullName);
+                            string entryPath = Path.GetDirectoryName(entryFullName);
+                            if (Directory.Exists(entryPath))
+                                Directory.CreateDirectory(entryPath);
 
-                    File.Delete(zipPath);
+                            string entryFn = Path.GetFileName(entry.FullName);
+                            if (!string.IsNullOrEmpty(entryFn))
+                                entry.ExtractToFile(entryFullName, true);
+                        }
+                    }
+
+                    System.Diagnostics.Process process = new System.Diagnostics.Process();
+                    try
+                    {
+                        process.StartInfo.UseShellExecute = false;
+                        process.StartInfo.FileName = Path.Combine(Application.StartupPath, "AMS.exe");
+                        process.StartInfo.CreateNoWindow = true;
+
+                        File.Delete(zipPath);
+
+                        process.Start();
+
+                        System.Environment.Exit(1);
+                    }
+                    catch 
+                    {
+                    }
+
+
+                    //ZipFile.ExtractToDirectory(Path.Combine(Application.StartupPath, UpdateSoftwareInfo.FileName), extractPath);// Application.StartupPath);
+
+                    //File.Delete(zipPath);
+
+                    //MessageBox.Show(UpdateSoftwareInfo.SuccessUpdateMessage, "Update", MessageBoxButtons.OK);
+                    //blnResult = true;
                    
                 }
             }
             catch
             {
                 MessageBoxX.ShowMessageBox(PublicEnum.EnmMessageType.msgDoNotDoPleaseTryAgine);
+                blnResult = false;
             }
-
+            return blnResult;
         }
 
         private void PaintBackGround(System.Drawing.Graphics graphics)

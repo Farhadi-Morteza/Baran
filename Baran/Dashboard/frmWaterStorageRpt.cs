@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Baran.Dashboard
 {
-    public partial class frmWaterStorageRpt : Baran.Base_Forms.frmChildBase
+    public partial class frmWaterStorageRpt : Baran.Base_Forms.frmSecondChildBase
     {
         public frmWaterStorageRpt()
         {

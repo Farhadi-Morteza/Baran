@@ -35,7 +35,7 @@
             Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance36 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("spr_dsb_Water_rpt", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("WaterName");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Date");
@@ -58,29 +58,29 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn19 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Update", 5);
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.SummarySettings summarySettings1 = new Infragistics.Win.UltraWinGrid.SummarySettings("", Infragistics.Win.UltraWinGrid.SummaryType.Sum, null, "UsageVolume", 2, true, "spr_dsb_Water_rpt", 0, Infragistics.Win.UltraWinGrid.SummaryPosition.UseSummaryPositionColumn, "UsageVolume", 2, true);
-            Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.SummarySettings summarySettings2 = new Infragistics.Win.UltraWinGrid.SummarySettings("", Infragistics.Win.UltraWinGrid.SummaryType.Sum, null, "TreatedArea", 3, true, "spr_dsb_Water_rpt", 0, Infragistics.Win.UltraWinGrid.SummaryPosition.UseSummaryPositionColumn, "TreatedArea", 3, true);
-            Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.SummarySettings summarySettings3 = new Infragistics.Win.UltraWinGrid.SummarySettings("", Infragistics.Win.UltraWinGrid.SummaryType.Sum, null, "LinkedArea", 12, true, "spr_dsb_Water_rpt", 0, Infragistics.Win.UltraWinGrid.SummaryPosition.UseSummaryPositionColumn, "LinkedArea", 12, true);
-            Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance37 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance38 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance39 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance24 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance25 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance27 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance28 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance29 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance30 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.SummarySettings summarySettings2 = new Infragistics.Win.UltraWinGrid.SummarySettings("", Infragistics.Win.UltraWinGrid.SummaryType.Sum, null, "TreatedArea", 3, true, "spr_dsb_Water_rpt", 0, Infragistics.Win.UltraWinGrid.SummaryPosition.UseSummaryPositionColumn, "TreatedArea", 3, true);
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance31 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance32 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinScrollBar.ScrollBarLook scrollBarLook1 = new Infragistics.Win.UltraWinScrollBar.ScrollBarLook();
+            Infragistics.Win.UltraWinGrid.SummarySettings summarySettings3 = new Infragistics.Win.UltraWinGrid.SummarySettings("", Infragistics.Win.UltraWinGrid.SummaryType.Sum, null, "LinkedArea", 12, true, "spr_dsb_Water_rpt", 0, Infragistics.Win.UltraWinGrid.SummaryPosition.UseSummaryPositionColumn, "LinkedArea", 12, true);
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance19 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance21 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance22 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance23 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance33 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance34 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance35 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance40 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance41 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance42 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance43 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance44 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinScrollBar.ScrollBarLook scrollBarLook1 = new Infragistics.Win.UltraWinScrollBar.ScrollBarLook();
+            Infragistics.Win.Appearance appearance45 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance46 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance47 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance48 = new Infragistics.Win.Appearance();
             Infragistics.UltraChart.Resources.Appearance.PaintElement paintElement1 = new Infragistics.UltraChart.Resources.Appearance.PaintElement();
             Infragistics.UltraChart.Resources.Appearance.LineChartAppearance lineChartAppearance1 = new Infragistics.UltraChart.Resources.Appearance.LineChartAppearance();
             Infragistics.UltraChart.Resources.Appearance.LineAppearance lineAppearance1 = new Infragistics.UltraChart.Resources.Appearance.LineAppearance();
@@ -96,7 +96,24 @@
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.grdItem = new Baran.Windows.Forms.UltraGrid();
             this.chtMain = new Baran.Windows.Forms.UltraChartMain();
-            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpPrint)).BeginInit();
+            this.grpPrint.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpCancel)).BeginInit();
+            this.grpCancel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpSave)).BeginInit();
+            this.grpSave.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpChange)).BeginInit();
+            this.grpChange.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpClear)).BeginInit();
+            this.grpClear.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpDelete)).BeginInit();
+            this.grpDelete.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpDoc)).BeginInit();
+            this.grpDoc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpRefresh)).BeginInit();
+            this.grpRefresh.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpNew)).BeginInit();
+            this.grpNew.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).BeginInit();
             this.grpHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -104,6 +121,8 @@
             this.grpMessage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).BeginInit();
             this.grpMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
+            this.grpButons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dstDashboard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpControls)).BeginInit();
             this.grpControls.SuspendLayout();
@@ -113,56 +132,134 @@
             ((System.ComponentModel.ISupportInitialize)(this.chtMain)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            // 
+            // btnDoc
+            // 
+            this.btnDoc.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            // 
+            // btnClear
+            // 
+            this.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            // 
+            // btnChange
+            // 
+            this.btnChange.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            // 
+            // btnSave
+            // 
+            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            // 
+            // btnCancle
+            // 
+            this.btnCancle.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            // 
+            // grpPrint
+            // 
+            this.grpPrint.Location = new System.Drawing.Point(113, 0);
+            // 
+            // grpCancel
+            // 
+            this.grpCancel.Location = new System.Drawing.Point(856, 0);
+            // 
+            // grpSave
+            // 
+            this.grpSave.Location = new System.Drawing.Point(729, 0);
+            this.grpSave.Visible = false;
+            // 
+            // grpChange
+            // 
+            this.grpChange.Location = new System.Drawing.Point(602, 0);
+            this.grpChange.Visible = false;
+            // 
+            // grpClear
+            // 
+            this.grpClear.Location = new System.Drawing.Point(475, 0);
+            // 
+            // grpDelete
+            // 
+            this.grpDelete.Location = new System.Drawing.Point(348, 0);
+            this.grpDelete.Visible = false;
+            // 
+            // grpDoc
+            // 
+            this.grpDoc.Location = new System.Drawing.Point(208, 0);
+            this.grpDoc.Visible = false;
+            // 
+            // grpRefresh
+            // 
+            this.grpRefresh.Location = new System.Drawing.Point(18, 0);
+            // 
+            // grpNew
+            // 
+            this.grpNew.Location = new System.Drawing.Point(-109, 0);
+            // 
+            // btnNew
+            // 
+            this.btnNew.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            // 
             // btnMaxMin
             // 
             this.btnMaxMin.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             // 
-            // grpButons
-            // 
-            this.grpButons.Location = new System.Drawing.Point(0, 696);
-            this.grpButons.Size = new System.Drawing.Size(884, 65);
-            // 
             // lblLine2
             // 
-            this.lblLine2.Size = new System.Drawing.Size(882, 3);
+            this.lblLine2.Size = new System.Drawing.Size(982, 3);
             // 
             // grpHeader
             // 
-            this.grpHeader.Size = new System.Drawing.Size(884, 65);
+            this.grpHeader.Size = new System.Drawing.Size(984, 65);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(819, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(919, 9);
             // 
             // lblCaption
             // 
-            this.lblCaption.Location = new System.Drawing.Point(513, 22);
+            this.lblCaption.Location = new System.Drawing.Point(613, 22);
             // 
             // lblMessage
             // 
-            this.lblMessage.Text = "";
+            this.lblMessage.Location = new System.Drawing.Point(1, 0);
+            this.lblMessage.Size = new System.Drawing.Size(834, 29);
             // 
             // lblLine1
             // 
-            this.lblLine1.Size = new System.Drawing.Size(882, 3);
+            this.lblLine1.Size = new System.Drawing.Size(982, 3);
             // 
             // grpMessage
             // 
-            this.grpMessage.Size = new System.Drawing.Size(884, 30);
+            this.grpMessage.Size = new System.Drawing.Size(984, 30);
             // 
             // lblLine3
             // 
             this.lblLine3.Location = new System.Drawing.Point(1, 597);
-            this.lblLine3.Size = new System.Drawing.Size(882, 3);
+            this.lblLine3.Size = new System.Drawing.Size(982, 3);
             // 
             // grpMain
             // 
             this.grpMain.Controls.Add(this.tlpMain);
             this.grpMain.Controls.Add(this.grpControls);
-            this.grpMain.Size = new System.Drawing.Size(884, 601);
+            this.grpMain.Size = new System.Drawing.Size(984, 601);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
             this.grpMain.Controls.SetChildIndex(this.grpControls, 0);
             this.grpMain.Controls.SetChildIndex(this.tlpMain, 0);
+            // 
+            // grpButons
+            // 
+            this.grpButons.Location = new System.Drawing.Point(0, 696);
+            this.grpButons.Size = new System.Drawing.Size(984, 65);
+            this.grpButons.Visible = false;
             // 
             // dstDashboard1
             // 
@@ -181,7 +278,7 @@
             this.grpControls.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpControls.Location = new System.Drawing.Point(1, 0);
             this.grpControls.Name = "grpControls";
-            this.grpControls.Size = new System.Drawing.Size(882, 42);
+            this.grpControls.Size = new System.Drawing.Size(982, 42);
             this.grpControls.TabIndex = 8;
             // 
             // cmbWater
@@ -206,7 +303,7 @@
             this.cmbWater.Location = new System.Drawing.Point(19, 8);
             this.cmbWater.Name = "cmbWater";
             this.cmbWater.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbWater.Size = new System.Drawing.Size(453, 22);
+            this.cmbWater.Size = new System.Drawing.Size(553, 22);
             this.cmbWater.TabIndex = 129;
             this.cmbWater.ValueChanged += new System.EventHandler(this.cmbWater_ValueChanged);
             // 
@@ -218,7 +315,7 @@
             appearance100.TextVAlignAsString = "Middle";
             this.label3.Appearance = appearance100;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(478, 13);
+            this.label3.Location = new System.Drawing.Point(578, 13);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(50, 15);
@@ -237,7 +334,7 @@
             this.mskToDate.Editable = Baran.Windows.Forms.Editable.Editable;
             this.mskToDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
             this.mskToDate.InputMask = "yyyy/mm/dd";
-            this.mskToDate.Location = new System.Drawing.Point(550, 9);
+            this.mskToDate.Location = new System.Drawing.Point(650, 9);
             this.mskToDate.Name = "mskToDate";
             this.mskToDate.Size = new System.Drawing.Size(90, 21);
             this.mskToDate.TabIndex = 126;
@@ -255,7 +352,7 @@
             this.mskFromDate.Editable = Baran.Windows.Forms.Editable.Editable;
             this.mskFromDate.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
             this.mskFromDate.InputMask = "yyyy/mm/dd";
-            this.mskFromDate.Location = new System.Drawing.Point(722, 10);
+            this.mskFromDate.Location = new System.Drawing.Point(822, 10);
             this.mskFromDate.Name = "mskFromDate";
             this.mskFromDate.Size = new System.Drawing.Size(90, 21);
             this.mskFromDate.TabIndex = 125;
@@ -270,7 +367,7 @@
             this.label1.Appearance = appearance1;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(817, 12);
+            this.label1.Location = new System.Drawing.Point(917, 12);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(48, 16);
@@ -286,7 +383,7 @@
             this.label2.Appearance = appearance8;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(646, 11);
+            this.label2.Location = new System.Drawing.Point(746, 11);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(47, 16);
@@ -308,7 +405,7 @@
             this.tlpMain.RowCount = 2;
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpMain.Size = new System.Drawing.Size(882, 555);
+            this.tlpMain.Size = new System.Drawing.Size(982, 555);
             this.tlpMain.TabIndex = 9;
             // 
             // grdItem
@@ -316,12 +413,12 @@
             this.grdItem.BaseUltraGrid = this.grdItem;
             this.grdItem.DataMember = "spr_dsb_Water_rpt";
             this.grdItem.DataSource = this.dstDashboard1;
-            appearance36.BackColor = System.Drawing.Color.Transparent;
-            appearance36.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            appearance36.ForeColor = System.Drawing.Color.White;
-            appearance36.TextHAlignAsString = "Right";
-            appearance36.TextVAlignAsString = "Middle";
-            this.grdItem.DisplayLayout.Appearance = appearance36;
+            appearance13.BackColor = System.Drawing.Color.Transparent;
+            appearance13.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            appearance13.ForeColor = System.Drawing.Color.White;
+            appearance13.TextHAlignAsString = "Right";
+            appearance13.TextVAlignAsString = "Middle";
+            this.grdItem.DisplayLayout.Appearance = appearance13;
             ultraGridColumn1.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn1.Header.Caption = "منبع آب";
             ultraGridColumn1.Header.VisiblePosition = 13;
@@ -379,7 +476,7 @@
             ultraGridColumn14.Header.Caption = "";
             ultraGridColumn14.Header.VisiblePosition = 0;
             ultraGridColumn14.MergedCellStyle = Infragistics.Win.UltraWinGrid.MergedCellStyle.Always;
-            ultraGridColumn14.Width = 91;
+            ultraGridColumn14.Width = 191;
             ultraGridColumn15.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Append;
             ultraGridColumn15.Header.Caption = "#";
             ultraGridColumn15.Header.VisiblePosition = 18;
@@ -433,11 +530,11 @@
             appearance2.ForeColor = System.Drawing.Color.DarkBlue;
             ultraGridBand1.Override.SummaryValueAppearance = appearance2;
             summarySettings1.DisplayFormat = "{0:#,###,###,###.##}";
-            summarySettings1.GroupBySummaryValueAppearance = appearance10;
+            summarySettings1.GroupBySummaryValueAppearance = appearance3;
             summarySettings2.DisplayFormat = "{0:#,###,###,###.##}";
-            summarySettings2.GroupBySummaryValueAppearance = appearance11;
+            summarySettings2.GroupBySummaryValueAppearance = appearance4;
             summarySettings3.DisplayFormat = "{0:#,###,###,###.##}";
-            summarySettings3.GroupBySummaryValueAppearance = appearance12;
+            summarySettings3.GroupBySummaryValueAppearance = appearance5;
             ultraGridBand1.Summaries.AddRange(new Infragistics.Win.UltraWinGrid.SummarySettings[] {
             summarySettings1,
             summarySettings2,
@@ -445,46 +542,46 @@
             ultraGridBand1.SummaryFooterCaption = "";
             this.grdItem.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdItem.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
-            appearance3.BackColor = System.Drawing.Color.WhiteSmoke;
-            appearance3.ForeColor = System.Drawing.Color.Black;
-            this.grdItem.DisplayLayout.CaptionAppearance = appearance3;
+            appearance19.BackColor = System.Drawing.Color.WhiteSmoke;
+            appearance19.ForeColor = System.Drawing.Color.Black;
+            this.grdItem.DisplayLayout.CaptionAppearance = appearance19;
             this.grdItem.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.True;
-            appearance37.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            appearance37.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance37.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-            appearance37.BorderColor = System.Drawing.SystemColors.Window;
-            this.grdItem.DisplayLayout.GroupByBox.Appearance = appearance37;
-            appearance38.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.grdItem.DisplayLayout.GroupByBox.BandLabelAppearance = appearance38;
+            appearance20.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            appearance20.BackColor2 = System.Drawing.SystemColors.ControlDark;
+            appearance20.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
+            appearance20.BorderColor = System.Drawing.SystemColors.Window;
+            this.grdItem.DisplayLayout.GroupByBox.Appearance = appearance20;
+            appearance21.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.grdItem.DisplayLayout.GroupByBox.BandLabelAppearance = appearance21;
             this.grdItem.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
-            appearance39.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            appearance39.BackColor2 = System.Drawing.SystemColors.Control;
-            appearance39.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance39.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.grdItem.DisplayLayout.GroupByBox.PromptAppearance = appearance39;
+            appearance22.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            appearance22.BackColor2 = System.Drawing.SystemColors.Control;
+            appearance22.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
+            appearance22.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.grdItem.DisplayLayout.GroupByBox.PromptAppearance = appearance22;
             this.grdItem.DisplayLayout.MaxColScrollRegions = 1;
             this.grdItem.DisplayLayout.MaxRowScrollRegions = 1;
-            appearance24.BackColor = System.Drawing.SystemColors.Window;
-            appearance24.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.grdItem.DisplayLayout.Override.ActiveCellAppearance = appearance24;
-            appearance25.BackColor = System.Drawing.Color.Gray;
-            appearance25.BackColor2 = System.Drawing.Color.Gray;
-            appearance25.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-            appearance25.ForeColor = System.Drawing.Color.White;
-            this.grdItem.DisplayLayout.Override.ActiveRowAppearance = appearance25;
+            appearance23.BackColor = System.Drawing.SystemColors.Window;
+            appearance23.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.grdItem.DisplayLayout.Override.ActiveCellAppearance = appearance23;
+            appearance33.BackColor = System.Drawing.Color.Gray;
+            appearance33.BackColor2 = System.Drawing.Color.Gray;
+            appearance33.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
+            appearance33.ForeColor = System.Drawing.Color.White;
+            this.grdItem.DisplayLayout.Override.ActiveRowAppearance = appearance33;
             this.grdItem.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Rounded1;
             this.grdItem.DisplayLayout.Override.BorderStyleHeader = Infragistics.Win.UIElementBorderStyle.None;
             this.grdItem.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.None;
             this.grdItem.DisplayLayout.Override.BorderStyleRowSelector = Infragistics.Win.UIElementBorderStyle.None;
-            appearance27.BackColor = System.Drawing.SystemColors.Window;
-            this.grdItem.DisplayLayout.Override.CardAreaAppearance = appearance27;
-            appearance28.BorderColor = System.Drawing.Color.Gray;
-            appearance28.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
-            this.grdItem.DisplayLayout.Override.CellAppearance = appearance28;
+            appearance34.BackColor = System.Drawing.SystemColors.Window;
+            this.grdItem.DisplayLayout.Override.CardAreaAppearance = appearance34;
+            appearance35.BorderColor = System.Drawing.Color.Gray;
+            appearance35.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
+            this.grdItem.DisplayLayout.Override.CellAppearance = appearance35;
             this.grdItem.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.RowSelect;
             this.grdItem.DisplayLayout.Override.CellPadding = 0;
             this.grdItem.DisplayLayout.Override.CellSpacing = 2;
-            this.grdItem.DisplayLayout.Override.DefaultRowHeight = 25;
+            this.grdItem.DisplayLayout.Override.DefaultRowHeight = 20;
             this.grdItem.DisplayLayout.Override.FilterOperandStyle = Infragistics.Win.UltraWinGrid.FilterOperandStyle.Combo;
             this.grdItem.DisplayLayout.Override.FilterOperatorDropDownItems = ((Infragistics.Win.UltraWinGrid.FilterOperatorDropDownItems)(((((((((((((((((Infragistics.Win.UltraWinGrid.FilterOperatorDropDownItems.Equals | Infragistics.Win.UltraWinGrid.FilterOperatorDropDownItems.NotEquals) 
             | Infragistics.Win.UltraWinGrid.FilterOperatorDropDownItems.LessThan) 
@@ -504,60 +601,60 @@
             | Infragistics.Win.UltraWinGrid.FilterOperatorDropDownItems.Reserved)));
             this.grdItem.DisplayLayout.Override.FilterOperatorLocation = Infragistics.Win.UltraWinGrid.FilterOperatorLocation.WithOperand;
             this.grdItem.DisplayLayout.Override.FilterUIType = Infragistics.Win.UltraWinGrid.FilterUIType.FilterRow;
-            appearance29.BackColor = System.Drawing.SystemColors.Control;
-            appearance29.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance29.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
-            appearance29.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance29.BorderColor = System.Drawing.SystemColors.Window;
-            this.grdItem.DisplayLayout.Override.GroupByRowAppearance = appearance29;
-            appearance30.BackColor = System.Drawing.Color.Transparent;
-            appearance30.BackColor2 = System.Drawing.Color.Transparent;
-            appearance30.BackColorAlpha = Infragistics.Win.Alpha.Transparent;
-            appearance30.BackGradientStyle = Infragistics.Win.GradientStyle.None;
-            appearance30.BorderColor = System.Drawing.Color.Transparent;
-            appearance30.FontData.BoldAsString = "True";
-            appearance30.FontData.Name = "B Nazanin";
-            appearance30.FontData.SizeInPoints = 10F;
-            appearance30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(179)))), ((int)(((byte)(4)))));
-            appearance30.TextHAlignAsString = "Center";
-            appearance30.TextVAlignAsString = "Middle";
-            this.grdItem.DisplayLayout.Override.HeaderAppearance = appearance30;
+            appearance40.BackColor = System.Drawing.SystemColors.Control;
+            appearance40.BackColor2 = System.Drawing.SystemColors.ControlDark;
+            appearance40.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
+            appearance40.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
+            appearance40.BorderColor = System.Drawing.SystemColors.Window;
+            this.grdItem.DisplayLayout.Override.GroupByRowAppearance = appearance40;
+            appearance41.BackColor = System.Drawing.Color.Transparent;
+            appearance41.BackColor2 = System.Drawing.Color.Transparent;
+            appearance41.BackColorAlpha = Infragistics.Win.Alpha.Transparent;
+            appearance41.BackGradientStyle = Infragistics.Win.GradientStyle.None;
+            appearance41.BorderColor = System.Drawing.Color.Transparent;
+            appearance41.FontData.BoldAsString = "True";
+            appearance41.FontData.Name = "B Nazanin";
+            appearance41.FontData.SizeInPoints = 10F;
+            appearance41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(179)))), ((int)(((byte)(4)))));
+            appearance41.TextHAlignAsString = "Center";
+            appearance41.TextVAlignAsString = "Middle";
+            this.grdItem.DisplayLayout.Override.HeaderAppearance = appearance41;
             this.grdItem.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
             this.grdItem.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsVista;
-            appearance4.ForeColor = System.Drawing.Color.Yellow;
-            this.grdItem.DisplayLayout.Override.HotTrackRowAppearance = appearance4;
+            appearance42.ForeColor = System.Drawing.Color.Yellow;
+            this.grdItem.DisplayLayout.Override.HotTrackRowAppearance = appearance42;
             this.grdItem.DisplayLayout.Override.MergedCellContentArea = Infragistics.Win.UltraWinGrid.MergedCellContentArea.VisibleRect;
             this.grdItem.DisplayLayout.Override.MergedCellStyle = Infragistics.Win.UltraWinGrid.MergedCellStyle.Always;
-            appearance31.BackColor = System.Drawing.Color.Transparent;
-            appearance31.BorderColor = System.Drawing.Color.Silver;
-            this.grdItem.DisplayLayout.Override.RowAppearance = appearance31;
+            appearance43.BackColor = System.Drawing.Color.Transparent;
+            appearance43.BorderColor = System.Drawing.Color.Silver;
+            this.grdItem.DisplayLayout.Override.RowAppearance = appearance43;
             this.grdItem.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False;
-            appearance32.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.grdItem.DisplayLayout.Override.TemplateAddRowAppearance = appearance32;
-            appearance5.BorderAlpha = Infragistics.Win.Alpha.Transparent;
-            scrollBarLook1.Appearance = appearance5;
-            appearance6.BackColor = System.Drawing.Color.DarkGray;
-            appearance6.BackGradientStyle = Infragistics.Win.GradientStyle.None;
-            scrollBarLook1.ButtonAppearance = appearance6;
-            appearance7.BackColor = System.Drawing.Color.Gray;
-            appearance7.BackGradientStyle = Infragistics.Win.GradientStyle.None;
-            scrollBarLook1.ThumbAppearance = appearance7;
-            appearance9.BackColor = System.Drawing.Color.DarkGray;
-            appearance9.BackGradientStyle = Infragistics.Win.GradientStyle.None;
-            scrollBarLook1.TrackAppearance = appearance9;
+            appearance44.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.grdItem.DisplayLayout.Override.TemplateAddRowAppearance = appearance44;
+            appearance45.BorderAlpha = Infragistics.Win.Alpha.Transparent;
+            scrollBarLook1.Appearance = appearance45;
+            appearance46.BackColor = System.Drawing.Color.DarkGray;
+            appearance46.BackGradientStyle = Infragistics.Win.GradientStyle.None;
+            scrollBarLook1.ButtonAppearance = appearance46;
+            appearance47.BackColor = System.Drawing.Color.Gray;
+            appearance47.BackGradientStyle = Infragistics.Win.GradientStyle.None;
+            scrollBarLook1.ThumbAppearance = appearance47;
+            appearance48.BackColor = System.Drawing.Color.DarkGray;
+            appearance48.BackGradientStyle = Infragistics.Win.GradientStyle.None;
+            scrollBarLook1.TrackAppearance = appearance48;
             scrollBarLook1.ViewStyle = Infragistics.Win.UltraWinScrollBar.ScrollBarViewStyle.Office2007;
             this.grdItem.DisplayLayout.ScrollBarLook = scrollBarLook1;
             this.grdItem.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
             this.grdItem.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
-            this.grdItem.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
             this.grdItem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.grdItem.InputLanguage = Baran.Windows.Forms.InputLanguage.Farsi;
             this.grdItem.Location = new System.Drawing.Point(3, 280);
             this.grdItem.Name = "grdItem";
-            this.grdItem.Size = new System.Drawing.Size(876, 272);
+            this.grdItem.Size = new System.Drawing.Size(976, 272);
             this.grdItem.SumColumnsWidth = 785;
             this.grdItem.TabIndex = 5;
+            this.grdItem.AfterRowFilterChanged += new Infragistics.Win.UltraWinGrid.AfterRowFilterChangedEventHandler(this.grdItem_AfterRowFilterChanged);
             // 
 //			'UltraChartMain' properties's serialization: Since 'ChartType' changes the way axes look,
 //			'ChartType' must be persisted ahead of any Axes change made in design time.
@@ -698,19 +795,35 @@
             this.chtMain.LineChart = lineChartAppearance1;
             this.chtMain.Location = new System.Drawing.Point(3, 3);
             this.chtMain.Name = "chtMain";
-            this.chtMain.Size = new System.Drawing.Size(876, 271);
+            this.chtMain.Size = new System.Drawing.Size(976, 271);
             this.chtMain.TabIndex = 4;
             // 
             // frmWaterRpt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(884, 761);
-            this.FormMessage = "";
+            this.ClientSize = new System.Drawing.Size(984, 761);
             this.Name = "frmWaterRpt";
             this.ShowIcon = false;
             this.ShowInTaskbar = true;
             this.Text = "منابع آب";
-            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpPrint)).EndInit();
+            this.grpPrint.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grpCancel)).EndInit();
+            this.grpCancel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grpSave)).EndInit();
+            this.grpSave.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grpChange)).EndInit();
+            this.grpChange.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grpClear)).EndInit();
+            this.grpClear.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grpDelete)).EndInit();
+            this.grpDelete.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grpDoc)).EndInit();
+            this.grpDoc.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grpRefresh)).EndInit();
+            this.grpRefresh.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grpNew)).EndInit();
+            this.grpNew.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).EndInit();
             this.grpHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -719,6 +832,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).EndInit();
             this.grpMain.ResumeLayout(false);
             this.grpMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
+            this.grpButons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dstDashboard1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpControls)).EndInit();
             this.grpControls.ResumeLayout(false);

@@ -9,7 +9,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="spr_Setting_VersionCheck_SelectTableAdapter" GeneratorDataComponentClassName="spr_Setting_VersionCheck_SelectTableAdapter" Name="spr_Setting_VersionCheck_Select" UserDataComponentName="spr_Setting_VersionCheck_SelectTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BaranConnectionString (Settings)" DbObjectName="Baran.dbo.spr_Setting_VersionCheck_Select" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillVersionTable" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetVersionTable" GeneratorSourceName="FillVersionTable" GetMethodModifier="Public" GetMethodName="GetVersionTable" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetVersionTable" UserSourceName="FillVersionTable">
+              <DbSource ConnectionRef="BaranConnectionString (Settings)" DbObjectName="AMS.dbo.spr_Setting_VersionCheck_Select" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillVersionTable" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetVersionTable" GeneratorSourceName="FillVersionTable" GetMethodModifier="Public" GetMethodName="GetVersionTable" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetVersionTable" UserSourceName="FillVersionTable">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.spr_Setting_VersionCheck_Select</CommandText>
@@ -25,6 +25,7 @@
               <Mapping SourceColumn="VersionDate" DataSetColumn="VersionDate" />
               <Mapping SourceColumn="VersionDescription" DataSetColumn="VersionDescription" />
               <Mapping SourceColumn="VersionNumber" DataSetColumn="VersionNumber" />
+              <Mapping SourceColumn="IsActive" DataSetColumn="IsActive" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -33,28 +34,29 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="dstSettings" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dstSettings" msprop:Generator_UserDSName="dstSettings" msprop:EnableTableAdapterManager="true">
+  <xs:element name="dstSettings" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dstSettings" msprop:Generator_UserDSName="dstSettings">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="spr_Setting_VersionCheck_Select" msprop:Generator_UserTableName="spr_Setting_VersionCheck_Select" msprop:Generator_RowDeletedName="spr_Setting_VersionCheck_SelectRowDeleted" msprop:Generator_TableClassName="spr_Setting_VersionCheck_SelectDataTable" msprop:Generator_RowChangedName="spr_Setting_VersionCheck_SelectRowChanged" msprop:Generator_RowClassName="spr_Setting_VersionCheck_SelectRow" msprop:Generator_RowChangingName="spr_Setting_VersionCheck_SelectRowChanging" msprop:Generator_RowEvArgName="spr_Setting_VersionCheck_SelectRowChangeEvent" msprop:Generator_RowEvHandlerName="spr_Setting_VersionCheck_SelectRowChangeEventHandler" msprop:Generator_TablePropName="spr_Setting_VersionCheck_Select" msprop:Generator_TableVarName="tablespr_Setting_VersionCheck_Select" msprop:Generator_RowDeletingName="spr_Setting_VersionCheck_SelectRowDeleting">
+        <xs:element name="spr_Setting_VersionCheck_Select" msprop:Generator_TableClassName="spr_Setting_VersionCheck_SelectDataTable" msprop:Generator_RowEvArgName="spr_Setting_VersionCheck_SelectRowChangeEvent" msprop:Generator_TablePropName="spr_Setting_VersionCheck_Select" msprop:Generator_TableVarName="tablespr_Setting_VersionCheck_Select" msprop:Generator_RowEvHandlerName="spr_Setting_VersionCheck_SelectRowChangeEventHandler" msprop:Generator_RowDeletingName="spr_Setting_VersionCheck_SelectRowDeleting" msprop:Generator_RowChangingName="spr_Setting_VersionCheck_SelectRowChanging" msprop:Generator_RowDeletedName="spr_Setting_VersionCheck_SelectRowDeleted" msprop:Generator_UserTableName="spr_Setting_VersionCheck_Select" msprop:Generator_RowChangedName="spr_Setting_VersionCheck_SelectRowChanged" msprop:Generator_RowClassName="spr_Setting_VersionCheck_SelectRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="VersionID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="VersionID" msprop:Generator_ColumnPropNameInRow="VersionID" msprop:Generator_ColumnVarNameInTable="columnVersionID" msprop:Generator_ColumnPropNameInTable="VersionIDColumn" type="xs:int" />
-              <xs:element name="VersionDate" msprop:Generator_UserColumnName="VersionDate" msprop:Generator_ColumnPropNameInRow="VersionDate" msprop:Generator_ColumnVarNameInTable="columnVersionDate" msprop:Generator_ColumnPropNameInTable="VersionDateColumn" type="xs:dateTime" />
-              <xs:element name="VersionDescription" msprop:Generator_UserColumnName="VersionDescription" msprop:Generator_ColumnPropNameInRow="VersionDescription" msprop:Generator_ColumnVarNameInTable="columnVersionDescription" msprop:Generator_ColumnPropNameInTable="VersionDescriptionColumn" minOccurs="0">
+              <xs:element name="VersionID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnVersionID" msprop:Generator_ColumnPropNameInRow="VersionID" msprop:Generator_ColumnPropNameInTable="VersionIDColumn" msprop:Generator_UserColumnName="VersionID" type="xs:int" />
+              <xs:element name="VersionDate" msprop:Generator_ColumnVarNameInTable="columnVersionDate" msprop:Generator_ColumnPropNameInRow="VersionDate" msprop:Generator_ColumnPropNameInTable="VersionDateColumn" msprop:Generator_UserColumnName="VersionDate" type="xs:dateTime" />
+              <xs:element name="VersionDescription" msprop:Generator_ColumnVarNameInTable="columnVersionDescription" msprop:Generator_ColumnPropNameInRow="VersionDescription" msprop:Generator_ColumnPropNameInTable="VersionDescriptionColumn" msprop:Generator_UserColumnName="VersionDescription" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="VersionNumber" msprop:Generator_UserColumnName="VersionNumber" msprop:Generator_ColumnPropNameInRow="VersionNumber" msprop:Generator_ColumnVarNameInTable="columnVersionNumber" msprop:Generator_ColumnPropNameInTable="VersionNumberColumn">
+              <xs:element name="VersionNumber" msprop:Generator_ColumnVarNameInTable="columnVersionNumber" msprop:Generator_ColumnPropNameInRow="VersionNumber" msprop:Generator_ColumnPropNameInTable="VersionNumberColumn" msprop:Generator_UserColumnName="VersionNumber">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="14" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="IsActive" msprop:Generator_ColumnVarNameInTable="columnIsActive" msprop:Generator_ColumnPropNameInRow="IsActive" msprop:Generator_ColumnPropNameInTable="IsActiveColumn" msprop:Generator_UserColumnName="IsActive" type="xs:boolean" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

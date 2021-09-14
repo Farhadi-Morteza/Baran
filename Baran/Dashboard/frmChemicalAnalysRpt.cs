@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Baran.Dashboard
 {
-    public partial class frmChemicalAnalysRpt : Baran.Base_Forms.frmChildBase
+    public partial class frmChemicalAnalysRpt : Baran.Base_Forms.frmSecondChildBase
     {
         public frmChemicalAnalysRpt()
         {

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Baran.Dashboard
 {
-    public partial class frmPesticideRpt : Baran.Base_Forms.frmChildBase
+    public partial class frmPesticideRpt : Baran.Base_Forms.frmSecondChildBase
     {
         public frmPesticideRpt()
         {

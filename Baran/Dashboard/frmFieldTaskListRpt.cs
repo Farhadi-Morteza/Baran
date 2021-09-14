@@ -168,9 +168,5 @@ namespace Baran.Dashboard
             catch { }
         }
 
-        private void grdItem_InitializeRow(object sender, Infragistics.Win.UltraWinGrid.InitializeRowEventArgs e)
-        {
-            e.Row.Cells["Details"].Appearance.ImageBackground = System.Drawing.Image.FromFile(BaranLibrary.GeneralMethods.PictureFileNamePath(cnsPictureName.Detail16));
-        }
     }
 }

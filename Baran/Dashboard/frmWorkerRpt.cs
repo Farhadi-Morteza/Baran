@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Baran.Dashboard
 {
-    public partial class frmWorkerRpt : Baran.Base_Forms.frmChildBase
+    public partial class frmWorkerRpt : Baran.Base_Forms.frmSecondChildBase
     {
         public frmWorkerRpt()
         {
