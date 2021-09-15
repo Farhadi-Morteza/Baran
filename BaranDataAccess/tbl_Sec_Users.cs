@@ -14,12 +14,7 @@ namespace BaranDataAccess
     
     public partial class tbl_Sec_Users
     {
-        public tbl_Sec_Users()
-        {
-            this.tbl_Sec_Current_User = new HashSet<tbl_Sec_Current_User>();
-        }
-    
-        public long UserID { get; set; }
+        public int UserID { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
         public Nullable<bool> IsActiveUser { get; set; }
@@ -48,7 +43,6 @@ namespace BaranDataAccess
         public Nullable<int> Fk_SubcollectionID { get; set; }
         public Nullable<int> Fk_PartID { get; set; }
     
-        public virtual ICollection<tbl_Sec_Current_User> tbl_Sec_Current_User { get; set; }
         public virtual tbl_Sec_Shops tbl_Sec_Shops { get; set; }
     }
 }

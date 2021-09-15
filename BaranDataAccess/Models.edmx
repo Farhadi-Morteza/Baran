@@ -570,14 +570,6 @@
           <Property Name="FacRptPrintPreView" Type="bit" />
           <Property Name="ShowEconomicCode" Type="bit" />
         </EntityType>
-        <EntityType Name="tbl_Sec_Current_User">
-          <Key>
-            <PropertyRef Name="CurrentUserID" />
-          </Key>
-          <Property Name="CurrentUserID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="FK_UerID" Type="bigint" Nullable="false" />
-          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
-        </EntityType>
         <EntityType Name="tbl_Sec_Items">
           <Key>
             <PropertyRef Name="ItemID" />
@@ -648,9 +640,9 @@
           <Property Name="ShopDescription" Type="nvarchar" MaxLength="1000" />
           <Property Name="IsActive" Type="bit" />
           <Property Name="CreatDate" Type="datetime" />
-          <Property Name="CreateUserID" Type="bigint" />
+          <Property Name="CreateUserID" Type="int" />
           <Property Name="InactivationDate" Type="datetime" />
-          <Property Name="InactivationUserID" Type="bigint" />
+          <Property Name="InactivationUserID" Type="int" />
           <Property Name="RegistrationNumber" Type="nvarchar" MaxLength="50" />
           <Property Name="NationalID" Type="nvarchar" MaxLength="50" />
           <Property Name="Fk_ProvinceID" Type="int" />
@@ -669,7 +661,7 @@
           <Key>
             <PropertyRef Name="UserID" />
           </Key>
-          <Property Name="UserID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="14" Nullable="false" />
           <Property Name="IsActiveUser" Type="bit" />
@@ -713,6 +705,7 @@
           <Property Name="VersionDate" Type="datetime" Nullable="false" />
           <Property Name="VersionDescription" Type="nvarchar(max)" />
           <Property Name="VersionNumber" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="IsActive" Type="bit" />
         </EntityType>
         <EntityType Name="tbl_src_Buildings">
           <Key>
@@ -1426,18 +1419,6 @@ warning 6002: The table/view 'AMS.dbo.viw_Part_Location' does not have a primary
           <Property Name="SubCollectionID" Type="int" Nullable="false" />
           <Property Name="CollectionID" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK_tbl_Sec_Current_User_tbl_Sec_Users">
-          <End Role="tbl_Sec_Users" Type="Self.tbl_Sec_Users" Multiplicity="1" />
-          <End Role="tbl_Sec_Current_User" Type="Self.tbl_Sec_Current_User" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tbl_Sec_Users">
-              <PropertyRef Name="UserID" />
-            </Principal>
-            <Dependent Role="tbl_Sec_Current_User">
-              <PropertyRef Name="FK_UerID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_tbl_Sec_Users_tbl_Sec_Shops">
           <End Role="tbl_Sec_Shops" Type="Self.tbl_Sec_Shops" Multiplicity="1" />
           <End Role="tbl_Sec_Users" Type="Self.tbl_Sec_Users" Multiplicity="*" />
@@ -1739,6 +1720,7 @@ warning 6002: The table/view 'AMS.dbo.viw_Part_Location' does not have a primary
           <Parameter Name="CollectionID" Type="int" Mode="In" />
           <Parameter Name="SubcollectionID" Type="int" Mode="In" />
           <Parameter Name="PartID" Type="int" Mode="In" />
+          <Parameter Name="UserID" Type="int" Mode="In" />
         </Function>
         <Function Name="spr_src_Field_Map_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Action" Type="int" Mode="In" />
@@ -1750,6 +1732,7 @@ warning 6002: The table/view 'AMS.dbo.viw_Part_Location' does not have a primary
           <Parameter Name="SubcollectionID" Type="int" Mode="In" />
           <Parameter Name="PartID" Type="int" Mode="In" />
           <Parameter Name="FieldID" Type="int" Mode="In" />
+          <Parameter Name="UserID" Type="int" Mode="In" />
         </Function>
         <Function Name="spr_src_Land_Map_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Action" Type="int" Mode="In" />
@@ -1760,16 +1743,19 @@ warning 6002: The table/view 'AMS.dbo.viw_Part_Location' does not have a primary
           <Parameter Name="CollectionID" Type="int" Mode="In" />
           <Parameter Name="SubcollectionID" Type="int" Mode="In" />
           <Parameter Name="PartID" Type="int" Mode="In" />
+          <Parameter Name="UserID" Type="int" Mode="In" />
         </Function>
         <Function Name="spr_src_PartLocation_Rpt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="CollectionID" Type="int" Mode="In" />
           <Parameter Name="SubcollectionID" Type="int" Mode="In" />
           <Parameter Name="PartID" Type="int" Mode="In" />
+          <Parameter Name="UserID" Type="int" Mode="In" />
         </Function>
         <Function Name="spr_src_TreeLocation_Rpt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="CollectionID" Type="int" Mode="In" />
           <Parameter Name="SubcollectionID" Type="int" Mode="In" />
           <Parameter Name="PartID" Type="int" Mode="In" />
+          <Parameter Name="UserID" Type="int" Mode="In" />
         </Function>
         <Function Name="spr_src_WareHouse_Map_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Action" Type="int" Mode="In" />
@@ -1780,21 +1766,25 @@ warning 6002: The table/view 'AMS.dbo.viw_Part_Location' does not have a primary
           <Parameter Name="CollectionID" Type="int" Mode="In" />
           <Parameter Name="SubcollectionID" Type="int" Mode="In" />
           <Parameter Name="PartID" Type="int" Mode="In" />
+          <Parameter Name="UserID" Type="int" Mode="In" />
         </Function>
         <Function Name="spr_src_WaterLocation_Rpt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="CollectionID" Type="int" Mode="In" />
           <Parameter Name="SubcollectionID" Type="int" Mode="In" />
           <Parameter Name="PartID" Type="int" Mode="In" />
+          <Parameter Name="UserID" Type="int" Mode="In" />
         </Function>
         <Function Name="spr_src_WaterStorageLocation_Rpt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="CollectionID" Type="int" Mode="In" />
           <Parameter Name="SubcollectionID" Type="int" Mode="In" />
           <Parameter Name="PartID" Type="int" Mode="In" />
+          <Parameter Name="UserID" Type="int" Mode="In" />
         </Function>
         <Function Name="spr_src_WaterTransmissionLineLocation_Rpt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="CollectionID" Type="int" Mode="In" />
           <Parameter Name="SubcollectionID" Type="int" Mode="In" />
           <Parameter Name="PartID" Type="int" Mode="In" />
+          <Parameter Name="UserID" Type="int" Mode="In" />
         </Function>
         <EntityContainer Name="AMSModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
@@ -1836,7 +1826,6 @@ warning 6002: The table/view 'AMS.dbo.viw_Part_Location' does not have a primary
           <EntitySet Name="tbl_prd_ProductionTask_WaterStorage_Link" EntityType="Self.tbl_prd_ProductionTask_WaterStorage_Link" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_prd_Season" EntityType="Self.tbl_prd_Season" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Rpt_ReportSettings" EntityType="Self.tbl_Rpt_ReportSettings" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tbl_Sec_Current_User" EntityType="Self.tbl_Sec_Current_User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Sec_Items" EntityType="Self.tbl_Sec_Items" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Sec_Items_Users_Link" EntityType="Self.tbl_Sec_Items_Users_Link" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Sec_Packages" EntityType="Self.tbl_Sec_Packages" Schema="dbo" store:Type="Tables" />
@@ -1900,10 +1889,6 @@ warning 6002: The table/view 'AMS.dbo.viw_Part_Location' does not have a primary
 [viw_Part_Location].[CollectionID] AS [CollectionID]
 FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
           </EntitySet>
-          <AssociationSet Name="FK_tbl_Sec_Current_User_tbl_Sec_Users" Association="Self.FK_tbl_Sec_Current_User_tbl_Sec_Users">
-            <End Role="tbl_Sec_Users" EntitySet="tbl_Sec_Users" />
-            <End Role="tbl_Sec_Current_User" EntitySet="tbl_Sec_Current_User" />
-          </AssociationSet>
           <AssociationSet Name="FK_tbl_Sec_Users_tbl_Sec_Shops" Association="Self.FK_tbl_Sec_Users_tbl_Sec_Shops">
             <End Role="tbl_Sec_Shops" EntitySet="tbl_Sec_Shops" />
             <End Role="tbl_Sec_Users" EntitySet="tbl_Sec_Users" />
@@ -2576,15 +2561,6 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
           <Property Name="FacRptPrintPreView" Type="Boolean" />
           <Property Name="ShowEconomicCode" Type="Boolean" />
         </EntityType>
-        <EntityType Name="tbl_Sec_Current_User">
-          <Key>
-            <PropertyRef Name="CurrentUserID" />
-          </Key>
-          <Property Name="CurrentUserID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FK_UerID" Type="Int64" Nullable="false" />
-          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="tbl_Sec_Users" Relationship="Self.FK_tbl_Sec_Current_User_tbl_Sec_Users" FromRole="tbl_Sec_Current_User" ToRole="tbl_Sec_Users" />
-        </EntityType>
         <EntityType Name="tbl_Sec_Items">
           <Key>
             <PropertyRef Name="ItemID" />
@@ -2655,9 +2631,9 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
           <Property Name="ShopDescription" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="IsActive" Type="Boolean" />
           <Property Name="CreatDate" Type="DateTime" Precision="3" />
-          <Property Name="CreateUserID" Type="Int64" />
+          <Property Name="CreateUserID" Type="Int32" />
           <Property Name="InactivationDate" Type="DateTime" Precision="3" />
-          <Property Name="InactivationUserID" Type="Int64" />
+          <Property Name="InactivationUserID" Type="Int32" />
           <Property Name="RegistrationNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="NationalID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Fk_ProvinceID" Type="Int32" />
@@ -2677,7 +2653,7 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
           <Key>
             <PropertyRef Name="UserID" />
           </Key>
-          <Property Name="UserID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="14" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="IsActiveUser" Type="Boolean" />
@@ -2705,7 +2681,6 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
           <Property Name="Fk_CollectionID" Type="Int32" />
           <Property Name="Fk_SubcollectionID" Type="Int32" />
           <Property Name="Fk_PartID" Type="Int32" />
-          <NavigationProperty Name="tbl_Sec_Current_User" Relationship="Self.FK_tbl_Sec_Current_User_tbl_Sec_Users" FromRole="tbl_Sec_Users" ToRole="tbl_Sec_Current_User" />
           <NavigationProperty Name="tbl_Sec_Shops" Relationship="Self.FK_tbl_Sec_Users_tbl_Sec_Shops" FromRole="tbl_Sec_Users" ToRole="tbl_Sec_Shops" />
         </EntityType>
         <EntityType Name="tbl_Sec_UserTypes">
@@ -2723,6 +2698,7 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
           <Property Name="VersionDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="VersionDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="VersionNumber" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" />
         </EntityType>
         <EntityType Name="tbl_src_Buildings">
           <Key>
@@ -3454,18 +3430,6 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tbl_Sec_Current_User_tbl_Sec_Users">
-          <End Role="tbl_Sec_Users" Type="Self.tbl_Sec_Users" Multiplicity="1" />
-          <End Role="tbl_Sec_Current_User" Type="Self.tbl_Sec_Current_User" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tbl_Sec_Users">
-              <PropertyRef Name="UserID" />
-            </Principal>
-            <Dependent Role="tbl_Sec_Current_User">
-              <PropertyRef Name="FK_UerID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_tbl_Sec_Users_tbl_Sec_Shops">
           <End Role="tbl_Sec_Shops" Type="Self.tbl_Sec_Shops" Multiplicity="1" />
           <End Role="tbl_Sec_Users" Type="Self.tbl_Sec_Users" Multiplicity="*" />
@@ -3638,7 +3602,6 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
           <EntitySet Name="tbl_prd_ProductionTask_WaterStorage_Link" EntityType="Self.tbl_prd_ProductionTask_WaterStorage_Link" />
           <EntitySet Name="tbl_prd_Season" EntityType="Self.tbl_prd_Season" />
           <EntitySet Name="tbl_Rpt_ReportSettings" EntityType="Self.tbl_Rpt_ReportSettings" />
-          <EntitySet Name="tbl_Sec_Current_User" EntityType="Self.tbl_Sec_Current_User" />
           <EntitySet Name="tbl_Sec_Items" EntityType="Self.tbl_Sec_Items" />
           <EntitySet Name="tbl_Sec_Items_Users_Link" EntityType="Self.tbl_Sec_Items_Users_Link" />
           <EntitySet Name="tbl_Sec_Packages" EntityType="Self.tbl_Sec_Packages" />
@@ -3721,10 +3684,6 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
           <AssociationSet Name="FK_tbl_src_Subcollection_tbl_cmn_Province" Association="Self.FK_tbl_src_Subcollection_tbl_cmn_Province">
             <End Role="tbl_cmn_Province" EntitySet="tbl_cmn_Province" />
             <End Role="tbl_src_Subcollection" EntitySet="tbl_src_Subcollection" />
-          </AssociationSet>
-          <AssociationSet Name="FK_tbl_Sec_Current_User_tbl_Sec_Users" Association="Self.FK_tbl_Sec_Current_User_tbl_Sec_Users">
-            <End Role="tbl_Sec_Users" EntitySet="tbl_Sec_Users" />
-            <End Role="tbl_Sec_Current_User" EntitySet="tbl_Sec_Current_User" />
           </AssociationSet>
           <AssociationSet Name="FK_tbl_Sec_Users_tbl_Sec_Shops" Association="Self.FK_tbl_Sec_Users_tbl_Sec_Shops">
             <End Role="tbl_Sec_Shops" EntitySet="tbl_Sec_Shops" />
@@ -3809,42 +3768,50 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
             <Parameter Name="CollectionID" Mode="In" Type="Int32" />
             <Parameter Name="SubcollectionID" Mode="In" Type="Int32" />
             <Parameter Name="PartID" Mode="In" Type="Int32" />
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_BuildingsLocation_Rpt" ReturnType="Collection(AMSModel.spr_src_BuildingsLocation_Rpt_Result)">
             <Parameter Name="CollectionID" Mode="In" Type="Int32" />
             <Parameter Name="SubcollectionID" Mode="In" Type="Int32" />
             <Parameter Name="PartID" Mode="In" Type="Int32" />
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_FieldLocation_Rpt" ReturnType="Collection(AMSModel.spr_src_FieldLocation_Rpt_Result)">
             <Parameter Name="CollectionID" Mode="In" Type="Int32" />
             <Parameter Name="SubcollectionID" Mode="In" Type="Int32" />
             <Parameter Name="PartID" Mode="In" Type="Int32" />
             <Parameter Name="FieldID" Mode="In" Type="Int32" />
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_LandLocation_Rpt" ReturnType="Collection(AMSModel.spr_src_LandLocation_Rpt_Result)">
             <Parameter Name="CollectionID" Mode="In" Type="Int32" />
             <Parameter Name="SubcollectionID" Mode="In" Type="Int32" />
             <Parameter Name="PartID" Mode="In" Type="Int32" />
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WarehouseLocation_Rpt" ReturnType="Collection(AMSModel.spr_src_WarehouseLocation_Rpt_Result)">
             <Parameter Name="CollectionID" Mode="In" Type="Int32" />
             <Parameter Name="SubcollectionID" Mode="In" Type="Int32" />
             <Parameter Name="PartID" Mode="In" Type="Int32" />
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterLocation_Rpt" ReturnType="Collection(AMSModel.spr_src_WaterLocation_Rpt_Result)">
             <Parameter Name="CollectionID" Mode="In" Type="Int32" />
             <Parameter Name="SubcollectionID" Mode="In" Type="Int32" />
             <Parameter Name="PartID" Mode="In" Type="Int32" />
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterStorageLocation_Rpt" ReturnType="Collection(AMSModel.spr_src_WaterStorageLocation_Rpt_Result)">
             <Parameter Name="CollectionID" Mode="In" Type="Int32" />
             <Parameter Name="SubcollectionID" Mode="In" Type="Int32" />
             <Parameter Name="PartID" Mode="In" Type="Int32" />
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_src_WaterTransmissionLineLocation_Rpt" ReturnType="Collection(AMSModel.spr_src_WaterTransmissionLineLocation_Rpt_Result)">
             <Parameter Name="CollectionID" Mode="In" Type="Int32" />
             <Parameter Name="SubcollectionID" Mode="In" Type="Int32" />
             <Parameter Name="PartID" Mode="In" Type="Int32" />
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spr_dsb_FieldTaskList_rpt_Select" ReturnType="Collection(AMSModel.spr_dsb_FieldTaskList_rpt_Select_Result)">
           <Parameter Name="FieldID" Mode="In" Type="Int32" />
@@ -3853,6 +3820,7 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
             <Parameter Name="CollectionID" Mode="In" Type="Int32" />
             <Parameter Name="SubcollectionID" Mode="In" Type="Int32" />
             <Parameter Name="PartID" Mode="In" Type="Int32" />
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <EntitySet Name="tbl_src_Tree" EntityType="AMSModel.tbl_src_Tree" />
           <FunctionImport Name="spr_dsb_Field_Location_rpt" ReturnType="Collection(AMSModel.spr_dsb_Field_Location_rpt_Result)">
@@ -4853,15 +4821,6 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="tbl_Sec_Current_User">
-            <EntityTypeMapping TypeName="AMSModel.tbl_Sec_Current_User">
-              <MappingFragment StoreEntitySet="tbl_Sec_Current_User">
-                <ScalarProperty Name="CurrentUserID" ColumnName="CurrentUserID" />
-                <ScalarProperty Name="FK_UerID" ColumnName="FK_UerID" />
-                <ScalarProperty Name="UserName" ColumnName="UserName" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="tbl_Sec_Items">
             <EntityTypeMapping TypeName="AMSModel.tbl_Sec_Items">
               <MappingFragment StoreEntitySet="tbl_Sec_Items">
@@ -5000,6 +4959,7 @@ FROM [dbo].[viw_Part_Location] AS [viw_Part_Location]</DefiningQuery>
           <EntitySetMapping Name="tbl_Setting_Version">
             <EntityTypeMapping TypeName="AMSModel.tbl_Setting_Version">
               <MappingFragment StoreEntitySet="tbl_Setting_Version">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
                 <ScalarProperty Name="VersionID" ColumnName="VersionID" />
                 <ScalarProperty Name="VersionDate" ColumnName="VersionDate" />
                 <ScalarProperty Name="VersionDescription" ColumnName="VersionDescription" />

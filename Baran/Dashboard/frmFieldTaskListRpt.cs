@@ -64,7 +64,7 @@ namespace Baran.Dashboard
 
             using (var dbContext = new AMSEntities())
             {
-                var fields = dbContext.spr_src_FieldLocation_Rpt(null, null, null, FieldID);
+                var fields = dbContext.spr_src_FieldLocation_Rpt(null, null, null, FieldID, CurrentUser.Instance.UserID);
 
                 foreach (var result in fields)
                 {

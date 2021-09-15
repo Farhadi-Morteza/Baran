@@ -67,7 +67,6 @@ namespace BaranDataAccess
         public DbSet<tbl_prd_ProductionTask_WaterStorage_Link> tbl_prd_ProductionTask_WaterStorage_Link { get; set; }
         public DbSet<tbl_prd_Season> tbl_prd_Season { get; set; }
         public DbSet<tbl_Rpt_ReportSettings> tbl_Rpt_ReportSettings { get; set; }
-        public DbSet<tbl_Sec_Current_User> tbl_Sec_Current_User { get; set; }
         public DbSet<tbl_Sec_Items> tbl_Sec_Items { get; set; }
         public DbSet<tbl_Sec_Items_Users_Link> tbl_Sec_Items_Users_Link { get; set; }
         public DbSet<tbl_Sec_Packages> tbl_Sec_Packages { get; set; }
@@ -188,7 +187,7 @@ namespace BaranDataAccess
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_WareHouse_Map_Select_Result>("spr_src_WareHouse_Map_Select", actionParameter, whereClauseParameter, userIDParameter);
         }
     
-        public virtual ObjectResult<spr_src_PartLocation_Rpt_Result> spr_src_PartLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID)
+        public virtual ObjectResult<spr_src_PartLocation_Rpt_Result> spr_src_PartLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID, Nullable<int> userID)
         {
             var collectionIDParameter = collectionID.HasValue ?
                 new ObjectParameter("CollectionID", collectionID) :
@@ -202,10 +201,14 @@ namespace BaranDataAccess
                 new ObjectParameter("PartID", partID) :
                 new ObjectParameter("PartID", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_PartLocation_Rpt_Result>("spr_src_PartLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter);
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_PartLocation_Rpt_Result>("spr_src_PartLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter, userIDParameter);
         }
     
-        public virtual ObjectResult<spr_src_BuildingsLocation_Rpt_Result> spr_src_BuildingsLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID)
+        public virtual ObjectResult<spr_src_BuildingsLocation_Rpt_Result> spr_src_BuildingsLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID, Nullable<int> userID)
         {
             var collectionIDParameter = collectionID.HasValue ?
                 new ObjectParameter("CollectionID", collectionID) :
@@ -219,10 +222,14 @@ namespace BaranDataAccess
                 new ObjectParameter("PartID", partID) :
                 new ObjectParameter("PartID", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_BuildingsLocation_Rpt_Result>("spr_src_BuildingsLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter);
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_BuildingsLocation_Rpt_Result>("spr_src_BuildingsLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter, userIDParameter);
         }
     
-        public virtual ObjectResult<spr_src_FieldLocation_Rpt_Result> spr_src_FieldLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID, Nullable<int> fieldID)
+        public virtual ObjectResult<spr_src_FieldLocation_Rpt_Result> spr_src_FieldLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID, Nullable<int> fieldID, Nullable<int> userID)
         {
             var collectionIDParameter = collectionID.HasValue ?
                 new ObjectParameter("CollectionID", collectionID) :
@@ -240,10 +247,14 @@ namespace BaranDataAccess
                 new ObjectParameter("FieldID", fieldID) :
                 new ObjectParameter("FieldID", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_FieldLocation_Rpt_Result>("spr_src_FieldLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter, fieldIDParameter);
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_FieldLocation_Rpt_Result>("spr_src_FieldLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter, fieldIDParameter, userIDParameter);
         }
     
-        public virtual ObjectResult<spr_src_LandLocation_Rpt_Result> spr_src_LandLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID)
+        public virtual ObjectResult<spr_src_LandLocation_Rpt_Result> spr_src_LandLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID, Nullable<int> userID)
         {
             var collectionIDParameter = collectionID.HasValue ?
                 new ObjectParameter("CollectionID", collectionID) :
@@ -257,10 +268,14 @@ namespace BaranDataAccess
                 new ObjectParameter("PartID", partID) :
                 new ObjectParameter("PartID", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_LandLocation_Rpt_Result>("spr_src_LandLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter);
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_LandLocation_Rpt_Result>("spr_src_LandLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter, userIDParameter);
         }
     
-        public virtual ObjectResult<spr_src_WarehouseLocation_Rpt_Result> spr_src_WarehouseLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID)
+        public virtual ObjectResult<spr_src_WarehouseLocation_Rpt_Result> spr_src_WarehouseLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID, Nullable<int> userID)
         {
             var collectionIDParameter = collectionID.HasValue ?
                 new ObjectParameter("CollectionID", collectionID) :
@@ -274,10 +289,14 @@ namespace BaranDataAccess
                 new ObjectParameter("PartID", partID) :
                 new ObjectParameter("PartID", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_WarehouseLocation_Rpt_Result>("spr_src_WarehouseLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter);
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_WarehouseLocation_Rpt_Result>("spr_src_WarehouseLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter, userIDParameter);
         }
     
-        public virtual ObjectResult<spr_src_WaterLocation_Rpt_Result> spr_src_WaterLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID)
+        public virtual ObjectResult<spr_src_WaterLocation_Rpt_Result> spr_src_WaterLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID, Nullable<int> userID)
         {
             var collectionIDParameter = collectionID.HasValue ?
                 new ObjectParameter("CollectionID", collectionID) :
@@ -291,10 +310,14 @@ namespace BaranDataAccess
                 new ObjectParameter("PartID", partID) :
                 new ObjectParameter("PartID", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_WaterLocation_Rpt_Result>("spr_src_WaterLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter);
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_WaterLocation_Rpt_Result>("spr_src_WaterLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter, userIDParameter);
         }
     
-        public virtual ObjectResult<spr_src_WaterStorageLocation_Rpt_Result> spr_src_WaterStorageLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID)
+        public virtual ObjectResult<spr_src_WaterStorageLocation_Rpt_Result> spr_src_WaterStorageLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID, Nullable<int> userID)
         {
             var collectionIDParameter = collectionID.HasValue ?
                 new ObjectParameter("CollectionID", collectionID) :
@@ -308,10 +331,14 @@ namespace BaranDataAccess
                 new ObjectParameter("PartID", partID) :
                 new ObjectParameter("PartID", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_WaterStorageLocation_Rpt_Result>("spr_src_WaterStorageLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter);
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_WaterStorageLocation_Rpt_Result>("spr_src_WaterStorageLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter, userIDParameter);
         }
     
-        public virtual ObjectResult<spr_src_WaterTransmissionLineLocation_Rpt_Result> spr_src_WaterTransmissionLineLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID)
+        public virtual ObjectResult<spr_src_WaterTransmissionLineLocation_Rpt_Result> spr_src_WaterTransmissionLineLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID, Nullable<int> userID)
         {
             var collectionIDParameter = collectionID.HasValue ?
                 new ObjectParameter("CollectionID", collectionID) :
@@ -325,7 +352,11 @@ namespace BaranDataAccess
                 new ObjectParameter("PartID", partID) :
                 new ObjectParameter("PartID", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_WaterTransmissionLineLocation_Rpt_Result>("spr_src_WaterTransmissionLineLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter);
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_WaterTransmissionLineLocation_Rpt_Result>("spr_src_WaterTransmissionLineLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter, userIDParameter);
         }
     
         public virtual ObjectResult<spr_dsb_FieldTaskList_rpt_Select_Result> spr_dsb_FieldTaskList_rpt_Select(Nullable<int> fieldID)
@@ -337,7 +368,7 @@ namespace BaranDataAccess
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_dsb_FieldTaskList_rpt_Select_Result>("spr_dsb_FieldTaskList_rpt_Select", fieldIDParameter);
         }
     
-        public virtual ObjectResult<spr_src_TreeLocation_Rpt_Result> spr_src_TreeLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID)
+        public virtual ObjectResult<spr_src_TreeLocation_Rpt_Result> spr_src_TreeLocation_Rpt(Nullable<int> collectionID, Nullable<int> subcollectionID, Nullable<int> partID, Nullable<int> userID)
         {
             var collectionIDParameter = collectionID.HasValue ?
                 new ObjectParameter("CollectionID", collectionID) :
@@ -351,7 +382,11 @@ namespace BaranDataAccess
                 new ObjectParameter("PartID", partID) :
                 new ObjectParameter("PartID", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_TreeLocation_Rpt_Result>("spr_src_TreeLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter);
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_src_TreeLocation_Rpt_Result>("spr_src_TreeLocation_Rpt", collectionIDParameter, subcollectionIDParameter, partIDParameter, userIDParameter);
         }
     
         public virtual ObjectResult<spr_dsb_Field_Location_rpt_Result> spr_dsb_Field_Location_rpt(Nullable<int> userID, Nullable<System.DateTime> fromDate, Nullable<System.DateTime> toDate, Nullable<int> fieldID, Nullable<int> productionID)

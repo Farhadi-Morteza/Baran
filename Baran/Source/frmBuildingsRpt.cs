@@ -243,12 +243,12 @@ namespace Baran.Source
 
                             GMapRoute rt = new GMapRoute(points, "hahahahaha");
                             {
-                                rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
-                                rt.Stroke.Width = 4;
-                                rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+                                rt.Stroke = new Pen(Color.FromArgb(255, PublicVariables.BuildingColor));
+                                rt.Stroke.Width = PublicVariables.StrokeWidth;
+                                rt.Stroke.DashStyle = PublicVariables.StrokeDashStyle;
                             }
 
-                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.red_dot);
+                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], new Bitmap(System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.BuildingMarker))));
                             mark.ToolTipText = strTooltip;
                             mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
                             mark.ToolTip.Fill = Brushes.Black;

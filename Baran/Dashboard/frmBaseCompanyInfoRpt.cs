@@ -86,6 +86,10 @@ namespace Baran.Dashboard
         {
             base.OnClear();
             Baran.Classes.Common.ControlsSetting.ClearControls(grpControls.Controls);
+
+            cmbSubcollection.DataSource = tblSubCollection;
+            cmbPart.DataSource = tblPart;
+
             this.ClearMap();
         }
 
@@ -106,7 +110,7 @@ namespace Baran.Dashboard
             {
                 if (chkPart.Checked)
                 {
-                    var parts = dbContext.spr_src_PartLocation_Rpt(collectionId, subcollectionId, partId);
+                    var parts = dbContext.spr_src_PartLocation_Rpt(collectionId, subcollectionId, partId, CurrentUser.Instance.UserID);
 
                     foreach (var part in parts)
                     {
@@ -146,7 +150,7 @@ namespace Baran.Dashboard
                 // Land =====================================================================================================
                 if (chkLand.Checked)
                 {
-                    var results = dbContext.spr_src_LandLocation_Rpt(collectionId, subcollectionId, partId);
+                    var results = dbContext.spr_src_LandLocation_Rpt(collectionId, subcollectionId, partId, CurrentUser.Instance.UserID);
 
                     foreach (var result in results)
                     {
@@ -185,7 +189,7 @@ namespace Baran.Dashboard
             // Field ====================================================================================================
             if (chkField.Checked)
             {
-                var fields = dbContext.spr_src_FieldLocation_Rpt(collectionId, subcollectionId, partId, null);
+                var fields = dbContext.spr_src_FieldLocation_Rpt(collectionId, subcollectionId, partId, null, CurrentUser.Instance.UserID);
 
                 foreach (var result in fields)
                 {
@@ -229,7 +233,7 @@ namespace Baran.Dashboard
                 // Waarehhouse ==============================================================================================
                 if (chkWarehouse.Checked)
                 {
-                    var warehouses = dbContext.spr_src_WarehouseLocation_Rpt(collectionId, subcollectionId, partId);
+                    var warehouses = dbContext.spr_src_WarehouseLocation_Rpt(collectionId, subcollectionId, partId, CurrentUser.Instance.UserID);
 
                     foreach (var result in warehouses)
                     {
@@ -271,7 +275,7 @@ namespace Baran.Dashboard
                 // Building =================================================================================================
                 if (chkBuilding.Checked)
                 {
-                    var Buildings = dbContext.spr_src_BuildingsLocation_Rpt(collectionId, subcollectionId, partId);
+                    var Buildings = dbContext.spr_src_BuildingsLocation_Rpt(collectionId, subcollectionId, partId, CurrentUser.Instance.UserID);
 
                     foreach (var result in Buildings)
                     {
@@ -312,7 +316,7 @@ namespace Baran.Dashboard
                 // Water ====================================================================================================
                 if (chkWater.Checked)
                 {
-                    var Waters = dbContext.spr_src_WaterLocation_Rpt(collectionId, subcollectionId, partId);
+                    var Waters = dbContext.spr_src_WaterLocation_Rpt(collectionId, subcollectionId, partId, CurrentUser.Instance.UserID);
                     foreach (var result in Waters)
                     {
                         if (result.Location != null)
@@ -345,7 +349,7 @@ namespace Baran.Dashboard
                 // Water Storage ============================================================================================
                 if (chkWaterStorage.Checked)
                 {
-                    var waterstorages = dbContext.spr_src_WaterStorageLocation_Rpt(collectionId, subcollectionId, partId);
+                    var waterstorages = dbContext.spr_src_WaterStorageLocation_Rpt(collectionId, subcollectionId, partId, CurrentUser.Instance.UserID);
 
                     foreach (var result in waterstorages)
                     {
@@ -386,7 +390,7 @@ namespace Baran.Dashboard
                 // Water Transmission Line ===================================================================================
                 if (chkWaterTransmissionLine.Checked)
                 {
-                    var waterTransmissionLines = dbContext.spr_src_WaterTransmissionLineLocation_Rpt(collectionId, subcollectionId, partId);
+                    var waterTransmissionLines = dbContext.spr_src_WaterTransmissionLineLocation_Rpt(collectionId, subcollectionId, partId, CurrentUser.Instance.UserID);
 
                     foreach (var result in waterTransmissionLines)
                     {
@@ -428,7 +432,7 @@ namespace Baran.Dashboard
                 // Tree ======================================================================================================
                 if (chkTree.Checked)
                 {
-                    var tree = dbContext.spr_src_TreeLocation_Rpt(collectionId, subcollectionId, partId);
+                    var tree = dbContext.spr_src_TreeLocation_Rpt(collectionId, subcollectionId, partId, CurrentUser.Instance.UserID);
 
                     foreach (var result in tree)
                     {
@@ -1009,8 +1013,11 @@ namespace Baran.Dashboard
 
         private void MainMap_OnMarkerClick(GMapMarker item, MouseEventArgs e)
         {
-            if (MarkerTag == item.Tag.ToString())
+            if (item.Tag == null)
                 return;
+
+            //if (MarkerTag == item.Tag.ToString())
+            //    return;
 
             MarkerTag = item.Tag.ToString();
             string[] tag = item.Tag.ToString().Split(SpecialChar.SplitChar.ToCharArray());

@@ -41,7 +41,7 @@ namespace Baran.Security.User
             BaranDataAccess.Security.dstSecurity.spr_Sec_SelectUsersByUserID_SelectDataTable tblUserToUpate =
                 new BaranDataAccess.Security.dstSecurity.spr_Sec_SelectUsersByUserID_SelectDataTable();
 
-            tblUserToUpate = adpUser.GetUserTableByUserID((long)dgvUsers.ActiveRow.Cells[dgvUserIDCol].Value);
+            tblUserToUpate = adpUser.GetUserTableByUserID((int)dgvUsers.ActiveRow.Cells[dgvUserIDCol].Value);
 
             if (tblUserToUpate == null && tblUserToUpate.Rows.Count == 0)
             {
@@ -51,7 +51,7 @@ namespace Baran.Security.User
             else
             {
                 frmUsers ofrmUsers = new frmUsers();
-                if (PublicMethods.SetFormSchema(ofrmUsers, cnsFormItemID.StoresAmend))
+                if (PublicMethods.SetFormSchema(ofrmUsers, cnsFormItemID.UserAmend))
                 {
                     ofrmUsers.MdiParent = this.MdiParent;
                     ofrmUsers.RecordToUpdat = tblUserToUpate;
@@ -83,7 +83,7 @@ namespace Baran.Security.User
         {
             base.OnDelete();
 
-            if (dgvUsers.Selected.Rows.Count == 0) return;
+            if (dgvUsers.ActiveRow == null) return;
 
             DialogResult Result = Baran.Classes.Common.MessageBoxX.ShowMessageBox(Baran.Classes.Common.PublicEnum.EnmMessageType.msgDeleteConfirm);
             if (Result == DialogResult.No) return;
@@ -95,7 +95,7 @@ namespace Baran.Security.User
 
             if (lngDelUserID == lngCurrentUserID)
             {
-                this.lblMessage.Text =  BaranResources.YouCannotDeleteTheCurrentUuser;
+                OnMessage(BaranResources.YouCannotDeleteTheCurrentUuser, PublicEnum.EnmMessageCategory.Warning);
                 return;
             }
 
@@ -126,7 +126,11 @@ namespace Baran.Security.User
         private void SetGrid()
         {
             dstsecurity.Clear();
-            dstsecurity.spr_Sec_Users_Select.Merge(BaranDataAccess.Security.dstSecurity.GetUsers().spr_Sec_Users_Select);
+            BaranDataAccess.Security.dstSecurityTableAdapters.spr_Sec_Users_lst_SelectTableAdapter adp =
+                new BaranDataAccess.Security.dstSecurityTableAdapters.spr_Sec_Users_lst_SelectTableAdapter();
+            adp.FillUsersListTable(dstsecurity.spr_Sec_Users_lst_Select);
+
+            //dstsecurity.spr_Sec_Users_lst_Select.Merge(BaranDataAccess.Security.dstSecurity.GetUsers().spr_Sec_Users_Select);
         }
 
     #endregion // End Methods -------------------------------------------------------------------------

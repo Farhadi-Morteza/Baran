@@ -106,7 +106,8 @@ namespace Baran
 
 
                 usbMainStatusBar.Panels[1].Text = drwCurrentShop.ShopName;
-                BaranDataAccess.Security.dstSecurity.spr_Sec_UserAuthentication_SelectDataTable tblUser = new BaranDataAccess.Security.dstSecurity.spr_Sec_UserAuthentication_SelectDataTable();
+                BaranDataAccess.Security.dstSecurity.spr_Sec_UserAuthentication_SelectDataTable tblUser = 
+                    new BaranDataAccess.Security.dstSecurity.spr_Sec_UserAuthentication_SelectDataTable();
 
                 BaranDataAccess.Security.dstSecurity.spr_Sec_UserAuthentication_SelectRow drwUser = tblUser.Newspr_Sec_UserAuthentication_SelectRow();
                 drwUser = (BaranDataAccess.Security.dstSecurity.spr_Sec_UserAuthentication_SelectRow)BaranLibrary.CurrentUser.CurrentUserInfo.Rows[0];

@@ -77,8 +77,9 @@ namespace Baran.Security.User
                 adpPasswordChange.Update(drwCurrentUser.UserID, txtNewPassword.Text.Trim());
                 txtPreviousPassword.Focus();
 
-                lblMessage.Text = "";
-                lblMessage.Text = BaranResources.SuccessfulPasswordChangeMessage;
+                //lblMessage.Text = "";
+                //lblMessage.Text = BaranResources.SuccessfulPasswordChangeMessage;
+                OnMessage(BaranResources.SuccessfulPasswordChangeMessage, PublicEnum.EnmMessageCategory.Success);
 
                 return;
             }

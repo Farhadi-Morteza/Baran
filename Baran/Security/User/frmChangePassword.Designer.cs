@@ -43,7 +43,6 @@
             this.lblNewPassword = new Baran.Windows.Forms.Label();
             this.txtPreviousPassword = new System.Windows.Forms.TextBox();
             this.lblPreviousPassword = new Baran.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).BeginInit();
             this.grpHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,6 +50,7 @@
             this.grpMessage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).BeginInit();
             this.grpMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grbChangePassword)).BeginInit();
             this.grbChangePassword.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName)).BeginInit();
@@ -60,14 +60,8 @@
             // 
             this.btnMaxMin.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             // 
-            // grpButons
-            // 
-            this.grpButons.Location = new System.Drawing.Point(0, 279);
-            this.grpButons.Size = new System.Drawing.Size(607, 75);
-            // 
             // lblLine2
             // 
-            this.lblLine2.Location = new System.Drawing.Point(1, 61);
             this.lblLine2.Size = new System.Drawing.Size(605, 3);
             // 
             // grpHeader
@@ -94,7 +88,6 @@
             // 
             // grpMessage
             // 
-            this.grpMessage.Location = new System.Drawing.Point(0, 65);
             this.grpMessage.Size = new System.Drawing.Size(607, 30);
             // 
             // lblLine3
@@ -105,12 +98,16 @@
             // grpMain
             // 
             this.grpMain.Controls.Add(this.grbChangePassword);
-            this.grpMain.Location = new System.Drawing.Point(0, 95);
             this.grpMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpMain.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpMain.Size = new System.Drawing.Size(607, 184);
             this.grpMain.Controls.SetChildIndex(this.grbChangePassword, 0);
             this.grpMain.Controls.SetChildIndex(this.lblLine3, 0);
+            // 
+            // grpButons
+            // 
+            this.grpButons.Location = new System.Drawing.Point(0, 279);
+            this.grpButons.Size = new System.Drawing.Size(607, 75);
             // 
             // grbChangePassword
             // 
@@ -125,7 +122,6 @@
             this.grbChangePassword.Controls.Add(this.txtPreviousPassword);
             this.grbChangePassword.Controls.Add(this.lblPreviousPassword);
             this.grbChangePassword.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grbChangePassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.grbChangePassword.Location = new System.Drawing.Point(1, 0);
             this.grbChangePassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grbChangePassword.Name = "grbChangePassword";
@@ -186,7 +182,8 @@
             // txtConfirmNewPassword
             // 
             this.txtConfirmNewPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtConfirmNewPassword.BackColor = System.Drawing.SystemColors.Window;
+            this.txtConfirmNewPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(48)))), ((int)(((byte)(61)))));
+            this.txtConfirmNewPassword.ForeColor = System.Drawing.Color.White;
             this.txtConfirmNewPassword.Location = new System.Drawing.Point(178, 117);
             this.txtConfirmNewPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtConfirmNewPassword.Name = "txtConfirmNewPassword";
@@ -198,7 +195,8 @@
             // txtNewPassword
             // 
             this.txtNewPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNewPassword.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNewPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(48)))), ((int)(((byte)(61)))));
+            this.txtNewPassword.ForeColor = System.Drawing.Color.White;
             this.txtNewPassword.Location = new System.Drawing.Point(178, 87);
             this.txtNewPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNewPassword.Name = "txtNewPassword";
@@ -240,7 +238,8 @@
             // txtPreviousPassword
             // 
             this.txtPreviousPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPreviousPassword.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPreviousPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(48)))), ((int)(((byte)(61)))));
+            this.txtPreviousPassword.ForeColor = System.Drawing.Color.White;
             this.txtPreviousPassword.Location = new System.Drawing.Point(178, 57);
             this.txtPreviousPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPreviousPassword.Name = "txtPreviousPassword";
@@ -276,7 +275,6 @@
             this.Text = "frmChangePassword";
             this.Activated += new System.EventHandler(this.frmChangePassword_Activated);
             this.Load += new System.EventHandler(this.frmChangePassword_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpHeader)).EndInit();
             this.grpHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -284,6 +282,7 @@
             this.grpMessage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).EndInit();
             this.grpMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grpButons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grbChangePassword)).EndInit();
             this.grbChangePassword.ResumeLayout(false);
             this.grbChangePassword.PerformLayout();

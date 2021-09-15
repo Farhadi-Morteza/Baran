@@ -1,8 +1,9 @@
 ﻿namespace BaranDataAccess.Security
 {
-    
-    
-    public partial class dstSecurity {
+
+
+    public partial class dstSecurity
+    {
 
         public static dstSecurity GetUsers()
         {
@@ -69,7 +70,7 @@
             {
                 adapter.FillUserTypeTable(returnDst.spr_Sec_UserType_Select);
             }
-            catch 
+            catch
             {
                 returnDst = null;
             }

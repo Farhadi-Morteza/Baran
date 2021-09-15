@@ -160,12 +160,12 @@ namespace Baran.Source
 
                             GMapRoute rt = new GMapRoute(points, "hahahahaha");
                             {
-                                rt.Stroke = new Pen(Color.FromArgb(144, Color.Yellow));
-                                rt.Stroke.Width = 5;
-                                rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+                                rt.Stroke = new Pen(Color.FromArgb(255, PublicVariables.LandColor));
+                                rt.Stroke.Width = PublicVariables.StrokeWidth;
+                                rt.Stroke.DashStyle = PublicVariables.StrokeDashStyle;
                             }
 
-                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], GMarkerGoogleType.yellow);
+                            GMapMarker mark = new GMarkerGoogle(points[points.Count / 2], new Bitmap(System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.LandMarker))));
                             mark.ToolTipText = strTooltip;
                             mark.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
                             mark.ToolTip.Fill = Brushes.Black;
@@ -214,12 +214,12 @@ namespace Baran.Source
 
                                     GMapRoute rtField = new GMapRoute(Fieldpoints, "hahahahaha");
                                     {
-                                        rtField.Stroke = new Pen(Color.FromArgb(144, Color.Red));
-                                        rtField.Stroke.Width = 3;
-                                        rtField.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+                                        rtField.Stroke = new Pen(Color.FromArgb(255, PublicVariables.FieldColor));
+                                        rtField.Stroke.Width = PublicVariables.StrokeWidth;
+                                        rtField.Stroke.DashStyle = PublicVariables.StrokeDashStyle;
                                     }                                    
 
-                                    GMapMarker markField = new GMarkerGoogle(Fieldpoints[Fieldpoints.Count / 2], GMarkerGoogleType.red_dot);
+                                    GMapMarker markField = new GMarkerGoogle(Fieldpoints[Fieldpoints.Count / 2], new Bitmap(System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.FieldMarker))));
                                     markField.ToolTipText = strFieldTooltip;
                                     markField.ToolTip.Font = new System.Drawing.Font("B Nazanin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
                                     markField.ToolTip.Fill = Brushes.Black;

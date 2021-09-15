@@ -27,6 +27,7 @@ namespace Baran.Security.User
     #region Variables
 
         private long _UserID;
+        WaiteForm wait;
 
         byte[] UserImage;
 
@@ -115,9 +116,9 @@ namespace Baran.Security.User
             {
                 tblPackages = adpPackages.GetPackagesTable();
 
-                ImageList imgListItems = new ImageList();
-                trvItems.ImageList = imgListItems;
-                imgListItems.ImageSize = new Size(16, 16);
+                //ImageList imgListItems = new ImageList();
+                //trvItems.ImageList = imgListItems;
+                //imgListItems.ImageSize = new Size(16, 16);
 
                 foreach (dstSecurity.spr_Sec_Packages_SelectRow drwPackages in tblPackages)
                 {
@@ -127,18 +128,18 @@ namespace Baran.Security.User
                     trnPackage.Tag = drwPackages.PackageID;
                     trnPackage.ForeColor =  System.Drawing.Color.White;
 
-                    try
-                    {
-                        System.IO.MemoryStream mstrmTemp = new System.IO.MemoryStream(drwPackages.PackageLogo);
-                        System.Drawing.Bitmap bmpTemp = new System.Drawing.Bitmap(mstrmTemp);
-                        imgListItems.Images.Add(bmpTemp);
-                        mstrmTemp.Close();
-                    }
-                    catch { }
+                    //try
+                    //{
+                    //    System.IO.MemoryStream mstrmTemp = new System.IO.MemoryStream(drwPackages.PackageLogo);
+                    //    System.Drawing.Bitmap bmpTemp = new System.Drawing.Bitmap(mstrmTemp);
+                    //    imgListItems.Images.Add(bmpTemp);
+                    //    mstrmTemp.Close();
+                    //}
+                    //catch { }
 
                     trnPackage.Checked = false;
-                    trnPackage.ImageIndex = imgListItems.Images.Count - 1;
-                    trnPackage.SelectedImageIndex = imgListItems.Images.Count - 1;
+                    //trnPackage.ImageIndex = imgListItems.Images.Count - 1;
+                    //trnPackage.SelectedImageIndex = imgListItems.Images.Count - 1;
 
                     trvItems.Nodes.Add(trnPackage);
 
@@ -157,19 +158,19 @@ namespace Baran.Security.User
                         trnItems.Tag = drwItems.ItemID;
                         trnItems.ForeColor = System.Drawing.Color.White;
 
-                        try
-                        {
-                            System.IO.MemoryStream mstrmTempItems = new System.IO.MemoryStream(drwItems.ItemLogo);
-                            System.Drawing.Bitmap bmpTempItems = new System.Drawing.Bitmap(mstrmTempItems);
-                            imgListItems.Images.Add(bmpTempItems);
-                            mstrmTempItems.Close();
-                        }
-                        catch
-                        { }
+                        //try
+                        //{
+                        //    System.IO.MemoryStream mstrmTempItems = new System.IO.MemoryStream(drwItems.ItemLogo);
+                        //    System.Drawing.Bitmap bmpTempItems = new System.Drawing.Bitmap(mstrmTempItems);
+                        //    imgListItems.Images.Add(bmpTempItems);
+                        //    mstrmTempItems.Close();
+                        //}
+                        //catch
+                        //{ }
 
                         trnItems.Checked = false;
-                        trnItems.ImageIndex = imgListItems.Images.Count - 1;
-                        trnItems.SelectedImageIndex = imgListItems.Images.Count - 1;
+                        //trnItems.ImageIndex = imgListItems.Images.Count - 1;
+                        //trnItems.SelectedImageIndex = imgListItems.Images.Count - 1;
 
                         trnPackage.Nodes.Add(trnItems);
                         trnItems.Collapse();
@@ -180,11 +181,11 @@ namespace Baran.Security.User
                             TreeNode trnAccessLevelItems = new TreeNode();
                             trnAccessLevelItems.Text = tblAccessLevel.Rows[i][1].ToString();
 
-                            imgListItems.Images.Add(imgAccessLevel.Images[i]);
+                            //imgListItems.Images.Add(imgAccessLevel.Images[i]);
 
                             trnAccessLevelItems.Checked = false;
-                            trnAccessLevelItems.ImageIndex = imgListItems.Images.Count - 1;
-                            trnAccessLevelItems.SelectedImageIndex = imgListItems.Images.Count - 1;
+                            //trnAccessLevelItems.ImageIndex = imgListItems.Images.Count - 1;
+                            //trnAccessLevelItems.SelectedImageIndex = imgListItems.Images.Count - 1;
                             trnAccessLevelItems.ForeColor = System.Drawing.Color.White;
                             trnItems.Nodes.Add(trnAccessLevelItems);
                             trnAccessLevelItems.Collapse();
@@ -224,7 +225,7 @@ namespace Baran.Security.User
             txtDescription.Text = drwUser.IsDescriptionNull() ? "" : drwUser.Description;
             txtAddress.Text = drwUser.IsUserAddressNull() ? "" : drwUser.UserAddress;
             txtUserName.Text = drwUser.UserName;
-            txtPassword.Text = drwUser.Password;
+            //txtPassword.Text = drwUser.Password;
 
             cmbShop.Value = drwUser.FK_ShopID;
 
@@ -234,8 +235,19 @@ namespace Baran.Security.User
             chkOtherStaff.Checked = drwUser.IsIsOtherStaffNull() ? false : drwUser.IsOtherStaff;
             chkAccountant.Checked = drwUser.IsIsAccountantNull() ? false : drwUser.IsAccountant;
 
-            cmbUserType.Value = drwUser.IsFK_UserTypeIDNull() ? 0 : drwUser.FK_UserTypeID;
-            
+            cmbUserType.Value = drwUser.Fk_UserTypeID;// drwUser.IsFK_UserTypeIDNull() ? null : cmbUserType.Value = drwUser.FK_UserTypeID;
+
+            int? userAccessLevel = null;
+            if (!drwUser.IsFk_CompanyIDNull())
+                userAccessLevel = drwUser.Fk_CompanyID;
+            else if (!drwUser.IsFk_CollectionIDNull())
+                userAccessLevel = drwUser.Fk_CollectionID;
+            else if (!drwUser.IsFk_SubcollectionIDNull())
+                userAccessLevel = drwUser.Fk_SubcollectionID;
+            else if (!drwUser.IsFk_PartIDNull())
+                userAccessLevel = drwUser.Fk_PartID;
+
+            cmbUserAccessLevel.Value = userAccessLevel;
             //picUser.Image = PublicMethods.ArrayToImage(drwUser.UserImage);
 
             BaranDataAccess.Security.dstSecurityTableAdapters.spr_AccessibleItemsForCurrentUser_SelectTableAdapter adpAccessibleItems =
@@ -340,16 +352,44 @@ namespace Baran.Security.User
         {
             base.OnSave();
 
-            if (!UserInfoValidation()) return;
-
             if (P_tblUserToUpdate.Count > 0)
             {
                 this.OnChange();
                 return;
             }
 
+            if (!this.ControlsValidation())
+            {
+                OnMessage(BaranResources.FeildIsEmpty, PublicEnum.EnmMessageCategory.Warning);
+                return;
+            }
+
+            if (txtUserName.Text.Trim() == string.Empty)
+            {
+                OnMessage(BaranResources.FeildIsEmpty, PublicEnum.EnmMessageCategory.Warning);
+                txtUserName.Focus();
+                return;
+            }
+            else if (txtPassword.Text.Trim() == string.Empty)
+            {
+                OnMessage(BaranResources.FeildIsEmpty, PublicEnum.EnmMessageCategory.Warning);
+                txtPassword.Focus();
+                return;
+            }
+            if (txtPassword.Text.Trim() != txtConfirmPassword.Text.Trim())
+            {
+                OnMessage(BaranResources.FeildIsEmpty, PublicEnum.EnmMessageCategory.Warning);
+                MessageBox.Show(BaranResources.newPasswordConfirmationError);
+                txtConfirmPassword.Focus();
+                return;
+            }
+
+
+
             DialogResult msgResult = MessageBoxX.ShowMessageBox(PublicEnum.EnmMessageType.msgSaveConfirm);
             if (msgResult == DialogResult.No) return;
+            wait = new WaiteForm();
+            wait.Show();
 
             string strUserName = txtUserName.Text.Trim();
             string strPassword = txtPassword.Text.Trim();
@@ -414,8 +454,7 @@ namespace Baran.Security.User
                                                                                         blnIsAccountant,
                                                                                         blnIsSalesPerson,
                                                                                         blnIsOtherStaff,
-                                                                                        lngUserID,
-                                                                                        
+                                                                                        lngUserID,                                                                                        
                                                                                         intUserTypeID,
                                                                                         intCompanyID,
                                                                                         intCollectionID,
@@ -455,7 +494,7 @@ namespace Baran.Security.User
 
                     adpItemUser.Update(tblItemUser);
                     scope.Complete();
-                    this.lblMessage.Text = BaranResources.SaveSuccessful;
+                    OnMessage(BaranResources.SaveSuccessful, PublicEnum.EnmMessageCategory.Success);
                 }
             }
             catch
@@ -463,7 +502,7 @@ namespace Baran.Security.User
                 MessageBox.Show(BaranResources.NewUserInsertionInDBError);
                 return;
             }
-
+            wait.Close();
 
         }
 
@@ -471,6 +510,14 @@ namespace Baran.Security.User
         {
             base.OnChange();
 
+            if (!this.ControlsValidation())
+            {
+                OnMessage(BaranResources.FeildIsEmpty, PublicEnum.EnmMessageCategory.Warning);
+                return;
+            }
+
+            wait = new WaiteForm();
+            wait.Show();
 
             BaranDataAccess.Security.dstSecurityTableAdapters.spr_Sec_Users_SelectTableAdapter adpUsers =
                 new BaranDataAccess.Security.dstSecurityTableAdapters.spr_Sec_Users_SelectTableAdapter();
@@ -479,8 +526,12 @@ namespace Baran.Security.User
 
             long lngChangeUserID = (long)this.P_tblUserToUpdate.Rows[0]["UserID"];
 
-            drwUser.IsActive = chkIsActive.Checked;
-            drwUser.FK_UserTypeID = 1;
+            if (txtUserName.Text != string.Empty)
+                drwUser.UserName = txtUserName.Text.Trim();
+            if (txtPassword.Text.Trim() != string.Empty && txtPassword.Text.Trim() == txtConfirmPassword.Text.Trim())
+                drwUser.Password = txtPassword.Text;
+
+            drwUser.IsActive = chkIsActive.Checked;          
             drwUser.Email = txtEmail.Text.Trim();
             drwUser.FirstName = txtName.Text.Trim();
             drwUser.LastName = txtFamily.Text.Trim();
@@ -492,7 +543,7 @@ namespace Baran.Security.User
             drwUser.IsOtherStaff = chkOtherStaff.Checked;
             drwUser.CreateDate = DateTime.Now;
             drwUser.FK_ShopID = Convert.ToInt32( cmbShop.Value);
-            drwUser.UserImage = Baran.Classes.Common.PublicMethods.ImageToArray(picUser.Image);
+            //drwUser.UserImage = Baran.Classes.Common.PublicMethods.ImageToArray(picUser.Image);
             
             drwUser.FK_UserTypeID = Convert.ToInt32( intUserTypeID);
             if (intCompanyID != null)
@@ -560,6 +611,33 @@ namespace Baran.Security.User
                 this.lblMessage.Text = BaranResources.EditFail;
                 return;
             }
+            wait.Close();
+        }
+
+        private bool ControlsValidation()
+        {
+            bool blnResult = true;
+
+            if (txtName.Text.Trim() == string.Empty)
+            {
+                txtName.Focus();
+                blnResult = false;
+            }
+
+            else if (cmbUserType.Value == null)
+            {
+                cmbUserType.Focus();
+                blnResult = false;
+            }
+
+            else if (cmbUserAccessLevel.Value == null)
+            {
+                cmbUserAccessLevel.Focus();
+                blnResult = false;
+            }
+
+            return blnResult;
+
         }
 
         public override void OnClear()
@@ -602,16 +680,18 @@ namespace Baran.Security.User
 
     #region Events
 
-        private void frmUsers_Load(object sender, EventArgs e)
+        public override void OnformLoad()
         {
+            base.OnformLoad();
             //Baran.Classes.Common.ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcShops, cmbShop, "");
             Baran.Classes.Common.ComboBoxSetting.FillComboBox(PublicEnum.EnmComboSource.srcUserType, cmbUserType, "");
             this.SetAccessibleItemsTree();
             this.SetFeilds();
         }
 
-        private void frmUsers_Activated(object sender, EventArgs e)
+        public override void OnActiveForm()
         {
+            base.OnActiveForm();
             Baran.frmMain ofrmMain = Baran.frmMain.Instanc;
 
             ofrmMain.EnableToolBarItems(cnsToolStripButton.Cancel, cnsToolStripButton.Save, cnsToolStripButton.Clear);

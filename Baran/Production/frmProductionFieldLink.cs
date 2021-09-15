@@ -275,43 +275,47 @@ namespace Baran.Production
 
         private void cmbFields_ValueChanged(object sender, EventArgs e)
         {
-            if (cmbFields.Value == null) return;
-
-            UnitOfWork db = new UnitOfWork();
-            tbl_src_Field field = new tbl_src_Field();
             try
             {
+                if (cmbFields.Value == null) return;
 
-                FieldID = Convert.ToInt32(cmbFields.Value);
-                field = db.FieldRepository.GetById(FieldID);
-
-                if (field is null)
-                    return;
-                txtName.Text = field.Name;
-                txtTotalArea.Text = field.TotalArea == null ? string.Empty : field.TotalArea.ToString();
-                txtUsableArea.Text = field.UsableArea == null ? string.Empty : field.UsableArea.ToString();
-                txtLinkedArea.Text = field.UsableArea == null ? string.Empty : field.UsableArea.ToString();
-
-                List<PointLatLng> points = new List<PointLatLng>();
-
-                if (field.LocationPolygon != null)
+                UnitOfWork db = new UnitOfWork();
+                tbl_src_Field field = new tbl_src_Field();
+                try
                 {
-                    points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(field.LocationPolygon.ProviderValue.ToString());
-                }
-                GMapOverlay routes = new GMapOverlay("routes");
-                ////////////////////////////
-                GMapRoute rt = new GMapRoute(points, string.Empty);
-                {
-                    rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
-                    rt.Stroke.Width = 5;
-                    rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-                }
-                routes.Routes.Add(rt);
 
-                ///////////////////////////
-                MainMap.Overlays.Clear();
-                MainMap.Overlays.Add(routes);
-                MainMap.ZoomAndCenterRoutes("routes");
+                    FieldID = Convert.ToInt32(cmbFields.Value);
+                    field = db.FieldRepository.GetById(FieldID);
+
+                    if (field is null)
+                        return;
+                    txtName.Text = field.Name;
+                    txtTotalArea.Text = field.TotalArea == null ? string.Empty : field.TotalArea.ToString();
+                    txtUsableArea.Text = field.UsableArea == null ? string.Empty : field.UsableArea.ToString();
+                    txtLinkedArea.Text = field.UsableArea == null ? string.Empty : field.UsableArea.ToString();
+
+                    List<PointLatLng> points = new List<PointLatLng>();
+
+                    if (field.LocationPolygon != null)
+                    {
+                        points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(field.LocationPolygon.ProviderValue.ToString());
+                    }
+                    GMapOverlay routes = new GMapOverlay("routes");
+                    ////////////////////////////
+                    GMapRoute rt = new GMapRoute(points, string.Empty);
+                    {
+                        rt.Stroke = new Pen(Color.FromArgb(255, PublicVariables.FieldColor));
+                        rt.Stroke.Width = PublicVariables.StrokeWidth;
+                        rt.Stroke.DashStyle = PublicVariables.StrokeDashStyle;
+                    }
+                    routes.Routes.Add(rt);
+
+                    ///////////////////////////
+                    MainMap.Overlays.Clear();
+                    MainMap.Overlays.Add(routes);
+                    MainMap.ZoomAndCenterRoutes("routes");
+                }
+                catch { }
             }
             catch { }
             //BaranDataAccess.Source.dstSourceTableAdapters.spr_src_FieldByID_Lst_SelectTableAdapter adp =

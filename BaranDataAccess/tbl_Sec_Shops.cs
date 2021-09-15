@@ -38,9 +38,9 @@ namespace BaranDataAccess
         public string ShopDescription { get; set; }
         public Nullable<bool> IsActive { get; set; }
         public Nullable<System.DateTime> CreatDate { get; set; }
-        public Nullable<long> CreateUserID { get; set; }
+        public Nullable<int> CreateUserID { get; set; }
         public Nullable<System.DateTime> InactivationDate { get; set; }
-        public Nullable<long> InactivationUserID { get; set; }
+        public Nullable<int> InactivationUserID { get; set; }
         public string RegistrationNumber { get; set; }
         public string NationalID { get; set; }
         public Nullable<int> Fk_ProvinceID { get; set; }

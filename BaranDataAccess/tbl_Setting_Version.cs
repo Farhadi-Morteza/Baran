@@ -18,5 +18,6 @@ namespace BaranDataAccess
         public System.DateTime VersionDate { get; set; }
         public string VersionDescription { get; set; }
         public string VersionNumber { get; set; }
+        public Nullable<bool> IsActive { get; set; }
     }
 }

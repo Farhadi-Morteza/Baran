@@ -1098,10 +1098,6 @@ namespace Baran.Maps
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            BaranDataAccess.Map.dstLocation dst = new BaranDataAccess.Map.dstLocation();
-            BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_Location_SelectTableAdapter adp =
-                new BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_Location_SelectTableAdapter();
-
             DialogResult msgResult = MessageBoxX.ShowMessageBox(PublicEnum.EnmMessageType.msgSaveConfirm);
             if (msgResult == DialogResult.No) return;
             
@@ -1110,7 +1106,6 @@ namespace Baran.Maps
             {
                 
                 waite.Show();
-                adp.Delete(FieldID, BuildingID, WarehouseID, WaterstorageID, WaterID, WaterTransmissionLineID, PartID);
 
                 List<PointLatLng> SavePoints = new List<PointLatLng>();
                 if (ShapeType == (int)PublicEnum.EnmShapeType.Polygon)
@@ -1173,14 +1168,7 @@ namespace Baran.Maps
 
                 }
 
-                else
-                {
-                    foreach (var poi in SavePoints)
-                    {
-                        adp.Insert(poi.Lng, poi.Lat, FieldID, BuildingID, WarehouseID, WaterstorageID, WaterID, WaterTransmissionLineID, PartID);
 
-                    }
-                }
                 db.Save();
                 waite.Close();
                 MessageBoxX.ShowMessageBox(PublicEnum.EnmMessageType.msgSaveSuccessful);

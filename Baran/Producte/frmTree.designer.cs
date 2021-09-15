@@ -457,7 +457,6 @@
             this.cmbField.Size = new System.Drawing.Size(445, 22);
             this.cmbField.TabIndex = 10;
             this.cmbField.ValueChanged += new System.EventHandler(this.cmbFields_ValueChanged);
-            this.cmbField.AfterExitEditMode += new System.EventHandler(this.cmbField_AfterExitEditMode);
             // 
             // mskDatePlanting
             // 

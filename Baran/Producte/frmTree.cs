@@ -22,14 +22,19 @@ namespace Baran.Producte
         public frmTree()
         {
             InitializeComponent();
+            MainMap.Overlays.Add(markers);
+            MainMap.Overlays.Add(routes);
         }
 
         public frmTree(int treeID)
         {
             InitializeComponent();
+            MainMap.Overlays.Add(markers);
+            MainMap.Overlays.Add(routes);
 
             TreeID = treeID;
             this.SetControlsValue();
+
         }
 
         #endregion
@@ -78,11 +83,10 @@ namespace Baran.Producte
 
         //-------------------------------------------------------------------------------
         bool isMouseDown = false;
-        GMapMarker currentMarker; 
+        GMapMarker currentMarker;
 
-        internal readonly GMapOverlay objects = new GMapOverlay("objects");
+        internal readonly GMapOverlay markers = new GMapOverlay("markers");
         internal readonly GMapOverlay routes = new GMapOverlay("routes");
-        internal readonly GMapOverlay top = new GMapOverlay();
         //-------------------------------------------------------------------------------
         #endregion
 
@@ -116,11 +120,8 @@ namespace Baran.Producte
             currentMarker = new GMarkerGoogle(MainMap.Position, GMarkerGoogleType.arrow);
             currentMarker.IsHitTestVisible = false;
 
-            MainMap.Overlays.Add(top);
-            MainMap.Overlays.Add(objects);
-            MainMap.Overlays.Add(routes);
+            markers.Markers.Add(currentMarker);
 
-            top.Markers.Add(currentMarker);
         }
 
         public override void OnSave()
@@ -140,8 +141,9 @@ namespace Baran.Producte
                 this.SetVariables();
 
                 db = new UnitOfWork();
-                tbl_src_Tree tree = new tbl_src_Tree()
-                {
+
+                    tbl_src_Tree tree = new tbl_src_Tree()
+                    {
                     Fk_FieldID = intFieldID,
                     Fk_TreeType = intTreeType,
                     BaseCultivar = strBaseCultivar,
@@ -302,8 +304,8 @@ namespace Baran.Producte
             m.ToolTipMode = MarkerTooltipMode.OnMouseOver;
             m.ToolTipText = currentMarker.Position.ToString();
 
-            objects.Markers.Clear();
-            objects.Markers.Add(m);
+            markers.Markers.Clear();
+            markers.Markers.Add(m);
         }
 
         private void SetControlsValue()
@@ -384,15 +386,16 @@ namespace Baran.Producte
                     GMap.NET.PointLatLng po = new GMap.NET.PointLatLng(Convert.ToDouble(drw.Latitude), Convert.ToDouble(drw.Longitude));
                     GMap.NET.WindowsForms.GMapMarker mark = new GMap.NET.WindowsForms.Markers.GMarkerGoogle(po, new Bitmap(System.Drawing.Image.FromFile(PublicMethods.PictureFileNamePath(cnsPictureName.TreeMarker))));
 
-                    objects.Markers.Clear();
-                    objects.Markers.Add(mark);
+                    markers.Markers.Clear();
+                    markers.Markers.Add(mark);
                     ///////////////////////////
-                    MainMap.Position = po;// new PointLatLng(32.843888, 51.967501);
-                    MainMap.Zoom = 17;
+                    //MainMap.Position = po;// new PointLatLng(32.843888, 51.967501);
+                    //MainMap.Zoom = 17;
 
                     //MainMap.Overlays.Clear();
                     //MainMap.Overlays.Add(markers);
-                    MainMap.ZoomAndCenterMarkers(objects.ToString());
+                    //MainMap.ZoomAndCenterMarkers(objects.ToString());
+                    MainMap.ZoomAndCenterMarkers("markers");
                 }
 
             }
@@ -516,40 +519,40 @@ namespace Baran.Producte
         {
             try
             {
-            if (cmbField.Value == null) return;
-            int FieldID = Convert.ToInt32(cmbField.Value);
+                if (cmbField.Value == null) return;
 
-            BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable tblLocation =
-                new BaranDataAccess.Map.dstLocation.spr_geo_LocationByID_SelectDataTable();
-            BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter adpLocation =
-                new BaranDataAccess.Map.dstLocationTableAdapters.spr_geo_LocationByID_SelectTableAdapter();
+                UnitOfWork db = new UnitOfWork();
+                tbl_src_Field field = new tbl_src_Field();
+                int FieldID = Convert.ToInt32(cmbField.Value);
+                field = db.FieldRepository.GetById(FieldID);
 
-            List<PointLatLng> points = new List<PointLatLng>();
+                if (field is null)
+                    return;
 
-            adpLocation.FillLocationByIDTable(tblLocation, FieldID, null, null, null, null, null, null);
+                List<PointLatLng> points = new List<PointLatLng>();
 
-            if (tblLocation.Count > 0)
-            {
-
-                foreach (var point in tblLocation)
+                if (field.LocationPolygon != null)
                 {
-                    points.Add(new PointLatLng(Convert.ToDouble(point.Latitude), Convert.ToDouble(point.Longitude)));
-
+                    points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(field.LocationPolygon.ProviderValue.ToString());
                 }
+
                 ////////////////////////////
-                GMap.NET.WindowsForms.GMapRoute rt = new GMap.NET.WindowsForms.GMapRoute(points, string.Empty);
+                GMapRoute rt = new GMapRoute(points, string.Empty);
                 {
-                    rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
-                    rt.Stroke.Width = 5;
-                    rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+                    rt.Stroke = new Pen(Color.FromArgb(255, PublicVariables.FieldColor));
+                    rt.Stroke.Width = PublicVariables.StrokeWidth;
+                    rt.Stroke.DashStyle = PublicVariables.StrokeDashStyle;
                 }
 
                 routes.Routes.Clear();
                 routes.Routes.Add(rt);
+                //MainMap.Overlays.Remove(routes);
+                //MainMap.Overlays.Add(routes);
+                ////objects.Routes.Add(rt);
 
+                ///////////////////////////
+                //int p = MainMap.Overlays.Count;            
                 MainMap.ZoomAndCenterRoutes("routes");
-            }
-                
             }
             catch { }
         }
@@ -602,44 +605,6 @@ namespace Baran.Producte
         private void btnAdd_Click(object sender, EventArgs e)
         {
             this.AddMarker();
-        }
-
-        private void cmbField_AfterExitEditMode(object sender, EventArgs e)
-        {
-            if (cmbField.Value == null) return;
-
-            UnitOfWork db = new UnitOfWork();
-            tbl_src_Field field = new tbl_src_Field();
-            int FieldID = Convert.ToInt32(cmbField.Value);
-            field = db.FieldRepository.GetById(FieldID);
-
-            if (field is null)
-                return;
-
-            List<PointLatLng> points = new List<PointLatLng>();
-
-            if (field.LocationPolygon != null)
-            {
-                points = GeoUtils.ConvertStringCoordinatesToGMapPolygony(field.LocationPolygon.ProviderValue.ToString());
-            }
-
-            ////////////////////////////
-            GMapRoute rt = new GMapRoute(points, string.Empty);
-            {
-                rt.Stroke = new Pen(Color.FromArgb(144, Color.Red));
-                rt.Stroke.Width = 5;
-                rt.Stroke.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-            }
-   
-            routes.Routes.Clear();
-            routes.Routes.Add(rt);
-            //MainMap.Overlays.Remove(routes);
-            //MainMap.Overlays.Add(routes);
-            ////objects.Routes.Add(rt);
-
-            ///////////////////////////
-            //int p = MainMap.Overlays.Count;            
-            MainMap.ZoomAndCenterRoutes("routes");
         }
 
         #endregion

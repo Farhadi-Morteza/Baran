@@ -175,11 +175,11 @@ namespace Baran.Windows.Forms
             e.Row.Cells["RowID"].Appearance.BackColor = System.Drawing.Color.Silver;
 
 
-            e.Row.Cells["Update"].Appearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("replaceColore16.png"));
-            e.Row.Cells["Update"].ButtonAppearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("replaceColore16.png"));
+            e.Row.Cells["Update"].Appearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("replaceYellow16.png"));
+            e.Row.Cells["Update"].ButtonAppearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("replaceYellow16.png"));
 
-            e.Row.Cells["Delete"].Appearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("DeleteColore16.png"));
-            e.Row.Cells["Delete"].ButtonAppearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("DeleteColore16.png"));
+            e.Row.Cells["Delete"].Appearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("deleteYellow16.png"));
+            e.Row.Cells["Delete"].ButtonAppearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("deleteYellow16.png"));
 
             e.Row.Cells["Download"].Appearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("DownloadsColore16.png"));
             e.Row.Cells["Download"].ButtonAppearance.ImageBackground = System.Drawing.Image.FromFile(GeneralMethods.PictureFileNamePath("DownloadsColore16.png"));

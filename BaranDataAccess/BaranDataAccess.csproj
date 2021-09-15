@@ -409,9 +409,6 @@
     <Compile Include="tbl_Rpt_ReportSettings.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
-    <Compile Include="tbl_Sec_Current_User.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
     <Compile Include="tbl_Sec_Items.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>

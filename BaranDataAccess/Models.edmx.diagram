@@ -44,7 +44,6 @@
         <EntityTypeShape EntityType="AMSModel.tbl_prd_ProductionTask_WaterStorage_Link" Width="1.5" PointX="25.75" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AMSModel.tbl_prd_Season" Width="1.5" PointX="25.75" PointY="5.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AMSModel.tbl_Rpt_ReportSettings" Width="1.5" PointX="25.75" PointY="10.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AMSModel.tbl_Sec_Current_User" Width="1.5" PointX="5.25" PointY="20.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AMSModel.tbl_Sec_Items" Width="1.5" PointX="13.75" PointY="25.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AMSModel.tbl_Sec_Items_Users_Link" Width="1.5" PointX="25.75" PointY="19.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AMSModel.tbl_Sec_Packages" Width="1.5" PointX="25.75" PointY="23.875" IsExpanded="true" />
@@ -101,7 +100,6 @@
         <AssociationConnector Association="AMSModel.FK_tbl_src_Company_tbl_cmn_Province" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Person_tbl_cmn_Province" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Subcollection_tbl_cmn_Province" ManuallyRouted="false" />
-        <AssociationConnector Association="AMSModel.FK_tbl_Sec_Current_User_tbl_Sec_Users" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_Sec_Users_tbl_Sec_Shops" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Collection_tbl_src_Company" ManuallyRouted="false" />
         <AssociationConnector Association="AMSModel.FK_tbl_src_Collection_tbl_src_CompanyCategory" ManuallyRouted="false" />
