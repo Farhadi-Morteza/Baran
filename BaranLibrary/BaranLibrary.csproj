@@ -48,16 +48,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FarsiLibrary.Resources">
-      <HintPath>E:\AMS_1400-02-17\AMS\Baran\bin\Debug\FarsiLibrary.Resources.dll</HintPath>
+      <HintPath>..\..\..\AMS For Instal\1400-08\Baran\Baran\bin\Debug\FarsiLibrary.Resources.dll</HintPath>
     </Reference>
     <Reference Include="FarsiLibrary.Utils">
-      <HintPath>E:\AMS_1400-02-17\AMS\Baran\bin\Debug\FarsiLibrary.Utils.dll</HintPath>
+      <HintPath>..\..\..\AMS For Instal\1400-08\Baran\Baran\bin\Debug\FarsiLibrary.Utils.dll</HintPath>
     </Reference>
     <Reference Include="FarsiLibrary.Win">
-      <HintPath>E:\AMS_1400-02-17\AMS\Baran\bin\Debug\FarsiLibrary.Win.dll</HintPath>
+      <HintPath>..\..\..\AMS For Instal\1400-08\Baran\Baran\bin\Debug\FarsiLibrary.Win.dll</HintPath>
     </Reference>
     <Reference Include="ImageListView">
-      <HintPath>E:\AMS_1400-02-17\AMS\Baran\bin\Debug\ImageListView.dll</HintPath>
+      <HintPath>..\..\..\AMS For Instal\1400-08\Baran\Baran\bin\Debug\ImageListView.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics2.Shared.v8.3, Version=8.3.20083.1009, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
     <Reference Include="Infragistics2.Win.AppStylistSupport.v8.3, Version=8.3.20083.1009, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
