@@ -1,8 +1,8 @@
-﻿namespace BaranDataAccess.Common 
+﻿namespace BaranDataAccess.Common
 {
-    
-    
-    public partial class dstImages 
+
+
+    public partial class dstImages
     {
         public static void InsertImage(byte[] Img, int itemID)
         {

@@ -1,7 +1,8 @@
-﻿namespace BaranDataAccess.Map {
-    
-    
-    public partial class dstLocation 
+﻿namespace BaranDataAccess.Map
+{
+
+
+    public partial class dstLocation
     {
         public static dstLocation LocationTable()
         {
@@ -13,7 +14,7 @@
             {
                 adapter.FillLocationTable(returnDst.spr_geo_Location_Select);
             }
-            catch 
+            catch
             {
                 returnDst = null;
             }

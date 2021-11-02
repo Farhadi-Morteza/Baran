@@ -1,7 +1,8 @@
-﻿namespace BaranDataAccess.Reports {
-    
-    
-    public partial class dstShop 
+﻿namespace BaranDataAccess.Reports
+{
+
+
+    public partial class dstShop
     {
         public static dstShop GetShopDescription()
         {

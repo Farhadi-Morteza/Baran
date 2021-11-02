@@ -1,7 +1,8 @@
-﻿namespace BaranDataAccess.Common {
-    
-    
-    public partial class dstProvince 
+﻿namespace BaranDataAccess.Common
+{
+
+
+    public partial class dstProvince
     {
         public static dstProvince ProvinceTable()
         {

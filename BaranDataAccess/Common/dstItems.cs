@@ -1,8 +1,8 @@
-﻿namespace BaranDataAccess.Common 
+﻿namespace BaranDataAccess.Common
 {
-    
-    
-    public partial class dstItems 
+
+
+    public partial class dstItems
     {
         public static dstItems GetItems()
         {
@@ -15,7 +15,7 @@
             {
                 adapter.FillItemsTable(returnDst.spr_Sec_Items_Select);
             }
-            catch 
+            catch
             {
                 returnDst = null;
             }

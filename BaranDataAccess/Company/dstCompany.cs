@@ -1,7 +1,8 @@
-﻿namespace BaranDataAccess.Company {
-    
-    
-    public partial class dstCompany 
+﻿namespace BaranDataAccess.Company
+{
+
+
+    public partial class dstCompany
     {
         public static dstCompany CompanyCategoryTable()
         {
@@ -44,7 +45,7 @@
             {
                 adapter.FillCollectionTable(returnDst.spr_src_Collection_Select, userID);
             }
-            catch 
+            catch
             {
 
                 returnDst = null;
@@ -61,7 +62,7 @@
             {
                 adapter.FillSubcollectionTable(returnDst.spr_src_Subcollection_Select, userID);
             }
-            catch 
+            catch
             {
                 returnDst = null;
             }
@@ -85,5 +86,5 @@
         }
     }
 
-    }
+}
 

@@ -1320,10 +1320,6 @@
       <Project>{BAEA9387-5362-4237-AF2B-897CD8A61A10}</Project>
       <Name>BaranLibrary</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BaranViewModels\BaranViewModels.csproj">
-      <Project>{9ee30ee9-7e12-4e38-9b21-6e426ac806dd}</Project>
-      <Name>BaranViewModels</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />

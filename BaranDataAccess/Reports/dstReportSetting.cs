@@ -1,8 +1,8 @@
-﻿namespace BaranDataAccess.Reports 
+﻿namespace BaranDataAccess.Reports
 {
-    
-    
-    public partial class dstReportSetting 
+
+
+    public partial class dstReportSetting
     {
         public static dstReportSetting GetReportSetting()
         {
@@ -41,5 +41,5 @@
         }
     }
 
-   
+
 }

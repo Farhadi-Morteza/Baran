@@ -1,7 +1,8 @@
-﻿namespace BaranDataAccess.Task {
-    
-    
-    public partial class dstTask 
+﻿namespace BaranDataAccess.Task
+{
+
+
+    public partial class dstTask
     {
         public static dstTask TaskCategoryCmbTable()
         {
