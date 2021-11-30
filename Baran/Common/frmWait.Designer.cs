@@ -39,9 +39,10 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Image = global::Baran.Properties.Resources.a4f2cb80ff2ae2772e80bf30e9d78d4c;
-            this.label1.Location = new System.Drawing.Point(104, 68);
+            this.label1.Location = new System.Drawing.Point(78, 55);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(392, 264);
+            this.label1.Size = new System.Drawing.Size(294, 214);
             this.label1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.label1.TabIndex = 1;
             this.label1.TabStop = false;
@@ -56,22 +57,24 @@
             this.groupBox1.BorderStyle = Infragistics.Win.Misc.GroupBoxBorderStyle.None;
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(600, 400);
+            this.groupBox1.Size = new System.Drawing.Size(450, 325);
             this.groupBox1.TabIndex = 2;
+            this.groupBox1.UseWaitCursor = true;
             // 
             // frmWait
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 400);
+            this.ClientSize = new System.Drawing.Size(450, 325);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmWait";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Waiting ...";
-            this.TopMost = true;
             this.UseWaitCursor = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.label1)).EndInit();

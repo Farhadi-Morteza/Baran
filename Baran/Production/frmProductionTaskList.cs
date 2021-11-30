@@ -62,15 +62,28 @@ namespace Baran.Production
         {
             base.OnNew();
 
+            Baran.Production.frmProductionTaskLinkTo ofrm =
+                new frmProductionTaskLinkTo(0);
+
+            ofrm.ShowDialog();
+
+            this.FillGrid();
+
+        }
+
+        private void btnNew2_Click(object sender, EventArgs e)
+        {
+
             Baran.Production.frmProductionTask ofrm =
                 new frmProductionTask();
 
             //ofrm.FormItemID = Convert.ToInt32(PublicEnum.EnmformItemId.Crop);
             //if (PublicMethods.SetFormSchema(ofrm, ofrm.FormItemID))
             //{
-                ofrm.FormType = cnsFormType.New;
-                ofrm.ShowDialog();
-                this.FillGrid();
+            ofrm.FormType = cnsFormType.New;
+            ofrm.ShowDialog();
+
+            this.FillGrid();
 
             //}
         }
@@ -79,11 +92,11 @@ namespace Baran.Production
         {
             base.OnChange();
 
-            if (grdItem.Selected.Rows.Count == 0)
-            {
-                OnMessage(BaranResources.NoRowSelectedError, PublicEnum.EnmMessageCategory.Warning);
-                return;
-            }
+            //if (grdItem.Selected.Rows.Count == 0)
+            //{
+            //    OnMessage(BaranResources.NoRowSelectedError, PublicEnum.EnmMessageCategory.Warning);
+            //    return;
+            //}
 
             if(ProductionTaskID <= 0)
             {
@@ -91,15 +104,22 @@ namespace Baran.Production
                 return;
             }
 
-            Baran.Production.frmProductionTask ofrm =
-                 new frmProductionTask(ProductionTaskID);
+            //Baran.Production.frmProductionTask ofrm =
+            //     new frmProductionTask(ProductionTaskID);
 
-            //ofrm.FormItemID = Convert.ToInt32(PublicEnum.EnmformItemId.Field);
-            //if (PublicMethods.SetFormSchema(ofrm, ofrm.FormItemID))
-            //{
-                ofrm.FormType = cnsFormType.Change;
-                ofrm.ShowDialog();
-                this.FillGrid();
+            ////ofrm.FormItemID = Convert.ToInt32(PublicEnum.EnmformItemId.Field);
+            ////if (PublicMethods.SetFormSchema(ofrm, ofrm.FormItemID))
+            ////{
+            //    ofrm.FormType = cnsFormType.Change;
+            //    ofrm.ShowDialog();
+            //    this.FillGrid();
+
+            Baran.Production.frmProductionTaskLinkTo ofrm =
+                new frmProductionTaskLinkTo(ProductionTaskID);
+
+            ofrm.ShowDialog();
+
+            this.FillGrid();
 
             //}
         }
@@ -196,5 +216,7 @@ namespace Baran.Production
             }
             catch { }
         }
+
+
     }
 }

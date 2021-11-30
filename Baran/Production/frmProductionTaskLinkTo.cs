@@ -17,8 +17,7 @@ namespace Baran.Production
         public frmProductionTaskLinkTo(int productionTaskID)
         {
             InitializeComponent();
-            ProductionTaskID = productionTaskID;
-            
+            ProductionTaskID = productionTaskID;            
         }
 
         #endregion
@@ -341,38 +340,60 @@ namespace Baran.Production
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (ProductionTaskID <= 0)
-            {
-                OnMessage(BaranResources.SavedNotLastTime, PublicEnum.EnmMessageCategory.Warning);
-                return;
-            }
-
             if (!this.ControlsValidation())
             {
                 OnMessage(BaranResources.FeildIsEmpty, PublicEnum.EnmMessageCategory.Warning);
                 return;
             }
-            DialogResult msgResult = MessageBoxX.ShowMessageBox(PublicEnum.EnmMessageType.msgSaveConfirm);
-            if (msgResult == DialogResult.No) return;
-
             BaranDataAccess.Production.dstProductsTableAdapters.spr_prd_ProductionTask_SelectTableAdapter adp =
                 new BaranDataAccess.Production.dstProductsTableAdapters.spr_prd_ProductionTask_SelectTableAdapter();
 
-            try
+            if (ProductionTaskID <= 0)
             {
-                this.SetVariables();
-                int RowAffected = Convert.ToInt32(adp.Update(ProductionTaskID, PublicPropertise.ProductionID, intTaskID, intStatusID, dtmStartDate, dtmEndDate, strDescription, strTaskName, intTaskCategoryID, intTaskSubCategoryID, CurrentUser.Instance.UserID, intPersonID));
+                DialogResult msgSaveResult = MessageBoxX.ShowMessageBox(PublicEnum.EnmMessageType.msgSaveConfirm);
+                if (msgSaveResult == DialogResult.No) return;
 
-                if (RowAffected > 0)
+                try
                 {
-                    OnMessage(BaranResources.EditSuccessful, PublicEnum.EnmMessageCategory.Success);
+                    this.SetVariables();
+
+                    int RowAffected = Convert.ToInt32(adp.New_prd_ProductionTask_Insert(PublicPropertise.ProductionID, intTaskID, intStatusID, dtmStartDate, dtmEndDate, strDescription, strTaskName, intTaskCategoryID, intTaskSubCategoryID, CurrentUser.Instance.UserID, intPersonID));
+
+                    if (RowAffected > 0)
+                    {
+                        ProductionTaskID = RowAffected;
+                        OnMessage(BaranResources.SaveSuccessful, PublicEnum.EnmMessageCategory.Success);
+                    }
+                    else
+                        OnMessage(BaranResources.SaveFail, PublicEnum.EnmMessageCategory.Warning);
                 }
-                else
-                    OnMessage(BaranResources.EditFail, PublicEnum.EnmMessageCategory.Warning);
+                catch
+                {
+                    OnMessage(BaranResources.DoNotDoPleaseTryAgine, PublicEnum.EnmMessageCategory.Warning);
+                }
+
             }
-            catch
+            else
             {
-                OnMessage(BaranResources.DoNotDoPleaseTryAgine, PublicEnum.EnmMessageCategory.Warning);
+                DialogResult msgResult = MessageBoxX.ShowMessageBox(PublicEnum.EnmMessageType.msgEditConfirm);
+                if (msgResult == DialogResult.No) return;
+
+                try
+                {
+                    this.SetVariables();
+                    int RowAffected = Convert.ToInt32(adp.Update(ProductionTaskID, PublicPropertise.ProductionID, intTaskID, intStatusID, dtmStartDate, dtmEndDate, strDescription, strTaskName, intTaskCategoryID, intTaskSubCategoryID, CurrentUser.Instance.UserID, intPersonID));
+
+                    if (RowAffected > 0)
+                    {
+                        OnMessage(BaranResources.EditSuccessful, PublicEnum.EnmMessageCategory.Success);
+                    }
+                    else
+                        OnMessage(BaranResources.EditFail, PublicEnum.EnmMessageCategory.Warning);
+                }
+                catch
+                {
+                    OnMessage(BaranResources.DoNotDoPleaseTryAgine, PublicEnum.EnmMessageCategory.Warning);
+                }
             }
         }
 

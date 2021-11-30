@@ -181,6 +181,7 @@ namespace Baran
             Uri url = new Uri(Path.Combine(ftpServerInfo.UpdateHost, UpdateSoftwareInfo.FileName));
             try
             {
+                waite.Show();
                 if (url.Scheme == Uri.UriSchemeFtp)
                 {
                     FtpWebRequest objRequest = (FtpWebRequest)FtpWebRequest.Create(url);
@@ -250,14 +251,16 @@ namespace Baran
 
                     //MessageBox.Show(UpdateSoftwareInfo.SuccessUpdateMessage, "Update", MessageBoxButtons.OK);
                     //blnResult = true;
-                   
+                    waite.Close(); 
                 }
             }
             catch
             {
                 MessageBoxX.ShowMessageBox(PublicEnum.EnmMessageType.msgDoNotDoPleaseTryAgine);
                 blnResult = false;
+                waite.Close();
             }
+            waite.Close();
             return blnResult;
         }
 

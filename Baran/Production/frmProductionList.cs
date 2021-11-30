@@ -120,25 +120,24 @@ namespace Baran.Production
             DialogResult msgResult = MessageBoxX.ShowMessageBox(PublicEnum.EnmMessageType.msgDeleteConfirm);
             if (msgResult == DialogResult.No) return;
 
-            //BaranDataAccess.Source.dstSourceTableAdapters.spr_src_Buildings_SelectTableAdapter adp =
-            //    new BaranDataAccess.Source.dstSourceTableAdapters.spr_src_Buildings_SelectTableAdapter();
+            BaranDataAccess.Production.dstProductsTableAdapters.spr_prd_Production_SelectTableAdapter adp =
+                new BaranDataAccess.Production.dstProductsTableAdapters.spr_prd_Production_SelectTableAdapter();
 
-            
-            //try
-            //{
-            //    int RowAffected = (int)adp.Delete(BuildingsID, Convert.ToInt32(CurrentUser.Instance.UserID));
-            //    if (RowAffected > 0)
-            //    {
-            //        OnMessage(BaranResources.DeleteSuccessful, PublicEnum.EnmMessageCategory.Success);
-            //        this.FillGrid();
-            //    }
-            //    else
-            //        OnMessage(BaranResources.DeleteFail, PublicEnum.EnmMessageCategory.Warning);
-            //}
-            //catch
-            //{
-            //    OnMessage(BaranResources.DoNotDoPleaseTryAgine, PublicEnum.EnmMessageCategory.Warning);
-            //}
+            try
+            {
+                int RowAffected = (int)adp.Delete(ProductionID, Convert.ToInt32(CurrentUser.Instance.UserID));
+                if (RowAffected > 0)
+                {
+                    OnMessage(BaranResources.DeleteSuccessful, PublicEnum.EnmMessageCategory.Success);
+                    this.FillGrid();
+                }
+                else
+                    OnMessage(BaranResources.DeleteFail, PublicEnum.EnmMessageCategory.Warning);
+            }
+            catch
+            {
+                OnMessage(BaranResources.DoNotDoPleaseTryAgine, PublicEnum.EnmMessageCategory.Warning);
+            }
         }
 
         public override void OnRefresh()
